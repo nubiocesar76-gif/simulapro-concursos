@@ -1,0 +1,6 @@
+statement,alternatives,correct_answer,subject,topic,board,exam,position,year,difficulty,explanation
+"O Brasil possui quantos estados?","A)25|B)26|C)27|D)28","C","Geografia","Brasil","FGV","Concurso PF 2025","Agente","2025","Fácil","O Brasil possui 26 estados e o Distrito Federal."
+"A capital de Minas Gerais é?","A)Belo Horizonte|B)Uberlândia|C)Juiz de Fora|D)Montes Claros","A","Geografia","Capitais","CESPE","Concurso TJ 2024","Analista","2024","Fácil","Belo Horizonte é a capital."
+"2 + 2 = ?","A)3|B)4|C)5|D)6","B","Matemática","Operações","FCC","Concurso TRT 2023","Técnico","2023","Fácil","Resultado da soma."
+"Questão sem disciplina","A)1|B)2|C)3|D)4","A","","Teste","FGV","Teste","Teste","2025","Média","Esta questão deve gerar erro."
+"O Brasil possui quantos estados?","A)25|B)26|C)27|D)28","C","Geografia","Brasil","FGV","Concurso PF 2025","Agente","2025","Fácil","Questão duplicada."
