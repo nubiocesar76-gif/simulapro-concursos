@@ -17,6 +17,7 @@ import { Route as AuthenticatedAdminRouteRouteImport } from './routes/_authentic
 import { Route as AuthenticatedAppIndexRouteImport } from './routes/_authenticated/app/index'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
 import { Route as AuthenticatedAppStudyRouteImport } from './routes/_authenticated/app/study'
+import { Route as AuthenticatedAppHistoryRouteImport } from './routes/_authenticated/app/history'
 import { Route as AuthenticatedAdminVersionsRouteImport } from './routes/_authenticated/admin/versions'
 import { Route as AuthenticatedAdminUsersRouteImport } from './routes/_authenticated/admin/users'
 import { Route as AuthenticatedAdminTopicsRouteImport } from './routes/_authenticated/admin/topics'
@@ -31,6 +32,7 @@ import { Route as AuthenticatedAdminExamsRouteImport } from './routes/_authentic
 import { Route as AuthenticatedAdminDistributionsRouteImport } from './routes/_authenticated/admin/distributions'
 import { Route as AuthenticatedAdminCoursesRouteImport } from './routes/_authenticated/admin/courses'
 import { Route as AuthenticatedAdminBoardsRouteImport } from './routes/_authenticated/admin/boards'
+import { Route as AuthenticatedAppStudyIndexRouteImport } from './routes/_authenticated/app/study.index'
 import { Route as AuthenticatedAppStudySessionIdRouteImport } from './routes/_authenticated/app/study.$sessionId'
 
 const AuthRoute = AuthRouteImport.update({
@@ -70,6 +72,11 @@ const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
 const AuthenticatedAppStudyRoute = AuthenticatedAppStudyRouteImport.update({
   id: '/study',
   path: '/study',
+  getParentRoute: () => AuthenticatedAppRouteRoute,
+} as any)
+const AuthenticatedAppHistoryRoute = AuthenticatedAppHistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
   getParentRoute: () => AuthenticatedAppRouteRoute,
 } as any)
 const AuthenticatedAdminVersionsRoute =
@@ -154,6 +161,12 @@ const AuthenticatedAdminBoardsRoute =
     path: '/boards',
     getParentRoute: () => AuthenticatedAdminRouteRoute,
   } as any)
+const AuthenticatedAppStudyIndexRoute =
+  AuthenticatedAppStudyIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedAppStudyRoute,
+  } as any)
 const AuthenticatedAppStudySessionIdRoute =
   AuthenticatedAppStudySessionIdRouteImport.update({
     id: '/$sessionId',
@@ -180,10 +193,12 @@ export interface FileRoutesByFullPath {
   '/admin/topics': typeof AuthenticatedAdminTopicsRoute
   '/admin/users': typeof AuthenticatedAdminUsersRoute
   '/admin/versions': typeof AuthenticatedAdminVersionsRoute
+  '/app/history': typeof AuthenticatedAppHistoryRoute
   '/app/study': typeof AuthenticatedAppStudyRouteWithChildren
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/app/': typeof AuthenticatedAppIndexRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/app/study/': typeof AuthenticatedAppStudyIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -202,10 +217,11 @@ export interface FileRoutesByTo {
   '/admin/topics': typeof AuthenticatedAdminTopicsRoute
   '/admin/users': typeof AuthenticatedAdminUsersRoute
   '/admin/versions': typeof AuthenticatedAdminVersionsRoute
-  '/app/study': typeof AuthenticatedAppStudyRouteWithChildren
+  '/app/history': typeof AuthenticatedAppHistoryRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/app': typeof AuthenticatedAppIndexRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/app/study': typeof AuthenticatedAppStudyIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -228,10 +244,12 @@ export interface FileRoutesById {
   '/_authenticated/admin/topics': typeof AuthenticatedAdminTopicsRoute
   '/_authenticated/admin/users': typeof AuthenticatedAdminUsersRoute
   '/_authenticated/admin/versions': typeof AuthenticatedAdminVersionsRoute
+  '/_authenticated/app/history': typeof AuthenticatedAppHistoryRoute
   '/_authenticated/app/study': typeof AuthenticatedAppStudyRouteWithChildren
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/app/': typeof AuthenticatedAppIndexRoute
   '/_authenticated/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/_authenticated/app/study/': typeof AuthenticatedAppStudyIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -254,10 +272,12 @@ export interface FileRouteTypes {
     | '/admin/topics'
     | '/admin/users'
     | '/admin/versions'
+    | '/app/history'
     | '/app/study'
     | '/admin/'
     | '/app/'
     | '/app/study/$sessionId'
+    | '/app/study/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -276,10 +296,11 @@ export interface FileRouteTypes {
     | '/admin/topics'
     | '/admin/users'
     | '/admin/versions'
-    | '/app/study'
+    | '/app/history'
     | '/admin'
     | '/app'
     | '/app/study/$sessionId'
+    | '/app/study'
   id:
     | '__root__'
     | '/'
@@ -301,10 +322,12 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/topics'
     | '/_authenticated/admin/users'
     | '/_authenticated/admin/versions'
+    | '/_authenticated/app/history'
     | '/_authenticated/app/study'
     | '/_authenticated/admin/'
     | '/_authenticated/app/'
     | '/_authenticated/app/study/$sessionId'
+    | '/_authenticated/app/study/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -369,6 +392,13 @@ declare module '@tanstack/react-router' {
       path: '/study'
       fullPath: '/app/study'
       preLoaderRoute: typeof AuthenticatedAppStudyRouteImport
+      parentRoute: typeof AuthenticatedAppRouteRoute
+    }
+    '/_authenticated/app/history': {
+      id: '/_authenticated/app/history'
+      path: '/history'
+      fullPath: '/app/history'
+      preLoaderRoute: typeof AuthenticatedAppHistoryRouteImport
       parentRoute: typeof AuthenticatedAppRouteRoute
     }
     '/_authenticated/admin/versions': {
@@ -469,6 +499,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminBoardsRouteImport
       parentRoute: typeof AuthenticatedAdminRouteRoute
     }
+    '/_authenticated/app/study/': {
+      id: '/_authenticated/app/study/'
+      path: '/'
+      fullPath: '/app/study/'
+      preLoaderRoute: typeof AuthenticatedAppStudyIndexRouteImport
+      parentRoute: typeof AuthenticatedAppStudyRoute
+    }
     '/_authenticated/app/study/$sessionId': {
       id: '/_authenticated/app/study/$sessionId'
       path: '/$sessionId'
@@ -523,10 +560,12 @@ const AuthenticatedAdminRouteRouteWithChildren =
 
 interface AuthenticatedAppStudyRouteChildren {
   AuthenticatedAppStudySessionIdRoute: typeof AuthenticatedAppStudySessionIdRoute
+  AuthenticatedAppStudyIndexRoute: typeof AuthenticatedAppStudyIndexRoute
 }
 
 const AuthenticatedAppStudyRouteChildren: AuthenticatedAppStudyRouteChildren = {
   AuthenticatedAppStudySessionIdRoute: AuthenticatedAppStudySessionIdRoute,
+  AuthenticatedAppStudyIndexRoute: AuthenticatedAppStudyIndexRoute,
 }
 
 const AuthenticatedAppStudyRouteWithChildren =
@@ -535,11 +574,13 @@ const AuthenticatedAppStudyRouteWithChildren =
   )
 
 interface AuthenticatedAppRouteRouteChildren {
+  AuthenticatedAppHistoryRoute: typeof AuthenticatedAppHistoryRoute
   AuthenticatedAppStudyRoute: typeof AuthenticatedAppStudyRouteWithChildren
   AuthenticatedAppIndexRoute: typeof AuthenticatedAppIndexRoute
 }
 
 const AuthenticatedAppRouteRouteChildren: AuthenticatedAppRouteRouteChildren = {
+  AuthenticatedAppHistoryRoute: AuthenticatedAppHistoryRoute,
   AuthenticatedAppStudyRoute: AuthenticatedAppStudyRouteWithChildren,
   AuthenticatedAppIndexRoute: AuthenticatedAppIndexRoute,
 }

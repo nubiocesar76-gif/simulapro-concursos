@@ -23,6 +23,7 @@ import { QuestionActions } from "@/components/app/study/QuestionActions";
 import { QuestionNavigation } from "@/components/app/study/QuestionNavigation";
 import { QuestionOptions } from "@/components/app/study/QuestionOptions";
 import { SessionHeader } from "@/components/app/study/SessionHeader";
+import { SessionResultsView } from "@/components/app/study/SessionResultsView";
 import { SessionProgress } from "@/components/app/study/SessionProgress";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
@@ -100,9 +101,9 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   const finishSession = useMutation({
     mutationFn: () => finishStudySession(sessionId),
-    onSuccess: () => {
+    onSuccess: async () => {
       setPhase("completed");
-      queryClient.invalidateQueries({ queryKey: ["study-session-open", sessionId] });
+      await queryClient.refetchQueries({ queryKey: ["study-session-open", sessionId] });
       toast.success("Sessão concluída com sucesso.");
     },
     onError: (e: unknown) => toast.error(formatStudyEngineError(e)),
@@ -167,7 +168,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
     );
   }
 
-  const { session, sequence, sessionQuestions, answeredCount } = openData;
+  const { session, sequence, sessionQuestions, answeredCount, results } = openData;
   const subtitle = `${session.course_name} · ${session.package_name} · v${session.version_number}`;
   const quantityLabel =
     session.settings.question_count === "all"
@@ -177,29 +178,21 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   const hasStarted = sessionQuestions.length > 0;
 
   if (session.status === "FINISHED" || phase === "completed") {
-    return (
-      <div className="space-y-6 max-w-2xl">
-        <div>
-          <h1 className="text-2xl font-bold">Sessão concluída com sucesso</h1>
-          <p className="text-sm text-muted-foreground">
-            Você concluiu esta sessão de estudo.
-          </p>
+    if (!results) {
+      return (
+        <div className="space-y-6 max-w-4xl">
+          <Skeleton className="h-8 w-56" />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((item) => (
+              <Skeleton key={item} className="h-28 rounded-xl" />
+            ))}
+          </div>
+          <Skeleton className="h-48 rounded-xl" />
         </div>
-        <Card>
-          <SessionHeader
-            title={session.distribution_name}
-            subtitle={subtitle}
-            mode={session.mode}
-          />
-        </Card>
-        <Button variant="outline" asChild>
-          <Link to="/app/study">
-            <ChevronLeft className="h-4 w-4 mr-2" />
-            Voltar ao estudo
-          </Link>
-        </Button>
-      </div>
-    );
+      );
+    }
+
+    return <SessionResultsView session={session} results={results} />;
   }
 
   if (sequence.length === 0) {

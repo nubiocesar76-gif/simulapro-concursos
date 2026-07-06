@@ -9,6 +9,10 @@ import {
   type StudyMode,
   type StudySessionStatus,
 } from "@/lib/study-session";
+import { fetchRecentSessions, type RecentSession } from "@/lib/study-history";
+
+export type { RecentSession };
+export { fetchRecentSessions };
 
 export type DashboardStats = {
   questionsAnswered: number;
@@ -33,17 +37,6 @@ export type DashboardDistribution = {
   version_number: string;
   questionCount: number;
   lastActivityAt: string | null;
-};
-
-export type RecentSession = {
-  id: string;
-  date: string;
-  distributionName: string;
-  mode: StudyMode;
-  status: StudySessionStatus;
-  correctCount: number;
-  totalAnswered: number;
-  durationSeconds: number;
 };
 
 export type SubjectPerformance = {
@@ -245,64 +238,6 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
       version_number: item.version_number,
       questionCount: versionId ? (questionCountByVersion.get(versionId) ?? 0) : 0,
       lastActivityAt: lastActivityByDistribution.get(item.distribution_id) ?? null,
-    };
-  });
-}
-
-async function fetchRecentSessions(userId: string): Promise<RecentSession[]> {
-  const { data: sessions, error } = await supabase
-    .from("study_sessions")
-    .select(`
-      id,
-      mode,
-      status,
-      started_at,
-      finished_at,
-      duration_seconds,
-      created_at,
-      content_distributions!inner(name)
-    `)
-    .eq("user_id", userId)
-    .order("created_at", { ascending: false })
-    .limit(5);
-
-  if (error) throw error;
-  if (!sessions?.length) return [];
-
-  const sessionIds = sessions.map((session) => session.id);
-  const { data: answers, error: answersError } = await supabase
-    .from("study_session_questions")
-    .select("study_session_id, is_correct, response_time_seconds, answered_at")
-    .in("study_session_id", sessionIds)
-    .not("answered_at", "is", null);
-
-  if (answersError) throw answersError;
-
-  const answersBySession = new Map<string, typeof answers>();
-  for (const answer of answers ?? []) {
-    const current = answersBySession.get(answer.study_session_id) ?? [];
-    current.push(answer);
-    answersBySession.set(answer.study_session_id, current);
-  }
-
-  return sessions.map((session) => {
-    const sessionAnswers = answersBySession.get(session.id) ?? [];
-    const correctCount = sessionAnswers.filter((answer) => answer.is_correct === true).length;
-    const answeredTime = sessionAnswers.reduce(
-      (sum, answer) => sum + (answer.response_time_seconds ?? 0),
-      0,
-    );
-    const distribution = session.content_distributions as { name: string };
-
-    return {
-      id: session.id,
-      date: session.finished_at ?? session.started_at ?? session.created_at,
-      distributionName: distribution.name,
-      mode: session.mode,
-      status: session.status,
-      correctCount,
-      totalAnswered: sessionAnswers.length,
-      durationSeconds: answeredTime > 0 ? answeredTime : (session.duration_seconds ?? 0),
     };
   });
 }

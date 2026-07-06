@@ -1,0 +1,92 @@
+[
+  {
+    "statement": "Qual é a frequência cardíaca considerada normal em um adulto saudável em repouso, segundo fundamentos de enfermagem?",
+    "alternatives": [
+      "A) 40 a 50 bpm",
+      "B) 60 a 100 bpm",
+      "C) 110 a 130 bpm",
+      "D) 140 a 160 bpm"
+    ],
+    "correct_answer": "B",
+    "subject": "Fundamentos de Enfermagem",
+    "topic": "Sinais Vitais",
+    "board": "CEBRASPE",
+    "exam": "Prefeitura Municipal de Homologação",
+    "position": "Enfermeiro",
+    "year": 2026,
+    "difficulty": "Fácil",
+    "explanation": "Em adultos, a frequência cardíaca normal em repouso situa-se entre 60 e 100 batimentos por minuto."
+  },
+  {
+    "statement": "Na aferição de temperatura axilar, qual valor em graus Celsius indica estado afebril em adultos?",
+    "alternatives": [
+      "A) 35,0 °C",
+      "B) 36,5 °C",
+      "C) 38,5 °C",
+      "D) 40,0 °C"
+    ],
+    "correct_answer": "B",
+    "subject": "Fundamentos de Enfermagem",
+    "topic": "Sinais Vitais",
+    "board": "CEBRASPE",
+    "exam": "Prefeitura Municipal de Homologação",
+    "position": "Enfermeiro",
+    "year": 2026,
+    "difficulty": "Fácil",
+    "explanation": "Temperatura axilar entre 36,0 °C e 37,5 °C é considerada normal em adultos."
+  },
+  {
+    "statement": "Qual é a frequência respiratória considerada normal em adultos durante a avaliação dos sinais vitais?",
+    "alternatives": [
+      "A) 8 a 10 irpm",
+      "B) 12 a 20 irpm",
+      "C) 25 a 30 irpm",
+      "D) 32 a 36 irpm"
+    ],
+    "correct_answer": "B",
+    "subject": "Fundamentos de Enfermagem",
+    "topic": "Sinais Vitais",
+    "board": "CEBRASPE",
+    "exam": "Prefeitura Municipal de Homologação",
+    "position": "Enfermeiro",
+    "year": 2026,
+    "difficulty": "Média",
+    "explanation": "A frequência respiratória normal em adultos varia de 12 a 20 incursões respiratórias por minuto."
+  },
+  {
+    "statement": "Em oximetria de pulso, qual saturação de oxigênio (SpO2) é considerada adequada para adultos em repouso?",
+    "alternatives": [
+      "A) 85% a 89%",
+      "B) 90% a 92%",
+      "C) 95% a 100%",
+      "D) 70% a 80%"
+    ],
+    "correct_answer": "C",
+    "subject": "Fundamentos de Enfermagem",
+    "topic": "Sinais Vitais",
+    "board": "CEBRASPE",
+    "exam": "Prefeitura Municipal de Homologação",
+    "position": "Enfermeiro",
+    "year": 2026,
+    "difficulty": "Fácil",
+    "explanation": "SpO2 igual ou superior a 95% em repouso indica oxigenação adequada na maioria dos adultos."
+  },
+  {
+    "statement": "Ao medir pressão arterial de um adulto, qual valor sistólico está dentro da faixa considerada normal?",
+    "alternatives": [
+      "A) 80 mmHg",
+      "B) 95 mmHg",
+      "C) 118 mmHg",
+      "D) 180 mmHg"
+    ],
+    "correct_answer": "C",
+    "subject": "Fundamentos de Enfermagem",
+    "topic": "Sinais Vitais",
+    "board": "CEBRASPE",
+    "exam": "Prefeitura Municipal de Homologação",
+    "position": "Enfermeiro",
+    "year": 2026,
+    "difficulty": "Média",
+    "explanation": "Pressão arterial sistólica abaixo de 120 mmHg e diastólica abaixo de 80 mmHg é considerada normal."
+  }
+]

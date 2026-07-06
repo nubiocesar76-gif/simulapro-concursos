@@ -1,7 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { useNavigate } from "@tanstack/react-router";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
-import { fetchStudentDashboard } from "@/lib/student-dashboard";
+import { fetchStudentDashboard, type StudyFilterIndicators } from "@/lib/student-dashboard";
+import {
+  createStudySession,
+  FILTER_MODE_EMPTY_MESSAGES,
+  formatStudySessionError,
+  StudySessionError,
+  type FilterStudyMode,
+} from "@/lib/study-session";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ContinueStudyCard } from "@/components/app/dashboard/ContinueStudyCard";
 import { DashboardStats } from "@/components/app/dashboard/DashboardStats";
@@ -11,9 +19,29 @@ import { StudyFilterIndicatorsBar } from "@/components/app/dashboard/StudyFilter
 import { SubjectPerformanceTable } from "@/components/app/dashboard/SubjectPerformanceTable";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { EmptyState } from "@/components/shared/EmptyState";
+import { toast } from "sonner";
+
+const DASHBOARD_FILTER_EMPTY_MESSAGES: Record<FilterStudyMode, string> = {
+  FAVORITES: "Você ainda não possui questões favoritas.",
+  REVIEW: "Você ainda não possui questões marcadas para revisão.",
+  WRONG_ONLY: "Você ainda não possui questões pendentes de revisão.",
+};
+
+const FILTER_INDICATOR_COUNT_KEYS: Record<FilterStudyMode, keyof StudyFilterIndicators> = {
+  FAVORITES: "favoritesCount",
+  REVIEW: "reviewLaterCount",
+  WRONG_ONLY: "pendingReviewCount",
+};
+
+const FILTER_SESSION_SETTINGS = {
+  question_count: "all" as const,
+  question_order: "random" as const,
+  show_answers: "during" as const,
+};
 
 export function StudentDashboardPage() {
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const { data: profile } = useQuery({
     queryKey: ["profile", user?.id],
@@ -27,6 +55,44 @@ export function StudentDashboardPage() {
     enabled: !!user,
     queryFn: () => fetchStudentDashboard(user!.id),
     retry: false,
+  });
+
+  const startFilterSession = useMutation({
+    mutationFn: async (mode: FilterStudyMode) => {
+      if (!data) throw new Error("Painel ainda não carregado.");
+
+      const countKey = FILTER_INDICATOR_COUNT_KEYS[mode];
+      if (data.filterIndicators[countKey] === 0) {
+        throw new StudySessionError(DASHBOARD_FILTER_EMPTY_MESSAGES[mode]);
+      }
+      if (!data.distributions.length) {
+        throw new StudySessionError(DASHBOARD_FILTER_EMPTY_MESSAGES[mode]);
+      }
+
+      for (const distribution of data.distributions) {
+        try {
+          return await createStudySession({
+            distributionId: distribution.distribution_id,
+            mode,
+            settings: FILTER_SESSION_SETTINGS,
+          });
+        } catch (error) {
+          if (
+            error instanceof StudySessionError &&
+            error.message === FILTER_MODE_EMPTY_MESSAGES[mode]
+          ) {
+            continue;
+          }
+          throw error;
+        }
+      }
+
+      throw new StudySessionError(DASHBOARD_FILTER_EMPTY_MESSAGES[mode]);
+    },
+    onSuccess: (session) => {
+      navigate({ to: "/app/study/$sessionId", params: { sessionId: session.id } });
+    },
+    onError: (error: unknown) => toast.error(formatStudySessionError(error)),
   });
 
   if (isLoading) {
@@ -72,7 +138,11 @@ export function StudentDashboardPage() {
 
       <DashboardStats stats={data.stats} />
 
-      <StudyFilterIndicatorsBar indicators={data.filterIndicators} />
+      <StudyFilterIndicatorsBar
+        indicators={data.filterIndicators}
+        onShortcutClick={(mode) => startFilterSession.mutate(mode)}
+        loadingShortcut={startFilterSession.isPending ? startFilterSession.variables : null}
+      />
 
       {data.continueStudy && <ContinueStudyCard session={data.continueStudy} />}
 

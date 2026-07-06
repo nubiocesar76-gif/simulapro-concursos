@@ -21,9 +21,14 @@ type RecentSessionsProps = {
 export function RecentSessions({ sessions }: RecentSessionsProps) {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Últimas sessões</CardTitle>
-        <CardDescription>Seu histórico recente de estudo.</CardDescription>
+      <CardHeader className="flex flex-row items-start justify-between gap-4 space-y-0">
+        <div>
+          <CardTitle>Últimas sessões</CardTitle>
+          <CardDescription>Seu histórico recente de estudo.</CardDescription>
+        </div>
+        <Button variant="link" size="sm" className="px-0 shrink-0" asChild>
+          <Link to="/app/history">Ver todas →</Link>
+        </Button>
       </CardHeader>
       <CardContent>
         {sessions.length === 0 ? (

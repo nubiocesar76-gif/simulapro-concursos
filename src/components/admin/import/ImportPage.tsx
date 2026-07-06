@@ -99,10 +99,29 @@ export function ImportPage() {
   });
   const { data: batches = [] } = useQuery({
     queryKey: ["import_batches"],
-    queryFn: async () => (await supabase
-      .from("import_batches")
-      .select("*, packages(name), package_versions(version), profiles:created_by(full_name,email)")
-      .order("created_at", { ascending: false }).limit(30)).data ?? [],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("import_batches")
+        .select("*, packages(name), package_versions(version)")
+        .order("created_at", { ascending: false })
+        .limit(30);
+      if (error) throw error;
+      if (!data?.length) return [];
+
+      const userIds = [...new Set(data.map((b) => b.created_by).filter(Boolean))] as string[];
+      if (!userIds.length) return data;
+
+      const { data: profiles } = await supabase
+        .from("profiles")
+        .select("id, full_name, email")
+        .in("id", userIds);
+
+      const profileById = new Map((profiles ?? []).map((p) => [p.id, p]));
+      return data.map((b) => ({
+        ...b,
+        profiles: b.created_by ? profileById.get(b.created_by) ?? null : null,
+      }));
+    },
   });
 
   const counts = useMemo(() => ({

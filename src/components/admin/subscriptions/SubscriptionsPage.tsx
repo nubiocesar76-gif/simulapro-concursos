@@ -154,7 +154,7 @@ export function SubscriptionsPage() {
       let q = supabase
         .from("subscriptions")
         .select(
-          "*, profiles!subscriptions_user_id_fkey(full_name, email), content_distributions(name, package_versions(version_number, packages(name, courses(name))))",
+          "*, content_distributions(name, package_versions(version_number, packages(name, courses(name))))",
           { count: "exact" },
         )
         .not("distribution_id", "is", null)
@@ -168,7 +168,26 @@ export function SubscriptionsPage() {
 
       const { data: rows, error: qError, count } = await q;
       if (qError) throw qError;
-      return { rows: (rows ?? []) as SubscriptionRow[], total: count ?? 0 };
+
+      const subscriptionRows = rows ?? [];
+      const profileUserIds = [...new Set(subscriptionRows.map((r) => r.user_id).filter(Boolean))];
+      let profileById = new Map<string, { full_name: string | null; email: string | null }>();
+      if (profileUserIds.length) {
+        const { data: profiles, error: profilesError } = await supabase
+          .from("profiles")
+          .select("id, full_name, email")
+          .in("id", profileUserIds);
+        if (profilesError) throw profilesError;
+        profileById = new Map((profiles ?? []).map((p) => [p.id, p]));
+      }
+
+      return {
+        rows: subscriptionRows.map((r) => ({
+          ...r,
+          profiles: profileById.get(r.user_id) ?? null,
+        })) as SubscriptionRow[],
+        total: count ?? 0,
+      };
     },
   });
 

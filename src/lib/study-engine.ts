@@ -28,6 +28,7 @@ export type StudySessionDetail = {
   settings: StudySessionSettings;
   started_at: string;
   finished_at: string | null;
+  duration_seconds: number | null;
   distribution_name: string;
   package_version_id: string;
   version_number: string;
@@ -35,6 +36,37 @@ export type StudySessionDetail = {
   version_status: string;
   package_name: string;
   course_name: string;
+};
+
+export type SessionResultsSummary = {
+  totalQuestions: number;
+  answeredCount: number;
+  correctCount: number;
+  wrongCount: number;
+  percentage: number;
+  totalTimeSeconds: number;
+  averageTimeSeconds: number;
+};
+
+export type SessionResultItem = {
+  order: number;
+  index: number;
+  sessionQuestionId: string;
+  questionId: string;
+  statement: string;
+  statementSummary: string;
+  selectedAnswer: string | null;
+  correctAnswer: string | null;
+  isCorrect: boolean | null;
+  explanation: string | null;
+  responseTimeSeconds: number | null;
+  isAnswered: boolean;
+};
+
+export type SessionResults = {
+  summary: SessionResultsSummary;
+  items: SessionResultItem[];
+  sessionDate: string;
 };
 
 export type SessionQuestion = {
@@ -160,6 +192,104 @@ function countAnsweredQuestions(rows: StudySessionQuestionRow[]): number {
   return rows.filter((row) => row.answered_at).length;
 }
 
+function summarizeStatement(text: string, maxLength = 140): string {
+  const trimmed = text.trim().replace(/\s+/g, " ");
+  if (trimmed.length <= maxLength) return trimmed;
+  return `${trimmed.slice(0, maxLength)}…`;
+}
+
+async function fetchQuestionDetailsForResults(
+  questionIds: string[],
+): Promise<Map<string, { statement: string; explanation: string | null }>> {
+  const map = new Map<string, { statement: string; explanation: string | null }>();
+  if (!questionIds.length) return map;
+
+  const chunkSize = 200;
+  for (let i = 0; i < questionIds.length; i += chunkSize) {
+    const chunk = questionIds.slice(i, i + chunkSize);
+    const { data, error } = await supabase
+      .from("questions")
+      .select("id, statement, explanation")
+      .in("id", chunk);
+
+    if (error) throw error;
+    for (const question of data ?? []) {
+      map.set(question.id, {
+        statement: question.statement,
+        explanation: question.explanation,
+      });
+    }
+  }
+
+  return map;
+}
+
+function buildSessionResults(
+  session: StudySessionDetail,
+  rows: StudySessionQuestionRow[],
+  questionMap: Map<string, { statement: string; explanation: string | null }>,
+): SessionResults {
+  const answered = rows.filter((row) => row.answered_at);
+  const correctCount = answered.filter((row) => row.is_correct === true).length;
+  const wrongCount = answered.filter((row) => row.is_correct === false).length;
+  const answeredCount = answered.length;
+  const totalQuestions = rows.length;
+
+  const totalTimeFromRows = answered.reduce(
+    (sum, row) => sum + (row.response_time_seconds ?? 0),
+    0,
+  );
+  const totalTimeSeconds =
+    totalTimeFromRows > 0 ? totalTimeFromRows : (session.duration_seconds ?? 0);
+  const averageTimeSeconds =
+    answeredCount > 0 ? Math.round(totalTimeFromRows / answeredCount) : 0;
+  const percentage =
+    answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+
+  const items: SessionResultItem[] = rows.map((row, index) => {
+    const question = questionMap.get(row.question_id);
+    const statement = question?.statement ?? "—";
+
+    return {
+      order: row.question_order,
+      index,
+      sessionQuestionId: row.id,
+      questionId: row.question_id,
+      statement,
+      statementSummary: summarizeStatement(statement),
+      selectedAnswer: row.selected_answer,
+      correctAnswer: row.correct_answer,
+      isCorrect: row.is_correct,
+      explanation: question?.explanation?.trim() || null,
+      responseTimeSeconds: row.response_time_seconds,
+      isAnswered: !!row.answered_at,
+    };
+  });
+
+  return {
+    summary: {
+      totalQuestions,
+      answeredCount,
+      correctCount,
+      wrongCount,
+      percentage,
+      totalTimeSeconds,
+      averageTimeSeconds,
+    },
+    items,
+    sessionDate: session.finished_at ?? session.started_at,
+  };
+}
+
+async function loadSessionResults(
+  session: StudySessionDetail,
+  rows: StudySessionQuestionRow[],
+): Promise<SessionResults> {
+  const questionIds = [...new Set(rows.map((row) => row.question_id))];
+  const questionMap = await fetchQuestionDetailsForResults(questionIds);
+  return buildSessionResults(session, rows, questionMap);
+}
+
 function buildQuestionFeedback(
   session: StudySessionDetail,
   row: StudySessionQuestionRow,
@@ -209,6 +339,7 @@ export async function getStudySession(sessionId: string): Promise<StudySessionDe
       settings,
       started_at,
       finished_at,
+      duration_seconds,
       content_distributions!inner(
         id,
         name,
@@ -252,6 +383,7 @@ export async function getStudySession(sessionId: string): Promise<StudySessionDe
     settings: parseSettings(data.settings),
     started_at: data.started_at,
     finished_at: data.finished_at,
+    duration_seconds: data.duration_seconds,
     distribution_name: dist.name,
     package_version_id: dist.package_version_id,
     version_number: dist.package_versions.version_number,
@@ -331,8 +463,26 @@ export function getNextQuestion(
 export async function openStudySession(sessionId: string) {
   const session = await getStudySession(sessionId);
   const existingRows = await fetchOrderedSessionQuestions(sessionId);
-  const eligible = await getSessionQuestions(session);
-  const sequence = buildQuestionSequence(eligible, session.settings);
+
+  const allAnswered =
+    existingRows.length > 0 && existingRows.every((row) => row.answered_at);
+
+  let sequence: SessionQuestion[];
+  if (session.status === "FINISHED" && existingRows.length > 0) {
+    sequence = existingRows.map((row) => ({
+      id: row.question_id,
+      statement: "",
+      created_at: "",
+    }));
+  } else {
+    const eligible = await getSessionQuestions(session);
+    sequence = buildQuestionSequence(eligible, session.settings);
+  }
+
+  let results: SessionResults | null = null;
+  if ((session.status === "FINISHED" || allAnswered) && existingRows.length > 0) {
+    results = await loadSessionResults(session, existingRows);
+  }
 
   await logEvent("study.session.open", "study_sessions", sessionId, {
     distribution_id: session.distribution_id,
@@ -346,6 +496,7 @@ export async function openStudySession(sessionId: string) {
     sequence,
     sessionQuestions: existingRows,
     answeredCount: countAnsweredQuestions(existingRows),
+    results,
   };
 }
 
