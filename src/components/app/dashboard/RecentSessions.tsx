@@ -27,7 +27,7 @@ export function RecentSessions({ sessions }: RecentSessionsProps) {
           <CardDescription>Seu histórico recente de estudo.</CardDescription>
         </div>
         <Button variant="link" size="sm" className="px-0 shrink-0" asChild>
-          <Link to="/app/history">Ver todas →</Link>
+          <Link to="/app/history">Ver histórico completo →</Link>
         </Button>
       </CardHeader>
       <CardContent>

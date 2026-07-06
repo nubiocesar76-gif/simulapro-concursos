@@ -10,7 +10,8 @@ import {
   Search,
 } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
-import { formatDashboardDate, formatStudyDuration } from "@/lib/student-dashboard";
+import { fetchHistorySummaryStats, formatDashboardDate, formatStudyDuration } from "@/lib/student-dashboard";
+import { HistorySummaryStats } from "@/components/app/history/HistorySummaryStats";
 import {
   fetchHistoryFilterOptions,
   fetchStudyHistory,
@@ -125,6 +126,13 @@ export function StudyHistoryPage() {
     queryFn: () => fetchHistoryFilterOptions(user!.id),
   });
 
+  const { data: summary, isLoading: isSummaryLoading } = useQuery({
+    queryKey: ["student-session-stats", user?.id],
+    enabled: !!user,
+    queryFn: () => fetchHistorySummaryStats(user!.id),
+    staleTime: 60_000,
+  });
+
   const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ["study-history", user?.id, filters],
     enabled: !!user,
@@ -197,10 +205,20 @@ export function StudyHistoryPage() {
         </Button>
       </div>
 
+      {isSummaryLoading ? (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[1, 2, 3, 4].map((item) => (
+            <Skeleton key={item} className="h-28 rounded-xl" />
+          ))}
+        </div>
+      ) : summary ? (
+        <HistorySummaryStats stats={summary} />
+      ) : null}
+
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Filtros</CardTitle>
-          <CardDescription>Refine por distribuição, curso, período, modo ou status.</CardDescription>
+          <CardDescription>Refine por curso, distribuição, modo, período ou status.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="relative max-w-md">
@@ -214,6 +232,18 @@ export function StudyHistoryPage() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <FilterSelect
+              label="Curso"
+              value={courseName}
+              onValueChange={(value) => {
+                setCourseName(value);
+                setPage(0);
+              }}
+              options={[
+                { value: "all", label: "Todos" },
+                ...(filterOptions?.courses.map((name) => ({ value: name, label: name })) ?? []),
+              ]}
+            />
             <FilterSelect
               label="Distribuição"
               value={distributionId}
@@ -230,16 +260,16 @@ export function StudyHistoryPage() {
               ]}
             />
             <FilterSelect
-              label="Curso"
-              value={courseName}
+              label="Modo"
+              value={mode ?? "all"}
               onValueChange={(value) => {
-                setCourseName(value);
+                setMode(value as StudyHistoryFilters["mode"]);
                 setPage(0);
               }}
-              options={[
-                { value: "all", label: "Todos" },
-                ...(filterOptions?.courses.map((name) => ({ value: name, label: name })) ?? []),
-              ]}
+              options={HISTORY_MODE_OPTIONS.map((item) => ({
+                value: item,
+                label: item === "all" ? "Todos" : STUDY_MODE_LABELS[item],
+              }))}
             />
             <FilterSelect
               label="Período"
@@ -251,18 +281,6 @@ export function StudyHistoryPage() {
               options={HISTORY_PERIOD_OPTIONS.map((item) => ({
                 value: String(item.value),
                 label: item.label,
-              }))}
-            />
-            <FilterSelect
-              label="Modo"
-              value={mode ?? "all"}
-              onValueChange={(value) => {
-                setMode(value as StudyHistoryFilters["mode"]);
-                setPage(0);
-              }}
-              options={HISTORY_MODE_OPTIONS.map((item) => ({
-                value: item,
-                label: item === "all" ? "Todos" : STUDY_MODE_LABELS[item],
               }))}
             />
             <FilterSelect
@@ -305,9 +323,9 @@ export function StudyHistoryPage() {
                 <TableHeader>
                   <TableRow>
                     <TableHead>Data</TableHead>
-                    <TableHead>Distribuição</TableHead>
                     <TableHead>Curso</TableHead>
                     <TableHead>Pacote</TableHead>
+                    <TableHead>Distribuição</TableHead>
                     <TableHead>Modo</TableHead>
                     <TableHead>Questões</TableHead>
                     <TableHead>Acertos</TableHead>
@@ -339,9 +357,9 @@ export function StudyHistoryPage() {
                         <TableCell className="whitespace-nowrap">
                           {formatDashboardDate(row.date)}
                         </TableCell>
-                        <TableCell>{row.distributionName}</TableCell>
                         <TableCell>{row.courseName}</TableCell>
                         <TableCell>{row.packageName}</TableCell>
+                        <TableCell>{row.distributionName}</TableCell>
                         <TableCell>
                           <Badge variant="outline">{STUDY_MODE_LABELS[row.mode]}</Badge>
                         </TableCell>

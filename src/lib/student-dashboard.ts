@@ -21,6 +21,13 @@ export type DashboardStats = {
   totalStudySeconds: number;
 };
 
+export type HistorySummaryStats = {
+  totalSessions: number;
+  questionsAnswered: number;
+  accuracyPercent: number;
+  totalStudySeconds: number;
+};
+
 export type ContinueStudy = {
   sessionId: string;
   distributionName: string;
@@ -137,6 +144,28 @@ function buildStats(
     accuracyPercent,
     completedSessions,
     totalStudySeconds,
+  };
+}
+
+/** Reutilizado pelo Dashboard e pela página de histórico (mesma agregação). */
+export async function fetchStudentSessionStats(userId: string): Promise<{
+  stats: DashboardStats;
+  totalSessions: number;
+}> {
+  const { sessions, answers } = await fetchSessionQuestionStats(userId);
+  return {
+    stats: buildStats(sessions, answers),
+    totalSessions: sessions.length,
+  };
+}
+
+export async function fetchHistorySummaryStats(userId: string): Promise<HistorySummaryStats> {
+  const { stats, totalSessions } = await fetchStudentSessionStats(userId);
+  return {
+    totalSessions,
+    questionsAnswered: stats.questionsAnswered,
+    accuracyPercent: stats.accuracyPercent,
+    totalStudySeconds: stats.totalStudySeconds,
   };
 }
 
@@ -336,14 +365,14 @@ async function fetchStudyFilterIndicators(userId: string): Promise<StudyFilterIn
 
 export async function fetchStudentDashboard(userId: string): Promise<StudentDashboardData> {
   const [
-    { sessions, answers },
+    { stats },
     continueStudy,
     distributions,
     recentSessions,
     subjectPerformance,
     filterIndicators,
   ] = await Promise.all([
-    fetchSessionQuestionStats(userId),
+    fetchStudentSessionStats(userId),
     fetchContinueStudy(userId),
     fetchDashboardDistributions(userId),
     fetchRecentSessions(userId),
@@ -352,7 +381,7 @@ export async function fetchStudentDashboard(userId: string): Promise<StudentDash
   ]);
 
   const data: StudentDashboardData = {
-    stats: buildStats(sessions, answers),
+    stats,
     filterIndicators,
     continueStudy,
     distributions,
