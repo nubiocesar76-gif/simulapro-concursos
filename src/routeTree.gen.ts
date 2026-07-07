@@ -35,7 +35,9 @@ import { Route as AuthenticatedAdminDistributionsRouteImport } from './routes/_a
 import { Route as AuthenticatedAdminCoursesRouteImport } from './routes/_authenticated/admin/courses'
 import { Route as AuthenticatedAdminBoardsRouteImport } from './routes/_authenticated/admin/boards'
 import { Route as AuthenticatedAppStudyIndexRouteImport } from './routes/_authenticated/app/study.index'
+import { Route as AuthenticatedAdminSubjectsIndexRouteImport } from './routes/_authenticated/admin/subjects.index'
 import { Route as AuthenticatedAppStudySessionIdRouteImport } from './routes/_authenticated/app/study.$sessionId'
+import { Route as AuthenticatedAdminSubjectsSubjectIdRouteImport } from './routes/_authenticated/admin/subjects.$subjectId'
 
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
@@ -180,11 +182,23 @@ const AuthenticatedAppStudyIndexRoute =
     path: '/',
     getParentRoute: () => AuthenticatedAppStudyRoute,
   } as any)
+const AuthenticatedAdminSubjectsIndexRoute =
+  AuthenticatedAdminSubjectsIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedAdminSubjectsRoute,
+  } as any)
 const AuthenticatedAppStudySessionIdRoute =
   AuthenticatedAppStudySessionIdRouteImport.update({
     id: '/$sessionId',
     path: '/$sessionId',
     getParentRoute: () => AuthenticatedAppStudyRoute,
+  } as any)
+const AuthenticatedAdminSubjectsSubjectIdRoute =
+  AuthenticatedAdminSubjectsSubjectIdRouteImport.update({
+    id: '/$subjectId',
+    path: '/$subjectId',
+    getParentRoute: () => AuthenticatedAdminSubjectsRoute,
   } as any)
 
 export interface FileRoutesByFullPath {
@@ -201,7 +215,7 @@ export interface FileRoutesByFullPath {
   '/admin/packages': typeof AuthenticatedAdminPackagesRoute
   '/admin/positions': typeof AuthenticatedAdminPositionsRoute
   '/admin/questions': typeof AuthenticatedAdminQuestionsRoute
-  '/admin/subjects': typeof AuthenticatedAdminSubjectsRoute
+  '/admin/subjects': typeof AuthenticatedAdminSubjectsRouteWithChildren
   '/admin/subscriptions': typeof AuthenticatedAdminSubscriptionsRoute
   '/admin/topics': typeof AuthenticatedAdminTopicsRoute
   '/admin/users': typeof AuthenticatedAdminUsersRoute
@@ -212,7 +226,9 @@ export interface FileRoutesByFullPath {
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/app/': typeof AuthenticatedAppIndexRoute
+  '/admin/subjects/$subjectId': typeof AuthenticatedAdminSubjectsSubjectIdRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/admin/subjects/': typeof AuthenticatedAdminSubjectsIndexRoute
   '/app/study/': typeof AuthenticatedAppStudyIndexRoute
 }
 export interface FileRoutesByTo {
@@ -227,7 +243,6 @@ export interface FileRoutesByTo {
   '/admin/packages': typeof AuthenticatedAdminPackagesRoute
   '/admin/positions': typeof AuthenticatedAdminPositionsRoute
   '/admin/questions': typeof AuthenticatedAdminQuestionsRoute
-  '/admin/subjects': typeof AuthenticatedAdminSubjectsRoute
   '/admin/subscriptions': typeof AuthenticatedAdminSubscriptionsRoute
   '/admin/topics': typeof AuthenticatedAdminTopicsRoute
   '/admin/users': typeof AuthenticatedAdminUsersRoute
@@ -237,7 +252,9 @@ export interface FileRoutesByTo {
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/app': typeof AuthenticatedAppIndexRoute
+  '/admin/subjects/$subjectId': typeof AuthenticatedAdminSubjectsSubjectIdRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/admin/subjects': typeof AuthenticatedAdminSubjectsIndexRoute
   '/app/study': typeof AuthenticatedAppStudyIndexRoute
 }
 export interface FileRoutesById {
@@ -256,7 +273,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/packages': typeof AuthenticatedAdminPackagesRoute
   '/_authenticated/admin/positions': typeof AuthenticatedAdminPositionsRoute
   '/_authenticated/admin/questions': typeof AuthenticatedAdminQuestionsRoute
-  '/_authenticated/admin/subjects': typeof AuthenticatedAdminSubjectsRoute
+  '/_authenticated/admin/subjects': typeof AuthenticatedAdminSubjectsRouteWithChildren
   '/_authenticated/admin/subscriptions': typeof AuthenticatedAdminSubscriptionsRoute
   '/_authenticated/admin/topics': typeof AuthenticatedAdminTopicsRoute
   '/_authenticated/admin/users': typeof AuthenticatedAdminUsersRoute
@@ -267,7 +284,9 @@ export interface FileRoutesById {
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/app/': typeof AuthenticatedAppIndexRoute
+  '/_authenticated/admin/subjects/$subjectId': typeof AuthenticatedAdminSubjectsSubjectIdRoute
   '/_authenticated/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/_authenticated/admin/subjects/': typeof AuthenticatedAdminSubjectsIndexRoute
   '/_authenticated/app/study/': typeof AuthenticatedAppStudyIndexRoute
 }
 export interface FileRouteTypes {
@@ -297,7 +316,9 @@ export interface FileRouteTypes {
     | '/api/webhooks/asaas'
     | '/admin/'
     | '/app/'
+    | '/admin/subjects/$subjectId'
     | '/app/study/$sessionId'
+    | '/admin/subjects/'
     | '/app/study/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -312,7 +333,6 @@ export interface FileRouteTypes {
     | '/admin/packages'
     | '/admin/positions'
     | '/admin/questions'
-    | '/admin/subjects'
     | '/admin/subscriptions'
     | '/admin/topics'
     | '/admin/users'
@@ -322,7 +342,9 @@ export interface FileRouteTypes {
     | '/api/webhooks/asaas'
     | '/admin'
     | '/app'
+    | '/admin/subjects/$subjectId'
     | '/app/study/$sessionId'
+    | '/admin/subjects'
     | '/app/study'
   id:
     | '__root__'
@@ -351,7 +373,9 @@ export interface FileRouteTypes {
     | '/api/webhooks/asaas'
     | '/_authenticated/admin/'
     | '/_authenticated/app/'
+    | '/_authenticated/admin/subjects/$subjectId'
     | '/_authenticated/app/study/$sessionId'
+    | '/_authenticated/admin/subjects/'
     | '/_authenticated/app/study/'
   fileRoutesById: FileRoutesById
 }
@@ -546,6 +570,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAppStudyIndexRouteImport
       parentRoute: typeof AuthenticatedAppStudyRoute
     }
+    '/_authenticated/admin/subjects/': {
+      id: '/_authenticated/admin/subjects/'
+      path: '/'
+      fullPath: '/admin/subjects/'
+      preLoaderRoute: typeof AuthenticatedAdminSubjectsIndexRouteImport
+      parentRoute: typeof AuthenticatedAdminSubjectsRoute
+    }
     '/_authenticated/app/study/$sessionId': {
       id: '/_authenticated/app/study/$sessionId'
       path: '/$sessionId'
@@ -553,8 +584,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAppStudySessionIdRouteImport
       parentRoute: typeof AuthenticatedAppStudyRoute
     }
+    '/_authenticated/admin/subjects/$subjectId': {
+      id: '/_authenticated/admin/subjects/$subjectId'
+      path: '/$subjectId'
+      fullPath: '/admin/subjects/$subjectId'
+      preLoaderRoute: typeof AuthenticatedAdminSubjectsSubjectIdRouteImport
+      parentRoute: typeof AuthenticatedAdminSubjectsRoute
+    }
   }
 }
+
+interface AuthenticatedAdminSubjectsRouteChildren {
+  AuthenticatedAdminSubjectsSubjectIdRoute: typeof AuthenticatedAdminSubjectsSubjectIdRoute
+  AuthenticatedAdminSubjectsIndexRoute: typeof AuthenticatedAdminSubjectsIndexRoute
+}
+
+const AuthenticatedAdminSubjectsRouteChildren: AuthenticatedAdminSubjectsRouteChildren =
+  {
+    AuthenticatedAdminSubjectsSubjectIdRoute:
+      AuthenticatedAdminSubjectsSubjectIdRoute,
+    AuthenticatedAdminSubjectsIndexRoute: AuthenticatedAdminSubjectsIndexRoute,
+  }
+
+const AuthenticatedAdminSubjectsRouteWithChildren =
+  AuthenticatedAdminSubjectsRoute._addFileChildren(
+    AuthenticatedAdminSubjectsRouteChildren,
+  )
 
 interface AuthenticatedAdminRouteRouteChildren {
   AuthenticatedAdminBoardsRoute: typeof AuthenticatedAdminBoardsRoute
@@ -566,7 +621,7 @@ interface AuthenticatedAdminRouteRouteChildren {
   AuthenticatedAdminPackagesRoute: typeof AuthenticatedAdminPackagesRoute
   AuthenticatedAdminPositionsRoute: typeof AuthenticatedAdminPositionsRoute
   AuthenticatedAdminQuestionsRoute: typeof AuthenticatedAdminQuestionsRoute
-  AuthenticatedAdminSubjectsRoute: typeof AuthenticatedAdminSubjectsRoute
+  AuthenticatedAdminSubjectsRoute: typeof AuthenticatedAdminSubjectsRouteWithChildren
   AuthenticatedAdminSubscriptionsRoute: typeof AuthenticatedAdminSubscriptionsRoute
   AuthenticatedAdminTopicsRoute: typeof AuthenticatedAdminTopicsRoute
   AuthenticatedAdminUsersRoute: typeof AuthenticatedAdminUsersRoute
@@ -585,7 +640,8 @@ const AuthenticatedAdminRouteRouteChildren: AuthenticatedAdminRouteRouteChildren
     AuthenticatedAdminPackagesRoute: AuthenticatedAdminPackagesRoute,
     AuthenticatedAdminPositionsRoute: AuthenticatedAdminPositionsRoute,
     AuthenticatedAdminQuestionsRoute: AuthenticatedAdminQuestionsRoute,
-    AuthenticatedAdminSubjectsRoute: AuthenticatedAdminSubjectsRoute,
+    AuthenticatedAdminSubjectsRoute:
+      AuthenticatedAdminSubjectsRouteWithChildren,
     AuthenticatedAdminSubscriptionsRoute: AuthenticatedAdminSubscriptionsRoute,
     AuthenticatedAdminTopicsRoute: AuthenticatedAdminTopicsRoute,
     AuthenticatedAdminUsersRoute: AuthenticatedAdminUsersRoute,

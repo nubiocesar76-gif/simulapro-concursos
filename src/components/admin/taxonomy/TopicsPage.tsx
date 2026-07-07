@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { ArrowLeft, Plus, Pencil, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { logEvent } from "@/lib/log";
@@ -58,6 +59,12 @@ import { AdminFiltersCard } from "@/components/admin/shared/AdminFiltersCard";
 
 type Topic = Tables<"topics"> & { subjects: { name: string } | null };
 
+export type LockedSubject = { id: string; name: string };
+
+type TopicsPageProps = {
+  lockedSubject?: LockedSubject;
+};
+
 async function fetchTopicDeps(topicId: string): Promise<DeleteDep[]> {
   const { count } = await supabase
     .from("questions")
@@ -66,7 +73,7 @@ async function fetchTopicDeps(topicId: string): Promise<DeleteDep[]> {
   return [{ label: "questão(ões) vinculada(s)", count: count ?? 0 }];
 }
 
-export function TopicsPage() {
+export function TopicsPage({ lockedSubject }: TopicsPageProps) {
   const qc = useQueryClient();
   const { search, setSearch, debouncedSearch, page, setPage } = useDebouncedSearch();
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -89,15 +96,15 @@ export function TopicsPage() {
     if (!dialogOpen) return;
     if (editing) {
       setName(editing.name);
-      setSubjectId(editing.subject_id);
+      setSubjectId(lockedSubject?.id ?? editing.subject_id);
     } else {
       setName("");
-      setSubjectId("");
+      setSubjectId(lockedSubject?.id ?? "");
     }
-  }, [dialogOpen, editing]);
+  }, [dialogOpen, editing, lockedSubject]);
 
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["topics", debouncedSearch, page],
+    queryKey: ["topics", debouncedSearch, page, lockedSubject?.id],
     queryFn: async () => {
       const from = page * TAXONOMY_PAGE_SIZE;
       const to = from + TAXONOMY_PAGE_SIZE - 1;
@@ -106,6 +113,9 @@ export function TopicsPage() {
         .select("*, subjects(name)", { count: "exact" })
         .order("name", { ascending: true })
         .range(from, to);
+      if (lockedSubject) {
+        q = q.eq("subject_id", lockedSubject.id);
+      }
       if (debouncedSearch) {
         const term = `%${debouncedSearch}%`;
         q = q.or(`name.ilike.${term}`);
@@ -195,8 +205,20 @@ export function TopicsPage() {
     <div className="space-y-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
+          {lockedSubject && (
+            <Button variant="ghost" size="sm" className="-ml-2 mb-1 h-8 px-2" asChild>
+              <Link to="/admin/subjects">
+                <ArrowLeft className="h-4 w-4 mr-1" aria-hidden="true" />
+                Disciplinas
+              </Link>
+            </Button>
+          )}
           <h1 className="text-2xl font-bold tracking-tight">Assuntos</h1>
-          <p className="text-sm text-muted-foreground">Assuntos vinculados a disciplinas.</p>
+          <p className="text-sm text-muted-foreground">
+            {lockedSubject
+              ? `Assuntos da disciplina ${lockedSubject.name}.`
+              : "Assuntos vinculados a disciplinas."}
+          </p>
         </div>
         <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
           <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
@@ -213,14 +235,14 @@ export function TopicsPage() {
           <TableHeader>
             <TableRow>
               <TableHead>Nome</TableHead>
-              <TableHead>Disciplina</TableHead>
+              {!lockedSubject && <TableHead>Disciplina</TableHead>}
               <TableHead className="w-28">Criado em</TableHead>
               <TableHead className="w-24 text-right">Ações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <AdminTableBody
-              colSpan={4}
+              colSpan={lockedSubject ? 3 : 4}
               isLoading={isLoading}
               isError={isError}
               error={error as Error}
@@ -233,7 +255,7 @@ export function TopicsPage() {
               {rows.map((row) => (
                 <TableRow key={row.id}>
                   <TableCell className="font-medium">{row.name}</TableCell>
-                  <TableCell>{row.subjects?.name ?? "—"}</TableCell>
+                  {!lockedSubject && <TableCell>{row.subjects?.name ?? "—"}</TableCell>}
                   <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
                   <TableCell className="text-right">
                     <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
@@ -256,6 +278,12 @@ export function TopicsPage() {
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{editing ? "Editar assunto" : "Novo assunto"}</DialogTitle>
+            {lockedSubject && (
+              <div className="space-y-0.5 pt-1">
+                <p className="text-xs font-medium text-muted-foreground">Disciplina</p>
+                <p className="text-sm font-semibold">{lockedSubject.name}</p>
+              </div>
+            )}
             <DialogDescription>Cadastre o assunto. O nome deve ser único dentro da disciplina.</DialogDescription>
           </DialogHeader>
           <form onSubmit={(e) => { e.preventDefault(); save.mutate(); }} className="space-y-3">
@@ -265,7 +293,11 @@ export function TopicsPage() {
             </div>
             <div>
               <Label>Disciplina *</Label>
-              <Select value={subjectId} onValueChange={setSubjectId}>
+              <Select
+                value={subjectId}
+                onValueChange={setSubjectId}
+                disabled={!!lockedSubject}
+              >
                 <SelectTrigger><SelectValue placeholder="Selecione a disciplina" /></SelectTrigger>
                 <SelectContent>
                   {subjects.map((s) => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}

@@ -1,6 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SubjectsPage } from "@/components/admin/taxonomy/SubjectsPage";
+import { createFileRoute, Outlet } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_authenticated/admin/subjects")({
-  component: SubjectsPage,
+  component: () => <Outlet />,
 });

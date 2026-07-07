@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { Layers, Plus, Pencil, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { logEvent } from "@/lib/log";
@@ -65,6 +66,7 @@ async function fetchSubjectDeps(subjectId: string): Promise<DeleteDep[]> {
 }
 
 export function SubjectsPage() {
+  const navigate = useNavigate();
   const qc = useQueryClient();
   const { search, setSearch, debouncedSearch, page, setPage } = useDebouncedSearch();
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -193,7 +195,7 @@ export function SubjectsPage() {
             <TableRow>
               <TableHead>Nome</TableHead>
               <TableHead className="w-28">Criado em</TableHead>
-              <TableHead className="w-24 text-right">Ações</TableHead>
+              <TableHead className="w-32 text-right">Ações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -212,7 +214,22 @@ export function SubjectsPage() {
                 <TableRow key={row.id}>
                   <TableCell className="font-medium">{row.name}</TableCell>
                   <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
-                  <TableCell className="text-right">
+                  <TableCell className="whitespace-nowrap text-right">
+                    <Button
+                      size="sm"
+                      className="bg-red-600 text-white hover:bg-red-700"
+                      aria-label="TESTE"
+                    >
+                      TESTE
+                    </Button>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`Assuntos de ${row.name}`}
+                      onClick={() => navigate({ to: "/admin/subjects/$subjectId", params: { subjectId: row.id } })}
+                    >
+                      <Layers className="h-4 w-4" aria-hidden="true" />
+                    </Button>
                     <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
                       <Pencil className="h-4 w-4" aria-hidden="true" />
                     </Button>
