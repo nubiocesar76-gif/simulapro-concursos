@@ -59,9 +59,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { EmptyState } from "@/components/shared/EmptyState";
-import { PageErrorState } from "@/components/shared/PageErrorState";
-import { Skeleton } from "@/components/ui/skeleton";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
 import { toast } from "sonner";
 
 const PREVIEW_ROWS = 5;
@@ -189,7 +187,7 @@ export function ImportPage() {
     data: batches,
     isLoading: batchesLoading,
     isError: batchesError,
-    refetch: refetchBatches,
+    error: batchesQueryError,
   } = useQuery({
     queryKey: ["import_batches"],
     queryFn: async () => {
@@ -487,7 +485,7 @@ export function ImportPage() {
         batches={batches as ImportBatchRow[] | undefined}
         batchesLoading={batchesLoading}
         batchesError={batchesError}
-        onRetry={() => refetchBatches()}
+        batchesQueryError={batchesQueryError as Error | null}
         onViewReport={setReportBatch}
         onApply={setApplyBatch}
         onCancel={(id) => cancel.mutate(id)}
@@ -792,7 +790,7 @@ function ImportHistorySection({
   batches,
   batchesLoading,
   batchesError,
-  onRetry,
+  batchesQueryError,
   onViewReport,
   onApply,
   onCancel,
@@ -802,7 +800,7 @@ function ImportHistorySection({
   batches?: ImportBatchRow[];
   batchesLoading: boolean;
   batchesError: boolean;
-  onRetry: () => void;
+  batchesQueryError: Error | null;
   onViewReport: (batch: ImportBatchRow) => void;
   onApply: (batch: ImportBatchRow) => void;
   onCancel: (id: string) => void;
@@ -820,151 +818,126 @@ function ImportHistorySection({
           <CardDescription>Lotes salvos e ações de revisão ou aplicação.</CardDescription>
         </CardHeader>
         <CardContent className="pt-0">
-          {batchesError ? (
-            <PageErrorState
-              title="Erro ao carregar histórico"
-              message="Não foi possível carregar os lotes de importação."
-              onRetry={onRetry}
-            />
-          ) : (
-            <>
-              <div className="overflow-x-auto rounded-lg border">
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead className="sticky left-0 z-10 min-w-[10rem] bg-card">
-                        Arquivo
-                      </TableHead>
-                      <TableHead className="min-w-[9rem]">Pacote / Versão</TableHead>
-                      <TableHead className="min-w-[8rem]">Administrador</TableHead>
-                      <TableHead className="min-w-[4rem]">Total</TableHead>
-                      <TableHead className="min-w-[4rem]">Válidas</TableHead>
-                      <TableHead className="min-w-[4rem]">Dupl.</TableHead>
-                      <TableHead className="min-w-[4rem]">Inv.</TableHead>
-                      <TableHead className="min-w-[4rem]">Avisos</TableHead>
-                      <TableHead className="min-w-[6rem]">Status</TableHead>
-                      <TableHead className="min-w-[8rem]">Data</TableHead>
-                      <TableHead className="sticky right-0 z-10 min-w-[12rem] bg-card text-right">
-                        Ações
-                      </TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {batchesLoading ? (
-                      <HistoryTableSkeleton />
-                    ) : !batches?.length ? (
-                      <TableRow>
-                        <TableCell colSpan={11} className="py-10">
-                          <EmptyState
-                            title="Nenhum lote registrado"
-                            description="Os lotes salvos aparecerão aqui após a primeira importação."
-                          />
-                        </TableCell>
-                      </TableRow>
-                    ) : (
-                      batches.map((b) => (
-                        <TableRow key={b.id}>
-                          <TableCell className="sticky left-0 z-10 max-w-[220px] truncate bg-card font-medium">
-                            {b.filename}
-                          </TableCell>
-                          <TableCell className="max-w-[12rem] truncate text-xs">
-                            {b.packages?.name ?? "—"} / {b.package_versions?.version ?? "—"}
-                          </TableCell>
-                          <TableCell className="max-w-[10rem] truncate text-xs">
-                            {b.profiles?.full_name ?? b.profiles?.email ?? "—"}
-                          </TableCell>
-                          <TableCell className="tabular-nums">
-                            {b.report?.counts?.total ?? "—"}
-                          </TableCell>
-                          <TableCell className="tabular-nums">
-                            {b.report?.counts?.valid ?? "—"}
-                          </TableCell>
-                          <TableCell className="tabular-nums">
-                            {b.report?.counts?.duplicates ?? "—"}
-                          </TableCell>
-                          <TableCell className="tabular-nums">
-                            {b.report?.counts?.invalid ?? "—"}
-                          </TableCell>
-                          <TableCell className="tabular-nums">
-                            {b.report?.counts?.warnings ?? "—"}
-                          </TableCell>
-                          <TableCell>
-                            <Badge
-                              variant={
-                                b.status === "applied"
-                                  ? "default"
-                                  : b.status === "cancelled"
-                                    ? "destructive"
-                                    : "secondary"
-                              }
-                            >
-                              {b.status}
-                            </Badge>
-                          </TableCell>
-                          <TableCell className="whitespace-nowrap text-xs tabular-nums">
-                            {new Date(b.created_at).toLocaleString("pt-BR")}
-                          </TableCell>
-                          <TableCell className="sticky right-0 z-10 bg-card text-right">
-                            <div className="flex flex-wrap justify-end gap-1">
+          <div className="overflow-x-auto rounded-lg border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="sticky left-0 z-20 min-w-[10rem] bg-card">
+                    Arquivo
+                  </TableHead>
+                  <TableHead className="min-w-[9rem]">Pacote / Versão</TableHead>
+                  <TableHead className="min-w-[8rem]">Administrador</TableHead>
+                  <TableHead className="min-w-[4rem]">Total</TableHead>
+                  <TableHead className="min-w-[4rem]">Válidas</TableHead>
+                  <TableHead className="min-w-[4rem]">Dupl.</TableHead>
+                  <TableHead className="min-w-[4rem]">Inv.</TableHead>
+                  <TableHead className="min-w-[4rem]">Avisos</TableHead>
+                  <TableHead className="sticky right-[12rem] z-10 min-w-[6rem] bg-card">
+                    Status
+                  </TableHead>
+                  <TableHead className="min-w-[8rem]">Data</TableHead>
+                  <TableHead className="sticky right-0 z-20 min-w-[12rem] bg-card text-right">
+                    Ações
+                  </TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <AdminTableBody
+                  colSpan={11}
+                  isLoading={batchesLoading}
+                  isError={batchesError}
+                  error={batchesQueryError}
+                  isEmpty={!batches?.length}
+                  emptyMessage="Nenhum lote registrado."
+                  formatError={() => "Não foi possível carregar os lotes de importação."}
+                >
+                  {batches?.map((b) => (
+                    <TableRow key={b.id}>
+                      <TableCell className="sticky left-0 z-20 max-w-[220px] truncate bg-card font-medium">
+                        {b.filename}
+                      </TableCell>
+                      <TableCell className="max-w-[12rem] truncate text-xs">
+                        {b.packages?.name ?? "—"} / {b.package_versions?.version ?? "—"}
+                      </TableCell>
+                      <TableCell className="max-w-[10rem] truncate text-xs">
+                        {b.profiles?.full_name ?? b.profiles?.email ?? "—"}
+                      </TableCell>
+                      <TableCell className="tabular-nums">
+                        {b.report?.counts?.total ?? "—"}
+                      </TableCell>
+                      <TableCell className="tabular-nums">
+                        {b.report?.counts?.valid ?? "—"}
+                      </TableCell>
+                      <TableCell className="tabular-nums">
+                        {b.report?.counts?.duplicates ?? "—"}
+                      </TableCell>
+                      <TableCell className="tabular-nums">
+                        {b.report?.counts?.invalid ?? "—"}
+                      </TableCell>
+                      <TableCell className="tabular-nums">
+                        {b.report?.counts?.warnings ?? "—"}
+                      </TableCell>
+                      <TableCell className="sticky right-[12rem] z-10 bg-card">
+                        <Badge
+                          variant={
+                            b.status === "applied"
+                              ? "default"
+                              : b.status === "cancelled"
+                                ? "destructive"
+                                : "secondary"
+                          }
+                        >
+                          {b.status}
+                        </Badge>
+                      </TableCell>
+                      <TableCell className="whitespace-nowrap text-xs tabular-nums">
+                        {new Date(b.created_at).toLocaleString("pt-BR")}
+                      </TableCell>
+                      <TableCell className="sticky right-0 z-20 bg-card text-right">
+                        <div className="flex flex-wrap justify-end gap-1">
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => onViewReport(b)}
+                          >
+                            <Eye className="h-4 w-4 mr-1" aria-hidden="true" />
+                            Relatório
+                          </Button>
+                          {b.status === "pending" && (
+                            <>
+                              <Button
+                                size="sm"
+                                onClick={() => onApply(b)}
+                                disabled={applyPending}
+                              >
+                                <PlayCircle className="h-4 w-4 mr-1" aria-hidden="true" />
+                                Aplicar
+                              </Button>
                               <Button
                                 size="sm"
                                 variant="ghost"
-                                onClick={() => onViewReport(b)}
+                                onClick={() => onCancel(b.id)}
+                                disabled={cancelPending}
                               >
-                                <Eye className="h-4 w-4 mr-1" aria-hidden="true" />
-                                Relatório
+                                Cancelar
                               </Button>
-                              {b.status === "pending" && (
-                                <>
-                                  <Button
-                                    size="sm"
-                                    onClick={() => onApply(b)}
-                                    disabled={applyPending}
-                                  >
-                                    <PlayCircle className="h-4 w-4 mr-1" aria-hidden="true" />
-                                    Aplicar
-                                  </Button>
-                                  <Button
-                                    size="sm"
-                                    variant="ghost"
-                                    onClick={() => onCancel(b.id)}
-                                    disabled={cancelPending}
-                                  >
-                                    Cancelar
-                                  </Button>
-                                </>
-                              )}
-                            </div>
-                          </TableCell>
-                        </TableRow>
-                      ))
-                    )}
-                  </TableBody>
-                </Table>
-              </div>
-              {showsLimitNotice && (
-                <p className="mt-3 text-xs text-muted-foreground" role="note">
-                  Mostrando os {IMPORT_BATCH_LIMIT} lotes mais recentes.
-                </p>
-              )}
-            </>
+                            </>
+                          )}
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </AdminTableBody>
+              </TableBody>
+            </Table>
+          </div>
+          {showsLimitNotice && (
+            <p className="mt-3 text-xs text-muted-foreground" role="note">
+              Mostrando os {IMPORT_BATCH_LIMIT} lotes mais recentes.
+            </p>
           )}
         </CardContent>
       </Card>
     </section>
-  );
-}
-
-function HistoryTableSkeleton() {
-  return (
-    <>
-      {Array.from({ length: 5 }).map((_, index) => (
-        <TableRow key={index}>
-          <TableCell colSpan={11}>
-            <Skeleton className="h-5 w-full" />
-          </TableCell>
-        </TableRow>
-      ))}
-    </>
   );
 }

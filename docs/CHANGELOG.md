@@ -12,7 +12,43 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 - Exportação profissional: XLSX real, filtros e grandes volumes (`ADM-019`)
 - Correção `show_answers: final` durante resolução (`PA-014`)
 - Correções de qualidade da auditoria RC1.2A (console, toasts, performance)
-- Padronização `AdminTableBody` nos módulos admin restantes
+- Padronização `AdminTableBody` nos módulos admin restantes — especificada nos documentos de redesign da RC2, implementação em código pendente
+
+### Pendente (RC2 — implementação)
+
+- Implementação em código de todos os documentos de redesign da RC2 (Portal do Aluno e Portal Administrativo) — nenhuma alteração de código foi feita durante a RC2, apenas especificação
+- Os 14 itens registrados em `docs/RC2_FINAL_AUDIT.md` (nenhum bloqueante) devem ser incorporados durante essa implementação
+
+---
+
+## [RC2] — 2026-07-07
+
+### Marco
+
+- **Encerramento da RC2** — pacote completo de Product Design para os dois portais, aprovado com pequenos ajustes (`docs/RC2_FINAL_AUDIT.md`: 14 itens registrados, 0 bloqueantes). Nenhuma implementação de código realizada; próxima etapa é a sprint de implementação no Cursor a partir destes documentos.
+
+### Documentação — Design System
+
+- `docs/DESIGN_SYSTEM.md` — Design System oficial (paleta, tipografia, grid, radius, sombras, componentes, estados, ícones, responsividade, microinterações, acessibilidade, consistência, checklist de homologação)
+- `docs/UI_PREMIUM_GUIDELINES_RC2.0.md` — guia visual premium (35 decisões de refinamento)
+- `docs/DESIGN_REVIEW_CHECKLIST.md` — checklist oficial de revisão de Product Design
+- `docs/PRODUCT_VISION_RC1.2F.md` — visão de produto e estratégia de UX
+
+### Documentação — Redesign do Portal do Aluno
+
+- `docs/DASHBOARD_REDESIGN_RC1.2H.md`, `docs/STUDY_EXPERIENCE_REDESIGN_RC1.2I.md`, `docs/SESSION_RESULTS_REDESIGN_RC1.2J.md`, `docs/STUDY_HISTORY_REDESIGN_RC1.2K.md`
+- `docs/PRODUCT_CONSISTENCY_REVIEW_RC1.2L.md`
+- `docs/PORTAL_ALUNO_FINAL_AUDIT_RC2.md` — aprovado com pequenos ajustes
+
+### Documentação — Redesign do Portal Administrativo
+
+- `docs/ADMIN_UX_AUDIT_RC2.1A.md`, `docs/ADMIN_PRODUCT_ROADMAP_RC2.md`, `docs/ADMIN_DASHBOARD_REDESIGN_RC2.1B.md`
+- `docs/ADMIN_IMPORT_REDESIGN_RC2.2A.md`, `docs/ADMIN_IMPORT_HISTORY_REDESIGN_RC2.2B.md`
+- `docs/QUESTIONS_MODULE_PLAN_RC2.3.md`, `docs/QUESTIONS_LIST_REDESIGN_RC2.3A.md`, `docs/QUESTIONS_FILTERS_REDESIGN_RC2.3B.md`, `docs/QUESTIONS_FORM_REDESIGN_RC2.3C.md`, `docs/QUESTIONS_MODULE_FINAL_AUDIT_RC2.3.md`
+- `docs/TAXONOMY_MODULE_PLAN_RC2.4.md`, `docs/BOARDS_REDESIGN_RC2.4A.md`, `docs/CONTESTS_REDESIGN_RC2.4B.md`, `docs/SUBJECTS_REDESIGN_RC2.4C.md`, `docs/TOPICS_REDESIGN_RC2.4D.md`, `docs/JOBS_REDESIGN_RC2.4E.md`, `docs/COURSES_REDESIGN_RC2.4F.md`
+- `docs/PACKAGES_REDESIGN_RC2.5A.md`, `docs/VERSIONS_REDESIGN_RC2.5B.md`
+- `docs/DISTRIBUTIONS_REDESIGN_RC2.6A.md`, `docs/SUBSCRIPTIONS_REDESIGN_RC2.6B.md`
+- `docs/RC2_FINAL_AUDIT.md` — auditoria final de todo o pacote
 
 ---
 

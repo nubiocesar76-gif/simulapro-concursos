@@ -10,7 +10,7 @@ Para visão de produto, ver [`00-VISAO-GERAL.md`](./00-VISAO-GERAL.md). Para arq
 
 | Item | Estado |
 |------|--------|
-| **Fase atual** | RC1 — Validação final do MVP concluída |
+| **Fase atual** | RC2 — Design System e redesign visual (Admin + Aluno) concluídos em documentação; implementação pendente |
 | **MVP estrutural** | Implementado (portais Admin e Aluno navegáveis) |
 | **Backend** | Supabase / Lovable Cloud |
 | **Project ID Supabase** | `snbhstgvsfjfyfbwxdae` |
@@ -486,6 +486,33 @@ Para visão de produto, ver [`00-VISAO-GERAL.md`](./00-VISAO-GERAL.md). Para arq
 
 ---
 
+## RC2 — Design System e Redesign Visual (Admin + Aluno)
+
+**Objetivo:** consolidar um Design System oficial e redesenhar, em documentação de Product Design, o Portal do Aluno e o Portal Administrativo por completo — sem alterar código, arquitetura, regras de negócio, queries ou dados em nenhuma etapa.
+
+| Etapa | Escopo | Status |
+|-------|--------|--------|
+| RC1.2D | Auditoria de UX/UI (Admin + Aluno) | ✅ Concluída |
+| RC1.2F | Visão de produto e estratégia de UX | ✅ Concluída |
+| RC1.2G | Design System oficial (`DESIGN_SYSTEM.md`) | ✅ Concluída |
+| RC1.2H–K | Redesign do Portal do Aluno (Dashboard, Estudo, Resultado, Histórico) | ✅ Concluída |
+| RC1.2L | Revisão de consistência do Portal do Aluno | ✅ Concluída |
+| RC2.0 | Guia visual premium (`UI_PREMIUM_GUIDELINES_RC2.0.md`, 35 decisões) | ✅ Concluída |
+| — | Auditoria final do Portal do Aluno | ✅ Aprovado com pequenos ajustes |
+| RC2.1 | Dashboard Admin | ✅ Concluída |
+| RC2.2 | Importação e Histórico de Importações | ✅ Concluída |
+| RC2.3 | Questões (Lista, Filtros, Formulário) | ✅ Concluída — aprovado com pequenos ajustes |
+| RC2.4 | Taxonomia — Bancas, Concursos, Disciplinas, Assuntos, Cargos, Cursos | ✅ Concluída |
+| RC2.5 | Pacotes e Versões | ✅ Concluída |
+| RC2.6 | Distribuições e Assinaturas | ✅ Concluída |
+| — | Auditoria final de todo o pacote RC2 (`RC2_FINAL_AUDIT.md`) | ✅ **RC2 aprovada com pequenos ajustes** — 14 itens registrados, 0 bloqueantes |
+
+**Entregas:** ~28 documentos de Product Design em `docs/`, cobrindo os dois portais por completo (`DESIGN_REVIEW_CHECKLIST.md` executado em cada um). Nenhuma implementação de código realizada nesta fase — todo o trabalho é especificação, pronta para a sprint de implementação no Cursor.
+
+**Pendente:** implementação em código das decisões registradas; os 14 itens de `RC2_FINAL_AUDIT.md` (nenhum bloqueante) devem ser incorporados durante essa implementação.
+
+---
+
 ## Documentação
 
 | Arquivo | Status |
@@ -913,4 +940,4 @@ Conforme `CURSOR_RULES.md`:
 
 ---
 
-*Última atualização: julho/2026 — RC1: validação final do MVP.*
+*Última atualização: julho/2026 — RC2: Design System e redesign visual (Admin + Aluno) encerrados em documentação; implementação pendente.*

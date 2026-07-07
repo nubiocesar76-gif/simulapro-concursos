@@ -60,6 +60,8 @@ import {
   TaxonomySearch,
   TaxonomyPagination,
 } from "@/components/admin/taxonomy/shared";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
+import { AdminFiltersCard } from "@/components/admin/shared/AdminFiltersCard";
 
 type DistributionRow = Tables<"content_distributions"> & {
   package_versions: {
@@ -194,6 +196,12 @@ export function DistributionsPage() {
 
   const rows = data?.rows ?? [];
   const total = data?.total ?? 0;
+  const hasActiveFilters =
+    !!debouncedSearch ||
+    courseFilter !== "all" ||
+    packageFilter !== "all" ||
+    versionFilter !== "all" ||
+    statusFilter !== "all";
 
   const save = useMutation({
     mutationFn: async () => {
@@ -290,105 +298,139 @@ export function DistributionsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Distribuições</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Distribuições</h1>
           <p className="text-sm text-muted-foreground">
             Cadastro de versões publicadas disponíveis para distribuição futura via assinaturas.
           </p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Nova distribuição
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Nova distribuição
         </Button>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome..." />
-        <Select value={courseFilter} onValueChange={(v) => { setCourseFilter(v); setPackageFilter("all"); setVersionFilter("all"); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-44"><SelectValue placeholder="Curso" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos os cursos</SelectItem>
-            {courses.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}
-          </SelectContent>
-        </Select>
-        <Select value={packageFilter} onValueChange={(v) => { setPackageFilter(v); setVersionFilter("all"); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-48"><SelectValue placeholder="Pacote" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos os pacotes</SelectItem>
-            {packages.map((p) => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
-          </SelectContent>
-        </Select>
-        <Select value={versionFilter} onValueChange={(v) => { setVersionFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-48"><SelectValue placeholder="Versão" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todas as versões</SelectItem>
-            {publishedVersions.map((v) => (
-              <SelectItem key={v.id} value={v.id}>
-                {v.packages?.name} — {v.version_number}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-36"><SelectValue placeholder="Status" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos</SelectItem>
-            {DISTRIBUTION_STATUS_EDITABLE.map((s) => (
-              <SelectItem key={s} value={s}>{DISTRIBUTION_STATUS_LABELS[s]}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      <AdminFiltersCard>
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome..." />
+          <Select value={courseFilter} onValueChange={(v) => { setCourseFilter(v); setPackageFilter("all"); setVersionFilter("all"); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-44"><SelectValue placeholder="Curso" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os cursos</SelectItem>
+              {courses.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}
+            </SelectContent>
+          </Select>
+          <Select value={packageFilter} onValueChange={(v) => { setPackageFilter(v); setVersionFilter("all"); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-48"><SelectValue placeholder="Pacote" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os pacotes</SelectItem>
+              {packages.map((p) => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
+            </SelectContent>
+          </Select>
+          <Select value={versionFilter} onValueChange={(v) => { setVersionFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-48"><SelectValue placeholder="Versão" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todas as versões</SelectItem>
+              {publishedVersions.map((v) => (
+                <SelectItem key={v.id} value={v.id}>
+                  {v.packages?.name} — {v.version_number}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-36"><SelectValue placeholder="Status" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos</SelectItem>
+              {DISTRIBUTION_STATUS_EDITABLE.map((s) => (
+                <SelectItem key={s} value={s}>{DISTRIBUTION_STATUS_LABELS[s]}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      </AdminFiltersCard>
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Nome</TableHead>
-              <TableHead>Versão</TableHead>
-              <TableHead>Pacote</TableHead>
-              <TableHead>Curso</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Disponível de</TableHead>
-              <TableHead>Disponível até</TableHead>
-              <TableHead className="w-36 text-right">Ações</TableHead>
+              <TableHead className="sticky left-0 z-20 min-w-[10rem] bg-card">Nome</TableHead>
+              <TableHead className="min-w-[5rem]">Versão</TableHead>
+              <TableHead className="min-w-[8rem]">Pacote</TableHead>
+              <TableHead className="min-w-[8rem]">Curso</TableHead>
+              <TableHead className="sticky right-[8rem] z-10 min-w-[6rem] bg-card">Status</TableHead>
+              <TableHead className="min-w-[7rem]">Disponível de</TableHead>
+              <TableHead className="min-w-[7rem]">Disponível até</TableHead>
+              <TableHead className="sticky right-0 z-20 min-w-[8rem] bg-card text-right">Ações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {isLoading ? (
-              <TableRow><TableCell colSpan={8} className="py-8 text-center text-muted-foreground">Carregando...</TableCell></TableRow>
-            ) : isError ? (
-              <TableRow><TableCell colSpan={8} className="py-8 text-center text-destructive">{(error as Error)?.message}</TableCell></TableRow>
-            ) : rows.length === 0 ? (
-              <TableRow><TableCell colSpan={8} className="py-8 text-center text-muted-foreground">Nenhuma distribuição encontrada.</TableCell></TableRow>
-            ) : rows.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell className="font-medium">{row.name}</TableCell>
-                <TableCell className="font-mono text-sm">{row.package_versions?.version_number}</TableCell>
-                <TableCell className="text-sm">{row.package_versions?.packages?.name ?? "—"}</TableCell>
-                <TableCell className="text-sm">{row.package_versions?.packages?.courses?.name ?? "—"}</TableCell>
-                <TableCell>
-                  <Badge variant={statusBadgeVariant(row.status as DistributionStatus)}>
-                    {DISTRIBUTION_STATUS_LABELS[row.status as DistributionStatus]}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-xs text-muted-foreground">{formatOptionalDate(row.available_from)}</TableCell>
-                <TableCell className="text-xs text-muted-foreground">{formatOptionalDate(row.available_until)}</TableCell>
-                <TableCell className="text-right space-x-1">
-                  <Button size="sm" variant="ghost" onClick={() => { setEditing(row); setDialogOpen(true); }}>
-                    <Pencil className="h-3.5 w-3.5" />
-                  </Button>
-                  {(row.status === "ACTIVE" || row.status === "INACTIVE") && (
-                    <Button size="sm" variant="ghost" onClick={() => setToggleTarget(row)}>
-                      {row.status === "ACTIVE" ? <PowerOff className="h-3.5 w-3.5" /> : <Power className="h-3.5 w-3.5" />}
+            <AdminTableBody
+              colSpan={8}
+              isLoading={isLoading}
+              isError={isError}
+              error={error as Error}
+              isEmpty={rows.length === 0}
+              emptyMessage="Nenhuma distribuição cadastrada."
+              filteredEmptyMessage="Nenhuma distribuição encontrada."
+              hasActiveFilters={hasActiveFilters}
+              formatError={formatDistributionError}
+            >
+              {rows.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell className="sticky left-0 z-20 max-w-[12rem] truncate bg-card font-medium">
+                    {row.name}
+                  </TableCell>
+                  <TableCell className="font-mono text-sm">{row.package_versions?.version_number}</TableCell>
+                  <TableCell className="max-w-[10rem] truncate text-sm">{row.package_versions?.packages?.name ?? "—"}</TableCell>
+                  <TableCell className="max-w-[10rem] truncate text-sm">{row.package_versions?.packages?.courses?.name ?? "—"}</TableCell>
+                  <TableCell className="sticky right-[8rem] z-10 bg-card">
+                    <Badge variant={statusBadgeVariant(row.status as DistributionStatus)}>
+                      {DISTRIBUTION_STATUS_LABELS[row.status as DistributionStatus]}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                    {formatOptionalDate(row.available_from)}
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                    {formatOptionalDate(row.available_until)}
+                  </TableCell>
+                  <TableCell className="sticky right-0 z-20 bg-card text-right">
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`Editar ${row.name}`}
+                      onClick={() => { setEditing(row); setDialogOpen(true); }}
+                    >
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
                     </Button>
-                  )}
-                  <Button size="sm" variant="ghost" onClick={() => setDeleteTarget(row)}>
-                    <Trash2 className="h-3.5 w-3.5" />
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
+                    {(row.status === "ACTIVE" || row.status === "INACTIVE") && (
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        aria-label={row.status === "ACTIVE" ? `Desativar ${row.name}` : `Ativar ${row.name}`}
+                        onClick={() => setToggleTarget(row)}
+                      >
+                        {row.status === "ACTIVE" ? (
+                          <PowerOff className="h-4 w-4" aria-hidden="true" />
+                        ) : (
+                          <Power className="h-4 w-4" aria-hidden="true" />
+                        )}
+                      </Button>
+                    )}
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`Excluir ${row.name}`}
+                      onClick={() => setDeleteTarget(row)}
+                    >
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </AdminTableBody>
           </TableBody>
         </Table>
       </div>
@@ -450,9 +492,9 @@ export function DistributionsPage() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="secondary" onClick={() => setDialogOpen(false)}>Cancelar</Button>
+            <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>Cancelar</Button>
             <Button onClick={() => save.mutate()} disabled={save.isPending || publishedVersions.length === 0}>
-              {save.isPending ? "Salvando..." : editing ? "Salvar" : "Criar"}
+              {save.isPending ? "Salvando..." : "Salvar"}
             </Button>
           </DialogFooter>
         </DialogContent>

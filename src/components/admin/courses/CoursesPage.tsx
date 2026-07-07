@@ -36,6 +36,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
+import { AdminFiltersCard } from "@/components/admin/shared/AdminFiltersCard";
 import {
   TAXONOMY_PAGE_SIZE,
   formatTaxonomyError,
@@ -212,7 +213,9 @@ export function CoursesPage() {
         </Button>
       </div>
 
-      <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou descrição..." />
+      <AdminFiltersCard>
+        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou descrição..." />
+      </AdminFiltersCard>
 
       <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>

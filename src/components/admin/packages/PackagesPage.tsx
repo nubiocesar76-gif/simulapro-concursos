@@ -62,6 +62,7 @@ import {
   hasDeleteDeps,
 } from "@/components/admin/taxonomy/shared";
 import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
+import { AdminFiltersCard } from "@/components/admin/shared/AdminFiltersCard";
 
 type PackageRow = Tables<"packages"> & { courses: { name: string } | null };
 
@@ -231,45 +232,48 @@ export function PackagesPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Pacotes</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Pacotes</h1>
           <p className="text-sm text-muted-foreground">
             Conjuntos organizados de questões por curso. Base do pipeline de publicação.
           </p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Novo pacote
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Novo pacote
         </Button>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome, slug ou descrição..." />
-        <Select value={courseFilter} onValueChange={(v) => { setCourseFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-48">
-            <SelectValue placeholder="Curso" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos os cursos</SelectItem>
-            {courses.map((c) => (
-              <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-40">
-            <SelectValue placeholder="Status" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos os status</SelectItem>
-            {PACKAGE_STATUS_OPTIONS.map((s) => (
-              <SelectItem key={s} value={s}>{PACKAGE_STATUS_LABELS[s]}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      <AdminFiltersCard>
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome, slug ou descrição..." />
+          <Select value={courseFilter} onValueChange={(v) => { setCourseFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-48">
+              <SelectValue placeholder="Curso" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os cursos</SelectItem>
+              {courses.map((c) => (
+                <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-40">
+              <SelectValue placeholder="Status" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os status</SelectItem>
+              {PACKAGE_STATUS_OPTIONS.map((s) => (
+                <SelectItem key={s} value={s}>{PACKAGE_STATUS_LABELS[s]}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      </AdminFiltersCard>
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
@@ -304,12 +308,12 @@ export function PackagesPage() {
                   </Badge>
                 </TableCell>
                 <TableCell className="text-xs text-muted-foreground">{formatDate(row.created_at)}</TableCell>
-                <TableCell className="text-right space-x-1">
-                  <Button size="sm" variant="ghost" onClick={() => { setEditing(row); setDialogOpen(true); }}>
-                    <Pencil className="h-3.5 w-3.5" />
+                <TableCell className="text-right">
+                  <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
+                    <Pencil className="h-4 w-4" aria-hidden="true" />
                   </Button>
-                  <Button size="sm" variant="ghost" onClick={() => openDeleteDialog(row)}>
-                    <Trash2 className="h-3.5 w-3.5" />
+                  <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}>
+                    <Trash2 className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </TableCell>
               </TableRow>
@@ -329,7 +333,13 @@ export function PackagesPage() {
               O slug é gerado automaticamente a partir do nome. Nome único por curso.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid gap-4 py-2">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              save.mutate();
+            }}
+            className="space-y-4"
+          >
             <div>
               <Label>Curso *</Label>
               <Select value={courseId} onValueChange={setCourseId}>
@@ -365,13 +375,13 @@ export function PackagesPage() {
                 </SelectContent>
               </Select>
             </div>
-          </div>
-          <DialogFooter>
-            <Button variant="secondary" onClick={() => setDialogOpen(false)}>Cancelar</Button>
-            <Button onClick={() => save.mutate()} disabled={save.isPending}>
-              {save.isPending ? "Salvando..." : editing ? "Salvar" : "Criar"}
-            </Button>
-          </DialogFooter>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>Cancelar</Button>
+              <Button type="submit" disabled={save.isPending}>
+                {save.isPending ? "Salvando..." : "Salvar"}
+              </Button>
+            </DialogFooter>
+          </form>
         </DialogContent>
       </Dialog>
 

@@ -46,6 +46,7 @@ import {
   hasDeleteDeps,
 } from "./shared";
 import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
+import { AdminFiltersCard } from "@/components/admin/shared/AdminFiltersCard";
 
 type Board = Tables<"boards">;
 
@@ -184,7 +185,9 @@ export function BoardsPage() {
         </Button>
       </div>
 
-      <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou sigla..." />
+      <AdminFiltersCard>
+        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou sigla..." />
+      </AdminFiltersCard>
 
       <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>

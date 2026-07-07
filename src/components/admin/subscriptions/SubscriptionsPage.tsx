@@ -56,6 +56,8 @@ import {
   TaxonomySearch,
   TaxonomyPagination,
 } from "@/components/admin/taxonomy/shared";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
+import { AdminFiltersCard } from "@/components/admin/shared/AdminFiltersCard";
 
 type SubscriptionRow = Tables<"subscriptions"> & {
   profiles: { full_name: string | null; email: string | null } | null;
@@ -193,6 +195,11 @@ export function SubscriptionsPage() {
 
   const rows = data?.rows ?? [];
   const total = data?.total ?? 0;
+  const hasActiveFilters =
+    !!debouncedSearch ||
+    userFilter !== "all" ||
+    distributionFilter !== "all" ||
+    statusFilter !== "all";
 
   const save = useMutation({
     mutationFn: async () => {
@@ -294,103 +301,140 @@ export function SubscriptionsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Assinaturas</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Assinaturas</h1>
           <p className="text-sm text-muted-foreground">
             Vínculo entre usuários e distribuições de conteúdo publicado.
           </p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Nova assinatura
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Nova assinatura
         </Button>
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou e-mail..." />
-        <Select value={userFilter} onValueChange={(v) => { setUserFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-48"><SelectValue placeholder="Usuário" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos os usuários</SelectItem>
-            {users.map((u) => (
-              <SelectItem key={u.id} value={u.id}>{u.full_name || u.email}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select value={distributionFilter} onValueChange={(v) => { setDistributionFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-52"><SelectValue placeholder="Distribuição" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todas as distribuições</SelectItem>
-            {distributions.map((d) => (
-              <SelectItem key={d.id} value={d.id}>{d.name}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
-          <SelectTrigger className="w-full sm:w-36"><SelectValue placeholder="Status" /></SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">Todos</SelectItem>
-            {SUBSCRIPTION_STATUS_OPTIONS.map((s) => (
-              <SelectItem key={s} value={s}>{SUBSCRIPTION_STATUS_LABELS[s]}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      <AdminFiltersCard>
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou e-mail..." />
+          <Select value={userFilter} onValueChange={(v) => { setUserFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-48"><SelectValue placeholder="Usuário" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos os usuários</SelectItem>
+              {users.map((u) => (
+                <SelectItem key={u.id} value={u.id}>{u.full_name || u.email}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={distributionFilter} onValueChange={(v) => { setDistributionFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-52"><SelectValue placeholder="Distribuição" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todas as distribuições</SelectItem>
+              {distributions.map((d) => (
+                <SelectItem key={d.id} value={d.id}>{d.name}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={statusFilter} onValueChange={(v) => { setStatusFilter(v); setPage(0); }}>
+            <SelectTrigger className="w-full sm:w-36"><SelectValue placeholder="Status" /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Todos</SelectItem>
+              {SUBSCRIPTION_STATUS_OPTIONS.map((s) => (
+                <SelectItem key={s} value={s}>{SUBSCRIPTION_STATUS_LABELS[s]}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      </AdminFiltersCard>
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Usuário</TableHead>
-              <TableHead>Distribuição</TableHead>
-              <TableHead>Curso / Pacote</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Início</TableHead>
-              <TableHead>Expira em</TableHead>
-              <TableHead className="w-36 text-right">Ações</TableHead>
+              <TableHead className="sticky left-0 z-20 min-w-[10rem] bg-card">Usuário</TableHead>
+              <TableHead className="sticky left-[10rem] z-20 min-w-[9rem] bg-card">Distribuição</TableHead>
+              <TableHead className="min-w-[10rem]">Curso / Pacote</TableHead>
+              <TableHead className="sticky right-[8rem] z-10 min-w-[6rem] bg-card">Status</TableHead>
+              <TableHead className="min-w-[7rem]">Início</TableHead>
+              <TableHead className="min-w-[7rem]">Expira em</TableHead>
+              <TableHead className="sticky right-0 z-20 min-w-[8rem] bg-card text-right">Ações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {isLoading ? (
-              <TableRow><TableCell colSpan={7} className="py-8 text-center text-muted-foreground">Carregando...</TableCell></TableRow>
-            ) : isError ? (
-              <TableRow><TableCell colSpan={7} className="py-8 text-center text-destructive">{(error as Error)?.message}</TableCell></TableRow>
-            ) : rows.length === 0 ? (
-              <TableRow><TableCell colSpan={7} className="py-8 text-center text-muted-foreground">Nenhuma assinatura encontrada.</TableCell></TableRow>
-            ) : rows.map((row) => (
-              <TableRow key={row.id}>
-                <TableCell>
-                  <div className="font-medium">{row.profiles?.full_name ?? "—"}</div>
-                  <div className="text-xs text-muted-foreground">{row.profiles?.email}</div>
-                </TableCell>
-                <TableCell className="text-sm">{row.content_distributions?.name ?? "—"}</TableCell>
-                <TableCell className="text-xs text-muted-foreground">
-                  {row.content_distributions?.package_versions?.packages?.courses?.name ?? "—"}
-                  {" / "}
-                  {row.content_distributions?.package_versions?.packages?.name ?? "—"}
-                  {" · v"}
-                  {row.content_distributions?.package_versions?.version_number ?? "—"}
-                </TableCell>
-                <TableCell>
-                  <Badge variant={statusBadgeVariant((row.status as SubscriptionStatus) ?? "ACTIVE")}>
-                    {SUBSCRIPTION_STATUS_LABELS[(row.status as SubscriptionStatus) ?? "ACTIVE"]}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-xs text-muted-foreground">{formatOptionalDate(row.starts_at)}</TableCell>
-                <TableCell className="text-xs text-muted-foreground">{formatOptionalDate(row.expires_at)}</TableCell>
-                <TableCell className="text-right space-x-1">
-                  <Button size="sm" variant="ghost" onClick={() => { setEditing(row); setDialogOpen(true); }}>
-                    <Pencil className="h-3.5 w-3.5" />
-                  </Button>
-                  <Button size="sm" variant="ghost" onClick={() => setToggleTarget(row)}>
-                    {row.status === "ACTIVE" ? <PowerOff className="h-3.5 w-3.5" /> : <Power className="h-3.5 w-3.5" />}
-                  </Button>
-                  <Button size="sm" variant="ghost" onClick={() => setDeleteTarget(row)}>
-                    <Trash2 className="h-3.5 w-3.5" />
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
+            <AdminTableBody
+              colSpan={7}
+              isLoading={isLoading}
+              isError={isError}
+              error={error as Error}
+              isEmpty={rows.length === 0}
+              emptyMessage="Nenhuma assinatura cadastrada."
+              filteredEmptyMessage="Nenhuma assinatura encontrada."
+              hasActiveFilters={hasActiveFilters}
+              formatError={formatSubscriptionError}
+            >
+              {rows.map((row) => {
+                const userLabel = row.profiles?.full_name ?? row.profiles?.email ?? "usuário";
+                return (
+                  <TableRow key={row.id}>
+                    <TableCell className="sticky left-0 z-20 bg-card">
+                      <div className="max-w-[12rem] truncate font-medium">{row.profiles?.full_name ?? "—"}</div>
+                      <div className="max-w-[12rem] truncate text-xs text-muted-foreground">{row.profiles?.email}</div>
+                    </TableCell>
+                    <TableCell className="sticky left-[10rem] z-20 max-w-[11rem] truncate bg-card text-sm">
+                      {row.content_distributions?.name ?? "—"}
+                    </TableCell>
+                    <TableCell className="max-w-[12rem] truncate text-xs text-muted-foreground">
+                      {row.content_distributions?.package_versions?.packages?.courses?.name ?? "—"}
+                      {" / "}
+                      {row.content_distributions?.package_versions?.packages?.name ?? "—"}
+                      {" · v"}
+                      {row.content_distributions?.package_versions?.version_number ?? "—"}
+                    </TableCell>
+                    <TableCell className="sticky right-[8rem] z-10 bg-card">
+                      <Badge variant={statusBadgeVariant((row.status as SubscriptionStatus) ?? "ACTIVE")}>
+                        {SUBSCRIPTION_STATUS_LABELS[(row.status as SubscriptionStatus) ?? "ACTIVE"]}
+                      </Badge>
+                    </TableCell>
+                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                      {formatOptionalDate(row.starts_at)}
+                    </TableCell>
+                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                      {formatOptionalDate(row.expires_at)}
+                    </TableCell>
+                    <TableCell className="sticky right-0 z-20 bg-card text-right">
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        aria-label={`Editar assinatura de ${userLabel}`}
+                        onClick={() => { setEditing(row); setDialogOpen(true); }}
+                      >
+                        <Pencil className="h-4 w-4" aria-hidden="true" />
+                      </Button>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        aria-label={row.status === "ACTIVE" ? `Desativar assinatura de ${userLabel}` : `Ativar assinatura de ${userLabel}`}
+                        onClick={() => setToggleTarget(row)}
+                      >
+                        {row.status === "ACTIVE" ? (
+                          <PowerOff className="h-4 w-4" aria-hidden="true" />
+                        ) : (
+                          <Power className="h-4 w-4" aria-hidden="true" />
+                        )}
+                      </Button>
+                      <Button
+                        size="icon"
+                        variant="ghost"
+                        aria-label={`Excluir assinatura de ${userLabel}`}
+                        onClick={() => setDeleteTarget(row)}
+                      >
+                        <Trash2 className="h-4 w-4" aria-hidden="true" />
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </AdminTableBody>
           </TableBody>
         </Table>
       </div>
@@ -455,9 +499,9 @@ export function SubscriptionsPage() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="secondary" onClick={() => setDialogOpen(false)}>Cancelar</Button>
+            <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>Cancelar</Button>
             <Button onClick={() => save.mutate()} disabled={save.isPending || distributions.length === 0}>
-              {save.isPending ? "Salvando..." : editing ? "Salvar" : "Criar"}
+              {save.isPending ? "Salvando..." : "Salvar"}
             </Button>
           </DialogFooter>
         </DialogContent>
