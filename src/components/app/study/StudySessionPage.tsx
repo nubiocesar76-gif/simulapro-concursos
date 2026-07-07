@@ -25,6 +25,7 @@ import { QuestionOptions } from "@/components/app/study/QuestionOptions";
 import { SessionHeader } from "@/components/app/study/SessionHeader";
 import { SessionResultsView } from "@/components/app/study/SessionResultsView";
 import { SessionProgress } from "@/components/app/study/SessionProgress";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
 
@@ -154,16 +155,18 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   if (error || !openData) {
     return (
       <div className="space-y-6 max-w-2xl">
-        <div>
-          <h1 className="text-2xl font-bold">Sessão não encontrada</h1>
-          <p className="text-sm text-muted-foreground">{formatStudyEngineError(error)}</p>
-        </div>
-        <Button variant="outline" asChild>
-          <Link to="/app/study">
-            <ChevronLeft className="h-4 w-4 mr-2" />
-            Voltar ao estudo
-          </Link>
-        </Button>
+        <PageErrorState
+          title="Sessão não encontrada"
+          message={formatStudyEngineError(error)}
+          action={
+            <Button variant="outline" asChild>
+              <Link to="/app/study">
+                <ChevronLeft className="h-4 w-4 mr-2" />
+                Voltar ao estudo
+              </Link>
+            </Button>
+          }
+        />
       </div>
     );
   }
@@ -180,14 +183,22 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   if (session.status === "FINISHED" || phase === "completed") {
     if (!results) {
       return (
-        <div className="space-y-6 max-w-4xl">
-          <Skeleton className="h-8 w-56" />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((item) => (
-              <Skeleton key={item} className="h-28 rounded-xl" />
-            ))}
+        <div className="mx-auto space-y-8 2xl:max-w-[1600px]">
+          <div className="space-y-2">
+            <Skeleton className="h-8 w-56" />
+            <Skeleton className="h-4 w-72 max-w-full" />
           </div>
-          <Skeleton className="h-48 rounded-xl" />
+          <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[1fr_11rem_11rem]">
+            <Skeleton className="h-32 rounded-lg sm:col-span-2 lg:col-span-1" />
+            <Skeleton className="h-24 rounded-lg" />
+            <Skeleton className="h-24 rounded-lg" />
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Skeleton className="h-9 w-32 rounded-lg" />
+            <Skeleton className="h-9 w-44 rounded-lg" />
+          </div>
+          <Skeleton className="h-40 rounded-lg" />
+          <Skeleton className="h-64 rounded-lg" />
         </div>
       );
     }
@@ -198,25 +209,18 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   if (sequence.length === 0) {
     return (
       <div className="space-y-6 max-w-2xl">
-        <div>
-          <h1 className="text-2xl font-bold">Sessão sem questões</h1>
-          <p className="text-sm text-muted-foreground">
-            Não há questões elegíveis para esta distribuição com as configurações atuais.
-          </p>
-        </div>
-        <Card>
-          <SessionHeader
-            title={session.distribution_name}
-            subtitle={subtitle}
-            mode={session.mode}
-          />
-        </Card>
-        <Button variant="outline" asChild>
-          <Link to="/app/study">
-            <ChevronLeft className="h-4 w-4 mr-2" />
-            Voltar ao estudo
-          </Link>
-        </Button>
+        <EmptyState
+          title="Sessão sem questões"
+          description="Não há questões elegíveis para esta distribuição com as configurações atuais."
+          action={
+            <Button variant="outline" asChild>
+              <Link to="/app/study">
+                <ChevronLeft className="h-4 w-4 mr-2" />
+                Voltar ao estudo
+              </Link>
+            </Button>
+          }
+        />
       </div>
     );
   }
@@ -274,14 +278,20 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (isLoadingQuestion) {
     return (
-      <div className="space-y-6 max-w-2xl">
-        <Skeleton className="h-6 w-40" />
-        <Skeleton className="h-2 w-full" />
+      <div className="space-y-4 max-w-2xl">
+        <Skeleton className="h-8 w-20" />
+        <Card>
+          <div className="p-6 space-y-3">
+            <Skeleton className="h-6 w-3/4" />
+            <Skeleton className="h-4 w-1/2" />
+            <Skeleton className="h-2 w-full" />
+          </div>
+        </Card>
         <Card>
           <div className="p-6 space-y-4">
             <Skeleton className="h-24 w-full" />
-            <Skeleton className="h-10 w-full" />
-            <Skeleton className="h-10 w-full" />
+            <Skeleton className="h-12 w-full" />
+            <Skeleton className="h-12 w-full" />
           </div>
         </Card>
       </div>
@@ -314,7 +324,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   const canFinish = question.isAnswered && isLastQuestion;
 
   return (
-    <div className="space-y-6 max-w-2xl">
+    <div className="space-y-4 max-w-2xl">
       <Button variant="ghost" size="sm" className="-ml-2" asChild>
         <Link to="/app/study">
           <ChevronLeft className="h-4 w-4 mr-1" />
@@ -328,24 +338,23 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
           subtitle={subtitle}
           mode={session.mode}
         />
+        <CardContent className="pt-0 pb-4">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div className="min-w-0 flex-1">
+              <SessionProgress
+                current={question.index + 1}
+                total={question.total}
+                label="Questão"
+              />
+            </div>
+            <p className="shrink-0 pb-0.5 text-sm text-muted-foreground">
+              {answeredCount} respondida{answeredCount !== 1 ? "s" : ""}
+            </p>
+          </div>
+        </CardContent>
       </Card>
 
-      <SessionProgress
-        current={question.index + 1}
-        total={question.total}
-        label="Questão"
-      />
-
-      <SessionProgress
-        current={answeredCount}
-        total={question.total}
-        label="Respondidas"
-      />
-
-      <QuestionCard
-        statement={question.statement}
-        feedback={question.feedback}
-      />
+      <QuestionCard statement={question.statement} feedback={question.feedback} />
 
       <QuestionOptions
         alternatives={question.alternatives}

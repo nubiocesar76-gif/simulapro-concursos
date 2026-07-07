@@ -19,20 +19,22 @@ export function ContinueStudyCard({ session }: ContinueStudyCardProps) {
   return (
     <Card className="border-primary/30 bg-primary/5">
       <CardHeader>
-        <CardTitle>Continuar última sessão</CardTitle>
+        <CardTitle className="text-lg">Continuar última sessão</CardTitle>
         <CardDescription>Retome de onde você parou.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="space-y-2 text-sm">
-          <p className="font-medium">{session.distributionName}</p>
+        <div className="min-w-0 space-y-2 text-sm">
+          <p className="truncate font-medium">{session.distributionName}</p>
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="secondary">{STUDY_MODE_LABELS[session.mode]}</Badge>
-            <span className="text-muted-foreground">Progresso: {progressLabel}</span>
+            <span className="text-muted-foreground tabular-nums">
+              Progresso: {progressLabel}
+            </span>
           </div>
         </div>
-        <Button asChild>
+        <Button asChild className="w-full shrink-0 sm:w-auto">
           <Link to="/app/study/$sessionId" params={{ sessionId: session.sessionId }}>
-            <PlayCircle className="h-4 w-4 mr-2" />
+            <PlayCircle className="h-4 w-4 mr-2" aria-hidden="true" />
             Continuar
           </Link>
         </Button>

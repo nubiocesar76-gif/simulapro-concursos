@@ -18,10 +18,10 @@ export function EmptyState({
 }: EmptyStateProps) {
   return (
     <div
-      className={`rounded-xl border border-dashed bg-card px-6 py-8 text-center ${className}`}
+      className={`rounded-lg border border-dashed bg-card px-6 py-8 text-center ${className}`}
       role="status"
     >
-      <div className="mx-auto mb-3 grid h-10 w-10 place-items-center rounded-lg bg-muted text-muted-foreground">
+      <div className="mx-auto mb-3 grid h-9 w-9 place-items-center rounded-lg bg-muted text-muted-foreground">
         <Icon className="h-5 w-5" aria-hidden="true" />
       </div>
       <p className="font-medium">{title}</p>

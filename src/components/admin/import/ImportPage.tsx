@@ -1,5 +1,17 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import {
+  AlertCircle,
+  AlertTriangle,
+  CheckCircle2,
+  Clock,
+  Copy,
+  Eye,
+  FileText,
+  PlayCircle,
+  Upload as UploadIcon,
+  type LucideIcon,
+} from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
 import {
@@ -11,9 +23,24 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import {
   Dialog,
   DialogContent,
@@ -32,20 +59,18 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import {
-  CheckCircle2,
-  AlertCircle,
-  Copy,
-  Upload as UploadIcon,
-  PlayCircle,
-  FileText,
-  Clock,
-  AlertTriangle,
-  Eye,
-} from "lucide-react";
+import { EmptyState } from "@/components/shared/EmptyState";
+import { PageErrorState } from "@/components/shared/PageErrorState";
+import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
 
 const PREVIEW_ROWS = 5;
+const IMPORT_STEPS = 7;
+const IMPORT_BATCH_LIMIT = 30;
+const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
+
+const WARNING_BADGE_CLASS =
+  "border-warning/50 bg-warning/5 font-medium text-warning hover:bg-warning/5";
 
 type ImportBatchRow = {
   id: string;
@@ -60,6 +85,7 @@ type ImportBatchRow = {
       duplicates?: number;
       warnings?: number;
     };
+    analysis_ms?: number;
     invalid?: ImportReport["invalid"];
     duplicates?: ImportReport["duplicates"];
     warnings?: ImportReport["warnings"];
@@ -69,6 +95,31 @@ type ImportBatchRow = {
   package_versions?: { version?: string } | null;
   profiles?: { full_name?: string; email?: string } | null;
 };
+
+type StatCounts = {
+  total: number;
+  valid: number;
+  invalid: number;
+  duplicates: number;
+  warnings: number;
+  ms: number;
+};
+
+function computeImportStep(
+  courseId: string,
+  pkg: string,
+  ver: string,
+  file: File | null,
+  report: ImportReport | null,
+): number {
+  if (!courseId) return 1;
+  if (!pkg) return 2;
+  if (!ver) return 3;
+  if (!file) return 4;
+  if (!report) return 5;
+  if (report.valid.length > 0) return 7;
+  return 6;
+}
 
 export function ImportPage() {
   const qc = useQueryClient();
@@ -82,29 +133,71 @@ export function ImportPage() {
   const [applyBatch, setApplyBatch] = useState<ImportBatchRow | null>(null);
 
   const selectionReady = !!courseId && !!pkg && !!ver;
+  const currentStep = computeImportStep(courseId, pkg, ver, file, report);
+  const progressValue = Math.round((currentStep / IMPORT_STEPS) * 100);
 
-  const { data: courses = [] } = useQuery({
+  const {
+    data: courses = [],
+    isError: coursesError,
+    isLoading: coursesLoading,
+  } = useQuery({
     queryKey: ["courses"],
-    queryFn: async () => (await supabase.from("courses").select("id,name").order("name")).data ?? [],
+    queryFn: async () => {
+      const { data, error } = await supabase.from("courses").select("id,name").order("name");
+      if (error) throw error;
+      return data ?? [];
+    },
   });
-  const { data: packages = [] } = useQuery({
+
+  const {
+    data: packages = [],
+    isError: packagesError,
+    isLoading: packagesLoading,
+  } = useQuery({
     queryKey: ["packages", courseId],
     enabled: !!courseId,
-    queryFn: async () => (await supabase.from("packages").select("id,name").eq("course_id", courseId).order("name")).data ?? [],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("packages")
+        .select("id,name")
+        .eq("course_id", courseId)
+        .order("name");
+      if (error) throw error;
+      return data ?? [];
+    },
   });
-  const { data: versions = [] } = useQuery({
+
+  const {
+    data: versions = [],
+    isError: versionsError,
+    isLoading: versionsLoading,
+  } = useQuery({
     queryKey: ["package_versions", pkg],
     enabled: !!pkg,
-    queryFn: async () => (await supabase.from("package_versions").select("id,version").eq("package_id", pkg).order("version")).data ?? [],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("package_versions")
+        .select("id,version")
+        .eq("package_id", pkg)
+        .order("version");
+      if (error) throw error;
+      return data ?? [];
+    },
   });
-  const { data: batches = [] } = useQuery({
+
+  const {
+    data: batches,
+    isLoading: batchesLoading,
+    isError: batchesError,
+    refetch: refetchBatches,
+  } = useQuery({
     queryKey: ["import_batches"],
     queryFn: async () => {
       const { data, error } = await supabase
         .from("import_batches")
         .select("*, packages(name), package_versions(version)")
         .order("created_at", { ascending: false })
-        .limit(30);
+        .limit(IMPORT_BATCH_LIMIT);
       if (error) throw error;
       if (!data?.length) return [];
 
@@ -124,14 +217,19 @@ export function ImportPage() {
     },
   });
 
-  const counts = useMemo(() => ({
-    total: report?.counts.total ?? 0,
-    valid: report?.counts.valid ?? 0,
-    invalid: report?.counts.invalid ?? 0,
-    duplicates: report?.counts.duplicates ?? 0,
-    warnings: report?.counts.warnings ?? 0,
-    ms: report?.analysisMs ?? 0,
-  }), [report]);
+  const counts = useMemo<StatCounts>(
+    () => ({
+      total: report?.counts.total ?? 0,
+      valid: report?.counts.valid ?? 0,
+      invalid: report?.counts.invalid ?? 0,
+      duplicates: report?.counts.duplicates ?? 0,
+      warnings: report?.counts.warnings ?? 0,
+      ms: report?.analysisMs ?? 0,
+    }),
+    [report],
+  );
+
+  const selectionQueryError = coursesError || packagesError || versionsError;
 
   async function handleValidate() {
     if (!selectionReady) return toast.error("Selecione curso, pacote e versão antes de validar.");
@@ -168,26 +266,33 @@ export function ImportPage() {
     }
     setBusy(true);
     const { data: user } = await supabase.auth.getUser();
-    const { data, error } = await supabase.from("import_batches").insert({
-      package_id: pkg,
-      package_version_id: ver,
-      filename: file.name,
-      file_type: file.name.split(".").pop() ?? "",
-      status: "pending",
-      created_by: user.user?.id ?? null,
-      report: {
-        counts: report.counts,
-        analysis_ms: report.analysisMs,
-        course_id: courseId,
-        rows: report.valid,
-        invalid: report.invalid,
-        duplicates: report.duplicates,
-        warnings: report.warnings,
-      },
-    }).select("id").single();
+    const { data, error } = await supabase
+      .from("import_batches")
+      .insert({
+        package_id: pkg,
+        package_version_id: ver,
+        filename: file.name,
+        file_type: file.name.split(".").pop() ?? "",
+        status: "pending",
+        created_by: user.user?.id ?? null,
+        report: {
+          counts: report.counts,
+          analysis_ms: report.analysisMs,
+          course_id: courseId,
+          rows: report.valid,
+          invalid: report.invalid,
+          duplicates: report.duplicates,
+          warnings: report.warnings,
+        },
+      })
+      .select("id")
+      .single();
     setBusy(false);
     if (error) return toast.error(error.message);
-    await logEvent("import.save", "import_batches", data.id, { filename: file.name, counts: report.counts });
+    await logEvent("import.save", "import_batches", data.id, {
+      filename: file.name,
+      counts: report.counts,
+    });
     toast.success("Lote salvo para revisão");
     qc.invalidateQueries({ queryKey: ["import_batches"] });
     setReport(null);
@@ -222,139 +327,182 @@ export function ImportPage() {
   });
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Importação</h1>
+    <div className={pageShellClass}>
+      <header>
+        <h1 className="text-2xl font-bold tracking-tight">Importação</h1>
         <p className="text-sm text-muted-foreground">
           Curso → Pacote → Versão → Arquivo → Validar → Relatório → Salvar lote → Aplicar ao banco.
         </p>
-      </div>
+      </header>
 
-      <div className="rounded-xl border bg-card p-6 space-y-4 max-w-4xl">
-        <div className="grid gap-4 sm:grid-cols-3">
-          <div>
-            <Label>1. Curso</Label>
-            <Select value={courseId} onValueChange={(v) => { setCourseId(v); setPkg(""); setVer(""); setReport(null); }}>
-              <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-              <SelectContent>
-                {courses.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <Label>2. Pacote</Label>
-            <Select value={pkg} onValueChange={(v) => { setPkg(v); setVer(""); setReport(null); }} disabled={!courseId}>
-              <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-              <SelectContent>
-                {packages.map((p) => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <Label>3. Versão</Label>
-            <Select value={ver} onValueChange={(v) => { setVer(v); setReport(null); }} disabled={!pkg}>
-              <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-              <SelectContent>
-                {versions.map((v) => <SelectItem key={v.id} value={v.id}>{v.version}</SelectItem>)}
-              </SelectContent>
-            </Select>
-          </div>
+      <section className="space-y-2" aria-label="Progresso da importação">
+        <div className="flex items-center justify-between text-sm">
+          <span className="font-medium">Etapa {currentStep} de {IMPORT_STEPS}</span>
+          <span className="text-muted-foreground tabular-nums">{progressValue}%</span>
         </div>
+        <Progress value={progressValue} aria-label={`Etapa ${currentStep} de ${IMPORT_STEPS}`} />
+      </section>
 
-        <div>
-          <Label>4. Arquivo (CSV / XLSX / JSON)</Label>
-          <Input
-            type="file"
-            accept=".csv,.xlsx,.xls,.json"
-            onChange={(e) => { setFile(e.target.files?.[0] ?? null); setReport(null); }}
-          />
-          <p className="text-xs text-muted-foreground mt-1">{IMPORT_COLUMN_HELP}</p>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Button variant="secondary" onClick={handleValidate} disabled={!file || !selectionReady || busy} aria-busy={busy}>
-            <UploadIcon className="h-4 w-4 mr-2" />
-            {busy ? "Validando..." : "5. Validar"}
-          </Button>
-          <Button onClick={handleSave} disabled={!report || !report.valid.length || report.missingColumns.length > 0 || busy} aria-busy={busy}>
-            {busy ? "Salvando..." : "7. Salvar lote"}
-          </Button>
-        </div>
-
-        {report && (
-          <>
-            <ImportReportSection report={report} counts={counts} />
-
-            {report.valid.length > 0 && (
-              <PreviewSection rows={report.valid.slice(0, PREVIEW_ROWS)} total={report.valid.length} />
+      <section className="space-y-6" aria-label="Seleção do destino">
+        <Card>
+          <CardHeader>
+            <CardTitle>Seleção</CardTitle>
+            <CardDescription>Escolha curso, pacote e versão de destino.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {selectionQueryError && (
+              <div className="flex items-start gap-2 rounded-lg border border-destructive/30 bg-destructive/5 p-3 text-sm text-destructive">
+                <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>Não foi possível carregar as opções de seleção.</span>
+              </div>
             )}
-          </>
-        )}
-      </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="space-y-2">
+                <Label>Curso</Label>
+                <Select
+                  value={courseId}
+                  onValueChange={(v) => {
+                    setCourseId(v);
+                    setPkg("");
+                    setVer("");
+                    setReport(null);
+                  }}
+                  disabled={coursesLoading}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {courses.map((c) => (
+                      <SelectItem key={c.id} value={c.id}>
+                        {c.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label>Pacote</Label>
+                <Select
+                  value={pkg}
+                  onValueChange={(v) => {
+                    setPkg(v);
+                    setVer("");
+                    setReport(null);
+                  }}
+                  disabled={!courseId || packagesLoading}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {packages.map((p) => (
+                      <SelectItem key={p.id} value={p.id}>
+                        {p.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-2">
+                <Label>Versão</Label>
+                <Select
+                  value={ver}
+                  onValueChange={(v) => {
+                    setVer(v);
+                    setReport(null);
+                  }}
+                  disabled={!pkg || versionsLoading}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {versions.map((v) => (
+                      <SelectItem key={v.id} value={v.id}>
+                        {v.version}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
 
-      <div>
-        <h2 className="mb-3 text-lg font-semibold">Histórico de importações</h2>
-        <div className="rounded-lg border bg-card">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Arquivo</TableHead>
-                <TableHead>Pacote / Versão</TableHead>
-                <TableHead>Administrador</TableHead>
-                <TableHead>Total</TableHead>
-                <TableHead>Válidas</TableHead>
-                <TableHead>Dupl.</TableHead>
-                <TableHead>Inv.</TableHead>
-                <TableHead>Avisos</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Data</TableHead>
-                <TableHead className="text-right">Ações</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {batches.length === 0 ? (
-                <TableRow><TableCell colSpan={11} className="text-center py-6 text-muted-foreground">Nenhum lote</TableCell></TableRow>
-              ) : (batches as ImportBatchRow[]).map((b) => (
-                <TableRow key={b.id}>
-                  <TableCell className="max-w-[220px] truncate">{b.filename}</TableCell>
-                  <TableCell className="text-xs">{b.packages?.name ?? "—"} / {b.package_versions?.version ?? "—"}</TableCell>
-                  <TableCell className="text-xs">{b.profiles?.full_name ?? b.profiles?.email ?? "—"}</TableCell>
-                  <TableCell>{b.report?.counts?.total ?? "—"}</TableCell>
-                  <TableCell>{b.report?.counts?.valid ?? "—"}</TableCell>
-                  <TableCell>{b.report?.counts?.duplicates ?? "—"}</TableCell>
-                  <TableCell>{b.report?.counts?.invalid ?? "—"}</TableCell>
-                  <TableCell>{b.report?.counts?.warnings ?? "—"}</TableCell>
-                  <TableCell>
-                    <Badge variant={b.status === "applied" ? "default" : b.status === "cancelled" ? "destructive" : "secondary"}>
-                      {b.status}
-                    </Badge>
-                  </TableCell>
-                  <TableCell className="text-xs">{new Date(b.created_at).toLocaleString("pt-BR")}</TableCell>
-                  <TableCell className="text-right space-x-1">
-                    <Button size="sm" variant="ghost" onClick={() => setReportBatch(b)}>
-                      <Eye className="h-3.5 w-3.5 mr-1" /> Relatório
-                    </Button>
-                    {b.status === "pending" && (
-                      <>
-                        <Button size="sm" onClick={() => setApplyBatch(b)} disabled={apply.isPending}>
-                          <PlayCircle className="h-3.5 w-3.5 mr-1" /> 8. Aplicar
-                        </Button>
-                        <Button size="sm" variant="ghost" onClick={() => cancel.mutate(b.id)} disabled={cancel.isPending}>
-                          Cancelar
-                        </Button>
-                      </>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>
+      <section aria-label="Arquivo">
+        <Card>
+          <CardHeader>
+            <CardTitle>Arquivo</CardTitle>
+            <CardDescription>Envie um arquivo CSV, XLSX ou JSON para validação.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            <Label htmlFor="import-file">Arquivo (CSV / XLSX / JSON)</Label>
+            <Input
+              id="import-file"
+              type="file"
+              accept=".csv,.xlsx,.xls,.json"
+              onChange={(e) => {
+                setFile(e.target.files?.[0] ?? null);
+                setReport(null);
+              }}
+            />
+            <p className="text-xs text-muted-foreground">{IMPORT_COLUMN_HELP}</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="flex flex-wrap gap-2" aria-label="Ações de validação">
+        <Button
+          variant="secondary"
+          onClick={handleValidate}
+          disabled={!file || !selectionReady || busy}
+          aria-busy={busy}
+        >
+          <UploadIcon className="h-4 w-4 mr-2" aria-hidden="true" />
+          {busy ? "Validando..." : "Validar"}
+        </Button>
+        <Button
+          onClick={handleSave}
+          disabled={
+            !report || !report.valid.length || report.missingColumns.length > 0 || busy
+          }
+          aria-busy={busy}
+        >
+          {busy ? "Salvando..." : "Salvar lote"}
+        </Button>
+      </section>
+
+      {report && (
+        <section className="space-y-6" aria-label="Relatório e preview">
+          <ImportReportSection report={report} counts={counts} />
+          {report.valid.length > 0 && (
+            <PreviewSection rows={report.valid.slice(0, PREVIEW_ROWS)} total={report.valid.length} />
+          )}
+        </section>
+      )}
+
+      <ImportHistorySection
+        batches={batches as ImportBatchRow[] | undefined}
+        batchesLoading={batchesLoading}
+        batchesError={batchesError}
+        onRetry={() => refetchBatches()}
+        onViewReport={setReportBatch}
+        onApply={setApplyBatch}
+        onCancel={(id) => cancel.mutate(id)}
+        applyPending={apply.isPending}
+        cancelPending={cancel.isPending}
+      />
 
       <BatchReportDialog batch={reportBatch} onClose={() => setReportBatch(null)} />
 
-      <AlertDialog open={!!applyBatch} onOpenChange={(o) => { if (!o) setApplyBatch(null); }}>
+      <AlertDialog
+        open={!!applyBatch}
+        onOpenChange={(o) => {
+          if (!o) setApplyBatch(null);
+        }}
+      >
         <AlertDialogContent className="max-w-2xl">
           <AlertDialogHeader>
             <AlertDialogTitle>Aplicar lote ao banco?</AlertDialogTitle>
@@ -393,82 +541,148 @@ export function ImportPage() {
   );
 }
 
+function ImportStatCard({
+  label,
+  value,
+  icon: Icon,
+}: {
+  label: string;
+  value: ReactNode;
+  icon: LucideIcon;
+}) {
+  return (
+    <div className="rounded-lg border bg-card p-5 shadow">
+      <div className="flex items-start justify-between gap-2">
+        <div className="text-sm text-muted-foreground">{label}</div>
+        <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+          <Icon className="h-4 w-4" aria-hidden="true" />
+        </div>
+      </div>
+      <div className="mt-3 text-2xl font-semibold tabular-nums tracking-tight">{value}</div>
+    </div>
+  );
+}
+
+function ImportStatGrid({ counts }: { counts: StatCounts }) {
+  return (
+    <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+      <ImportStatCard icon={FileText} label="Linhas" value={counts.total} />
+      <ImportStatCard icon={CheckCircle2} label="Válidas" value={counts.valid} />
+      <ImportStatCard icon={Copy} label="Duplicadas" value={counts.duplicates} />
+      <ImportStatCard icon={AlertCircle} label="Inválidas" value={counts.invalid} />
+      <ImportStatCard icon={AlertTriangle} label="Avisos" value={counts.warnings} />
+      <ImportStatCard icon={Clock} label="Tempo" value={`${counts.ms} ms`} />
+    </div>
+  );
+}
+
+function ImportIssueDetails({
+  invalid = [],
+  duplicates = [],
+  warnings = [],
+}: {
+  invalid?: ImportReport["invalid"];
+  duplicates?: ImportReport["duplicates"];
+  warnings?: ImportReport["warnings"];
+}) {
+  const hasIssues = invalid.length > 0 || duplicates.length > 0 || warnings.length > 0;
+  if (!hasIssues) {
+    return (
+      <p className="text-sm text-muted-foreground">Sem erros, duplicatas ou avisos registrados.</p>
+    );
+  }
+
+  return (
+    <div className="rounded-lg border">
+      <div className="border-b p-3 text-sm font-medium">Detalhes (erros, duplicatas e avisos)</div>
+      <div className="max-h-80 overflow-auto">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="min-w-[4rem]">Linha</TableHead>
+              <TableHead className="min-w-[6rem]">Tipo</TableHead>
+              <TableHead className="min-w-[8rem]">Campo</TableHead>
+              <TableHead>Descrição</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {invalid.flatMap((r) =>
+              r.errors.map((e, i) => (
+                <TableRow key={`err-${r.line}-${i}`}>
+                  <TableCell className="tabular-nums">{r.line}</TableCell>
+                  <TableCell>
+                    <Badge variant="destructive">Erro</Badge>
+                  </TableCell>
+                  <TableCell className="font-mono text-xs">{e.field}</TableCell>
+                  <TableCell>{e.message}</TableCell>
+                </TableRow>
+              )),
+            )}
+            {duplicates.map((d) => (
+              <TableRow key={`dup-${d.line}`}>
+                <TableCell className="tabular-nums">{d.line}</TableCell>
+                <TableCell>
+                  <Badge variant="secondary">Duplicata</Badge>
+                </TableCell>
+                <TableCell className="font-mono text-xs">statement</TableCell>
+                <TableCell>{d.reason}</TableCell>
+              </TableRow>
+            ))}
+            {warnings.map((w, i) => (
+              <TableRow key={`warn-${w.line}-${i}`}>
+                <TableCell className="tabular-nums">{w.line}</TableCell>
+                <TableCell>
+                  <Badge className={WARNING_BADGE_CLASS}>Aviso</Badge>
+                </TableCell>
+                <TableCell className="font-mono text-xs">{w.field}</TableCell>
+                <TableCell>{w.message}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  );
+}
+
 function ImportReportSection({
   report,
   counts,
 }: {
   report: ImportReport;
-  counts: { total: number; valid: number; invalid: number; duplicates: number; warnings: number; ms: number };
+  counts: StatCounts;
 }) {
-  const hasIssues = report.missingColumns.length > 0
-    || report.invalid.length > 0
-    || report.duplicates.length > 0
-    || report.warnings.length > 0;
+  const hasIssues =
+    report.missingColumns.length > 0 ||
+    report.invalid.length > 0 ||
+    report.duplicates.length > 0 ||
+    report.warnings.length > 0;
 
   return (
-    <div className="space-y-3 pt-2">
-      <p className="text-sm font-medium">6. Relatório completo</p>
-
-      {report.missingColumns.length > 0 && (
-        <div className="rounded-lg border border-destructive/50 bg-destructive/5 p-3 text-sm">
-          <p className="font-medium text-destructive">Colunas obrigatórias ausentes:</p>
-          <p className="font-mono text-xs mt-1">{report.missingColumns.join(", ")}</p>
-        </div>
-      )}
-
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
-        <Stat icon={<FileText className="h-4 w-4" />} label="Linhas" value={counts.total} />
-        <Stat icon={<CheckCircle2 className="h-4 w-4 text-primary" />} label="Válidas" value={counts.valid} />
-        <Stat icon={<Copy className="h-4 w-4 text-muted-foreground" />} label="Duplicadas" value={counts.duplicates} />
-        <Stat icon={<AlertCircle className="h-4 w-4 text-destructive" />} label="Inválidas" value={counts.invalid} />
-        <Stat icon={<AlertTriangle className="h-4 w-4 text-amber-500" />} label="Avisos" value={counts.warnings} />
-        <Stat icon={<Clock className="h-4 w-4" />} label="Tempo" value={`${counts.ms} ms`} />
-      </div>
-
-      {hasIssues && !report.missingColumns.length && (
-        <div className="rounded-lg border">
-          <div className="p-3 text-sm font-medium border-b">Detalhes (erros, duplicatas e avisos)</div>
-          <div className="max-h-80 overflow-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-16">Linha</TableHead>
-                  <TableHead className="w-24">Tipo</TableHead>
-                  <TableHead className="w-32">Campo</TableHead>
-                  <TableHead>Descrição</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {report.invalid.flatMap((r) => r.errors.map((e, i) => (
-                  <TableRow key={`err-${r.line}-${i}`}>
-                    <TableCell>{r.line}</TableCell>
-                    <TableCell><Badge variant="destructive">Erro</Badge></TableCell>
-                    <TableCell className="font-mono text-xs">{e.field}</TableCell>
-                    <TableCell>{e.message}</TableCell>
-                  </TableRow>
-                )))}
-                {report.duplicates.map((d) => (
-                  <TableRow key={`dup-${d.line}`}>
-                    <TableCell>{d.line}</TableCell>
-                    <TableCell><Badge variant="secondary">Duplicata</Badge></TableCell>
-                    <TableCell className="font-mono text-xs">statement</TableCell>
-                    <TableCell>{d.reason}</TableCell>
-                  </TableRow>
-                ))}
-                {report.warnings.map((w, i) => (
-                  <TableRow key={`warn-${w.line}-${i}`}>
-                    <TableCell>{w.line}</TableCell>
-                    <TableCell><Badge className="bg-amber-500/15 text-amber-700 hover:bg-amber-500/15">Aviso</Badge></TableCell>
-                    <TableCell className="font-mono text-xs">{w.field}</TableCell>
-                    <TableCell>{w.message}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+    <Card>
+      <CardHeader>
+        <CardTitle>Relatório completo</CardTitle>
+        <CardDescription>Resultado da validação do arquivo enviado.</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {report.missingColumns.length > 0 && (
+          <div className="rounded-lg border border-destructive/50 bg-destructive/5 p-3 text-sm">
+            <p className="font-medium text-destructive">Colunas obrigatórias ausentes:</p>
+            <p className="mt-1 font-mono text-xs">{report.missingColumns.join(", ")}</p>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+
+        <ImportStatGrid counts={counts} />
+
+        {hasIssues && !report.missingColumns.length && (
+          <ImportIssueDetails
+            invalid={report.invalid}
+            duplicates={report.duplicates}
+            warnings={report.warnings}
+          />
+        )}
+      </CardContent>
+    </Card>
   );
 }
 
@@ -482,116 +696,275 @@ function PreviewSection({
   compact?: boolean;
 }) {
   return (
-    <div className={`rounded-lg border ${compact ? "" : "bg-muted/30"}`}>
-      <div className="p-3 text-sm font-medium border-b flex items-center gap-2">
-        <Eye className="h-4 w-4" />
-        Preview — {rows.length} de {total} linhas válidas
-      </div>
-      <div className="overflow-auto">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-12">#</TableHead>
-              <TableHead>Enunciado</TableHead>
-              <TableHead className="w-24">Gabarito</TableHead>
-              <TableHead className="w-32">Disciplina</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {rows.map((r) => (
-              <TableRow key={r.__line}>
-                <TableCell>{r.__line}</TableCell>
-                <TableCell className="max-w-md truncate text-xs">{r.statement}</TableCell>
-                <TableCell className="font-mono">{r.correct_answer}</TableCell>
-                <TableCell className="text-xs">{r.subject}</TableCell>
+    <Card className={compact ? "border shadow-none" : undefined}>
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-base">
+          <Eye className="h-4 w-4" aria-hidden="true" />
+          Preview — {rows.length} de {total} linhas válidas
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="overflow-x-auto rounded-lg border">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="min-w-[3rem]">#</TableHead>
+                <TableHead className="min-w-[12rem]">Enunciado</TableHead>
+                <TableHead className="min-w-[5rem]">Gabarito</TableHead>
+                <TableHead className="min-w-[8rem]">Disciplina</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
+            </TableHeader>
+            <TableBody>
+              {rows.map((r) => (
+                <TableRow key={r.__line}>
+                  <TableCell className="tabular-nums">{r.__line}</TableCell>
+                  <TableCell className="max-w-md truncate text-sm">{r.statement}</TableCell>
+                  <TableCell className="font-mono tabular-nums">{r.correct_answer}</TableCell>
+                  <TableCell className="truncate text-sm">{r.subject}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
 
-function BatchReportDialog({ batch, onClose }: { batch: ImportBatchRow | null; onClose: () => void }) {
-  const counts = batch?.report?.counts;
+function BatchReportDialog({
+  batch,
+  onClose,
+}: {
+  batch: ImportBatchRow | null;
+  onClose: () => void;
+}) {
+  const counts: StatCounts = {
+    total: batch?.report?.counts?.total ?? 0,
+    valid: batch?.report?.counts?.valid ?? 0,
+    invalid: batch?.report?.counts?.invalid ?? 0,
+    duplicates: batch?.report?.counts?.duplicates ?? 0,
+    warnings: batch?.report?.counts?.warnings ?? 0,
+    ms: batch?.report?.analysis_ms ?? 0,
+  };
 
   return (
-    <Dialog open={!!batch} onOpenChange={(o) => { if (!o) onClose(); }}>
+    <Dialog
+      open={!!batch}
+      onOpenChange={(o) => {
+        if (!o) onClose();
+      }}
+    >
       <DialogContent className="max-w-3xl">
         <DialogHeader>
           <DialogTitle>Relatório — {batch?.filename}</DialogTitle>
           <DialogDescription>Detalhamento completo do lote salvo.</DialogDescription>
         </DialogHeader>
         {batch && (
-          <div className="space-y-3 max-h-[70vh] overflow-auto">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-              <Stat label="Linhas" value={counts?.total ?? 0} />
-              <Stat label="Válidas" value={counts?.valid ?? 0} />
-              <Stat label="Duplicadas" value={counts?.duplicates ?? 0} />
-              <Stat label="Inválidas" value={counts?.invalid ?? 0} />
-              <Stat label="Avisos" value={counts?.warnings ?? 0} />
-            </div>
+          <div className="max-h-[70vh] space-y-4 overflow-auto">
+            <ImportStatGrid counts={counts} />
 
             {batch.report?.rows && batch.report.rows.length > 0 && (
-              <PreviewSection rows={batch.report.rows.slice(0, PREVIEW_ROWS)} total={batch.report.rows.length} compact />
+              <PreviewSection
+                rows={batch.report.rows.slice(0, PREVIEW_ROWS)}
+                total={batch.report.rows.length}
+                compact
+              />
             )}
 
-            {(batch.report?.invalid?.length || batch.report?.duplicates?.length || batch.report?.warnings?.length) ? (
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Linha</TableHead>
-                    <TableHead>Tipo</TableHead>
-                    <TableHead>Campo</TableHead>
-                    <TableHead>Descrição</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {(batch.report?.invalid ?? []).flatMap((r) => r.errors.map((e, i) => (
-                    <TableRow key={`ri-${r.line}-${i}`}>
-                      <TableCell>{r.line}</TableCell>
-                      <TableCell><Badge variant="destructive">Erro</Badge></TableCell>
-                      <TableCell className="font-mono text-xs">{e.field}</TableCell>
-                      <TableCell>{e.message}</TableCell>
-                    </TableRow>
-                  )))}
-                  {(batch.report?.duplicates ?? []).map((d) => (
-                    <TableRow key={`rd-${d.line}`}>
-                      <TableCell>{d.line}</TableCell>
-                      <TableCell><Badge variant="secondary">Duplicata</Badge></TableCell>
-                      <TableCell className="font-mono text-xs">statement</TableCell>
-                      <TableCell>{d.reason}</TableCell>
-                    </TableRow>
-                  ))}
-                  {(batch.report?.warnings ?? []).map((w, i) => (
-                    <TableRow key={`rw-${w.line}-${i}`}>
-                      <TableCell>{w.line}</TableCell>
-                      <TableCell><Badge className="bg-amber-500/15 text-amber-700 hover:bg-amber-500/15">Aviso</Badge></TableCell>
-                      <TableCell className="font-mono text-xs">{w.field}</TableCell>
-                      <TableCell>{w.message}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            ) : (
-              <p className="text-sm text-muted-foreground">Sem erros, duplicatas ou avisos registrados.</p>
-            )}
+            <ImportIssueDetails
+              invalid={batch.report?.invalid}
+              duplicates={batch.report?.duplicates}
+              warnings={batch.report?.warnings}
+            />
           </div>
         )}
         <DialogFooter>
-          <Button variant="secondary" onClick={onClose}>Fechar</Button>
+          <Button variant="secondary" onClick={onClose}>
+            Fechar
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
   );
 }
 
-function Stat({ label, value, icon }: { label: string; value: React.ReactNode; icon?: React.ReactNode }) {
+function ImportHistorySection({
+  batches,
+  batchesLoading,
+  batchesError,
+  onRetry,
+  onViewReport,
+  onApply,
+  onCancel,
+  applyPending,
+  cancelPending,
+}: {
+  batches?: ImportBatchRow[];
+  batchesLoading: boolean;
+  batchesError: boolean;
+  onRetry: () => void;
+  onViewReport: (batch: ImportBatchRow) => void;
+  onApply: (batch: ImportBatchRow) => void;
+  onCancel: (id: string) => void;
+  applyPending: boolean;
+  cancelPending: boolean;
+}) {
+  const showsLimitNotice =
+    !batchesLoading && !batchesError && batches?.length === IMPORT_BATCH_LIMIT;
+
   return (
-    <div className="rounded-lg border bg-background p-3">
-      <div className="flex items-center gap-2 text-xs text-muted-foreground">{icon}{label}</div>
-      <div className="text-xl font-semibold mt-1">{value}</div>
-    </div>
+    <section aria-label="Histórico de importações">
+      <Card>
+        <CardHeader>
+          <CardTitle>Histórico de importações</CardTitle>
+          <CardDescription>Lotes salvos e ações de revisão ou aplicação.</CardDescription>
+        </CardHeader>
+        <CardContent className="pt-0">
+          {batchesError ? (
+            <PageErrorState
+              title="Erro ao carregar histórico"
+              message="Não foi possível carregar os lotes de importação."
+              onRetry={onRetry}
+            />
+          ) : (
+            <>
+              <div className="overflow-x-auto rounded-lg border">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="sticky left-0 z-10 min-w-[10rem] bg-card">
+                        Arquivo
+                      </TableHead>
+                      <TableHead className="min-w-[9rem]">Pacote / Versão</TableHead>
+                      <TableHead className="min-w-[8rem]">Administrador</TableHead>
+                      <TableHead className="min-w-[4rem]">Total</TableHead>
+                      <TableHead className="min-w-[4rem]">Válidas</TableHead>
+                      <TableHead className="min-w-[4rem]">Dupl.</TableHead>
+                      <TableHead className="min-w-[4rem]">Inv.</TableHead>
+                      <TableHead className="min-w-[4rem]">Avisos</TableHead>
+                      <TableHead className="min-w-[6rem]">Status</TableHead>
+                      <TableHead className="min-w-[8rem]">Data</TableHead>
+                      <TableHead className="sticky right-0 z-10 min-w-[12rem] bg-card text-right">
+                        Ações
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {batchesLoading ? (
+                      <HistoryTableSkeleton />
+                    ) : !batches?.length ? (
+                      <TableRow>
+                        <TableCell colSpan={11} className="py-10">
+                          <EmptyState
+                            title="Nenhum lote registrado"
+                            description="Os lotes salvos aparecerão aqui após a primeira importação."
+                          />
+                        </TableCell>
+                      </TableRow>
+                    ) : (
+                      batches.map((b) => (
+                        <TableRow key={b.id}>
+                          <TableCell className="sticky left-0 z-10 max-w-[220px] truncate bg-card font-medium">
+                            {b.filename}
+                          </TableCell>
+                          <TableCell className="max-w-[12rem] truncate text-xs">
+                            {b.packages?.name ?? "—"} / {b.package_versions?.version ?? "—"}
+                          </TableCell>
+                          <TableCell className="max-w-[10rem] truncate text-xs">
+                            {b.profiles?.full_name ?? b.profiles?.email ?? "—"}
+                          </TableCell>
+                          <TableCell className="tabular-nums">
+                            {b.report?.counts?.total ?? "—"}
+                          </TableCell>
+                          <TableCell className="tabular-nums">
+                            {b.report?.counts?.valid ?? "—"}
+                          </TableCell>
+                          <TableCell className="tabular-nums">
+                            {b.report?.counts?.duplicates ?? "—"}
+                          </TableCell>
+                          <TableCell className="tabular-nums">
+                            {b.report?.counts?.invalid ?? "—"}
+                          </TableCell>
+                          <TableCell className="tabular-nums">
+                            {b.report?.counts?.warnings ?? "—"}
+                          </TableCell>
+                          <TableCell>
+                            <Badge
+                              variant={
+                                b.status === "applied"
+                                  ? "default"
+                                  : b.status === "cancelled"
+                                    ? "destructive"
+                                    : "secondary"
+                              }
+                            >
+                              {b.status}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="whitespace-nowrap text-xs tabular-nums">
+                            {new Date(b.created_at).toLocaleString("pt-BR")}
+                          </TableCell>
+                          <TableCell className="sticky right-0 z-10 bg-card text-right">
+                            <div className="flex flex-wrap justify-end gap-1">
+                              <Button
+                                size="sm"
+                                variant="ghost"
+                                onClick={() => onViewReport(b)}
+                              >
+                                <Eye className="h-4 w-4 mr-1" aria-hidden="true" />
+                                Relatório
+                              </Button>
+                              {b.status === "pending" && (
+                                <>
+                                  <Button
+                                    size="sm"
+                                    onClick={() => onApply(b)}
+                                    disabled={applyPending}
+                                  >
+                                    <PlayCircle className="h-4 w-4 mr-1" aria-hidden="true" />
+                                    Aplicar
+                                  </Button>
+                                  <Button
+                                    size="sm"
+                                    variant="ghost"
+                                    onClick={() => onCancel(b.id)}
+                                    disabled={cancelPending}
+                                  >
+                                    Cancelar
+                                  </Button>
+                                </>
+                              )}
+                            </div>
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
+              </div>
+              {showsLimitNotice && (
+                <p className="mt-3 text-xs text-muted-foreground" role="note">
+                  Mostrando os {IMPORT_BATCH_LIMIT} lotes mais recentes.
+                </p>
+              )}
+            </>
+          )}
+        </CardContent>
+      </Card>
+    </section>
+  );
+}
+
+function HistoryTableSkeleton() {
+  return (
+    <>
+      {Array.from({ length: 5 }).map((_, index) => (
+        <TableRow key={index}>
+          <TableCell colSpan={11}>
+            <Skeleton className="h-5 w-full" />
+          </TableCell>
+        </TableRow>
+      ))}
+    </>
   );
 }

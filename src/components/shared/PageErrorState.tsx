@@ -16,7 +16,7 @@ export function PageErrorState({
 }: PageErrorStateProps) {
   return (
     <div className="space-y-4 max-w-lg" role="alert">
-      <div className="flex items-start gap-3 rounded-xl border border-destructive/30 bg-destructive/5 p-4">
+      <div className="flex items-start gap-3 rounded-lg border border-destructive/30 bg-destructive/5 p-4">
         <AlertCircle className="h-5 w-5 text-destructive shrink-0 mt-0.5" aria-hidden="true" />
         <div>
           <h2 className="font-semibold">{title}</h2>

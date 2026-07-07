@@ -173,19 +173,20 @@ export function BoardsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Bancas</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Bancas</h1>
           <p className="text-sm text-muted-foreground">Bancas organizadoras de concursos.</p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Nova banca
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Nova banca
         </Button>
       </div>
 
       <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou sigla..." />
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
@@ -213,8 +214,12 @@ export function BoardsPage() {
                   <TableCell className="text-muted-foreground">{row.acronym ?? "—"}</TableCell>
                   <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
                   <TableCell className="text-right">
-                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}><Pencil className="h-4 w-4" /></Button>
-                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}><Trash2 className="h-4 w-4" /></Button>
+                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
+                    </Button>
+                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}>
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))}

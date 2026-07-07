@@ -17,7 +17,7 @@ export function QuestionOptions({
 }: QuestionOptionsProps) {
   return (
     <div className="space-y-3">
-      <Label className="text-sm font-medium">Alternativas</Label>
+      <Label className="text-base font-medium">Alternativas</Label>
       <RadioGroup
         value={value ?? undefined}
         onValueChange={onChange}
@@ -27,8 +27,8 @@ export function QuestionOptions({
         {alternatives.map((alternative) => (
           <label
             key={alternative.letter}
-            className={`flex items-start gap-3 rounded-lg border p-3 ${
-              disabled ? "opacity-70 cursor-default" : "cursor-pointer hover:border-primary/40"
+            className={`flex items-start gap-3 rounded-lg border p-4 transition-colors ${
+              disabled ? "cursor-default opacity-70" : "cursor-pointer hover:border-primary/40"
             }`}
           >
             <RadioGroupItem
@@ -36,7 +36,7 @@ export function QuestionOptions({
               className="mt-0.5"
               disabled={disabled}
             />
-            <span className="text-sm leading-relaxed">
+            <span className="text-base leading-relaxed">
               <span className="font-medium">{alternative.letter})</span> {alternative.text}
             </span>
           </label>

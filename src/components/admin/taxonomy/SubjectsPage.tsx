@@ -46,6 +46,7 @@ import {
   type DeleteDep,
   hasDeleteDeps,
 } from "./shared";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
 
 type Subject = Tables<"subjects">;
 
@@ -170,19 +171,20 @@ export function SubjectsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Disciplinas</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Disciplinas</h1>
           <p className="text-sm text-muted-foreground">Disciplinas do banco de questões.</p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Nova disciplina
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Nova disciplina
         </Button>
       </div>
 
       <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome..." />
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
@@ -192,24 +194,32 @@ export function SubjectsPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {isLoading ? (
-              <TableRow><TableCell colSpan={3} className="py-8 text-center text-muted-foreground">Carregando...</TableCell></TableRow>
-            ) : isError ? (
-              <TableRow><TableCell colSpan={3} className="py-8 text-center text-destructive">{formatTaxonomyError((error as Error).message, "disciplina")}</TableCell></TableRow>
-            ) : rows.length === 0 ? (
-              <TableRow><TableCell colSpan={3} className="py-8 text-center text-muted-foreground">{debouncedSearch ? "Nenhuma disciplina encontrada." : "Nenhuma disciplina cadastrada."}</TableCell></TableRow>
-            ) : (
-              rows.map((row) => (
+            <AdminTableBody
+              colSpan={3}
+              isLoading={isLoading}
+              isError={isError}
+              error={error as Error}
+              isEmpty={rows.length === 0}
+              emptyMessage="Nenhuma disciplina cadastrada."
+              filteredEmptyMessage="Nenhuma disciplina encontrada."
+              hasActiveFilters={!!debouncedSearch}
+              formatError={(message) => formatTaxonomyError(message, "disciplina")}
+            >
+              {rows.map((row) => (
                 <TableRow key={row.id}>
                   <TableCell className="font-medium">{row.name}</TableCell>
                   <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
                   <TableCell className="text-right">
-                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}><Pencil className="h-4 w-4" /></Button>
-                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}><Trash2 className="h-4 w-4" /></Button>
+                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
+                    </Button>
+                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}>
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
+                    </Button>
                   </TableCell>
                 </TableRow>
-              ))
-            )}
+              ))}
+            </AdminTableBody>
           </TableBody>
         </Table>
       </div>

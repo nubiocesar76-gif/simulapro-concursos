@@ -1,26 +1,23 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useMutation } from "@tanstack/react-query";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  Clock,
-  HelpCircle,
-  ListChecks,
   RotateCcw,
-  Target,
+  X,
   XCircle,
 } from "lucide-react";
 import { SessionHeader } from "@/components/app/study/SessionHeader";
 import { QuestionCard } from "@/components/app/study/QuestionCard";
+import { EmptyState } from "@/components/shared/EmptyState";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
-  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
   Table,
@@ -40,6 +37,7 @@ import {
 import { toast } from "sonner";
 
 const RESULTS_PAGE_SIZE = 25;
+const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
 
 type ListFilter = "all" | "correct" | "wrong";
 
@@ -47,36 +45,6 @@ type SessionResultsViewProps = {
   session: StudySessionDetail;
   results: SessionResults;
 };
-
-type SummaryStat = {
-  key: string;
-  label: string;
-  value: string;
-  icon: typeof HelpCircle;
-};
-
-function buildSummaryStats(results: SessionResults): SummaryStat[] {
-  const { summary } = results;
-  return [
-    { key: "total", label: "Total de questões", value: String(summary.totalQuestions), icon: ListChecks },
-    { key: "answered", label: "Respondidas", value: String(summary.answeredCount), icon: HelpCircle },
-    { key: "correct", label: "Acertos", value: String(summary.correctCount), icon: CheckCircle2 },
-    { key: "wrong", label: "Erros", value: String(summary.wrongCount), icon: XCircle },
-    { key: "percentage", label: "Aproveitamento", value: `${summary.percentage}%`, icon: Target },
-    {
-      key: "totalTime",
-      label: "Tempo total",
-      value: formatStudyDuration(summary.totalTimeSeconds),
-      icon: Clock,
-    },
-    {
-      key: "avgTime",
-      label: "Tempo médio/questão",
-      value: formatStudyDuration(summary.averageTimeSeconds),
-      icon: Clock,
-    },
-  ];
-}
 
 function filterLabel(filter: ListFilter): string {
   if (filter === "correct") return "questões corretas";
@@ -86,13 +54,12 @@ function filterLabel(filter: ListFilter): string {
 
 export function SessionResultsView({ session, results }: SessionResultsViewProps) {
   const navigate = useNavigate();
-  const listRef = useRef<HTMLDivElement>(null);
   const [listFilter, setListFilter] = useState<ListFilter>("all");
   const [page, setPage] = useState(1);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
+  const { summary } = results;
   const subtitle = `${session.course_name} · ${session.package_name} · v${session.version_number}`;
-  const summaryStats = useMemo(() => buildSummaryStats(results), [results]);
 
   const filteredItems = useMemo(() => {
     if (listFilter === "correct") {
@@ -112,6 +79,7 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
 
   useEffect(() => {
     setPage(1);
+    setExpandedId(null);
   }, [listFilter]);
 
   useEffect(() => {
@@ -135,180 +103,252 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
     onError: (error: unknown) => toast.error(formatStudySessionError(error)),
   });
 
-  function applyListFilter(filter: ListFilter) {
-    setListFilter(filter);
-    listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
   function handleReviewQuestion(sessionQuestionId: string) {
-    setExpandedId(sessionQuestionId);
-    requestAnimationFrame(() => {
-      document.getElementById(`result-question-${sessionQuestionId}`)?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-      });
-    });
+    setExpandedId((current) => (current === sessionQuestionId ? null : sessionQuestionId));
   }
 
   return (
-    <div className="space-y-6 max-w-4xl">
-      <div>
-        <h1 className="text-2xl font-bold">Resultado da sessão</h1>
+    <div className={pageShellClass}>
+      <header>
+        <h1 className="text-2xl font-bold tracking-tight">Resultado da sessão</h1>
         <p className="text-sm text-muted-foreground">
           Confira seu desempenho e revise as questões respondidas.
         </p>
-      </div>
+      </header>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {summaryStats.map((stat) => {
-          const Icon = stat.icon;
-          return (
-            <div key={stat.key} className="rounded-xl border bg-card p-5 shadow-sm">
-              <div className="flex items-center justify-between">
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-                <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary/10 text-primary">
-                  <Icon className="h-4 w-4" />
-                </div>
-              </div>
-              <div className="mt-3 text-2xl font-semibold">{stat.value}</div>
-            </div>
-          );
-        })}
-      </div>
+      <section className="space-y-4" aria-label="Resumo do desempenho">
+        <div className="grid grid-cols-2 items-stretch gap-4 lg:grid-cols-[1fr_11rem_11rem]">
+          <Card className="col-span-2 flex flex-col justify-center lg:col-span-1">
+            <CardContent className="space-y-1 p-6">
+              <p className="text-2xl font-semibold tabular-nums tracking-tight">
+                {summary.percentage}%
+              </p>
+              <p className="text-lg font-semibold">Aproveitamento</p>
+              <p className="text-sm text-muted-foreground tabular-nums">
+                {summary.answeredCount} de {summary.totalQuestions} respondidas
+              </p>
+            </CardContent>
+          </Card>
 
-      <Card>
+          <Card className="flex flex-col justify-center">
+            <CardContent className="space-y-1 p-5">
+              <p className="text-xs text-muted-foreground">Acertos</p>
+              <p className="text-2xl font-semibold tabular-nums tracking-tight">
+                {summary.correctCount}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="flex flex-col justify-center">
+            <CardContent className="space-y-1 p-5">
+              <p className="text-xs text-muted-foreground">Erros</p>
+              <p className="text-2xl font-semibold tabular-nums tracking-tight">
+                {summary.wrongCount}
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        <p className="text-xs text-muted-foreground tabular-nums">
+          Tempo total de estudo: {formatStudyDuration(summary.totalTimeSeconds)} · Tempo médio/questão:{" "}
+          {formatStudyDuration(summary.averageTimeSeconds)}
+        </p>
+      </section>
+
+      <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center" aria-label="Próximas ações">
+        <Button asChild className="order-1 w-full sm:w-auto">
+          <Link to="/app/study">Nova sessão</Link>
+        </Button>
+        <Button
+          type="button"
+          variant="outline"
+          className="order-2 w-full sm:w-auto"
+          onClick={() => retryWrongSession.mutate()}
+          disabled={summary.wrongCount === 0 || retryWrongSession.isPending}
+        >
+          <RotateCcw className="h-4 w-4 mr-2" aria-hidden="true" />
+          {retryWrongSession.isPending ? "Criando..." : "Refazer apenas erradas"}
+        </Button>
+        <Button variant="link" size="sm" className="order-3 h-9 px-0 sm:ml-auto" asChild>
+          <Link to="/app">Voltar ao Dashboard</Link>
+        </Button>
+      </section>
+
+      <Card className="text-sm">
         <SessionHeader
           title={session.distribution_name}
           subtitle={subtitle}
           mode={session.mode}
         />
-        <CardContent className="grid gap-4 sm:grid-cols-2 text-sm pb-6">
+        <CardContent className="grid gap-3 pb-6 sm:grid-cols-2 lg:grid-cols-3">
           <div>
-            <p className="text-muted-foreground">Curso</p>
-            <p className="font-medium">{session.course_name}</p>
+            <p className="text-xs text-muted-foreground">Curso</p>
+            <p className="truncate font-medium">{session.course_name}</p>
           </div>
           <div>
-            <p className="text-muted-foreground">Pacote</p>
-            <p className="font-medium">{session.package_name}</p>
+            <p className="text-xs text-muted-foreground">Pacote</p>
+            <p className="truncate font-medium">{session.package_name}</p>
           </div>
           <div>
-            <p className="text-muted-foreground">Versão</p>
-            <p className="font-medium">v{session.version_number}</p>
+            <p className="text-xs text-muted-foreground">Versão</p>
+            <p className="font-medium tabular-nums">v{session.version_number}</p>
           </div>
           <div>
-            <p className="text-muted-foreground">Distribuição</p>
-            <p className="font-medium">{session.distribution_name}</p>
+            <p className="text-xs text-muted-foreground">Distribuição</p>
+            <p className="truncate font-medium">{session.distribution_name}</p>
           </div>
           <div>
-            <p className="text-muted-foreground">Modo</p>
+            <p className="text-xs text-muted-foreground">Modo</p>
             <p className="font-medium">{STUDY_MODE_LABELS[session.mode]}</p>
           </div>
           <div>
-            <p className="text-muted-foreground">Data/Hora</p>
-            <p className="font-medium">{formatDashboardDate(results.sessionDate)}</p>
+            <p className="text-xs text-muted-foreground">Data/Hora</p>
+            <p className="font-medium tabular-nums">{formatDashboardDate(results.sessionDate)}</p>
           </div>
         </CardContent>
       </Card>
 
-      <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-        <Button variant="outline" asChild>
-          <Link to="/app">
-            <ChevronLeft className="h-4 w-4 mr-2" />
-            Voltar ao Dashboard
-          </Link>
-        </Button>
-        <Button
-          variant="outline"
-          onClick={() => applyListFilter("correct")}
-          disabled={results.summary.correctCount === 0}
-        >
-          <CheckCircle2 className="h-4 w-4 mr-2" />
-          Ver questões corretas
-        </Button>
-        <Button
-          variant="outline"
-          onClick={() => applyListFilter("wrong")}
-          disabled={results.summary.wrongCount === 0}
-        >
-          <XCircle className="h-4 w-4 mr-2" />
-          Ver questões erradas
-        </Button>
-        <Button
-          variant="outline"
-          onClick={() => retryWrongSession.mutate()}
-          disabled={results.summary.wrongCount === 0 || retryWrongSession.isPending}
-        >
-          <RotateCcw className="h-4 w-4 mr-2" />
-          {retryWrongSession.isPending ? "Criando..." : "Refazer apenas erradas"}
-        </Button>
-        <Button asChild>
-          <Link to="/app/study">
-            Nova sessão
-          </Link>
-        </Button>
-      </div>
-
-      <Card ref={listRef}>
-        <CardHeader>
-          <CardTitle>Questões respondidas</CardTitle>
-          <CardDescription>
-            Exibindo {filterLabel(listFilter)} ({filteredItems.length} de{" "}
-            {results.summary.totalQuestions})
-          </CardDescription>
+      <Card>
+        <CardHeader className="flex flex-col gap-4 space-y-0 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0">
+            <CardTitle>Questões respondidas</CardTitle>
+            <CardDescription>
+              Exibindo {filterLabel(listFilter)} ({filteredItems.length} de {summary.totalQuestions})
+            </CardDescription>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <Button
+              type="button"
+              size="sm"
+              variant={listFilter === "all" ? "default" : "outline"}
+              onClick={() => setListFilter("all")}
+            >
+              Todas
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              variant={listFilter === "correct" ? "default" : "outline"}
+              onClick={() => setListFilter("correct")}
+              disabled={summary.correctCount === 0}
+            >
+              <CheckCircle2 className="h-4 w-4 mr-1.5" aria-hidden="true" />
+              Corretas
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              variant={listFilter === "wrong" ? "default" : "outline"}
+              onClick={() => setListFilter("wrong")}
+              disabled={summary.wrongCount === 0}
+            >
+              <XCircle className="h-4 w-4 mr-1.5" aria-hidden="true" />
+              Erradas
+            </Button>
+          </div>
         </CardHeader>
         <CardContent className="space-y-4">
-          {listFilter !== "all" && (
-            <Button variant="ghost" size="sm" onClick={() => setListFilter("all")}>
-              Mostrar todas
-            </Button>
-          )}
-
           {filteredItems.length === 0 ? (
-            <p className="text-sm text-muted-foreground py-4 text-center">
-              Nenhuma questão neste filtro.
-            </p>
+            <EmptyState
+              title="Nenhuma questão neste filtro"
+              description="Tente outro filtro ou volte para ver todas as questões respondidas."
+              action={
+                listFilter !== "all" ? (
+                  <Button variant="outline" size="sm" onClick={() => setListFilter("all")}>
+                    Mostrar todas
+                  </Button>
+                ) : undefined
+              }
+            />
           ) : (
             <>
-              <div className="overflow-x-auto rounded-md border">
+              <div className="overflow-x-auto rounded-lg border">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="w-12">#</TableHead>
-                      <TableHead>Enunciado</TableHead>
-                      <TableHead className="w-20">Sua resp.</TableHead>
-                      <TableHead className="w-20">Gabarito</TableHead>
-                      <TableHead className="w-28">Resultado</TableHead>
-                      <TableHead className="text-right w-32">Ação</TableHead>
+                      <TableHead className="min-w-[3rem]">#</TableHead>
+                      <TableHead className="min-w-[12rem]">Enunciado</TableHead>
+                      <TableHead className="min-w-[5rem]">Sua resp.</TableHead>
+                      <TableHead className="min-w-[5rem]">Gabarito</TableHead>
+                      <TableHead className="min-w-[7rem]">Resultado</TableHead>
+                      <TableHead className="min-w-[7rem] text-right">Ação</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {pageItems.map((item) => (
-                      <TableRow key={item.sessionQuestionId}>
-                        <TableCell className="font-medium">{item.order}</TableCell>
-                        <TableCell className="max-w-md">
-                          <p className="text-sm line-clamp-2">{item.statementSummary}</p>
-                        </TableCell>
-                        <TableCell>{item.selectedAnswer ?? "—"}</TableCell>
-                        <TableCell>{item.correctAnswer ?? "—"}</TableCell>
-                        <TableCell>
-                          {!item.isAnswered ? (
-                            <Badge variant="outline">Não respondida</Badge>
-                          ) : item.isCorrect ? (
-                            <Badge className="bg-green-600 hover:bg-green-600">Correta</Badge>
-                          ) : (
-                            <Badge variant="destructive">Incorreta</Badge>
-                          )}
-                        </TableCell>
-                        <TableCell className="text-right">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => handleReviewQuestion(item.sessionQuestionId)}
-                          >
-                            Revisar questão
-                          </Button>
-                        </TableCell>
-                      </TableRow>
+                      <Fragment key={item.sessionQuestionId}>
+                        <TableRow>
+                          <TableCell className="font-medium tabular-nums">{item.order}</TableCell>
+                          <TableCell className="max-w-md">
+                            <p className="line-clamp-2 text-sm">{item.statementSummary}</p>
+                          </TableCell>
+                          <TableCell className="tabular-nums">{item.selectedAnswer ?? "—"}</TableCell>
+                          <TableCell className="tabular-nums">{item.correctAnswer ?? "—"}</TableCell>
+                          <TableCell>
+                            {!item.isAnswered ? (
+                              <Badge variant="outline">Não respondida</Badge>
+                            ) : item.isCorrect ? (
+                              <Badge className="border-success/50 bg-success/5 font-medium text-success hover:bg-success/5">
+                                Correta
+                              </Badge>
+                            ) : (
+                              <Badge variant="destructive">Incorreta</Badge>
+                            )}
+                          </TableCell>
+                          <TableCell className="text-right">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => handleReviewQuestion(item.sessionQuestionId)}
+                            >
+                              {expandedId === item.sessionQuestionId ? "Ocultar" : "Revisar questão"}
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+
+                        {expandedId === item.sessionQuestionId && (
+                          <TableRow>
+                            <TableCell colSpan={6} className="bg-muted/30 p-0">
+                              <Collapsible open onOpenChange={(open) => !open && setExpandedId(null)}>
+                                <CollapsibleContent className="space-y-0">
+                                  <div className="p-4">
+                                    <QuestionCard
+                                      statement={item.statement}
+                                      feedback={
+                                        item.isAnswered && item.correctAnswer
+                                          ? {
+                                              isCorrect: item.isCorrect === true,
+                                              correctAnswer: item.correctAnswer,
+                                              explanation: item.explanation,
+                                              bibliography: null,
+                                              legalReference: null,
+                                            }
+                                          : null
+                                      }
+                                    />
+                                    {item.explanation && !item.isAnswered && (
+                                      <p className="mt-2 text-sm text-muted-foreground">
+                                        {item.explanation}
+                                      </p>
+                                    )}
+                                  </div>
+                                  <div className="flex justify-end border-t border-border px-4 py-2">
+                                    <Button
+                                      type="button"
+                                      variant="ghost"
+                                      size="sm"
+                                      onClick={() => setExpandedId(null)}
+                                    >
+                                      <X className="h-4 w-4 mr-1.5" aria-hidden="true" />
+                                      Fechar
+                                    </Button>
+                                  </div>
+                                </CollapsibleContent>
+                              </Collapsible>
+                            </TableCell>
+                          </TableRow>
+                        )}
+                      </Fragment>
                     ))}
                   </TableBody>
                 </Table>
@@ -316,7 +356,7 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
 
               {totalPages > 1 && (
                 <div className="flex items-center justify-between gap-2 text-sm">
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground tabular-nums">
                     Página {page} de {totalPages}
                   </p>
                   <div className="flex gap-2">
@@ -326,7 +366,8 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                       onClick={() => setPage((current) => Math.max(1, current - 1))}
                       disabled={page <= 1}
                     >
-                      <ChevronLeft className="h-4 w-4" />
+                      <ChevronLeft className="h-4 w-4" aria-hidden="true" />
+                      Anterior
                     </Button>
                     <Button
                       variant="outline"
@@ -334,47 +375,12 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                       onClick={() => setPage((current) => Math.min(totalPages, current + 1))}
                       disabled={page >= totalPages}
                     >
-                      <ChevronRight className="h-4 w-4" />
+                      Próxima
+                      <ChevronRight className="h-4 w-4 ml-2" aria-hidden="true" />
                     </Button>
                   </div>
                 </div>
               )}
-
-              <div className="space-y-3">
-                {pageItems.map((item) => (
-                  <Collapsible
-                    key={item.sessionQuestionId}
-                    id={`result-question-${item.sessionQuestionId}`}
-                    open={expandedId === item.sessionQuestionId}
-                    onOpenChange={(open) =>
-                      setExpandedId(open ? item.sessionQuestionId : null)
-                    }
-                  >
-                    <CollapsibleContent>
-                      <QuestionCard
-                        statement={item.statement}
-                        feedback={
-                          item.isAnswered && item.correctAnswer
-                            ? {
-                                isCorrect: item.isCorrect === true,
-                                correctAnswer: item.correctAnswer,
-                                explanation: item.explanation,
-                                bibliography: null,
-                                legalReference: null,
-                              }
-                            : null
-                        }
-                      />
-                      {item.explanation && !item.isAnswered && (
-                        <p className="text-sm text-muted-foreground mt-2">{item.explanation}</p>
-                      )}
-                    </CollapsibleContent>
-                    <CollapsibleTrigger asChild>
-                      <span className="sr-only">Revisar questão {item.order}</span>
-                    </CollapsibleTrigger>
-                  </Collapsible>
-                ))}
-              </div>
             </>
           )}
         </CardContent>

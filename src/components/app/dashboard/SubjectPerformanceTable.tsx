@@ -30,26 +30,30 @@ export function SubjectPerformanceTable({ subjects }: SubjectPerformanceTablePro
             description="Responda questões para visualizar seu desempenho por disciplina."
           />
         ) : (
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Disciplina</TableHead>
-                <TableHead>Respondidas</TableHead>
-                <TableHead>Acertos</TableHead>
-                <TableHead>Percentual</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {subjects.map((subject) => (
-                <TableRow key={subject.subjectId}>
-                  <TableCell className="font-medium">{subject.subjectName}</TableCell>
-                  <TableCell>{subject.answered}</TableCell>
-                  <TableCell>{subject.correct}</TableCell>
-                  <TableCell>{subject.percent}%</TableCell>
+          <div className="overflow-x-auto rounded-lg border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="min-w-[12rem]">Disciplina</TableHead>
+                  <TableHead className="min-w-[6rem]">Respondidas</TableHead>
+                  <TableHead className="min-w-[5rem]">Acertos</TableHead>
+                  <TableHead className="min-w-[5rem]">Percentual</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                {subjects.map((subject) => (
+                  <TableRow key={subject.subjectId}>
+                    <TableCell className="max-w-[16rem] truncate font-medium">
+                      {subject.subjectName}
+                    </TableCell>
+                    <TableCell className="tabular-nums">{subject.answered}</TableCell>
+                    <TableCell className="tabular-nums">{subject.correct}</TableCell>
+                    <TableCell className="tabular-nums">{subject.percent}%</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         )}
       </CardContent>
     </Card>

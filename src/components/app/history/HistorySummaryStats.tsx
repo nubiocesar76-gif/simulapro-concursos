@@ -1,45 +1,45 @@
-import { CheckCircle2, Clock, HelpCircle, Target } from "lucide-react";
-import { formatStudyDuration, type HistorySummaryStats } from "@/lib/student-dashboard";
+import { formatStudyDuration, type HistorySummaryStats as HistorySummaryStatsData } from "@/lib/student-dashboard";
 
 type HistorySummaryStatsProps = {
-  stats: HistorySummaryStats;
+  stats: HistorySummaryStatsData;
 };
 
-const items = [
-  { key: "totalSessions", label: "Total de sessões", icon: CheckCircle2 },
-  { key: "questionsAnswered", label: "Questões respondidas", icon: HelpCircle },
-  { key: "accuracyPercent", label: "Aproveitamento geral", icon: Target, suffix: "%" },
-  {
-    key: "totalStudySeconds",
-    label: "Tempo total estudado",
-    icon: Clock,
-    format: formatStudyDuration,
-  },
-] as const;
+function StatSegment({ label, value }: { label: string; value: string | number }) {
+  return (
+    <span>
+      {label}:{" "}
+      <span className="font-medium text-foreground tabular-nums">{value}</span>
+    </span>
+  );
+}
+
+function Dot() {
+  return <span aria-hidden="true" className="mx-2 text-muted-foreground/60">·</span>;
+}
 
 export function HistorySummaryStats({ stats }: HistorySummaryStatsProps) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {items.map((item) => {
-        const Icon = item.icon;
-        const rawValue = stats[item.key];
-        const value =
-          "format" in item && item.format
-            ? item.format(rawValue as number)
-            : `${rawValue}${"suffix" in item ? item.suffix : ""}`;
-
-        return (
-          <div key={item.key} className="rounded-xl border bg-card p-5 shadow-sm">
-            <div className="flex items-center justify-between">
-              <div className="text-sm text-muted-foreground">{item.label}</div>
-              <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="h-4 w-4" />
-              </div>
-            </div>
-            <div className="mt-3 text-2xl font-semibold">{value}</div>
-          </div>
-        );
-      })}
+    <div
+      className="rounded-lg border bg-card px-4 py-3 text-sm text-muted-foreground"
+      aria-label="Resumo do histórico"
+    >
+      <p className="hidden flex-wrap items-center sm:flex">
+        <StatSegment label="Sessões registradas" value={stats.totalSessions} />
+        <Dot />
+        <StatSegment label="Questões respondidas" value={stats.questionsAnswered} />
+        <Dot />
+        <StatSegment label="Aprov." value={`${stats.accuracyPercent}%`} />
+        <Dot />
+        <StatSegment
+          label="Tempo total de estudo"
+          value={formatStudyDuration(stats.totalStudySeconds)}
+        />
+      </p>
+      <p className="tabular-nums sm:hidden">
+        <span className="font-medium text-foreground">{stats.totalSessions}</span> sessões
+        <Dot />
+        <span className="font-medium text-foreground">{stats.accuracyPercent}%</span> aprov.
+      </p>
     </div>
   );
 }

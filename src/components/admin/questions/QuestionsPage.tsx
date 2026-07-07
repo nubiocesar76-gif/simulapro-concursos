@@ -14,6 +14,7 @@ import {
   type QuestionAlternative,
   type QuestionMetadataFields,
 } from "@/lib/questions";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -52,6 +53,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
 import {
   TAXONOMY_PAGE_SIZE,
   formatDate,
@@ -70,6 +72,7 @@ type QuestionRow = Tables<"questions"> & {
 };
 
 const ALL = "__all__";
+const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
 
 type Filters = {
   course: string;
@@ -440,95 +443,135 @@ export function QuestionsPage() {
   }
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+    <div className={pageShellClass}>
+      <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Questões</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Questões</h1>
           <p className="text-sm text-muted-foreground">
             CRUD completo de questões. Importação em lote continua disponível em Importação.
           </p>
         </div>
-        <Button onClick={openCreate}>
-          <Plus className="h-4 w-4 mr-2" /> Nova questão
+        <Button onClick={openCreate} className="shrink-0">
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Nova questão
         </Button>
-      </div>
+      </header>
 
-      <div className="rounded-xl border bg-card p-4 space-y-4">
-        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar enunciado..." />
-        <div className="grid gap-3 md:grid-cols-3 lg:grid-cols-4">
-          {filterFields.map((f) => (
-            <div key={f.key}>
-              <Label>{f.label}</Label>
-              <Select value={filters[f.key]} onValueChange={(v) => updateFilter(f.key, v)}>
-                <SelectTrigger><SelectValue placeholder="Todos" /></SelectTrigger>
+      <Card>
+        <CardHeader>
+          <CardTitle>Filtros</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar enunciado..." />
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {filterFields.map((f) => (
+              <div key={f.key} className="space-y-2">
+                <Label>{f.label}</Label>
+                <Select value={filters[f.key]} onValueChange={(v) => updateFilter(f.key, v)}>
+                  <SelectTrigger><SelectValue placeholder="Todos" /></SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value={ALL}>Todos</SelectItem>
+                    {f.options.map((o: { id: string; name: string }) => (
+                      <SelectItem key={o.id} value={o.id}>{o.name}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            ))}
+            <div className="space-y-2">
+              <Label htmlFor="filter-year">Ano</Label>
+              <Input
+                id="filter-year"
+                type="number"
+                value={filters.year}
+                onChange={(e) => updateFilter("year", e.target.value)}
+                placeholder="Ex.: 2024"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label>Dificuldade</Label>
+              <Select value={filters.difficulty} onValueChange={(v) => updateFilter("difficulty", v)}>
+                <SelectTrigger><SelectValue placeholder="Todas" /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value={ALL}>Todos</SelectItem>
-                  {f.options.map((o: { id: string; name: string }) => (
-                    <SelectItem key={o.id} value={o.id}>{o.name}</SelectItem>
-                  ))}
+                  <SelectItem value={ALL}>Todas</SelectItem>
+                  {DIFFICULTY_OPTIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
-          ))}
-          <div>
-            <Label>Ano</Label>
-            <Input type="number" value={filters.year} onChange={(e) => updateFilter("year", e.target.value)} placeholder="Ex.: 2024" />
           </div>
-          <div>
-            <Label>Dificuldade</Label>
-            <Select value={filters.difficulty} onValueChange={(v) => updateFilter("difficulty", v)}>
-              <SelectTrigger><SelectValue placeholder="Todas" /></SelectTrigger>
-              <SelectContent>
-                <SelectItem value={ALL}>Todas</SelectItem>
-                {DIFFICULTY_OPTIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Enunciado</TableHead>
-              <TableHead>Disciplina</TableHead>
-              <TableHead>Assunto</TableHead>
-              <TableHead>Banca</TableHead>
-              <TableHead className="w-20">Ano</TableHead>
-              <TableHead className="w-24">Dificuldade</TableHead>
-              <TableHead className="w-28">Criado em</TableHead>
-              <TableHead className="w-24 text-right">Ações</TableHead>
+              <TableHead className="sticky left-0 z-10 min-w-[12rem] bg-card">Enunciado</TableHead>
+              <TableHead className="min-w-[8rem]">Disciplina</TableHead>
+              <TableHead className="min-w-[8rem]">Assunto</TableHead>
+              <TableHead className="min-w-[7rem]">Banca</TableHead>
+              <TableHead className="min-w-[4rem]">Ano</TableHead>
+              <TableHead className="min-w-[6rem]">Dificuldade</TableHead>
+              <TableHead className="min-w-[7rem]">Criado em</TableHead>
+              <TableHead className="sticky right-0 z-10 min-w-[6rem] bg-card text-right">
+                Ações
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {isLoading ? (
-              <TableRow><TableCell colSpan={8} className="py-8 text-center text-muted-foreground">Carregando...</TableCell></TableRow>
-            ) : isError ? (
-              <TableRow><TableCell colSpan={8} className="py-8 text-center text-destructive">{formatQuestionError((error as Error).message)}</TableCell></TableRow>
-            ) : rows.length === 0 ? (
-              <TableRow>
-                <TableCell colSpan={8} className="py-8 text-center text-muted-foreground">
-                  {hasActiveFilters(filters, debouncedSearch) ? "Nenhuma questão encontrada." : "Nenhuma questão cadastrada."}
-                </TableCell>
-              </TableRow>
-            ) : (
-              rows.map((row) => (
+            <AdminTableBody
+              colSpan={8}
+              isLoading={isLoading}
+              isError={isError}
+              error={error as Error}
+              isEmpty={rows.length === 0}
+              emptyMessage="Nenhuma questão cadastrada."
+              filteredEmptyMessage="Nenhuma questão encontrada."
+              hasActiveFilters={hasActiveFilters(filters, debouncedSearch)}
+              formatError={formatQuestionError}
+            >
+              {rows.map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell className="max-w-md truncate font-medium">{row.statement}</TableCell>
-                  <TableCell className="text-sm">{row.subjects?.name ?? "—"}</TableCell>
-                  <TableCell className="text-sm">{row.topics?.name ?? "—"}</TableCell>
-                  <TableCell className="text-sm">{row.boards?.name ?? "—"}</TableCell>
-                  <TableCell>{row.year ?? "—"}</TableCell>
-                  <TableCell className="text-sm text-muted-foreground">{row.difficulty ?? "—"}</TableCell>
-                  <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
-                  <TableCell className="text-right">
-                    <Button size="icon" variant="ghost" aria-label="Editar questão" onClick={() => openEdit(row)}><Pencil className="h-4 w-4" /></Button>
-                    <Button size="icon" variant="ghost" aria-label="Excluir questão" onClick={() => openDeleteDialog(row)}><Trash2 className="h-4 w-4" /></Button>
+                  <TableCell className="sticky left-0 z-10 max-w-md truncate bg-card font-medium">
+                    {row.statement}
+                  </TableCell>
+                  <TableCell className="max-w-[10rem] truncate text-sm">
+                    {row.subjects?.name ?? "—"}
+                  </TableCell>
+                  <TableCell className="max-w-[10rem] truncate text-sm">
+                    {row.topics?.name ?? "—"}
+                  </TableCell>
+                  <TableCell className="max-w-[9rem] truncate text-sm">
+                    {row.boards?.name ?? "—"}
+                  </TableCell>
+                  <TableCell className="tabular-nums">{row.year ?? "—"}</TableCell>
+                  <TableCell className="text-sm text-muted-foreground">
+                    {row.difficulty ?? "—"}
+                  </TableCell>
+                  <TableCell className="whitespace-nowrap text-sm text-muted-foreground tabular-nums">
+                    {formatDate(row.created_at)}
+                  </TableCell>
+                  <TableCell className="sticky right-0 z-10 bg-card text-right">
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label="Editar questão"
+                      onClick={() => openEdit(row)}
+                    >
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
+                    </Button>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label="Excluir questão"
+                      onClick={() => openDeleteDialog(row)}
+                    >
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
+                    </Button>
                   </TableCell>
                 </TableRow>
-              ))
-            )}
+              ))}
+            </AdminTableBody>
           </TableBody>
         </Table>
       </div>
@@ -541,121 +584,137 @@ export function QuestionsPage() {
             <DialogTitle>{editing ? "Editar questão" : "Nova questão"}</DialogTitle>
             <DialogDescription>Preencha enunciado, alternativas, gabarito e metadados.</DialogDescription>
           </DialogHeader>
-          <form onSubmit={(e) => { e.preventDefault(); save.mutate(); }} className="space-y-4">
-            <div>
+          <form onSubmit={(e) => { e.preventDefault(); save.mutate(); }} className="space-y-8">
+            <section className="space-y-2">
               <Label htmlFor="q-statement">Enunciado *</Label>
               <Textarea id="q-statement" value={form.statement} onChange={(e) => setForm((p) => ({ ...p, statement: e.target.value }))} rows={4} required />
-            </div>
+            </section>
 
-            <div className="space-y-2">
+            <section className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label>Alternativas *</Label>
                 <Button type="button" variant="outline" size="sm" onClick={addAlternative}>Adicionar</Button>
               </div>
               {form.alternatives.map((alt, index) => (
                 <div key={`${alt.letter}-${index}`} className="flex gap-2">
-                  <Input className="w-14" value={alt.letter} readOnly />
+                  <Input className="w-14" value={alt.letter} readOnly aria-label={`Letra da alternativa ${alt.letter}`} />
                   <Input value={alt.text} onChange={(e) => updateAlternative(index, e.target.value)} placeholder={`Alternativa ${alt.letter}`} />
-                  <Button type="button" variant="ghost" size="icon" disabled={form.alternatives.length <= 2} onClick={() => removeAlternative(index)}>
-                    <Trash2 className="h-4 w-4" />
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    disabled={form.alternatives.length <= 2}
+                    aria-label={`Remover alternativa ${alt.letter}`}
+                    onClick={() => removeAlternative(index)}
+                  >
+                    <Trash2 className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </div>
               ))}
-            </div>
+            </section>
 
-            <div className="grid gap-3 sm:grid-cols-3">
-              <div>
-                <Label htmlFor="q-answer">Gabarito *</Label>
-                <Input id="q-answer" value={form.correctAnswer} onChange={(e) => setForm((p) => ({ ...p, correctAnswer: e.target.value.toUpperCase() }))} maxLength={1} required />
+            <section className="space-y-3">
+              <Label>Gabarito, ano e dificuldade</Label>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="space-y-2">
+                  <Label htmlFor="q-answer">Gabarito *</Label>
+                  <Input id="q-answer" value={form.correctAnswer} onChange={(e) => setForm((p) => ({ ...p, correctAnswer: e.target.value.toUpperCase() }))} maxLength={1} required />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-year">Ano</Label>
+                  <Input id="q-year" type="number" value={form.year} onChange={(e) => setForm((p) => ({ ...p, year: e.target.value }))} min={1900} max={2100} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-difficulty">Dificuldade</Label>
+                  <Select value={form.difficulty || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, difficulty: v === "__none__" ? "" : v }))}>
+                    <SelectTrigger id="q-difficulty"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {DIFFICULTY_OPTIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
-              <div>
-                <Label htmlFor="q-year">Ano</Label>
-                <Input id="q-year" type="number" value={form.year} onChange={(e) => setForm((p) => ({ ...p, year: e.target.value }))} min={1900} max={2100} />
-              </div>
-              <div>
-                <Label>Dificuldade</Label>
-                <Select value={form.difficulty || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, difficulty: v === "__none__" ? "" : v }))}>
-                  <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="__none__">—</SelectItem>
-                    {DIFFICULTY_OPTIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
+            </section>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div>
-                <Label>Disciplina</Label>
-                <Select value={form.subjectId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, subjectId: v === "__none__" ? "" : v, topicId: "" }))}>
-                  <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="__none__">—</SelectItem>
-                    {subjects.map((s) => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}
-                  </SelectContent>
-                </Select>
+            <section className="space-y-3">
+              <Label>Taxonomia</Label>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="space-y-2 sm:col-span-2">
+                  <Label htmlFor="q-position">Cargo</Label>
+                  <Select value={form.positionId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, positionId: v === "__none__" ? "" : v }))}>
+                    <SelectTrigger id="q-position"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {formPositions.map((p) => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-subject">Disciplina</Label>
+                  <Select value={form.subjectId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, subjectId: v === "__none__" ? "" : v, topicId: "" }))}>
+                    <SelectTrigger id="q-subject"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {subjects.map((s) => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-topic">Assunto</Label>
+                  <Select value={form.topicId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, topicId: v === "__none__" ? "" : v }))}>
+                    <SelectTrigger id="q-topic"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {formTopics.map((t) => <SelectItem key={t.id} value={t.id}>{t.name}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-board">Banca</Label>
+                  <Select value={form.boardId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, boardId: v === "__none__" ? "" : v, examId: "" }))}>
+                    <SelectTrigger id="q-board"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {boards.map((b) => <SelectItem key={b.id} value={b.id}>{b.name}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-exam">Concurso</Label>
+                  <Select value={form.examId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, examId: v === "__none__" ? "" : v }))}>
+                    <SelectTrigger id="q-exam"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {formExams.map((e) => <SelectItem key={e.id} value={e.id}>{e.name}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
-              <div>
-                <Label>Assunto</Label>
-                <Select value={form.topicId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, topicId: v === "__none__" ? "" : v }))}>
-                  <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="__none__">—</SelectItem>
-                    {formTopics.map((t) => <SelectItem key={t.id} value={t.id}>{t.name}</SelectItem>)}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <Label>Banca</Label>
-                <Select value={form.boardId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, boardId: v === "__none__" ? "" : v, examId: "" }))}>
-                  <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="__none__">—</SelectItem>
-                    {boards.map((b) => <SelectItem key={b.id} value={b.id}>{b.name}</SelectItem>)}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div>
-                <Label>Concurso</Label>
-                <Select value={form.examId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, examId: v === "__none__" ? "" : v }))}>
-                  <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="__none__">—</SelectItem>
-                    {formExams.map((e) => <SelectItem key={e.id} value={e.id}>{e.name}</SelectItem>)}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="sm:col-span-2">
-                <Label>Cargo</Label>
-                <Select value={form.positionId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, positionId: v === "__none__" ? "" : v }))}>
-                  <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="__none__">—</SelectItem>
-                    {formPositions.map((p) => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
+            </section>
 
-            <div>
+            <section className="space-y-2">
               <Label htmlFor="q-explanation">Explicação</Label>
               <Textarea id="q-explanation" value={form.explanation} onChange={(e) => setForm((p) => ({ ...p, explanation: e.target.value }))} rows={3} />
-            </div>
+            </section>
 
-            <div className="space-y-3">
-              <div>
-                <Label htmlFor="q-legal">Referência legal</Label>
-                <Input id="q-legal" value={form.metadata.legal_reference} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, legal_reference: e.target.value } }))} />
+            <section className="space-y-4">
+              <Label>Metadados</Label>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="q-legal">Referência legal</Label>
+                  <Input id="q-legal" value={form.metadata.legal_reference} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, legal_reference: e.target.value } }))} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-biblio">Bibliografia</Label>
+                  <Textarea id="q-biblio" value={form.metadata.bibliography} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, bibliography: e.target.value } }))} rows={2} />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-image">URL da imagem</Label>
+                  <Input id="q-image" type="url" value={form.metadata.image_url} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, image_url: e.target.value } }))} placeholder="https://..." />
+                </div>
               </div>
-              <div>
-                <Label htmlFor="q-biblio">Bibliografia</Label>
-                <Textarea id="q-biblio" value={form.metadata.bibliography} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, bibliography: e.target.value } }))} rows={2} />
-              </div>
-              <div>
-                <Label htmlFor="q-image">URL da imagem</Label>
-                <Input id="q-image" type="url" value={form.metadata.image_url} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, image_url: e.target.value } }))} placeholder="https://..." />
-              </div>
-            </div>
+            </section>
 
             <DialogFooter>
               <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>Cancelar</Button>

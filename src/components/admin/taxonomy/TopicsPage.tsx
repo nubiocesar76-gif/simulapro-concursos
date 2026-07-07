@@ -53,6 +53,7 @@ import {
   type DeleteDep,
   hasDeleteDeps,
 } from "./shared";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
 
 type Topic = Tables<"topics"> & { subjects: { name: string } | null };
 
@@ -191,19 +192,20 @@ export function TopicsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Assuntos</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Assuntos</h1>
           <p className="text-sm text-muted-foreground">Assuntos vinculados a disciplinas.</p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Novo assunto
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Novo assunto
         </Button>
       </div>
 
       <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome..." />
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
@@ -214,25 +216,33 @@ export function TopicsPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {isLoading ? (
-              <TableRow><TableCell colSpan={4} className="py-8 text-center text-muted-foreground">Carregando...</TableCell></TableRow>
-            ) : isError ? (
-              <TableRow><TableCell colSpan={4} className="py-8 text-center text-destructive">{formatTaxonomyError((error as Error).message, "assunto")}</TableCell></TableRow>
-            ) : rows.length === 0 ? (
-              <TableRow><TableCell colSpan={4} className="py-8 text-center text-muted-foreground">{debouncedSearch ? "Nenhum assunto encontrado." : "Nenhum assunto cadastrado."}</TableCell></TableRow>
-            ) : (
-              rows.map((row) => (
+            <AdminTableBody
+              colSpan={4}
+              isLoading={isLoading}
+              isError={isError}
+              error={error as Error}
+              isEmpty={rows.length === 0}
+              emptyMessage="Nenhum assunto cadastrado."
+              filteredEmptyMessage="Nenhum assunto encontrado."
+              hasActiveFilters={!!debouncedSearch}
+              formatError={(message) => formatTaxonomyError(message, "assunto")}
+            >
+              {rows.map((row) => (
                 <TableRow key={row.id}>
                   <TableCell className="font-medium">{row.name}</TableCell>
                   <TableCell>{row.subjects?.name ?? "—"}</TableCell>
                   <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
                   <TableCell className="text-right">
-                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}><Pencil className="h-4 w-4" /></Button>
-                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}><Trash2 className="h-4 w-4" /></Button>
+                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
+                    </Button>
+                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}>
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
+                    </Button>
                   </TableCell>
                 </TableRow>
-              ))
-            )}
+              ))}
+            </AdminTableBody>
           </TableBody>
         </Table>
       </div>

@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Plus, Pencil, Trash2, Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { Plus, Pencil, Trash2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import type { Tables } from "@/integrations/supabase/types";
 import { logEvent } from "@/lib/log";
@@ -36,85 +36,45 @@ import {
 } from "@/components/ui/alert-dialog";
 import { toast } from "sonner";
 import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
-import { slugFromTaxonomyName } from "@/components/admin/taxonomy/shared";
+import {
+  TAXONOMY_PAGE_SIZE,
+  formatTaxonomyError,
+  formatDate,
+  validateName,
+  validateDescription,
+  slugFromTaxonomyName,
+  useDebouncedSearch,
+  TaxonomySearch,
+  TaxonomyPagination,
+  type DeleteDep,
+  hasDeleteDeps,
+} from "@/components/admin/taxonomy/shared";
 
 type Course = Tables<"courses">;
 
-const PAGE_SIZE = 10;
-
-function formatError(message: string) {
-  if (message.includes("row-level security")) {
-    return "Sem permissão para esta operação. Verifique se seu usuário possui role admin.";
-  }
-  if (message.includes("duplicate key") || message.includes("unique")) {
-    return "Já existe um curso com este nome.";
-  }
-  return message;
-}
-
-function validateCourse(name: string, description: string) {
-  const trimmedName = name.trim();
-  const trimmedDesc = description.trim();
-
-  if (!trimmedName) throw new Error("Nome é obrigatório.");
-  if (trimmedName.length < 2) throw new Error("Nome deve ter pelo menos 2 caracteres.");
-  if (trimmedName.length > 200) throw new Error("Nome deve ter no máximo 200 caracteres.");
-  if (trimmedDesc.length > 2000) throw new Error("Descrição deve ter no máximo 2000 caracteres.");
-
-  return {
-    name: trimmedName,
-    description: trimmedDesc || null,
-    slug: slugFromTaxonomyName(trimmedName, "curso"),
-  };
-}
-
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("pt-BR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  });
-}
-
-type CourseDeps = { positions: number; subscriptions: number; packages: number };
-
-async function fetchCourseDeps(courseId: string): Promise<CourseDeps> {
+async function fetchCourseDeps(courseId: string): Promise<DeleteDep[]> {
   const [positions, subscriptions, packages] = await Promise.all([
     supabase.from("positions").select("*", { count: "exact", head: true }).eq("course_id", courseId),
     supabase.from("subscriptions").select("*", { count: "exact", head: true }).eq("course_id", courseId),
     supabase.from("packages").select("*", { count: "exact", head: true }).eq("course_id", courseId),
   ]);
 
-  return {
-    positions: positions.count ?? 0,
-    subscriptions: subscriptions.count ?? 0,
-    packages: packages.count ?? 0,
-  };
-}
-
-function hasCourseDeps(deps: CourseDeps) {
-  return deps.positions > 0 || deps.subscriptions > 0 || deps.packages > 0;
+  return [
+    { label: "cargo(s) vinculado(s)", count: positions.count ?? 0 },
+    { label: "assinatura(s) vinculada(s)", count: subscriptions.count ?? 0 },
+    { label: "pacote(s) vinculado(s)", count: packages.count ?? 0 },
+  ];
 }
 
 export function CoursesPage() {
   const qc = useQueryClient();
-  const [search, setSearch] = useState("");
-  const [debouncedSearch, setDebouncedSearch] = useState("");
-  const [page, setPage] = useState(0);
+  const { search, setSearch, debouncedSearch, page, setPage } = useDebouncedSearch();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editing, setEditing] = useState<Course | null>(null);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [deleteTarget, setDeleteTarget] = useState<Course | null>(null);
-  const [deleteDeps, setDeleteDeps] = useState<CourseDeps | null>(null);
-
-  useEffect(() => {
-    const t = setTimeout(() => {
-      setDebouncedSearch(search.trim());
-      setPage(0);
-    }, 300);
-    return () => clearTimeout(t);
-  }, [search]);
+  const [deleteDeps, setDeleteDeps] = useState<DeleteDep[] | null>(null);
 
   useEffect(() => {
     if (!dialogOpen) return;
@@ -130,8 +90,8 @@ export function CoursesPage() {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["courses", debouncedSearch, page],
     queryFn: async () => {
-      const from = page * PAGE_SIZE;
-      const to = from + PAGE_SIZE - 1;
+      const from = page * TAXONOMY_PAGE_SIZE;
+      const to = from + TAXONOMY_PAGE_SIZE - 1;
 
       let q = supabase
         .from("courses")
@@ -152,11 +112,15 @@ export function CoursesPage() {
 
   const courses = data?.rows ?? [];
   const total = data?.total ?? 0;
-  const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
 
   const save = useMutation({
     mutationFn: async () => {
-      const payload = validateCourse(name, description);
+      const validatedName = validateName(name);
+      const payload = {
+        name: validatedName,
+        description: validateDescription(description),
+        slug: slugFromTaxonomyName(validatedName, "curso"),
+      };
 
       const dupQuery = supabase
         .from("courses")
@@ -194,13 +158,13 @@ export function CoursesPage() {
       setDialogOpen(false);
       setEditing(null);
     },
-    onError: (e: Error) => toast.error(formatError(e.message)),
+    onError: (e: Error) => toast.error(formatTaxonomyError(e.message, "curso")),
   });
 
   const remove = useMutation({
     mutationFn: async (course: Course) => {
       const deps = await fetchCourseDeps(course.id);
-      if (hasCourseDeps(deps)) {
+      if (hasDeleteDeps(deps)) {
         throw new Error(
           "Não é possível excluir: remova cargos, assinaturas e pacotes vinculados primeiro.",
         );
@@ -217,7 +181,7 @@ export function CoursesPage() {
       setDeleteDeps(null);
       if (page > 0 && courses.length === 1) setPage((p) => p - 1);
     },
-    onError: (e: Error) => toast.error(formatError(e.message)),
+    onError: (e: Error) => toast.error(formatTaxonomyError(e.message, "curso")),
   });
 
   async function openDeleteDialog(course: Course) {
@@ -225,46 +189,32 @@ export function CoursesPage() {
     setDeleteTarget(course);
   }
 
-  const deleteBlocked = deleteDeps ? hasCourseDeps(deleteDeps) : false;
-
-  const pageLabel = useMemo(() => {
-    if (total === 0) return "Nenhum registro";
-    const from = page * PAGE_SIZE + 1;
-    const to = Math.min((page + 1) * PAGE_SIZE, total);
-    return `${from}–${to} de ${total}`;
-  }, [page, total]);
+  const deleteBlocked = deleteDeps ? hasDeleteDeps(deleteDeps) : false;
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Cursos</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Cursos</h1>
           <p className="text-sm text-muted-foreground">
             Cadastro de cursos oferecidos. Cursos vinculam cargos, pacotes e assinaturas.
           </p>
         </div>
         <Button
+          className="shrink-0"
           onClick={() => {
             setEditing(null);
             setDialogOpen(true);
           }}
         >
-          <Plus className="h-4 w-4 mr-2" />
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
           Novo curso
         </Button>
       </div>
 
-      <div className="relative max-w-sm">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <Input
-          className="pl-9"
-          placeholder="Buscar por nome ou descrição..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-      </div>
+      <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou descrição..." />
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
@@ -284,7 +234,7 @@ export function CoursesPage() {
               emptyMessage="Nenhum curso cadastrado."
               filteredEmptyMessage="Nenhum curso encontrado."
               hasActiveFilters={!!debouncedSearch}
-              formatError={formatError}
+              formatError={(message) => formatTaxonomyError(message, "curso")}
             >
               {courses.map((course) => (
                 <TableRow key={course.id}>
@@ -305,7 +255,7 @@ export function CoursesPage() {
                         setDialogOpen(true);
                       }}
                     >
-                      <Pencil className="h-4 w-4" />
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
                     </Button>
                     <Button
                       size="icon"
@@ -313,7 +263,7 @@ export function CoursesPage() {
                       aria-label={`Excluir ${course.name}`}
                       onClick={() => openDeleteDialog(course)}
                     >
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
                     </Button>
                   </TableCell>
                 </TableRow>
@@ -323,32 +273,7 @@ export function CoursesPage() {
         </Table>
       </div>
 
-      {total > 0 && (
-        <div className="flex items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">{pageLabel}</p>
-          <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={page === 0}
-              onClick={() => setPage((p) => p - 1)}
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </Button>
-            <span className="text-sm text-muted-foreground">
-              Página {page + 1} de {totalPages}
-            </span>
-            <Button
-              variant="outline"
-              size="sm"
-              disabled={page >= totalPages - 1}
-              onClick={() => setPage((p) => p + 1)}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      )}
+      <TaxonomyPagination page={page} total={total} onPageChange={setPage} />
 
       <Dialog
         open={dialogOpen}
@@ -429,19 +354,11 @@ export function CoursesPage() {
                       O curso <strong>{deleteTarget?.name}</strong> possui vínculos e não pode ser
                       excluído. Remova-os antes em Cargos, Assinaturas e Pacotes.
                     </p>
-                    {deleteDeps && (
-                      <ul className="list-disc pl-5 space-y-1">
-                        {deleteDeps.positions > 0 && (
-                          <li>{deleteDeps.positions} cargo(s) vinculado(s).</li>
-                        )}
-                        {deleteDeps.subscriptions > 0 && (
-                          <li>{deleteDeps.subscriptions} assinatura(s) vinculada(s).</li>
-                        )}
-                        {deleteDeps.packages > 0 && (
-                          <li>{deleteDeps.packages} pacote(s) vinculado(s).</li>
-                        )}
-                      </ul>
-                    )}
+                    <ul className="list-disc pl-5">
+                      {deleteDeps?.filter((d) => d.count > 0).map((d) => (
+                        <li key={d.label}>{d.count} {d.label}.</li>
+                      ))}
+                    </ul>
                   </>
                 ) : (
                   <p>

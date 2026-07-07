@@ -1,6 +1,8 @@
 import { Star, Pin, XCircle, Loader2 } from "lucide-react";
 import type { StudyFilterIndicators } from "@/lib/student-dashboard";
 import type { FilterStudyMode } from "@/lib/study-session";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 type StudyFilterIndicatorsProps = {
   indicators: StudyFilterIndicators;
@@ -21,12 +23,7 @@ export function StudyFilterIndicatorsBar({
   }[] = [
     { label: "Favoritas", value: indicators.favoritesCount, icon: Star, mode: "FAVORITES" },
     { label: "Revisar depois", value: indicators.reviewLaterCount, icon: Pin, mode: "REVIEW" },
-    {
-      label: "Pendentes de revisão",
-      value: indicators.pendingReviewCount,
-      icon: XCircle,
-      mode: "WRONG_ONLY",
-    },
+    { label: "Pendentes", value: indicators.pendingReviewCount, icon: XCircle, mode: "WRONG_ONLY" },
   ];
 
   return (
@@ -34,43 +31,40 @@ export function StudyFilterIndicatorsBar({
       {items.map((item) => {
         const Icon = item.icon;
         const isLoading = loadingShortcut === item.mode;
-        const className =
-          "inline-flex items-center gap-2 rounded-lg border bg-card px-3 py-2 text-sm" +
-          (onShortcutClick
-            ? " cursor-pointer transition-colors hover:border-primary/40 hover:bg-primary/5"
-            : "");
-
-        const content = (
-          <>
-            {isLoading ? (
-              <Loader2 className="h-4 w-4 animate-spin text-primary" />
-            ) : (
-              <Icon className="h-4 w-4 text-primary" />
-            )}
-            <span className="text-muted-foreground">{item.label}</span>
-            <span className="font-semibold">{item.value}</span>
-          </>
-        );
+        const isDisabled = item.value === 0 || isLoading;
 
         if (onShortcutClick) {
           return (
-            <button
+            <Button
               key={item.mode}
               type="button"
-              className={className}
+              variant="outline"
+              className="h-9 gap-2"
               onClick={() => onShortcutClick(item.mode)}
-              disabled={isLoading}
+              disabled={isDisabled}
               aria-busy={isLoading}
             >
-              {content}
-            </button>
+              {isLoading ? (
+                <Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden="true" />
+              ) : (
+                <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
+              )}
+              <span>{item.label}</span>
+              <Badge variant="secondary" className="tabular-nums">
+                {item.value}
+              </Badge>
+            </Button>
           );
         }
 
         return (
-          <div key={item.mode} className={className}>
-            {content}
-          </div>
+          <Button key={item.mode} type="button" variant="outline" className="h-9 gap-2" disabled>
+            <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
+            <span>{item.label}</span>
+            <Badge variant="secondary" className="tabular-nums">
+              {item.value}
+            </Badge>
+          </Button>
         );
       })}
     </div>

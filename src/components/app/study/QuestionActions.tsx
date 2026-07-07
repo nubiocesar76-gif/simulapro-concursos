@@ -19,25 +19,31 @@ export function QuestionActions({
   onToggleReviewLater,
 }: QuestionActionsProps) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1">
       <Button
         type="button"
-        variant={favorite ? "default" : "outline"}
+        variant="ghost"
         size="sm"
+        className={`h-8 px-2 text-muted-foreground hover:text-foreground ${
+          favorite ? "text-primary hover:text-primary" : ""
+        }`}
         onClick={onToggleFavorite}
         disabled={disabled || isUpdating}
       >
-        <Star className={`h-4 w-4 mr-2 ${favorite ? "fill-current" : ""}`} />
+        <Star className={`h-4 w-4 mr-1.5 ${favorite ? "fill-current" : ""}`} />
         {isUpdating ? "Salvando..." : favorite ? "Remover favorito" : "Favoritar"}
       </Button>
       <Button
         type="button"
-        variant={reviewLater ? "secondary" : "outline"}
+        variant="ghost"
         size="sm"
+        className={`h-8 px-2 text-muted-foreground hover:text-foreground ${
+          reviewLater ? "text-primary hover:text-primary" : ""
+        }`}
         onClick={onToggleReviewLater}
         disabled={disabled || isUpdating}
       >
-        <Pin className={`h-4 w-4 mr-2 ${reviewLater ? "fill-current" : ""}`} />
+        <Pin className={`h-4 w-4 mr-1.5 ${reviewLater ? "fill-current" : ""}`} />
         {isUpdating ? "Salvando..." : reviewLater ? "Remover revisão" : "Revisar depois"}
       </Button>
     </div>

@@ -3,6 +3,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import {
   ChevronLeft,
+  ChevronRight,
   History,
   MoreHorizontal,
   PlayCircle,
@@ -59,6 +60,8 @@ import { PageErrorState } from "@/components/shared/PageErrorState";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
 
+const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
+
 const DEFAULT_STUDY_SETTINGS = {
   question_count: 10 as const,
   question_order: "random" as const,
@@ -71,12 +74,17 @@ function statusBadgeVariant(status: StudyHistoryRow["status"]) {
   return "outline" as const;
 }
 
+function formatResultCell(row: StudyHistoryRow): string {
+  if (row.totalAnswered <= 0) return "—";
+  return `${row.correctCount}/${row.totalAnswered} (${row.accuracyPercent}%)`;
+}
+
 function HistoryTableSkeleton() {
   return (
     <>
       {Array.from({ length: 5 }).map((_, index) => (
         <TableRow key={index}>
-          <TableCell colSpan={11}>
+          <TableCell colSpan={10}>
             <Skeleton className="h-5 w-full" />
           </TableCell>
         </TableRow>
@@ -186,49 +194,55 @@ export function StudyHistoryPage() {
     periodDays !== "all";
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className={pageShellClass}>
+      <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="flex items-center gap-2">
-            <History className="h-6 w-6 text-primary" />
-            <h1 className="text-2xl font-bold">Histórico de sessões</h1>
+            <History className="h-5 w-5 text-primary" aria-hidden="true" />
+            <h1 className="text-2xl font-bold tracking-tight">Histórico de sessões</h1>
           </div>
-          <p className="text-sm text-muted-foreground mt-1">
+          <p className="mt-1 text-sm text-muted-foreground">
             Consulte todas as suas sessões de estudo com filtros e paginação.
           </p>
         </div>
-        <Button variant="outline" asChild>
+        <Button variant="outline" asChild className="shrink-0">
           <Link to="/app">
-            <ChevronLeft className="h-4 w-4 mr-2" />
+            <ChevronLeft className="h-4 w-4 mr-2" aria-hidden="true" />
             Voltar ao Dashboard
           </Link>
         </Button>
-      </div>
+      </header>
 
       {isSummaryLoading ? (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[1, 2, 3, 4].map((item) => (
-            <Skeleton key={item} className="h-28 rounded-xl" />
-          ))}
-        </div>
+        <Skeleton className="h-11 w-full rounded-lg" />
       ) : summary ? (
         <HistorySummaryStats stats={summary} />
       ) : null}
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-base">Filtros</CardTitle>
-          <CardDescription>Refine por curso, distribuição, modo, período ou status.</CardDescription>
+          <CardTitle>Filtros e sessões</CardTitle>
+          <CardDescription>Refine a lista e encontre a sessão desejada.</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="relative max-w-md">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              className="pl-9"
-              placeholder="Pesquisar distribuição, curso ou pacote..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
+        <CardContent className="space-y-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div className="relative max-w-md flex-1">
+              <Search
+                className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+                aria-hidden="true"
+              />
+              <Input
+                className="pl-9"
+                placeholder="Pesquisar distribuição, curso ou pacote..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+            {hasActiveFilters && (
+              <Button variant="ghost" size="sm" className="shrink-0" onClick={resetFilters}>
+                Limpar filtros
+              </Button>
+            )}
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
@@ -297,20 +311,6 @@ export function StudyHistoryPage() {
             />
           </div>
 
-          {hasActiveFilters && (
-            <Button variant="ghost" size="sm" onClick={resetFilters}>
-              Limpar filtros
-            </Button>
-          )}
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Sessões</CardTitle>
-          <CardDescription>{pageLabel}</CardDescription>
-        </CardHeader>
-        <CardContent>
           {isError ? (
             <PageErrorState
               title="Erro ao carregar histórico"
@@ -318,116 +318,126 @@ export function StudyHistoryPage() {
               onRetry={() => refetch()}
             />
           ) : (
-            <div className="overflow-x-auto rounded-md border">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Data</TableHead>
-                    <TableHead>Curso</TableHead>
-                    <TableHead>Pacote</TableHead>
-                    <TableHead>Distribuição</TableHead>
-                    <TableHead>Modo</TableHead>
-                    <TableHead>Questões</TableHead>
-                    <TableHead>Acertos</TableHead>
-                    <TableHead>Aproveitamento</TableHead>
-                    <TableHead>Tempo</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead className="text-right">Ações</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {isLoading ? (
-                    <HistoryTableSkeleton />
-                  ) : !data?.rows.length ? (
+            <>
+              <div className="overflow-x-auto rounded-lg border">
+                <Table>
+                  <TableHeader>
                     <TableRow>
-                      <TableCell colSpan={11} className="py-10">
-                        <EmptyState
-                          title={hasActiveFilters ? "Nenhuma sessão encontrada" : "Nenhuma sessão registrada"}
-                          description={
-                            hasActiveFilters
-                              ? "Tente ajustar os filtros ou a pesquisa."
-                              : "Suas sessões aparecerão aqui após você começar a estudar."
-                          }
-                        />
-                      </TableCell>
+                      <TableHead className="sticky left-0 z-10 min-w-[7rem] bg-card">
+                        Data
+                      </TableHead>
+                      <TableHead className="min-w-[10rem]">Distribuição</TableHead>
+                      <TableHead className="min-w-[7rem]">Resultado</TableHead>
+                      <TableHead className="min-w-[6rem]">Status</TableHead>
+                      <TableHead className="sticky right-0 z-10 min-w-[4.5rem] bg-card text-right">
+                        Ação
+                      </TableHead>
+                      <TableHead className="min-w-[8rem]">Curso</TableHead>
+                      <TableHead className="min-w-[8rem]">Pacote</TableHead>
+                      <TableHead className="min-w-[6rem]">Modo</TableHead>
+                      <TableHead className="min-w-[5rem]">Questões</TableHead>
+                      <TableHead className="min-w-[5rem]">Tempo</TableHead>
                     </TableRow>
-                  ) : (
-                    data.rows.map((row) => (
-                      <TableRow key={row.id}>
-                        <TableCell className="whitespace-nowrap">
-                          {formatDashboardDate(row.date)}
-                        </TableCell>
-                        <TableCell>{row.courseName}</TableCell>
-                        <TableCell>{row.packageName}</TableCell>
-                        <TableCell>{row.distributionName}</TableCell>
-                        <TableCell>
-                          <Badge variant="outline">{STUDY_MODE_LABELS[row.mode]}</Badge>
-                        </TableCell>
-                        <TableCell>{row.totalQuestions || "—"}</TableCell>
-                        <TableCell>
-                          {row.totalAnswered > 0
-                            ? `${row.correctCount}/${row.totalAnswered}`
-                            : "—"}
-                        </TableCell>
-                        <TableCell>
-                          {row.totalAnswered > 0 ? `${row.accuracyPercent}%` : "—"}
-                        </TableCell>
-                        <TableCell>{formatStudyDuration(row.durationSeconds)}</TableCell>
-                        <TableCell>
-                          <Badge variant={statusBadgeVariant(row.status)}>
-                            {SESSION_STATUS_LABELS[row.status]}
-                          </Badge>
-                        </TableCell>
-                        <TableCell className="text-right">
-                          <RowActions
-                            row={row}
-                            isCreating={createSession.isPending}
-                            onRetryWrong={() =>
-                              createSession.mutate({
-                                distributionId: row.distributionId,
-                                mode: "WRONG_ONLY",
-                              })
+                  </TableHeader>
+                  <TableBody>
+                    {isLoading ? (
+                      <HistoryTableSkeleton />
+                    ) : !data?.rows.length ? (
+                      <TableRow>
+                        <TableCell colSpan={10} className="py-10">
+                          <EmptyState
+                            title={
+                              hasActiveFilters
+                                ? "Nenhuma sessão encontrada"
+                                : "Nenhuma sessão registrada"
                             }
-                            onNewSession={() =>
-                              createSession.mutate({
-                                distributionId: row.distributionId,
-                                mode: "STUDY",
-                              })
+                            description={
+                              hasActiveFilters
+                                ? "Tente ajustar os filtros ou a pesquisa."
+                                : "Suas sessões aparecerão aqui após você começar a estudar."
                             }
                           />
                         </TableCell>
                       </TableRow>
-                    ))
-                  )}
-                </TableBody>
-              </Table>
-            </div>
-          )}
-
-          {totalPages > 1 && !isLoading && !isError && (
-            <div className="flex items-center justify-between gap-2 mt-4 text-sm">
-              <p className="text-muted-foreground">{pageLabel}</p>
-              <div className="flex gap-2">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setPage((current) => Math.max(0, current - 1))}
-                  disabled={page <= 0}
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                  Anterior
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setPage((current) => Math.min(totalPages - 1, current + 1))}
-                  disabled={page >= totalPages - 1}
-                >
-                  Próxima
-                  <ChevronLeft className="h-4 w-4 rotate-180" />
-                </Button>
+                    ) : (
+                      data.rows.map((row) => (
+                        <TableRow key={row.id}>
+                          <TableCell className="sticky left-0 z-10 bg-card whitespace-nowrap tabular-nums">
+                            {formatDashboardDate(row.date)}
+                          </TableCell>
+                          <TableCell className="max-w-[14rem] truncate font-medium">
+                            {row.distributionName}
+                          </TableCell>
+                          <TableCell className="whitespace-nowrap tabular-nums">
+                            {formatResultCell(row)}
+                          </TableCell>
+                          <TableCell>
+                            <Badge variant={statusBadgeVariant(row.status)}>
+                              {SESSION_STATUS_LABELS[row.status]}
+                            </Badge>
+                          </TableCell>
+                          <TableCell className="sticky right-0 z-10 bg-card text-right">
+                            <RowActions
+                              row={row}
+                              isCreating={createSession.isPending}
+                              onRetryWrong={() =>
+                                createSession.mutate({
+                                  distributionId: row.distributionId,
+                                  mode: "WRONG_ONLY",
+                                })
+                              }
+                              onQuickStudy={() =>
+                                createSession.mutate({
+                                  distributionId: row.distributionId,
+                                  mode: "STUDY",
+                                })
+                              }
+                            />
+                          </TableCell>
+                          <TableCell className="max-w-[10rem] truncate">{row.courseName}</TableCell>
+                          <TableCell className="max-w-[10rem] truncate">{row.packageName}</TableCell>
+                          <TableCell>
+                            <Badge variant="outline">{STUDY_MODE_LABELS[row.mode]}</Badge>
+                          </TableCell>
+                          <TableCell className="tabular-nums">
+                            {row.totalQuestions || "—"}
+                          </TableCell>
+                          <TableCell className="whitespace-nowrap tabular-nums">
+                            {formatStudyDuration(row.durationSeconds)}
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    )}
+                  </TableBody>
+                </Table>
               </div>
-            </div>
+
+              <div className="flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-muted-foreground tabular-nums">{pageLabel}</p>
+                {totalPages > 1 && !isLoading && (
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setPage((current) => Math.max(0, current - 1))}
+                      disabled={page <= 0}
+                    >
+                      <ChevronLeft className="h-4 w-4" aria-hidden="true" />
+                      Anterior
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setPage((current) => Math.min(totalPages - 1, current + 1))}
+                      disabled={page >= totalPages - 1}
+                    >
+                      Próxima
+                      <ChevronRight className="h-4 w-4 ml-2" aria-hidden="true" />
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </>
           )}
         </CardContent>
       </Card>
@@ -466,17 +476,17 @@ type RowActionsProps = {
   row: StudyHistoryRow;
   isCreating: boolean;
   onRetryWrong: () => void;
-  onNewSession: () => void;
+  onQuickStudy: () => void;
 };
 
-function RowActions({ row, isCreating, onRetryWrong, onNewSession }: RowActionsProps) {
+function RowActions({ row, isCreating, onRetryWrong, onQuickStudy }: RowActionsProps) {
   const resultLabel = row.status === "IN_PROGRESS" ? "Continuar sessão" : "Ver resultado";
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" disabled={isCreating}>
-          <MoreHorizontal className="h-4 w-4" />
+          <MoreHorizontal className="h-4 w-4" aria-hidden="true" />
           <span className="sr-only">Ações da sessão</span>
         </Button>
       </DropdownMenuTrigger>
@@ -486,16 +496,13 @@ function RowActions({ row, isCreating, onRetryWrong, onNewSession }: RowActionsP
             {resultLabel}
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          disabled={row.wrongCount === 0 || isCreating}
-          onClick={onRetryWrong}
-        >
-          <RotateCcw className="h-4 w-4 mr-2" />
+        <DropdownMenuItem disabled={row.wrongCount === 0 || isCreating} onClick={onRetryWrong}>
+          <RotateCcw className="h-4 w-4 mr-2" aria-hidden="true" />
           Refazer apenas erradas
         </DropdownMenuItem>
-        <DropdownMenuItem disabled={isCreating} onClick={onNewSession}>
-          <PlayCircle className="h-4 w-4 mr-2" />
-          Nova sessão
+        <DropdownMenuItem disabled={isCreating} onClick={onQuickStudy}>
+          <PlayCircle className="h-4 w-4 mr-2" aria-hidden="true" />
+          Estudar novamente
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

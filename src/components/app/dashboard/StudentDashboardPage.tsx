@@ -39,6 +39,79 @@ const FILTER_SESSION_SETTINGS = {
   show_answers: "during" as const,
 };
 
+const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
+
+function DashboardLoadingSkeleton() {
+  return (
+    <div className={pageShellClass}>
+      <div className="space-y-2">
+        <Skeleton className="h-8 w-64" />
+        <Skeleton className="h-4 w-96 max-w-full" />
+      </div>
+
+      <section className="space-y-6" aria-hidden="true">
+        <div className="space-y-2">
+          <Skeleton className="h-6 w-48" />
+          <Skeleton className="h-4 w-72 max-w-full" />
+        </div>
+        <Skeleton className="h-36 rounded-lg" />
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Skeleton className="h-6 w-44" />
+            <Skeleton className="h-4 w-56" />
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {[1, 2, 3].map((item) => (
+              <Skeleton key={item} className="h-52 rounded-lg" />
+            ))}
+          </div>
+        </div>
+        <div className="space-y-4">
+          <div className="space-y-2">
+            <Skeleton className="h-6 w-40" />
+            <Skeleton className="h-4 w-52" />
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {[1, 2, 3].map((item) => (
+              <Skeleton key={item} className="h-9 w-36 rounded-lg" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-6" aria-hidden="true">
+        <div className="space-y-2">
+          <Skeleton className="h-6 w-52" />
+          <Skeleton className="h-4 w-72 max-w-full" />
+        </div>
+        <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[1, 2, 3, 4].map((item) => (
+            <Skeleton key={item} className="h-28 rounded-lg" />
+          ))}
+        </div>
+        <div className="rounded-lg border p-6 space-y-4">
+          <Skeleton className="h-6 w-40" />
+          <Skeleton className="h-4 w-56" />
+          <div className="space-y-2">
+            {[1, 2, 3, 4, 5].map((item) => (
+              <Skeleton key={item} className="h-12 w-full rounded-lg" />
+            ))}
+          </div>
+        </div>
+        <div className="rounded-lg border p-6 space-y-4">
+          <Skeleton className="h-6 w-52" />
+          <Skeleton className="h-4 w-64" />
+          <div className="space-y-2">
+            {[1, 2, 3].map((item) => (
+              <Skeleton key={item} className="h-12 w-full rounded-lg" />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 export function StudentDashboardPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -96,28 +169,14 @@ export function StudentDashboardPage() {
   });
 
   if (isLoading) {
-    return (
-      <div className="space-y-6">
-        <Skeleton className="h-8 w-64" />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[1, 2, 3, 4].map((item) => (
-            <Skeleton key={item} className="h-28 rounded-xl" />
-          ))}
-        </div>
-        <Skeleton className="h-40 rounded-xl" />
-        <div className="grid gap-4 md:grid-cols-2">
-          <Skeleton className="h-56 rounded-xl" />
-          <Skeleton className="h-56 rounded-xl" />
-        </div>
-      </div>
-    );
+    return <DashboardLoadingSkeleton />;
   }
 
   if (error || !data) {
     return (
-      <div className="space-y-6">
+      <div className={pageShellClass}>
         <div>
-          <h1 className="text-2xl font-bold">Dashboard</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
         </div>
         <PageErrorState
           message="Não foi possível carregar seu painel. Tente novamente em instantes."
@@ -128,48 +187,76 @@ export function StudentDashboardPage() {
   }
 
   return (
-    <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Olá, {profile?.full_name ?? "estudante"}</h1>
+    <div className={pageShellClass}>
+      <header>
+        <h1 className="text-2xl font-bold tracking-tight">
+          Olá, {profile?.full_name ?? "estudante"}
+        </h1>
         <p className="text-sm text-muted-foreground">
           Seu resumo de estudos e ponto de entrada para continuar aprendendo.
         </p>
-      </div>
+      </header>
 
-      <DashboardStats stats={data.stats} />
-
-      <StudyFilterIndicatorsBar
-        indicators={data.filterIndicators}
-        onShortcutClick={(mode) => startFilterSession.mutate(mode)}
-        loadingShortcut={startFilterSession.isPending ? startFilterSession.variables : null}
-      />
-
-      {data.continueStudy && <ContinueStudyCard session={data.continueStudy} />}
-
-      <section className="space-y-4">
+      <section className="space-y-6" aria-label="O que fazer agora">
         <div>
-          <h2 className="text-lg font-semibold">Minhas distribuições</h2>
+          <h2 className="text-lg font-semibold">O que fazer agora</h2>
           <p className="text-sm text-muted-foreground">
-            Conteúdos liberados pela sua assinatura.
+            Retome uma sessão, escolha uma distribuição ou use um atalho filtrado.
           </p>
         </div>
-        {data.distributions.length === 0 ? (
-          <EmptyState
-            title="Nenhuma distribuição liberada"
-            description="Fale com o administrador para ativar sua assinatura."
-          />
-        ) : (
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {data.distributions.map((distribution) => (
-              <DistributionCard key={distribution.distribution_id} distribution={distribution} />
-            ))}
+
+        {data.continueStudy && <ContinueStudyCard session={data.continueStudy} />}
+
+        <div className="space-y-4">
+          <div>
+            <h2 className="text-lg font-semibold">Minhas distribuições</h2>
+            <p className="text-sm text-muted-foreground">
+              Conteúdos liberados pela sua assinatura.
+            </p>
           </div>
-        )}
+          {data.distributions.length === 0 ? (
+            <EmptyState
+              title="Nenhuma distribuição liberada"
+              description="Fale com o administrador para ativar sua assinatura."
+            />
+          ) : (
+            <div className="grid items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {data.distributions.map((distribution) => (
+                <DistributionCard key={distribution.distribution_id} distribution={distribution} />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="space-y-4">
+          <div>
+            <h2 className="text-lg font-semibold">Atalhos de estudo</h2>
+            <p className="text-sm text-muted-foreground">
+              Inicie uma sessão filtrada com um clique.
+            </p>
+          </div>
+          <StudyFilterIndicatorsBar
+            indicators={data.filterIndicators}
+            onShortcutClick={(mode) => startFilterSession.mutate(mode)}
+            loadingShortcut={startFilterSession.isPending ? startFilterSession.variables : null}
+          />
+        </div>
       </section>
 
-      <RecentSessions sessions={data.recentSessions} />
+      <section className="space-y-6" aria-label="Como você está indo">
+        <div>
+          <h2 className="text-lg font-semibold">Como você está indo</h2>
+          <p className="text-sm text-muted-foreground">
+            Resumo do seu progresso e desempenho por disciplina.
+          </p>
+        </div>
 
-      <SubjectPerformanceTable subjects={data.subjectPerformance} />
+        <DashboardStats stats={data.stats} />
+
+        <RecentSessions sessions={data.recentSessions} />
+
+        <SubjectPerformanceTable subjects={data.subjectPerformance} />
+      </section>
     </div>
   );
 }

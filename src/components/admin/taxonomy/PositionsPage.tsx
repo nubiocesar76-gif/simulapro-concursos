@@ -55,6 +55,7 @@ import {
   type DeleteDep,
   hasDeleteDeps,
 } from "./shared";
+import { AdminTableBody } from "@/components/admin/shared/AdminTableBody";
 
 type Position = Tables<"positions"> & { courses: { name: string } | null };
 
@@ -200,19 +201,20 @@ export function PositionsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold">Cargos</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Cargos</h1>
           <p className="text-sm text-muted-foreground">Cargos vinculados a cursos.</p>
         </div>
-        <Button onClick={() => { setEditing(null); setDialogOpen(true); }}>
-          <Plus className="h-4 w-4 mr-2" /> Novo cargo
+        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+          <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
+          Novo cargo
         </Button>
       </div>
 
       <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou descrição..." />
 
-      <div className="rounded-lg border bg-card">
+      <div className="overflow-x-auto rounded-lg border bg-card">
         <Table>
           <TableHeader>
             <TableRow>
@@ -224,14 +226,18 @@ export function PositionsPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {isLoading ? (
-              <TableRow><TableCell colSpan={5} className="py-8 text-center text-muted-foreground">Carregando...</TableCell></TableRow>
-            ) : isError ? (
-              <TableRow><TableCell colSpan={5} className="py-8 text-center text-destructive">{formatTaxonomyError((error as Error).message, "cargo")}</TableCell></TableRow>
-            ) : rows.length === 0 ? (
-              <TableRow><TableCell colSpan={5} className="py-8 text-center text-muted-foreground">{debouncedSearch ? "Nenhum cargo encontrado." : "Nenhum cargo cadastrado."}</TableCell></TableRow>
-            ) : (
-              rows.map((row) => (
+            <AdminTableBody
+              colSpan={5}
+              isLoading={isLoading}
+              isError={isError}
+              error={error as Error}
+              isEmpty={rows.length === 0}
+              emptyMessage="Nenhum cargo cadastrado."
+              filteredEmptyMessage="Nenhum cargo encontrado."
+              hasActiveFilters={!!debouncedSearch}
+              formatError={(message) => formatTaxonomyError(message, "cargo")}
+            >
+              {rows.map((row) => (
                 <TableRow key={row.id}>
                   <TableCell className="font-medium">{row.name}</TableCell>
                   <TableCell>{row.courses?.name ?? "—"}</TableCell>
@@ -239,15 +245,15 @@ export function PositionsPage() {
                   <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
                   <TableCell className="text-right">
                     <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
-                      <Pencil className="h-4 w-4" />
+                      <Pencil className="h-4 w-4" aria-hidden="true" />
                     </Button>
                     <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}>
-                      <Trash2 className="h-4 w-4" />
+                      <Trash2 className="h-4 w-4" aria-hidden="true" />
                     </Button>
                   </TableCell>
                 </TableRow>
-              ))
-            )}
+              ))}
+            </AdminTableBody>
           </TableBody>
         </Table>
       </div>

@@ -112,7 +112,7 @@ export function AppShell({ brand, requireRole, groups }: Props) {
             <SidebarTrigger />
             <div className="text-sm font-medium text-muted-foreground">{brand}</div>
           </header>
-          <main className="flex-1 p-6 bg-background">
+          <main className="flex-1 bg-background p-6 xl:p-8">
             <Outlet />
           </main>
         </div>
