@@ -16,6 +16,8 @@ import { Route as AuthenticatedAppRouteRouteImport } from './routes/_authenticat
 import { Route as AuthenticatedAdminRouteRouteImport } from './routes/_authenticated/admin/route'
 import { Route as AuthenticatedAppIndexRouteImport } from './routes/_authenticated/app/index'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin/index'
+import { Route as ApiWebhooksAsaasRouteImport } from './routes/api/webhooks/asaas'
+import { Route as AuthenticatedAppSubscriptionRouteImport } from './routes/_authenticated/app/subscription'
 import { Route as AuthenticatedAppStudyRouteImport } from './routes/_authenticated/app/study'
 import { Route as AuthenticatedAppHistoryRouteImport } from './routes/_authenticated/app/history'
 import { Route as AuthenticatedAdminVersionsRouteImport } from './routes/_authenticated/admin/versions'
@@ -69,6 +71,17 @@ const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AuthenticatedAdminRouteRoute,
 } as any)
+const ApiWebhooksAsaasRoute = ApiWebhooksAsaasRouteImport.update({
+  id: '/api/webhooks/asaas',
+  path: '/api/webhooks/asaas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedAppSubscriptionRoute =
+  AuthenticatedAppSubscriptionRouteImport.update({
+    id: '/subscription',
+    path: '/subscription',
+    getParentRoute: () => AuthenticatedAppRouteRoute,
+  } as any)
 const AuthenticatedAppStudyRoute = AuthenticatedAppStudyRouteImport.update({
   id: '/study',
   path: '/study',
@@ -195,6 +208,8 @@ export interface FileRoutesByFullPath {
   '/admin/versions': typeof AuthenticatedAdminVersionsRoute
   '/app/history': typeof AuthenticatedAppHistoryRoute
   '/app/study': typeof AuthenticatedAppStudyRouteWithChildren
+  '/app/subscription': typeof AuthenticatedAppSubscriptionRoute
+  '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/app/': typeof AuthenticatedAppIndexRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
@@ -218,6 +233,8 @@ export interface FileRoutesByTo {
   '/admin/users': typeof AuthenticatedAdminUsersRoute
   '/admin/versions': typeof AuthenticatedAdminVersionsRoute
   '/app/history': typeof AuthenticatedAppHistoryRoute
+  '/app/subscription': typeof AuthenticatedAppSubscriptionRoute
+  '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/app': typeof AuthenticatedAppIndexRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
@@ -246,6 +263,8 @@ export interface FileRoutesById {
   '/_authenticated/admin/versions': typeof AuthenticatedAdminVersionsRoute
   '/_authenticated/app/history': typeof AuthenticatedAppHistoryRoute
   '/_authenticated/app/study': typeof AuthenticatedAppStudyRouteWithChildren
+  '/_authenticated/app/subscription': typeof AuthenticatedAppSubscriptionRoute
+  '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/app/': typeof AuthenticatedAppIndexRoute
   '/_authenticated/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
@@ -274,6 +293,8 @@ export interface FileRouteTypes {
     | '/admin/versions'
     | '/app/history'
     | '/app/study'
+    | '/app/subscription'
+    | '/api/webhooks/asaas'
     | '/admin/'
     | '/app/'
     | '/app/study/$sessionId'
@@ -297,6 +318,8 @@ export interface FileRouteTypes {
     | '/admin/users'
     | '/admin/versions'
     | '/app/history'
+    | '/app/subscription'
+    | '/api/webhooks/asaas'
     | '/admin'
     | '/app'
     | '/app/study/$sessionId'
@@ -324,6 +347,8 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/versions'
     | '/_authenticated/app/history'
     | '/_authenticated/app/study'
+    | '/_authenticated/app/subscription'
+    | '/api/webhooks/asaas'
     | '/_authenticated/admin/'
     | '/_authenticated/app/'
     | '/_authenticated/app/study/$sessionId'
@@ -334,6 +359,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
+  ApiWebhooksAsaasRoute: typeof ApiWebhooksAsaasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -386,6 +412,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/admin/'
       preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
       parentRoute: typeof AuthenticatedAdminRouteRoute
+    }
+    '/api/webhooks/asaas': {
+      id: '/api/webhooks/asaas'
+      path: '/api/webhooks/asaas'
+      fullPath: '/api/webhooks/asaas'
+      preLoaderRoute: typeof ApiWebhooksAsaasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/app/subscription': {
+      id: '/_authenticated/app/subscription'
+      path: '/subscription'
+      fullPath: '/app/subscription'
+      preLoaderRoute: typeof AuthenticatedAppSubscriptionRouteImport
+      parentRoute: typeof AuthenticatedAppRouteRoute
     }
     '/_authenticated/app/study': {
       id: '/_authenticated/app/study'
@@ -576,12 +616,14 @@ const AuthenticatedAppStudyRouteWithChildren =
 interface AuthenticatedAppRouteRouteChildren {
   AuthenticatedAppHistoryRoute: typeof AuthenticatedAppHistoryRoute
   AuthenticatedAppStudyRoute: typeof AuthenticatedAppStudyRouteWithChildren
+  AuthenticatedAppSubscriptionRoute: typeof AuthenticatedAppSubscriptionRoute
   AuthenticatedAppIndexRoute: typeof AuthenticatedAppIndexRoute
 }
 
 const AuthenticatedAppRouteRouteChildren: AuthenticatedAppRouteRouteChildren = {
   AuthenticatedAppHistoryRoute: AuthenticatedAppHistoryRoute,
   AuthenticatedAppStudyRoute: AuthenticatedAppStudyRouteWithChildren,
+  AuthenticatedAppSubscriptionRoute: AuthenticatedAppSubscriptionRoute,
   AuthenticatedAppIndexRoute: AuthenticatedAppIndexRoute,
 }
 
@@ -607,6 +649,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
+  ApiWebhooksAsaasRoute: ApiWebhooksAsaasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
