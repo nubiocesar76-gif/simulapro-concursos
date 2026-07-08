@@ -21,6 +21,38 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [Sprint 11.2] — 2026-07-08
+
+### Marco
+
+- **Arquitetura Editorial V1.1 homologada** — Curso de Enfermagem, cargo Enfermeiro. Arquitetura congelada.
+
+### Plataforma — Editorial Engine / Acervo
+
+- Migrations aplicadas no Supabase Produção (`ddgpkijytvagmabtttor`): Editorial Engine V2 Lite (Sprint 11.0) e Importador (Sprint 11.1)
+- `exam_catalog` e `exam_files` disponíveis e operantes
+- Acervo (`/admin/acervo`) funcionando novamente
+- Catálogo oficial importado: **67 provas** em `exam_catalog`
+- Correção de dados na taxonomia: banca **IDIB** cadastrada; nomes de banca corrigidos no catálogo (**Instituto Consulplan**, **UFPR / NC**)
+- Pipeline **CSV/XLSX → questions.json → Seed → Banco** validado, usando a infraestrutura já existente
+- Pipeline **PDF → raw.md → questions.raw.json** permanece não implementado — decisão mantida para fase posterior
+
+### Decisão de arquitetura
+
+- **Arquitetura congelada.** Próximos agentes devem trabalhar sobre a infraestrutura existente, sem alterar arquitetura e sem gravar diretamente no banco.
+
+### Próxima fase
+
+1. Primeira prova real
+2. `questions.json`
+3. Seed
+4. Primeiro pacote comercial
+5. Teste ponta a ponta
+6. Beta
+7. Lançamento
+
+---
+
 ## [RC2] — 2026-07-07
 
 ### Marco

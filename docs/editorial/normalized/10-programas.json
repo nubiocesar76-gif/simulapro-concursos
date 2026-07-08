@@ -1,0 +1,20 @@
+[
+{"programa":"Programa Nacional de Imunizações (PNI)","orgao":"Ministério da Saúde","categoria":"IMUNIZACAO","assuntos_relacionados":["D11-A01"]},
+{"programa":"Estratégia Saúde da Família (ESF)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A01"]},
+{"programa":"Rede Cegonha","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A03","D19-A01"]},
+{"programa":"Rede de Atenção Psicossocial (RAPS)","orgao":"Ministério da Saúde","categoria":"SAUDE_MENTAL","assuntos_relacionados":["D14-A03","D22-A02"]},
+{"programa":"Programa Saúde na Escola (PSE)","orgao":"Ministério da Saúde / Educação","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A01","D18-A05"]},
+{"programa":"Política Nacional de Humanização / HumanizaSUS (PNH)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A02"]},
+{"programa":"Programa Previne Brasil","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A01"]},
+{"programa":"Programa Nacional de Melhoria do Acesso e da Qualidade (PMAQ)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A02"]},
+{"programa":"Programa Nacional de Segurança do Paciente (PNSP)","orgao":"Ministério da Saúde/ANVISA","categoria":"SEGURANCA_PACIENTE","assuntos_relacionados":["D23-A01"]},
+{"programa":"Política Nacional de Práticas Integrativas e Complementares (PNPIC)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A04"]},
+{"programa":"Política Nacional de Atenção Integral à Saúde do Homem (PNAISH)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A04"]},
+{"programa":"Programa de Volta para Casa","orgao":"Ministério da Saúde","categoria":"SAUDE_MENTAL","assuntos_relacionados":["D22-A02"]},
+{"programa":"Política Nacional de Alimentação e Nutrição (PNAN)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A04"]},
+{"programa":"Política Nacional de Promoção da Saúde (PNPS)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A04"]},
+{"programa":"Política Nacional de Atenção Integral à Saúde da Criança (PNAISC)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D18-A01","D18-A02"]},
+{"programa":"Política Nacional da Pessoa Idosa","orgao":"Ministério da Saúde/Governo Federal","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D21-A04"]},
+{"programa":"Rede de Atenção às Urgências e Emergências (RUE)","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A03","D26-A01"]},
+{"programa":"Rede de Cuidados à Pessoa com Deficiência","orgao":"Ministério da Saúde","categoria":"POLITICA_PUBLICA","assuntos_relacionados":["D14-A03"]}
+]

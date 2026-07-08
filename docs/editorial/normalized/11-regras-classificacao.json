@@ -1,0 +1,795 @@
+[
+  {
+    "id": "R001",
+    "se_encontrar": [
+      "PA",
+      "FC",
+      "FR",
+      "Temperatura",
+      "SpO2"
+    ],
+    "disciplina_id": "D10",
+    "disciplina": "Fundamentos de Enfermagem",
+    "assunto_id": "D10-A02",
+    "subassunto_id": "D10-A02-S02",
+    "confianca_percentual": 98
+  },
+  {
+    "id": "R002",
+    "se_encontrar": [
+      "punção venosa",
+      "técnica asséptica",
+      "calibre do cateter"
+    ],
+    "disciplina_id": "D10",
+    "disciplina": "Fundamentos de Enfermagem",
+    "assunto_id": "D10-A06",
+    "subassunto_id": "D10-A06-S01",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R003",
+    "se_encontrar": [
+      "curativo",
+      "cobertura",
+      "hidrocolóide",
+      "alginato"
+    ],
+    "disciplina_id": "D10",
+    "disciplina": "Fundamentos de Enfermagem",
+    "assunto_id": "D10-A04",
+    "subassunto_id": "D10-A04-S01",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R004",
+    "se_encontrar": [
+      "9 certos",
+      "via de administração",
+      "cálculo de gotejamento"
+    ],
+    "disciplina_id": "D10",
+    "disciplina": "Fundamentos de Enfermagem",
+    "assunto_id": "D10-A05",
+    "subassunto_id": "D10-A05-S02",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R005",
+    "se_encontrar": [
+      "EPI",
+      "precaução de contato",
+      "precaução de gotículas",
+      "precaução de aerossóis",
+      "proteção do profissional"
+    ],
+    "disciplina_id": "D03",
+    "disciplina": "Biossegurança",
+    "assunto_id": "D03-A01",
+    "subassunto_id": "D03-A01-S02",
+    "confianca_percentual": 92
+  },
+  {
+    "id": "R006",
+    "se_encontrar": [
+      "resíduo de serviço de saúde",
+      "PGRSS",
+      "grupo A",
+      "grupo B",
+      "grupo C",
+      "grupo D",
+      "grupo E"
+    ],
+    "disciplina_id": "D03",
+    "disciplina": "Biossegurança",
+    "assunto_id": "D03-A02",
+    "subassunto_id": "D03-A02-S01",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R007",
+    "se_encontrar": [
+      "acidente perfurocortante",
+      "profilaxia pós-exposição",
+      "CAT"
+    ],
+    "disciplina_id": "D03",
+    "disciplina": "Biossegurança",
+    "assunto_id": "D03-A03",
+    "subassunto_id": "D03-A03-S01",
+    "confianca_percentual": 94
+  },
+  {
+    "id": "R008",
+    "se_encontrar": [
+      "meta internacional",
+      "núcleo de segurança do paciente",
+      "PNSP",
+      "evento adverso",
+      "near miss"
+    ],
+    "disciplina_id": "D23",
+    "disciplina": "Segurança do Paciente",
+    "assunto_id": "D23-A01",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R009",
+    "se_encontrar": [
+      "checklist de cirurgia segura",
+      "tempo cirúrgico com verificação"
+    ],
+    "disciplina_id": "D23",
+    "disciplina": "Segurança do Paciente",
+    "assunto_id": "D23-A03",
+    "subassunto_id": "D23-A03-S01",
+    "confianca_percentual": 90
+  },
+  {
+    "id": "R010",
+    "se_encontrar": [
+      "Lei 7.498",
+      "Decreto 94.406",
+      "ato privativo do enfermeiro"
+    ],
+    "disciplina_id": "D08",
+    "disciplina": "Ética e Legislação em Enfermagem",
+    "assunto_id": "D08-A01",
+    "confianca_percentual": 98
+  },
+  {
+    "id": "R011",
+    "se_encontrar": [
+      "Código de Ética",
+      "Resolução COFEN 564",
+      "infração ética",
+      "processo ético-disciplinar"
+    ],
+    "disciplina_id": "D08",
+    "disciplina": "Ética e Legislação em Enfermagem",
+    "assunto_id": "D08-A02",
+    "confianca_percentual": 97
+  },
+  {
+    "id": "R012",
+    "se_encontrar": [
+      "imperícia",
+      "imprudência",
+      "negligência",
+      "responsabilidade civil",
+      "responsabilidade penal"
+    ],
+    "disciplina_id": "D08",
+    "disciplina": "Ética e Legislação em Enfermagem",
+    "assunto_id": "D08-A04",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R013",
+    "se_encontrar": [
+      "dimensionamento de pessoal",
+      "Resolução COFEN 543",
+      "SCP",
+      "horas de enfermagem por paciente"
+    ],
+    "disciplina_id": "D01",
+    "disciplina": "Administração em Enfermagem",
+    "assunto_id": "D01-A02",
+    "confianca_percentual": 94
+  },
+  {
+    "id": "R014",
+    "se_encontrar": [
+      "estilo de liderança",
+      "gestão de conflitos",
+      "educação permanente em saúde"
+    ],
+    "disciplina_id": "D01",
+    "disciplina": "Administração em Enfermagem",
+    "assunto_id": "D01-A03",
+    "confianca_percentual": 88
+  },
+  {
+    "id": "R015",
+    "se_encontrar": [
+      "acreditação hospitalar",
+      "ONA",
+      "auditoria de enfermagem"
+    ],
+    "disciplina_id": "D01",
+    "disciplina": "Administração em Enfermagem",
+    "assunto_id": "D01-A04",
+    "confianca_percentual": 90
+  },
+  {
+    "id": "R016",
+    "se_encontrar": [
+      "Lei 8.080",
+      "Lei 8.142",
+      "princípio doutrinário",
+      "princípio organizativo"
+    ],
+    "disciplina_id": "D13",
+    "disciplina": "Legislação do SUS",
+    "assunto_id": "D13-A01",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R017",
+    "se_encontrar": [
+      "NOB-SUS",
+      "NOAS",
+      "Pacto pela Saúde",
+      "Decreto 7.508",
+      "CIT",
+      "CIB",
+      "COAP"
+    ],
+    "disciplina_id": "D13",
+    "disciplina": "Legislação do SUS",
+    "assunto_id": "D13-A03",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R018",
+    "se_encontrar": [
+      "conselho de saúde",
+      "conferência de saúde",
+      "controle social"
+    ],
+    "disciplina_id": "D13",
+    "disciplina": "Legislação do SUS",
+    "assunto_id": "D13-A04",
+    "confianca_percentual": 92
+  },
+  {
+    "id": "R019",
+    "se_encontrar": [
+      "PNAB",
+      "Estratégia Saúde da Família",
+      "ACS",
+      "eMulti",
+      "território adscrito"
+    ],
+    "disciplina_id": "D13",
+    "disciplina": "Legislação do SUS",
+    "assunto_id": "D14-A01",
+    "confianca_percentual": 95,
+    "observacoes_v1_1": "disciplina_id atualizado de D14 (Políticas Públicas de Saúde, mesclada) para D13 (Legislação do SUS, sobrevivente da fusão) — V1.1"
+  },
+  {
+    "id": "R020",
+    "se_encontrar": [
+      "Rede Cegonha",
+      "RAPS",
+      "RUE",
+      "linha de cuidado"
+    ],
+    "disciplina_id": "D13",
+    "disciplina": "Legislação do SUS",
+    "assunto_id": "D14-A03",
+    "confianca_percentual": 85,
+    "observacoes_v1_1": "disciplina_id atualizado de D14 para D13 (V1.1)"
+  },
+  {
+    "id": "R021",
+    "se_encontrar": [
+      "coeficiente de mortalidade",
+      "taxa de incidência",
+      "cadeia epidemiológica",
+      "nível de prevenção"
+    ],
+    "disciplina_id": "D17",
+    "disciplina": "Saúde Coletiva",
+    "assunto_id": "D17-A01",
+    "confianca_percentual": 94
+  },
+  {
+    "id": "R022",
+    "se_encontrar": [
+      "vigilância epidemiológica",
+      "vigilância sanitária",
+      "notificação compulsória",
+      "SINAN"
+    ],
+    "disciplina_id": "D17",
+    "disciplina": "Saúde Coletiva",
+    "assunto_id": "D17-A02",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R023",
+    "se_encontrar": [
+      "calendário nacional de vacinação",
+      "aprazamento",
+      "dose de reforço"
+    ],
+    "disciplina_id": "D17",
+    "disciplina": "Saúde Coletiva",
+    "assunto_id": "D11-A03",
+    "confianca_percentual": 96,
+    "observacoes_v1_1": "disciplina_id atualizado: Imunização rebaixada de disciplina (D11) para assunto dentro de Saúde Coletiva (D17); assunto_id D11-A03 preservado sem alteração (V1.1)"
+  },
+  {
+    "id": "R024",
+    "se_encontrar": [
+      "rede de frio",
+      "cadeia de frio",
+      "sala de vacinação"
+    ],
+    "disciplina_id": "D17",
+    "disciplina": "Saúde Coletiva",
+    "assunto_id": "D11-A02",
+    "confianca_percentual": 95,
+    "observacoes_v1_1": "disciplina_id atualizado (V1.1) — ver R023; assunto_id D11-A02 preservado"
+  },
+  {
+    "id": "R025",
+    "se_encontrar": [
+      "evento adverso pós-vacinação",
+      "EAPV"
+    ],
+    "disciplina_id": "D17",
+    "disciplina": "Saúde Coletiva",
+    "assunto_id": "D11-A03",
+    "subassunto_id": "D11-A03-S04",
+    "confianca_percentual": 97,
+    "observacoes_v1_1": "disciplina_id atualizado (V1.1) — assunto_id e subassunto_id preservados sem alteração"
+  },
+  {
+    "id": "R026",
+    "se_encontrar": [
+      "dengue",
+      "zika",
+      "chikungunya",
+      "Aedes aegypti"
+    ],
+    "disciplina_id": "D06",
+    "disciplina": "Enfermagem em Doenças Transmissíveis",
+    "assunto_id": "D06-A01",
+    "confianca_percentual": 97
+  },
+  {
+    "id": "R027",
+    "se_encontrar": [
+      "tuberculose",
+      "DOT",
+      "hanseníase",
+      "PQT"
+    ],
+    "disciplina_id": "D06",
+    "disciplina": "Enfermagem em Doenças Transmissíveis",
+    "assunto_id": "D06-A02",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R028",
+    "se_encontrar": [
+      "HIV",
+      "aids",
+      "TARV",
+      "PEP",
+      "PrEP"
+    ],
+    "disciplina_id": "D06",
+    "disciplina": "Enfermagem em Doenças Transmissíveis",
+    "assunto_id": "D06-A03",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R029",
+    "se_encontrar": [
+      "DUM",
+      "regra de Näegele",
+      "cálculo de idade gestacional",
+      "DPP"
+    ],
+    "disciplina_id": "D19",
+    "disciplina": "Saúde da Mulher",
+    "assunto_id": "D19-A01",
+    "subassunto_id": "D19-A01-S02",
+    "confianca_percentual": 97
+  },
+  {
+    "id": "R030",
+    "se_encontrar": [
+      "partograma",
+      "mecanismo do parto",
+      "parto humanizado"
+    ],
+    "disciplina_id": "D19",
+    "disciplina": "Saúde da Mulher",
+    "assunto_id": "D19-A02",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R031",
+    "se_encontrar": [
+      "puerpério",
+      "alojamento conjunto",
+      "aleitamento materno na puérpera"
+    ],
+    "disciplina_id": "D19",
+    "disciplina": "Saúde da Mulher",
+    "assunto_id": "D19-A03",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R032",
+    "se_encontrar": [
+      "Apgar",
+      "cuidados imediatos com o recém-nascido",
+      "clampeamento do cordão"
+    ],
+    "disciplina_id": "D18",
+    "disciplina": "Saúde da Criança e do Adolescente",
+    "assunto_id": "D18-A01",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R033",
+    "se_encontrar": [
+      "teste do pezinho",
+      "triagem neonatal",
+      "método canguru"
+    ],
+    "disciplina_id": "D18",
+    "disciplina": "Saúde da Criança e do Adolescente",
+    "assunto_id": "D18-A01",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R034",
+    "se_encontrar": [
+      "AIDPI",
+      "doença diarreica aguda",
+      "TRO",
+      "infecção respiratória aguda na criança"
+    ],
+    "disciplina_id": "D18",
+    "disciplina": "Saúde da Criança e do Adolescente",
+    "assunto_id": "D18-A03",
+    "confianca_percentual": 94
+  },
+  {
+    "id": "R035",
+    "se_encontrar": [
+      "hipertensão arterial sistêmica crônica ambulatorial",
+      "adesão ao tratamento anti-hipertensivo"
+    ],
+    "disciplina_id": "D07",
+    "disciplina": "Enfermagem Médico-Cirúrgica",
+    "assunto_id": "D20-A01",
+    "confianca_percentual": 85,
+    "observacoes_v1_1": "disciplina_id atualizado de D20 (Saúde do Adulto, mesclada) para D07 (sobrevivente, nome mantido) — V1.1"
+  },
+  {
+    "id": "R036",
+    "se_encontrar": [
+      "diabetes mellitus tipo 2",
+      "pé diabético",
+      "hemoglobina glicada"
+    ],
+    "disciplina_id": "D07",
+    "disciplina": "Enfermagem Médico-Cirúrgica",
+    "assunto_id": "D20-A02",
+    "confianca_percentual": 92,
+    "observacoes_v1_1": "disciplina_id atualizado de D20 para D07 (V1.1)"
+  },
+  {
+    "id": "R037",
+    "se_encontrar": [
+      "DPOC",
+      "asma",
+      "doença respiratória obstrutiva crônica"
+    ],
+    "disciplina_id": "D07",
+    "disciplina": "Enfermagem Médico-Cirúrgica",
+    "assunto_id": "D20-A03",
+    "confianca_percentual": 93,
+    "observacoes_v1_1": "disciplina_id atualizado de D20 para D07 (V1.1)"
+  },
+  {
+    "id": "R038",
+    "se_encontrar": [
+      "fragilidade",
+      "sarcopenia",
+      "avaliação geriátrica ampla",
+      "polifarmácia"
+    ],
+    "disciplina_id": "D21",
+    "disciplina": "Saúde do Idoso",
+    "assunto_id": "D21-A02",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R039",
+    "se_encontrar": [
+      "delirium em paciente idoso não crítico",
+      "demência",
+      "Alzheimer"
+    ],
+    "disciplina_id": "D21",
+    "disciplina": "Saúde do Idoso",
+    "assunto_id": "D21-A02",
+    "subassunto_id": "D21-A02-S05",
+    "confianca_percentual": 88
+  },
+  {
+    "id": "R040",
+    "se_encontrar": [
+      "Estatuto do Idoso",
+      "Lei 10.741"
+    ],
+    "disciplina_id": "D21",
+    "disciplina": "Saúde do Idoso",
+    "assunto_id": "D21-A04",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R041",
+    "se_encontrar": [
+      "avaliação pré-operatória",
+      "complicação pós-operatória",
+      "deiscência",
+      "dreno cirúrgico"
+    ],
+    "disciplina_id": "D07",
+    "disciplina": "Enfermagem Médico-Cirúrgica",
+    "assunto_id": "D07-A01",
+    "confianca_percentual": 92
+  },
+  {
+    "id": "R042",
+    "se_encontrar": [
+      "estomia",
+      "colostomia",
+      "ileostomia",
+      "urostomia"
+    ],
+    "disciplina_id": "D07",
+    "disciplina": "Enfermagem Médico-Cirúrgica",
+    "assunto_id": "D07-A03",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R043",
+    "se_encontrar": [
+      "Lei 10.216",
+      "Reforma Psiquiátrica",
+      "desinstitucionalização"
+    ],
+    "disciplina_id": "D22",
+    "disciplina": "Saúde Mental",
+    "assunto_id": "D22-A01",
+    "confianca_percentual": 97
+  },
+  {
+    "id": "R044",
+    "se_encontrar": [
+      "CAPS",
+      "CAPS AD",
+      "SRT",
+      "RAPS clínico-assistencial"
+    ],
+    "disciplina_id": "D22",
+    "disciplina": "Saúde Mental",
+    "assunto_id": "D22-A02",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R045",
+    "se_encontrar": [
+      "risco de suicídio",
+      "manejo de crise psiquiátrica",
+      "contenção mecânica em paciente psiquiátrico"
+    ],
+    "disciplina_id": "D22",
+    "disciplina": "Saúde Mental",
+    "assunto_id": "D22-A04",
+    "confianca_percentual": 90
+  },
+  {
+    "id": "R046",
+    "se_encontrar": [
+      "protocolo de Manchester",
+      "classificação de risco em pronto-socorro"
+    ],
+    "disciplina_id": "D26",
+    "disciplina": "Urgência e Emergência",
+    "assunto_id": "D26-A01",
+    "subassunto_id": "D26-A01-S01",
+    "confianca_percentual": 97
+  },
+  {
+    "id": "R047",
+    "se_encontrar": [
+      "parada cardiorrespiratória",
+      "RCP",
+      "suporte básico de vida",
+      "suporte avançado de vida",
+      "desfibrilação"
+    ],
+    "disciplina_id": "D26",
+    "disciplina": "Urgência e Emergência",
+    "assunto_id": "D26-A02",
+    "confianca_percentual": 97
+  },
+  {
+    "id": "R048",
+    "se_encontrar": [
+      "dor torácica com cronômetro",
+      "código AVC",
+      "bundle de sepse na sala de emergência"
+    ],
+    "disciplina_id": "D26",
+    "disciplina": "Urgência e Emergência",
+    "assunto_id": "D26-A03",
+    "confianca_percentual": 92
+  },
+  {
+    "id": "R049",
+    "se_encontrar": [
+      "politraumatizado",
+      "escala de coma de Glasgow em trauma",
+      "ABCDE do trauma"
+    ],
+    "disciplina_id": "D26",
+    "disciplina": "Urgência e Emergência",
+    "assunto_id": "D26-A04",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R050",
+    "se_encontrar": [
+      "ventilação mecânica invasiva",
+      "PEEP",
+      "FiO2",
+      "desmame ventilatório"
+    ],
+    "disciplina_id": "D25",
+    "disciplina": "Terapia Intensiva (UTI)",
+    "assunto_id": "D25-A02",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R051",
+    "se_encontrar": [
+      "sedação e analgesia em UTI",
+      "RASS",
+      "CAM-ICU"
+    ],
+    "disciplina_id": "D25",
+    "disciplina": "Terapia Intensiva (UTI)",
+    "assunto_id": "D25-A03",
+    "subassunto_id": "D25-A03-S02",
+    "confianca_percentual": 93
+  },
+  {
+    "id": "R052",
+    "se_encontrar": [
+      "paramentação cirúrgica",
+      "escovação cirúrgica das mãos",
+      "campo estéril"
+    ],
+    "disciplina_id": "D04",
+    "disciplina": "Centro Cirúrgico e CME",
+    "assunto_id": "D04-A02",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R053",
+    "se_encontrar": [
+      "autoclave",
+      "indicador biológico de esterilização",
+      "indicador químico de esterilização"
+    ],
+    "disciplina_id": "D04",
+    "disciplina": "Centro Cirúrgico e CME",
+    "assunto_id": "D04-A05",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R054",
+    "se_encontrar": [
+      "SRPA",
+      "escala de Aldrete",
+      "recuperação pós-anestésica"
+    ],
+    "disciplina_id": "D04",
+    "disciplina": "Centro Cirúrgico e CME",
+    "assunto_id": "D04-A04",
+    "confianca_percentual": 95
+  },
+  {
+    "id": "R055",
+    "se_encontrar": [
+      "CCIH",
+      "taxa de infecção hospitalar",
+      "densidade de incidência de IRAS"
+    ],
+    "disciplina_id": "D03",
+    "disciplina": "Biossegurança",
+    "assunto_id": "D05-A01",
+    "confianca_percentual": 94,
+    "observacoes_v1_1": "disciplina_id atualizado de D05 (Controle de Infecção Hospitalar, mesclada) para D03 (Biossegurança, sobrevivente da fusão) — V1.1"
+  },
+  {
+    "id": "R056",
+    "se_encontrar": [
+      "ICS-CVC",
+      "ITU-AC",
+      "PAV como indicador",
+      "ISC como indicador"
+    ],
+    "disciplina_id": "D03",
+    "disciplina": "Biossegurança",
+    "assunto_id": "D05-A02",
+    "confianca_percentual": 92,
+    "observacoes_v1_1": "disciplina_id atualizado de D05 para D03 (V1.1)"
+  },
+  {
+    "id": "R057",
+    "se_encontrar": [
+      "5 momentos de higienização das mãos",
+      "bundle de prevenção institucional"
+    ],
+    "disciplina_id": "D03",
+    "disciplina": "Biossegurança",
+    "assunto_id": "D05-A04",
+    "confianca_percentual": 94,
+    "observacoes_v1_1": "disciplina_id atualizado de D05 para D03 (V1.1)"
+  },
+  {
+    "id": "R058",
+    "se_encontrar": [
+      "farmacocinética",
+      "farmacodinâmica",
+      "meia-vida",
+      "biodisponibilidade"
+    ],
+    "disciplina_id": "D09",
+    "disciplina": "Farmacologia",
+    "assunto_id": "D09-A01",
+    "confianca_percentual": 96
+  },
+  {
+    "id": "R059",
+    "se_encontrar": [
+      "classe farmacológica",
+      "mecanismo de ação do fármaco",
+      "interação medicamentosa"
+    ],
+    "disciplina_id": "D09",
+    "disciplina": "Farmacologia",
+    "assunto_id": "D09-A01",
+    "confianca_percentual": 90
+  },
+  {
+    "id": "R060",
+    "se_encontrar": [
+      "medicamento de alta vigilância",
+      "protocolo de segurança na prescrição"
+    ],
+    "disciplina_id": "D09",
+    "disciplina": "Farmacologia",
+    "assunto_id": "D09-A02",
+    "confianca_percentual": 92
+  },
+  {
+    "id": "R062",
+    "se_encontrar": [
+      "etapas do processo de enfermagem",
+      "coleta de dados",
+      "diagnóstico de enfermagem",
+      "NANDA",
+      "NOC",
+      "NIC",
+      "CIPE"
+    ],
+    "disciplina_id": "D24",
+    "disciplina": "Sistematização da Assistência de Enfermagem (SAE)",
+    "assunto_id": "D24-A02",
+    "confianca_percentual": 95
+  }
+]

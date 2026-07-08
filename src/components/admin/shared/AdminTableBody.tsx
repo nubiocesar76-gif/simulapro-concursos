@@ -48,6 +48,8 @@ export function AdminTableBody({
   }
 
   if (isError) {
+    // TEMP DEBUG: remover após identificar a causa raiz do erro de carregamento.
+    console.error(error);
     return (
       <TableRow>
         <TableCell colSpan={colSpan} className="py-8 text-center text-destructive" role="alert">

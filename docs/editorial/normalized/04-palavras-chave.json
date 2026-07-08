@@ -1,0 +1,1528 @@
+[
+  {
+    "id": "D10-A02-S02-K01",
+    "subassunto_id": "D10-A02-S02",
+    "palavra": "sinais vitais",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A02-S01-K01",
+    "subassunto_id": "D10-A02-S01",
+    "palavra": "exame físico",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A06-S01-K01",
+    "subassunto_id": "D10-A06-S01",
+    "palavra": "punção venosa",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A06-S01-K02",
+    "subassunto_id": "D10-A06-S01",
+    "palavra": "técnica asséptica",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A06-S03-K01",
+    "subassunto_id": "D10-A06-S03",
+    "palavra": "sondagem",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A04-S01-K01",
+    "subassunto_id": "D10-A04-S01",
+    "palavra": "curativo",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A05-S01-K01",
+    "subassunto_id": "D10-A05-S01",
+    "palavra": "administração de medicamentos",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A08-S02-K01",
+    "subassunto_id": "D10-A08-S02",
+    "palavra": "anotação de enfermagem",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D10-A03-S01-K01",
+    "subassunto_id": "D10-A03-S01",
+    "palavra": "higiene",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D10-A03-S01-K02",
+    "subassunto_id": "D10-A03-S01",
+    "palavra": "conforto",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D10-A03-S03-K01",
+    "subassunto_id": "D10-A03-S03",
+    "palavra": "mobilização",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D10-A02-S04-K01",
+    "subassunto_id": "D10-A02-S04",
+    "palavra": "procedimento",
+    "peso": 5,
+    "tipo": "FRACA"
+  },
+  {
+    "id": "D03-A01-S02-K01",
+    "subassunto_id": "D03-A01-S02",
+    "palavra": "precaução padrão",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A01-S01-K01",
+    "subassunto_id": "D03-A01-S01",
+    "palavra": "biossegurança",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D23-A02-S03-K01",
+    "subassunto_id": "D23-A02-S03",
+    "palavra": "cuidado seguro",
+    "peso": 4,
+    "tipo": "FRACA"
+  },
+  {
+    "id": "D03-A01-S01-K02",
+    "subassunto_id": "D03-A01-S01",
+    "palavra": "EPI",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A01-S02-K02",
+    "subassunto_id": "D03-A01-S02",
+    "palavra": "precaução de contato",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A01-S02-K03",
+    "subassunto_id": "D03-A01-S02",
+    "palavra": "precaução de gotículas",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A01-S02-K04",
+    "subassunto_id": "D03-A01-S02",
+    "palavra": "precaução de aerossóis",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A02-S01-K01",
+    "subassunto_id": "D03-A02-S01",
+    "palavra": "resíduos de serviços de saúde",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A03-S01-K01",
+    "subassunto_id": "D03-A03-S01",
+    "palavra": "acidente com perfurocortante",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A03-S01-K02",
+    "subassunto_id": "D03-A03-S01",
+    "palavra": "exposição ocupacional",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D03-A03-S04-K01",
+    "subassunto_id": "D03-A03-S04",
+    "palavra": "imunização do trabalhador",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D03-A03-S04-K02",
+    "subassunto_id": "D03-A03-S04",
+    "palavra": "NR-32",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A02-S02-K01",
+    "subassunto_id": "D23-A02-S02",
+    "palavra": "evento adverso",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A02-S02-K02",
+    "subassunto_id": "D23-A02-S02",
+    "palavra": "near miss",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A02-S02-K03",
+    "subassunto_id": "D23-A02-S02",
+    "palavra": "notificação",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D23-A02-S03-K02",
+    "subassunto_id": "D23-A02-S03",
+    "palavra": "cultura de segurança",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A01-S01-K01",
+    "subassunto_id": "D23-A01-S01",
+    "palavra": "6 metas internacionais",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A03-S01-K01",
+    "subassunto_id": "D23-A03-S01",
+    "palavra": "checklist de cirurgia segura",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A03-S02-K01",
+    "subassunto_id": "D23-A03-S02",
+    "palavra": "identificação do paciente",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D23-A01-S02-K01",
+    "subassunto_id": "D23-A01-S02",
+    "palavra": "comunicação efetiva entre profissionais",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A01-S03-K01",
+    "subassunto_id": "D08-A01-S03",
+    "palavra": "ato privativo",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A01-S03-K02",
+    "subassunto_id": "D08-A01-S03",
+    "palavra": "competência legal",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S01-K01",
+    "subassunto_id": "D08-A04-S01",
+    "palavra": "autonomia profissional",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D08-A04-S03-K01",
+    "subassunto_id": "D08-A04-S03",
+    "palavra": "sigilo profissional",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S01-K02",
+    "subassunto_id": "D08-A04-S01",
+    "palavra": "responsabilidade civil",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S01-K03",
+    "subassunto_id": "D08-A04-S01",
+    "palavra": "responsabilidade penal",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S01-K04",
+    "subassunto_id": "D08-A04-S01",
+    "palavra": "responsabilidade ética",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S02-K01",
+    "subassunto_id": "D08-A04-S02",
+    "palavra": "imperícia",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S02-K02",
+    "subassunto_id": "D08-A04-S02",
+    "palavra": "imprudência",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A04-S02-K03",
+    "subassunto_id": "D08-A04-S02",
+    "palavra": "negligência",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A02-S04-K01",
+    "subassunto_id": "D08-A02-S04",
+    "palavra": "processo ético-disciplinar",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D08-A03-S02-K01",
+    "subassunto_id": "D08-A03-S02",
+    "palavra": "registro profissional",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D01-A02-S01-K01",
+    "subassunto_id": "D01-A02-S01",
+    "palavra": "dimensionamento de pessoal",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D01-A01-S03-K01",
+    "subassunto_id": "D01-A01-S03",
+    "palavra": "escala de trabalho",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D01-A03-S01-K01",
+    "subassunto_id": "D01-A03-S01",
+    "palavra": "liderança",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D01-A01-S01-K01",
+    "subassunto_id": "D01-A01-S01",
+    "palavra": "planejamento",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D01-A05-S01-K01",
+    "subassunto_id": "D01-A05-S01",
+    "palavra": "supervisão",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D01-A03-S03-K01",
+    "subassunto_id": "D01-A03-S03",
+    "palavra": "educação permanente",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D01-A04-S01-K01",
+    "subassunto_id": "D01-A04-S01",
+    "palavra": "indicadores de qualidade",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D01-A03-S02-K01",
+    "subassunto_id": "D01-A03-S02",
+    "palavra": "gestão de conflitos",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D01-A03-S01-K02",
+    "subassunto_id": "D01-A03-S01",
+    "palavra": "gestão por competências",
+    "peso": 5,
+    "tipo": "FRACA"
+  },
+  {
+    "id": "D01-A04-S04-K01",
+    "subassunto_id": "D01-A04-S04",
+    "palavra": "custo em enfermagem",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D13-A02-S01-K01",
+    "subassunto_id": "D13-A02-S01",
+    "palavra": "universalidade",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A02-S01-K02",
+    "subassunto_id": "D13-A02-S01",
+    "palavra": "equidade",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A02-S01-K03",
+    "subassunto_id": "D13-A02-S01",
+    "palavra": "integralidade",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A02-S02-K01",
+    "subassunto_id": "D13-A02-S02",
+    "palavra": "descentralização",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A02-S02-K02",
+    "subassunto_id": "D13-A02-S02",
+    "palavra": "regionalização",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A02-S02-K03",
+    "subassunto_id": "D13-A02-S02",
+    "palavra": "hierarquização",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A02-S02-K04",
+    "subassunto_id": "D13-A02-S02",
+    "palavra": "participação social",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A04-S01-K01",
+    "subassunto_id": "D13-A04-S01",
+    "palavra": "controle social",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A01-S03-K01",
+    "subassunto_id": "D13-A01-S03",
+    "palavra": "financiamento tripartite",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D13-A04-S02-K01",
+    "subassunto_id": "D13-A04-S02",
+    "palavra": "conferência de saúde",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D13-A04-S01-K02",
+    "subassunto_id": "D13-A04-S01",
+    "palavra": "conselho de saúde",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A01-S01-K01",
+    "subassunto_id": "D14-A01-S01",
+    "palavra": "atenção primária à saúde",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A01-S02-K01",
+    "subassunto_id": "D14-A01-S02",
+    "palavra": "estratégia saúde da família",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A01-S05-K01",
+    "subassunto_id": "D14-A01-S05",
+    "palavra": "território",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A01-S05-K02",
+    "subassunto_id": "D14-A01-S05",
+    "palavra": "vínculo",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D14-A01-S05-K03",
+    "subassunto_id": "D14-A01-S05",
+    "palavra": "longitudinalidade",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D14-A03-S05-K01",
+    "subassunto_id": "D14-A03-S05",
+    "palavra": "linha de cuidado",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A03-S05-K02",
+    "subassunto_id": "D14-A03-S05",
+    "palavra": "rede de atenção",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A01-S04-K01",
+    "subassunto_id": "D14-A01-S04",
+    "palavra": "NASF/eMulti",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D14-A02-S01-K01",
+    "subassunto_id": "D14-A02-S01",
+    "palavra": "humanização",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A01-S04-K01",
+    "subassunto_id": "D17-A01-S04",
+    "palavra": "epidemiologia",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A01-S01-K01",
+    "subassunto_id": "D17-A01-S01",
+    "palavra": "indicadores de saúde",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A02-S01-K01",
+    "subassunto_id": "D17-A02-S01",
+    "palavra": "vigilância epidemiológica",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A02-S02-K01",
+    "subassunto_id": "D17-A02-S02",
+    "palavra": "vigilância sanitária",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A02-S03-K01",
+    "subassunto_id": "D17-A02-S03",
+    "palavra": "vigilância ambiental",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D17-A02-S05-K01",
+    "subassunto_id": "D17-A02-S05",
+    "palavra": "notificação compulsória",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A03-S01-K01",
+    "subassunto_id": "D17-A03-S01",
+    "palavra": "determinantes sociais da saúde",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A03-S02-K01",
+    "subassunto_id": "D17-A03-S02",
+    "palavra": "promoção da saúde",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A01-S05-K01",
+    "subassunto_id": "D17-A01-S05",
+    "palavra": "prevenção de doenças",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D17-A01-S05-K02",
+    "subassunto_id": "D17-A01-S05",
+    "palavra": "níveis de atenção",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D11-A04-S01-K01",
+    "subassunto_id": "D11-A04-S01",
+    "palavra": "imunobiológico",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A04-S03-K01",
+    "subassunto_id": "D11-A04-S03",
+    "palavra": "soro",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D11-A04-S01-K02",
+    "subassunto_id": "D11-A04-S01",
+    "palavra": "vacina",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A01-S02-K01",
+    "subassunto_id": "D11-A01-S02",
+    "palavra": "calendário nacional de vacinação",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A02-S01-K01",
+    "subassunto_id": "D11-A02-S01",
+    "palavra": "rede de frio",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A02-S01-K02",
+    "subassunto_id": "D11-A02-S01",
+    "palavra": "cadeia de frio",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A03-S02-K01",
+    "subassunto_id": "D11-A03-S02",
+    "palavra": "esquema vacinal",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A03-S02-K02",
+    "subassunto_id": "D11-A03-S02",
+    "palavra": "dose de reforço",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D11-A03-S04-K01",
+    "subassunto_id": "D11-A03-S04",
+    "palavra": "eventos adversos pós-vacinação",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A02-S03-K01",
+    "subassunto_id": "D11-A02-S03",
+    "palavra": "sala de vacina",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D11-A03-S03-K01",
+    "subassunto_id": "D11-A03-S03",
+    "palavra": "contraindicação vacinal",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A02-S01-K01",
+    "subassunto_id": "D06-A02-S01",
+    "palavra": "tuberculose",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A02-S02-K01",
+    "subassunto_id": "D06-A02-S02",
+    "palavra": "hanseníase",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A01-S01-K01",
+    "subassunto_id": "D06-A01-S01",
+    "palavra": "dengue",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A01-S01-K02",
+    "subassunto_id": "D06-A01-S01",
+    "palavra": "zika",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A01-S01-K03",
+    "subassunto_id": "D06-A01-S01",
+    "palavra": "chikungunya",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A03-S01-K01",
+    "subassunto_id": "D06-A03-S01",
+    "palavra": "HIV/aids",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A03-S03-K01",
+    "subassunto_id": "D06-A03-S03",
+    "palavra": "hepatites virais",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A03-S02-K01",
+    "subassunto_id": "D06-A03-S02",
+    "palavra": "sífilis",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A03-S04-K01",
+    "subassunto_id": "D06-A03-S04",
+    "palavra": "IST",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A02-S01-K02",
+    "subassunto_id": "D06-A02-S01",
+    "palavra": "esquema de tratamento",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D06-A02-S01-K03",
+    "subassunto_id": "D06-A02-S01",
+    "palavra": "DOT",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D06-A05-S02-K01",
+    "subassunto_id": "D06-A05-S02",
+    "palavra": "isolamento",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D19-A01-S01-K01",
+    "subassunto_id": "D19-A01-S01",
+    "palavra": "pré-natal",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D19-A02-S03-K01",
+    "subassunto_id": "D19-A02-S03",
+    "palavra": "parto humanizado",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D19-A03-S01-K01",
+    "subassunto_id": "D19-A03-S01",
+    "palavra": "puerpério",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D19-A04-S01-K01",
+    "subassunto_id": "D19-A04-S01",
+    "palavra": "planejamento reprodutivo",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D19-A04-S02-K01",
+    "subassunto_id": "D19-A04-S02",
+    "palavra": "climatério",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D19-A04-S03-K01",
+    "subassunto_id": "D19-A04-S03",
+    "palavra": "exame preventivo (Papanicolau)",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D19-A04-S04-K01",
+    "subassunto_id": "D19-A04-S04",
+    "palavra": "autoexame de mamas",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D19-A02-S07-K01",
+    "subassunto_id": "D19-A02-S07",
+    "palavra": "mortalidade materna",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D19-A04-S05-K01",
+    "subassunto_id": "D19-A04-S05",
+    "palavra": "violência obstétrica",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D18-A02-S01-K01",
+    "subassunto_id": "D18-A02-S01",
+    "palavra": "crescimento e desenvolvimento",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D18-A02-S01-K02",
+    "subassunto_id": "D18-A02-S01",
+    "palavra": "caderneta da criança",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D18-A02-S04-K01",
+    "subassunto_id": "D18-A02-S04",
+    "palavra": "aleitamento materno exclusivo",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D18-A02-S02-K01",
+    "subassunto_id": "D18-A02-S02",
+    "palavra": "marcos do desenvolvimento",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D18-A03-S01-K01",
+    "subassunto_id": "D18-A03-S01",
+    "palavra": "doenças prevalentes na infância",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D18-A03-S01-K02",
+    "subassunto_id": "D18-A03-S01",
+    "palavra": "AIDPI",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D18-A01-S04-K01",
+    "subassunto_id": "D18-A01-S04",
+    "palavra": "método canguru",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A01-S01-K01",
+    "subassunto_id": "D20-A01-S01",
+    "palavra": "hipertensão arterial sistêmica",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A02-S01-K01",
+    "subassunto_id": "D20-A02-S01",
+    "palavra": "diabetes mellitus",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A04-S01-K01",
+    "subassunto_id": "D20-A04-S01",
+    "palavra": "doença renal crônica",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A03-S01-K01",
+    "subassunto_id": "D20-A03-S01",
+    "palavra": "DPOC",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A03-S02-K01",
+    "subassunto_id": "D20-A03-S02",
+    "palavra": "asma",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A01-S02-K01",
+    "subassunto_id": "D20-A01-S02",
+    "palavra": "insuficiência cardíaca",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A04-S02-K01",
+    "subassunto_id": "D20-A04-S02",
+    "palavra": "AVC",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D20-A02-S03-K01",
+    "subassunto_id": "D20-A02-S03",
+    "palavra": "obesidade",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D20-A02-S04-K01",
+    "subassunto_id": "D20-A02-S04",
+    "palavra": "dislipidemia",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D20-A05-S01-K01",
+    "subassunto_id": "D20-A05-S01",
+    "palavra": "cuidado crônico",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D20-A05-S01-K02",
+    "subassunto_id": "D20-A05-S01",
+    "palavra": "linha de cuidado",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D21-A01-S02-K01",
+    "subassunto_id": "D21-A01-S02",
+    "palavra": "envelhecimento",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A02-S01-K01",
+    "subassunto_id": "D21-A02-S01",
+    "palavra": "fragilidade",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A02-S01-K02",
+    "subassunto_id": "D21-A02-S01",
+    "palavra": "síndromes geriátricas",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A02-S07-K01",
+    "subassunto_id": "D21-A02-S07",
+    "palavra": "polifarmácia",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A02-S01-K03",
+    "subassunto_id": "D21-A02-S01",
+    "palavra": "sarcopenia",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D21-A02-S04-K01",
+    "subassunto_id": "D21-A02-S04",
+    "palavra": "delirium",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A02-S03-K01",
+    "subassunto_id": "D21-A02-S03",
+    "palavra": "incontinência",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D21-A02-S02-K01",
+    "subassunto_id": "D21-A02-S02",
+    "palavra": "quedas em idosos",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A01-S03-K01",
+    "subassunto_id": "D21-A01-S03",
+    "palavra": "avaliação geriátrica ampla",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D21-A03-S01-K01",
+    "subassunto_id": "D21-A03-S01",
+    "palavra": "cuidados paliativos",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D07-A01-S01-K01",
+    "subassunto_id": "D07-A01-S01",
+    "palavra": "perioperatório",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D07-A01-S02-K01",
+    "subassunto_id": "D07-A01-S02",
+    "palavra": "pós-operatório imediato",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D07-A01-S02-K02",
+    "subassunto_id": "D07-A01-S02",
+    "palavra": "pós-operatório mediato",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D07-A01-S02-K03",
+    "subassunto_id": "D07-A01-S02",
+    "palavra": "pós-operatório tardio",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D07-A01-S03-K01",
+    "subassunto_id": "D07-A01-S03",
+    "palavra": "drenos",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D07-A03-S01-K01",
+    "subassunto_id": "D07-A03-S01",
+    "palavra": "estomas",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D07-A03-S02-K01",
+    "subassunto_id": "D07-A03-S02",
+    "palavra": "feridas cirúrgicas",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D07-A01-S02-K04",
+    "subassunto_id": "D07-A01-S02",
+    "palavra": "complicações cirúrgicas",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D07-A02-S01-K01",
+    "subassunto_id": "D07-A02-S01",
+    "palavra": "cuidado por especialidade cirúrgica",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D22-A01-S01-K01",
+    "subassunto_id": "D22-A01-S01",
+    "palavra": "Reforma Psiquiátrica",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A01-S03-K01",
+    "subassunto_id": "D22-A01-S03",
+    "palavra": "desinstitucionalização",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A02-S01-K01",
+    "subassunto_id": "D22-A02-S01",
+    "palavra": "Rede de Atenção Psicossocial",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A02-S02-K01",
+    "subassunto_id": "D22-A02-S02",
+    "palavra": "CAPS",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A04-S06-K01",
+    "subassunto_id": "D22-A04-S06",
+    "palavra": "contenção mecânica",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A05-S01-K01",
+    "subassunto_id": "D22-A05-S01",
+    "palavra": "relação terapêutica",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A04-S01-K01",
+    "subassunto_id": "D22-A04-S01",
+    "palavra": "transtorno mental",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A04-S06-K02",
+    "subassunto_id": "D22-A04-S06",
+    "palavra": "crise",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D22-A03-S01-K01",
+    "subassunto_id": "D22-A03-S01",
+    "palavra": "redução de danos",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D22-A03-S01-K02",
+    "subassunto_id": "D22-A03-S01",
+    "palavra": "dependência química",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A01-S01-K01",
+    "subassunto_id": "D26-A01-S01",
+    "palavra": "classificação de risco",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A01-S01-K02",
+    "subassunto_id": "D26-A01-S01",
+    "palavra": "protocolo de Manchester",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A02-S03-K01",
+    "subassunto_id": "D26-A02-S03",
+    "palavra": "parada cardiorrespiratória",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A02-S01-K01",
+    "subassunto_id": "D26-A02-S01",
+    "palavra": "suporte básico de vida",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A02-S02-K01",
+    "subassunto_id": "D26-A02-S02",
+    "palavra": "suporte avançado de vida",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A04-S01-K01",
+    "subassunto_id": "D26-A04-S01",
+    "palavra": "trauma",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A04-S03-K01",
+    "subassunto_id": "D26-A04-S03",
+    "palavra": "choque",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A02-S04-K01",
+    "subassunto_id": "D26-A02-S04",
+    "palavra": "via aérea",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D26-A01-S04-K01",
+    "subassunto_id": "D26-A01-S04",
+    "palavra": "SAMU",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D25-A01-S01-K01",
+    "subassunto_id": "D25-A01-S01",
+    "palavra": "monitorização hemodinâmica",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D25-A02-S01-K01",
+    "subassunto_id": "D25-A02-S01",
+    "palavra": "ventilação mecânica",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D25-A03-S02-K01",
+    "subassunto_id": "D25-A03-S02",
+    "palavra": "sedação e analgesia",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D25-A04-S01-K01",
+    "subassunto_id": "D25-A04-S01",
+    "palavra": "delirium em UTI",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D25-A01-S02-K01",
+    "subassunto_id": "D25-A01-S02",
+    "palavra": "escores de gravidade",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D25-A03-S01-K01",
+    "subassunto_id": "D25-A03-S01",
+    "palavra": "suporte hemodinâmico",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D25-A04-S05-K01",
+    "subassunto_id": "D25-A04-S05",
+    "palavra": "cuidado centrado no paciente crítico",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D04-A02-S01-K01",
+    "subassunto_id": "D04-A02-S01",
+    "palavra": "paramentação cirúrgica",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A02-S03-K01",
+    "subassunto_id": "D04-A02-S03",
+    "palavra": "campo estéril",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A03-S01-K01",
+    "subassunto_id": "D04-A03-S01",
+    "palavra": "instrumentação",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A01-S03-K01",
+    "subassunto_id": "D04-A01-S03",
+    "palavra": "tempo cirúrgico",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D04-A05-S03-K01",
+    "subassunto_id": "D04-A05-S03",
+    "palavra": "esterilização",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A05-S02-K01",
+    "subassunto_id": "D04-A05-S02",
+    "palavra": "desinfecção",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A05-S03-K02",
+    "subassunto_id": "D04-A05-S03",
+    "palavra": "autoclave",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A05-S04-K01",
+    "subassunto_id": "D04-A05-S04",
+    "palavra": "indicador biológico",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A05-S04-K02",
+    "subassunto_id": "D04-A05-S04",
+    "palavra": "indicador químico",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D04-A05-S05-K01",
+    "subassunto_id": "D04-A05-S05",
+    "palavra": "rastreabilidade de materiais",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D05-A01-S03-K01",
+    "subassunto_id": "D05-A01-S03",
+    "palavra": "IRAS",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A02-S04-K01",
+    "subassunto_id": "D05-A02-S04",
+    "palavra": "infecção de sítio cirúrgico",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A02-S02-K01",
+    "subassunto_id": "D05-A02-S02",
+    "palavra": "infecção do trato urinário associada a cateter",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A02-S01-K01",
+    "subassunto_id": "D05-A02-S01",
+    "palavra": "infecção de corrente sanguínea associada a cateter",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A04-S01-K01",
+    "subassunto_id": "D05-A04-S01",
+    "palavra": "precaução de contato",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A04-S01-K02",
+    "subassunto_id": "D05-A04-S01",
+    "palavra": "precaução de gotículas",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A04-S01-K03",
+    "subassunto_id": "D05-A04-S01",
+    "palavra": "precaução de aerossóis",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A01-S03-K02",
+    "subassunto_id": "D05-A01-S03",
+    "palavra": "vigilância epidemiológica hospitalar",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D05-A03-S01-K01",
+    "subassunto_id": "D05-A03-S01",
+    "palavra": "bactéria multirresistente",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D09-A01-S01-K01",
+    "subassunto_id": "D09-A01-S01",
+    "palavra": "farmacocinética",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D09-A01-S02-K01",
+    "subassunto_id": "D09-A01-S02",
+    "palavra": "farmacodinâmica",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D09-A01-S02-K02",
+    "subassunto_id": "D09-A01-S02",
+    "palavra": "mecanismo de ação",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D09-A01-S03-K01",
+    "subassunto_id": "D09-A01-S03",
+    "palavra": "reação adversa a medicamento",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D09-A01-S04-K01",
+    "subassunto_id": "D09-A01-S04",
+    "palavra": "interação medicamentosa",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D09-A03-S01-K01",
+    "subassunto_id": "D09-A03-S01",
+    "palavra": "classe terapêutica",
+    "peso": 7,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D09-A01-S01-K02",
+    "subassunto_id": "D09-A01-S01",
+    "palavra": "meia-vida",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D09-A01-S01-K03",
+    "subassunto_id": "D09-A01-S01",
+    "palavra": "biodisponibilidade",
+    "peso": 6,
+    "tipo": "SECUNDARIA"
+  },
+  {
+    "id": "D09-A02-S01-K01",
+    "subassunto_id": "D09-A02-S01",
+    "palavra": "medicamento de alta vigilância",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A02-S01-K01",
+    "subassunto_id": "D24-A02-S01",
+    "palavra": "histórico de enfermagem",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A02-S02-K01",
+    "subassunto_id": "D24-A02-S02",
+    "palavra": "diagnóstico de enfermagem",
+    "peso": 10,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A02-S03-K01",
+    "subassunto_id": "D24-A02-S03",
+    "palavra": "planejamento",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A02-S04-K01",
+    "subassunto_id": "D24-A02-S04",
+    "palavra": "implementação",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A02-S05-K01",
+    "subassunto_id": "D24-A02-S05",
+    "palavra": "avaliação",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A03-S01-K01",
+    "subassunto_id": "D24-A03-S01",
+    "palavra": "taxonomia NANDA-I",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A03-S05-K01",
+    "subassunto_id": "D24-A03-S05",
+    "palavra": "CIPE",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A03-S02-K01",
+    "subassunto_id": "D24-A03-S02",
+    "palavra": "NOC",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A03-S03-K01",
+    "subassunto_id": "D24-A03-S03",
+    "palavra": "NIC",
+    "peso": 8,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A04-S01-K01",
+    "subassunto_id": "D24-A04-S01",
+    "palavra": "prescrição de enfermagem",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  },
+  {
+    "id": "D24-A04-S02-K01",
+    "subassunto_id": "D24-A04-S02",
+    "palavra": "evolução de enfermagem",
+    "peso": 9,
+    "tipo": "PRINCIPAL"
+  }
+]

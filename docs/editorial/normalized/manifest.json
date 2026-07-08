@@ -1,0 +1,29 @@
+{
+  "engine_version": "2.0.0-lite",
+  "architecture_version": "1.1.0",
+  "course_slug": "enfermagem",
+  "position_slug": "enfermeiro",
+  "architecture_slug": "enfermagem-enfermeiro",
+  "architecture_name": "Enfermagem — Enfermeiro",
+  "description": "Course Configuration oficial de Enfermagem/Enfermeiro, produzida em docs/editorial/normalized.",
+  "required_files": [
+    "01-disciplinas.json",
+    "02-assuntos.json",
+    "03-subassuntos.json",
+    "04-palavras-chave.json",
+    "11-regras-classificacao.json"
+  ],
+  "optional_files": [
+    "00-schema.json",
+    "05-sinonimos.json",
+    "06-siglas.json",
+    "07-legislacoes.json",
+    "08-portarias.json",
+    "09-protocolos.json",
+    "10-programas.json",
+    "12-casos-ambiguos.json",
+    "13-matriz-coocorrencia.json",
+    "14-perfil-bancas.json",
+    "15-dicionario-editorial.json"
+  ]
+}

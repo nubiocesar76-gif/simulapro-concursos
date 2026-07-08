@@ -34,10 +34,15 @@ import { Route as AuthenticatedAdminExamsRouteImport } from './routes/_authentic
 import { Route as AuthenticatedAdminDistributionsRouteImport } from './routes/_authenticated/admin/distributions'
 import { Route as AuthenticatedAdminCoursesRouteImport } from './routes/_authenticated/admin/courses'
 import { Route as AuthenticatedAdminBoardsRouteImport } from './routes/_authenticated/admin/boards'
+import { Route as AuthenticatedAdminAcervoRouteImport } from './routes/_authenticated/admin/acervo'
 import { Route as AuthenticatedAppStudyIndexRouteImport } from './routes/_authenticated/app/study.index'
 import { Route as AuthenticatedAdminSubjectsIndexRouteImport } from './routes/_authenticated/admin/subjects.index'
+import { Route as AuthenticatedAdminAcervoIndexRouteImport } from './routes/_authenticated/admin/acervo.index'
 import { Route as AuthenticatedAppStudySessionIdRouteImport } from './routes/_authenticated/app/study.$sessionId'
 import { Route as AuthenticatedAdminSubjectsSubjectIdRouteImport } from './routes/_authenticated/admin/subjects.$subjectId'
+import { Route as AuthenticatedAdminAcervoEditorialRouteImport } from './routes/_authenticated/admin/acervo.editorial'
+import { Route as AuthenticatedAdminAcervoExamIdRouteImport } from './routes/_authenticated/admin/acervo.$examId'
+import { Route as AuthenticatedAdminAcervoEditorialImportRouteImport } from './routes/_authenticated/admin/acervo/editorial/import'
 
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
@@ -176,6 +181,12 @@ const AuthenticatedAdminBoardsRoute =
     path: '/boards',
     getParentRoute: () => AuthenticatedAdminRouteRoute,
   } as any)
+const AuthenticatedAdminAcervoRoute =
+  AuthenticatedAdminAcervoRouteImport.update({
+    id: '/acervo',
+    path: '/acervo',
+    getParentRoute: () => AuthenticatedAdminRouteRoute,
+  } as any)
 const AuthenticatedAppStudyIndexRoute =
   AuthenticatedAppStudyIndexRouteImport.update({
     id: '/',
@@ -187,6 +198,12 @@ const AuthenticatedAdminSubjectsIndexRoute =
     id: '/',
     path: '/',
     getParentRoute: () => AuthenticatedAdminSubjectsRoute,
+  } as any)
+const AuthenticatedAdminAcervoIndexRoute =
+  AuthenticatedAdminAcervoIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedAdminAcervoRoute,
   } as any)
 const AuthenticatedAppStudySessionIdRoute =
   AuthenticatedAppStudySessionIdRouteImport.update({
@@ -200,12 +217,31 @@ const AuthenticatedAdminSubjectsSubjectIdRoute =
     path: '/$subjectId',
     getParentRoute: () => AuthenticatedAdminSubjectsRoute,
   } as any)
+const AuthenticatedAdminAcervoEditorialRoute =
+  AuthenticatedAdminAcervoEditorialRouteImport.update({
+    id: '/editorial',
+    path: '/editorial',
+    getParentRoute: () => AuthenticatedAdminAcervoRoute,
+  } as any)
+const AuthenticatedAdminAcervoExamIdRoute =
+  AuthenticatedAdminAcervoExamIdRouteImport.update({
+    id: '/$examId',
+    path: '/$examId',
+    getParentRoute: () => AuthenticatedAdminAcervoRoute,
+  } as any)
+const AuthenticatedAdminAcervoEditorialImportRoute =
+  AuthenticatedAdminAcervoEditorialImportRouteImport.update({
+    id: '/import',
+    path: '/import',
+    getParentRoute: () => AuthenticatedAdminAcervoEditorialRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/admin': typeof AuthenticatedAdminRouteRouteWithChildren
   '/app': typeof AuthenticatedAppRouteRouteWithChildren
+  '/admin/acervo': typeof AuthenticatedAdminAcervoRouteWithChildren
   '/admin/boards': typeof AuthenticatedAdminBoardsRoute
   '/admin/courses': typeof AuthenticatedAdminCoursesRoute
   '/admin/distributions': typeof AuthenticatedAdminDistributionsRoute
@@ -226,10 +262,14 @@ export interface FileRoutesByFullPath {
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin/': typeof AuthenticatedAdminIndexRoute
   '/app/': typeof AuthenticatedAppIndexRoute
+  '/admin/acervo/$examId': typeof AuthenticatedAdminAcervoExamIdRoute
+  '/admin/acervo/editorial': typeof AuthenticatedAdminAcervoEditorialRouteWithChildren
   '/admin/subjects/$subjectId': typeof AuthenticatedAdminSubjectsSubjectIdRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/admin/acervo/': typeof AuthenticatedAdminAcervoIndexRoute
   '/admin/subjects/': typeof AuthenticatedAdminSubjectsIndexRoute
   '/app/study/': typeof AuthenticatedAppStudyIndexRoute
+  '/admin/acervo/editorial/import': typeof AuthenticatedAdminAcervoEditorialImportRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -252,10 +292,14 @@ export interface FileRoutesByTo {
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
   '/app': typeof AuthenticatedAppIndexRoute
+  '/admin/acervo/$examId': typeof AuthenticatedAdminAcervoExamIdRoute
+  '/admin/acervo/editorial': typeof AuthenticatedAdminAcervoEditorialRouteWithChildren
   '/admin/subjects/$subjectId': typeof AuthenticatedAdminSubjectsSubjectIdRoute
   '/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/admin/acervo': typeof AuthenticatedAdminAcervoIndexRoute
   '/admin/subjects': typeof AuthenticatedAdminSubjectsIndexRoute
   '/app/study': typeof AuthenticatedAppStudyIndexRoute
+  '/admin/acervo/editorial/import': typeof AuthenticatedAdminAcervoEditorialImportRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -264,6 +308,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRouteRouteWithChildren
   '/_authenticated/app': typeof AuthenticatedAppRouteRouteWithChildren
+  '/_authenticated/admin/acervo': typeof AuthenticatedAdminAcervoRouteWithChildren
   '/_authenticated/admin/boards': typeof AuthenticatedAdminBoardsRoute
   '/_authenticated/admin/courses': typeof AuthenticatedAdminCoursesRoute
   '/_authenticated/admin/distributions': typeof AuthenticatedAdminDistributionsRoute
@@ -284,10 +329,14 @@ export interface FileRoutesById {
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
   '/_authenticated/app/': typeof AuthenticatedAppIndexRoute
+  '/_authenticated/admin/acervo/$examId': typeof AuthenticatedAdminAcervoExamIdRoute
+  '/_authenticated/admin/acervo/editorial': typeof AuthenticatedAdminAcervoEditorialRouteWithChildren
   '/_authenticated/admin/subjects/$subjectId': typeof AuthenticatedAdminSubjectsSubjectIdRoute
   '/_authenticated/app/study/$sessionId': typeof AuthenticatedAppStudySessionIdRoute
+  '/_authenticated/admin/acervo/': typeof AuthenticatedAdminAcervoIndexRoute
   '/_authenticated/admin/subjects/': typeof AuthenticatedAdminSubjectsIndexRoute
   '/_authenticated/app/study/': typeof AuthenticatedAppStudyIndexRoute
+  '/_authenticated/admin/acervo/editorial/import': typeof AuthenticatedAdminAcervoEditorialImportRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -296,6 +345,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/admin'
     | '/app'
+    | '/admin/acervo'
     | '/admin/boards'
     | '/admin/courses'
     | '/admin/distributions'
@@ -316,10 +366,14 @@ export interface FileRouteTypes {
     | '/api/webhooks/asaas'
     | '/admin/'
     | '/app/'
+    | '/admin/acervo/$examId'
+    | '/admin/acervo/editorial'
     | '/admin/subjects/$subjectId'
     | '/app/study/$sessionId'
+    | '/admin/acervo/'
     | '/admin/subjects/'
     | '/app/study/'
+    | '/admin/acervo/editorial/import'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -342,10 +396,14 @@ export interface FileRouteTypes {
     | '/api/webhooks/asaas'
     | '/admin'
     | '/app'
+    | '/admin/acervo/$examId'
+    | '/admin/acervo/editorial'
     | '/admin/subjects/$subjectId'
     | '/app/study/$sessionId'
+    | '/admin/acervo'
     | '/admin/subjects'
     | '/app/study'
+    | '/admin/acervo/editorial/import'
   id:
     | '__root__'
     | '/'
@@ -353,6 +411,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/_authenticated/admin'
     | '/_authenticated/app'
+    | '/_authenticated/admin/acervo'
     | '/_authenticated/admin/boards'
     | '/_authenticated/admin/courses'
     | '/_authenticated/admin/distributions'
@@ -373,10 +432,14 @@ export interface FileRouteTypes {
     | '/api/webhooks/asaas'
     | '/_authenticated/admin/'
     | '/_authenticated/app/'
+    | '/_authenticated/admin/acervo/$examId'
+    | '/_authenticated/admin/acervo/editorial'
     | '/_authenticated/admin/subjects/$subjectId'
     | '/_authenticated/app/study/$sessionId'
+    | '/_authenticated/admin/acervo/'
     | '/_authenticated/admin/subjects/'
     | '/_authenticated/app/study/'
+    | '/_authenticated/admin/acervo/editorial/import'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -563,6 +626,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminBoardsRouteImport
       parentRoute: typeof AuthenticatedAdminRouteRoute
     }
+    '/_authenticated/admin/acervo': {
+      id: '/_authenticated/admin/acervo'
+      path: '/acervo'
+      fullPath: '/admin/acervo'
+      preLoaderRoute: typeof AuthenticatedAdminAcervoRouteImport
+      parentRoute: typeof AuthenticatedAdminRouteRoute
+    }
     '/_authenticated/app/study/': {
       id: '/_authenticated/app/study/'
       path: '/'
@@ -576,6 +646,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/admin/subjects/'
       preLoaderRoute: typeof AuthenticatedAdminSubjectsIndexRouteImport
       parentRoute: typeof AuthenticatedAdminSubjectsRoute
+    }
+    '/_authenticated/admin/acervo/': {
+      id: '/_authenticated/admin/acervo/'
+      path: '/'
+      fullPath: '/admin/acervo/'
+      preLoaderRoute: typeof AuthenticatedAdminAcervoIndexRouteImport
+      parentRoute: typeof AuthenticatedAdminAcervoRoute
     }
     '/_authenticated/app/study/$sessionId': {
       id: '/_authenticated/app/study/$sessionId'
@@ -591,8 +668,63 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAdminSubjectsSubjectIdRouteImport
       parentRoute: typeof AuthenticatedAdminSubjectsRoute
     }
+    '/_authenticated/admin/acervo/editorial': {
+      id: '/_authenticated/admin/acervo/editorial'
+      path: '/editorial'
+      fullPath: '/admin/acervo/editorial'
+      preLoaderRoute: typeof AuthenticatedAdminAcervoEditorialRouteImport
+      parentRoute: typeof AuthenticatedAdminAcervoRoute
+    }
+    '/_authenticated/admin/acervo/$examId': {
+      id: '/_authenticated/admin/acervo/$examId'
+      path: '/$examId'
+      fullPath: '/admin/acervo/$examId'
+      preLoaderRoute: typeof AuthenticatedAdminAcervoExamIdRouteImport
+      parentRoute: typeof AuthenticatedAdminAcervoRoute
+    }
+    '/_authenticated/admin/acervo/editorial/import': {
+      id: '/_authenticated/admin/acervo/editorial/import'
+      path: '/import'
+      fullPath: '/admin/acervo/editorial/import'
+      preLoaderRoute: typeof AuthenticatedAdminAcervoEditorialImportRouteImport
+      parentRoute: typeof AuthenticatedAdminAcervoEditorialRoute
+    }
   }
 }
+
+interface AuthenticatedAdminAcervoEditorialRouteChildren {
+  AuthenticatedAdminAcervoEditorialImportRoute: typeof AuthenticatedAdminAcervoEditorialImportRoute
+}
+
+const AuthenticatedAdminAcervoEditorialRouteChildren: AuthenticatedAdminAcervoEditorialRouteChildren =
+  {
+    AuthenticatedAdminAcervoEditorialImportRoute:
+      AuthenticatedAdminAcervoEditorialImportRoute,
+  }
+
+const AuthenticatedAdminAcervoEditorialRouteWithChildren =
+  AuthenticatedAdminAcervoEditorialRoute._addFileChildren(
+    AuthenticatedAdminAcervoEditorialRouteChildren,
+  )
+
+interface AuthenticatedAdminAcervoRouteChildren {
+  AuthenticatedAdminAcervoExamIdRoute: typeof AuthenticatedAdminAcervoExamIdRoute
+  AuthenticatedAdminAcervoEditorialRoute: typeof AuthenticatedAdminAcervoEditorialRouteWithChildren
+  AuthenticatedAdminAcervoIndexRoute: typeof AuthenticatedAdminAcervoIndexRoute
+}
+
+const AuthenticatedAdminAcervoRouteChildren: AuthenticatedAdminAcervoRouteChildren =
+  {
+    AuthenticatedAdminAcervoExamIdRoute: AuthenticatedAdminAcervoExamIdRoute,
+    AuthenticatedAdminAcervoEditorialRoute:
+      AuthenticatedAdminAcervoEditorialRouteWithChildren,
+    AuthenticatedAdminAcervoIndexRoute: AuthenticatedAdminAcervoIndexRoute,
+  }
+
+const AuthenticatedAdminAcervoRouteWithChildren =
+  AuthenticatedAdminAcervoRoute._addFileChildren(
+    AuthenticatedAdminAcervoRouteChildren,
+  )
 
 interface AuthenticatedAdminSubjectsRouteChildren {
   AuthenticatedAdminSubjectsSubjectIdRoute: typeof AuthenticatedAdminSubjectsSubjectIdRoute
@@ -612,6 +744,7 @@ const AuthenticatedAdminSubjectsRouteWithChildren =
   )
 
 interface AuthenticatedAdminRouteRouteChildren {
+  AuthenticatedAdminAcervoRoute: typeof AuthenticatedAdminAcervoRouteWithChildren
   AuthenticatedAdminBoardsRoute: typeof AuthenticatedAdminBoardsRoute
   AuthenticatedAdminCoursesRoute: typeof AuthenticatedAdminCoursesRoute
   AuthenticatedAdminDistributionsRoute: typeof AuthenticatedAdminDistributionsRoute
@@ -631,6 +764,7 @@ interface AuthenticatedAdminRouteRouteChildren {
 
 const AuthenticatedAdminRouteRouteChildren: AuthenticatedAdminRouteRouteChildren =
   {
+    AuthenticatedAdminAcervoRoute: AuthenticatedAdminAcervoRouteWithChildren,
     AuthenticatedAdminBoardsRoute: AuthenticatedAdminBoardsRoute,
     AuthenticatedAdminCoursesRoute: AuthenticatedAdminCoursesRoute,
     AuthenticatedAdminDistributionsRoute: AuthenticatedAdminDistributionsRoute,

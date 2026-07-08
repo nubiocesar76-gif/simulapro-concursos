@@ -1,0 +1,3039 @@
+[
+  {
+    "id": "D01-A01-S01",
+    "assunto_id": "D01-A01",
+    "nome": "Processo Administrativo",
+    "descricao": "Planejar, organizar, dirigir, controlar.",
+    "slug": "processo-administrativo-em-enfermagem"
+  },
+  {
+    "id": "D01-A01-S02",
+    "assunto_id": "D01-A01",
+    "nome": "Organização do Serviço de Enfermagem",
+    "descricao": "Estrutura do serviço de enfermagem.",
+    "slug": "organizacao-do-servico-de-enfermagem"
+  },
+  {
+    "id": "D01-A01-S03",
+    "assunto_id": "D01-A01",
+    "nome": "Escalas de Trabalho",
+    "descricao": "Distribuição de pessoal em escalas.",
+    "slug": "escalas-de-trabalho"
+  },
+  {
+    "id": "D01-A02-S01",
+    "assunto_id": "D01-A02",
+    "nome": "Dimensionamento de Pessoal de Enfermagem",
+    "descricao": "Res. COFEN 543/2017.",
+    "slug": "dimensionamento-de-pessoal-de-enfermagem"
+  },
+  {
+    "id": "D01-A02-S02",
+    "assunto_id": "D01-A02",
+    "nome": "Sistema de Classificação de Pacientes",
+    "descricao": "SCP para cálculo de complexidade assistencial.",
+    "slug": "sistema-de-classificacao-de-pacientes"
+  },
+  {
+    "id": "D01-A02-S03",
+    "assunto_id": "D01-A02",
+    "nome": "Cálculo de Horas de Enfermagem",
+    "descricao": "Horas de enfermagem por paciente/dia.",
+    "slug": "calculo-de-horas-de-enfermagem"
+  },
+  {
+    "id": "D01-A03-S01",
+    "assunto_id": "D01-A03",
+    "nome": "Estilos de Liderança",
+    "descricao": "Autocrático, democrático, liberal, situacional.",
+    "slug": "estilos-de-lideranca"
+  },
+  {
+    "id": "D01-A03-S02",
+    "assunto_id": "D01-A03",
+    "nome": "Gestão de Conflitos",
+    "descricao": "Gestão de conflitos em equipe de enfermagem.",
+    "slug": "gestao-de-conflitos"
+  },
+  {
+    "id": "D01-A03-S03",
+    "assunto_id": "D01-A03",
+    "nome": "Educação Permanente em Saúde",
+    "descricao": "EPS como estratégia de qualificação da equipe.",
+    "slug": "educacao-permanente-em-saude"
+  },
+  {
+    "id": "D01-A03-S04",
+    "assunto_id": "D01-A03",
+    "nome": "Educação Continuada em Enfermagem",
+    "descricao": "Capacitação contínua da equipe.",
+    "slug": "educacao-continuada-em-enfermagem"
+  },
+  {
+    "id": "D01-A04-S01",
+    "assunto_id": "D01-A04",
+    "nome": "Indicadores de Qualidade Assistencial",
+    "descricao": "Indicadores de qualidade do cuidado.",
+    "slug": "indicadores-de-qualidade-assistencial"
+  },
+  {
+    "id": "D01-A04-S02",
+    "assunto_id": "D01-A04",
+    "nome": "Acreditação Hospitalar",
+    "descricao": "ONA, Joint Commission.",
+    "slug": "acreditacao-hospitalar"
+  },
+  {
+    "id": "D01-A04-S03",
+    "assunto_id": "D01-A04",
+    "nome": "Auditoria em Enfermagem",
+    "descricao": "Auditoria de prontuário e processos.",
+    "slug": "auditoria-em-enfermagem"
+  },
+  {
+    "id": "D01-A04-S04",
+    "assunto_id": "D01-A04",
+    "nome": "Gestão de Custos em Enfermagem",
+    "descricao": "Custos operacionais do serviço.",
+    "slug": "gestao-de-custos-em-enfermagem"
+  },
+  {
+    "id": "D01-A05-S01",
+    "assunto_id": "D01-A05",
+    "nome": "Supervisão de Enfermagem",
+    "descricao": "Supervisão da equipe assistencial.",
+    "slug": "supervisao-de-enfermagem"
+  },
+  {
+    "id": "D01-A05-S02",
+    "assunto_id": "D01-A05",
+    "nome": "Avaliação de Desempenho",
+    "descricao": "Avaliação de desempenho da equipe.",
+    "slug": "avaliacao-de-desempenho"
+  },
+  {
+    "id": "D03-A01-S01",
+    "assunto_id": "D03-A01",
+    "nome": "Equipamentos de Proteção Individual (EPI)",
+    "descricao": "Uso e indicação de EPI.",
+    "slug": "equipamentos-de-protecao-individual"
+  },
+  {
+    "id": "D03-A01-S02",
+    "assunto_id": "D03-A01",
+    "nome": "Precauções Padrão e Específicas",
+    "descricao": "Contato, gotículas, aerossóis.",
+    "slug": "precaucoes-padrao-e-especificas"
+  },
+  {
+    "id": "D03-A02-S01",
+    "assunto_id": "D03-A02",
+    "nome": "Classificação dos Resíduos de Serviços de Saúde",
+    "descricao": "Grupos A, B, C, D, E (RDC 222/2018).",
+    "slug": "classificacao-dos-residuos-de-servicos-de-saude"
+  },
+  {
+    "id": "D03-A02-S02",
+    "assunto_id": "D03-A02",
+    "nome": "Plano de Gerenciamento de Resíduos (PGRSS)",
+    "descricao": "Gestão institucional de resíduos.",
+    "slug": "pgrss"
+  },
+  {
+    "id": "D03-A03-S01",
+    "assunto_id": "D03-A03",
+    "nome": "Acidentes com Material Perfurocortante",
+    "descricao": "Prevenção e conduta em acidentes.",
+    "slug": "acidentes-com-perfurocortante"
+  },
+  {
+    "id": "D03-A03-S02",
+    "assunto_id": "D03-A03",
+    "nome": "Profilaxia Pós-Exposição a Material Biológico",
+    "descricao": "PEP para material biológico.",
+    "slug": "profilaxia-pos-exposicao"
+  },
+  {
+    "id": "D03-A03-S03",
+    "assunto_id": "D03-A03",
+    "nome": "Notificação de Acidente de Trabalho",
+    "descricao": "CAT e fluxo de notificação.",
+    "slug": "notificacao-de-acidente-de-trabalho"
+  },
+  {
+    "id": "D03-A03-S04",
+    "assunto_id": "D03-A03",
+    "nome": "Saúde e Segurança do Trabalhador (NR-32)",
+    "descricao": "Norma regulamentadora do trabalhador de saúde.",
+    "slug": "nr-32-seguranca-trabalhador-saude"
+  },
+  {
+    "id": "D04-A01-S01",
+    "assunto_id": "D04-A01",
+    "nome": "Planta Física e Fluxos do Centro Cirúrgico",
+    "descricao": "Organização física do CC.",
+    "slug": "planta-fisica-centro-cirurgico"
+  },
+  {
+    "id": "D04-A01-S02",
+    "assunto_id": "D04-A01",
+    "nome": "Zoneamento (não restrita/semirrestrita/restrita)",
+    "descricao": "Áreas do centro cirúrgico.",
+    "slug": "zoneamento-centro-cirurgico"
+  },
+  {
+    "id": "D04-A01-S03",
+    "assunto_id": "D04-A01",
+    "nome": "Equipe Cirúrgica: Papéis e Funções",
+    "descricao": "Funções da equipe cirúrgica.",
+    "slug": "equipe-cirurgica-papeis"
+  },
+  {
+    "id": "D04-A02-S01",
+    "assunto_id": "D04-A02",
+    "nome": "Paramentação Cirúrgica",
+    "descricao": "Vestimenta estéril cirúrgica.",
+    "slug": "paramentacao-cirurgica"
+  },
+  {
+    "id": "D04-A02-S02",
+    "assunto_id": "D04-A02",
+    "nome": "Escovação Cirúrgica das Mãos",
+    "descricao": "Técnica de escovação cirúrgica.",
+    "slug": "escovacao-cirurgica-das-maos"
+  },
+  {
+    "id": "D04-A02-S03",
+    "assunto_id": "D04-A02",
+    "nome": "Técnica Asséptica e Campo Estéril",
+    "descricao": "Manutenção do campo estéril.",
+    "slug": "tecnica-assepticacampo-esteril"
+  },
+  {
+    "id": "D04-A03-S01",
+    "assunto_id": "D04-A03",
+    "nome": "Instrumental Cirúrgico Básico",
+    "descricao": "Instrumentos cirúrgicos básicos.",
+    "slug": "instrumental-cirurgico-basico"
+  },
+  {
+    "id": "D04-A03-S02",
+    "assunto_id": "D04-A03",
+    "nome": "Posicionamento Cirúrgico do Paciente",
+    "descricao": "Decúbitos cirúrgicos.",
+    "slug": "posicionamento-cirurgico-do-paciente"
+  },
+  {
+    "id": "D04-A03-S03",
+    "assunto_id": "D04-A03",
+    "nome": "Contagem de Compressas e Instrumentais",
+    "descricao": "Contagem para evitar esquecimento de corpo estranho.",
+    "slug": "contagem-de-compressas-e-instrumentais"
+  },
+  {
+    "id": "D04-A04-S01",
+    "assunto_id": "D04-A04",
+    "nome": "Sala de Recuperação Pós-Anestésica (SRPA)",
+    "descricao": "Estrutura e cuidados da SRPA.",
+    "slug": "sala-de-recuperacao-pos-anestesica"
+  },
+  {
+    "id": "D04-A04-S02",
+    "assunto_id": "D04-A04",
+    "nome": "Escala de Aldrete e Kroulik",
+    "descricao": "Critérios de alta da SRPA.",
+    "slug": "escala-de-aldrete-kroulik"
+  },
+  {
+    "id": "D04-A04-S03",
+    "assunto_id": "D04-A04",
+    "nome": "Complicações Anestésicas Imediatas",
+    "descricao": "Intercorrências pós-anestésicas.",
+    "slug": "complicacoes-anestesicas-imediatas"
+  },
+  {
+    "id": "D04-A05-S01",
+    "assunto_id": "D04-A05",
+    "nome": "Fluxo do Material na CME",
+    "descricao": "Recepção, limpeza, preparo, esterilização, distribuição.",
+    "slug": "fluxo-do-material-na-cme"
+  },
+  {
+    "id": "D04-A05-S02",
+    "assunto_id": "D04-A05",
+    "nome": "Métodos de Limpeza e Desinfecção",
+    "descricao": "Técnicas de limpeza e desinfecção.",
+    "slug": "metodos-de-limpeza-e-desinfeccao"
+  },
+  {
+    "id": "D04-A05-S03",
+    "assunto_id": "D04-A05",
+    "nome": "Métodos de Esterilização",
+    "descricao": "Autoclave a vapor, óxido de etileno, plasma.",
+    "slug": "metodos-de-esterilizacao"
+  },
+  {
+    "id": "D04-A05-S04",
+    "assunto_id": "D04-A05",
+    "nome": "Indicadores de Esterilização",
+    "descricao": "Biológico, químico, físico.",
+    "slug": "indicadores-de-esterilizacao"
+  },
+  {
+    "id": "D04-A05-S05",
+    "assunto_id": "D04-A05",
+    "nome": "Rastreabilidade de Materiais",
+    "descricao": "Rastreio de materiais esterilizados.",
+    "slug": "rastreabilidade-de-materiais"
+  },
+  {
+    "id": "D04-A05-S06",
+    "assunto_id": "D04-A05",
+    "nome": "Embalagem e Armazenamento de Materiais Estéreis",
+    "descricao": "Acondicionamento e validade.",
+    "slug": "embalagem-e-armazenamento-de-materiais-esteris"
+  },
+  {
+    "id": "D05-A01-S01",
+    "assunto_id": "D05-A01",
+    "nome": "CCIH: Composição e Competências",
+    "descricao": "Comissão de Controle de Infecção Hospitalar.",
+    "slug": "ccih-composicao-e-competencias"
+  },
+  {
+    "id": "D05-A01-S02",
+    "assunto_id": "D05-A01",
+    "nome": "Serviço de Controle de Infecção Hospitalar (SCIH)",
+    "descricao": "Serviço executivo da CCIH.",
+    "slug": "scih"
+  },
+  {
+    "id": "D05-A01-S03",
+    "assunto_id": "D05-A01",
+    "nome": "Indicadores Epidemiológicos de IRAS",
+    "descricao": "Densidade de incidência, taxas.",
+    "slug": "indicadores-epidemiologicos-de-iras"
+  },
+  {
+    "id": "D05-A01-S04",
+    "assunto_id": "D05-A01",
+    "nome": "Notificação de IRAS à ANVISA",
+    "descricao": "Fluxo de notificação nacional.",
+    "slug": "notificacao-de-iras-anvisa"
+  },
+  {
+    "id": "D05-A02-S01",
+    "assunto_id": "D05-A02",
+    "nome": "Infecção de Corrente Sanguínea associada a CVC",
+    "descricao": "ICS-CVC.",
+    "slug": "icscvc"
+  },
+  {
+    "id": "D05-A02-S02",
+    "assunto_id": "D05-A02",
+    "nome": "Infecção do Trato Urinário associada a Cateter",
+    "descricao": "ITU-AC.",
+    "slug": "itu-associada-a-cateter"
+  },
+  {
+    "id": "D05-A02-S03",
+    "assunto_id": "D05-A02",
+    "nome": "Pneumonia Associada à Ventilação Mecânica",
+    "descricao": "PAV sob ótica de controle de infecção.",
+    "slug": "pav-controle-de-infeccao"
+  },
+  {
+    "id": "D05-A02-S04",
+    "assunto_id": "D05-A02",
+    "nome": "Infecção de Sítio Cirúrgico",
+    "descricao": "ISC.",
+    "slug": "infeccao-de-sitio-cirurgico"
+  },
+  {
+    "id": "D05-A03-S01",
+    "assunto_id": "D05-A03",
+    "nome": "Bactérias Multirresistentes",
+    "descricao": "MRSA, VRE, KPC, Acinetobacter.",
+    "slug": "bacterias-multirresistentes"
+  },
+  {
+    "id": "D05-A03-S02",
+    "assunto_id": "D05-A03",
+    "nome": "Uso Racional de Antimicrobianos",
+    "descricao": "Antimicrobial stewardship.",
+    "slug": "uso-racional-de-antimicrobianos"
+  },
+  {
+    "id": "D05-A04-S01",
+    "assunto_id": "D05-A04",
+    "nome": "Precauções (Controle de Infecção)",
+    "descricao": "Aplicação clínica das precauções.",
+    "slug": "precaucoes-controle-de-infeccao"
+  },
+  {
+    "id": "D05-A04-S02",
+    "assunto_id": "D05-A04",
+    "nome": "5 Momentos de Higienização das Mãos",
+    "descricao": "Guia OMS/ANVISA.",
+    "slug": "5-momentos-higienizacao-das-maos"
+  },
+  {
+    "id": "D05-A04-S03",
+    "assunto_id": "D05-A04",
+    "nome": "Bundles de Prevenção",
+    "descricao": "Pacotes de medidas para ICS, ITU, PAV, ISC.",
+    "slug": "bundles-de-prevencao"
+  },
+  {
+    "id": "D05-A04-S04",
+    "assunto_id": "D05-A04",
+    "nome": "Limpeza e Desinfecção de Superfícies Hospitalares",
+    "descricao": "Superfícies e ambiente hospitalar.",
+    "slug": "limpeza-e-desinfeccao-de-superficies"
+  },
+  {
+    "id": "D06-A01-S01",
+    "assunto_id": "D06-A01",
+    "nome": "Dengue, Zika e Chikungunya",
+    "descricao": "Arboviroses transmitidas por Aedes aegypti.",
+    "slug": "dengue-zika-chikungunya"
+  },
+  {
+    "id": "D06-A01-S02",
+    "assunto_id": "D06-A01",
+    "nome": "Malária",
+    "descricao": "Doença transmitida por Anopheles.",
+    "slug": "malaria"
+  },
+  {
+    "id": "D06-A01-S03",
+    "assunto_id": "D06-A01",
+    "nome": "Febre Amarela",
+    "descricao": "Arbovirose com vacina específica.",
+    "slug": "febre-amarela"
+  },
+  {
+    "id": "D06-A01-S04",
+    "assunto_id": "D06-A01",
+    "nome": "Leishmaniose",
+    "descricao": "Visceral e tegumentar.",
+    "slug": "leishmaniose",
+    "cobertura_por_edital": "REGIONAL"
+  },
+  {
+    "id": "D06-A01-S05",
+    "assunto_id": "D06-A01",
+    "nome": "Doença de Chagas",
+    "descricao": "Transmitida pelo triatomíneo.",
+    "slug": "doenca-de-chagas",
+    "cobertura_por_edital": "REGIONAL"
+  },
+  {
+    "id": "D06-A02-S01",
+    "assunto_id": "D06-A02",
+    "nome": "Tuberculose",
+    "descricao": "Diagnóstico, tratamento, DOT.",
+    "slug": "tuberculose"
+  },
+  {
+    "id": "D06-A02-S02",
+    "assunto_id": "D06-A02",
+    "nome": "Hanseníase",
+    "descricao": "Classificação e poliquimioterapia.",
+    "slug": "hanseniase"
+  },
+  {
+    "id": "D06-A02-S03",
+    "assunto_id": "D06-A02",
+    "nome": "COVID-19 e Síndromes Respiratórias Agudas",
+    "descricao": "Doença respiratória emergente e vigilância.",
+    "slug": "covid-19-e-sindromes-respiratorias"
+  },
+  {
+    "id": "D06-A02-S04",
+    "assunto_id": "D06-A02",
+    "nome": "Influenza e Vigilância de Síndrome Gripal",
+    "descricao": "Influenza sazonal e vigilância.",
+    "slug": "influenza-e-sindrome-gripal"
+  },
+  {
+    "id": "D06-A03-S01",
+    "assunto_id": "D06-A03",
+    "nome": "HIV/Aids",
+    "descricao": "Transmissão, prevenção, TARV, PEP/PrEP.",
+    "slug": "hiv-aids"
+  },
+  {
+    "id": "D06-A03-S02",
+    "assunto_id": "D06-A03",
+    "nome": "Sífilis",
+    "descricao": "Adquirida, congênita, gestacional.",
+    "slug": "sifilis"
+  },
+  {
+    "id": "D06-A03-S03",
+    "assunto_id": "D06-A03",
+    "nome": "Hepatites Virais",
+    "descricao": "Tipos A, B, C, D, E.",
+    "slug": "hepatites-virais"
+  },
+  {
+    "id": "D06-A03-S04",
+    "assunto_id": "D06-A03",
+    "nome": "Outras IST",
+    "descricao": "Gonorreia, clamídia, HPV, herpes genital.",
+    "slug": "outras-ist"
+  },
+  {
+    "id": "D06-A04-S01",
+    "assunto_id": "D06-A04",
+    "nome": "Sarampo, Rubéola, Caxumba",
+    "descricao": "Doenças imunopreveníveis virais.",
+    "slug": "sarampo-rubeola-caxumba"
+  },
+  {
+    "id": "D06-A04-S02",
+    "assunto_id": "D06-A04",
+    "nome": "Coqueluche, Difteria, Tétano",
+    "descricao": "Doenças imunopreveníveis bacterianas.",
+    "slug": "coqueluche-difteria-tetano"
+  },
+  {
+    "id": "D06-A04-S03",
+    "assunto_id": "D06-A04",
+    "nome": "Meningites",
+    "descricao": "Bacteriana, viral, outras.",
+    "slug": "meningites"
+  },
+  {
+    "id": "D06-A04-S04",
+    "assunto_id": "D06-A04",
+    "nome": "Doenças Negligenciadas",
+    "descricao": "Esquistossomose, geohelmintíases.",
+    "slug": "doencas-negligenciadas"
+  },
+  {
+    "id": "D06-A05-S01",
+    "assunto_id": "D06-A05",
+    "nome": "Precauções Específicas por Via de Transmissão",
+    "descricao": "Contato, gotículas, aerossóis aplicadas à doença.",
+    "slug": "precaucoes-especificas-doencas-transmissiveis"
+  },
+  {
+    "id": "D06-A05-S02",
+    "assunto_id": "D06-A05",
+    "nome": "Isolamento Hospitalar",
+    "descricao": "Isolamento por doença transmissível.",
+    "slug": "isolamento-hospitalar"
+  },
+  {
+    "id": "D07-A01-S01",
+    "assunto_id": "D07-A01",
+    "nome": "Avaliação Pré-operatória",
+    "descricao": "Avaliação clínica pré-operatória.",
+    "slug": "avaliacao-pre-operatoria-medico-cirurgica"
+  },
+  {
+    "id": "D07-A01-S02",
+    "assunto_id": "D07-A01",
+    "nome": "Complicações Pós-operatórias",
+    "descricao": "Hemorragia, ISC, deiscência, TVP/TEP.",
+    "slug": "complicacoes-pos-operatorias"
+  },
+  {
+    "id": "D07-A01-S03",
+    "assunto_id": "D07-A01",
+    "nome": "Manejo de Drenos e Drenagens",
+    "descricao": "Cuidados com drenos cirúrgicos.",
+    "slug": "manejo-de-drenos-e-drenagens"
+  },
+  {
+    "id": "D07-A02-S01",
+    "assunto_id": "D07-A02",
+    "nome": "Cirurgia Ortopédica e Traumatológica",
+    "descricao": "Cuidados em cirurgia ortopédica.",
+    "slug": "cirurgia-ortopedica-e-traumatologica"
+  },
+  {
+    "id": "D07-A02-S02",
+    "assunto_id": "D07-A02",
+    "nome": "Cirurgia do Aparelho Digestivo",
+    "descricao": "Cuidados em cirurgia digestiva.",
+    "slug": "cirurgia-do-aparelho-digestivo"
+  },
+  {
+    "id": "D07-A02-S03",
+    "assunto_id": "D07-A02",
+    "nome": "Cirurgia Urológica",
+    "descricao": "Cuidados em cirurgia urológica.",
+    "slug": "cirurgia-urologica"
+  },
+  {
+    "id": "D07-A02-S04",
+    "assunto_id": "D07-A02",
+    "nome": "Cirurgia Oncológica",
+    "descricao": "Cuidados em cirurgia oncológica.",
+    "slug": "cirurgia-oncologica"
+  },
+  {
+    "id": "D07-A02-S05",
+    "assunto_id": "D07-A02",
+    "nome": "Neurocirurgia (cuidados básicos)",
+    "descricao": "Cuidados básicos neurocirúrgicos.",
+    "slug": "neurocirurgia-cuidados-basicos",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "observacoes_v1_1": "V1.1 (auditoria H1): nicho de Hospital Universitário/especializado, não currículo padrão do Enfermeiro generalista — manter como tag opcional, fora do núcleo nacional."
+  },
+  {
+    "id": "D07-A02-S06",
+    "assunto_id": "D07-A02",
+    "nome": "Cirurgia Cardíaca (cuidados básicos)",
+    "descricao": "Cuidados básicos em cirurgia cardíaca.",
+    "slug": "cirurgia-cardiaca-cuidados-basicos",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "observacoes_v1_1": "V1.1 (auditoria H1): mesma observação de Neurocirurgia — nicho de HU, tag opcional."
+  },
+  {
+    "id": "D07-A03-S01",
+    "assunto_id": "D07-A03",
+    "nome": "Estomias e Cuidados",
+    "descricao": "Colostomia, ileostomia, urostomia.",
+    "slug": "estomias-e-cuidados"
+  },
+  {
+    "id": "D07-A03-S02",
+    "assunto_id": "D07-A03",
+    "nome": "Feridas Cirúrgicas Complexas",
+    "descricao": "Feridas cirúrgicas de difícil cicatrização.",
+    "slug": "feridas-cirurgicas-complexas"
+  },
+  {
+    "id": "D07-A04-S01",
+    "assunto_id": "D07-A04",
+    "nome": "Enfermagem Oncológica Básica",
+    "descricao": "Quimioterapia e radioterapia — cuidados básicos.",
+    "slug": "enfermagem-oncologica-basica"
+  },
+  {
+    "id": "D07-A04-S02",
+    "assunto_id": "D07-A04",
+    "nome": "Cuidados Paliativos Oncológicos",
+    "descricao": "Paliação em oncologia.",
+    "slug": "cuidados-paliativos-oncologicos"
+  },
+  {
+    "id": "D08-A01-S01",
+    "assunto_id": "D08-A01",
+    "nome": "Lei nº 7.498/1986",
+    "descricao": "Regulamentação do exercício de enfermagem.",
+    "slug": "lei-7498-1986-exercicio-profissional"
+  },
+  {
+    "id": "D08-A01-S02",
+    "assunto_id": "D08-A01",
+    "nome": "Decreto nº 94.406/1987",
+    "descricao": "Regulamenta a Lei 7.498/1986.",
+    "slug": "decreto-94406-1987"
+  },
+  {
+    "id": "D08-A01-S03",
+    "assunto_id": "D08-A01",
+    "nome": "Atividades Privativas do Enfermeiro",
+    "descricao": "Atos privativos do Enfermeiro.",
+    "slug": "atividades-privativas-do-enfermeiro"
+  },
+  {
+    "id": "D08-A01-S04",
+    "assunto_id": "D08-A01",
+    "nome": "Composição da Equipe de Enfermagem",
+    "descricao": "Enfermeiro, Técnico, Auxiliar, Parteira.",
+    "slug": "composicao-da-equipe-de-enfermagem"
+  },
+  {
+    "id": "D08-A02-S01",
+    "assunto_id": "D08-A02",
+    "nome": "Resolução COFEN nº 564/2017",
+    "descricao": "Código de Ética dos Profissionais de Enfermagem.",
+    "slug": "resolucao-cofen-564-2017"
+  },
+  {
+    "id": "D08-A02-S02",
+    "assunto_id": "D08-A02",
+    "nome": "Princípios, Direitos, Deveres, Proibições (CEPE)",
+    "descricao": "Estrutura do Código de Ética.",
+    "slug": "principios-direitos-deveres-proibicoes-cepe"
+  },
+  {
+    "id": "D08-A02-S03",
+    "assunto_id": "D08-A02",
+    "nome": "Infrações e Penalidades Éticas",
+    "descricao": "Infrações éticas e suas penalidades.",
+    "slug": "infracoes-e-penalidades-eticas"
+  },
+  {
+    "id": "D08-A02-S04",
+    "assunto_id": "D08-A02",
+    "nome": "Processo Ético-Disciplinar (PED)",
+    "descricao": "Rito do processo ético-disciplinar.",
+    "slug": "processo-etico-disciplinar"
+  },
+  {
+    "id": "D08-A03-S01",
+    "assunto_id": "D08-A03",
+    "nome": "Organização e Competências do COFEN e COREN",
+    "descricao": "Estrutura do sistema COFEN/COREN.",
+    "slug": "organizacao-cofen-coren"
+  },
+  {
+    "id": "D08-A03-S02",
+    "assunto_id": "D08-A03",
+    "nome": "Registro e Inscrição Profissional",
+    "descricao": "Registro profissional obrigatório.",
+    "slug": "registro-e-inscricao-profissional"
+  },
+  {
+    "id": "D08-A03-S03",
+    "assunto_id": "D08-A03",
+    "nome": "Fiscalização do Exercício Profissional",
+    "descricao": "Fiscalização pelo sistema de conselhos.",
+    "slug": "fiscalizacao-do-exercicio-profissional"
+  },
+  {
+    "id": "D08-A04-S01",
+    "assunto_id": "D08-A04",
+    "nome": "Responsabilidade Civil, Penal, Administrativa e Ética",
+    "descricao": "Esferas de responsabilização profissional.",
+    "slug": "responsabilidade-civil-penal-administrativa-etica"
+  },
+  {
+    "id": "D08-A04-S02",
+    "assunto_id": "D08-A04",
+    "nome": "Imperícia, Imprudência e Negligência",
+    "descricao": "Modalidades de culpa profissional.",
+    "slug": "impericia-imprudencia-negligencia"
+  },
+  {
+    "id": "D08-A04-S03",
+    "assunto_id": "D08-A04",
+    "nome": "Sigilo e Confidencialidade Profissional",
+    "descricao": "Dever de sigilo profissional.",
+    "slug": "sigilo-e-confidencialidade-profissional"
+  },
+  {
+    "id": "D08-A05-S01",
+    "assunto_id": "D08-A05",
+    "nome": "Resolução COFEN nº 358/2009",
+    "descricao": "SAE sob ótica normativa.",
+    "slug": "resolucao-cofen-358-2009"
+  },
+  {
+    "id": "D08-A05-S02",
+    "assunto_id": "D08-A05",
+    "nome": "Resolução COFEN nº 543/2017",
+    "descricao": "Dimensionamento sob ótica normativa.",
+    "slug": "resolucao-cofen-543-2017"
+  },
+  {
+    "id": "D08-A05-S03",
+    "assunto_id": "D08-A05",
+    "nome": "Resolução COFEN nº 429/2012",
+    "descricao": "Registros de enfermagem no prontuário.",
+    "slug": "resolucao-cofen-429-2012"
+  },
+  {
+    "id": "D09-A01-S01",
+    "assunto_id": "D09-A01",
+    "nome": "Farmacocinética",
+    "descricao": "Absorção, distribuição, metabolismo, excreção.",
+    "slug": "farmacocinetica"
+  },
+  {
+    "id": "D09-A01-S02",
+    "assunto_id": "D09-A01",
+    "nome": "Farmacodinâmica",
+    "descricao": "Mecanismo de ação e receptores.",
+    "slug": "farmacodinamica"
+  },
+  {
+    "id": "D09-A01-S03",
+    "assunto_id": "D09-A01",
+    "nome": "RAM e Farmacovigilância",
+    "descricao": "Reações adversas a medicamentos.",
+    "slug": "ram-e-farmacovigilancia"
+  },
+  {
+    "id": "D09-A01-S04",
+    "assunto_id": "D09-A01",
+    "nome": "Interações Medicamentosas",
+    "descricao": "Interações entre fármacos.",
+    "slug": "interacoes-medicamentosas"
+  },
+  {
+    "id": "D09-A02-S01",
+    "assunto_id": "D09-A02",
+    "nome": "Medicamentos de Alta Vigilância (MAV)",
+    "descricao": "Medicamentos potencialmente perigosos.",
+    "slug": "medicamentos-de-alta-vigilancia"
+  },
+  {
+    "id": "D09-A02-S02",
+    "assunto_id": "D09-A02",
+    "nome": "Protocolo de Segurança na Prescrição/Uso/Administração",
+    "descricao": "Protocolo PNSP para medicamentos.",
+    "slug": "protocolo-seguranca-medicamentosa-farmacologia"
+  },
+  {
+    "id": "D09-A03-S01",
+    "assunto_id": "D09-A03",
+    "nome": "Analgésicos, Antitérmicos e Anti-inflamatórios",
+    "descricao": "Classe farmacológica.",
+    "slug": "analgesicos-antitermicos-anti-inflamatorios"
+  },
+  {
+    "id": "D09-A03-S02",
+    "assunto_id": "D09-A03",
+    "nome": "Antibióticos e Antimicrobianos",
+    "descricao": "Classe farmacológica.",
+    "slug": "antibioticos-e-antimicrobianos"
+  },
+  {
+    "id": "D09-A03-S03",
+    "assunto_id": "D09-A03",
+    "nome": "Anti-hipertensivos",
+    "descricao": "IECA, BRA, betabloqueadores, diuréticos, BCC.",
+    "slug": "anti-hipertensivos"
+  },
+  {
+    "id": "D09-A03-S04",
+    "assunto_id": "D09-A03",
+    "nome": "Hipoglicemiantes Orais e Insulinas",
+    "descricao": "Classe farmacológica antidiabética.",
+    "slug": "hipoglicemiantes-e-insulinas"
+  },
+  {
+    "id": "D09-A03-S05",
+    "assunto_id": "D09-A03",
+    "nome": "Psicofármacos",
+    "descricao": "Antipsicóticos, antidepressivos, benzodiazepínicos.",
+    "slug": "psicofarmacos"
+  },
+  {
+    "id": "D09-A03-S06",
+    "assunto_id": "D09-A03",
+    "nome": "Anticoagulantes e Antiplaquetários",
+    "descricao": "Heparina, varfarina, DOAC, AAS.",
+    "slug": "anticoagulantes-e-antiplaquetarios"
+  },
+  {
+    "id": "D09-A03-S07",
+    "assunto_id": "D09-A03",
+    "nome": "Drogas Vasoativas (Farmacologia)",
+    "descricao": "Classe farmacológica vasoativa.",
+    "slug": "drogas-vasoativas-farmacologia"
+  },
+  {
+    "id": "D09-A03-S08",
+    "assunto_id": "D09-A03",
+    "nome": "Broncodilatadores e Corticoides Inalatórios",
+    "descricao": "Classe farmacológica respiratória.",
+    "slug": "broncodilatadores-e-corticoides-inalatorios"
+  },
+  {
+    "id": "D09-A03-S09",
+    "assunto_id": "D09-A03",
+    "nome": "Anestésicos Locais e Gerais",
+    "descricao": "Classe farmacológica anestésica.",
+    "slug": "anestesicos-locais-e-gerais"
+  },
+  {
+    "id": "D09-A03-S10",
+    "assunto_id": "D09-A03",
+    "nome": "Vacinas e Imunobiológicos (Farmacologia)",
+    "descricao": "Farmacologia dos imunobiológicos.",
+    "slug": "vacinas-e-imunobiologicos-farmacologia"
+  },
+  {
+    "id": "D09-A04-S01",
+    "assunto_id": "D09-A04",
+    "nome": "Cálculo de Dose e Gotejamento",
+    "descricao": "Cálculo farmacológico aplicado.",
+    "slug": "calculo-de-dose-e-gotejamento"
+  },
+  {
+    "id": "D09-A04-S02",
+    "assunto_id": "D09-A04",
+    "nome": "Diluição e Reconstituição de Medicamentos",
+    "descricao": "Preparo de medicamentos.",
+    "slug": "diluicao-e-reconstituicao-de-medicamentos"
+  },
+  {
+    "id": "D09-A04-S03",
+    "assunto_id": "D09-A04",
+    "nome": "Compatibilidade de Medicamentos em Y-site",
+    "descricao": "Compatibilidade de infusões simultâneas.",
+    "slug": "compatibilidade-de-medicamentos"
+  },
+  {
+    "id": "D10-A01-S01",
+    "assunto_id": "D10-A01",
+    "nome": "História da Enfermagem",
+    "descricao": "Evolução histórica da profissão.",
+    "slug": "historia-da-enfermagem"
+  },
+  {
+    "id": "D10-A01-S02",
+    "assunto_id": "D10-A01",
+    "nome": "Teorias de Enfermagem",
+    "descricao": "Nightingale, Orem, Roy, Watson.",
+    "slug": "teorias-de-enfermagem"
+  },
+  {
+    "id": "D10-A01-S03",
+    "assunto_id": "D10-A01",
+    "nome": "Processo de Enfermagem",
+    "descricao": "Introdução conceitual (aprofundado em SAE).",
+    "slug": "processo-de-enfermagem"
+  },
+  {
+    "id": "D10-A02-S01",
+    "assunto_id": "D10-A02",
+    "nome": "Exame Físico",
+    "descricao": "Técnicas de exame físico.",
+    "slug": "exame-fisico"
+  },
+  {
+    "id": "D10-A02-S02",
+    "assunto_id": "D10-A02",
+    "nome": "Sinais Vitais",
+    "descricao": "PA, FC, FR, temperatura, SpO2.",
+    "slug": "sinais-vitais"
+  },
+  {
+    "id": "D10-A02-S03",
+    "assunto_id": "D10-A02",
+    "nome": "Semiologia de Enfermagem",
+    "descricao": "Estudo dos sinais e sintomas.",
+    "slug": "semiologia-de-enfermagem"
+  },
+  {
+    "id": "D10-A02-S04",
+    "assunto_id": "D10-A02",
+    "nome": "Semiotécnica de Enfermagem",
+    "descricao": "Técnicas de exame e procedimento.",
+    "slug": "semiotecnica-de-enfermagem"
+  },
+  {
+    "id": "D10-A02-S05",
+    "assunto_id": "D10-A02",
+    "nome": "Avaliação e Manejo da Dor",
+    "descricao": "Escalas e manejo da dor.",
+    "slug": "avaliacao-e-manejo-da-dor"
+  },
+  {
+    "id": "D10-A02-S06",
+    "assunto_id": "D10-A02",
+    "nome": "Consulta de Enfermagem",
+    "descricao": "Estrutura da consulta de enfermagem.",
+    "slug": "consulta-de-enfermagem"
+  },
+  {
+    "id": "D10-A03-S01",
+    "assunto_id": "D10-A03",
+    "nome": "Higiene e Conforto",
+    "descricao": "Cuidados de higiene e conforto.",
+    "slug": "higiene-e-conforto"
+  },
+  {
+    "id": "D10-A03-S02",
+    "assunto_id": "D10-A03",
+    "nome": "Higiene das Mãos",
+    "descricao": "Técnica de higienização das mãos.",
+    "slug": "higiene-das-maos"
+  },
+  {
+    "id": "D10-A03-S03",
+    "assunto_id": "D10-A03",
+    "nome": "Mobilização e Transporte do Paciente",
+    "descricao": "Técnicas de mobilização e transporte.",
+    "slug": "mobilizacao-e-transporte-do-paciente"
+  },
+  {
+    "id": "D10-A03-S04",
+    "assunto_id": "D10-A03",
+    "nome": "Prevenção de Quedas",
+    "descricao": "Medidas de prevenção de quedas.",
+    "slug": "prevencao-de-quedas"
+  },
+  {
+    "id": "D10-A03-S05",
+    "assunto_id": "D10-A03",
+    "nome": "Prevenção de Lesão por Pressão",
+    "descricao": "Prevenção de LPP.",
+    "slug": "prevencao-de-lesao-por-pressao"
+  },
+  {
+    "id": "D10-A04-S01",
+    "assunto_id": "D10-A04",
+    "nome": "Curativos",
+    "descricao": "Tipos e técnicas de curativo.",
+    "slug": "curativos"
+  },
+  {
+    "id": "D10-A04-S02",
+    "assunto_id": "D10-A04",
+    "nome": "Feridas e Cicatrização",
+    "descricao": "Fases da cicatrização.",
+    "slug": "feridas-e-cicatrizacao"
+  },
+  {
+    "id": "D10-A04-S03",
+    "assunto_id": "D10-A04",
+    "nome": "Bandagens",
+    "descricao": "Técnicas de bandagem.",
+    "slug": "bandagens"
+  },
+  {
+    "id": "D10-A05-S01",
+    "assunto_id": "D10-A05",
+    "nome": "Administração de Medicamentos",
+    "descricao": "Técnica geral de administração.",
+    "slug": "administracao-de-medicamentos"
+  },
+  {
+    "id": "D10-A05-S02",
+    "assunto_id": "D10-A05",
+    "nome": "Administração Segura de Medicamentos",
+    "descricao": "Os 9 certos.",
+    "slug": "administracao-segura-de-medicamentos"
+  },
+  {
+    "id": "D10-A05-S03",
+    "assunto_id": "D10-A05",
+    "nome": "Vias de Administração de Medicamentos",
+    "descricao": "Vias de administração.",
+    "slug": "vias-de-administracao-de-medicamentos"
+  },
+  {
+    "id": "D10-A05-S04",
+    "assunto_id": "D10-A05",
+    "nome": "Cálculo de Medicamentos",
+    "descricao": "Cálculo de dose/gotejamento aplicado.",
+    "slug": "calculo-de-medicamentos"
+  },
+  {
+    "id": "D10-A06-S01",
+    "assunto_id": "D10-A06",
+    "nome": "Punção Venosa",
+    "descricao": "Técnica de punção venosa.",
+    "slug": "puncao-venosa"
+  },
+  {
+    "id": "D10-A06-S02",
+    "assunto_id": "D10-A06",
+    "nome": "Terapia Intravenosa",
+    "descricao": "Terapia IV.",
+    "slug": "terapia-intravenosa"
+  },
+  {
+    "id": "D10-A06-S03",
+    "assunto_id": "D10-A06",
+    "nome": "Sondagem Vesical",
+    "descricao": "SVD/SVA.",
+    "slug": "sondagem-vesical"
+  },
+  {
+    "id": "D10-A06-S04",
+    "assunto_id": "D10-A06",
+    "nome": "Sondagem Gastrointestinal",
+    "descricao": "SNG/SNE.",
+    "slug": "sondagem-gastrointestinal"
+  },
+  {
+    "id": "D10-A06-S05",
+    "assunto_id": "D10-A06",
+    "nome": "Nutrição Enteral",
+    "descricao": "Terapia nutricional enteral.",
+    "slug": "nutricao-enteral"
+  },
+  {
+    "id": "D10-A06-S06",
+    "assunto_id": "D10-A06",
+    "nome": "Nutrição Parenteral",
+    "descricao": "NPT/NPP.",
+    "slug": "nutricao-parenteral"
+  },
+  {
+    "id": "D10-A06-S07",
+    "assunto_id": "D10-A06",
+    "nome": "Oxigenoterapia",
+    "descricao": "Suplementação de oxigênio.",
+    "slug": "oxigenoterapia"
+  },
+  {
+    "id": "D10-A06-S08",
+    "assunto_id": "D10-A06",
+    "nome": "Aspiração de Vias Aéreas",
+    "descricao": "Técnica de aspiração.",
+    "slug": "aspiracao-de-vias-aereas"
+  },
+  {
+    "id": "D10-A06-S09",
+    "assunto_id": "D10-A06",
+    "nome": "Balanço Hídrico",
+    "descricao": "Controle de ganhos e perdas.",
+    "slug": "balanco-hidrico"
+  },
+  {
+    "id": "D10-A06-S10",
+    "assunto_id": "D10-A06",
+    "nome": "Coleta de Material Biológico",
+    "descricao": "Coleta de exames.",
+    "slug": "coleta-de-material-biologico"
+  },
+  {
+    "id": "D10-A07-S01",
+    "assunto_id": "D10-A07",
+    "nome": "Comunicação Efetiva",
+    "descricao": "Comunicação entre profissionais.",
+    "slug": "comunicacao-efetiva"
+  },
+  {
+    "id": "D10-A07-S02",
+    "assunto_id": "D10-A07",
+    "nome": "Comunicação Terapêutica",
+    "descricao": "Comunicação enfermeiro-paciente.",
+    "slug": "comunicacao-terapeutica"
+  },
+  {
+    "id": "D10-A07-S03",
+    "assunto_id": "D10-A07",
+    "nome": "Cuidados Pré-operatórios",
+    "descricao": "Preparo pré-operatório geral.",
+    "slug": "cuidados-pre-operatorios"
+  },
+  {
+    "id": "D10-A07-S04",
+    "assunto_id": "D10-A07",
+    "nome": "Cuidados Pós-operatórios",
+    "descricao": "Cuidados pós-operatórios gerais.",
+    "slug": "cuidados-pos-operatorios"
+  },
+  {
+    "id": "D10-A07-S05",
+    "assunto_id": "D10-A07",
+    "nome": "Cirurgia Segura",
+    "descricao": "Checklist básico de cirurgia segura.",
+    "slug": "cirurgia-segura"
+  },
+  {
+    "id": "D10-A08-S01",
+    "assunto_id": "D10-A08",
+    "nome": "Identificação do Paciente",
+    "descricao": "Pulseira e dupla checagem.",
+    "slug": "identificacao-do-paciente"
+  },
+  {
+    "id": "D10-A08-S02",
+    "assunto_id": "D10-A08",
+    "nome": "Registros e Anotações de Enfermagem",
+    "descricao": "Documentação do cuidado.",
+    "slug": "registros-e-anotacoes-de-enfermagem"
+  },
+  {
+    "id": "D10-A08-S03",
+    "assunto_id": "D10-A08",
+    "nome": "Humanização da Assistência",
+    "descricao": "Humanização no cuidado direto.",
+    "slug": "humanizacao-da-assistencia"
+  },
+  {
+    "id": "D11-A01-S01",
+    "assunto_id": "D11-A01",
+    "nome": "PNI: Histórico e Objetivos",
+    "descricao": "Programa Nacional de Imunizações.",
+    "slug": "pni-historico-e-objetivos"
+  },
+  {
+    "id": "D11-A01-S02",
+    "assunto_id": "D11-A01",
+    "nome": "Calendário Nacional de Vacinação",
+    "descricao": "Criança, adolescente, adulto, idoso, gestante.",
+    "slug": "calendario-nacional-de-vacinacao"
+  },
+  {
+    "id": "D11-A01-S03",
+    "assunto_id": "D11-A01",
+    "nome": "SI-PNI",
+    "descricao": "Sistema de informação do PNI.",
+    "slug": "si-pni"
+  },
+  {
+    "id": "D11-A02-S01",
+    "assunto_id": "D11-A02",
+    "nome": "Cadeia de Frio / Rede de Frio",
+    "descricao": "Conservação da temperatura dos imunobiológicos.",
+    "slug": "cadeia-de-frio"
+  },
+  {
+    "id": "D11-A02-S02",
+    "assunto_id": "D11-A02",
+    "nome": "Armazenamento e Conservação de Imunobiológicos",
+    "descricao": "Transporte e armazenamento.",
+    "slug": "armazenamento-e-conservacao-de-imunobiologicos"
+  },
+  {
+    "id": "D11-A02-S03",
+    "assunto_id": "D11-A02",
+    "nome": "Sala de Vacinação",
+    "descricao": "Estrutura e organização da sala.",
+    "slug": "sala-de-vacinacao"
+  },
+  {
+    "id": "D11-A03-S01",
+    "assunto_id": "D11-A03",
+    "nome": "Vias de Administração de Vacinas",
+    "descricao": "Vias de aplicação.",
+    "slug": "vias-de-administracao-de-vacinas"
+  },
+  {
+    "id": "D11-A03-S02",
+    "assunto_id": "D11-A03",
+    "nome": "Aprazamento e Esquemas Vacinais",
+    "descricao": "Intervalos e esquemas de doses.",
+    "slug": "aprazamento-e-esquemas-vacinais"
+  },
+  {
+    "id": "D11-A03-S03",
+    "assunto_id": "D11-A03",
+    "nome": "Contraindicações e Falsas Contraindicações",
+    "descricao": "Situações que impedem ou não a vacinação.",
+    "slug": "contraindicacoes-e-falsas-contraindicacoes"
+  },
+  {
+    "id": "D11-A03-S04",
+    "assunto_id": "D11-A03",
+    "nome": "Eventos Adversos Pós-Vacinação (EAPV)",
+    "descricao": "Reações após vacinação.",
+    "slug": "eventos-adversos-pos-vacinacao"
+  },
+  {
+    "id": "D11-A04-S01",
+    "assunto_id": "D11-A04",
+    "nome": "Vacinas do Calendário Básico",
+    "descricao": "BCG, Hepatite B, Pentavalente etc.",
+    "slug": "vacinas-do-calendario-basico"
+  },
+  {
+    "id": "D11-A04-S02",
+    "assunto_id": "D11-A04",
+    "nome": "Imunobiológicos Especiais (CRIE)",
+    "descricao": "Centro de Referência para Imunobiológicos Especiais.",
+    "slug": "imunobiologicos-especiais-crie"
+  },
+  {
+    "id": "D11-A04-S03",
+    "assunto_id": "D11-A04",
+    "nome": "Soros e Imunoglobulinas",
+    "descricao": "Imunização passiva.",
+    "slug": "soros-e-imunoglobulinas"
+  },
+  {
+    "id": "D12-A01-S01",
+    "assunto_id": "D12-A01",
+    "nome": "Componentes de Computador",
+    "descricao": "Hardware básico.",
+    "slug": "componentes-de-computador"
+  },
+  {
+    "id": "D12-A01-S02",
+    "assunto_id": "D12-A01",
+    "nome": "Sistemas Operacionais",
+    "descricao": "Windows, Linux — noções.",
+    "slug": "sistemas-operacionais"
+  },
+  {
+    "id": "D12-A02-S01",
+    "assunto_id": "D12-A02",
+    "nome": "Editor de Texto",
+    "descricao": "MS Word / LibreOffice Writer.",
+    "slug": "editor-de-texto"
+  },
+  {
+    "id": "D12-A02-S02",
+    "assunto_id": "D12-A02",
+    "nome": "Planilha Eletrônica",
+    "descricao": "MS Excel / LibreOffice Calc.",
+    "slug": "planilha-eletronica"
+  },
+  {
+    "id": "D12-A02-S03",
+    "assunto_id": "D12-A02",
+    "nome": "Apresentações",
+    "descricao": "MS PowerPoint.",
+    "slug": "apresentacoes"
+  },
+  {
+    "id": "D12-A03-S01",
+    "assunto_id": "D12-A03",
+    "nome": "Navegadores e Correio Eletrônico",
+    "descricao": "Browsers e e-mail.",
+    "slug": "navegadores-e-correio-eletronico"
+  },
+  {
+    "id": "D12-A03-S02",
+    "assunto_id": "D12-A03",
+    "nome": "Segurança da Informação",
+    "descricao": "Vírus, phishing, backup.",
+    "slug": "seguranca-da-informacao"
+  },
+  {
+    "id": "D12-A03-S03",
+    "assunto_id": "D12-A03",
+    "nome": "Computação em Nuvem",
+    "descricao": "Cloud computing — noções.",
+    "slug": "computacao-em-nuvem"
+  },
+  {
+    "id": "D12-A04-S01",
+    "assunto_id": "D12-A04",
+    "nome": "Prontuário Eletrônico do Paciente",
+    "descricao": "PEP como ferramenta de TI.",
+    "slug": "prontuario-eletronico-do-paciente"
+  },
+  {
+    "id": "D12-A04-S02",
+    "assunto_id": "D12-A04",
+    "nome": "Sistemas de Informação em Saúde (Informática)",
+    "descricao": "Sistemas de TI em saúde.",
+    "slug": "sistemas-de-informacao-em-saude-informatica"
+  },
+  {
+    "id": "D13-A01-S01",
+    "assunto_id": "D13-A01",
+    "nome": "CF/1988 arts. 196-200",
+    "descricao": "Saúde como direito constitucional.",
+    "slug": "cf-1988-arts-196-200"
+  },
+  {
+    "id": "D13-A01-S02",
+    "assunto_id": "D13-A01",
+    "nome": "Lei nº 8.080/1990",
+    "descricao": "Lei Orgânica da Saúde.",
+    "slug": "lei-8080-1990"
+  },
+  {
+    "id": "D13-A01-S03",
+    "assunto_id": "D13-A01",
+    "nome": "Lei nº 8.142/1990",
+    "descricao": "Participação da comunidade e financiamento.",
+    "slug": "lei-8142-1990"
+  },
+  {
+    "id": "D13-A01-S04",
+    "assunto_id": "D13-A01",
+    "nome": "Lei Complementar nº 141/2012",
+    "descricao": "Financiamento e aplicação de recursos.",
+    "slug": "lc-141-2012"
+  },
+  {
+    "id": "D13-A02-S01",
+    "assunto_id": "D13-A02",
+    "nome": "Princípios Doutrinários do SUS",
+    "descricao": "Universalidade, equidade, integralidade.",
+    "slug": "principios-doutrinarios-do-sus"
+  },
+  {
+    "id": "D13-A02-S02",
+    "assunto_id": "D13-A02",
+    "nome": "Princípios Organizativos do SUS",
+    "descricao": "Descentralização, regionalização, hierarquização, participação.",
+    "slug": "principios-organizativos-do-sus"
+  },
+  {
+    "id": "D13-A03-S01",
+    "assunto_id": "D13-A03",
+    "nome": "Normas Operacionais Básicas (NOB-SUS)",
+    "descricao": "Normas históricas de gestão do SUS.",
+    "slug": "normas-operacionais-basicas-sus"
+  },
+  {
+    "id": "D13-A03-S02",
+    "assunto_id": "D13-A03",
+    "nome": "NOAS",
+    "descricao": "Norma Operacional da Assistência à Saúde.",
+    "slug": "noas-sus"
+  },
+  {
+    "id": "D13-A03-S03",
+    "assunto_id": "D13-A03",
+    "nome": "Pacto pela Saúde",
+    "descricao": "Pacto pela Saúde de 2006.",
+    "slug": "pacto-pela-saude"
+  },
+  {
+    "id": "D13-A03-S04",
+    "assunto_id": "D13-A03",
+    "nome": "Comissões Intergestores (CIT, CIB)",
+    "descricao": "Instâncias de pactuação.",
+    "slug": "comissoes-intergestores"
+  },
+  {
+    "id": "D13-A03-S05",
+    "assunto_id": "D13-A03",
+    "nome": "COAP",
+    "descricao": "Contrato Organizativo da Ação Pública.",
+    "slug": "coap"
+  },
+  {
+    "id": "D13-A03-S06",
+    "assunto_id": "D13-A03",
+    "nome": "Decreto nº 7.508/2011",
+    "descricao": "Regulamenta a Lei 8.080/1990.",
+    "slug": "decreto-7508-2011"
+  },
+  {
+    "id": "D13-A04-S01",
+    "assunto_id": "D13-A04",
+    "nome": "Conselhos de Saúde",
+    "descricao": "Nacional, estadual, municipal.",
+    "slug": "conselhos-de-saude"
+  },
+  {
+    "id": "D13-A04-S02",
+    "assunto_id": "D13-A04",
+    "nome": "Conferências de Saúde",
+    "descricao": "Instância periódica de participação.",
+    "slug": "conferencias-de-saude"
+  },
+  {
+    "id": "D13-A05-S01",
+    "assunto_id": "D13-A05",
+    "nome": "Redes de Atenção à Saúde (RAS)",
+    "descricao": "Base legal das RAS.",
+    "slug": "redes-de-atencao-a-saude"
+  },
+  {
+    "id": "D13-A05-S02",
+    "assunto_id": "D13-A05",
+    "nome": "Regionalização e Hierarquização dos Serviços",
+    "descricao": "Organização territorial dos serviços.",
+    "slug": "regionalizacao-e-hierarquizacao"
+  },
+  {
+    "id": "D14-A01-S01",
+    "assunto_id": "D14-A01",
+    "nome": "PNAB (Portaria nº 2.436/2017)",
+    "descricao": "Política Nacional de Atenção Básica.",
+    "slug": "pnab-2017"
+  },
+  {
+    "id": "D14-A01-S02",
+    "assunto_id": "D14-A01",
+    "nome": "Estratégia Saúde da Família (ESF)",
+    "descricao": "Modelo assistencial da APS.",
+    "slug": "estrategia-saude-da-familia"
+  },
+  {
+    "id": "D14-A01-S03",
+    "assunto_id": "D14-A01",
+    "nome": "Agente Comunitário de Saúde (ACS)",
+    "descricao": "Lei nº 11.350/2006.",
+    "slug": "agente-comunitario-de-saude"
+  },
+  {
+    "id": "D14-A01-S04",
+    "assunto_id": "D14-A01",
+    "nome": "NASF/eMulti",
+    "descricao": "Núcleo Ampliado de Saúde da Família / Equipe Multiprofissional.",
+    "slug": "nasf-emulti"
+  },
+  {
+    "id": "D14-A01-S05",
+    "assunto_id": "D14-A01",
+    "nome": "Território e Adscrição de Clientela",
+    "descricao": "Conceito de território na APS.",
+    "slug": "territorio-e-adscricao"
+  },
+  {
+    "id": "D14-A01-S06",
+    "assunto_id": "D14-A01",
+    "nome": "Programa Saúde na Escola (PSE)",
+    "descricao": "Ação intersetorial saúde-educação.",
+    "slug": "programa-saude-na-escola"
+  },
+  {
+    "id": "D14-A01-S07",
+    "assunto_id": "D14-A01",
+    "nome": "Programa Previne Brasil",
+    "descricao": "Financiamento da APS.",
+    "slug": "programa-previne-brasil"
+  },
+  {
+    "id": "D14-A02-S01",
+    "assunto_id": "D14-A02",
+    "nome": "PNH / HumanizaSUS",
+    "descricao": "Política Nacional de Humanização.",
+    "slug": "pnh-humanizasus"
+  },
+  {
+    "id": "D14-A02-S02",
+    "assunto_id": "D14-A02",
+    "nome": "PMAQ",
+    "descricao": "Programa Nacional de Melhoria do Acesso e da Qualidade.",
+    "slug": "pmaq"
+  },
+  {
+    "id": "D14-A02-S03",
+    "assunto_id": "D14-A02",
+    "nome": "Acolhimento com Classificação de Risco",
+    "descricao": "Acolhimento em rede de atenção.",
+    "slug": "acolhimento-com-classificacao-de-risco"
+  },
+  {
+    "id": "D14-A03-S01",
+    "assunto_id": "D14-A03",
+    "nome": "Rede Cegonha",
+    "descricao": "Portaria nº 1.459/2011.",
+    "slug": "rede-cegonha"
+  },
+  {
+    "id": "D14-A03-S02",
+    "assunto_id": "D14-A03",
+    "nome": "RAPS",
+    "descricao": "Rede de Atenção Psicossocial.",
+    "slug": "raps"
+  },
+  {
+    "id": "D14-A03-S03",
+    "assunto_id": "D14-A03",
+    "nome": "RUE",
+    "descricao": "Rede de Atenção às Urgências e Emergências.",
+    "slug": "rue"
+  },
+  {
+    "id": "D14-A03-S04",
+    "assunto_id": "D14-A03",
+    "nome": "Rede de Cuidados à Pessoa com Deficiência",
+    "descricao": "Rede temática de deficiência.",
+    "slug": "rede-cuidados-pessoa-com-deficiencia"
+  },
+  {
+    "id": "D14-A03-S05",
+    "assunto_id": "D14-A03",
+    "nome": "Linha de Cuidado",
+    "descricao": "Conceito transversal de continuidade assistencial.",
+    "slug": "linha-de-cuidado"
+  },
+  {
+    "id": "D14-A04-S01",
+    "assunto_id": "D14-A04",
+    "nome": "Política Saúde da População Negra",
+    "descricao": "Política específica por população.",
+    "slug": "politica-saude-populacao-negra"
+  },
+  {
+    "id": "D14-A04-S02",
+    "assunto_id": "D14-A04",
+    "nome": "Política Nacional de Saúde da Pessoa Idosa",
+    "descricao": "Política específica por população.",
+    "slug": "politica-nacional-saude-pessoa-idosa"
+  },
+  {
+    "id": "D14-A04-S03",
+    "assunto_id": "D14-A04",
+    "nome": "PNAISH",
+    "descricao": "Política Nacional de Atenção Integral à Saúde do Homem.",
+    "slug": "pnaish"
+  },
+  {
+    "id": "D14-A04-S04",
+    "assunto_id": "D14-A04",
+    "nome": "PNPIC",
+    "descricao": "Política Nacional de Práticas Integrativas e Complementares.",
+    "slug": "pnpic"
+  },
+  {
+    "id": "D14-A04-S05",
+    "assunto_id": "D14-A04",
+    "nome": "PNAN",
+    "descricao": "Política Nacional de Alimentação e Nutrição.",
+    "slug": "pnan"
+  },
+  {
+    "id": "D14-A04-S06",
+    "assunto_id": "D14-A04",
+    "nome": "PNPS",
+    "descricao": "Política Nacional de Promoção da Saúde.",
+    "slug": "pnps"
+  },
+  {
+    "id": "D15-A01-S01",
+    "assunto_id": "D15-A01",
+    "nome": "Interpretação de Texto",
+    "descricao": "Compreensão leitora.",
+    "slug": "interpretacao-de-texto"
+  },
+  {
+    "id": "D15-A01-S02",
+    "assunto_id": "D15-A01",
+    "nome": "Tipologia e Gênero Textual",
+    "descricao": "Tipos e gêneros de texto.",
+    "slug": "tipologia-e-genero-textual"
+  },
+  {
+    "id": "D15-A01-S03",
+    "assunto_id": "D15-A01",
+    "nome": "Coesão e Coerência",
+    "descricao": "Mecanismos textuais.",
+    "slug": "coesao-e-coerencia"
+  },
+  {
+    "id": "D15-A02-S01",
+    "assunto_id": "D15-A02",
+    "nome": "Ortografia e Acentuação",
+    "descricao": "Norma ortográfica.",
+    "slug": "ortografia-e-acentuacao"
+  },
+  {
+    "id": "D15-A02-S02",
+    "assunto_id": "D15-A02",
+    "nome": "Classes de Palavras",
+    "descricao": "Morfologia.",
+    "slug": "classes-de-palavras"
+  },
+  {
+    "id": "D15-A02-S03",
+    "assunto_id": "D15-A02",
+    "nome": "Sintaxe",
+    "descricao": "Período simples e composto.",
+    "slug": "sintaxe"
+  },
+  {
+    "id": "D15-A02-S04",
+    "assunto_id": "D15-A02",
+    "nome": "Concordância Verbal e Nominal",
+    "descricao": "Regras de concordância.",
+    "slug": "concordancia-verbal-e-nominal"
+  },
+  {
+    "id": "D15-A02-S05",
+    "assunto_id": "D15-A02",
+    "nome": "Regência Verbal e Nominal",
+    "descricao": "Regras de regência.",
+    "slug": "regencia-verbal-e-nominal"
+  },
+  {
+    "id": "D15-A02-S06",
+    "assunto_id": "D15-A02",
+    "nome": "Crase",
+    "descricao": "Uso do acento grave indicativo de crase.",
+    "slug": "crase"
+  },
+  {
+    "id": "D15-A02-S07",
+    "assunto_id": "D15-A02",
+    "nome": "Pontuação",
+    "descricao": "Uso dos sinais de pontuação.",
+    "slug": "pontuacao"
+  },
+  {
+    "id": "D15-A03-S01",
+    "assunto_id": "D15-A03",
+    "nome": "Significação de Palavras",
+    "descricao": "Sinonímia, antonímia, polissemia.",
+    "slug": "significacao-de-palavras"
+  },
+  {
+    "id": "D15-A03-S02",
+    "assunto_id": "D15-A03",
+    "nome": "Figuras de Linguagem",
+    "descricao": "Recursos estilísticos.",
+    "slug": "figuras-de-linguagem"
+  },
+  {
+    "id": "D16-A01-S01",
+    "assunto_id": "D16-A01",
+    "nome": "Proposições Simples e Compostas",
+    "descricao": "Lógica proposicional básica.",
+    "slug": "proposicoes-simples-e-compostas"
+  },
+  {
+    "id": "D16-A01-S02",
+    "assunto_id": "D16-A01",
+    "nome": "Conectivos Lógicos",
+    "descricao": "E, ou, se-então, se e somente se.",
+    "slug": "conectivos-logicos"
+  },
+  {
+    "id": "D16-A01-S03",
+    "assunto_id": "D16-A01",
+    "nome": "Tabela-Verdade",
+    "descricao": "Construção e leitura de tabela-verdade.",
+    "slug": "tabela-verdade"
+  },
+  {
+    "id": "D16-A01-S04",
+    "assunto_id": "D16-A01",
+    "nome": "Equivalências e Negações Lógicas",
+    "descricao": "Regras de equivalência e negação.",
+    "slug": "equivalencias-e-negacoes-logicas"
+  },
+  {
+    "id": "D16-A01-S05",
+    "assunto_id": "D16-A01",
+    "nome": "Argumentação Lógica",
+    "descricao": "Validade de argumentos.",
+    "slug": "argumentacao-logica"
+  },
+  {
+    "id": "D16-A02-S01",
+    "assunto_id": "D16-A02",
+    "nome": "Sequências Lógicas",
+    "descricao": "Padrões e sequências.",
+    "slug": "sequencias-logicas"
+  },
+  {
+    "id": "D16-A02-S02",
+    "assunto_id": "D16-A02",
+    "nome": "Problemas de Raciocínio Matemático",
+    "descricao": "Problemas aplicados.",
+    "slug": "problemas-de-raciocinio-matematico"
+  },
+  {
+    "id": "D16-A02-S03",
+    "assunto_id": "D16-A02",
+    "nome": "Porcentagem e Regra de Três",
+    "descricao": "Cálculo proporcional abstrato.",
+    "slug": "porcentagem-e-regra-de-tres"
+  },
+  {
+    "id": "D16-A02-S04",
+    "assunto_id": "D16-A02",
+    "nome": "Noções de Probabilidade",
+    "descricao": "Cálculo de probabilidade básica.",
+    "slug": "nocoes-de-probabilidade"
+  },
+  {
+    "id": "D16-A02-S05",
+    "assunto_id": "D16-A02",
+    "nome": "Conjuntos",
+    "descricao": "Teoria de conjuntos.",
+    "slug": "conjuntos"
+  },
+  {
+    "id": "D17-A01-S01",
+    "assunto_id": "D17-A01",
+    "nome": "Indicadores de Saúde",
+    "descricao": "Mortalidade, morbidade, natalidade.",
+    "slug": "indicadores-de-saude"
+  },
+  {
+    "id": "D17-A01-S02",
+    "assunto_id": "D17-A01",
+    "nome": "Coeficientes e Taxas Epidemiológicas",
+    "descricao": "Cálculo de coeficientes e taxas.",
+    "slug": "coeficientes-e-taxas-epidemiologicas"
+  },
+  {
+    "id": "D17-A01-S03",
+    "assunto_id": "D17-A01",
+    "nome": "Transição Demográfica e Epidemiológica",
+    "descricao": "Mudanças no perfil populacional e de doenças.",
+    "slug": "transicao-demografica-epidemiologica"
+  },
+  {
+    "id": "D17-A01-S04",
+    "assunto_id": "D17-A01",
+    "nome": "Cadeia Epidemiológica",
+    "descricao": "Agente, reservatório, porta de saída/entrada, transmissão, hospedeiro.",
+    "slug": "cadeia-epidemiologica"
+  },
+  {
+    "id": "D17-A01-S05",
+    "assunto_id": "D17-A01",
+    "nome": "Níveis de Prevenção",
+    "descricao": "Primária, secundária, terciária, quaternária.",
+    "slug": "niveis-de-prevencao"
+  },
+  {
+    "id": "D17-A02-S01",
+    "assunto_id": "D17-A02",
+    "nome": "Vigilância Epidemiológica",
+    "descricao": "Vigilância de agravos.",
+    "slug": "vigilancia-epidemiologica"
+  },
+  {
+    "id": "D17-A02-S02",
+    "assunto_id": "D17-A02",
+    "nome": "Vigilância Sanitária",
+    "descricao": "Vigilância de produtos e serviços.",
+    "slug": "vigilancia-sanitaria"
+  },
+  {
+    "id": "D17-A02-S03",
+    "assunto_id": "D17-A02",
+    "nome": "Vigilância Ambiental em Saúde",
+    "descricao": "Vigilância de fatores ambientais.",
+    "slug": "vigilancia-ambiental-em-saude"
+  },
+  {
+    "id": "D17-A02-S04",
+    "assunto_id": "D17-A02",
+    "nome": "Vigilância em Saúde do Trabalhador",
+    "descricao": "Vigilância de agravos ocupacionais.",
+    "slug": "vigilancia-em-saude-do-trabalhador"
+  },
+  {
+    "id": "D17-A02-S05",
+    "assunto_id": "D17-A02",
+    "nome": "Notificação Compulsória",
+    "descricao": "Doenças e agravos de notificação obrigatória.",
+    "slug": "notificacao-compulsoria"
+  },
+  {
+    "id": "D17-A02-S06",
+    "assunto_id": "D17-A02",
+    "nome": "Sistemas de Informação em Saúde",
+    "descricao": "SINAN, SIM, SINASC, e-SUS APS.",
+    "slug": "sistemas-de-informacao-em-saude"
+  },
+  {
+    "id": "D17-A03-S01",
+    "assunto_id": "D17-A03",
+    "nome": "Determinantes Sociais da Saúde",
+    "descricao": "DSS.",
+    "slug": "determinantes-sociais-da-saude"
+  },
+  {
+    "id": "D17-A03-S02",
+    "assunto_id": "D17-A03",
+    "nome": "Promoção da Saúde (Carta de Ottawa)",
+    "descricao": "Marco da promoção da saúde.",
+    "slug": "promocao-da-saude-carta-de-ottawa"
+  },
+  {
+    "id": "D17-A03-S03",
+    "assunto_id": "D17-A03",
+    "nome": "Educação em Saúde",
+    "descricao": "Estratégias educativas em saúde.",
+    "slug": "educacao-em-saude"
+  },
+  {
+    "id": "D17-A03-S04",
+    "assunto_id": "D17-A03",
+    "nome": "Saúde da Família e Comunidade",
+    "descricao": "Abordagem comunitária da saúde.",
+    "slug": "saude-da-familia-e-comunidade"
+  },
+  {
+    "id": "D17-A04-S01",
+    "assunto_id": "D17-A04",
+    "nome": "Planejamento Estratégico Situacional em Saúde",
+    "descricao": "Metodologia de planejamento em saúde.",
+    "slug": "planejamento-estrategico-situacional"
+  },
+  {
+    "id": "D17-A04-S02",
+    "assunto_id": "D17-A04",
+    "nome": "Diagnóstico de Saúde da Comunidade",
+    "descricao": "Diagnóstico situacional comunitário.",
+    "slug": "diagnostico-de-saude-da-comunidade"
+  },
+  {
+    "id": "D18-A01-S01",
+    "assunto_id": "D18-A01",
+    "nome": "Avaliação do Recém-nascido / Apgar",
+    "descricao": "Escore de Apgar.",
+    "slug": "avaliacao-do-recem-nascido-apgar"
+  },
+  {
+    "id": "D18-A01-S02",
+    "assunto_id": "D18-A01",
+    "nome": "Cuidados Imediatos com o Recém-nascido",
+    "descricao": "Cuidados na sala de parto.",
+    "slug": "cuidados-imediatos-com-o-recem-nascido"
+  },
+  {
+    "id": "D18-A01-S03",
+    "assunto_id": "D18-A01",
+    "nome": "Triagens Neonatais",
+    "descricao": "Pezinho, olhinho, orelhinha, coraçãozinho, linguinha.",
+    "slug": "triagens-neonatais"
+  },
+  {
+    "id": "D18-A01-S04",
+    "assunto_id": "D18-A01",
+    "nome": "Método Canguru",
+    "descricao": "Cuidado do prematuro/baixo peso.",
+    "slug": "metodo-canguru"
+  },
+  {
+    "id": "D18-A01-S05",
+    "assunto_id": "D18-A01",
+    "nome": "Icterícia Neonatal",
+    "descricao": "Icterícia do recém-nascido.",
+    "slug": "itericia-neonatal"
+  },
+  {
+    "id": "D18-A01-S06",
+    "assunto_id": "D18-A01",
+    "nome": "Recém-nascido de Risco",
+    "descricao": "Prematuridade e baixo peso.",
+    "slug": "recem-nascido-de-risco"
+  },
+  {
+    "id": "D18-A02-S01",
+    "assunto_id": "D18-A02",
+    "nome": "Curvas de Crescimento e Caderneta da Criança",
+    "descricao": "Acompanhamento do crescimento.",
+    "slug": "curvas-de-crescimento-e-caderneta"
+  },
+  {
+    "id": "D18-A02-S02",
+    "assunto_id": "D18-A02",
+    "nome": "Marcos do Desenvolvimento Neuropsicomotor (DNPM)",
+    "descricao": "Marcos do desenvolvimento infantil.",
+    "slug": "marcos-do-desenvolvimento-dnpm"
+  },
+  {
+    "id": "D18-A02-S03",
+    "assunto_id": "D18-A02",
+    "nome": "Alimentação Complementar",
+    "descricao": "Introdução alimentar após os 6 meses.",
+    "slug": "alimentacao-complementar"
+  },
+  {
+    "id": "D18-A02-S04",
+    "assunto_id": "D18-A02",
+    "nome": "Aleitamento Materno Exclusivo",
+    "descricao": "Aleitamento exclusivo até 6 meses.",
+    "slug": "aleitamento-materno-exclusivo"
+  },
+  {
+    "id": "D18-A03-S01",
+    "assunto_id": "D18-A03",
+    "nome": "Estratégia AIDPI",
+    "descricao": "Atenção Integrada às Doenças Prevalentes na Infância.",
+    "slug": "estrategia-aidpi"
+  },
+  {
+    "id": "D18-A03-S02",
+    "assunto_id": "D18-A03",
+    "nome": "Infecções Respiratórias Agudas na Criança",
+    "descricao": "IRA infantil.",
+    "slug": "infeccoes-respiratorias-agudas-na-crianca"
+  },
+  {
+    "id": "D18-A03-S03",
+    "assunto_id": "D18-A03",
+    "nome": "Doenças Diarreicas Agudas e TRO",
+    "descricao": "Terapia de reidratação oral.",
+    "slug": "doencas-diarreicas-agudas-e-tro"
+  },
+  {
+    "id": "D18-A03-S04",
+    "assunto_id": "D18-A03",
+    "nome": "Desnutrição e Obesidade Infantil",
+    "descricao": "Distúrbios nutricionais infantis.",
+    "slug": "desnutricao-e-obesidade-infantil"
+  },
+  {
+    "id": "D18-A03-S05",
+    "assunto_id": "D18-A03",
+    "nome": "Doenças Exantemáticas da Infância",
+    "descricao": "Doenças com exantema típico.",
+    "slug": "doencas-exantematicas-da-infancia"
+  },
+  {
+    "id": "D18-A04-S01",
+    "assunto_id": "D18-A04",
+    "nome": "ECA - Lei nº 8.069/1990",
+    "descricao": "Estatuto da Criança e do Adolescente.",
+    "slug": "eca-lei-8069-1990"
+  },
+  {
+    "id": "D18-A04-S02",
+    "assunto_id": "D18-A04",
+    "nome": "Notificação de Maus-tratos",
+    "descricao": "Notificação obrigatória de violência infantil.",
+    "slug": "notificacao-de-maus-tratos-infantil"
+  },
+  {
+    "id": "D18-A04-S03",
+    "assunto_id": "D18-A04",
+    "nome": "Caderneta de Saúde do Adolescente",
+    "descricao": "Instrumento de acompanhamento do adolescente.",
+    "slug": "caderneta-de-saude-do-adolescente"
+  },
+  {
+    "id": "D18-A05-S01",
+    "assunto_id": "D18-A05",
+    "nome": "Saúde Sexual e Reprodutiva do Adolescente",
+    "descricao": "Cuidado sexual/reprodutivo do adolescente.",
+    "slug": "saude-sexual-reprodutiva-adolescente"
+  },
+  {
+    "id": "D18-A05-S02",
+    "assunto_id": "D18-A05",
+    "nome": "Programa Saúde na Escola (Adolescente)",
+    "descricao": "PSE com foco no adolescente.",
+    "slug": "programa-saude-na-escola-adolescente"
+  },
+  {
+    "id": "D19-A01-S01",
+    "assunto_id": "D19-A01",
+    "nome": "Consulta de Pré-natal",
+    "descricao": "Roteiro da consulta.",
+    "slug": "consulta-de-pre-natal"
+  },
+  {
+    "id": "D19-A01-S02",
+    "assunto_id": "D19-A01",
+    "nome": "Cálculo de Idade Gestacional e DPP",
+    "descricao": "DUM, regra de Näegele, USG.",
+    "slug": "calculo-de-idade-gestacional-e-dpp"
+  },
+  {
+    "id": "D19-A01-S03",
+    "assunto_id": "D19-A01",
+    "nome": "Exames de Rotina no Pré-natal",
+    "descricao": "Exames laboratoriais e de imagem.",
+    "slug": "exames-de-rotina-no-pre-natal"
+  },
+  {
+    "id": "D19-A01-S04",
+    "assunto_id": "D19-A01",
+    "nome": "Imunização na Gestante",
+    "descricao": "Calendário vacinal da gestante.",
+    "slug": "imunizacao-na-gestante"
+  },
+  {
+    "id": "D19-A01-S05",
+    "assunto_id": "D19-A01",
+    "nome": "Sinais de Alarme na Gestação",
+    "descricao": "Sinais de risco gestacional.",
+    "slug": "sinais-de-alarme-na-gestacao"
+  },
+  {
+    "id": "D19-A01-S06",
+    "assunto_id": "D19-A01",
+    "nome": "Síndromes Hipertensivas da Gestação",
+    "descricao": "Pré-eclâmpsia, eclâmpsia, HELLP.",
+    "slug": "sindromes-hipertensivas-da-gestacao"
+  },
+  {
+    "id": "D19-A01-S07",
+    "assunto_id": "D19-A01",
+    "nome": "Diabetes Mellitus Gestacional",
+    "descricao": "DMG.",
+    "slug": "diabetes-mellitus-gestacional"
+  },
+  {
+    "id": "D19-A02-S01",
+    "assunto_id": "D19-A02",
+    "nome": "Mecanismo do Parto",
+    "descricao": "Fases do trabalho de parto.",
+    "slug": "mecanismo-do-parto"
+  },
+  {
+    "id": "D19-A02-S02",
+    "assunto_id": "D19-A02",
+    "nome": "Partograma",
+    "descricao": "Registro gráfico do trabalho de parto.",
+    "slug": "partograma"
+  },
+  {
+    "id": "D19-A02-S03",
+    "assunto_id": "D19-A02",
+    "nome": "Parto Humanizado / Boas Práticas",
+    "descricao": "Diretrizes OMS de boas práticas.",
+    "slug": "parto-humanizado-boas-praticas"
+  },
+  {
+    "id": "D19-A02-S04",
+    "assunto_id": "D19-A02",
+    "nome": "Métodos Não Farmacológicos de Alívio da Dor no Parto",
+    "descricao": "Métodos não farmacológicos.",
+    "slug": "metodos-nao-farmacologicos-alivio-dor-parto"
+  },
+  {
+    "id": "D19-A02-S05",
+    "assunto_id": "D19-A02",
+    "nome": "Assistência de Enfermagem ao Parto Normal",
+    "descricao": "Cuidado direto ao parto normal.",
+    "slug": "assistencia-de-enfermagem-ao-parto-normal"
+  },
+  {
+    "id": "D19-A02-S06",
+    "assunto_id": "D19-A02",
+    "nome": "Cesariana: Indicações e Complicações",
+    "descricao": "Cesárea.",
+    "slug": "cesariana-indicacoes-e-complicacoes"
+  },
+  {
+    "id": "D19-A02-S07",
+    "assunto_id": "D19-A02",
+    "nome": "Emergências Obstétricas",
+    "descricao": "Hemorragia pós-parto, distocia de ombro.",
+    "slug": "emergencias-obstetricas"
+  },
+  {
+    "id": "D19-A03-S01",
+    "assunto_id": "D19-A03",
+    "nome": "Puerpério: Fases",
+    "descricao": "Imediato, mediato, tardio.",
+    "slug": "puerperio-fases"
+  },
+  {
+    "id": "D19-A03-S02",
+    "assunto_id": "D19-A03",
+    "nome": "Aleitamento Materno",
+    "descricao": "Técnica, benefícios, intercorrências.",
+    "slug": "aleitamento-materno"
+  },
+  {
+    "id": "D19-A03-S03",
+    "assunto_id": "D19-A03",
+    "nome": "Alojamento Conjunto",
+    "descricao": "Permanência mãe-bebê.",
+    "slug": "alojamento-conjunto"
+  },
+  {
+    "id": "D19-A03-S04",
+    "assunto_id": "D19-A03",
+    "nome": "Depressão Pós-parto",
+    "descricao": "Blues puerperal e depressão pós-parto.",
+    "slug": "depressao-pos-parto"
+  },
+  {
+    "id": "D19-A04-S01",
+    "assunto_id": "D19-A04",
+    "nome": "Planejamento Reprodutivo e Métodos Contraceptivos",
+    "descricao": "Métodos contraceptivos.",
+    "slug": "planejamento-reprodutivo-e-metodos-contraceptivos"
+  },
+  {
+    "id": "D19-A04-S02",
+    "assunto_id": "D19-A04",
+    "nome": "Climatério e Menopausa",
+    "descricao": "Transição climatérica.",
+    "slug": "climaterio-e-menopausa"
+  },
+  {
+    "id": "D19-A04-S03",
+    "assunto_id": "D19-A04",
+    "nome": "Prevenção do Câncer de Colo de Útero",
+    "descricao": "Exame Papanicolau.",
+    "slug": "prevencao-cancer-colo-de-utero"
+  },
+  {
+    "id": "D19-A04-S04",
+    "assunto_id": "D19-A04",
+    "nome": "Prevenção do Câncer de Mama",
+    "descricao": "Autoexame e mamografia.",
+    "slug": "prevencao-cancer-de-mama"
+  },
+  {
+    "id": "D19-A04-S05",
+    "assunto_id": "D19-A04",
+    "nome": "Violência contra a Mulher",
+    "descricao": "Inclui violência obstétrica.",
+    "slug": "violencia-contra-a-mulher"
+  },
+  {
+    "id": "D19-A04-S06",
+    "assunto_id": "D19-A04",
+    "nome": "Aborto Legal e Atendimento Humanizado",
+    "descricao": "Lei nº 12.845/2013.",
+    "slug": "aborto-legal-e-atendimento-humanizado"
+  },
+  {
+    "id": "D20-A01-S01",
+    "assunto_id": "D20-A01",
+    "nome": "Hipertensão Arterial Sistêmica",
+    "descricao": "HAS.",
+    "slug": "hipertensao-arterial-sistemica"
+  },
+  {
+    "id": "D20-A01-S02",
+    "assunto_id": "D20-A01",
+    "nome": "Insuficiência Cardíaca",
+    "descricao": "IC.",
+    "slug": "insuficiencia-cardiaca"
+  },
+  {
+    "id": "D20-A01-S03",
+    "assunto_id": "D20-A01",
+    "nome": "Doença Arterial Coronariana / Angina",
+    "descricao": "DAC crônica.",
+    "slug": "doenca-arterial-coronariana-angina"
+  },
+  {
+    "id": "D20-A01-S04",
+    "assunto_id": "D20-A01",
+    "nome": "Arritmias Cardíacas",
+    "descricao": "Arritmias ambulatoriais.",
+    "slug": "arritmias-cardiacas"
+  },
+  {
+    "id": "D20-A02-S01",
+    "assunto_id": "D20-A02",
+    "nome": "Diabetes Mellitus",
+    "descricao": "Tipo 1, tipo 2, classificação, metas.",
+    "slug": "diabetes-mellitus"
+  },
+  {
+    "id": "D20-A02-S02",
+    "assunto_id": "D20-A02",
+    "nome": "Complicações Crônicas do Diabetes",
+    "descricao": "Retinopatia, nefropatia, neuropatia, pé diabético.",
+    "slug": "complicacoes-cronicas-do-diabetes"
+  },
+  {
+    "id": "D20-A02-S03",
+    "assunto_id": "D20-A02",
+    "nome": "Obesidade e Síndrome Metabólica",
+    "descricao": "Obesidade e síndrome metabólica.",
+    "slug": "obesidade-e-sindrome-metabolica"
+  },
+  {
+    "id": "D20-A02-S04",
+    "assunto_id": "D20-A02",
+    "nome": "Dislipidemias",
+    "descricao": "Distúrbios lipídicos.",
+    "slug": "dislipidemias"
+  },
+  {
+    "id": "D20-A02-S05",
+    "assunto_id": "D20-A02",
+    "nome": "Distúrbios da Tireoide",
+    "descricao": "Hipo/hipertireoidismo.",
+    "slug": "disturbios-da-tireoide"
+  },
+  {
+    "id": "D20-A03-S01",
+    "assunto_id": "D20-A03",
+    "nome": "DPOC",
+    "descricao": "Doença Pulmonar Obstrutiva Crônica.",
+    "slug": "dpoc"
+  },
+  {
+    "id": "D20-A03-S02",
+    "assunto_id": "D20-A03",
+    "nome": "Asma",
+    "descricao": "Doença respiratória obstrutiva crônica.",
+    "slug": "asma"
+  },
+  {
+    "id": "D20-A04-S01",
+    "assunto_id": "D20-A04",
+    "nome": "Doença Renal Crônica e TRS",
+    "descricao": "Diálise peritoneal, hemodiálise.",
+    "slug": "doenca-renal-cronica-e-trs"
+  },
+  {
+    "id": "D20-A04-S02",
+    "assunto_id": "D20-A04",
+    "nome": "AVC: Fase Crônica e Reabilitação",
+    "descricao": "Reabilitação pós-AVC.",
+    "slug": "avc-fase-cronica-reabilitacao"
+  },
+  {
+    "id": "D20-A04-S03",
+    "assunto_id": "D20-A04",
+    "nome": "Epilepsia",
+    "descricao": "Manejo ambulatorial da epilepsia.",
+    "slug": "epilepsia"
+  },
+  {
+    "id": "D20-A05-S01",
+    "assunto_id": "D20-A05",
+    "nome": "Linha de Cuidado das DCNT",
+    "descricao": "Continuidade do cuidado crônico.",
+    "slug": "linha-de-cuidado-dcnt"
+  },
+  {
+    "id": "D20-A05-S02",
+    "assunto_id": "D20-A05",
+    "nome": "Automonitorização e Adesão ao Tratamento",
+    "descricao": "Adesão terapêutica.",
+    "slug": "automonitorizacao-e-adesao-ao-tratamento"
+  },
+  {
+    "id": "D20-A05-S03",
+    "assunto_id": "D20-A05",
+    "nome": "Cuidados Paliativos (base)",
+    "descricao": "Introdução a cuidados paliativos.",
+    "slug": "cuidados-paliativos"
+  },
+  {
+    "id": "D21-A01-S01",
+    "assunto_id": "D21-A01",
+    "nome": "Teorias do Envelhecimento",
+    "descricao": "Teorias biológicas e psicossociais.",
+    "slug": "teorias-do-envelhecimento"
+  },
+  {
+    "id": "D21-A01-S02",
+    "assunto_id": "D21-A01",
+    "nome": "Envelhecimento Populacional",
+    "descricao": "Transição demográfica do idoso.",
+    "slug": "envelhecimento-populacional"
+  },
+  {
+    "id": "D21-A01-S03",
+    "assunto_id": "D21-A01",
+    "nome": "Avaliação Geriátrica Ampla (AGA)",
+    "descricao": "Avaliação multidimensional do idoso.",
+    "slug": "avaliacao-geriatrica-ampla"
+  },
+  {
+    "id": "D21-A02-S01",
+    "assunto_id": "D21-A02",
+    "nome": "Fragilidade e Sarcopenia",
+    "descricao": "Síndrome de fragilidade.",
+    "slug": "fragilidade-e-sarcopenia"
+  },
+  {
+    "id": "D21-A02-S02",
+    "assunto_id": "D21-A02",
+    "nome": "Quedas no Idoso",
+    "descricao": "Síndrome geriátrica de quedas.",
+    "slug": "quedas-no-idoso"
+  },
+  {
+    "id": "D21-A02-S03",
+    "assunto_id": "D21-A02",
+    "nome": "Incontinência Urinária e Fecal",
+    "descricao": "Incontinência no idoso.",
+    "slug": "incontinencia-urinaria-e-fecal"
+  },
+  {
+    "id": "D21-A02-S04",
+    "assunto_id": "D21-A02",
+    "nome": "Delirium",
+    "descricao": "Delirium no idoso.",
+    "slug": "delirium"
+  },
+  {
+    "id": "D21-A02-S05",
+    "assunto_id": "D21-A02",
+    "nome": "Demências",
+    "descricao": "Alzheimer, vascular, outras.",
+    "slug": "demencias"
+  },
+  {
+    "id": "D21-A02-S06",
+    "assunto_id": "D21-A02",
+    "nome": "Imobilidade e Instabilidade Postural",
+    "descricao": "Síndrome de imobilidade.",
+    "slug": "imobilidade-e-instabilidade-postural"
+  },
+  {
+    "id": "D21-A02-S07",
+    "assunto_id": "D21-A02",
+    "nome": "Iatrogenia e Polifarmácia",
+    "descricao": "Efeitos de múltiplos medicamentos.",
+    "slug": "iatrogenia-e-polifarmacia"
+  },
+  {
+    "id": "D21-A03-S01",
+    "assunto_id": "D21-A03",
+    "nome": "Cuidados Paliativos no Idoso",
+    "descricao": "Paliação geriátrica.",
+    "slug": "cuidados-paliativos-no-idoso"
+  },
+  {
+    "id": "D21-A03-S02",
+    "assunto_id": "D21-A03",
+    "nome": "ILPI",
+    "descricao": "Instituição de Longa Permanência para Idosos.",
+    "slug": "ilpi"
+  },
+  {
+    "id": "D21-A03-S03",
+    "assunto_id": "D21-A03",
+    "nome": "Cuidador de Idosos",
+    "descricao": "Papel do cuidador formal/informal.",
+    "slug": "cuidador-de-idosos"
+  },
+  {
+    "id": "D21-A03-S04",
+    "assunto_id": "D21-A03",
+    "nome": "Violência contra o Idoso",
+    "descricao": "Tipos e notificação de violência.",
+    "slug": "violencia-contra-o-idoso"
+  },
+  {
+    "id": "D21-A04-S01",
+    "assunto_id": "D21-A04",
+    "nome": "Estatuto do Idoso",
+    "descricao": "Lei nº 10.741/2003.",
+    "slug": "estatuto-do-idoso"
+  },
+  {
+    "id": "D21-A04-S02",
+    "assunto_id": "D21-A04",
+    "nome": "Política Nacional da Pessoa Idosa",
+    "descricao": "Lei nº 8.842/1994.",
+    "slug": "politica-nacional-pessoa-idosa"
+  },
+  {
+    "id": "D21-A04-S03",
+    "assunto_id": "D21-A04",
+    "nome": "Caderneta de Saúde da Pessoa Idosa",
+    "descricao": "Instrumento de acompanhamento do idoso.",
+    "slug": "caderneta-de-saude-da-pessoa-idosa"
+  },
+  {
+    "id": "D22-A01-S01",
+    "assunto_id": "D22-A01",
+    "nome": "Reforma Psiquiátrica Brasileira",
+    "descricao": "Histórico e marcos da reforma.",
+    "slug": "reforma-psiquiatrica-brasileira"
+  },
+  {
+    "id": "D22-A01-S02",
+    "assunto_id": "D22-A01",
+    "nome": "Lei nº 10.216/2001",
+    "descricao": "Lei da Reforma Psiquiátrica.",
+    "slug": "lei-10216-2001"
+  },
+  {
+    "id": "D22-A01-S03",
+    "assunto_id": "D22-A01",
+    "nome": "Desinstitucionalização e Luta Antimanicomial",
+    "descricao": "Movimento antimanicomial.",
+    "slug": "desinstitucionalizacao-luta-antimanicomial"
+  },
+  {
+    "id": "D22-A01-S04",
+    "assunto_id": "D22-A01",
+    "nome": "Modelo Psicossocial vs. Modelo Manicomial",
+    "descricao": "Comparação de modelos assistenciais.",
+    "slug": "modelo-psicossocial-vs-manicomial"
+  },
+  {
+    "id": "D22-A02-S01",
+    "assunto_id": "D22-A02",
+    "nome": "RAPS (Portaria nº 3.088/2011)",
+    "descricao": "Rede de Atenção Psicossocial.",
+    "slug": "raps-portaria-3088-2011"
+  },
+  {
+    "id": "D22-A02-S02",
+    "assunto_id": "D22-A02",
+    "nome": "CAPS: Tipos e Modalidades",
+    "descricao": "CAPS I, II, III, AD, i.",
+    "slug": "caps-tipos-e-modalidades"
+  },
+  {
+    "id": "D22-A02-S03",
+    "assunto_id": "D22-A02",
+    "nome": "SRT",
+    "descricao": "Serviço Residencial Terapêutico.",
+    "slug": "srt"
+  },
+  {
+    "id": "D22-A02-S04",
+    "assunto_id": "D22-A02",
+    "nome": "Unidades de Acolhimento",
+    "descricao": "Adulto e infanto-juvenil.",
+    "slug": "unidades-de-acolhimento"
+  },
+  {
+    "id": "D22-A02-S05",
+    "assunto_id": "D22-A02",
+    "nome": "Leitos de Saúde Mental em Hospital Geral",
+    "descricao": "Internação psiquiátrica em hospital geral.",
+    "slug": "leitos-saude-mental-hospital-geral"
+  },
+  {
+    "id": "D22-A02-S06",
+    "assunto_id": "D22-A02",
+    "nome": "Programa de Volta para Casa",
+    "descricao": "Reinserção social pós-institucionalização.",
+    "slug": "programa-de-volta-para-casa"
+  },
+  {
+    "id": "D22-A03-S01",
+    "assunto_id": "D22-A03",
+    "nome": "Política sobre Drogas e Redução de Danos",
+    "descricao": "Redução de danos.",
+    "slug": "politica-sobre-drogas-reducao-de-danos"
+  },
+  {
+    "id": "D22-A03-S02",
+    "assunto_id": "D22-A03",
+    "nome": "CAPS AD e CAPS AD III",
+    "descricao": "Atenção a álcool e drogas.",
+    "slug": "caps-ad-e-caps-ad-iii"
+  },
+  {
+    "id": "D22-A03-S03",
+    "assunto_id": "D22-A03",
+    "nome": "Síndrome de Abstinência e Intoxicação",
+    "descricao": "Manejo clínico agudo.",
+    "slug": "sindrome-de-abstinencia-e-intoxicacao"
+  },
+  {
+    "id": "D22-A04-S01",
+    "assunto_id": "D22-A04",
+    "nome": "Transtornos Mentais Comuns",
+    "descricao": "Ansiedade, depressão.",
+    "slug": "transtornos-mentais-comuns"
+  },
+  {
+    "id": "D22-A04-S02",
+    "assunto_id": "D22-A04",
+    "nome": "Transtornos Psicóticos",
+    "descricao": "Esquizofrenia.",
+    "slug": "transtornos-psicoticos"
+  },
+  {
+    "id": "D22-A04-S03",
+    "assunto_id": "D22-A04",
+    "nome": "Transtorno Afetivo Bipolar",
+    "descricao": "TAB.",
+    "slug": "transtorno-afetivo-bipolar"
+  },
+  {
+    "id": "D22-A04-S04",
+    "assunto_id": "D22-A04",
+    "nome": "Transtornos Alimentares",
+    "descricao": "Anorexia, bulimia.",
+    "slug": "transtornos-alimentares"
+  },
+  {
+    "id": "D22-A04-S05",
+    "assunto_id": "D22-A04",
+    "nome": "Risco de Suicídio: Avaliação e Manejo",
+    "descricao": "Prevenção do suicídio.",
+    "slug": "risco-de-suicidio-avaliacao-e-manejo"
+  },
+  {
+    "id": "D22-A04-S06",
+    "assunto_id": "D22-A04",
+    "nome": "Manejo de Crise e Contenção",
+    "descricao": "Contenção mecânica, química, verbal.",
+    "slug": "manejo-de-crise-e-contencao"
+  },
+  {
+    "id": "D22-A05-S01",
+    "assunto_id": "D22-A05",
+    "nome": "Relação Terapêutica Enfermeiro-Paciente",
+    "descricao": "Vínculo terapêutico.",
+    "slug": "relacao-terapeutica-enfermeiro-paciente"
+  },
+  {
+    "id": "D22-A05-S02",
+    "assunto_id": "D22-A05",
+    "nome": "Comunicação Terapêutica em Saúde Mental",
+    "descricao": "Comunicação aplicada à psiquiatria.",
+    "slug": "comunicacao-terapeutica-saude-mental"
+  },
+  {
+    "id": "D22-A05-S03",
+    "assunto_id": "D22-A05",
+    "nome": "Projeto Terapêutico Singular (PTS)",
+    "descricao": "Plano de cuidado individualizado.",
+    "slug": "projeto-terapeutico-singular"
+  },
+  {
+    "id": "D22-A05-S04",
+    "assunto_id": "D22-A05",
+    "nome": "Matriciamento em Saúde Mental",
+    "descricao": "Apoio matricial.",
+    "slug": "matriciamento-em-saude-mental"
+  },
+  {
+    "id": "D23-A01-S01",
+    "assunto_id": "D23-A01",
+    "nome": "Meta 1: Identificação do Paciente",
+    "descricao": "Meta internacional 1.",
+    "slug": "meta-1-identificacao-do-paciente"
+  },
+  {
+    "id": "D23-A01-S02",
+    "assunto_id": "D23-A01",
+    "nome": "Meta 2: Comunicação Efetiva",
+    "descricao": "Meta internacional 2.",
+    "slug": "meta-2-comunicacao-efetiva"
+  },
+  {
+    "id": "D23-A01-S03",
+    "assunto_id": "D23-A01",
+    "nome": "Meta 3: Medicamentos de Alta Vigilância",
+    "descricao": "Meta internacional 3.",
+    "slug": "meta-3-medicamentos-alta-vigilancia"
+  },
+  {
+    "id": "D23-A01-S04",
+    "assunto_id": "D23-A01",
+    "nome": "Meta 4: Cirurgia Segura",
+    "descricao": "Meta internacional 4.",
+    "slug": "meta-4-cirurgia-segura"
+  },
+  {
+    "id": "D23-A01-S05",
+    "assunto_id": "D23-A01",
+    "nome": "Meta 5: Redução de Infecções",
+    "descricao": "Meta internacional 5.",
+    "slug": "meta-5-reducao-de-infeccoes"
+  },
+  {
+    "id": "D23-A01-S06",
+    "assunto_id": "D23-A01",
+    "nome": "Meta 6: Redução de Quedas",
+    "descricao": "Meta internacional 6.",
+    "slug": "meta-6-reducao-de-quedas"
+  },
+  {
+    "id": "D23-A02-S01",
+    "assunto_id": "D23-A02",
+    "nome": "Núcleo de Segurança do Paciente (NSP)",
+    "descricao": "Governança institucional da segurança.",
+    "slug": "nucleo-de-seguranca-do-paciente"
+  },
+  {
+    "id": "D23-A02-S02",
+    "assunto_id": "D23-A02",
+    "nome": "Notificação de Eventos Adversos e Near Miss",
+    "descricao": "Notificação de incidentes.",
+    "slug": "notificacao-de-eventos-adversos"
+  },
+  {
+    "id": "D23-A02-S03",
+    "assunto_id": "D23-A02",
+    "nome": "Cultura de Segurança",
+    "descricao": "Cultura não punitiva.",
+    "slug": "cultura-de-seguranca"
+  },
+  {
+    "id": "D23-A03-S01",
+    "assunto_id": "D23-A03",
+    "nome": "Checklist de Cirurgia Segura",
+    "descricao": "Lista de verificação cirúrgica.",
+    "slug": "checklist-de-cirurgia-segura"
+  },
+  {
+    "id": "D23-A03-S02",
+    "assunto_id": "D23-A03",
+    "nome": "Protocolo de Identificação do Paciente",
+    "descricao": "Pulseira e dupla checagem.",
+    "slug": "protocolo-de-identificacao-do-paciente"
+  },
+  {
+    "id": "D23-A03-S03",
+    "assunto_id": "D23-A03",
+    "nome": "Protocolo de Prevenção de Quedas",
+    "descricao": "Protocolo institucional de quedas.",
+    "slug": "protocolo-de-prevencao-de-quedas"
+  },
+  {
+    "id": "D23-A03-S04",
+    "assunto_id": "D23-A03",
+    "nome": "Protocolo de Lesão por Pressão",
+    "descricao": "Protocolo institucional de LPP.",
+    "slug": "protocolo-de-lesao-por-pressao"
+  },
+  {
+    "id": "D23-A03-S05",
+    "assunto_id": "D23-A03",
+    "nome": "Protocolo de Segurança Medicamentosa",
+    "descricao": "Protocolo institucional de medicamentos.",
+    "slug": "protocolo-de-seguranca-medicamentosa"
+  },
+  {
+    "id": "D24-A01-S01",
+    "assunto_id": "D24-A01",
+    "nome": "Resolução COFEN nº 358/2009 (SAE)",
+    "descricao": "Norma que institui a SAE.",
+    "slug": "resolucao-cofen-358-2009-sae"
+  },
+  {
+    "id": "D24-A01-S02",
+    "assunto_id": "D24-A01",
+    "nome": "Conceito e Finalidade da SAE",
+    "descricao": "O que é e para que serve a SAE.",
+    "slug": "conceito-e-finalidade-da-sae"
+  },
+  {
+    "id": "D24-A01-S03",
+    "assunto_id": "D24-A01",
+    "nome": "Obrigatoriedade da SAE",
+    "descricao": "Obrigatoriedade em ambiente público/privado.",
+    "slug": "obrigatoriedade-da-sae"
+  },
+  {
+    "id": "D24-A02-S01",
+    "assunto_id": "D24-A02",
+    "nome": "Coleta de Dados / Histórico de Enfermagem",
+    "descricao": "1ª etapa do PE.",
+    "slug": "coleta-de-dados-historico-de-enfermagem"
+  },
+  {
+    "id": "D24-A02-S02",
+    "assunto_id": "D24-A02",
+    "nome": "Diagnóstico de Enfermagem",
+    "descricao": "2ª etapa do PE.",
+    "slug": "diagnostico-de-enfermagem"
+  },
+  {
+    "id": "D24-A02-S03",
+    "assunto_id": "D24-A02",
+    "nome": "Planejamento de Enfermagem",
+    "descricao": "3ª etapa do PE.",
+    "slug": "planejamento-de-enfermagem"
+  },
+  {
+    "id": "D24-A02-S04",
+    "assunto_id": "D24-A02",
+    "nome": "Implementação",
+    "descricao": "4ª etapa do PE.",
+    "slug": "implementacao-de-enfermagem"
+  },
+  {
+    "id": "D24-A02-S05",
+    "assunto_id": "D24-A02",
+    "nome": "Avaliação de Enfermagem",
+    "descricao": "5ª etapa do PE.",
+    "slug": "avaliacao-de-enfermagem"
+  },
+  {
+    "id": "D24-A03-S01",
+    "assunto_id": "D24-A03",
+    "nome": "Taxonomia NANDA-I",
+    "descricao": "Domínios e classes.",
+    "slug": "taxonomia-nanda-i"
+  },
+  {
+    "id": "D24-A03-S02",
+    "assunto_id": "D24-A03",
+    "nome": "Classificação NOC",
+    "descricao": "Resultados de enfermagem.",
+    "slug": "classificacao-noc"
+  },
+  {
+    "id": "D24-A03-S03",
+    "assunto_id": "D24-A03",
+    "nome": "Classificação NIC",
+    "descricao": "Intervenções de enfermagem.",
+    "slug": "classificacao-nic"
+  },
+  {
+    "id": "D24-A03-S04",
+    "assunto_id": "D24-A03",
+    "nome": "Ligações NANDA-NOC-NIC",
+    "descricao": "NNN Linkage.",
+    "slug": "ligacoes-nanda-noc-nic"
+  },
+  {
+    "id": "D24-A03-S05",
+    "assunto_id": "D24-A03",
+    "nome": "CIPE / ICNP",
+    "descricao": "Classificação Internacional para a Prática de Enfermagem.",
+    "slug": "cipe-icnp"
+  },
+  {
+    "id": "D24-A04-S01",
+    "assunto_id": "D24-A04",
+    "nome": "Prescrição de Enfermagem",
+    "descricao": "Registro das intervenções planejadas.",
+    "slug": "prescricao-de-enfermagem"
+  },
+  {
+    "id": "D24-A04-S02",
+    "assunto_id": "D24-A04",
+    "nome": "Evolução de Enfermagem",
+    "descricao": "Registro evolutivo do cuidado.",
+    "slug": "evolucao-de-enfermagem"
+  },
+  {
+    "id": "D24-A04-S03",
+    "assunto_id": "D24-A04",
+    "nome": "Prontuário Eletrônico e Registro da SAE",
+    "descricao": "Registro eletrônico do processo.",
+    "slug": "prontuario-eletronico-e-registro-sae"
+  },
+  {
+    "id": "D25-A01-S01",
+    "assunto_id": "D25-A01",
+    "nome": "Monitorização Hemodinâmica",
+    "descricao": "Invasiva e não invasiva.",
+    "slug": "monitorizacao-hemodinamica"
+  },
+  {
+    "id": "D25-A01-S02",
+    "assunto_id": "D25-A01",
+    "nome": "Escores de Gravidade (SAPS 3, APACHE II)",
+    "descricao": "Escores prognósticos de UTI.",
+    "slug": "escores-de-gravidade-uti"
+  },
+  {
+    "id": "D25-A01-S03",
+    "assunto_id": "D25-A01",
+    "nome": "Monitorização Neurológica",
+    "descricao": "PIC, Glasgow em UTI.",
+    "slug": "monitorizacao-neurologica-uti"
+  },
+  {
+    "id": "D25-A02-S01",
+    "assunto_id": "D25-A02",
+    "nome": "Ventilação Mecânica Invasiva",
+    "descricao": "Modos e parâmetros.",
+    "slug": "ventilacao-mecanica-invasiva"
+  },
+  {
+    "id": "D25-A02-S02",
+    "assunto_id": "D25-A02",
+    "nome": "Ventilação Mecânica Não Invasiva (VNI)",
+    "descricao": "Suporte ventilatório não invasivo.",
+    "slug": "ventilacao-mecanica-nao-invasiva"
+  },
+  {
+    "id": "D25-A02-S03",
+    "assunto_id": "D25-A02",
+    "nome": "Desmame Ventilatório",
+    "descricao": "Processo de desmame da VM.",
+    "slug": "desmame-ventilatorio"
+  },
+  {
+    "id": "D25-A02-S04",
+    "assunto_id": "D25-A02",
+    "nome": "Cuidados com Via Aérea Artificial",
+    "descricao": "TOT, traqueostomia.",
+    "slug": "cuidados-com-via-aerea-artificial"
+  },
+  {
+    "id": "D25-A03-S01",
+    "assunto_id": "D25-A03",
+    "nome": "Drogas Vasoativas (UTI)",
+    "descricao": "Uso e cuidados de enfermagem.",
+    "slug": "drogas-vasoativas-uti"
+  },
+  {
+    "id": "D25-A03-S02",
+    "assunto_id": "D25-A03",
+    "nome": "Sedação e Analgesia (UTI)",
+    "descricao": "Sedoanalgesia em UTI.",
+    "slug": "sedacao-e-analgesia-uti"
+  },
+  {
+    "id": "D25-A03-S03",
+    "assunto_id": "D25-A03",
+    "nome": "Bloqueio Neuromuscular (UTI)",
+    "descricao": "Uso de bloqueadores neuromusculares.",
+    "slug": "bloqueio-neuromuscular-uti"
+  },
+  {
+    "id": "D25-A04-S01",
+    "assunto_id": "D25-A04",
+    "nome": "Delirium em UTI",
+    "descricao": "CAM-ICU.",
+    "slug": "delirium-em-uti"
+  },
+  {
+    "id": "D25-A04-S02",
+    "assunto_id": "D25-A04",
+    "nome": "Mobilização Precoce em UTI",
+    "descricao": "Mobilização do paciente crítico.",
+    "slug": "mobilizacao-precoce-em-uti"
+  },
+  {
+    "id": "D25-A04-S03",
+    "assunto_id": "D25-A04",
+    "nome": "Prevenção de PAV",
+    "descricao": "Bundle de prevenção de PAV.",
+    "slug": "prevencao-de-pav"
+  },
+  {
+    "id": "D25-A04-S04",
+    "assunto_id": "D25-A04",
+    "nome": "Terapia Renal Substitutiva Contínua",
+    "descricao": "TRS contínua em UTI.",
+    "slug": "trs-continua-uti"
+  },
+  {
+    "id": "D25-A04-S05",
+    "assunto_id": "D25-A04",
+    "nome": "Humanização em Terapia Intensiva",
+    "descricao": "Humanização do cuidado crítico.",
+    "slug": "humanizacao-em-terapia-intensiva"
+  },
+  {
+    "id": "D25-A04-S06",
+    "assunto_id": "D25-A04",
+    "nome": "Cuidados de Fim de Vida em UTI",
+    "descricao": "Ortotanásia.",
+    "slug": "cuidados-de-fim-de-vida-uti"
+  },
+  {
+    "id": "D26-A01-S01",
+    "assunto_id": "D26-A01",
+    "nome": "Protocolo de Manchester",
+    "descricao": "Classificação de risco por cores.",
+    "slug": "protocolo-de-manchester"
+  },
+  {
+    "id": "D26-A01-S02",
+    "assunto_id": "D26-A01",
+    "nome": "Acolhimento com Classificação de Risco (Urgência)",
+    "descricao": "ACCR no contexto de urgência.",
+    "slug": "acolhimento-com-classificacao-de-risco-urgencia"
+  },
+  {
+    "id": "D26-A01-S03",
+    "assunto_id": "D26-A01",
+    "nome": "RUE (Urgência)",
+    "descricao": "Rede de Atenção às Urgências no contexto assistencial direto.",
+    "slug": "rue-urgencia"
+  },
+  {
+    "id": "D26-A01-S04",
+    "assunto_id": "D26-A01",
+    "nome": "SAMU 192",
+    "descricao": "Atendimento pré-hospitalar móvel.",
+    "slug": "samu-192"
+  },
+  {
+    "id": "D26-A01-S05",
+    "assunto_id": "D26-A01",
+    "nome": "UPA 24h",
+    "descricao": "Unidade de Pronto Atendimento.",
+    "slug": "upa-24h"
+  },
+  {
+    "id": "D26-A02-S01",
+    "assunto_id": "D26-A02",
+    "nome": "Suporte Básico de Vida (SBV)",
+    "descricao": "BLS.",
+    "slug": "suporte-basico-de-vida"
+  },
+  {
+    "id": "D26-A02-S02",
+    "assunto_id": "D26-A02",
+    "nome": "Suporte Avançado de Vida (SAV/ACLS)",
+    "descricao": "ACLS.",
+    "slug": "suporte-avancado-de-vida"
+  },
+  {
+    "id": "D26-A02-S03",
+    "assunto_id": "D26-A02",
+    "nome": "Parada Cardiorrespiratória e RCP",
+    "descricao": "PCR e reanimação.",
+    "slug": "parada-cardiorrespiratoria-e-rcp"
+  },
+  {
+    "id": "D26-A02-S04",
+    "assunto_id": "D26-A02",
+    "nome": "Manejo de Via Aérea de Emergência",
+    "descricao": "Via aérea em emergência.",
+    "slug": "manejo-de-via-aerea-de-emergencia"
+  },
+  {
+    "id": "D26-A02-S05",
+    "assunto_id": "D26-A02",
+    "nome": "Desfibrilação e Cardioversão",
+    "descricao": "DEA e cardioversão elétrica.",
+    "slug": "desfibrilacao-e-cardioversao"
+  },
+  {
+    "id": "D26-A03-S01",
+    "assunto_id": "D26-A03",
+    "nome": "Dor Torácica e Síndrome Coronariana Aguda",
+    "descricao": "SCA.",
+    "slug": "dor-toracica-e-sindrome-coronariana-aguda"
+  },
+  {
+    "id": "D26-A03-S02",
+    "assunto_id": "D26-A03",
+    "nome": "AVC Agudo / Código AVC",
+    "descricao": "Protocolo de AVC agudo.",
+    "slug": "avc-agudo-codigo-avc"
+  },
+  {
+    "id": "D26-A03-S03",
+    "assunto_id": "D26-A03",
+    "nome": "Sepse e Choque Séptico",
+    "descricao": "Protocolo de sepse.",
+    "slug": "sepse-e-choque-septico"
+  },
+  {
+    "id": "D26-A03-S04",
+    "assunto_id": "D26-A03",
+    "nome": "Estado de Mal Epiléptico",
+    "descricao": "Emergência neurológica.",
+    "slug": "estado-de-mal-epileptico"
+  },
+  {
+    "id": "D26-A03-S05",
+    "assunto_id": "D26-A03",
+    "nome": "Emergências Hipertensivas",
+    "descricao": "Urgência e emergência hipertensiva.",
+    "slug": "emergencias-hipertensivas"
+  },
+  {
+    "id": "D26-A03-S06",
+    "assunto_id": "D26-A03",
+    "nome": "Emergências Metabólicas",
+    "descricao": "Cetoacidose diabética, hipoglicemia.",
+    "slug": "emergencias-metabolicas"
+  },
+  {
+    "id": "D26-A03-S07",
+    "assunto_id": "D26-A03",
+    "nome": "Anafilaxia",
+    "descricao": "Reação anafilática aguda.",
+    "slug": "anafilaxia"
+  },
+  {
+    "id": "D26-A03-S08",
+    "assunto_id": "D26-A03",
+    "nome": "Intoxicações Exógenas",
+    "descricao": "Manejo de intoxicações.",
+    "slug": "intoxicacoes-exogenas"
+  },
+  {
+    "id": "D26-A04-S01",
+    "assunto_id": "D26-A04",
+    "nome": "Atendimento Inicial ao Politraumatizado",
+    "descricao": "ABCDE do trauma.",
+    "slug": "atendimento-inicial-ao-politraumatizado"
+  },
+  {
+    "id": "D26-A04-S02",
+    "assunto_id": "D26-A04",
+    "nome": "Escala de Coma de Glasgow",
+    "descricao": "Avaliação do nível de consciência.",
+    "slug": "escala-de-coma-de-glasgow"
+  },
+  {
+    "id": "D26-A04-S03",
+    "assunto_id": "D26-A04",
+    "nome": "Choque: Classificação",
+    "descricao": "Hipovolêmico, cardiogênico, distributivo.",
+    "slug": "choque-classificacao"
+  },
+  {
+    "id": "D26-A04-S04",
+    "assunto_id": "D26-A04",
+    "nome": "Queimaduras",
+    "descricao": "Classificação e manejo de queimaduras.",
+    "slug": "queimaduras"
+  },
+  {
+    "id": "D26-A04-S05",
+    "assunto_id": "D26-A04",
+    "nome": "Afogamento",
+    "descricao": "Manejo do afogamento.",
+    "slug": "afogamento"
+  },
+  {
+    "id": "D26-A04-S06",
+    "assunto_id": "D26-A04",
+    "nome": "Trauma Raquimedular e Imobilização",
+    "descricao": "Imobilização da coluna.",
+    "slug": "trauma-raquimedular-e-imobilizacao"
+  }
+]

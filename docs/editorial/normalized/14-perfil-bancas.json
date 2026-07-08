@@ -1,0 +1,142 @@
+[
+{
+  "id":"B01","nome":"IBFC",
+  "formato_prova":"MULTIPLA_ESCOLHA_4",
+  "caracteristicas":["Enunciado direto e curto","Pouco rebuscado","Prioriza definição/conceito","Pegadinha de decoreba normativa (números de lei/portaria)"],
+  "disciplinas_predominantes":["D10","D08","D17"],
+  "assuntos_predominantes":["D10-A02 Exame Físico e Avaliação","D08-A01 Marco Legal do Exercício Profissional","D17-A02 Vigilância em Saúde"],
+  "estilo_de_cobranca":"Citação quase literal de manuais do MS",
+  "nivel_dificuldade":"MEDIO"
+},
+{
+  "id":"B02","nome":"FGV",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Enunciados longos","Estudo de caso clínico frequente","Valoriza raciocínio clínico aplicado","Distratores plausíveis (diferem por um detalhe técnico)"],
+  "disciplinas_predominantes":["D07","D19","D18","D26","D25","D24"],
+  "assuntos_predominantes":["D24-A02 As 5 Etapas do Processo de Enfermagem","D07-A01 Cuidado Perioperatório","D26-A02 Suporte de Vida"],
+  "estilo_de_cobranca":"Assinale a conduta mais adequada (estudo de caso)",
+  "nivel_dificuldade":"MEDIO_ALTO"
+},
+{
+  "id":"B03","nome":"Consulplan / Consulpam (Instituto Consulplan)",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Mistura definição direta com pequenos casos clínicos objetivos","Farmacologia cobrada superficialmente"],
+  "disciplinas_predominantes":["D17","D14","D08"],
+  "assuntos_predominantes":["D17-A01 Epidemiologia Aplicada","D14-A01 Atenção Primária à Saúde"],
+  "estilo_de_cobranca":"Definição direta + caso clínico objetivo curto",
+  "nivel_dificuldade":"MEDIO"
+},
+{
+  "id":"B04","nome":"IDECAN",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Redação por vezes prolixa","Gosta de associação de colunas","Usa 'assinale a incorreta' com frequência (risco de inversão de lógica)"],
+  "disciplinas_predominantes":["D24","D09","D22"],
+  "assuntos_predominantes":["D24-A03 Taxonomias e Sistemas de Classificação","D09-A03 Classes Farmacológicas por Sistema"],
+  "estilo_de_cobranca":"Associação de colunas / assinale a incorreta",
+  "nivel_dificuldade":"MEDIO_ALTO"
+},
+{
+  "id":"B05","nome":"VUNESP",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Cita literalmente trechos de manuais/portarias do MS","Forte presença em concursos estaduais/municipais de SP"],
+  "disciplinas_predominantes":["D13","D17","D10"],
+  "assuntos_predominantes":["D13-A01 Base Constitucional e Legal","D14-A01 Atenção Primária à Saúde"],
+  "observacoes_v1_1":"D14 (mesclada) unificada em D13 (Legislação do SUS, sobrevivente, nome mantido)",
+  "estilo_de_cobranca":"Citação direta de norma/manual do MS",
+  "nivel_dificuldade":"MEDIO"
+},
+{
+  "id":"B06","nome":"Cebraspe (CESPE)",
+  "formato_prova":"CERTO_ERRADO",
+  "caracteristicas":["Afirmações normativas quase literais","Pegadinha em um único termo técnico trocado","Forte em concursos de Forças Armadas"],
+  "disciplinas_predominantes":["D08","D13","D26","D07"],
+  "assuntos_predominantes":["D08-A01 Marco Legal do Exercício Profissional","D13-A01 Base Constitucional e Legal","D26-A02 Suporte de Vida"],
+  "observacoes_v1_1":"D14 (mesclada) atualizado para D13 (sobrevivente); D20 (mesclada) atualizado para D07 (sobrevivente, nome mantido)",
+  "estilo_de_cobranca":"Item Certo/Errado com afirmação normativa quase literal",
+  "nivel_dificuldade":"ALTO"
+},
+{
+  "id":"B07","nome":"Instituto AOCP",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Direto","'De acordo com [norma/manual], é correto afirmar que'","Presente em hospitais universitários"],
+  "disciplinas_predominantes":["D17","D10"],
+  "assuntos_predominantes":["D17-A02 Vigilância em Saúde","D11-A01 Estrutura do Programa (PNI, agora assunto de D17)"],
+  "observacoes_v1_1":"D11 (mesclada) absorvido por D17 — Imunização agora é assunto de Saúde Coletiva, não disciplina própria",
+  "estilo_de_cobranca":"De acordo com a norma/manual, é correto afirmar",
+  "nivel_dificuldade":"MEDIO"
+},
+{
+  "id":"B08","nome":"FUNDEP (Gestão de Concursos, UFMG)",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Acadêmico","Cita literatura clássica (Potter & Perry, Brunner & Suddarth) além de normas do MS"],
+  "disciplinas_predominantes":["D09","D07"],
+  "assuntos_predominantes":["D09-A03 Classes Farmacológicas por Sistema"],
+  "observacoes_v1_1":"D02 (Anatomia e Fisiologia) deixou de ser disciplina própria (status MATERIAL_DE_APOIO) na V1.1. FUNDEP é a banca que mais se aproxima de testar esse conteúdo diretamente — quando isso ocorre, tratar como questão aplicada dentro de D07 (Enfermagem Clínica e Cirúrgica) referenciando o pool de apoio de Anatomia/Fisiologia, não como disciplina isolada.",
+  "estilo_de_cobranca":"Referência a literatura clássica de enfermagem",
+  "nivel_dificuldade":"MEDIO_ALTO"
+},
+{
+  "id":"B09","nome":"Avalia (Instituto Avalia / Avança SP)",
+  "formato_prova":"MULTIPLA_ESCOLHA_4",
+  "caracteristicas":["Objetivo","Provas mais curtas","Favorece definição/classificação simples","Menor profundidade em Farmacologia e UTI"],
+  "disciplinas_predominantes":["D10","D17","D08"],
+  "assuntos_predominantes":["D10-A02 Exame Físico e Avaliação","D17-A01 Epidemiologia Aplicada"],
+  "estilo_de_cobranca":"Definição/classificação simples e direta",
+  "nivel_dificuldade":"BAIXO_MEDIO"
+},
+{
+  "id":"B10","nome":"FAFIPA (Fundação FAFIPA)",
+  "formato_prova":"MULTIPLA_ESCOLHA_4",
+  "caracteristicas":["Simples e direto","Favorece listas ('são exemplos de... EXCETO')","Concursos municipais menores do Sul/Sudeste"],
+  "disciplinas_predominantes":["D10","D17","D08"],
+  "assuntos_predominantes":["D10-A03 Higiene, Conforto e Mobilidade","D17-A02 Vigilância em Saúde"],
+  "estilo_de_cobranca":"Listas e exceções ('EXCETO')",
+  "nivel_dificuldade":"BAIXO_MEDIO"
+},
+{
+  "id":"B11","nome":"Quadrix",
+  "formato_prova":"CERTO_ERRADO_ANULADO",
+  "caracteristicas":["Modelo próprio Certo/Errado/Anulado","Comando direto"],
+  "disciplinas_predominantes":["D10","D08"],
+  "assuntos_predominantes":["D10 Fundamentos de Enfermagem"],
+  "estilo_de_cobranca":"Item com 3 alternativas (Certo/Errado/Anulado)",
+  "nivel_dificuldade":"MEDIO"
+},
+{
+  "id":"B12","nome":"IADES",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Ênfase equilibrada entre clínico e normativo"],
+  "disciplinas_predominantes":["D10","D13"],
+  "assuntos_predominantes":[],
+  "estilo_de_cobranca":"Equilíbrio entre caso clínico e norma",
+  "nivel_dificuldade":"MEDIO"
+},
+{
+  "id":"B13","nome":"FCC (Fundação Carlos Chagas)",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Provas bem estruturadas","Gabarito raramente contestável"],
+  "disciplinas_predominantes":["D10","D24","D08"],
+  "assuntos_predominantes":["D24 SAE"],
+  "estilo_de_cobranca":"Estrutura rigorosa, baixo índice de recurso",
+  "nivel_dificuldade":"MEDIO_ALTO"
+},
+{
+  "id":"B14","nome":"Cesgranrio",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Presença menor em Enfermagem","Estudo de caso clínico quando presente"],
+  "disciplinas_predominantes":[],
+  "assuntos_predominantes":[],
+  "estilo_de_cobranca":"Estudo de caso clínico (similar à FGV)",
+  "nivel_dificuldade":"MEDIO_ALTO"
+},
+{
+  "id":"B15","nome":"UFPR/NC",
+  "formato_prova":"MULTIPLA_ESCOLHA_5",
+  "caracteristicas":["Perfil acadêmico","Ênfase em ciência básica e literatura clássica"],
+  "disciplinas_predominantes":["D09"],
+  "assuntos_predominantes":[],
+  "observacoes_v1_1":"D02 deixou de ser disciplina própria (status MATERIAL_DE_APOIO) na V1.1 — ver observação equivalente no perfil da FUNDEP.",
+  "estilo_de_cobranca":"Semelhante à FUNDEP",
+  "nivel_dificuldade":"MEDIO_ALTO"
+}
+]

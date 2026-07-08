@@ -1,0 +1,875 @@
+[
+  {
+    "id": "D01-A01",
+    "disciplina_id": "D01",
+    "nome": "Planejamento e Organização do Trabalho",
+    "descricao": "Processo administrativo e organização do serviço de enfermagem.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D01-A02",
+    "disciplina_id": "D01",
+    "nome": "Dimensionamento de Pessoal",
+    "descricao": "Cálculo de quadro de pessoal via SCP e Res. COFEN 543/2017.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D01-A03",
+    "disciplina_id": "D01",
+    "nome": "Liderança e Gestão de Pessoas",
+    "descricao": "Estilos de liderança, conflitos e educação permanente.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D01-A04",
+    "disciplina_id": "D01",
+    "nome": "Gestão da Qualidade",
+    "descricao": "Indicadores, acreditação, auditoria e custos.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D01-A05",
+    "disciplina_id": "D01",
+    "nome": "Supervisão e Avaliação",
+    "descricao": "Supervisão da equipe e avaliação de desempenho.",
+    "frequencia": "BAIXA",
+    "prioridade": "BAIXA"
+  },
+  {
+    "id": "D03-A01",
+    "disciplina_id": "D03",
+    "nome": "Proteção Individual e Coletiva",
+    "descricao": "EPI e precauções padrão/específicas.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D03-A02",
+    "disciplina_id": "D03",
+    "nome": "Gestão de Resíduos",
+    "descricao": "Classificação de RSS e PGRSS.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D03-A03",
+    "disciplina_id": "D03",
+    "nome": "Exposição Ocupacional",
+    "descricao": "Acidentes com perfurocortante e profilaxia pós-exposição.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D04-A01",
+    "disciplina_id": "D04",
+    "nome": "Estrutura e Organização do Centro Cirúrgico",
+    "descricao": "Planta física, zoneamento e equipe cirúrgica.",
+    "frequencia": "BAIXA",
+    "prioridade": "BAIXA"
+  },
+  {
+    "id": "D04-A02",
+    "disciplina_id": "D04",
+    "nome": "Paramentação e Assepsia",
+    "descricao": "Paramentação, escovação cirúrgica e técnica asséptica.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D04-A03",
+    "disciplina_id": "D04",
+    "nome": "Instrumentação Cirúrgica",
+    "descricao": "Instrumental básico e posicionamento do paciente.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D04-A04",
+    "disciplina_id": "D04",
+    "nome": "Recuperação Pós-Anestésica",
+    "descricao": "SRPA, escala de Aldrete e complicações imediatas.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D04-A05",
+    "disciplina_id": "D04",
+    "nome": "Central de Material e Esterilização",
+    "descricao": "Fluxo, métodos e indicadores de esterilização.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D05-A01",
+    "disciplina_id": "D03",
+    "nome": "Estrutura da Vigilância de IRAS",
+    "descricao": "CCIH, SCIH e indicadores epidemiológicos.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D05 (Controle de Infecção Hospitalar, mesclada) para D03 (Biossegurança, sobrevivente da fusão)."
+  },
+  {
+    "id": "D05-A02",
+    "disciplina_id": "D03",
+    "nome": "Infecções Relacionadas a Dispositivos",
+    "descricao": "ICS-CVC, ITU-AC, PAV, ISC.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D05 para D03."
+  },
+  {
+    "id": "D05-A03",
+    "disciplina_id": "D03",
+    "nome": "Microrganismos Multirresistentes",
+    "descricao": "MRSA, KPC e uso racional de antimicrobianos.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D05 para D03."
+  },
+  {
+    "id": "D05-A04",
+    "disciplina_id": "D03",
+    "nome": "Medidas de Prevenção",
+    "descricao": "Higienização das mãos, bundles e limpeza de superfícies.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D05 para D03."
+  },
+  {
+    "id": "D06-A01",
+    "disciplina_id": "D06",
+    "nome": "Doenças de Transmissão Vetorial",
+    "descricao": "Dengue, zika, chikungunya, malária, febre amarela, leishmaniose, Chagas.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D06-A02",
+    "disciplina_id": "D06",
+    "nome": "Doenças de Transmissão Respiratória",
+    "descricao": "Tuberculose, hanseníase, covid-19, influenza.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D06-A03",
+    "disciplina_id": "D06",
+    "nome": "IST e Hepatites",
+    "descricao": "HIV/Aids, sífilis, hepatites virais, outras IST.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D06-A04",
+    "disciplina_id": "D06",
+    "nome": "Doenças Imunopreveníveis e Outras",
+    "descricao": "Sarampo, coqueluche, meningites, doenças negligenciadas.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D06-A05",
+    "disciplina_id": "D06",
+    "nome": "Precaução e Manejo",
+    "descricao": "Precauções específicas e isolamento hospitalar.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D07-A01",
+    "disciplina_id": "D07",
+    "nome": "Cuidado Perioperatório",
+    "descricao": "Avaliação pré-op, complicações pós-op e drenos.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D07-A02",
+    "disciplina_id": "D07",
+    "nome": "Enfermagem em Especialidades Cirúrgicas",
+    "descricao": "Ortopedia, digestiva, urológica, oncológica, neuro, cardíaca.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D07-A03",
+    "disciplina_id": "D07",
+    "nome": "Estomas e Feridas Complexas",
+    "descricao": "Estomias e feridas cirúrgicas complexas.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D07-A04",
+    "disciplina_id": "D07",
+    "nome": "Oncologia",
+    "descricao": "Enfermagem oncológica e cuidados paliativos oncológicos.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D08-A01",
+    "disciplina_id": "D08",
+    "nome": "Marco Legal do Exercício Profissional",
+    "descricao": "Lei 7.498/1986 e Decreto 94.406/1987.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D08-A02",
+    "disciplina_id": "D08",
+    "nome": "Código de Ética dos Profissionais de Enfermagem",
+    "descricao": "Resolução COFEN 564/2017 e processo ético-disciplinar.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D08-A03",
+    "disciplina_id": "D08",
+    "nome": "Sistema COFEN/COREN",
+    "descricao": "Organização, registro e fiscalização profissional.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D08-A04",
+    "disciplina_id": "D08",
+    "nome": "Responsabilidade Profissional",
+    "descricao": "Responsabilidade civil/penal/ética, imperícia/imprudência/negligência.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D08-A05",
+    "disciplina_id": "D08",
+    "nome": "Outras Normativas COFEN Correlatas",
+    "descricao": "Resoluções 358/2009, 543/2017, 429/2012.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D09-A01",
+    "disciplina_id": "D09",
+    "nome": "Princípios de Farmacologia",
+    "descricao": "Farmacocinética, farmacodinâmica, RAM e interações.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D09-A02",
+    "disciplina_id": "D09",
+    "nome": "Segurança Medicamentosa",
+    "descricao": "Medicamentos de alta vigilância e protocolo de segurança.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D09-A03",
+    "disciplina_id": "D09",
+    "nome": "Classes Farmacológicas por Sistema",
+    "descricao": "Analgésicos, antibióticos, anti-hipertensivos, psicofármacos etc.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D09-A04",
+    "disciplina_id": "D09",
+    "nome": "Cálculo e Administração",
+    "descricao": "Cálculo de dose, diluição e compatibilidade.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D10-A01",
+    "disciplina_id": "D10",
+    "nome": "Histórico e Bases Teóricas da Profissão",
+    "descricao": "História da enfermagem, teorias e processo de enfermagem.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D10-A02",
+    "disciplina_id": "D10",
+    "nome": "Exame Físico e Avaliação",
+    "descricao": "Exame físico, sinais vitais, semiologia/semiotécnica, dor.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D10-A03",
+    "disciplina_id": "D10",
+    "nome": "Higiene, Conforto e Mobilidade",
+    "descricao": "Higiene, mobilização, prevenção de quedas e LPP.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D10-A04",
+    "disciplina_id": "D10",
+    "nome": "Feridas e Curativos",
+    "descricao": "Curativos, cicatrização e bandagens.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D10-A05",
+    "disciplina_id": "D10",
+    "nome": "Administração de Medicamentos",
+    "descricao": "Técnica, vias e cálculo de medicamentos.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D10-A06",
+    "disciplina_id": "D10",
+    "nome": "Procedimentos Invasivos e Suporte",
+    "descricao": "Punção, sondagens, nutrição, oxigenoterapia, balanço hídrico.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D10-A07",
+    "disciplina_id": "D10",
+    "nome": "Comunicação e Cuidado Perioperatório",
+    "descricao": "Comunicação efetiva/terapêutica e cuidados pré/pós-op.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D10-A08",
+    "disciplina_id": "D10",
+    "nome": "Identificação e Registro",
+    "descricao": "Identificação do paciente, registros e humanização.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D11-A01",
+    "disciplina_id": "D17",
+    "nome": "Estrutura do Programa",
+    "descricao": "PNI, calendário nacional e SI-PNI.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D11 (Imunização, mesclada) para D17 (Saúde Coletiva) — mesmo id, sem assunto novo criado."
+  },
+  {
+    "id": "D11-A02",
+    "disciplina_id": "D17",
+    "nome": "Rede de Frio",
+    "descricao": "Cadeia de frio, armazenamento e sala de vacinação.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D11 para D17."
+  },
+  {
+    "id": "D11-A03",
+    "disciplina_id": "D17",
+    "nome": "Administração de Imunobiológicos",
+    "descricao": "Vias, aprazamento, contraindicações e EAPV.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D11 para D17."
+  },
+  {
+    "id": "D11-A04",
+    "disciplina_id": "D17",
+    "nome": "Imunobiológicos Específicos",
+    "descricao": "Vacinas do calendário básico, CRIE, soros.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D11 para D17."
+  },
+  {
+    "id": "D12-A01",
+    "disciplina_id": "D12",
+    "nome": "Fundamentos de Hardware e Software",
+    "descricao": "Componentes de computador e sistemas operacionais.",
+    "frequencia": "BAIXA",
+    "prioridade": "BAIXA"
+  },
+  {
+    "id": "D12-A02",
+    "disciplina_id": "D12",
+    "nome": "Ferramentas de Produtividade",
+    "descricao": "Editor de texto, planilha e apresentações.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D12-A03",
+    "disciplina_id": "D12",
+    "nome": "Internet e Segurança",
+    "descricao": "Navegadores, e-mail e segurança da informação.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D12-A04",
+    "disciplina_id": "D12",
+    "nome": "Informática em Saúde",
+    "descricao": "Prontuário eletrônico e sistemas de informação em saúde.",
+    "frequencia": "BAIXA",
+    "prioridade": "BAIXA"
+  },
+  {
+    "id": "D13-A01",
+    "disciplina_id": "D13",
+    "nome": "Base Constitucional e Legal",
+    "descricao": "CF/1988, Lei 8.080, Lei 8.142, LC 141/2012.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D13-A02",
+    "disciplina_id": "D13",
+    "nome": "Princípios e Diretrizes do SUS",
+    "descricao": "Princípios doutrinários e organizativos.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D13-A03",
+    "disciplina_id": "D13",
+    "nome": "Gestão e Pactuação",
+    "descricao": "NOB, NOAS, Pacto pela Saúde, CIT/CIB, COAP, Decreto 7.508/2011.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D13-A04",
+    "disciplina_id": "D13",
+    "nome": "Controle Social",
+    "descricao": "Conselhos e conferências de saúde.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D13-A05",
+    "disciplina_id": "D13",
+    "nome": "Redes de Atenção à Saúde",
+    "descricao": "RAS, regionalização e hierarquização.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D14-A01",
+    "disciplina_id": "D13",
+    "nome": "Atenção Primária à Saúde",
+    "descricao": "PNAB, ESF, ACS, eMulti, PSE, Previne Brasil.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D14 (Políticas Públicas de Saúde, mesclada) para D13 (Legislação do SUS, sobrevivente da fusão)."
+  },
+  {
+    "id": "D14-A02",
+    "disciplina_id": "D13",
+    "nome": "Humanização e Acesso",
+    "descricao": "PNH/HumanizaSUS, PMAQ, acolhimento com classificação de risco.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D14 para D13."
+  },
+  {
+    "id": "D14-A03",
+    "disciplina_id": "D13",
+    "nome": "Redes Temáticas de Atenção à Saúde",
+    "descricao": "Rede Cegonha, RAPS, RUE, rede de deficiência, linha de cuidado.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D14 para D13."
+  },
+  {
+    "id": "D14-A04",
+    "disciplina_id": "D13",
+    "nome": "Políticas Específicas por População/Agravo",
+    "descricao": "PNAISH, PNPIC, PNAN, PNPS e políticas por população.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D14 para D13."
+  },
+  {
+    "id": "D15-A01",
+    "disciplina_id": "D15",
+    "nome": "Compreensão Textual",
+    "descricao": "Interpretação, tipologia, coesão e coerência.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D15-A02",
+    "disciplina_id": "D15",
+    "nome": "Gramática Normativa",
+    "descricao": "Ortografia, sintaxe, concordância, regência, crase, pontuação.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D15-A03",
+    "disciplina_id": "D15",
+    "nome": "Semântica e Estilística",
+    "descricao": "Significação de palavras e figuras de linguagem.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D16-A01",
+    "disciplina_id": "D16",
+    "nome": "Lógica Proposicional",
+    "descricao": "Proposições, conectivos, tabela-verdade, argumentação.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D16-A02",
+    "disciplina_id": "D16",
+    "nome": "Raciocínio Matemático Aplicado",
+    "descricao": "Sequências, porcentagem, regra de três, probabilidade, conjuntos.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D17-A01",
+    "disciplina_id": "D17",
+    "nome": "Epidemiologia Aplicada",
+    "descricao": "Indicadores, coeficientes, cadeia epidemiológica, níveis de prevenção.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D17-A02",
+    "disciplina_id": "D17",
+    "nome": "Vigilância em Saúde",
+    "descricao": "Vigilância epidemiológica, sanitária, ambiental, do trabalhador, notificação.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D17-A03",
+    "disciplina_id": "D17",
+    "nome": "Determinantes e Promoção da Saúde",
+    "descricao": "DSS, Carta de Ottawa, educação em saúde.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D17-A04",
+    "disciplina_id": "D17",
+    "nome": "Planejamento em Saúde",
+    "descricao": "Planejamento estratégico situacional e diagnóstico comunitário.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D18-A01",
+    "disciplina_id": "D18",
+    "nome": "Cuidado ao Recém-nascido",
+    "descricao": "Apgar, cuidados imediatos, triagens neonatais, método canguru.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D18-A02",
+    "disciplina_id": "D18",
+    "nome": "Crescimento e Desenvolvimento",
+    "descricao": "Curvas de crescimento, DNPM, alimentação complementar.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D18-A03",
+    "disciplina_id": "D18",
+    "nome": "Doenças Prevalentes na Infância",
+    "descricao": "AIDPI, IRA, diarreia, desnutrição, exantemáticas.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D18-A04",
+    "disciplina_id": "D18",
+    "nome": "Proteção e Direitos",
+    "descricao": "ECA, notificação de maus-tratos.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D18-A05",
+    "disciplina_id": "D18",
+    "nome": "Saúde do Adolescente",
+    "descricao": "Saúde sexual/reprodutiva do adolescente e PSE.",
+    "frequencia": "BAIXA",
+    "prioridade": "BAIXA"
+  },
+  {
+    "id": "D19-A01",
+    "disciplina_id": "D19",
+    "nome": "Pré-natal",
+    "descricao": "Consulta, cálculo de IG/DPP, sinais de alarme, síndromes hipertensivas, DMG.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D19-A02",
+    "disciplina_id": "D19",
+    "nome": "Parto e Nascimento",
+    "descricao": "Mecanismo do parto, partograma, parto humanizado, cesariana.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D19-A03",
+    "disciplina_id": "D19",
+    "nome": "Puerpério",
+    "descricao": "Fases do puerpério, aleitamento, alojamento conjunto, depressão pós-parto.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D19-A04",
+    "disciplina_id": "D19",
+    "nome": "Saúde Sexual e Reprodutiva",
+    "descricao": "Planejamento reprodutivo, climatério, prevenção de câncer, violência.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D20-A01",
+    "disciplina_id": "D07",
+    "nome": "Doenças Cardiovasculares",
+    "descricao": "HAS, insuficiência cardíaca, DAC, arritmias.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D20 (Saúde do Adulto, mesclada) para D07 (Enfermagem Médico-Cirúrgica, sobrevivente da fusão, nome mantido)."
+  },
+  {
+    "id": "D20-A02",
+    "disciplina_id": "D07",
+    "nome": "Doenças Endócrino-metabólicas",
+    "descricao": "Diabetes mellitus, obesidade, dislipidemia, tireoide.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA",
+    "observacoes_v1_1": "Reparentado de D20 para D07."
+  },
+  {
+    "id": "D20-A03",
+    "disciplina_id": "D07",
+    "nome": "Doenças Respiratórias Crônicas",
+    "descricao": "DPOC e asma.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D20 para D07."
+  },
+  {
+    "id": "D20-A04",
+    "disciplina_id": "D07",
+    "nome": "Doenças Renais e Neurológicas Crônicas",
+    "descricao": "DRC/TRS, AVC crônico, epilepsia.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D20 para D07."
+  },
+  {
+    "id": "D20-A05",
+    "disciplina_id": "D07",
+    "nome": "Cuidado Crônico e Linha de Cuidado",
+    "descricao": "Linha de cuidado das DCNT e cuidados paliativos.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA",
+    "observacoes_v1_1": "Reparentado de D20 para D07."
+  },
+  {
+    "id": "D21-A01",
+    "disciplina_id": "D21",
+    "nome": "Bases da Gerontologia",
+    "descricao": "Teorias do envelhecimento e Avaliação Geriátrica Ampla.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D21-A02",
+    "disciplina_id": "D21",
+    "nome": "Síndromes Geriátricas",
+    "descricao": "Fragilidade, quedas, incontinência, delirium, demências, polifarmácia.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D21-A03",
+    "disciplina_id": "D21",
+    "nome": "Cuidado ao Idoso",
+    "descricao": "Cuidados paliativos, ILPI, cuidador, violência.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D21-A04",
+    "disciplina_id": "D21",
+    "nome": "Direitos e Políticas",
+    "descricao": "Estatuto do Idoso e Política Nacional da Pessoa Idosa.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D22-A01",
+    "disciplina_id": "D22",
+    "nome": "Reforma Psiquiátrica e Modelo de Atenção",
+    "descricao": "Lei 10.216/2001 e desinstitucionalização.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D22-A02",
+    "disciplina_id": "D22",
+    "nome": "Rede de Atenção Psicossocial",
+    "descricao": "RAPS, CAPS, SRT, unidades de acolhimento.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D22-A03",
+    "disciplina_id": "D22",
+    "nome": "Álcool e Outras Drogas",
+    "descricao": "Redução de danos, CAPS AD, abstinência/intoxicação.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D22-A04",
+    "disciplina_id": "D22",
+    "nome": "Cuidado Clínico em Saúde Mental",
+    "descricao": "Transtornos mentais, risco de suicídio, manejo de crise.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D22-A05",
+    "disciplina_id": "D22",
+    "nome": "Relação Terapêutica e Cuidado",
+    "descricao": "Relação terapêutica, PTS, matriciamento.",
+    "frequencia": "BAIXA",
+    "prioridade": "BAIXA"
+  },
+  {
+    "id": "D23-A01",
+    "disciplina_id": "D23",
+    "nome": "Metas Internacionais de Segurança do Paciente",
+    "descricao": "As 6 metas internacionais.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D23-A02",
+    "disciplina_id": "D23",
+    "nome": "Governança da Segurança",
+    "descricao": "NSP, notificação de eventos adversos, cultura de segurança.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D23-A03",
+    "disciplina_id": "D23",
+    "nome": "Ferramentas de Gestão de Risco",
+    "descricao": "Checklists e protocolos dos 6 protocolos básicos.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D24-A01",
+    "disciplina_id": "D24",
+    "nome": "Base Normativa e Conceitual",
+    "descricao": "Resolução COFEN 358/2009 e conceito da SAE.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D24-A02",
+    "disciplina_id": "D24",
+    "nome": "As 5 Etapas do Processo de Enfermagem",
+    "descricao": "Coleta de dados, diagnóstico, planejamento, implementação, avaliação.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D24-A03",
+    "disciplina_id": "D24",
+    "nome": "Taxonomias e Sistemas de Classificação",
+    "descricao": "NANDA-I, NOC, NIC, ligação NNN, CIPE.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D24-A04",
+    "disciplina_id": "D24",
+    "nome": "Registro e Documentação",
+    "descricao": "Prescrição, evolução e prontuário eletrônico.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D25-A01",
+    "disciplina_id": "D25",
+    "nome": "Monitorização do Paciente Crítico",
+    "descricao": "Monitorização hemodinâmica, escores de gravidade, neurológica.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D25-A02",
+    "disciplina_id": "D25",
+    "nome": "Suporte Ventilatório",
+    "descricao": "VM invasiva/não invasiva, desmame, via aérea artificial.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D25-A03",
+    "disciplina_id": "D25",
+    "nome": "Suporte Hemodinâmico e Farmacológico",
+    "descricao": "Drogas vasoativas, sedação/analgesia, bloqueio neuromuscular.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D25-A04",
+    "disciplina_id": "D25",
+    "nome": "Cuidados Específicos do Paciente Crítico",
+    "descricao": "Delirium, mobilização precoce, prevenção de PAV, TRS contínua.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  },
+  {
+    "id": "D26-A01",
+    "disciplina_id": "D26",
+    "nome": "Classificação de Risco e Organização do Serviço",
+    "descricao": "Protocolo de Manchester, ACCR, RUE, SAMU, UPA.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D26-A02",
+    "disciplina_id": "D26",
+    "nome": "Suporte de Vida",
+    "descricao": "SBV, SAV, PCR/RCP, via aérea, desfibrilação.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D26-A03",
+    "disciplina_id": "D26",
+    "nome": "Emergências Clínicas",
+    "descricao": "Dor torácica, AVC agudo, sepse, emergências metabólicas/hipertensivas, anafilaxia.",
+    "frequencia": "ALTA",
+    "prioridade": "ALTA"
+  },
+  {
+    "id": "D26-A04",
+    "disciplina_id": "D26",
+    "nome": "Emergências Traumáticas",
+    "descricao": "Politraumatizado, Glasgow, choque, queimaduras, afogamento.",
+    "frequencia": "MEDIA",
+    "prioridade": "MEDIA"
+  }
+]

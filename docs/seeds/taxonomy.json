@@ -1,0 +1,633 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2026-07-08T10:13:18.843Z",
+    "generatedBy": "SimulaPro Seed Engine",
+    "description": "Taxonomia oficial do SimulaPro",
+    "environment": "development"
+  },
+  "courses": [
+    {
+      "name": "Enfermagem",
+      "slug": "enfermagem",
+      "status": "ACTIVE",
+      "description": "Curso de Enfermagem para homologação RC1",
+      "positions": [
+        {
+          "name": "Enfermeiro",
+          "slug": "enfermeiro",
+          "status": "ACTIVE",
+          "description": "Cargo de homologação RC1",
+          "order": 1
+        },
+        {
+          "name": "Técnico de Enfermagem",
+          "slug": "tecnico-enfermagem",
+          "status": "ACTIVE",
+          "description": null,
+          "order": 2
+        },
+        {
+          "name": "Técnico em Enfermagem",
+          "slug": "tecnico-em-enfermagem",
+          "status": "ACTIVE",
+          "description": null,
+          "order": 3
+        }
+      ],
+      "subjects": [
+        {
+          "name": "Administração em Enfermagem",
+          "slug": "administracao-em-enfermagem",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 1
+        },
+        {
+          "name": "Anatomia e Fisiologia",
+          "slug": "anatomia-fisiologia",
+          "status": "ACTIVE",
+          "topics": [
+            {
+              "name": "Sistema Cardiovascular",
+              "slug": "sistema-cardiovascular",
+              "status": "ACTIVE",
+              "order": 1
+            }
+          ],
+          "order": 2
+        },
+        {
+          "name": "Biossegurança",
+          "slug": "biosseguranca",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 3
+        },
+        {
+          "name": "Centro Cirúrgico e CME",
+          "slug": "centro-cirurgico-e-cme",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 4
+        },
+        {
+          "name": "Controle de Infecção Hospitalar",
+          "slug": "controle-de-infeccao-hospitalar",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 5
+        },
+        {
+          "name": "Enfermagem em Doenças Transmissíveis",
+          "slug": "enfermagem-em-doencas-transmissiveis",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 6
+        },
+        {
+          "name": "Enfermagem Médico-Cirúrgica",
+          "slug": "enfermagem-medico-cirurgica",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 7
+        },
+        {
+          "name": "Ética e Legislação em Enfermagem",
+          "slug": "etica-e-legislacao-em-enfermagem",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 8
+        },
+        {
+          "name": "Farmacologia",
+          "slug": "farmacologia",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 9
+        },
+        {
+          "name": "Fundamentos de Enfermagem",
+          "slug": "fundamentos-de-enfermagem",
+          "status": "ACTIVE",
+          "topics": [
+            {
+              "name": "Administração de Medicamentos",
+              "slug": "administracao-de-medicamentos",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Administração Segura de Medicamentos",
+              "slug": "administracao-segura-de-medicamentos",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Aspiração de Vias Aéreas",
+              "slug": "aspiracao-de-vias-aereas",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Avaliação e Manejo da Dor",
+              "slug": "avaliacao-e-manejo-da-dor",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Balanço Hídrico",
+              "slug": "balanco-hidrico",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Bandagens",
+              "slug": "bandagens",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Cálculo de Medicamentos",
+              "slug": "calculo-de-medicamentos",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Cirurgia Segura",
+              "slug": "cirurgia-segura",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Coleta de Material Biológico",
+              "slug": "coleta-de-material-biologico",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "Comunicação Efetiva",
+              "slug": "comunicacao-efetiva",
+              "status": "ACTIVE",
+              "order": 10
+            },
+            {
+              "name": "Comunicação Terapêutica",
+              "slug": "comunicacao-terapeutica",
+              "status": "ACTIVE",
+              "order": 11
+            },
+            {
+              "name": "Consulta de Enfermagem",
+              "slug": "consulta-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 12
+            },
+            {
+              "name": "Cuidados Pós-operatórios",
+              "slug": "cuidados-pos-operatorios",
+              "status": "ACTIVE",
+              "order": 13
+            },
+            {
+              "name": "Cuidados Pré-operatórios",
+              "slug": "cuidados-pre-operatorios",
+              "status": "ACTIVE",
+              "order": 14
+            },
+            {
+              "name": "Curativos",
+              "slug": "curativos",
+              "status": "ACTIVE",
+              "order": 15
+            },
+            {
+              "name": "Exame Físico",
+              "slug": "exame-fisico",
+              "status": "ACTIVE",
+              "order": 16
+            },
+            {
+              "name": "Feridas e Cicatrização",
+              "slug": "feridas-e-cicatrizacao",
+              "status": "ACTIVE",
+              "order": 17
+            },
+            {
+              "name": "Higiene das Mãos",
+              "slug": "higiene-das-maos",
+              "status": "ACTIVE",
+              "order": 18
+            },
+            {
+              "name": "Higiene e Conforto",
+              "slug": "higiene-e-conforto",
+              "status": "ACTIVE",
+              "order": 19
+            },
+            {
+              "name": "História da Enfermagem",
+              "slug": "historia-da-enfermagem",
+              "status": "ACTIVE",
+              "order": 20
+            },
+            {
+              "name": "Humanização da Assistência",
+              "slug": "humanizacao-da-assistencia",
+              "status": "ACTIVE",
+              "order": 21
+            },
+            {
+              "name": "Identificação do Paciente",
+              "slug": "identificacao-do-paciente",
+              "status": "ACTIVE",
+              "order": 22
+            },
+            {
+              "name": "Mobilização e Transporte do Paciente",
+              "slug": "mobilizacao-e-transporte-do-paciente",
+              "status": "ACTIVE",
+              "order": 23
+            },
+            {
+              "name": "Nutrição Enteral",
+              "slug": "nutricao-enteral",
+              "status": "ACTIVE",
+              "order": 24
+            },
+            {
+              "name": "Nutrição Parenteral",
+              "slug": "nutricao-parenteral",
+              "status": "ACTIVE",
+              "order": 25
+            },
+            {
+              "name": "Oxigenoterapia",
+              "slug": "oxigenoterapia",
+              "status": "ACTIVE",
+              "order": 26
+            },
+            {
+              "name": "Prevenção de Lesão por Pressão",
+              "slug": "prevencao-de-lesao-por-pressao",
+              "status": "ACTIVE",
+              "order": 27
+            },
+            {
+              "name": "Prevenção de Quedas",
+              "slug": "prevencao-de-quedas",
+              "status": "ACTIVE",
+              "order": 28
+            },
+            {
+              "name": "Processo de Enfermagem",
+              "slug": "processo-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 29
+            },
+            {
+              "name": "Punção Venosa",
+              "slug": "puncao-venosa",
+              "status": "ACTIVE",
+              "order": 30
+            },
+            {
+              "name": "Registros e Anotações de Enfermagem",
+              "slug": "registros-e-anotacoes-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 31
+            },
+            {
+              "name": "Semiologia de Enfermagem",
+              "slug": "semiologia-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 32
+            },
+            {
+              "name": "Semiotécnica de Enfermagem",
+              "slug": "semiotecnica-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 33
+            },
+            {
+              "name": "Sinais Vitais",
+              "slug": "sinais-vitais",
+              "status": "ACTIVE",
+              "order": 34
+            },
+            {
+              "name": "Sistematização da Assistência de Enfermagem (SAE)",
+              "slug": "sistematizacao-da-assistencia-de-enfermagem-sae",
+              "status": "ACTIVE",
+              "order": 35
+            },
+            {
+              "name": "Sondagem Gastrointestinal",
+              "slug": "sondagem-gastrointestinal",
+              "status": "ACTIVE",
+              "order": 36
+            },
+            {
+              "name": "Sondagem Vesical",
+              "slug": "sondagem-vesical",
+              "status": "ACTIVE",
+              "order": 37
+            },
+            {
+              "name": "Terapia Intravenosa",
+              "slug": "terapia-intravenosa",
+              "status": "ACTIVE",
+              "order": 38
+            },
+            {
+              "name": "Vias de Administração de Medicamentos",
+              "slug": "vias-de-administracao-de-medicamentos",
+              "status": "ACTIVE",
+              "order": 39
+            }
+          ],
+          "order": 10
+        },
+        {
+          "name": "Imunização",
+          "slug": "imunizacao",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 11
+        },
+        {
+          "name": "Informática",
+          "slug": "informatica",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 12
+        },
+        {
+          "name": "Legislação do SUS",
+          "slug": "legislacao-do-sus",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 13
+        },
+        {
+          "name": "Políticas Públicas de Saúde",
+          "slug": "politicas-publicas-de-saude",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 14
+        },
+        {
+          "name": "Português",
+          "slug": "portugues",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 15
+        },
+        {
+          "name": "Raciocínio Lógico",
+          "slug": "raciocinio-logico",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 16
+        },
+        {
+          "name": "Saúde Coletiva",
+          "slug": "saude-coletiva",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 17
+        },
+        {
+          "name": "Saúde da Criança e do Adolescente",
+          "slug": "saude-da-crianca-e-do-adolescente",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 18
+        },
+        {
+          "name": "Saúde da Mulher",
+          "slug": "saude-da-mulher",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 19
+        },
+        {
+          "name": "Saúde do Adulto",
+          "slug": "saude-do-adulto",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 20
+        },
+        {
+          "name": "Saúde do Idoso",
+          "slug": "saude-do-idoso",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 21
+        },
+        {
+          "name": "Saúde Mental",
+          "slug": "saude-mental",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 22
+        },
+        {
+          "name": "Segurança do Paciente",
+          "slug": "seguranca-do-paciente",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 23
+        },
+        {
+          "name": "Sistematização da Assistência de Enfermagem (SAE)",
+          "slug": "sistematizacao-da-assistencia-de-enfermagem-sae",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 24
+        },
+        {
+          "name": "Terapia Intensiva (UTI)",
+          "slug": "terapia-intensiva-uti",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 25
+        },
+        {
+          "name": "Urgência e Emergência",
+          "slug": "urgencia-e-emergencia",
+          "status": "ACTIVE",
+          "topics": [],
+          "order": 26
+        }
+      ],
+      "order": 1
+    }
+  ],
+  "boards": [
+    {
+      "name": "Avança SP",
+      "slug": "avanca-sp",
+      "status": "ACTIVE",
+      "acronym": "Avança SP",
+      "order": 1
+    },
+    {
+      "name": "CEBRASPE",
+      "slug": "cebraspe",
+      "status": "ACTIVE",
+      "acronym": "CEBRASPE",
+      "order": 2
+    },
+    {
+      "name": "CESGRANRIO",
+      "slug": "cesgranrio",
+      "status": "ACTIVE",
+      "acronym": "CESGRANRIO",
+      "order": 3
+    },
+    {
+      "name": "COSEAC",
+      "slug": "coseac",
+      "status": "ACTIVE",
+      "acronym": "COSEAC",
+      "order": 4
+    },
+    {
+      "name": "FEPESE",
+      "slug": "fepese",
+      "status": "ACTIVE",
+      "acronym": "FEPESE",
+      "order": 5
+    },
+    {
+      "name": "FGV",
+      "slug": "fgv",
+      "status": "ACTIVE",
+      "acronym": "FGV",
+      "order": 6
+    },
+    {
+      "name": "Fundação Carlos Chagas",
+      "slug": "fundacao-carlos-chagas",
+      "status": "ACTIVE",
+      "acronym": "FCC",
+      "order": 7
+    },
+    {
+      "name": "Fundação FAFIPA",
+      "slug": "fundacao-fafipa",
+      "status": "ACTIVE",
+      "acronym": "Fundação FAFIPA",
+      "order": 8
+    },
+    {
+      "name": "Fundação Getulio Vargas",
+      "slug": "fundacao-getulio-vargas",
+      "status": "ACTIVE",
+      "acronym": "FGV",
+      "order": 9
+    },
+    {
+      "name": "Fundação VUNESP",
+      "slug": "fundacao-vunesp",
+      "status": "ACTIVE",
+      "acronym": "VUNESP",
+      "order": 10
+    },
+    {
+      "name": "FUNDATEC",
+      "slug": "fundatec",
+      "status": "ACTIVE",
+      "acronym": "FUNDATEC",
+      "order": 11
+    },
+    {
+      "name": "IADES",
+      "slug": "iades",
+      "status": "ACTIVE",
+      "acronym": "IADES",
+      "order": 12
+    },
+    {
+      "name": "IBFC",
+      "slug": "ibfc",
+      "status": "ACTIVE",
+      "acronym": "IBFC",
+      "order": 13
+    },
+    {
+      "name": "IDECAN",
+      "slug": "idecan",
+      "status": "ACTIVE",
+      "acronym": "IDECAN",
+      "order": 14
+    },
+    {
+      "name": "Instituto ACCESS",
+      "slug": "instituto-access",
+      "status": "ACTIVE",
+      "acronym": "Instituto ACCESS",
+      "order": 15
+    },
+    {
+      "name": "Instituto AOCP",
+      "slug": "instituto-aocp",
+      "status": "ACTIVE",
+      "acronym": "Instituto AOCP",
+      "order": 16
+    },
+    {
+      "name": "Instituto Consulplan",
+      "slug": "instituto-consulplan",
+      "status": "ACTIVE",
+      "acronym": "Instituto Consulplan",
+      "order": 17
+    },
+    {
+      "name": "Legalle Concursos",
+      "slug": "legalle-concursos",
+      "status": "ACTIVE",
+      "acronym": "Legalle Concursos",
+      "order": 18
+    },
+    {
+      "name": "OBJETIVA Concursos",
+      "slug": "objetiva-concursos",
+      "status": "ACTIVE",
+      "acronym": "OBJETIVA Concursos",
+      "order": 19
+    },
+    {
+      "name": "Quadrix",
+      "slug": "quadrix",
+      "status": "ACTIVE",
+      "acronym": "Quadrix",
+      "order": 20
+    },
+    {
+      "name": "UFPR / NC",
+      "slug": "ufpr-nc",
+      "status": "ACTIVE",
+      "acronym": "UFPR / NC",
+      "order": 21
+    },
+    {
+      "name": "IDIB",
+      "slug": "idib",
+      "status": "ACTIVE",
+      "acronym": "IDIB",
+      "order": 22
+    }
+  ],
+  "contests": [
+    {
+      "name": "Prefeitura Municipal de Homologação",
+      "slug": "prefeitura-municipal-de-homologacao",
+      "status": "ACTIVE",
+      "boardSlug": "cebraspe",
+      "year": 2025,
+      "order": 1
+    }
+  ]
+}

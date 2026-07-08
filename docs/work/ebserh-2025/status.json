@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "workId": "ebserh-2025",
+  "stage": "TEXT_EXTRACTED",
+  "history": [
+    {
+      "stage": "REGISTERED",
+      "at": "2026-07-08T10:33:14.798Z",
+      "by": "SimulaPro PDF Pipeline",
+      "note": "PDF recebido e pasta de trabalho criada."
+    },
+    {
+      "stage": "DOWNLOADED",
+      "at": "2026-07-08T10:40:00.000Z",
+      "by": "SimulaPro Homologação",
+      "note": "Prova EBSERH 2025 homologada — estrutura validada, pronta para iniciar extração."
+    },
+    {
+      "stage": "TEXT_EXTRACTED",
+      "at": "2026-07-08T10:45:00.000Z",
+      "by": "SimulaPro Homologação",
+      "note": "Estrutura raw.md criada — pronta para receber texto bruto da prova."
+    }
+  ],
+  "sourcePdf": "source.pdf",
+  "workDir": "docs/work/ebserh-2025"
+}

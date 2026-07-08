@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   LayoutDashboard, BookOpen, Briefcase, Building2, ClipboardList,
   Library, Layers, HelpCircle, Upload, Download, Package, GitBranch,
-  Users, KeyRound, Share2,
+  Users, KeyRound, Share2, Archive, Sparkles,
 } from "lucide-react";
 import { AppShell, type NavGroup } from "@/components/AppShell";
 
@@ -14,6 +14,14 @@ const groups: NavGroup[] = [
   {
     label: "Geral",
     items: [{ title: "Dashboard", url: "/admin", icon: LayoutDashboard }],
+  },
+  {
+    label: "Acervo",
+    items: [
+      { title: "Acervo", url: "/admin/acervo", icon: Archive },
+      { title: "Editorial Engine", url: "/admin/acervo/editorial", icon: Sparkles },
+      { title: "Importar Arquitetura", url: "/admin/acervo/editorial/import", icon: Upload },
+    ],
   },
   {
     label: "Conteúdo",

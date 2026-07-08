@@ -1,0 +1,69 @@
+{
+  "id_scheme": {
+    "disciplina": "D{2 digits} — ex: D10",
+    "assunto": "{disciplina_id}-A{2 digits} — ex: D10-A01",
+    "subassunto": "{assunto_id}-S{2 digits} — ex: D10-A01-S01",
+    "palavra_chave": "{subassunto_id}-K{2 digits} — ex: D10-A01-S01-K01",
+    "regra": "R{3 digits} — ex: R001",
+    "caso_ambiguo": "AMB{3 digits} — ex: AMB001",
+    "banca": "B{2 digits} — ex: B01"
+  },
+  "entidades": [
+    "disciplinas", "assuntos", "subassuntos", "palavras_chave",
+    "sinonimos", "siglas", "legislacoes", "portarias", "protocolos",
+    "programas", "regras_classificacao", "casos_ambiguos",
+    "matriz_coocorrencia", "bancas", "dicionario_editorial"
+  ],
+  "relacionamentos": [
+    { "de": "assuntos.disciplina_id", "para": "disciplinas.id", "tipo": "N:1" },
+    { "de": "subassuntos.assunto_id", "para": "assuntos.id", "tipo": "N:1" },
+    { "de": "palavras_chave.subassunto_id", "para": "subassuntos.id", "tipo": "N:1" },
+    { "de": "legislacoes.assuntos_relacionados[]", "para": "assuntos.id", "tipo": "N:N" },
+    { "de": "portarias.assuntos_relacionados[]", "para": "assuntos.id", "tipo": "N:N" },
+    { "de": "protocolos.assuntos_relacionados[]", "para": "assuntos.id", "tipo": "N:N" },
+    { "de": "programas.assuntos_relacionados[]", "para": "assuntos.id", "tipo": "N:N" },
+    { "de": "regras_classificacao.disciplina_id", "para": "disciplinas.id", "tipo": "N:1" },
+    { "de": "regras_classificacao.assunto_id", "para": "assuntos.id", "tipo": "N:1" },
+    { "de": "casos_ambiguos.candidatos[].assunto_id", "para": "assuntos.id", "tipo": "N:N" },
+    { "de": "matriz_coocorrencia.assunto_a_id", "para": "assuntos.id", "tipo": "N:1" },
+    { "de": "matriz_coocorrencia.assunto_b_id", "para": "assuntos.id", "tipo": "N:1" },
+    { "de": "bancas.disciplinas_predominantes[].disciplina_id", "para": "disciplinas.id", "tipo": "N:N" }
+  ],
+  "enums": {
+    "tipo_palavra_chave": ["PRINCIPAL", "SECUNDARIA", "FRACA"],
+    "prioridade": ["ALTA", "MEDIA", "BAIXA"],
+    "categoria_sinonimo": ["DISCIPLINA", "ASSUNTO", "SIGLA_CLINICA", "TERMO_TECNICO"],
+    "categoria_sigla": ["ORGAO", "PROGRAMA", "PARAMETRO_CLINICO", "PROCEDIMENTO", "CLASSIFICACAO", "MEDICAMENTO", "REDE_SERVICO"],
+    "tipo_legislacao": ["LEI", "LEI_COMPLEMENTAR", "DECRETO", "RESOLUCAO_COFEN", "RDC_ANVISA", "NORMA_REGULAMENTADORA"],
+    "categoria_normativa": ["EXERCICIO_PROFISSIONAL", "SUS_ESTRUTURA", "POLITICA_PUBLICA", "SEGURANCA_PACIENTE", "CONTROLE_INFECCAO", "VIGILANCIA_SAUDE", "SAUDE_MENTAL", "IMUNIZACAO", "FARMACOLOGIA", "CENTRO_CIRURGICO"],
+    "formato_prova_banca": ["MULTIPLA_ESCOLHA_4", "MULTIPLA_ESCOLHA_5", "CERTO_ERRADO", "CERTO_ERRADO_ANULADO"],
+    "nivel_dificuldade_banca": ["BAIXO_MEDIO", "MEDIO", "MEDIO_ALTO", "ALTO"],
+    "cobertura_por_edital": {
+      "valores": ["UNIVERSAL", "FREQUENTE", "VARIAVEL_POR_BANCA", "REGIONAL"],
+      "descricao": {
+        "UNIVERSAL": "Aparece em praticamente todo edital de Enfermeiro, de qualquer banca/órgão — pode ser cobrado no simulado padrão sem ressalva",
+        "FREQUENTE": "Aparece na maioria dos editais, mas não em todos — cobrar no simulado padrão, sem tratar como garantido",
+        "VARIAVEL_POR_BANCA": "Presença depende fortemente da banca e/ou do órgão — não incluir no simulado padrão sem checar o edital específico do usuário",
+        "REGIONAL": "Frequência depende da região/endemicidade do concurso (ex.: agravos endêmicos) — não aplicar peso nacional único"
+      },
+      "adicionado_em": "V1.1 (Auditoria H1)",
+      "aplica_se_a": ["disciplinas", "subassuntos (quando o valor da disciplina não reflete o subassunto específico)"]
+    },
+    "status_disciplina": {
+      "valores": ["ATIVA", "MESCLADA", "MATERIAL_DE_APOIO", "DEPRECIADA"],
+      "descricao": {
+        "ATIVA": "Disciplina em uso corrente para classificação",
+        "MESCLADA": "Absorvida por outra disciplina; ver campo supersededBy; preservada para retrocompatibilidade de IDs históricos",
+        "MATERIAL_DE_APOIO": "Não é currículo cobrado como bloco próprio — conteúdo de referência transversal, sem frequência de edital própria",
+        "DEPRECIADA": "Não deve mais ser usada para novas classificações, sem substituto direto"
+      },
+      "adicionado_em": "V1.1 (Auditoria H1)"
+    }
+  },
+  "campos_de_versionamento_v1_1": {
+    "disciplinas.status": "ver enum status_disciplina",
+    "disciplinas.supersededBy": "id da disciplina que a substitui, quando status = MESCLADA; null caso contrário",
+    "disciplinas.cobertura_por_edital": "ver enum cobertura_por_edital",
+    "nota": "Registros MESCLADA/MATERIAL_DE_APOIO/DEPRECIADA nunca são removidos do array — apenas marcados, preservando a integridade referencial de qualquer regra/classificação histórica que ainda aponte para o id antigo (ver docs/editorial/engine-v2/03-metadados-e-versionamento.md)"
+  }
+}

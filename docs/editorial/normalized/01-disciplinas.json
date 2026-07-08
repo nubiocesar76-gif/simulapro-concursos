@@ -1,0 +1,233 @@
+[
+  {
+    "id": "D01",
+    "nome": "Administração em Enfermagem",
+    "descricao": "Gestão, liderança, dimensionamento e qualidade do serviço de enfermagem.",
+    "frequencia_percentual": 40,
+    "prioridade": "BAIXA",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: prioridade reduzida (era MEDIA/46%) — auditoria H1 constatou que raramente tem peso equivalente às disciplinas clínicas em prova de Enfermeiro generalista."
+  },
+  {
+    "id": "D03",
+    "nome": "Biossegurança",
+    "descricao": "Proteção do profissional: EPI, precauções, resíduos, exposição ocupacional. A partir da V1.1, absorve também o conteúdo de Controle de Infecção Hospitalar (ex-D05).",
+    "frequencia_percentual": 55,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: disciplina sobrevivente da fusão com D05 (Controle de Infecção Hospitalar) — auditoria H1 constatou que nas 10 bancas de referência isso é quase sempre um único item de edital. Nome mantido inalterado (não há aprovação explícita para renomear); os 4 assuntos de D05 foram reparentados para cá. Nenhuma disciplina nova foi criada."
+  },
+  {
+    "id": "D04",
+    "nome": "Centro Cirúrgico e CME",
+    "descricao": "Ambiente cirúrgico, instrumentação, esterilização e recuperação pós-anestésica.",
+    "frequencia_percentual": 40,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimos: Bloco Cirúrgico, Instrumentação Cirúrgica."
+  },
+  {
+    "id": "D06",
+    "nome": "Enfermagem em Doenças Transmissíveis",
+    "descricao": "Doenças infecciosas e parasitárias de notificação e manejo clínico.",
+    "frequencia_percentual": 40,
+    "prioridade": "BAIXA",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: prioridade reduzida (era MEDIA/46%) — auditoria H1: frequentemente absorvida por Saúde Coletiva como 'vigilância epidemiológica das doenças transmissíveis', raramente bloco autônomo."
+  },
+  {
+    "id": "D07",
+    "nome": "Enfermagem Médico-Cirúrgica",
+    "descricao": "Cuidado clínico ao paciente cirúrgico por especialidade. A partir da V1.1, absorve também o conteúdo de Saúde do Adulto (ex-D20).",
+    "frequencia_percentual": 65,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: disciplina sobrevivente da fusão com D20 (Saúde do Adulto) — auditoria H1 constatou sobreposição quase total entre as duas nas 10 bancas de referência. Nome mantido inalterado (a auditoria apenas cogitou renomear 'se necessário'; sem aprovação explícita para isso na lista de mudanças da V1.1, o nome NÃO foi alterado). Os 5 assuntos de D20 foram reparentados para cá. Nenhuma disciplina nova foi criada."
+  },
+  {
+    "id": "D08",
+    "nome": "Ética e Legislação em Enfermagem",
+    "descricao": "Marco legal do exercício profissional e Código de Ética (COFEN/COREN).",
+    "frequencia_percentual": 68,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimo: Deontologia de Enfermagem, CEPE."
+  },
+  {
+    "id": "D09",
+    "nome": "Farmacologia",
+    "descricao": "Farmacocinética, farmacodinâmica e classes farmacológicas aplicadas.",
+    "frequencia_percentual": 50,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Distinta de Fundamentos (técnica/via) — aqui é mecanismo/classe."
+  },
+  {
+    "id": "D10",
+    "nome": "Fundamentos de Enfermagem",
+    "descricao": "Técnicas básicas, semiotécnica, procedimentos e cuidado processual.",
+    "frequencia_percentual": 76,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimo: Enfermagem Fundamental, Semiologia e Semiotécnica."
+  },
+  {
+    "id": "D12",
+    "nome": "Informática",
+    "descricao": "Noções de hardware, software, internet e informática em saúde.",
+    "frequencia_percentual": 40,
+    "prioridade": "BAIXA",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: marcada VARIAVEL_POR_BANCA (auditoria H1 — presença inconsistente entre editais de Enfermeiro)."
+  },
+  {
+    "id": "D13",
+    "nome": "Legislação do SUS",
+    "descricao": "Base constitucional e legal, princípios, gestão e controle social do SUS. A partir da V1.1, absorve também o conteúdo de Políticas Públicas de Saúde (ex-D14).",
+    "frequencia_percentual": 70,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: disciplina sobrevivente da fusão com D14 (Políticas Públicas de Saúde) — auditoria H1: em VUNESP e Consulplan, entre outras, é comum um único item de edital cobrindo os dois. Nome mantido inalterado. Os 4 assuntos de D14 foram reparentados para cá. Nenhuma disciplina nova foi criada."
+  },
+  {
+    "id": "D15",
+    "nome": "Português",
+    "descricao": "Compreensão textual, gramática normativa e semântica.",
+    "frequencia_percentual": 70,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Bloco de Conhecimentos Gerais."
+  },
+  {
+    "id": "D16",
+    "nome": "Raciocínio Lógico",
+    "descricao": "Lógica proposicional e raciocínio matemático aplicado.",
+    "frequencia_percentual": 40,
+    "prioridade": "BAIXA",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: marcada VARIAVEL_POR_BANCA — auditoria H1 constatou ausência em muitos editais de Enfermeiro."
+  },
+  {
+    "id": "D17",
+    "nome": "Saúde Coletiva",
+    "descricao": "Epidemiologia, vigilância em saúde, determinantes e promoção da saúde. A partir da V1.1, absorve também os 4 assuntos de Imunização (ex-D11).",
+    "frequencia_percentual": 76,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: recebeu os assuntos D11-A01..A04 (Imunização) reparentados diretamente, sem consolidação em assunto novo. Sinônimo: Saúde Pública, Vigilância em Saúde."
+  },
+  {
+    "id": "D18",
+    "nome": "Saúde da Criança e do Adolescente",
+    "descricao": "Cuidado ao recém-nascido, crescimento/desenvolvimento e doenças prevalentes na infância.",
+    "frequencia_percentual": 56,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimo: Enfermagem Pediátrica, Puericultura."
+  },
+  {
+    "id": "D19",
+    "nome": "Saúde da Mulher",
+    "descricao": "Pré-natal, parto, puerpério e saúde sexual e reprodutiva.",
+    "frequencia_percentual": 56,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimo: Enfermagem Obstétrica."
+  },
+  {
+    "id": "D21",
+    "nome": "Saúde do Idoso",
+    "descricao": "Gerontologia, síndromes geriátricas e direitos da pessoa idosa.",
+    "frequencia_percentual": 42,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimo: Enfermagem Gerontológica."
+  },
+  {
+    "id": "D22",
+    "nome": "Saúde Mental",
+    "descricao": "Reforma Psiquiátrica, RAPS/CAPS e cuidado clínico em saúde mental.",
+    "frequencia_percentual": 55,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: frequência/prioridade elevadas (era MEDIA/44%) — auditoria H1: subdimensionada."
+  },
+  {
+    "id": "D23",
+    "nome": "Segurança do Paciente",
+    "descricao": "Metas internacionais de segurança e protocolos do PNSP.",
+    "frequencia_percentual": 56,
+    "prioridade": "MEDIA",
+    "cobertura_por_edital": "VARIAVEL_POR_BANCA",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Sinônimo: PNSP, Gestão de Risco Assistencial."
+  },
+  {
+    "id": "D24",
+    "nome": "Sistematização da Assistência de Enfermagem (SAE)",
+    "descricao": "Processo de Enfermagem em 5 etapas e taxonomias NANDA-NOC-NIC/CIPE.",
+    "frequencia_percentual": 56,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "Duplicidade estrutural no taxonomy.json legado (topic dentro de Fundamentos + subject isolado) segue pendente de correção no banco de produção — tratar SAE como disciplina única aqui."
+  },
+  {
+    "id": "D25",
+    "nome": "Terapia Intensiva (UTI)",
+    "descricao": "Monitorização, suporte ventilatório e hemodinâmico do paciente crítico.",
+    "frequencia_percentual": 55,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "FREQUENTE",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: frequência/prioridade elevadas (era MEDIA/42%) — auditoria H1: subdimensionada."
+  },
+  {
+    "id": "D26",
+    "nome": "Urgência e Emergência",
+    "descricao": "Classificação de risco, suporte de vida e emergências clínicas/traumáticas.",
+    "frequencia_percentual": 78,
+    "prioridade": "ALTA",
+    "cobertura_por_edital": "UNIVERSAL",
+    "status": "ATIVA",
+    "supersededBy": null,
+    "observacoes": "V1.1: frequência/prioridade elevadas (era MEDIA/52%) — auditoria H1: erro de calibração relevante."
+  }
+]
