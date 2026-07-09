@@ -47,7 +47,7 @@ function AuthPage() {
     if (!data.session?.user) return toast.error("Sessão não criada. Tente novamente.");
 
     const { role: nextRole, error: roleError } = await fetchRole(data.session.user.id);
-    if (roleError) return toast.error(roleError.message);
+    if (roleError) return toast.error(roleError);
 
     toast.success("Bem-vindo de volta!");
     navigate({ to: nextRole === "admin" ? "/admin" : "/app", replace: true });

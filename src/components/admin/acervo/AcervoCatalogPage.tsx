@@ -97,7 +97,6 @@ export function AcervoCatalogPage() {
     );
   }, [exams, debouncedSearch]);
 
-  const pageCount = Math.max(1, Math.ceil(filtered.length / TAXONOMY_PAGE_SIZE));
   const pageItems = filtered.slice(page * TAXONOMY_PAGE_SIZE, (page + 1) * TAXONOMY_PAGE_SIZE);
 
   return (
@@ -192,12 +191,7 @@ export function AcervoCatalogPage() {
             </Table>
           </div>
 
-          <TaxonomyPagination
-            page={page}
-            pageCount={pageCount}
-            total={filtered.length}
-            onPageChange={setPage}
-          />
+          <TaxonomyPagination page={page} total={filtered.length} onPageChange={setPage} />
         </CardContent>
       </Card>
     </AcervoPageShell>

@@ -141,6 +141,34 @@ export async function resolveContest(
   return null;
 }
 
+/** Resolve uma versão de pacote publicável (package_versions) por slug do pacote + número da versão, escopado ao curso. */
+export async function resolvePackageVersion(
+  db: SeedDb,
+  courseId: string,
+  packageSlug: string,
+  versionNumber: string,
+): Promise<ResolvedEntity | null> {
+  const { data: pkg, error: packageError } = await db
+    .from("packages")
+    .select("id")
+    .eq("course_id", courseId)
+    .eq("slug", packageSlug)
+    .limit(1)
+    .maybeSingle();
+  if (packageError) throw packageError;
+  if (!pkg) return null;
+
+  const { data: version, error: versionError } = await db
+    .from("package_versions")
+    .select("id")
+    .eq("package_id", pkg.id)
+    .eq("version_number", versionNumber)
+    .limit(1)
+    .maybeSingle();
+  if (versionError) throw versionError;
+  return version;
+}
+
 export function ignore(report: SeedReport, label: string) {
   report.ignored += 1;
   if (process.env.SEED_VERBOSE === "1") console.log(`Ignorado: ${label}`);

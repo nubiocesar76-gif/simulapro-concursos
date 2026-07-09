@@ -45,6 +45,8 @@
         "temperatura axilar",
         "afebril"
       ],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
       "contentHash": "7a55e5add800bbdffacc987a6ed19bfec3a00a67462537c9c1c2a3061bed6f29"
     },
     {
@@ -95,6 +97,8 @@
         "page": 18,
         "question": 27
       },
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
       "contentHash": "906d124b05020cc091391556cbc3f5af065f7ad0c026592f6131380efc1bbd9b"
     }
   ]

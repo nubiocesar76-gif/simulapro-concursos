@@ -27,6 +27,11 @@ const taxonomySlugSchema = z
 
 const statementSchema = z.string().trim().min(10, "statement deve ter pelo menos 10 caracteres");
 
+const packageVersionSchema = z
+  .string()
+  .trim()
+  .regex(/^\d+\.\d+(?:\.\d+)?$/, "packageVersion deve seguir o padrão semântico (ex.: 1.0)");
+
 export const questionAlternativeSchema = z.object({
   letter: z
     .string()
@@ -56,6 +61,8 @@ const questionSeedItemBaseSchema = z.object({
   contest: taxonomySlugSchema.optional(),
   subject: taxonomySlugSchema.optional(),
   topic: taxonomySlugSchema.optional(),
+  package: taxonomySlugSchema.optional(),
+  packageVersion: packageVersionSchema.optional(),
   year: z.number().int().min(1900).max(2100).optional(),
   explanation: z.string().optional().default(""),
   references: z.array(z.string().trim()).default([]),

@@ -64,6 +64,8 @@ function toSeedItem(row: ReturnType<typeof validateRows>["converted"][number]): 
     status: row.status,
     keywords: row.keywords,
     ...(row.source ? { source: row.source } : {}),
+    ...(row.package ? { package: row.package } : {}),
+    ...(row.packageVersion ? { packageVersion: row.packageVersion } : {}),
     contentHash,
   };
 }

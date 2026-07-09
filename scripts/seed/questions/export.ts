@@ -24,6 +24,7 @@ type ExportRow = {
   boards: { name: string } | null;
   exams: { name: string } | null;
   positions: { slug: string } | null;
+  package_versions: { version_number: string; packages: { slug: string } | null } | null;
 };
 
 export type ExportQuestionsOptions = {
@@ -58,6 +59,8 @@ function rowToSeedItem(row: ExportRow): QuestionSeedItem & { contentHash: string
   if (row.exams?.name) item.contest = generatePackageSlug(row.exams.name);
   if (row.subjects?.slug) item.subject = row.subjects.slug;
   if (row.topics?.slug) item.topic = row.topics.slug;
+  if (row.package_versions?.packages?.slug) item.package = row.package_versions.packages.slug;
+  if (row.package_versions?.version_number) item.packageVersion = row.package_versions.version_number;
   if (row.year != null) item.year = row.year;
   if (source && Object.keys(source).length) item.source = source;
 
@@ -70,6 +73,8 @@ function rowToSeedItem(row: ExportRow): QuestionSeedItem & { contentHash: string
     ...(item.contest ? { contest: item.contest } : {}),
     ...(item.subject ? { subject: item.subject } : {}),
     ...(item.topic ? { topic: item.topic } : {}),
+    ...(item.package ? { package: item.package } : {}),
+    ...(item.packageVersion ? { packageVersion: item.packageVersion } : {}),
     ...(item.year != null ? { year: item.year } : {}),
     explanation: item.explanation,
     references: item.references,
@@ -96,7 +101,8 @@ export async function exportQuestions(
          topics(slug),
          boards(name),
          exams(name),
-         positions(slug)`,
+         positions(slug),
+         package_versions(version_number, packages(slug))`,
       )
       .order("id", { ascending: true })
       .range(from, from + EXPORT_PAGE_SIZE - 1);

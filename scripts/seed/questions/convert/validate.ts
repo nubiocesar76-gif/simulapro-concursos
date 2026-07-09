@@ -37,6 +37,18 @@ function parsePositiveInt(value: string, field: string, issues: ConvertIssue[], 
   return parsed;
 }
 
+const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const PACKAGE_VERSION_PATTERN = /^\d+\.\d+(?:\.\d+)?$/;
+
+/**
+ * Planilhas (CSV e XLSX) tipam células como "1.0" para número, perdendo o zero
+ * final ao virar texto ("1"). Um inteiro puro é sempre a major version — "1"
+ * normaliza para "1.0" para bater com o padrão semântico exigido pelo seed.
+ */
+function normalizePackageVersion(value: string): string {
+  return /^\d+$/.test(value) ? `${value}.0` : value;
+}
+
 export type ConvertedQuestionRow = {
   statement: string;
   alternatives: Array<{ letter: string; text: string }>;
@@ -57,6 +69,8 @@ export type ConvertedQuestionRow = {
     page?: number;
     question?: number;
   };
+  package?: string;
+  packageVersion?: string;
 };
 
 export function validateRows(
@@ -181,6 +195,22 @@ export function validateRows(
     if (page != null) source.page = page;
     if (question != null) source.question = question;
 
+    const packageSlug = row.package ?? "";
+    const packageVersion = row.package_version ? normalizePackageVersion(row.package_version) : "";
+    if (packageSlug && !packageVersion) {
+      issues.push({ line, field: "package_version", error: "package requer package_version." });
+    } else if (packageVersion && !packageSlug) {
+      issues.push({ line, field: "package", error: "package_version requer package." });
+    } else if (packageSlug && !SLUG_PATTERN.test(packageSlug)) {
+      issues.push({ line, field: "package", error: `package "${packageSlug}" não é um slug válido.` });
+    } else if (packageVersion && !PACKAGE_VERSION_PATTERN.test(packageVersion)) {
+      issues.push({
+        line,
+        field: "package_version",
+        error: `package_version "${packageVersion}" deve seguir o padrão semântico (ex.: 1.0).`,
+      });
+    }
+
     if (issues.length > rowIssuesBefore) continue;
 
     converted.push({
@@ -198,6 +228,8 @@ export function validateRows(
       keywords: splitKeywords(row.keywords ?? ""),
       status: statusRaw as "ACTIVE" | "INACTIVE",
       source: Object.keys(source).length ? source : undefined,
+      package: packageSlug || undefined,
+      packageVersion: packageVersion || undefined,
     });
   }
 

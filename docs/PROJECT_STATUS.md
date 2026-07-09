@@ -10,7 +10,7 @@ Para visão de produto, ver [`00-VISAO-GERAL.md`](./00-VISAO-GERAL.md). Para arq
 
 | Item | Estado |
 |------|--------|
-| **Fase atual** | RC2 — Design System e redesign visual (Admin + Aluno) concluídos em documentação; implementação pendente |
+| **Fase atual** | Produção do Acervo Oficial — Enfermeiro (meta: 100 provas, janela 2016–2026) — ver `ACERVO_ENFERMEIRO_PRODUCAO.md` |
 | **MVP estrutural** | Implementado (portais Admin e Aluno navegáveis) |
 | **Backend** | Supabase / Lovable Cloud |
 | **Project ID Supabase** | `snbhstgvsfjfyfbwxdae` |
@@ -513,6 +513,25 @@ Para visão de produto, ver [`00-VISAO-GERAL.md`](./00-VISAO-GERAL.md). Para arq
 
 ---
 
+## Produção do Acervo Oficial — Enfermeiro
+
+**Objetivo:** montar o Acervo Oficial de Enfermeiro — meta de 100 provas
+oficiais, janela histórica 2016–2026. Fase puramente operacional: nenhuma
+alteração de arquitetura, banco, migration ou código; organiza a produção
+sobre a infraestrutura já existente (pipeline `docs/work/`, catálogo
+`docs/catalog/enfermagem.csv`, taxonomia `docs/editorial/`).
+
+| Item | Estado |
+|---|---|
+| Documento executivo | `docs/ACERVO_ENFERMEIRO_PRODUCAO.md` |
+| Detalhamento operacional | `docs/producao-acervo/` (bancas, órgãos, status, checklist, cronograma, controle prova a prova) |
+| Provas catalogadas | 67 de 100 (`docs/catalog/enfermagem.csv`) |
+| Provas processadas (`SEEDED`) | 0 |
+| Prova em processamento | `ebserh-2025` — estágio `DOWNLOADED` |
+| Gap identificado | Catálogo atual só cobre 2023–2025; janela 2016–2026 exige ampliar para 33 provas adicionais |
+
+---
+
 ## Documentação
 
 | Arquivo | Status |
@@ -525,6 +544,8 @@ Para visão de produto, ver [`00-VISAO-GERAL.md`](./00-VISAO-GERAL.md). Para arq
 | `docs/RC1_CHECKLIST.md` | ✅ Checklist validação RC1 |
 | `docs/02-BANCO-DE-DADOS.md` | ❌ Pendente |
 | `docs/examples/questions-demo.csv` | ✅ Exemplo para importação |
+| `docs/ACERVO_ENFERMEIRO_PRODUCAO.md` | ✅ Produção do acervo (meta, bancas, órgãos, cronograma) |
+| `docs/producao-acervo/` | ✅ Detalhamento operacional da produção (7 documentos) |
 
 ---
 
@@ -940,4 +961,4 @@ Conforme `CURSOR_RULES.md`:
 
 ---
 
-*Última atualização: julho/2026 — RC2: Design System e redesign visual (Admin + Aluno) encerrados em documentação; implementação pendente.*
+*Última atualização: 2026-07-09 — início oficial da Produção do Acervo Oficial de Enfermeiro (meta: 100 provas, 2016–2026); ver `ACERVO_ENFERMEIRO_PRODUCAO.md`.*

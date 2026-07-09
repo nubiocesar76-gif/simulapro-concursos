@@ -12,6 +12,31 @@ export type Database = {
   __InternalSupabase: {
     PostgrestVersion: "14.5"
   }
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          extensions?: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
   public: {
     Tables: {
       boards: {
@@ -114,6 +139,543 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      editorial_architectures: {
+        Row: {
+          course_id: string
+          created_at: string
+          description: string | null
+          engine_version: string
+          id: string
+          is_active: boolean
+          name: string
+          position_id: string
+          slug: string
+          status: Database["public"]["Enums"]["editorial_architecture_status"]
+          updated_at: string
+        }
+        Insert: {
+          course_id: string
+          created_at?: string
+          description?: string | null
+          engine_version?: string
+          id?: string
+          is_active?: boolean
+          name: string
+          position_id: string
+          slug: string
+          status?: Database["public"]["Enums"]["editorial_architecture_status"]
+          updated_at?: string
+        }
+        Update: {
+          course_id?: string
+          created_at?: string
+          description?: string | null
+          engine_version?: string
+          id?: string
+          is_active?: boolean
+          name?: string
+          position_id?: string
+          slug?: string
+          status?: Database["public"]["Enums"]["editorial_architecture_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_architectures_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_architectures_position_id_fkey"
+            columns: ["position_id"]
+            isOneToOne: false
+            referencedRelation: "positions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_changelog: {
+        Row: {
+          architecture_id: string
+          change_type: string
+          created_at: string
+          entity_code: string | null
+          entity_id: string | null
+          entity_type: string
+          id: string
+          import_log_id: string | null
+          new_snapshot: Json | null
+          previous_snapshot: Json | null
+        }
+        Insert: {
+          architecture_id: string
+          change_type: string
+          created_at?: string
+          entity_code?: string | null
+          entity_id?: string | null
+          entity_type: string
+          id?: string
+          import_log_id?: string | null
+          new_snapshot?: Json | null
+          previous_snapshot?: Json | null
+        }
+        Update: {
+          architecture_id?: string
+          change_type?: string
+          created_at?: string
+          entity_code?: string | null
+          entity_id?: string | null
+          entity_type?: string
+          id?: string
+          import_log_id?: string | null
+          new_snapshot?: Json | null
+          previous_snapshot?: Json | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_changelog_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_changelog_import_log_id_fkey"
+            columns: ["import_log_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_import_logs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_disciplines: {
+        Row: {
+          architecture_id: string
+          code: string | null
+          confidence: number
+          created_at: string
+          description: string | null
+          evidence_count: number
+          frequency_percent: number | null
+          id: string
+          name: string
+          notes: string | null
+          priority: Database["public"]["Enums"]["editorial_priority"] | null
+          slug: string
+          sort_order: number
+          status: Database["public"]["Enums"]["editorial_record_status"]
+          updated_at: string
+        }
+        Insert: {
+          architecture_id: string
+          code?: string | null
+          confidence?: number
+          created_at?: string
+          description?: string | null
+          evidence_count?: number
+          frequency_percent?: number | null
+          id?: string
+          name: string
+          notes?: string | null
+          priority?: Database["public"]["Enums"]["editorial_priority"] | null
+          slug: string
+          sort_order?: number
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          updated_at?: string
+        }
+        Update: {
+          architecture_id?: string
+          code?: string | null
+          confidence?: number
+          created_at?: string
+          description?: string | null
+          evidence_count?: number
+          frequency_percent?: number | null
+          id?: string
+          name?: string
+          notes?: string | null
+          priority?: Database["public"]["Enums"]["editorial_priority"] | null
+          slug?: string
+          sort_order?: number
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_disciplines_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_evidence: {
+        Row: {
+          architecture_id: string
+          created_at: string
+          description: string | null
+          entity_id: string
+          entity_type: Database["public"]["Enums"]["editorial_entity_type"]
+          evidence_type: Database["public"]["Enums"]["editorial_evidence_type"]
+          id: string
+          source_ref: string | null
+          weight: number
+        }
+        Insert: {
+          architecture_id: string
+          created_at?: string
+          description?: string | null
+          entity_id: string
+          entity_type: Database["public"]["Enums"]["editorial_entity_type"]
+          evidence_type: Database["public"]["Enums"]["editorial_evidence_type"]
+          id?: string
+          source_ref?: string | null
+          weight?: number
+        }
+        Update: {
+          architecture_id?: string
+          created_at?: string
+          description?: string | null
+          entity_id?: string
+          entity_type?: Database["public"]["Enums"]["editorial_entity_type"]
+          evidence_type?: Database["public"]["Enums"]["editorial_evidence_type"]
+          id?: string
+          source_ref?: string | null
+          weight?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_evidence_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_import_logs: {
+        Row: {
+          architecture_id: string | null
+          architecture_version: string
+          created_at: string
+          duration_ms: number
+          engine_version: string
+          error_message: string | null
+          id: string
+          imported_files: Json
+          package_path: string
+          record_counts: Json
+          status: string
+          user_id: string
+        }
+        Insert: {
+          architecture_id?: string | null
+          architecture_version: string
+          created_at?: string
+          duration_ms?: number
+          engine_version: string
+          error_message?: string | null
+          id?: string
+          imported_files?: Json
+          package_path: string
+          record_counts?: Json
+          status?: string
+          user_id: string
+        }
+        Update: {
+          architecture_id?: string | null
+          architecture_version?: string
+          created_at?: string
+          duration_ms?: number
+          engine_version?: string
+          error_message?: string | null
+          id?: string
+          imported_files?: Json
+          package_path?: string
+          record_counts?: Json
+          status?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_import_logs_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_keywords: {
+        Row: {
+          architecture_id: string
+          code: string | null
+          created_at: string
+          id: string
+          keyword_type: Database["public"]["Enums"]["editorial_keyword_type"]
+          status: Database["public"]["Enums"]["editorial_record_status"]
+          subtopic_id: string | null
+          term: string
+          topic_id: string
+          updated_at: string
+          weight: number
+        }
+        Insert: {
+          architecture_id: string
+          code?: string | null
+          created_at?: string
+          id?: string
+          keyword_type?: Database["public"]["Enums"]["editorial_keyword_type"]
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          subtopic_id?: string | null
+          term: string
+          topic_id: string
+          updated_at?: string
+          weight?: number
+        }
+        Update: {
+          architecture_id?: string
+          code?: string | null
+          created_at?: string
+          id?: string
+          keyword_type?: Database["public"]["Enums"]["editorial_keyword_type"]
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          subtopic_id?: string | null
+          term?: string
+          topic_id?: string
+          updated_at?: string
+          weight?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_keywords_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_keywords_subtopic_id_fkey"
+            columns: ["subtopic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_subtopics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_keywords_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_rules: {
+        Row: {
+          architecture_id: string
+          code: string | null
+          confidence_percent: number
+          created_at: string
+          discipline_id: string | null
+          engine_version: string | null
+          id: string
+          notes: string | null
+          status: Database["public"]["Enums"]["editorial_record_status"]
+          subtopic_id: string | null
+          topic_id: string | null
+          trigger_terms: string[]
+          updated_at: string
+        }
+        Insert: {
+          architecture_id: string
+          code?: string | null
+          confidence_percent?: number
+          created_at?: string
+          discipline_id?: string | null
+          engine_version?: string | null
+          id?: string
+          notes?: string | null
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          subtopic_id?: string | null
+          topic_id?: string | null
+          trigger_terms?: string[]
+          updated_at?: string
+        }
+        Update: {
+          architecture_id?: string
+          code?: string | null
+          confidence_percent?: number
+          created_at?: string
+          discipline_id?: string | null
+          engine_version?: string | null
+          id?: string
+          notes?: string | null
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          subtopic_id?: string | null
+          topic_id?: string | null
+          trigger_terms?: string[]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_rules_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_rules_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_disciplines"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_rules_subtopic_id_fkey"
+            columns: ["subtopic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_subtopics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_rules_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_subtopics: {
+        Row: {
+          architecture_id: string
+          code: string | null
+          confidence: number
+          created_at: string
+          description: string | null
+          evidence_count: number
+          id: string
+          name: string
+          slug: string
+          sort_order: number
+          status: Database["public"]["Enums"]["editorial_record_status"]
+          topic_id: string
+          updated_at: string
+        }
+        Insert: {
+          architecture_id: string
+          code?: string | null
+          confidence?: number
+          created_at?: string
+          description?: string | null
+          evidence_count?: number
+          id?: string
+          name: string
+          slug: string
+          sort_order?: number
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          topic_id: string
+          updated_at?: string
+        }
+        Update: {
+          architecture_id?: string
+          code?: string | null
+          confidence?: number
+          created_at?: string
+          description?: string | null
+          evidence_count?: number
+          id?: string
+          name?: string
+          slug?: string
+          sort_order?: number
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          topic_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_subtopics_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_subtopics_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_topics: {
+        Row: {
+          architecture_id: string
+          code: string | null
+          confidence: number
+          created_at: string
+          description: string | null
+          discipline_id: string
+          evidence_count: number
+          id: string
+          name: string
+          slug: string
+          sort_order: number
+          status: Database["public"]["Enums"]["editorial_record_status"]
+          updated_at: string
+        }
+        Insert: {
+          architecture_id: string
+          code?: string | null
+          confidence?: number
+          created_at?: string
+          description?: string | null
+          discipline_id: string
+          evidence_count?: number
+          id?: string
+          name: string
+          slug: string
+          sort_order?: number
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          updated_at?: string
+        }
+        Update: {
+          architecture_id?: string
+          code?: string | null
+          confidence?: number
+          created_at?: string
+          description?: string | null
+          discipline_id?: string
+          evidence_count?: number
+          id?: string
+          name?: string
+          slug?: string
+          sort_order?: number
+          status?: Database["public"]["Enums"]["editorial_record_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_topics_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_topics_discipline_id_fkey"
+            columns: ["discipline_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_disciplines"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       exam_catalog: {
         Row: {
@@ -230,529 +792,6 @@ export type Database = {
             columns: ["exam_catalog_id"]
             isOneToOne: false
             referencedRelation: "exam_catalog"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_architectures: {
-        Row: {
-          course_id: string
-          created_at: string
-          description: string | null
-          engine_version: string
-          id: string
-          is_active: boolean
-          name: string
-          position_id: string
-          slug: string
-          status: Database["public"]["Enums"]["editorial_architecture_status"]
-          updated_at: string
-        }
-        Insert: {
-          course_id: string
-          created_at?: string
-          description?: string | null
-          engine_version?: string
-          id?: string
-          is_active?: boolean
-          name: string
-          position_id: string
-          slug: string
-          status?: Database["public"]["Enums"]["editorial_architecture_status"]
-          updated_at?: string
-        }
-        Update: {
-          course_id?: string
-          created_at?: string
-          description?: string | null
-          engine_version?: string
-          id?: string
-          is_active?: boolean
-          name?: string
-          position_id?: string
-          slug?: string
-          status?: Database["public"]["Enums"]["editorial_architecture_status"]
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_architectures_course_id_fkey"
-            columns: ["course_id"]
-            isOneToOne: false
-            referencedRelation: "courses"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_architectures_position_id_fkey"
-            columns: ["position_id"]
-            isOneToOne: false
-            referencedRelation: "positions"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_disciplines: {
-        Row: {
-          architecture_id: string
-          code: string | null
-          confidence: number
-          created_at: string
-          description: string | null
-          evidence_count: number
-          frequency_percent: number | null
-          id: string
-          name: string
-          notes: string | null
-          priority: Database["public"]["Enums"]["editorial_priority"] | null
-          slug: string
-          sort_order: number
-          status: Database["public"]["Enums"]["editorial_record_status"]
-          updated_at: string
-        }
-        Insert: {
-          architecture_id: string
-          code?: string | null
-          confidence?: number
-          created_at?: string
-          description?: string | null
-          evidence_count?: number
-          frequency_percent?: number | null
-          id?: string
-          name: string
-          notes?: string | null
-          priority?: Database["public"]["Enums"]["editorial_priority"] | null
-          slug: string
-          sort_order?: number
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          updated_at?: string
-        }
-        Update: {
-          architecture_id?: string
-          code?: string | null
-          confidence?: number
-          created_at?: string
-          description?: string | null
-          evidence_count?: number
-          frequency_percent?: number | null
-          id?: string
-          name?: string
-          notes?: string | null
-          priority?: Database["public"]["Enums"]["editorial_priority"] | null
-          slug?: string
-          sort_order?: number
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_disciplines_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_topics: {
-        Row: {
-          architecture_id: string
-          code: string | null
-          confidence: number
-          created_at: string
-          description: string | null
-          discipline_id: string
-          evidence_count: number
-          id: string
-          name: string
-          slug: string
-          sort_order: number
-          status: Database["public"]["Enums"]["editorial_record_status"]
-          updated_at: string
-        }
-        Insert: {
-          architecture_id: string
-          code?: string | null
-          confidence?: number
-          created_at?: string
-          description?: string | null
-          discipline_id: string
-          evidence_count?: number
-          id?: string
-          name: string
-          slug: string
-          sort_order?: number
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          updated_at?: string
-        }
-        Update: {
-          architecture_id?: string
-          code?: string | null
-          confidence?: number
-          created_at?: string
-          description?: string | null
-          discipline_id?: string
-          evidence_count?: number
-          id?: string
-          name?: string
-          slug?: string
-          sort_order?: number
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_topics_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_topics_discipline_id_fkey"
-            columns: ["discipline_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_disciplines"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_keywords: {
-        Row: {
-          architecture_id: string
-          code: string | null
-          created_at: string
-          id: string
-          keyword_type: Database["public"]["Enums"]["editorial_keyword_type"]
-          status: Database["public"]["Enums"]["editorial_record_status"]
-          subtopic_id: string | null
-          term: string
-          topic_id: string
-          updated_at: string
-          weight: number
-        }
-        Insert: {
-          architecture_id: string
-          code?: string | null
-          created_at?: string
-          id?: string
-          keyword_type?: Database["public"]["Enums"]["editorial_keyword_type"]
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          subtopic_id?: string | null
-          term: string
-          topic_id: string
-          updated_at?: string
-          weight?: number
-        }
-        Update: {
-          architecture_id?: string
-          code?: string | null
-          created_at?: string
-          id?: string
-          keyword_type?: Database["public"]["Enums"]["editorial_keyword_type"]
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          subtopic_id?: string | null
-          term?: string
-          topic_id?: string
-          updated_at?: string
-          weight?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_keywords_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_keywords_topic_id_fkey"
-            columns: ["topic_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_topics"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_rules: {
-        Row: {
-          architecture_id: string
-          code: string | null
-          confidence_percent: number
-          created_at: string
-          discipline_id: string | null
-          engine_version: string | null
-          id: string
-          notes: string | null
-          status: Database["public"]["Enums"]["editorial_record_status"]
-          subtopic_id: string | null
-          topic_id: string | null
-          trigger_terms: string[]
-          updated_at: string
-        }
-        Insert: {
-          architecture_id: string
-          code?: string | null
-          confidence_percent?: number
-          created_at?: string
-          discipline_id?: string | null
-          engine_version?: string | null
-          id?: string
-          notes?: string | null
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          subtopic_id?: string | null
-          topic_id?: string | null
-          trigger_terms?: string[]
-          updated_at?: string
-        }
-        Update: {
-          architecture_id?: string
-          code?: string | null
-          confidence_percent?: number
-          created_at?: string
-          discipline_id?: string | null
-          engine_version?: string | null
-          id?: string
-          notes?: string | null
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          subtopic_id?: string | null
-          topic_id?: string | null
-          trigger_terms?: string[]
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_rules_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_rules_discipline_id_fkey"
-            columns: ["discipline_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_disciplines"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_rules_topic_id_fkey"
-            columns: ["topic_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_topics"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_subtopics: {
-        Row: {
-          architecture_id: string
-          code: string | null
-          confidence: number
-          created_at: string
-          description: string | null
-          evidence_count: number
-          id: string
-          name: string
-          slug: string
-          sort_order: number
-          status: Database["public"]["Enums"]["editorial_record_status"]
-          topic_id: string
-          updated_at: string
-        }
-        Insert: {
-          architecture_id: string
-          code?: string | null
-          confidence?: number
-          created_at?: string
-          description?: string | null
-          evidence_count?: number
-          id?: string
-          name: string
-          slug: string
-          sort_order?: number
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          topic_id: string
-          updated_at?: string
-        }
-        Update: {
-          architecture_id?: string
-          code?: string | null
-          confidence?: number
-          created_at?: string
-          description?: string | null
-          evidence_count?: number
-          id?: string
-          name?: string
-          slug?: string
-          sort_order?: number
-          status?: Database["public"]["Enums"]["editorial_record_status"]
-          topic_id?: string
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_subtopics_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_subtopics_topic_id_fkey"
-            columns: ["topic_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_topics"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_changelog: {
-        Row: {
-          architecture_id: string
-          change_type: string
-          created_at: string
-          entity_code: string | null
-          entity_id: string | null
-          entity_type: string
-          id: string
-          import_log_id: string | null
-          new_snapshot: Json | null
-          previous_snapshot: Json | null
-        }
-        Insert: {
-          architecture_id: string
-          change_type: string
-          created_at?: string
-          entity_code?: string | null
-          entity_id?: string | null
-          entity_type: string
-          id?: string
-          import_log_id?: string | null
-          new_snapshot?: Json | null
-          previous_snapshot?: Json | null
-        }
-        Update: {
-          architecture_id?: string
-          change_type?: string
-          created_at?: string
-          entity_code?: string | null
-          entity_id?: string | null
-          entity_type?: string
-          id?: string
-          import_log_id?: string | null
-          new_snapshot?: Json | null
-          previous_snapshot?: Json | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_changelog_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "editorial_changelog_import_log_id_fkey"
-            columns: ["import_log_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_import_logs"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_import_logs: {
-        Row: {
-          architecture_id: string | null
-          architecture_version: string
-          created_at: string
-          duration_ms: number
-          engine_version: string
-          error_message: string | null
-          id: string
-          imported_files: Json
-          package_path: string
-          record_counts: Json
-          status: string
-          user_id: string
-        }
-        Insert: {
-          architecture_id?: string | null
-          architecture_version: string
-          created_at?: string
-          duration_ms?: number
-          engine_version: string
-          error_message?: string | null
-          id?: string
-          imported_files?: Json
-          package_path: string
-          record_counts?: Json
-          status?: string
-          user_id: string
-        }
-        Update: {
-          architecture_id?: string | null
-          architecture_version?: string
-          created_at?: string
-          duration_ms?: number
-          engine_version?: string
-          error_message?: string | null
-          id?: string
-          imported_files?: Json
-          package_path?: string
-          record_counts?: Json
-          status?: string
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_import_logs_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      editorial_evidence: {
-        Row: {
-          architecture_id: string
-          created_at: string
-          description: string | null
-          entity_id: string
-          entity_type: Database["public"]["Enums"]["editorial_entity_type"]
-          evidence_type: Database["public"]["Enums"]["editorial_evidence_type"]
-          id: string
-          source_ref: string | null
-          weight: number
-        }
-        Insert: {
-          architecture_id: string
-          created_at?: string
-          description?: string | null
-          entity_id: string
-          entity_type: Database["public"]["Enums"]["editorial_entity_type"]
-          evidence_type: Database["public"]["Enums"]["editorial_evidence_type"]
-          id?: string
-          source_ref?: string | null
-          weight?: number
-        }
-        Update: {
-          architecture_id?: string
-          created_at?: string
-          description?: string | null
-          entity_id?: string
-          entity_type?: Database["public"]["Enums"]["editorial_entity_type"]
-          evidence_type?: Database["public"]["Enums"]["editorial_evidence_type"]
-          id?: string
-          source_ref?: string | null
-          weight?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "editorial_evidence_architecture_id_fkey"
-            columns: ["architecture_id"]
-            isOneToOne: false
-            referencedRelation: "editorial_architectures"
             referencedColumns: ["id"]
           },
         ]
@@ -1262,110 +1301,6 @@ export type Database = {
           },
         ]
       }
-      subjects: {
-        Row: {
-          created_at: string
-          description: string | null
-          id: string
-          name: string
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          description?: string | null
-          id?: string
-          name: string
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          description?: string | null
-          id?: string
-          name?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      subscriptions: {
-        Row: {
-          active: boolean
-          course_id: string
-          created_at: string
-          created_by: string | null
-          distribution_id: string | null
-          ends_at: string | null
-          expires_at: string | null
-          id: string
-          package_id: string | null
-          starts_at: string
-          status: Database["public"]["Enums"]["subscription_status"]
-          updated_at: string
-          updated_by: string | null
-          user_id: string
-        }
-        Insert: {
-          active?: boolean
-          course_id?: string
-          created_at?: string
-          created_by?: string | null
-          distribution_id?: string | null
-          ends_at?: string | null
-          expires_at?: string | null
-          id?: string
-          package_id?: string | null
-          starts_at?: string
-          status?: Database["public"]["Enums"]["subscription_status"]
-          updated_at?: string
-          updated_by?: string | null
-          user_id: string
-        }
-        Update: {
-          active?: boolean
-          course_id?: string
-          created_at?: string
-          created_by?: string | null
-          distribution_id?: string | null
-          ends_at?: string | null
-          expires_at?: string | null
-          id?: string
-          package_id?: string | null
-          starts_at?: string
-          status?: Database["public"]["Enums"]["subscription_status"]
-          updated_at?: string
-          updated_by?: string | null
-          user_id?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "subscriptions_course_id_fkey"
-            columns: ["course_id"]
-            isOneToOne: false
-            referencedRelation: "courses"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "subscriptions_distribution_id_fkey"
-            columns: ["distribution_id"]
-            isOneToOne: false
-            referencedRelation: "content_distributions"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "subscriptions_package_id_fkey"
-            columns: ["package_id"]
-            isOneToOne: false
-            referencedRelation: "packages"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "subscriptions_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "profiles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
       study_session_questions: {
         Row: {
           answered_at: string | null
@@ -1471,11 +1406,104 @@ export type Database = {
             referencedRelation: "content_distributions"
             referencedColumns: ["id"]
           },
+        ]
+      }
+      subjects: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      subscriptions: {
+        Row: {
+          active: boolean
+          course_id: string
+          created_at: string
+          created_by: string | null
+          distribution_id: string | null
+          ends_at: string | null
+          expires_at: string | null
+          id: string
+          package_id: string | null
+          starts_at: string
+          status: Database["public"]["Enums"]["subscription_status"]
+          updated_at: string
+          updated_by: string | null
+          user_id: string
+        }
+        Insert: {
+          active?: boolean
+          course_id: string
+          created_at?: string
+          created_by?: string | null
+          distribution_id?: string | null
+          ends_at?: string | null
+          expires_at?: string | null
+          id?: string
+          package_id?: string | null
+          starts_at?: string
+          status?: Database["public"]["Enums"]["subscription_status"]
+          updated_at?: string
+          updated_by?: string | null
+          user_id: string
+        }
+        Update: {
+          active?: boolean
+          course_id?: string
+          created_at?: string
+          created_by?: string | null
+          distribution_id?: string | null
+          ends_at?: string | null
+          expires_at?: string | null
+          id?: string
+          package_id?: string | null
+          starts_at?: string
+          status?: Database["public"]["Enums"]["subscription_status"]
+          updated_at?: string
+          updated_by?: string | null
+          user_id?: string
+        }
+        Relationships: [
           {
-            foreignKeyName: "study_sessions_user_id_fkey"
-            columns: ["user_id"]
+            foreignKeyName: "subscriptions_course_id_fkey"
+            columns: ["course_id"]
             isOneToOne: false
-            referencedRelation: "profiles"
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "subscriptions_distribution_id_fkey"
+            columns: ["distribution_id"]
+            isOneToOne: false
+            referencedRelation: "content_distributions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "subscriptions_package_id_fkey"
+            columns: ["package_id"]
+            isOneToOne: false
+            referencedRelation: "packages"
             referencedColumns: ["id"]
           },
         ]
@@ -1486,6 +1514,7 @@ export type Database = {
           description: string | null
           id: string
           name: string
+          slug: string
           subject_id: string
           updated_at: string
         }
@@ -1494,6 +1523,7 @@ export type Database = {
           description?: string | null
           id?: string
           name: string
+          slug: string
           subject_id: string
           updated_at?: string
         }
@@ -1502,6 +1532,7 @@ export type Database = {
           description?: string | null
           id?: string
           name?: string
+          slug?: string
           subject_id?: string
           updated_at?: string
         }
@@ -1558,7 +1589,12 @@ export type Database = {
         | "APROVADO"
         | "PUBLICADO"
         | "DEPRECIADO"
-      editorial_entity_type: "DISCIPLINE" | "TOPIC" | "SUBTOPIC" | "KEYWORD" | "RULE"
+      editorial_entity_type:
+        | "DISCIPLINE"
+        | "TOPIC"
+        | "KEYWORD"
+        | "RULE"
+        | "SUBTOPIC"
       editorial_evidence_type:
         | "CONFIRMACAO"
         | "CONTRADICAO"
@@ -1721,6 +1757,9 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
+  graphql_public: {
+    Enums: {},
+  },
   public: {
     Enums: {
       app_role: ["admin", "student"],
@@ -1732,7 +1771,13 @@ export const Constants = {
         "PUBLICADO",
         "DEPRECIADO",
       ],
-      editorial_entity_type: ["DISCIPLINE", "TOPIC", "SUBTOPIC", "KEYWORD", "RULE"],
+      editorial_entity_type: [
+        "DISCIPLINE",
+        "TOPIC",
+        "KEYWORD",
+        "RULE",
+        "SUBTOPIC",
+      ],
       editorial_evidence_type: [
         "CONFIRMACAO",
         "CONTRADICAO",

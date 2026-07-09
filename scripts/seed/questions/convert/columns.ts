@@ -25,6 +25,8 @@ export const OPTIONAL_COLUMNS = [
   "references",
   "keywords",
   "status",
+  "package",
+  "package_version",
 ] as const;
 
 export type RequiredColumn = (typeof REQUIRED_COLUMNS)[number];

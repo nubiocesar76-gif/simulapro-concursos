@@ -4,6 +4,7 @@ import type { SeedDb } from "../taxonomy/entities.ts";
 import {
   resolveBoard,
   resolveContest,
+  resolvePackageVersion,
   resolvePosition,
   resolveSubject,
   resolveTopic,
@@ -14,10 +15,12 @@ import type { QuestionSeedItem } from "./schema.ts";
 
 export type TaxonomyMaps = {
   positionSlugToId: Map<string, string>;
+  positionSlugToCourseId: Map<string, string>;
   subjectSlugToId: Map<string, string>;
   topicKeyToId: Map<string, string>;
   boardSlugToId: Map<string, string>;
   contestKeyToId: Map<string, string>;
+  packageVersionKeyToId: Map<string, string>;
 };
 
 export type QuestionIndex = Map<string, string>;
@@ -30,6 +33,10 @@ function contestKey(boardSlug: string, contestSlug: string) {
   return `${boardSlug}/${contestSlug}`;
 }
 
+function packageVersionKey(courseId: string, packageSlug: string, versionNumber: string) {
+  return `${courseId}/${packageSlug}/${versionNumber}`;
+}
+
 export async function loadTaxonomyMaps(db: SeedDb): Promise<TaxonomyMaps> {
   const [
     { data: positions, error: positionsError },
@@ -38,7 +45,7 @@ export async function loadTaxonomyMaps(db: SeedDb): Promise<TaxonomyMaps> {
     { data: boards, error: boardsError },
     { data: exams, error: examsError },
   ] = await Promise.all([
-    db.from("positions").select("id,slug"),
+    db.from("positions").select("id,slug,course_id"),
     db.from("subjects").select("id,slug"),
     db.from("topics").select("id,slug,subject_id,subjects(slug)"),
     db.from("boards").select("id,name"),
@@ -52,9 +59,11 @@ export async function loadTaxonomyMaps(db: SeedDb): Promise<TaxonomyMaps> {
   if (examsError) throw examsError;
 
   const positionSlugToId = new Map<string, string>();
+  const positionSlugToCourseId = new Map<string, string>();
   for (const position of positions ?? []) {
     if (!positionSlugToId.has(position.slug)) {
       positionSlugToId.set(position.slug, position.id);
+      positionSlugToCourseId.set(position.slug, position.course_id);
     }
   }
 
@@ -80,10 +89,12 @@ export async function loadTaxonomyMaps(db: SeedDb): Promise<TaxonomyMaps> {
 
   return {
     positionSlugToId,
+    positionSlugToCourseId,
     subjectSlugToId,
     topicKeyToId,
     boardSlugToId,
     contestKeyToId,
+    packageVersionKeyToId: new Map<string, string>(),
   };
 }
 
@@ -127,6 +138,7 @@ export async function resolveQuestionTaxonomyIds(
   topic_id: string | null;
   board_id: string | null;
   exam_id: string | null;
+  package_version_id: string | null;
 }> {
   let position_id: string | null = null;
   if (item.position) {
@@ -134,7 +146,7 @@ export async function resolveQuestionTaxonomyIds(
     if (!position_id) {
       const { data, error } = await db
         .from("positions")
-        .select("id")
+        .select("id,course_id")
         .eq("slug", item.position)
         .limit(1)
         .maybeSingle();
@@ -142,6 +154,7 @@ export async function resolveQuestionTaxonomyIds(
       if (!data) throw new Error(`Cargo "${item.position}" não encontrado.`);
       position_id = data.id;
       maps.positionSlugToId.set(item.position, position_id);
+      maps.positionSlugToCourseId.set(item.position, data.course_id);
     }
   }
 
@@ -193,7 +206,29 @@ export async function resolveQuestionTaxonomyIds(
     }
   }
 
-  return { position_id, subject_id, topic_id, board_id, exam_id };
+  let package_version_id: string | null = null;
+  if (item.package || item.packageVersion) {
+    if (!item.package) throw new Error(`packageVersion "${item.packageVersion}" requer package.`);
+    if (!item.packageVersion) throw new Error(`package "${item.package}" requer packageVersion.`);
+    if (!item.position) throw new Error(`package "${item.package}" requer position (para resolver o curso).`);
+    const courseId = maps.positionSlugToCourseId.get(item.position);
+    if (!courseId) throw new Error(`Curso não resolvido para o cargo "${item.position}".`);
+
+    const key = packageVersionKey(courseId, item.package, item.packageVersion);
+    package_version_id = maps.packageVersionKeyToId.get(key) ?? null;
+    if (!package_version_id) {
+      const resolved = await resolvePackageVersion(db, courseId, item.package, item.packageVersion);
+      if (!resolved) {
+        throw new Error(
+          `Versão "${item.packageVersion}" do pacote "${item.package}" não encontrada para o curso do cargo "${item.position}".`,
+        );
+      }
+      package_version_id = resolved.id;
+      maps.packageVersionKeyToId.set(key, package_version_id);
+    }
+  }
+
+  return { position_id, subject_id, topic_id, board_id, exam_id, package_version_id };
 }
 
 export function buildSeedMetadata(item: QuestionSeedItem, contentHash: string) {

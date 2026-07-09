@@ -11,6 +11,7 @@ import type { QuestionSeedItem, QuestionsSeedFile } from "./schema.ts";
 import type { SeedDb } from "../taxonomy/entities.ts";
 import type { QuestionSeedReport } from "../core/question-report.ts";
 import { ignoreQuestion } from "../core/question-report.ts";
+import type { Json } from "@/integrations/supabase/types";
 
 /**
  * status e keywords existem no JSON como contrato do seed (versionamento / futuro).
@@ -27,6 +28,7 @@ type InsertRow = {
   board_id: string | null;
   exam_id: string | null;
   position_id: string | null;
+  package_version_id: string | null;
   metadata: Record<string, unknown>;
   contentHash: string;
 };
@@ -34,7 +36,10 @@ type InsertRow = {
 async function flushBatch(db: SeedDb, batch: InsertRow[], report: QuestionSeedReport) {
   if (!batch.length) return;
 
-  const rows = batch.map(({ contentHash: _hash, ...row }) => row);
+  const rows = batch.map(({ contentHash: _hash, metadata, ...row }) => ({
+    ...row,
+    metadata: metadata as Json,
+  }));
   const { error } = await db.from("questions").insert(rows);
   if (error) throw error;
   report.questionsCreated += batch.length;
