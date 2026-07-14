@@ -59,8 +59,9 @@ import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
+import { STUDENT_PAGE_SHELL } from "@/config/study";
 
-const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
+const pageShellClass = STUDENT_PAGE_SHELL;
 
 const DEFAULT_STUDY_SETTINGS = {
   question_count: 10 as const,
@@ -236,6 +237,7 @@ export function StudyHistoryPage() {
                 placeholder="Pesquisar distribuição, curso ou pacote..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                aria-label="Pesquisar sessões"
               />
             </div>
             {hasActiveFilters && (
@@ -319,7 +321,11 @@ export function StudyHistoryPage() {
             />
           ) : (
             <>
-              <div className="overflow-x-auto rounded-lg border">
+              <div
+                className="overflow-x-auto rounded-lg border"
+                aria-busy={isLoading}
+                aria-label={isLoading ? "Carregando histórico de sessões" : undefined}
+              >
                 <Table>
                   <TableHeader>
                     <TableRow>

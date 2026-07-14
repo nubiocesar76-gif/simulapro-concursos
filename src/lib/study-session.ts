@@ -4,6 +4,10 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
+import {
+  hasActiveSessionFilters,
+  materializeFilteredSessionQuestions,
+} from "@/lib/study-builder";
 
 export const STUDY_MODES_EDITABLE = ["STUDY", "EXAM"] as const;
 export const STUDY_MODES_SELECTABLE = ["STUDY", "EXAM", "REVIEW", "FAVORITES", "WRONG_ONLY"] as const;
@@ -41,10 +45,18 @@ export type SessionQuantity = (typeof SESSION_QUANTITY_OPTIONS)[number];
 export type QuestionOrder = "random" | "sequential";
 export type ShowAnswersTiming = "during" | "final";
 
+export type StudySessionFilters = {
+  board_id?: string | null;
+  subject_id?: string | null;
+  topic_id?: string | null;
+  year?: number | null;
+};
+
 export type StudySessionSettings = {
   question_count: number | "all";
   question_order: QuestionOrder;
   show_answers: ShowAnswersTiming;
+  filters?: StudySessionFilters;
 };
 
 export type AvailableDistribution = {
@@ -150,7 +162,7 @@ export async function fetchAvailableDistributions(userId: string): Promise<Avail
     });
 }
 
-async function getDistributionPackageVersionId(distributionId: string): Promise<string> {
+export async function getDistributionPackageVersionId(distributionId: string): Promise<string> {
   const { data, error } = await supabase
     .from("content_distributions")
     .select("package_version_id")
@@ -271,6 +283,16 @@ export async function createStudySession(input: {
     .single();
 
   if (error) throw error;
+
+  if (hasActiveSessionFilters(settings.filters)) {
+    await materializeFilteredSessionQuestions({
+      sessionId: created.id,
+      distributionId: input.distributionId,
+      userId: user.id,
+      mode: input.mode,
+      settings,
+    });
+  }
 
   await logEvent("study.session.create", "study_sessions", created.id, {
     distribution_id: input.distributionId,

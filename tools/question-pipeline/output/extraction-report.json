@@ -1,0 +1,13 @@
+{
+  "totalFound": 80,
+  "valid": 80,
+  "anuladas": 0,
+  "reviewRequired": 0,
+  "withoutGabarito": 0,
+  "withoutCompleteAlternatives": 0,
+  "duplicateNumbers": [],
+  "generatedAt": "2026-07-14T09:18:28.589Z",
+  "provaPages": 18,
+  "gabaritoPages": 1,
+  "gabaritoEntriesFound": 80
+}

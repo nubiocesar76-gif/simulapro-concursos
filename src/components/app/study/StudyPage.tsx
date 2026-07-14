@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { BookOpen, PlayCircle, ChevronLeft } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
@@ -18,15 +18,32 @@ import {
   type StudyModeSelectable,
   type StudySessionSettings,
 } from "@/lib/study-session";
+import {
+  ALL_FILTER,
+  buildBoardOptions,
+  buildSubjectOptions,
+  buildTopicOptions,
+  buildYearOptions,
+  countMatchingQuestions,
+  DEFAULT_STUDY_BUILDER_FILTERS,
+  fetchStudyBuilderCatalog,
+  getFilterLabel,
+  resolveSelectedQuantityLabel,
+  toSessionFilters,
+  type StudyBuilderFilters,
+} from "@/lib/study-builder";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Skeleton } from "@/components/ui/skeleton";
+import { StudyBuilderFiltersPanel } from "@/components/app/study/StudyBuilderFiltersPanel";
+import { StudyBuilderSummary } from "@/components/app/study/StudyBuilderSummary";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
+import { STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
 
 type Step = "list" | "configure" | "created";
 
@@ -40,6 +57,9 @@ export function StudyPage() {
   const [quantity, setQuantity] = useState<SessionQuantity>(10);
   const [order, setOrder] = useState<QuestionOrder>("random");
   const [showAnswers, setShowAnswers] = useState<ShowAnswersTiming>("during");
+  const [builderFilters, setBuilderFilters] = useState<StudyBuilderFilters>(
+    DEFAULT_STUDY_BUILDER_FILTERS,
+  );
 
   const { data: distributions = [], isLoading, isError, error, refetch } = useQuery({
     queryKey: ["available-distributions", user?.id],
@@ -47,13 +67,58 @@ export function StudyPage() {
     queryFn: () => fetchAvailableDistributions(user!.id),
   });
 
+  const {
+    data: catalog,
+    isLoading: isLoadingCatalog,
+    isError: isCatalogError,
+    error: catalogError,
+  } = useQuery({
+    queryKey: ["study-builder-catalog", selected?.distribution_id, mode, user?.id],
+    enabled: step === "configure" && !!selected && !!user,
+    queryFn: () => fetchStudyBuilderCatalog(selected!.distribution_id, user!.id, mode),
+    staleTime: 60_000,
+  });
+
+  const boardOptions = useMemo(
+    () => (catalog ? buildBoardOptions(catalog.questions, builderFilters) : []),
+    [catalog, builderFilters],
+  );
+  const subjectOptions = useMemo(
+    () => (catalog ? buildSubjectOptions(catalog.questions, builderFilters) : []),
+    [catalog, builderFilters],
+  );
+  const topicOptions = useMemo(
+    () => (catalog ? buildTopicOptions(catalog.questions, builderFilters) : []),
+    [catalog, builderFilters],
+  );
+  const yearOptions = useMemo(
+    () => (catalog ? buildYearOptions(catalog.questions, builderFilters) : []),
+    [catalog, builderFilters],
+  );
+
+  const matchingCount = useMemo(
+    () => (catalog ? countMatchingQuestions(catalog.questions, builderFilters) : 0),
+    [catalog, builderFilters],
+  );
+
+  const questionCountSetting = useMemo(
+    () => (isFilterStudyMode(mode) ? "all" : quantity === "all" ? "all" : quantity),
+    [mode, quantity],
+  );
+
+  const selectedQuantityLabel = useMemo(
+    () => resolveSelectedQuantityLabel(matchingCount, questionCountSetting),
+    [matchingCount, questionCountSetting],
+  );
+
   const createSession = useMutation({
     mutationFn: () => {
       if (!selected) throw new Error("Selecione uma distribuição.");
       const settings: StudySessionSettings = {
-        question_count: isFilterStudyMode(mode) ? "all" : quantity === "all" ? "all" : quantity,
+        question_count: questionCountSetting,
         question_order: isFilterStudyMode(mode) ? "random" : order,
         show_answers: mode === "EXAM" ? "final" : showAnswers,
+        filters: toSessionFilters(builderFilters),
       };
       return createStudySession({
         distributionId: selected.distribution_id,
@@ -75,6 +140,7 @@ export function StudyPage() {
     setQuantity(10);
     setOrder("random");
     setShowAnswers("during");
+    setBuilderFilters(DEFAULT_STUDY_BUILDER_FILTERS);
     setCreatedSessionId(null);
     setStep("configure");
   }
@@ -87,13 +153,13 @@ export function StudyPage() {
 
   if (isLoading) {
     return (
-      <div className="space-y-6 max-w-3xl">
+      <div className={STUDENT_PAGE_SHELL} aria-busy="true" aria-label="Carregando estudo">
         <div>
           <Skeleton className="h-8 w-32" />
           <Skeleton className="mt-2 h-4 w-64" />
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[1, 2].map((i) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3].map((i) => (
             <Card key={i}>
               <CardHeader>
                 <Skeleton className="h-5 w-2/3" />
@@ -112,11 +178,12 @@ export function StudyPage() {
 
   if (isError) {
     return (
-      <div className="space-y-6 max-w-3xl">
-        <div>
-          <h1 className="text-2xl font-bold">Estudo</h1>
-        </div>
+      <div className={STUDENT_PAGE_SHELL}>
+        <header>
+          <h1 className="text-2xl font-bold tracking-tight">Estudo</h1>
+        </header>
         <PageErrorState
+          title="Erro ao carregar estudo"
           message={formatStudySessionError(error)}
           onRetry={() => refetch()}
         />
@@ -126,13 +193,13 @@ export function StudyPage() {
 
   if (step === "created" && selected && createdSessionId) {
     return (
-      <div className="space-y-6 max-w-lg">
-        <div>
-          <h1 className="text-2xl font-bold">Sessão criada</h1>
+      <div className={STUDENT_PAGE_SHELL_NARROW}>
+        <header>
+          <h1 className="text-2xl font-bold tracking-tight">Sessão criada</h1>
           <p className="text-sm text-muted-foreground">
             Sua sessão está pronta. Inicie a resolução quando quiser.
           </p>
-        </div>
+        </header>
         <Card>
           <CardHeader>
             <CardTitle>{selected.distribution_name}</CardTitle>
@@ -142,7 +209,7 @@ export function StudyPage() {
           </CardHeader>
           <CardContent className="space-y-2 text-sm">
             <p><span className="text-muted-foreground">Modo:</span> {STUDY_MODE_LABELS[mode]}</p>
-            <p><span className="text-muted-foreground">Questões:</span> {quantity === "all" ? "Todas" : quantity}</p>
+            <p><span className="text-muted-foreground">Questões:</span> {selectedQuantityLabel}</p>
             <Badge>Em andamento</Badge>
           </CardContent>
         </Card>
@@ -163,9 +230,10 @@ export function StudyPage() {
   if (step === "configure" && selected) {
     const isExamMode = mode === "EXAM";
     const isFilterMode = isFilterStudyMode(mode);
+    const canCreate = matchingCount > 0 && !isLoadingCatalog && !createSession.isPending;
 
     return (
-      <div className="space-y-6 max-w-lg">
+      <div className={`${STUDENT_PAGE_SHELL} max-w-5xl`}>
         <div>
           <Button variant="ghost" size="sm" className="mb-2 -ml-2" onClick={() => setStep("list")}>
             <ChevronLeft className="h-4 w-4 mr-1" /> Voltar
@@ -174,114 +242,184 @@ export function StudyPage() {
           <p className="text-sm text-muted-foreground">{selected.distribution_name}</p>
         </div>
 
-        <Card>
-          <CardContent className="pt-6 space-y-6">
-            <ConfigGroup label="Modo">
-              <RadioGroup value={mode} onValueChange={(v) => setMode(v as StudyModeSelectable)} className="grid gap-2">
-                {STUDY_MODES_SELECTABLE.map((m) => (
-                  <label key={m} className="flex items-center gap-2 cursor-pointer">
-                    <RadioGroupItem value={m} />
-                    <span>{STUDY_MODE_LABELS[m]}</span>
-                  </label>
-                ))}
-              </RadioGroup>
-            </ConfigGroup>
-
-            {!isFilterMode && (
-              <>
-                <ConfigGroup label="Quantidade de questões">
+        {isCatalogError ? (
+          <PageErrorState
+            title="Erro ao carregar filtros"
+            message={formatStudySessionError(catalogError)}
+          />
+        ) : (
+          <div className="grid gap-6 lg:grid-cols-[1fr_18rem] xl:grid-cols-[1fr_20rem]">
+            <Card>
+              <CardContent className="space-y-8 pt-6">
+                <ConfigGroup label="Modo">
                   <RadioGroup
-                    value={String(quantity)}
-                    onValueChange={(v) => setQuantity(v === "all" ? "all" : Number(v) as SessionQuantity)}
-                    className="grid grid-cols-2 sm:grid-cols-3 gap-2"
+                    value={mode}
+                    onValueChange={(value) => {
+                      setMode(value as StudyModeSelectable);
+                      setBuilderFilters(DEFAULT_STUDY_BUILDER_FILTERS);
+                    }}
+                    className="grid gap-2 sm:grid-cols-2"
                   >
-                    {SESSION_QUANTITY_OPTIONS.map((q) => (
-                      <label key={String(q)} className="flex items-center gap-2 cursor-pointer">
-                        <RadioGroupItem value={String(q)} />
-                        <span>{q === "all" ? "Todas" : q}</span>
+                    {STUDY_MODES_SELECTABLE.map((item) => (
+                      <label key={item} className="flex items-center gap-2 cursor-pointer">
+                        <RadioGroupItem value={item} />
+                        <span>{STUDY_MODE_LABELS[item]}</span>
                       </label>
                     ))}
                   </RadioGroup>
                 </ConfigGroup>
 
-                <ConfigGroup label="Ordem">
-                  <RadioGroup value={order} onValueChange={(v) => setOrder(v as QuestionOrder)} className="grid gap-2">
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <RadioGroupItem value="random" />
-                      <span>Aleatória</span>
-                    </label>
-                    <label className="flex items-center gap-2 cursor-pointer">
-                      <RadioGroupItem value="sequential" />
-                      <span>Sequencial</span>
-                    </label>
-                  </RadioGroup>
-                </ConfigGroup>
-              </>
-            )}
+                {isLoadingCatalog ? (
+                  <div className="space-y-4">
+                    <Skeleton className="h-4 w-40" />
+                    <Skeleton className="h-10 w-full" />
+                    <Skeleton className="h-10 w-full" />
+                    <Skeleton className="h-10 w-full" />
+                  </div>
+                ) : (
+                  <StudyBuilderFiltersPanel
+                    filters={builderFilters}
+                    boardOptions={boardOptions}
+                    subjectOptions={subjectOptions}
+                    topicOptions={topicOptions}
+                    yearOptions={yearOptions}
+                    onChange={setBuilderFilters}
+                  />
+                )}
 
-            {isFilterMode && (
-              <p className="text-sm text-muted-foreground">
-                Este modo utiliza apenas as questões filtradas do seu histórico nesta distribuição.
-              </p>
-            )}
+                {!isFilterMode && (
+                  <>
+                    <ConfigGroup label="Quantidade de questões">
+                      <RadioGroup
+                        value={String(quantity)}
+                        onValueChange={(value) =>
+                          setQuantity(value === "all" ? "all" : (Number(value) as SessionQuantity))
+                        }
+                        className="grid grid-cols-2 sm:grid-cols-3 gap-2"
+                      >
+                        {SESSION_QUANTITY_OPTIONS.map((item) => (
+                          <label key={String(item)} className="flex items-center gap-2 cursor-pointer">
+                            <RadioGroupItem value={String(item)} />
+                            <span>{item === "all" ? "Todas" : item}</span>
+                          </label>
+                        ))}
+                      </RadioGroup>
+                    </ConfigGroup>
 
-            {!isExamMode && !isFilterMode && (
-              <ConfigGroup label="Mostrar respostas">
-                <RadioGroup
-                  value={showAnswers}
-                  onValueChange={(v) => setShowAnswers(v as ShowAnswersTiming)}
-                  className="grid gap-2"
+                    <ConfigGroup label="Ordem">
+                      <RadioGroup
+                        value={order}
+                        onValueChange={(value) => setOrder(value as QuestionOrder)}
+                        className="grid gap-2"
+                      >
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <RadioGroupItem value="random" />
+                          <span>Aleatória</span>
+                        </label>
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <RadioGroupItem value="sequential" />
+                          <span>Sequencial</span>
+                        </label>
+                      </RadioGroup>
+                    </ConfigGroup>
+                  </>
+                )}
+
+                {isFilterMode && (
+                  <p className="text-sm text-muted-foreground">
+                    Este modo utiliza apenas as questões filtradas do seu histórico nesta distribuição.
+                  </p>
+                )}
+
+                {!isExamMode && !isFilterMode && (
+                  <ConfigGroup label="Mostrar respostas">
+                    <RadioGroup
+                      value={showAnswers}
+                      onValueChange={(value) => setShowAnswers(value as ShowAnswersTiming)}
+                      className="grid gap-2"
+                    >
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <RadioGroupItem value="during" />
+                        <span>Durante</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <RadioGroupItem value="final" />
+                        <span>Apenas no final</span>
+                      </label>
+                    </RadioGroup>
+                  </ConfigGroup>
+                )}
+
+                {isExamMode && (
+                  <ConfigGroup label="Mostrar respostas">
+                    <RadioGroup value="final" className="grid gap-2" disabled>
+                      <label className="flex items-center gap-2 opacity-50">
+                        <RadioGroupItem value="during" disabled />
+                        <span>Durante</span>
+                      </label>
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <RadioGroupItem value="final" />
+                        <span>Apenas no final</span>
+                      </label>
+                    </RadioGroup>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      No modo Prova, respostas só são exibidas ao final.
+                    </p>
+                  </ConfigGroup>
+                )}
+
+                {matchingCount === 0 && !isLoadingCatalog && (
+                  <p className="text-sm text-destructive">
+                    Nenhuma questão encontrada para os filtros escolhidos.
+                  </p>
+                )}
+
+                <Button
+                  className="w-full lg:hidden"
+                  onClick={() => createSession.mutate()}
+                  disabled={!canCreate}
                 >
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <RadioGroupItem value="during" />
-                    <span>Durante</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <RadioGroupItem value="final" />
-                    <span>Apenas no final</span>
-                  </label>
-                </RadioGroup>
-              </ConfigGroup>
-            )}
+                  <PlayCircle className="h-4 w-4 mr-2" />
+                  {createSession.isPending ? "Criando sessão..." : "Criar sessão"}
+                </Button>
+              </CardContent>
+            </Card>
 
-            {isExamMode && (
-              <ConfigGroup label="Mostrar respostas">
-                <RadioGroup value="final" className="grid gap-2" disabled>
-                  <label className="flex items-center gap-2 opacity-50">
-                    <RadioGroupItem value="during" disabled />
-                    <span>Durante</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <RadioGroupItem value="final" />
-                    <span>Apenas no final</span>
-                  </label>
-                </RadioGroup>
-                <p className="text-xs text-muted-foreground mt-1">No modo Prova, respostas só são exibidas ao final.</p>
-              </ConfigGroup>
-            )}
+            <div className="space-y-4">
+              <StudyBuilderSummary
+                packageName={selected.package_name}
+                mode={mode}
+                boardLabel={getFilterLabel(builderFilters.boardId, boardOptions, "Todas")}
+                subjectLabel={getFilterLabel(builderFilters.subjectId, subjectOptions, "Todas")}
+                topicLabel={getFilterLabel(builderFilters.topicId, topicOptions, "Todos")}
+                yearLabel={builderFilters.year === ALL_FILTER ? "Todos" : builderFilters.year}
+                matchingCount={matchingCount}
+                selectedQuantityLabel={selectedQuantityLabel}
+              />
 
-            <Button
-              className="w-full"
-              onClick={() => createSession.mutate()}
-              disabled={createSession.isPending}
-            >
-              <PlayCircle className="h-4 w-4 mr-2" />
-              {createSession.isPending ? "Criando sessão..." : "Criar sessão"}
-            </Button>
-          </CardContent>
-        </Card>
+              <Button
+                className="hidden w-full lg:inline-flex"
+                onClick={() => createSession.mutate()}
+                disabled={!canCreate}
+              >
+                <PlayCircle className="h-4 w-4 mr-2" />
+                {createSession.isPending ? "Criando sessão..." : "Criar sessão"}
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
 
   return (
-    <div className="space-y-6 max-w-3xl">
-      <div>
-        <h1 className="text-2xl font-bold">Estudo</h1>
+    <div className={STUDENT_PAGE_SHELL}>
+      <header>
+        <h1 className="text-2xl font-bold tracking-tight">Estudo</h1>
         <p className="text-sm text-muted-foreground">
           Selecione uma distribuição liberada pela sua assinatura para configurar uma sessão.
         </p>
-      </div>
+      </header>
 
       {distributions.length === 0 ? (
         <EmptyState

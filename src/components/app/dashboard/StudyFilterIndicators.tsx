@@ -23,7 +23,7 @@ export function StudyFilterIndicatorsBar({
   }[] = [
     { label: "Favoritas", value: indicators.favoritesCount, icon: Star, mode: "FAVORITES" },
     { label: "Revisar depois", value: indicators.reviewLaterCount, icon: Pin, mode: "REVIEW" },
-    { label: "Pendentes", value: indicators.pendingReviewCount, icon: XCircle, mode: "WRONG_ONLY" },
+    { label: "Erradas", value: indicators.pendingReviewCount, icon: XCircle, mode: "WRONG_ONLY" },
   ];
 
   return (
@@ -43,6 +43,11 @@ export function StudyFilterIndicatorsBar({
               onClick={() => onShortcutClick(item.mode)}
               disabled={isDisabled}
               aria-busy={isLoading}
+              aria-label={
+                isDisabled && item.value === 0
+                  ? `${item.label}: nenhuma questão disponível`
+                  : `Iniciar sessão de ${item.label.toLowerCase()}`
+              }
             >
               {isLoading ? (
                 <Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden="true" />

@@ -1,0 +1,1122 @@
+[
+  {
+    "number": 1,
+    "statement": "A história é apresentada ao leitor por meio de um narrador personagem provocando o seguinte efeito expressivo:",
+    "alternatives": {
+      "A": "a ênfase na concisão priorizando as ações e eliminando os termos qualificadores.",
+      "B": "a parcialidade na apresentação das ações e na caracterização dos personagens.",
+      "C": "o emprego exclusivo de adjetivos objetivos aproximando mais o leitor da realidade.",
+      "D": "a condução de informações conflitantes inviabilizando a apreensão dos fatos."
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 3,
+    "warnings": []
+  },
+  {
+    "number": 2,
+    "statement": "Em “Mas possuía o que qualquer criança” (1º§), o vocábulo destacado cumpre um papel importante na produção de sentido. Morfologicamente, deve ser classificado como pronome:",
+    "alternatives": {
+      "A": "pessoal do caso reto.",
+      "B": "demonstrativo.",
+      "C": "pessoal do caso oblíquo.",
+      "D": "indefinido."
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 3,
+    "warnings": []
+  },
+  {
+    "number": 3,
+    "statement": "Um texto narrativo é marcado por uma sequência de ações que constituem o enredo. Geralmente, parte-se de uma situação de normalidade até que essa é “quebrada” para que se instaure um conflito. No conto de Clarice, esse conflito é introduzido pela passagem:",
+    "alternatives": {
+      "A": "“Como se não bastasse enchia os dois bolsos da blusa” (1º§)",
+      "B": "“Pouco aproveitava. E nós menos ainda:” (2º§)",
+      "C": "“Até que veio para ela o magno dia de começar” (4º§)",
+      "D": "“Era um livro grosso, meu Deus, era um livro” (5º§)"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 3,
+    "warnings": []
+  },
+  {
+    "number": 4,
+    "statement": "Nos períodos “Era um livro grosso, meu Deus, era um livro para se ficar vivendo com ele, comendo-o, dormindo-o. E completamente acima de minhas posses.” (5º§), estabelece-se uma relação de sentido na qual:",
+    "alternatives": {
+      "A": "o segundo explicita uma informação já citada no primeiro.",
+      "B": "a última oração do primeiro é o sujeito oracional do segundo.",
+      "C": "“meu Deus” é elemento sintático essencial nos dois períodos.",
+      "D": "uma das orações do primeiro está implícita no segundo. 2 IBFC_11 Considere a passagem “E eu, que não era dada a olheiras, sentia as olheiras se cavando sob os meus olhos espantados.” (10º§) para responder às questões 5 e 6 a seguir."
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 3,
+    "warnings": []
+  },
+  {
+    "number": 5,
+    "statement": "A respeito da oração destacada, é correto afirmar que possui:",
+    "alternatives": {
+      "A": "dependência sintática e caráter adjetivo.",
+      "B": "independência sintática e caráter substantivo.",
+      "C": "dependência sintática e caráter adverbial.",
+      "D": "independência sintática e caráter pronominal."
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 6,
+    "statement": "Ocorreria acento grave em “dada a”, caso o substantivo “olheiras” fosse substituído por:",
+    "alternatives": {
+      "A": "fazer compras.",
+      "B": "verdade absoluta.",
+      "C": "silêncio imposto.",
+      "D": "oportunidades generosas."
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 7,
+    "statement": "Na oração “No dia seguinte lá estava eu à porta de sua casa” (8º§), os termos não seguem a ordem sintática comum da Língua, chamada de ordem direta. Em função dessa posição inversa, todos os termos abaixo receberam ênfase, exceto:",
+    "alternatives": {
+      "A": "O sujeito de primeira pessoa.",
+      "B": "A locução adverbial de tempo.",
+      "C": "A ação expressa pelo verbo.",
+      "D": "O advérbio que indica lugar."
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 8,
+    "statement": "Caso a frase ‘Atrás escrevia com letra bordadíssima palavras como “data natalícia” e “saudade”.’ (2º§) fosse reescrita com acréscimo de vírgulas, teríamos uma reescritura adequada à norma padrão apenas em:",
+    "alternatives": {
+      "A": "Atrás escrevia com letra, bordadíssima, palavras como “data natalícia” e “saudade”.",
+      "B": "Atrás escrevia com letra bordadíssima, palavras como “data natalícia” e “saudade”.",
+      "C": "Atrás escrevia com letra bordadíssima, palavras como, “data natalícia” e “saudade”.",
+      "D": "Atrás escrevia, com letra bordadíssima, palavras como “data natalícia” e “saudade”."
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 9,
+    "statement": "A leitura atenta permite ao leitor concluir que o texto narra:",
+    "alternatives": {
+      "A": "experiências de uma criança apresentadas no momento em que ocorrem.",
+      "B": "vivências de várias crianças por meio de uma voz infantil coletiva.",
+      "C": "lembranças da infância de um narrador que se encontra na fase adulta.",
+      "D": "reflexões que se restringem ao passado de um narrador infantil."
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 10,
+    "statement": "Na oração “Boquiaberta, saí devagar” (7º§), tem-se:",
+    "alternatives": {
+      "A": "um sujeito indeterminado.",
+      "B": "um verbo transitivo direto.",
+      "C": "um predicado verbo-nominal.",
+      "D": "uma locução verbal. HISTÓRIA E GEOGRAFIA DO ACRE"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 11,
+    "statement": "Ao longo da história foram assinados acordos de divisão do território Americano entre Portugal e Espanha, tais como o Tratado de Tordesilhas (1494) e o Tratado de Madri (1750). Em 1867, um novo acordo foi assinado (Tratado de Ayacucho), livre do julgo colonial ibérico (adaptado de PONTES, 2016). Assinale a alternativa que apresenta o país do qual o atual território do Acre pertencia de acordo com o Tratado de Ayacucho.",
+    "alternatives": {
+      "A": "Portugal",
+      "B": "Espanha",
+      "C": "Bolívia",
+      "D": "Argentina"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 12,
+    "statement": "Após a assinatura do Tratado de Petrópolis, a área do Acre foi alçada à condição de ______ pelo Decreto 5.188 de 7 de março de 1904, dividido em três departamentos independentes uns dos outros, governados por prefeitos nomeados pelo governo federal: departamentos do Alto Acre, do Alto Purus e do Alto Juruá (adaptado de VITAL, 2019). Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "Território Federal",
+      "B": "Estado",
+      "C": "Capital Federal",
+      "D": "Grande região"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 13,
+    "statement": "“Os indígenas representaram a primeira mão- de-obra para produção do látex [...]. No Acre, os nordestinos começam a chegar a partir de 1877 [...]. Muitos seringueiros ficavam desiludidos desde a hora que chegavam, pois nem começavam a trabalhar e já estavam com um grande saldo devedor. [...] o seringalista fazia com que o seringueiro mantivesse sempre uma relação de dependência” (adaptado de PONTES, 2014). Assinale a alternativa correspondente ao ciclo econômico associado com o texto, de forma correta.",
+    "alternatives": {
+      "A": "Ciclo da Borracha",
+      "B": "Ciclo do Café",
+      "C": "Ciclo do Ouro",
+      "D": "Ciclo do Pau Brasil IBFC_11 3"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 4,
+    "warnings": []
+  },
+  {
+    "number": 14,
+    "statement": "Deu-se, a partir de 1970, a implantação progressiva de investimentos na pecuária no Acre. Após a obtenção de incentivos fiscais e financeiros, os pecuaristas \"paulistas\" procediam a \"limpa\" de suas áreas, entendida não só como a formação de pastagens, mas também como a expulsão dos seringueiros remanescentes nos seringais. Consequência direta da expansão da pecuária e expulsão de seringueiros foi a forte corrente migratória no estado (adaptado de CAMPOS; COSTA, 1993). Em relação às mudanças populacionais ocorridas entre o início da segunda metade do século XX e o início do século XXI no Acre, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "A população rural passou a predominar no estado em relação à urbana",
+      "B": "O aumento da população urbana levou ao crescimento de centros urbanos",
+      "C": "Houve um acentuado declínio da população total do estado",
+      "D": "O forte êxodo urbano potencializou os conflitos no campo"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 15,
+    "statement": "O Acre tem a terceira menor população do país, de acordo com os dados do Instituto Brasileiro de Geografia e Estatística (IBGE), ficando à frente apenas de Roraima e Amapá (adaptado de G1, 2021). Assinale a alternativa que apresenta o tamanho da população do Acre, segundo o último Censo Demográfico realizado pelo IBGE em 2010.",
+    "alternatives": {
+      "A": "Tem menos de 500 mil habitantes",
+      "B": "Tem menos de 1 milhão de habitantes",
+      "C": "Tem mais de 5 milhões de habitantes",
+      "D": "Tem mais de 10 milhões de habitantes"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 16,
+    "statement": "No que concerne à realidade geográfica atual do Acre, assinale a alternativa incorreta.",
+    "alternatives": {
+      "A": "Está localizado na região Norte do país",
+      "B": "É composto por 22 municípios",
+      "C": "Tornou-se Unidade Federativa em 1988",
+      "D": "É um dos estados que compõem a Amazônia Legal"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 17,
+    "statement": "Na história das religiões, que se conta em",
+    "alternatives": {
+      "A": "Santo Daime",
+      "B": "Candomblé",
+      "C": "Espiritismo",
+      "D": "Umbanda"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 18,
+    "statement": "Existe grande heterogeneidade de paisagens ao longo da larga extensão territorial brasileira. Segundo a classificação proposta pelo Instituto Brasileiro de Geografia Estatística (IBGE), podemos encontrar no país seis diferentes biomas (IBGE, 2022). Analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) No Acre predominam as vegetações não florestais, tais como as savânicas. ( ) O Acre está inteiramente localizado no interior do bioma Amazônia. ( ) O Acre abrange áreas dos biomas Amazônia e Pantanal. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - V - F",
+      "B": "F - F - F",
+      "C": "V - F - V",
+      "D": "F - V - F"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 19,
+    "statement": "“O Acre é um dos estados com maior diversidade de fauna e flora do país e tem quase 50% do seu território composto por terras protegidas por lei ambiental (G1, 2021)”. Com relação a Unidades de Conservação localizadas no estado do Acre, assinale a alternativa incorreta.",
+    "alternatives": {
+      "A": "Parque Nacional da Serra do Divisor",
+      "B": "Reserva Extrativista Alto Juruá",
+      "C": "Parque Estadual Chandless",
+      "D": "Parque Nacional Montanhas do Tumucumaque"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 20,
+    "statement": "O relevo brasileiro é constituído, principalmente, por planaltos, planícies e depressões (IBGE EDUCA, 2022). Assinale a alternativa correspondente à Unidade de Relevo predominante no Acre.",
+    "alternatives": {
+      "A": "Planalto da Amazônia Oriental",
+      "B": "Planície do Rio Araguaia",
+      "C": "Depressão Marginal Norte-Amazônica",
+      "D": "Depressão da Amazônia Ocidental 4 IBFC_11 INFORMÁTICA BÁSICA"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 5,
+    "warnings": []
+  },
+  {
+    "number": 21,
+    "statement": "O comando a ser usado, na Ferramenta de Busca do Google, para que venham somente arquivos que tenham o nome \"resultado\" e especificamente com a extensão PPT, deverá ser:",
+    "alternatives": {
+      "A": "fileext:ppt resultado",
+      "B": "extarq:ppt resultado",
+      "C": "resultado extfile:ppt",
+      "D": "resultado filetype:ppt"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 22,
+    "statement": "No Google Chrome, ao querer diminuir as chances de serem rastreadas por terceiros a navegação pela Internet, não manter registros das atividades e poder navegar na Web com privacidade usa-se o modo denominado tecnicamente de:",
+    "alternatives": {
+      "A": "navegação anônima",
+      "B": "privacidade independente",
+      "C": "segurança autônoma",
+      "D": "navegação privada"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 23,
+    "statement": "Leia atentamente a frase abaixo: \"Quando se utiliza dos recursos técnicos da Internet voltada exclusivamente para a comunidade de uma empresa intitula-se ______, e quando a mesma é somente disponibilizada para parceiros de negócios (clientes, fornecedores) denomina-se ______\" Assinale a alternativa que preencha correta e respectivamente as lacunas.",
+    "alternatives": {
+      "A": "Extranet / Intranet",
+      "B": "BusinessNet / PartnersNet",
+      "C": "Intranet / Extranet",
+      "D": "PartnersNet. / BusinessNet"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 24,
+    "statement": "O Microsoft Office Excel possui várias funções básicas importantes tais como: (1) =INTER() (2) =SE() (3) =MÉDIA() (4) =MÍNIMO() Da relação apresentada:",
+    "alternatives": {
+      "A": "existem somente o 1, 2 e 3",
+      "B": "existem somente o 1, 2 e 4",
+      "C": "existem somente o 2, 3 e 4",
+      "D": "existem somente o 1, 3 e 4"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 25,
+    "statement": "Com base no editor de planilha Excel abaixo assinale a alternativa que apresenta o resultado da fórmula: =(C2/B2-A1+C1)*A2 A B C 1 3 5 4 2 1 2 6",
+    "alternatives": {
+      "A": "4 (quatro)",
+      "B": "6 (seis)",
+      "C": "8 (oito)",
+      "D": "5 (cinco)"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 26,
+    "statement": "Quanto ao editor de apresentação PowerPoint, analise as afirmativas abaixo e assinale a alternativa correta. (1) O limite máximo de criação de slides do PowerPoint é de 64 slides. (2) A extensão padrão dos arquivos criados no PowerPoint é “.ppp”.",
+    "alternatives": {
+      "A": "As duas afirmativas são verdadeiras",
+      "B": "A afirmativa (1) é verdadeira, e a (2) é falsa",
+      "C": "A afirmativa (2) é verdadeira, e a (1) é falsa",
+      "D": "As duas afirmativas são falsas"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 27,
+    "statement": "No Pacote da Microsoft Office inclui vários tipos de aplicativos com funcionalidades específicas tais como: (1) Banco de Dados. (2) Compactador de Arquivos. (3) Correio Eletrônico. Da relação apresentada:",
+    "alternatives": {
+      "A": "existem somente o 1 e 2",
+      "B": "existem somente o 1 e 3",
+      "C": "existem somente o 2 e 3",
+      "D": "existem todos"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 28,
+    "statement": "Quanto a temática \"Antivírus e Firewall\", analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) Os antivírus é considerado a ferramenta de hardware mais segura contra malwares. ( ) Ambos têm o objetivo de impedir atividades e acessos indevidos em um sistema. ( ) Em termos de proteção, o firewall atua como a barreira inicial aos intrusos. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - F - F",
+      "B": "V - V - F",
+      "C": "F - V - V",
+      "D": "F - F - V"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 29,
+    "statement": "Nas últimas versões do editor de texto Word (em português), as teclas HOME e END fazem, respectivamente, as seguintes funções:",
+    "alternatives": {
+      "A": "movem o cursor para o início e para o final do parágrafo atual",
+      "B": "movem o cursor para o início e para o final da linha atual",
+      "C": "movem o cursor para o início e para o final do documento atual",
+      "D": "movem o cursor para o início e para o final da página atual"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 30,
+    "statement": "Quanto, especificamente ao Sistema Operacional Windows 10, analise as afirmativas abaixo e assinale a alternativa correta. (1) O Internet Explorer é agora o browser oficial dessa versão do Windows. (2) Essa versão do Windows está indisponibilizada para ser usada em tablets.",
+    "alternatives": {
+      "A": "As duas afirmativas são verdadeiras",
+      "B": "A afirmativa (1) é verdadeira, e a (2) é falsa",
+      "C": "A afirmativa (2) é verdadeira, e a (1) é falsa",
+      "D": "As duas afirmativas são falsas IBFC_11 5 CONHECIMENTOS ESPECÍFICOS"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 6,
+    "warnings": []
+  },
+  {
+    "number": 31,
+    "statement": "De acordo com a Lei Orgânica da Saúde (Lei nº 8.080/90) e as disposições sobre o Subsistema de Atenção à Saúde Indígena, analise as afirmativas abaixo e dê valores de Verdadeiro (V) ou Falso (F). ( ) Caberá à União, com seus recursos próprios, financiar o Subsistema de Atenção à Saúde Indígena. ( ) Os Estados, Municípios, outras instituições governamentais e não-governamentais poderão atuar complementarmente no custeio e execução das ações. ( ) As populações indígenas devem ter acesso garantido ao SUS, em âmbito local, regional e de centros especializados, de acordo com suas necessidades, compreendendo apenas a atenção primária à saúde. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - V - V",
+      "B": "V - F - V",
+      "C": "F - F - V",
+      "D": "V - V - F"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 7,
+    "warnings": []
+  },
+  {
+    "number": 32,
+    "statement": "Acerca do Subsistema de Acompanhamento Durante o Trabalho de Parto, Parto e Pós-Parto Imediato previsto na Lei Orgânica da Saúde (Lei nº 8.080/90), assinale a alternativa correta.",
+    "alternatives": {
+      "A": "O acompanhante da parturiente será indicado pelo médico responsável pelo parto",
+      "B": "Os serviços de saúde do Sistema Único de Saúde, da rede própria ou conveniada, ficam obrigados a permitir a presença, junto à parturiente, de um acompanhante durante todo o período de trabalho de parto, parto e pós-parto imediato",
+      "C": "Os hospitais de todo o País podem ou não manter disponível aviso informando sobre o direito ao acompanhante à parturiente",
+      "D": "As ações destinadas a viabilizar o pleno exercício do direito ao acompanhante à parturiente constarão do regulamento da lei, a ser elaborado pelo órgão competente do Poder Judiciário"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 7,
+    "warnings": []
+  },
+  {
+    "number": 33,
+    "statement": "Com relação aos serviços privados de assistência à saúde e as disposições da Lei Orgânica da Saúde (Lei nº 8.080/90), analise as afirmativas abaixo. I. Quando as suas disponibilidades forem insuficientes para garantir a cobertura assistencial à população de uma determinada área, o Sistema Único de Saúde poderá recorrer aos serviços ofertados pela iniciativa privada. II. A participação complementar dos serviços privados será formalizada mediante contrato ou convênio, observadas, a respeito, as normas de direito público. III. Aos proprietários, administradores e dirigentes de entidades ou serviços contratados é vedado exercer cargo de chefia ou função de confiança no Sistema Único de Saúde. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "I, II e III",
+      "B": "I e II apenas",
+      "C": "II e III apenas",
+      "D": "I apenas"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 7,
+    "warnings": []
+  },
+  {
+    "number": 34,
+    "statement": "No que diz respeito ao planejamento e orçamento previstos na Lei Orgânica da Saúde (Lei nº 8.080/90), assinale a alternativa correta.",
+    "alternatives": {
+      "A": "Será permitida a destinação de subvenções e auxílios a instituições prestadoras de serviços de saúde com finalidade lucrativa",
+      "B": "O processo de planejamento e orçamento do Sistema Único de Saúde (SUS) será ascendente, do nível local até o federal, ouvidos seus órgãos deliberativos, compatibilizando-se as necessidades da política de saúde com a disponibilidade de recursos em planos de saúde dos Municípios, dos Estados, do Distrito Federal e da União",
+      "C": "Os planos de saúde serão a base das atividades e programações de cada nível de direção do Sistema Único de Saúde, ainda que seu financiamento não seja previsto na respectiva proposta orçamentária",
+      "D": "É permitido, via de regra, a transferência de recursos para o financiamento de ações não previstas nos planos de saúde"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 7,
+    "warnings": []
+  },
+  {
+    "number": 35,
+    "statement": "De acordo com a Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018), assinale a alternativa que apresenta corretamente a definição de uso compartilhado de dados.",
+    "alternatives": {
+      "A": "Toda operação realizada com dados pessoais, como as que se referem a coleta, produção, recepção, classificação, utilização, acesso, reprodução, transmissão, distribuição, processamento, arquivamento, armazenamento, eliminação, avaliação ou controle da informação, modificação, comunicação, transferência, difusão ou extração",
+      "B": "Órgão ou entidade da administração pública direta ou indireta ou pessoa jurídica de direito privado sem fins lucrativos legalmente constituída sob as leis brasileiras, com sede e foro no País, que inclua em sua missão institucional ou em seu objetivo social ou estatutário a pesquisa básica ou aplicada de caráter histórico, científico, tecnológico ou estatístico",
+      "C": "Documentação do controlador que contém a descrição dos processos de tratamento de dados pessoais que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de risco",
+      "D": "Comunicação, difusão, transferência internacional, interconexão de dados pessoais ou tratamento compartilhado de bancos de dados pessoais por órgãos e entidades públicos no cumprimento de suas competências legais, ou entre esses e entes privados, reciprocamente, com autorização específica, para uma ou mais modalidades de tratamento permitidas por esses entes públicos, ou entre entes privados 6 IBFC_11"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 7,
+    "warnings": []
+  },
+  {
+    "number": 36,
+    "statement": "Acerca da Responsabilidade e do Ressarcimento de Danos previstos na Lei Geral de Proteção de Dados (Lei nº 13.709/2018), analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) O juiz, no processo civil, poderá inverter o ônus da prova a favor do titular dos dados quando, a seu juízo, for verossímil a alegação, houver hipossuficiência para fins de produção de prova ou quando a produção de prova pelo titular resultar-lhe excessivamente onerosa. ( ) Os agentes de tratamento serão responsabilizados ainda que provem que, embora tenham realizado o tratamento de dados pessoais que lhes é atribuído, não houve violação à legislação de proteção de dados ( ) O controlador ou o operador que, em razão do exercício de atividade de tratamento de dados pessoais, causar a outrem dano patrimonial, moral, individual ou coletivo, em violação à legislação de proteção de dados pessoais, é obrigado a repará-lo. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - V - V",
+      "B": "V - F - V",
+      "C": "F - F - V",
+      "D": "V - V - F"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 8,
+    "warnings": []
+  },
+  {
+    "number": 37,
+    "statement": "Com relação ao disposto na Lei Geral de Proteção de Dados (Lei nº 13.709/2018), assinale a alternativa que não apresenta uma sanção prevista na lei.",
+    "alternatives": {
+      "A": "Eliminação dos dados pessoais a que se refere a infração",
+      "B": "Publicização da infração após devidamente apurada e confirmada a sua ocorrência",
+      "C": "Multa de 0,1% a 20% (vinte por cento) do valor do faturamento bruto da empresa, grupo ou conglomerado obtido, no último exercício anterior à instauração do processo administrativo",
+      "D": "Advertência, com indicação de prazo para adoção de medidas corretivas"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 8,
+    "warnings": []
+  },
+  {
+    "number": 38,
+    "statement": "A Constituição Federal (CF) estabeleceu as competências do Sistema Único de Saúde. Sobre o assunto, assinale a alternativa que apresente incorretamente uma das competências do Sistema Único de Saúde arroladas pela CF.",
+    "alternatives": {
+      "A": "Participar do controle e fiscalização da produção, transporte, guarda e utilização de substâncias e produtos psicoativos, tóxicos e radioativos",
+      "B": "Incrementar, em sua área de atuação, o desenvolvimento científico e tecnológico e a inovação",
+      "C": "Fiscalizar e inspecionar alimentos, compreendido o controle de seu teor nutricional, bem como bebidas e águas para consumo humano",
+      "D": "Colaborar na proteção do meio ambiente, exceto o do trabalho"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 8,
+    "warnings": []
+  },
+  {
+    "number": 39,
+    "statement": "De acordo com a Resolução nº 553/2017 do Conselho Nacional de Saúde, que dispõe sobre a carta dos direitos e deveres da pessoa usuária da saúde, assinale a alternativa incorreta.",
+    "alternatives": {
+      "A": "Toda pessoa tem direito, em tempo hábil, ao acesso a bens e serviços ordenados e organizados para garantia da promoção, prevenção, proteção, tratamento e recuperação da saúde",
+      "B": "Cada pessoa possui direito de ser acolhida no momento em que chegar ao serviço e conforme sua necessidade de saúde e especificidade, independentemente de senhas ou procedimentos burocráticos, respeitando as prioridades garantidas em lei",
+      "C": "O acesso se dará preferencialmente nos serviços de atenção secundária",
+      "D": "Nas situações de urgência e emergência, qualquer serviço de saúde deve receber e cuidar da pessoa bem como encaminhá-la para outro serviço no caso de necessidade"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 8,
+    "warnings": []
+  },
+  {
+    "number": 40,
+    "statement": "No que diz respeito à gestão de pessoal e as normas previstas na Resolução nº 63 de 2011 da Diretoria Colegiada da Agência Nacional de Vigilância Sanitária, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "As exigências referentes aos recursos humanos do serviço de saúde incluem profissionais de nível superior, apenas, podendo ser de quadro próprio ou terceirizado",
+      "B": "Não há necessidade dos disponibilização dos registros de formação e qualificação dos profissionais, desde que desempenhem adequadamente as suas funções",
+      "C": "O serviço de saúde deve possuir equipe multiprofissional dimensionada de acordo com seu perfil de demanda",
+      "D": "O serviço de saúde deve promover a capacitação de seus profissionais durante e após o início das atividades e de forma permanente em conformidade com as atividades desenvolvidas IBFC_11 7"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 8,
+    "warnings": []
+  },
+  {
+    "number": 41,
+    "statement": "A Política Nacional de Atenção Básica, como forma de garantir a coordenação do cuidado, ampliando o acesso e resolutividade das equipes que atuam na Atenção Básica, recomenda que a população adscrita por equipe de Atenção Básica (eAB) e de Saúde da Família (eSF) seja de ______ pessoas, localizada dentro do seu território, garantindo os princípios e diretrizes da Atenção Básica. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "500 a 1.500",
+      "B": "7.000",
+      "C": "1.000",
+      "D": "2.000 a 3.500"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 9,
+    "warnings": []
+  },
+  {
+    "number": 42,
+    "statement": "Sobre o Programa Telessaúde Brasil Redes, analise as afirmativas abaixo. I. É uma iniciativa em âmbito nacional que busca melhorar a qualidade do atendimento e da atenção básica no Sistema Único da Saúde (SUS), integrando ensino e serviço por meio de ferramentas de tecnologias da informação, que oferecem condições para promover a Teleassistência e a Teleducação. II. Quanto à estrutura, o Telessaúde Brasil Redes é integrado por gestores da saúde, instituições formadoras de profissionais de saúde e serviços de saúde do SUS. III. Quanto aos serviços, a Tele-educação é um serviço autônomo que utiliza as tecnologias de informação e comunicação para realizar serviços de apoio ao diagnóstico através de distância e temporal. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "II e III apenas",
+      "B": "I apenas",
+      "C": "I e II apenas",
+      "D": "I, II e III"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 9,
+    "warnings": []
+  },
+  {
+    "number": 43,
+    "statement": "Sobre a vigilância epidemiológica das doenças e agravos relacionados ao trabalho, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) As intoxicações exógenas suspeitas e confirmadas relacionadas ao trabalho devem ser notificadas em ficha do Sistema de Informação de Agravos de Notificação. ( ) A notificação das doenças e dos agravos relacionados ao trabalho no Sistema de Informação de Agravos de Notificação tem caráter estritamente epidemiológico e de vigilância. ( ) O prazo para encerramento das investigações dos casos notificados de doenças e agravos relacionados ao trabalho no Sistema de Informação de Agravos de Notificação é de no máximo 30 dias da notificação. ( ) No processo de Vigilância em Saúde do Trabalhador, a instituição de medidas de controle para saúde e segurança dos trabalhadores deve ocorrer assim que haja suspeição da relação do evento com o trabalho e que as situações de risco aos trabalhadores forem identificadas, visando a intervenção nos ambientes e processos de trabalho, evitando a ocorrência de novos casos. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - V - F - V",
+      "B": "V - V - V - V",
+      "C": "F - V - F - V",
+      "D": "V - F - V - F"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 9,
+    "warnings": []
+  },
+  {
+    "number": 44,
+    "statement": "Assinale a alternativa que contemple um sinal e/ou sintoma sugestivo de violência em adultos (20 a 59 anos).",
+    "alternatives": {
+      "A": "Queixas crônicas específicas, com causa física óbvia",
+      "B": "Gravidez desejada",
+      "C": "Rapidez em iniciar o pré-natal",
+      "D": "Desnutrição"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 9,
+    "warnings": []
+  },
+  {
+    "number": 45,
+    "statement": "As infecções por dengue podem ser assintomáticas ou sintomáticas. Sobre as manifestações clínicas da dengue, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "Os sinais de alarme, quando presentes, ocorrem na fase febril",
+      "B": "Na fase febril, a primeira manifestação é a febre, geralmente acima de 38°C, de início abrupto e com duração de dois a sete dias, associada a cefaléia, astenia, mialgia, artralgia e dor retro- orbitária",
+      "C": "É considerado um sinal de alarme da dengue a diminuição progressiva do hematócrito",
+      "D": "É considerado um sinal de alarme da dengue apenas a hepatomegalia maior do que 10 cm abaixo do rebordo costal"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 9,
+    "warnings": []
+  },
+  {
+    "number": 46,
+    "statement": "Sobre Doenças Diarréicas Agudas (DDAs), analise as afirmativas abaixo. I. As DDAs correspondem a um grupo de doenças infecciosas gastrointestinais caracterizadas por uma síndrome, na qual ocorre a diminuição da consistência das fezes, o aumento do número de evacuações (mínimo de 3 episódios em 24 horas) e, em alguns casos, há presença de muco e sangue (disenteria). II. São autolimitadas, com duração de até 28 dias. III. O quadro clínico pode evoluir para desidratação leve à grave. Quando tratadas incorretamente ou não tratadas, podem levar à desidratação grave e ao distúrbio hidroeletrolítico, podendo ocorrer óbito, principalmente quando associadas à desnutrição. IV. O tratamento das DDAs é simples e fundamenta-se na rápida reidratação dos pacientes por meio da administração de líquidos e de solução de reidratação oral (SRO) ou fluidos endovenosos, dependendo da gravidade do caso. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "I, III e IV apenas",
+      "B": "I, II e III apenas",
+      "C": "I apenas",
+      "D": "I, II, III e IV 8 IBFC_11"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 9,
+    "warnings": []
+  },
+  {
+    "number": 47,
+    "statement": "Sobre a Síndrome do Corrimento Uretral Masculino, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) A uretrite é uma inflamação da uretra, podendo ser dividida em dois grupos: uretrites gonocócicas e não gonocócicas, infecciosas ou não. ( ) O ser humano é o único hospedeiro. ( ) Os casos de corrimento uretral identificados nas unidades sentinelas devem ser notificados somente após a verificação do agente etiológico. ( ) Não é considerada doença de notificação compulsória. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "F - V - F - V",
+      "B": "V - V - F - F",
+      "C": "V - F - V - F",
+      "D": "V - F - V - V"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 10,
+    "warnings": []
+  },
+  {
+    "number": 48,
+    "statement": "O Soro Antirrábico (SAR) possui em sua composição uma solução concentrada e purificada de anticorpos obtidos a partir do soro de equinos imunizados com antígenos rábicos. Considerando o SAR, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "O SAR deve ser utilizado em situação de reexposição ao vírus da raiva ou em caso de pessoas que já tenham feito seu uso anteriormente",
+      "B": "Para sua conservação, manter entre 2°C e 8°C, sendo ideal a temperatura de 5°C. Não pode ser congelado, pois o congelamento provoca a perda de potência, forma agregados e aumenta o risco de reações",
+      "C": "A dose é de 60 UI/kg de peso. A dose máxima é de 5.000 UI. A dose não pode ser dividida para ser administrada",
+      "D": "Quando não se dispuser do soro ou de sua dose total, aplicar inicialmente a parte disponível no máximo em até trinta dias após a aplicação da primeira dose de vacina de cultivo celular, ou seja, após a aplicação da terceira dose da vacina"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 10,
+    "warnings": []
+  },
+  {
+    "number": 49,
+    "statement": "Sobre a vacina adsorvida difteria, tétano, pertussis, hepatite B (recombinante) e Haemophilus influenzae B (conjugada), ou seja, vacina Penta, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "Na rotina dos serviços, a vacina penta está disponível para crianças até 4 (quatro) anos 11 meses e 29 dias",
+      "B": "Na rotina dos serviços, a vacina penta está disponível para crianças até 7 (sete) anos 11 meses e 29 dias",
+      "C": "Na rotina dos serviços, a vacina penta está disponível para crianças até 5 (cinco) anos 11 meses e 29 dias",
+      "D": "Na rotina dos serviços, a vacina penta está disponível para crianças até 6 (seis) anos 11 meses e 29 dias"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 10,
+    "warnings": []
+  },
+  {
+    "number": 50,
+    "statement": "A febre amarela é uma doença infecciosa febril aguda, imunoprevenível, de evolução abrupta e gravidade variável, com elevada letalidade nas suas formas graves. Sobre a vacina da Febre Amarela, analise as afirmativas abaixo. I. Crianças que iniciaram o esquema primário após 5 (cinco) meses de idade, devem completá-lo até 12 meses, com intervalo mínimo de 30 dias entre as doses, administrar o reforço com intervalo mínimo de 60 dias após a última dose. II. A vacina febre amarela pode ser administrada simultaneamente com a maioria das vacinas do Calendário Nacional de Vacinação, sem necessidade de qualquer intervalo, exceto com as vacinas tríplice viral (sarampo, caxumba e rubéola) ou tetra viral (sarampo, caxumba, rubéola e varicela) em crianças menores de 2 (dois) anos de idade. Neste caso, deve ser respeitado o intervalo de 30 dias entre as duas vacinas (mínimo de 15 dias), salvo em circunstâncias específicas, a serem discutidas entre as três esferas do Sistema Único de Saúde. III. Em situações onde exista o risco epidemiológico concomitante para febre amarela e os vírus contidos na vacina tríplice viral, o risco da não vacinação é maior que a possibilidade da diminuição da resposta imune. Dessa forma a vacinação simultânea deverá ser realizada sem levar em conta o intervalo entre as doses. IV. Considera-se uma contraindicação da vacina da Febre Amarela os pacientes submetidos a transplante de órgãos sólidos. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "I, II e IV apenas",
+      "B": "I e II apenas",
+      "C": "II, III e IV apenas",
+      "D": "I, II, III e IV"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 10,
+    "warnings": []
+  },
+  {
+    "number": 51,
+    "statement": "A vacina HPV quadrivalente está aprovada no Brasil para prevenção de lesões genitais pré- cancerosas de colo do útero, de vulva e de vagina em mulheres, de pênis em homens e anal em ambos os sexos, relacionadas aos HPV 16 e 18, e verrugas genitais em mulheres e homens, relacionadas aos HPV 6 e 11. Considerando o esquema de vacina do HPV, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "O esquema da vacina papilomavírus humano 6, 11, 16 e 18 (recombinante), ou seja, vacina HPV, é administrar 2 (duas) doses, com intervalo de 6 (seis) meses entre as doses, nas meninas de 9 a 14 anos de idade (14 anos, 11 meses e 29 dias) e nos meninos de 11 a 14 anos de idade (14 anos, 11 meses e 29 dias)",
+      "B": "O esquema da vacina papilomavírus humano 6, 11, 16 e 18 (recombinante), ou seja, vacina HPV, é administrar 3 (três) doses, com intervalo de 6 (seis) meses entre as doses, nas meninas e meninos de 9 a 14 anos de idade (14 anos, 11 meses e 29 dias)",
+      "C": "O esquema da vacina papilomavírus humano 6, 11, 16 e 18 (recombinante), ou seja, vacina HPV, é administrar 3 (três) doses, com intervalo de 3 (três) meses entre as doses, nas meninas e meninos de 11 a 14 anos de idade (14 anos, 11 meses e 29 dias)",
+      "D": "O esquema da vacina papilomavírus humano 6, 11, 16 e 18 (recombinante), ou seja, vacina HPV, é administrar 2 (duas) doses, com intervalo de 30 (trinta) dias entre as doses, nas meninas de 11 a 14 anos de idade (14 anos, 11 meses e 29 dias) e nos meninos de 12 a 14 anos de idade (14 anos, 11 meses e 29 dias) IBFC_11 9"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 10,
+    "warnings": []
+  },
+  {
+    "number": 52,
+    "statement": "O exame citopatológico é o método do rastreamento do câncer do colo do útero no Brasil. Sobre a coleta do material para o exame citopatológico do colo do útero, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) A coleta do material deve ser realizada na ectocérvice e na endocérvice em lâmina única. A amostra de fundo de saco vaginal é sempre recomendada, pois o material coletado é de alta qualidade para o diagnóstico oncótico. ( ) A recomendação de abstinência sexual prévia ao exame só é justificada quando são utilizados preservativos com lubrificante ou espermicidas. Na prática a presença de espermatozoides não compromete a avaliação microscópica. ( ) O exame não deve ser feito no período menstrual, pois a presença de sangue pode prejudicar o diagnóstico citopatológico. Deve-se aguardar o quinto dia após o término da menstruação. ( ) No caso de sangramento vaginal anormal, o exame ginecológico pode ser dispensado e a coleta não deve ser realizada. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "F - V - V - F",
+      "B": "V - V - V - V",
+      "C": "V - F - V - F",
+      "D": "F - V - F - V"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 11,
+    "warnings": []
+  },
+  {
+    "number": 53,
+    "statement": "O câncer de mama é o crescimento descontrolado de células da mama que adquiriram características anormais (células dos lobos, células produtoras de leite, ou dos ductos, por onde é drenado o leite), anormalidades estas causadas por uma ou mais mutações no material genético da célula. Sobre o câncer de mama, analise as afirmativas abaixo. I. Os principais fatores de risco conhecidos para o câncer de mama estão ligados à idade, aos fatores genéticos e aos endócrinos. II. Os fatores endócrinos estão relacionados principalmente ao estímulo estrogênico, seja endógeno ou exógeno, com aumento do risco quanto maior for o tempo de exposição. III. Possuem risco aumentado as mulheres com história de menarca tardia (idade da primeira menstruação maior que 12 anos), menopausa precoce (instalada antes dos 45 anos de idade), primeira gravidez após os 25 anos, multiparidade e terapia de reposição hormonal pós-menopausa, principalmente se prolongada por mais de dez anos. IV. São manifestações clínicas do câncer de mama: nódulo palpável, endurecimento da mama, secreção mamilar e retração ou abaulamento. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "II e IV apenas",
+      "B": "I, III e IV apenas",
+      "C": "I, II e IV apenas",
+      "D": "I, II, III e IV"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 11,
+    "warnings": []
+  },
+  {
+    "number": 54,
+    "statement": "O ______ é quando a criança recebe, além do leite materno, água ou bebidas à base de água (água adocicada, chás, infusões) e sucos de frutas. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "aleitamento materno misto ou parcial",
+      "B": "aleitamento materno exclusivo",
+      "C": "aleitamento materno complementado",
+      "D": "aleitamento materno predominante"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 11,
+    "warnings": []
+  },
+  {
+    "number": 55,
+    "statement": "Algumas medidas podem ser úteis para aumentar a produção do leite materno. Sobre esse assunto, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "Diminuir a frequência das mamadas",
+      "B": "Dar tempo para o bebê esvaziar bem as mamas",
+      "C": "Oferecer apenas uma das mamas em cada mamada",
+      "D": "Após a mamada, não ordenhar o leite residual"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 11,
+    "warnings": []
+  },
+  {
+    "number": 56,
+    "statement": "Sobre as condutas que o enfermeiro deve ter perante as queixas mais comuns na gestação, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) Na queixa de corrimento vaginal, deve-se prescrever cremes vaginais, mesmo que não haja diagnóstico de infecção vaginal. ( ) Na queixa de pirose, deve-se orientar a gestante a consumir dieta fracionada, evitando frituras, café, chá preto, mates, doces, álcool e fumo. ( ) Na queixa de sialorreia, deve-se orientar que é um sintoma comum no início da gestação e orientar a gestante a deglutir a saliva e tomar líquidos em abundância (especialmente em épocas de calor). ( ) Na queixa de fraquezas e desmaios, deve-se orientar a gestante para que não faça mudanças bruscas de posição e evite a inatividade. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - F - V - F",
+      "B": "V - V - V - V",
+      "C": "F - V - F - V",
+      "D": "F - V - V - V"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 11,
+    "warnings": []
+  },
+  {
+    "number": 57,
+    "statement": "A sífilis é uma infecção bacteriana sistêmica, de evolução crônica, causada pelo Treponema pallidum. Sobre essa doença, analise as afirmativas abaixo. I. A transmissão por transfusão de sangue ou derivados pode ocorrer, mas se tornou muito rara, devido ao controle e à testagem do sangue doado pelos hemocentros. II. A transmissão sexual é a predominante. Os sítios de inoculação do T. pallidum são, em geral, os órgãos genitais, podendo ocorrer também manifestações extragenitais (lábios, língua e áreas da pele com solução de continuidade). III. A transmissibilidade da sífilis adquirida requer a presença de lesões (cancro duro, condiloma plano, placas mucosas, lesões úmidas). Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "III apenas",
+      "B": "II e III apenas",
+      "C": "II apenas",
+      "D": "I, II e III 10 IBFC_11"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 11,
+    "warnings": []
+  },
+  {
+    "number": 58,
+    "statement": "Sobre o uso de método anticoncepcional durante o aleitamento materno, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) Durante os primeiros seis meses pós-parto, a amamentação exclusiva, à livre demanda, com amenorreia, está associada à diminuição da fertilidade. ( ) O efeito inibidor da fertilidade (que o aleitamento exclusivo com amenorreia tem) pode ser utilizado como método comportamental de anticoncepção, chamado de LAM (método da amenorreia da lactação). ( ) O anticoncepcional hormonal oral combinado e o injetável mensal devem ser utilizados em lactantes, pois não interferem na qualidade e na quantidade do leite materno e não afetam adversamente a saúde do bebê. ( ) O dispositivo intrauterino (DIU) pode ser inserido imediatamente após o parto ou a partir de quatro semanas pós-parto. O DIU está contraindicado para os casos que cursaram com infecção puerperal até três meses após a cura. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - V - F - V",
+      "B": "V - V - V - V",
+      "C": "V - F - V - F",
+      "D": "F - V - F - V"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 12,
+    "warnings": []
+  },
+  {
+    "number": 59,
+    "statement": "No que se refere ao conteúdo microbiano de uma ferida, esta é considerada ______, quando o local apresenta intensa reação inflamatória e microrganismos que podem produzir exsudato purulento com odor fétido. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "contaminada",
+      "B": "infectada",
+      "C": "potencialmente contaminada",
+      "D": "limpa"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 12,
+    "warnings": []
+  },
+  {
+    "number": 60,
+    "statement": "A dermatite de contato é uma reação inflamatória na pele decorrente da exposição a um agente capaz de causar irritação ou alergia. Sobre a dermatite de contato, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "O irritante agressor deve ser identificado mas não removido; em geral, se utiliza sabão até que ocorra cicatrização das lesões",
+      "B": "Os homens tendem a ser afetados mais comumente que as mulheres",
+      "C": "É uma reação inflamatória da pele causada apenas por agentes químicos",
+      "D": "Os fatores predisponentes consistem em extremos de calor e de frio, uso frequente de sabão e água e doença cutânea preexistente"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 12,
+    "warnings": []
+  },
+  {
+    "number": 61,
+    "statement": "A catarata é a maior causa de cegueira tratável nos países em desenvolvimento. Sobre Catarata, analise as afirmativas abaixo. I. A catarata pode desenvolver-se em um ou em ambos os olhos e em qualquer idade. II. Tabagismo, uso de corticosteroides a longo prazo (particularmente em altas doses), luz solar e radiação ionizante, diabetes melito, obesidade e lesões oculares podem aumentar o risco de catarata. III. As manifestações clínicas da catarata são visão clara e dor ocular. IV. Tratamentos não cirúrgicos eficazes como medicamentos, colírios e óculos, podem curar a catarata ou impedir o surgimento dessas relacionadas com a idade. V. O tratamento clínico ótimo consiste em prevenção, incluindo instrução do cliente sobre as estratégias de redução de risco, como abandono do tabagismo e uso de óculos de sol em ambientes externos. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "II, III e IV apenas",
+      "B": "II, III e V apenas",
+      "C": "I, II e V apenas",
+      "D": "I, II, III, IV e V"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 12,
+    "warnings": []
+  },
+  {
+    "number": 62,
+    "statement": "______ é uma lesão dos tecidos moles produzida por uma força não penetrante (como por exemplo pancada, chute ou queda), causando ruptura dos vasos sanguíneos de pequeno calibre, com sangramento nos tecidos moles (equimoses). Observa-se o desenvolvimento de hematoma quando o sangramento é suficiente para causar acúmulo apreciável de sangue, produzindo aspecto característico de “lesão arroxeada”. Sua resolução ocorre em 1 a 2 semanas. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "Estiramento",
+      "B": "Entorse",
+      "C": "Contusão",
+      "D": "Luxação articular"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 12,
+    "warnings": []
+  },
+  {
+    "number": 63,
+    "statement": "O diabetes mellitus, comumente designado como diabetes, abrange um grupo de doenças metabólicas, caracterizadas por níveis elevados de glicose no sangue (hiperglicemia), devido a defeitos na secreção ou na ação da insulina ou em ambas. Sobre o diabetes mellitus tipo 2, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "Caracteriza-se pela destruição das células beta do pâncreas, devido a fatores genéticos, imunológicos e, possivelmente ambientais. São necessárias injeções de insulina para controlar os níveis de glicemia",
+      "B": "O tratamento consiste na adoção de hábitos de vida saudáveis, como uma alimentação equilibrada, prática regular de atividade física, moderação no uso de álcool e abandono do tabagismo, acrescido ou não do tratamento farmacológico",
+      "C": "A cetoacidose diabética (CAD) é mais comum em indivíduos com diabetes tipo 2",
+      "D": "O diabetes tipo 2 tem início súbito, geralmente antes dos 30 anos de idade IBFC_11 11"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 12,
+    "warnings": []
+  },
+  {
+    "number": 64,
+    "statement": "O Transtorno da Compulsão Alimentar Periódica caracteriza-se pela ingestão descontrolada de grande quantidade de alimentos, sem apetite e quase sem mastigar, até que seja alcançada a plenitude. Sobre o Transtorno da Compulsão Alimentar Periódica, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) Este transtorno é caracterizado por compulsão alimentar em um curto espaço de tempo, seguida de angústia por essa atitude e ausência de comportamentos regulares voltados para a eliminação do excesso alimentar. ( ) Para a caracterização do diagnóstico, esses episódios devem ocorrer pelo menos quatro dias por semana no período de doze meses. ( ) Apesar de mais frequente em indivíduos obesos, ocorre também em pessoas com peso normal. ( ) Acomete indivíduos de todas as raças, com distribuição aproximada entre os sexos e início habitual na adolescência. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "V - F - F - F",
+      "B": "V - V - V - V",
+      "C": "F - V - F - V",
+      "D": "V - F - V - V"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 13,
+    "warnings": []
+  },
+  {
+    "number": 65,
+    "statement": "Sobre o Transtorno do Espectro Autista (TEA), analise as afirmativas abaixo. I. Sobre a etiologia do autismo, diversos estudos apontam múltiplos fatores envolvidos, como lesões neurológicas perinatais, rubéola congênita, fenilcetonúria, esclerose tuberosa, alterações genéticas, incompatibilidade imunológica entre mãe e feto, sofrimento fetal e uso de medicamentos no período gestacional. II. A vacina tríplice viral (sarampo, caxumba e rubéola) ou os conservantes utilizados em programas de imunização (timerosol) são grandes causadores de autismo em crianças. III. A avaliação das características autísticas em uma criança não é clínica, mas sim realizada por exames específicos comprobatórios que orientam o diagnóstico. IV. Os sintomas são contato visual anormal, atraso na linguagem, sendo os mais comuns e ecolalia (imediata ou posterior) e a inversão pronominal, a presença de estereotipias e o maneirismo, como a resistência às mudanças. Estão corretas as afirmativas:",
+    "alternatives": {
+      "A": "I e IV apenas",
+      "B": "I, II e III apenas",
+      "C": "I, III e IV apenas",
+      "D": "I, II, III e IV"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 13,
+    "warnings": []
+  },
+  {
+    "number": 66,
+    "statement": "_______ representa uma síndrome reversível específica à ingestão recente de determinada droga. Os critérios que a definem baseiam-se nas evidências recentes do uso e incluem comportamento inadequado, agressividade, labilidade de humor, prejuízo na coordenação psicomotora e julgamento de realidade, lentificação psicomotora e déficit cognitivo. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "intoxicação por substâncias",
+      "B": "abstinência de substâncias",
+      "C": "abuso de substância",
+      "D": "síndrome de dependência"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 13,
+    "warnings": []
+  },
+  {
+    "number": 67,
+    "statement": "Sobre Educação em Saúde, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) A educação na saúde consiste na produção e sistematização de conhecimentos relativos à formação e ao desenvolvimento para a atuação em saúde, envolvendo práticas de ensino, diretrizes didáticas e orientação curricular. ( ) Também conhecida como educação no trabalho em saúde, a educação na saúde apresenta apenas a modalidade de educação continuada. ( ) A educação continuada contempla as atividades que possui período definido para execução e utiliza, em sua maior parte, os pressupostos da metodologia de ensino tradicional, como exemplo as ofertas formais nos níveis de pós- graduação. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+    "alternatives": {
+      "A": "F - V - V",
+      "B": "V - V - F",
+      "C": "V - F - V",
+      "D": "F - F - V"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 13,
+    "warnings": []
+  },
+  {
+    "number": 68,
+    "statement": "Foi prescrita a posição ______, na qual o paciente deverá ser colocado em decúbito dorsal horizontal, com o corpo inclinado, de forma que a cabeça fique em nível mais baixo em relação ao corpo. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "Fowler",
+      "B": "Trendelenburg",
+      "C": "Genupeitoral",
+      "D": "Litotomia"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 13,
+    "warnings": []
+  },
+  {
+    "number": 69,
+    "statement": "Assinale a alternativa que contemple uma assistência de enfermagem correta para um paciente que apresenta hipertermia.",
+    "alternatives": {
+      "A": "Aquecer o paciente com agasalhos e cobertores",
+      "B": "Aumentar a ingesta líquida e repouso",
+      "C": "Manter o ambiente aquecido",
+      "D": "Ingestão de alimentos quentes 12 IBFC_11"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 13,
+    "warnings": []
+  },
+  {
+    "number": 70,
+    "statement": "O processamento de produtos constitui a prática de descontaminar e preparar produtos utilizados no apoio ao diagnóstico e terapia e na assistência aos pacientes, como cirurgias, procedimentos e alguns tipos de exames, de forma a garantir a reutilização ou descarte seguro destes produtos em serviços prestados por profissionais de saúde em hospitais, clínicas, consultórios médicos, odontológicos, entre outros. Sobre o processamento dos produtos para saúde, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "O Serviço de Saúde não será co-responsável pela segurança do processamento dos produtos para saúde, realizado por empresa processadora por ele contratada",
+      "B": "Produtos para saúde utilizados na assistência ventilatória e inaloterapia, deverão ser submetidos à desinfecção por métodos de imersão química líquida com a utilização de saneantes a base de aldeídos",
+      "C": "O processamento de produtos deve seguir um fluxo direcionado sempre da área limpa para a área suja",
+      "D": "Produtos para saúde classificados como não- críticos devem ser submetidos, no mínimo, ao processo de limpeza"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 71,
+    "statement": "Sobre a esterilização dos produtos para saúde realizada em Centro de Material e Esterilização (CME), assinale a alternativa correta.",
+    "alternatives": {
+      "A": "É obrigatório realizar o ciclo de esterilização a vapor para uso imediato, no primeiro ciclo do dia",
+      "B": "É permitido o uso de autoclave gravitacional de capacidade superior a 100 litros",
+      "C": "É permitido o uso de estufas para a esterilização de produtos para saúde",
+      "D": "É obrigatório a realização de teste para avaliar o desempenho do sistema de remoção de ar (Bowie & Dick) da autoclave assistida por bomba de vácuo, no primeiro ciclo do dia"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 72,
+    "statement": "Assinale a alternativa que contemple um material de saúde do tipo crítico.",
+    "alternatives": {
+      "A": "Cânula de Guedel",
+      "B": "Comadres",
+      "C": "Vidraria para aspiração",
+      "D": "Copos e talheres"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 73,
+    "statement": "Considerando a Resolução nº 0509/2016, que trata da Anotação de Responsabilidade Técnica, pelo Serviço de Enfermagem, bem como, as atribuições do Responsável Técnico, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "A Certidão de Responsabilidade Técnica (CRT) é um documento emitido pelo Conselho Federal de Enfermagem, pelo qual se materializa o ato administrativo de concessão de Anotação de Responsabilidade Técnica pelo Serviço de Enfermagem",
+      "B": "O Responsável Técnico deve ser profissional de nível superior da área da Saúde, preferencialmente da Enfermagem",
+      "C": "O Responsável Técnico tem sob sua responsabilidade o planejamento, organização, direção, coordenação, execução e avaliação dos serviços de Enfermagem, a quem é concedida, pelo Conselho Regional de Enfermagem",
+      "D": "A Anotação de Responsabilidade Técnica (ART) terá validade de 24 meses; e a Certidão de Responsabilidade Técnica (CRT) terá validade de 5 (cinco) anos"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 74,
+    "statement": "O técnico de Enfermagem assumiu plantão às 19 horas para cumprir a jornada noturna de 12 horas. Após o recebimento do plantão, já havia passado por outra jornada diurna de trabalho e se encontrava exausto, desta forma foi descansar na sala de TV e acabou cochilando e deixando de fazer as medicações e realizar o controle dos sinais vitais das 20 horas dos pacientes da unidade. Por volta das 23 horas o paciente RTF, 59 anos, apresentou parada cardiorrespiratória sendo atendido pelo médico, porem acabou indo à óbito. Foi constatado pelo médico que o paciente apresentou PCR por não ter recebido o medicamento prescrito e não ter realizado o controle dos sinais vitais do paciente pelo técnico de enfermagem. Considerando a falha do profissional no aspecto ético, é correto afirmar que trata-se de:",
+    "alternatives": {
+      "A": "negligência",
+      "B": "imprudência",
+      "C": "imperícia",
+      "D": "homicídio culposo"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 75,
+    "statement": "A prática do trabalho em equipe de saúde e de Enfermagem teve seu início em 1950, em um cenário de mudanças das concepções de saúde e doença e, do modo de organização dos serviços de saúde. Considerando a organização de trabalho por equipe denominada integração, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "Almeja a articulação das ações e de interação dos profissionais",
+      "B": "Ocorre justaposição das ações, permitindo exclusivamente o agrupamento de agentes envolvidos",
+      "C": "Ocorre polarização de uma parte do grupo, com tendência a especialização das ações",
+      "D": "Ocorre a desfragmentação das ações, por formação de pequenos grupos especializados"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 76,
+    "statement": "Hospitais magnéticos caracterizam-se pela plena estrutura organizacional, que fornece subsídios ao desenvolvimento do profissional, a partir do investimento em formação e em educação permanente. Dessa forma, possibilita tomada de decisão baseada em evidências. Considerando características-chave de um hospital magnético, assinale a alternativa correta.",
+    "alternatives": {
+      "A": "O médico é responsável pelas atividades relacionadas ao cuidado do paciente, sendo que o Enfermeiro não possui autonomia por sua prática",
+      "B": "Estrutura organizacional centralizada, permitindo maior controle sobre o ambiente de trabalho imediato e forte envolvimento da enfermagem na estrutura central da instituição",
+      "C": "Estilo de administração participativo, caracterizado pelo envolvimento da equipe em todos os níveis",
+      "D": "Os Enfermeiros não possuem permissão para desenvolver o julgamento independente IBFC_11 13"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 14,
+    "warnings": []
+  },
+  {
+    "number": 77,
+    "statement": "O conhecimento do desenvolvimento normal da criança possibilita a identificação de atrasos, desvios e transtornos que permeiam o processo biopsicossocial. O ______ é desencadeado por algum estímulo brusco como bater palmas, estirar bruscamente o lençol onde a criança está deitada ou soltar os braços semiesticados quando se faz a avaliação da preensão palmar. O reflexo consiste em uma resposta de extensão-abdução dos membros superiores (eventualmente dos inferiores), ou seja, na primeira fase os braços ficam estendidos e abertos, com abertura dos dedos da mão, e em seguida de flexão-adução dos braços, com retorno à posição original. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "reflexo abstrato",
+      "B": "reflexo de Moro",
+      "C": "reflexo da comunicação visual",
+      "D": "reflexo de Bournout"
+    },
+    "correctAnswer": "B",
+    "status": "VALID",
+    "page": 15,
+    "warnings": []
+  },
+  {
+    "number": 78,
+    "statement": "A Política Nacional de Práticas Integrativas e Complementares (PNPIC) define responsabilidades institucionais para a implantação e implementação das Práticas Integrativas e Complementares (PICS) e orienta que estados, distrito federal e municípios instituam suas próprias normativas trazendo para o Sistema Único de Saúde (SUS) práticas que atendam às necessidades regionais. Uma das PICS é ______, que é uma prática de imposição de mãos que usa a aproximação ou o toque sobre o corpo da pessoa com a finalidade de estimular os mecanismos naturais de recuperação da saúde. Baseado na concepção vitalista de saúde e doença também presente em outros sistemas terapêuticos, considera a existência de uma energia universal canalizada que atua sobre o equilíbrio da energia vital com o propósito de harmonizar as condições gerais do corpo e da mente de forma integral. Assinale a alternativa que preencha corretamente a lacuna.",
+    "alternatives": {
+      "A": "Yoga",
+      "B": "Shantala",
+      "C": "Quiropraxia",
+      "D": "Reiki"
+    },
+    "correctAnswer": "D",
+    "status": "VALID",
+    "page": 15,
+    "warnings": []
+  },
+  {
+    "number": 79,
+    "statement": "Paciente CCR, internado no leito 12, da unidade de Clínica Médica, foi prescrito 6.000.000 UI de Penicilina Cristalina (PC) para correr um volume total de 100 mL em uma hora. A Unidade dispõe de frasco-ampola de PC de 10.000.000 UI. Para o preparo deste medicamento, é necessário adicionar ______ de diluente ao frasco-ampola de PC e aspirar ______ para administrar a dose prescrita. O gotejamento do soro será de ______. Assinale a alternativa que preencha correta e respectivamente as lacunas.",
+    "alternatives": {
+      "A": "5 mL / 3 mL / 99 gotas/minuto",
+      "B": "8 mL / 5 mL / 66 gotas/minuto",
+      "C": "6 mL / 6 mL / 33 gotas/minuto",
+      "D": "10 mL / 6 mL / 99 gotas/minuto"
+    },
+    "correctAnswer": "C",
+    "status": "VALID",
+    "page": 15,
+    "warnings": []
+  },
+  {
+    "number": 80,
+    "statement": "O Eletrocardiograma (ECG) é considerado o exame padrão-ouro para o diagnóstico não invasivo das arritmias cardíacas. Considerando a figura abaixo, que apresenta as seguintes características: frequência muito rápida e desorganizada, intervalo R-R irregular e dificuldade em identificar complexos QRS distintos –, a denominação dada a esse ritmo cardíaco é: Fonte: https://www.ambulancetechnicianstudy.co.uk/rhythms.html apud Camparo, CRV; e col. Guia de bolso para assistência de Enfermagem em Emergência (2017), pag.63",
+    "alternatives": {
+      "A": "Fibrilação ventricular",
+      "B": "Bloqueio atrioventricular de 2º grau",
+      "C": "Taquicardia ventricular monomórfica",
+      "D": "Bradicardia sinusal 14 IBFC_11 PROVA DISCURSIVA – REDAÇÃO Texto I EPIDEMIA DOS CIGARROS ELETRÔNICOS Os cigarros eletrônicos podem colocar em risco anos de campanhas bem-sucedidas de combate ao fumo no país. (Por Dr. Drauzio Varella) Os cigarros eletrônicos estão criando uma legião de novos dependentes de nicotina. Vamos perder décadas de trabalho educativo no combate ao fumo. Venho repetindo, nesta coluna e em outros espaços, que, descontada a escravidão, o cigarro foi o maior crime continuado da história do capitalismo internacional. Que outro seria comparável ao de investir fortunas em publicidade, criar lobbies para corromper autoridades, pressionar financeiramente a imprensa para não divulgar os malefícios do fumo, contratar cientistas de aluguel para contestar as pesquisas que o ligavam ao câncer, às doenças cardiovasculares, pulmonares e a tantas outras que encurtam a vida dos usuários crônicos em pelo menos dez anos? Essas ações criminosas foram perpetradas, no decorrer de décadas, com um único objetivo: tornar dependentes de nicotina crianças e adolescentes ingênuos e desinformados. [...] O combate ao fumo começou a se estruturar em nosso país a partir dos anos 1970. Eram iniciativas isoladas, que partiam de algumas entidades apoiadas pelo Ministério da Saúde. As campanhas educativas só ganharam abrangência nacional, quando proibimos a propaganda nos meios de comunicação. Sem a possibilidade de subornar a mídia com campanhas milionárias, sobrou apenas aos fabricantes a oportunidade de fazer propaganda nos pontos de venda: padarias e bares nos quais exibem os maços em meio às balas e chocolates tão a gosto da criançada que eles pretendem viciar. Enquanto nossos olhos estavam voltados para a pandemia do coronavírus, a indústria do fumo produziu em larga escala dispositivos para administrar nicotina, que viraram moda entre crianças e adolescentes. O país realizou um grande esforço educacional para desconstruir a imagem criada pela publicidade perversa que associava o cigarro à liberdade, a mulheres lindas e homens maduros que faziam sucesso entre elas. Com perseverança conseguimos mostrar o que o fumo realmente é: um vício chinfrim que provoca hálito repulsivo, mau cheiro no corpo, tosse com secreção e pele com aparência doentia. Hoje, pouco menos de 10% dos brasileiros com mais de 15 anos são fumantes. Fumamos menos do que nos Estados Unidos e do que em todos os países europeus. A OMS e as agências internacionais reconhecem o programa brasileiro de combate ao fumo como um dos melhores do mundo. Com a queda nas vendas, as companhias foram atrás de outras estratégias para repor o número dos que se livram do cigarro e dos usuários crônicos que morrem por ter fumado. A principal delas foi a de investir nas empresas que comercializavam cigarros eletrônicos. A desculpa seria a de reduzir danos: se o fumo causa tantos males, por que não fumar nicotina sem o alcatrão e outros compostos cancerígenos? Os estudos nunca demonstraram que o impacto dos eletrônicos como método para chegar à abstinência foi significante, mas o sucesso entre os jovens do mundo inteiro é incontestável. Meninas e meninos, que jamais colocariam um cigarro na boca, aderiram em massa aos eletrônicos, com a mesma ingenuidade e desinformação dos meus 17 anos. A maioria acha que está fumando um vaporzinho inofensivo. Poucos sabem que se trata de vapor de nicotina em concentrações muito mais altas do que as do cigarro convencional. Entre nós, o número dos que aderiram aos eletrônicos é assustador. Esta semana gravamos para o “Fantástico” um especial sobre o tema. Nas escolas, nas comunidades periféricas e nos bairros de classe média alta a prevalência dos eletrônicos é enorme. Estamos diante de uma epidemia que se alastra sem controle. Fumam nas baladas, nos bares, na rua, nos banheiros das escolas, em ambientes fechados na frente de crianças, grávidas e pessoas de idade, e até no quarto de casa sem que os pais percebam, porque os fabricantes acrescentam essências perfumadas para disfarçar o odor e atrair a criançada. Disponível em: https://drauziovarella.uol.com.br/drauzio/artigos/epidemia-dos-cigarros-eletronicos/ Acesso em 26/07/2022 IBFC_11 15 Texto II Disponível em: https://www.poder360.com.br/saude/20-dos-jovens-ja-fumaram-cigarros-eletronicos-diz-pesquisa/. Acesso em: 26/07/2022 Após anos de campanhas contra o tabagismo, a sociedade brasileira vê-se diante de um novo desafio: conscientizar os jovens acerca do uso dos cigarros eletrônicos. Considerando as ideias apresentadas pelos textos motivadores e sua visão de mundo, escreva, em registro formal da Língua, um texto dissertativo- argumentativo, que contenha entre 20 e 30 linhas a respeito do seguinte tema: “A importância da informação na relação dos jovens com os cigarros”. 16 IBFC_11 Transcreva a redação de mínimo 20 linhas e no máximo 30 linhas, com caneta azul ou preta, para o cartão de respostas. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"
+    },
+    "correctAnswer": "A",
+    "status": "VALID",
+    "page": 15,
+    "warnings": []
+  }
+]

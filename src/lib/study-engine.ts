@@ -61,6 +61,9 @@ export type SessionResultItem = {
   explanation: string | null;
   responseTimeSeconds: number | null;
   isAnswered: boolean;
+  subjectName: string | null;
+  topicName: string | null;
+  boardName: string | null;
 };
 
 export type SessionResults = {
@@ -97,6 +100,15 @@ export type QuestionFeedback = {
   legalReference: string | null;
 };
 
+export type QuestionContext = {
+  boardName: string | null;
+  year: number | null;
+  subjectName: string | null;
+  topicName: string | null;
+  difficulty: string | null;
+  imageUrl: string | null;
+};
+
 export type LoadedQuestion = {
   sessionQuestionId: string;
   questionId: string;
@@ -109,6 +121,7 @@ export type LoadedQuestion = {
   favorite: boolean;
   reviewLater: boolean;
   feedback: QuestionFeedback | null;
+  context: QuestionContext;
 };
 
 export type StartedStudySession = {
@@ -200,8 +213,28 @@ function summarizeStatement(text: string, maxLength = 140): string {
 
 async function fetchQuestionDetailsForResults(
   questionIds: string[],
-): Promise<Map<string, { statement: string; explanation: string | null }>> {
-  const map = new Map<string, { statement: string; explanation: string | null }>();
+): Promise<
+  Map<
+    string,
+    {
+      statement: string;
+      explanation: string | null;
+      subjectName: string | null;
+      topicName: string | null;
+      boardName: string | null;
+    }
+  >
+> {
+  const map = new Map<
+    string,
+    {
+      statement: string;
+      explanation: string | null;
+      subjectName: string | null;
+      topicName: string | null;
+      boardName: string | null;
+    }
+  >();
   if (!questionIds.length) return map;
 
   const chunkSize = 200;
@@ -209,14 +242,27 @@ async function fetchQuestionDetailsForResults(
     const chunk = questionIds.slice(i, i + chunkSize);
     const { data, error } = await supabase
       .from("questions")
-      .select("id, statement, explanation")
+      .select(`
+        id,
+        statement,
+        explanation,
+        boards(name, acronym),
+        subjects(name),
+        topics(name)
+      `)
       .in("id", chunk);
 
     if (error) throw error;
     for (const question of data ?? []) {
+      const board = question.boards as { name: string; acronym: string | null } | null;
+      const subject = question.subjects as { name: string } | null;
+      const topic = question.topics as { name: string } | null;
       map.set(question.id, {
         statement: question.statement,
         explanation: question.explanation,
+        subjectName: subject?.name?.trim() || null,
+        topicName: topic?.name?.trim() || null,
+        boardName: board?.acronym?.trim() || board?.name?.trim() || null,
       });
     }
   }
@@ -227,7 +273,16 @@ async function fetchQuestionDetailsForResults(
 function buildSessionResults(
   session: StudySessionDetail,
   rows: StudySessionQuestionRow[],
-  questionMap: Map<string, { statement: string; explanation: string | null }>,
+  questionMap: Map<
+    string,
+    {
+      statement: string;
+      explanation: string | null;
+      subjectName: string | null;
+      topicName: string | null;
+      boardName: string | null;
+    }
+  >,
 ): SessionResults {
   const answered = rows.filter((row) => row.answered_at);
   const correctCount = answered.filter((row) => row.is_correct === true).length;
@@ -263,6 +318,9 @@ function buildSessionResults(
       explanation: question?.explanation?.trim() || null,
       responseTimeSeconds: row.response_time_seconds,
       isAnswered: !!row.answered_at,
+      subjectName: question?.subjectName ?? null,
+      topicName: question?.topicName ?? null,
+      boardName: question?.boardName ?? null,
     };
   });
 
@@ -288,6 +346,26 @@ async function loadSessionResults(
   const questionIds = [...new Set(rows.map((row) => row.question_id))];
   const questionMap = await fetchQuestionDetailsForResults(questionIds);
   return buildSessionResults(session, rows, questionMap);
+}
+
+function mapQuestionContext(question: {
+  year: number | null;
+  difficulty: string | null;
+  metadata: unknown;
+  boards: { name: string; acronym: string | null } | null;
+  subjects: { name: string } | null;
+  topics: { name: string } | null;
+}): QuestionContext {
+  const metadata = parseMetadataFields(question.metadata);
+  const board = question.boards;
+  return {
+    boardName: board?.acronym?.trim() || board?.name?.trim() || null,
+    year: question.year,
+    subjectName: question.subjects?.name?.trim() || null,
+    topicName: question.topics?.name?.trim() || null,
+    difficulty: question.difficulty?.trim() || null,
+    imageUrl: metadata.image_url || null,
+  };
 }
 
 function buildQuestionFeedback(
@@ -556,13 +634,28 @@ export async function loadQuestion(sessionId: string, index: number): Promise<Lo
   const row = rows[index];
   const { data: question, error } = await supabase
     .from("questions")
-    .select("id, statement, alternatives, correct_answer, explanation, metadata")
+    .select(`
+      id,
+      statement,
+      alternatives,
+      correct_answer,
+      explanation,
+      year,
+      difficulty,
+      metadata,
+      boards(name, acronym),
+      subjects(name),
+      topics(name)
+    `)
     .eq("id", row.question_id)
     .single();
 
   if (error) throw error;
 
   const metadata = parseMetadataFields(question.metadata);
+  const boards = question.boards as { name: string; acronym: string | null } | null;
+  const subjects = question.subjects as { name: string } | null;
+  const topics = question.topics as { name: string } | null;
 
   return {
     sessionQuestionId: row.id,
@@ -576,6 +669,14 @@ export async function loadQuestion(sessionId: string, index: number): Promise<Lo
     favorite: row.favorite,
     reviewLater: row.review_later,
     feedback: buildQuestionFeedback(session, row, question.explanation, metadata),
+    context: mapQuestionContext({
+      year: question.year,
+      difficulty: question.difficulty,
+      metadata: question.metadata,
+      boards,
+      subjects,
+      topics,
+    }),
   };
 }
 

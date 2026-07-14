@@ -1,6 +1,7 @@
 import {
   ALTERNATIVE_COLUMNS,
   ALTERNATIVE_LETTERS,
+  REQUIRED_ALTERNATIVE_LETTERS,
 } from "./columns.ts";
 import type { RawRow } from "./parse.ts";
 import { hasContest, hasTopic, type TaxonomySets } from "./taxonomy.ts";
@@ -99,7 +100,10 @@ export function validateRows(
       const letter = ALTERNATIVE_LETTERS[i];
       const text = row[field] ?? "";
       if (!text) {
-        issues.push({ line, field, error: `Alternativa ${letter} é obrigatória.` });
+        if ((REQUIRED_ALTERNATIVE_LETTERS as readonly string[]).includes(letter)) {
+          issues.push({ line, field, error: `Alternativa ${letter} é obrigatória.` });
+        }
+        // Alternativa E ausente/vazia: questão de 4 alternativas (A–D), não é erro.
       } else {
         alternatives.push({ letter, text });
       }

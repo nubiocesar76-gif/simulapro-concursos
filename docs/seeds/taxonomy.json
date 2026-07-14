@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "version": "1.0.0",
-    "generatedAt": "2026-07-08T10:13:18.843Z",
-    "generatedBy": "SimulaPro Seed Engine",
-    "description": "Taxonomia oficial do SimulaPro",
+    "version": "1.2.1",
+    "generatedAt": "2026-07-14T09:39:21.032Z",
+    "generatedBy": "SimulaPro Taxonomia V1.2.1",
+    "description": "Taxonomia oficial V1.2.1 — correções críticas pós-auditoria. Regiões homologadas (Conhecimentos Gerais Regionais): acre, distrito-federal.",
     "environment": "development"
   },
   "courses": [
@@ -40,19 +40,62 @@
           "name": "Administração em Enfermagem",
           "slug": "administracao-em-enfermagem",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Estratégia Saúde da Família",
+              "slug": "estrategia-saude-da-familia",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Enfermeiro Gestor",
+              "slug": "enfermeiro-gestor",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Dimensionamento de Pessoal de Enfermagem",
+              "slug": "dimensionamento-de-pessoal-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Educação Permanente em Saúde",
+              "slug": "educacao-permanente-em-saude",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Tecnologias Leves, Duras e Leve-duras em Saúde",
+              "slug": "tecnologias-leves-duras-e-leve-duras-em-saude",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Regime de Hospital-Dia",
+              "slug": "regime-de-hospital-dia",
+              "status": "ACTIVE",
+              "order": 6
+            }
+          ],
           "order": 1
         },
         {
           "name": "Anatomia e Fisiologia",
           "slug": "anatomia-fisiologia",
-          "status": "ACTIVE",
+          "status": "INACTIVE",
           "topics": [
             {
               "name": "Sistema Cardiovascular",
               "slug": "sistema-cardiovascular",
               "status": "ACTIVE",
               "order": 1
+            },
+            {
+              "name": "Sistema Sensorial — Visão e Audição",
+              "slug": "sistema-sensorial-visao-e-audicao",
+              "status": "ACTIVE",
+              "order": 2
             }
           ],
           "order": 2
@@ -61,20 +104,70 @@
           "name": "Biossegurança",
           "slug": "biosseguranca",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Gerenciamento de Resíduos de Serviços de Saúde",
+              "slug": "gerenciamento-de-residuos-de-servicos-de-saude",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Equipamentos de Proteção Individual",
+              "slug": "equipamentos-de-protecao-individual",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Limpeza e Desinfecção de Equipamentos",
+              "slug": "limpeza-e-desinfeccao-de-equipamentos",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Precauções e Isolamento",
+              "slug": "precaucoes-e-isolamento",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "CCIH e Prevenção de Infecção Hospitalar",
+              "slug": "ccih-e-prevencao-de-infeccao-hospitalar",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Reprocessamento de Produtos para Saúde",
+              "slug": "reprocessamento-de-produtos-para-saude",
+              "status": "ACTIVE",
+              "order": 6
+            }
+          ],
           "order": 3
         },
         {
           "name": "Centro Cirúrgico e CME",
           "slug": "centro-cirurgico-e-cme",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Central de Material Esterilizado",
+              "slug": "central-de-material-esterilizado",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Assistência de Enfermagem Perioperatória",
+              "slug": "assistencia-de-enfermagem-perioperatoria",
+              "status": "ACTIVE",
+              "order": 2
+            }
+          ],
           "order": 4
         },
         {
           "name": "Controle de Infecção Hospitalar",
           "slug": "controle-de-infeccao-hospitalar",
-          "status": "ACTIVE",
+          "status": "INACTIVE",
           "topics": [],
           "order": 5
         },
@@ -82,28 +175,194 @@
           "name": "Enfermagem em Doenças Transmissíveis",
           "slug": "enfermagem-em-doencas-transmissiveis",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Prevenção e Controle de Doenças Transmissíveis",
+              "slug": "prevencao-e-controle-de-doencas-transmissiveis",
+              "status": "ACTIVE",
+              "order": 1
+            }
+          ],
           "order": 6
         },
         {
           "name": "Enfermagem Médico-Cirúrgica",
           "slug": "enfermagem-medico-cirurgica",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Cuidado Perioperatório",
+              "slug": "cuidado-perioperatorio",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Enfermagem em Especialidades Cirúrgicas",
+              "slug": "enfermagem-em-especialidades-cirurgicas",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Estomas e Feridas Complexas",
+              "slug": "estomas-e-feridas-complexas",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Oncologia",
+              "slug": "oncologia",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Doenças Cardiovasculares",
+              "slug": "doencas-cardiovasculares",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Doenças Endócrino-metabólicas",
+              "slug": "doencas-endocrino-metabolicas",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Doenças Respiratórias Crônicas",
+              "slug": "doencas-respiratorias-cronicas",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Doenças Renais e Neurológicas Crônicas",
+              "slug": "doencas-renais-e-neurologicas-cronicas",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Cuidado Crônico e Linha de Cuidado",
+              "slug": "cuidado-cronico-e-linha-de-cuidado",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "Emergências Clínicas",
+              "slug": "emergencias-clinicas",
+              "status": "ACTIVE",
+              "order": 10
+            },
+            {
+              "name": "Doação e Transplante de Órgãos",
+              "slug": "doacao-e-transplante-de-orgaos",
+              "status": "ACTIVE",
+              "order": 11
+            },
+            {
+              "name": "Oncologia: Modalidades Terapêuticas",
+              "slug": "oncologia-modalidades-terapeuticas",
+              "status": "ACTIVE",
+              "order": 12
+            },
+            {
+              "name": "Oncologia: Assistência de Enfermagem",
+              "slug": "oncologia-assistencia-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 13
+            },
+            {
+              "name": "Pé Diabético e Doenças Crônicas",
+              "slug": "pe-diabetico-e-doencas-cronicas",
+              "status": "ACTIVE",
+              "order": 14
+            },
+            {
+              "name": "Assistência de Enfermagem ao Paciente com HIV/Aids",
+              "slug": "assistencia-de-enfermagem-ao-paciente-com-hiv-aids",
+              "status": "ACTIVE",
+              "order": 15
+            },
+            {
+              "name": "Dermatite de Contato e Reações Cutâneas",
+              "slug": "dermatite-de-contato-e-reacoes-cutaneas",
+              "status": "ACTIVE",
+              "order": 16
+            },
+            {
+              "name": "Hipertensão Arterial Sistêmica",
+              "slug": "hipertensao-arterial-sistemica",
+              "status": "ACTIVE",
+              "order": 17
+            },
+            {
+              "name": "Rastreamento de Doenças Cardiovasculares",
+              "slug": "rastreamento-de-doencas-cardiovasculares",
+              "status": "ACTIVE",
+              "order": 18
+            },
+            {
+              "name": "Doença Renal Crônica (DRC)",
+              "slug": "doenca-renal-cronica-drc",
+              "status": "ACTIVE",
+              "order": 19
+            },
+            {
+              "name": "Métodos Dialíticos",
+              "slug": "metodos-dialiticos",
+              "status": "ACTIVE",
+              "order": 20
+            }
+          ],
           "order": 7
         },
         {
           "name": "Ética e Legislação em Enfermagem",
           "slug": "etica-e-legislacao-em-enfermagem",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Código de Ética dos Profissionais de Enfermagem",
+              "slug": "codigo-de-etica-dos-profissionais-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Princípios da Bioética",
+              "slug": "bioetica-principios",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Lei nº 7.498/1986 — Exercício Profissional de Enfermagem",
+              "slug": "lei-7498-1986-exercicio-profissional-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Enfermagem em Auditoria (Resolução Cofen)",
+              "slug": "enfermagem-em-auditoria-resolucao-cofen",
+              "status": "ACTIVE",
+              "order": 4
+            }
+          ],
           "order": 8
         },
         {
           "name": "Farmacologia",
           "slug": "farmacologia",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Fármacos Vasoativos e Inotrópicos",
+              "slug": "farmacos-vasoativos-e-inotropicos",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Farmacovigilância e Notificações Sanitárias",
+              "slug": "farmacovigilancia-e-notificacoes-sanitarias",
+              "status": "ACTIVE",
+              "order": 2
+            }
+          ],
           "order": 9
         },
         {
@@ -280,68 +539,62 @@
               "order": 28
             },
             {
-              "name": "Processo de Enfermagem",
-              "slug": "processo-de-enfermagem",
-              "status": "ACTIVE",
-              "order": 29
-            },
-            {
               "name": "Punção Venosa",
               "slug": "puncao-venosa",
               "status": "ACTIVE",
-              "order": 30
+              "order": 29
             },
             {
               "name": "Registros e Anotações de Enfermagem",
               "slug": "registros-e-anotacoes-de-enfermagem",
               "status": "ACTIVE",
-              "order": 31
+              "order": 30
             },
             {
               "name": "Semiologia de Enfermagem",
               "slug": "semiologia-de-enfermagem",
               "status": "ACTIVE",
-              "order": 32
+              "order": 31
             },
             {
               "name": "Semiotécnica de Enfermagem",
               "slug": "semiotecnica-de-enfermagem",
               "status": "ACTIVE",
-              "order": 33
+              "order": 32
             },
             {
               "name": "Sinais Vitais",
               "slug": "sinais-vitais",
               "status": "ACTIVE",
-              "order": 34
-            },
-            {
-              "name": "Sistematização da Assistência de Enfermagem (SAE)",
-              "slug": "sistematizacao-da-assistencia-de-enfermagem-sae",
-              "status": "ACTIVE",
-              "order": 35
-            },
-            {
-              "name": "Sondagem Gastrointestinal",
-              "slug": "sondagem-gastrointestinal",
-              "status": "ACTIVE",
-              "order": 36
+              "order": 33
             },
             {
               "name": "Sondagem Vesical",
               "slug": "sondagem-vesical",
               "status": "ACTIVE",
-              "order": 37
+              "order": 34
             },
             {
               "name": "Terapia Intravenosa",
               "slug": "terapia-intravenosa",
               "status": "ACTIVE",
-              "order": 38
+              "order": 36
             },
             {
               "name": "Vias de Administração de Medicamentos",
               "slug": "vias-de-administracao-de-medicamentos",
+              "status": "ACTIVE",
+              "order": 37
+            },
+            {
+              "name": "Teorias de Enfermagem",
+              "slug": "teorias-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 38
+            },
+            {
+              "name": "Métodos Diagnósticos Complementares",
+              "slug": "metodos-diagnosticos-complementares",
               "status": "ACTIVE",
               "order": 39
             }
@@ -351,7 +604,7 @@
         {
           "name": "Imunização",
           "slug": "imunizacao",
-          "status": "ACTIVE",
+          "status": "INACTIVE",
           "topics": [],
           "order": 11
         },
@@ -359,20 +612,208 @@
           "name": "Informática",
           "slug": "informatica",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Microsoft Word",
+              "slug": "microsoft-word",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Microsoft Windows",
+              "slug": "microsoft-windows",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Conceitos de Internet e Redes",
+              "slug": "conceitos-de-internet-e-redes",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Microsoft Excel",
+              "slug": "microsoft-excel",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Navegadores Web",
+              "slug": "navegadores-web",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Bancos de Dados Relacionais",
+              "slug": "bancos-de-dados-relacionais",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Microsoft PowerPoint",
+              "slug": "microsoft-powerpoint",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Segurança da Informação e Backup",
+              "slug": "seguranca-da-informacao-e-backup",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Hardware e Unidades de Armazenamento",
+              "slug": "hardware-e-unidades-de-armazenamento",
+              "status": "ACTIVE",
+              "order": 9
+            }
+          ],
           "order": 12
         },
         {
           "name": "Legislação do SUS",
           "slug": "legislacao-do-sus",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Lei nº 8.080/1990",
+              "slug": "lei-8080-1990",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Lei nº 8.142/1990 e Controle Social",
+              "slug": "lei-8142-1990-e-controle-social",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Segurança do Paciente – RDC nº 36/2013",
+              "slug": "seguranca-do-paciente-rdc-36-2013",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Determinantes Sociais da Saúde",
+              "slug": "determinantes-sociais-da-saude",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Gestão e Organização do SUS",
+              "slug": "gestao-e-organizacao-do-sus",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Resolução nº 453/2012 — Conselhos de Saúde",
+              "slug": "resolucao-453-2012-conselhos-de-saude",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Constituição Federal de 1988 — Seguridade Social",
+              "slug": "constituicao-federal-1988-seguridade-social",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "RDC nº 63/2011 — Boas Práticas em Serviços de Saúde",
+              "slug": "rdc-63-2011-boas-praticas-em-servicos-de-saude",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Carta dos Direitos e Deveres da Pessoa Usuária da Saúde",
+              "slug": "carta-dos-direitos-e-deveres-da-pessoa-usuaria-da-saude",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "Decreto nº 7.508/2011",
+              "slug": "decreto-7508-2011",
+              "status": "ACTIVE",
+              "order": 10
+            },
+            {
+              "name": "Princípios e Diretrizes do SUS",
+              "slug": "principios-e-diretrizes-do-sus",
+              "status": "ACTIVE",
+              "order": 11
+            },
+            {
+              "name": "Política Nacional de Humanização (PNH)",
+              "slug": "politica-nacional-de-humanizacao-pnh",
+              "status": "ACTIVE",
+              "order": 12
+            },
+            {
+              "name": "Organização, Direção e Gestão do SUS",
+              "slug": "organizacao-direcao-e-gestao-do-sus",
+              "status": "ACTIVE",
+              "order": 13
+            },
+            {
+              "name": "Financiamento do SUS",
+              "slug": "financiamento-do-sus",
+              "status": "ACTIVE",
+              "order": 14
+            },
+            {
+              "name": "Política Nacional de Educação Popular em Saúde (PNEPS-SUS)",
+              "slug": "politica-nacional-de-educacao-popular-em-saude-pneps",
+              "status": "ACTIVE",
+              "order": 15
+            },
+            {
+              "name": "CONITEC e Incorporação de Tecnologias no SUS",
+              "slug": "conitec-e-incorporacao-de-tecnologias-no-sus",
+              "status": "ACTIVE",
+              "order": 16
+            },
+            {
+              "name": "Política Nacional de Práticas Integrativas e Complementares (PNPIC)",
+              "slug": "politica-nacional-de-praticas-integrativas-e-complementares-pnpic",
+              "status": "ACTIVE",
+              "order": 17
+            },
+            {
+              "name": "Política Nacional de Atenção Básica (PNAB)",
+              "slug": "politica-nacional-de-atencao-basica-pnab",
+              "status": "ACTIVE",
+              "order": 18
+            },
+            {
+              "name": "Lei Geral de Proteção de Dados (LGPD)",
+              "slug": "lei-geral-de-protecao-de-dados-lgpd",
+              "status": "ACTIVE",
+              "order": 19
+            },
+            {
+              "name": "Política Nacional de Saúde Integral da População Negra (PNSIPN)",
+              "slug": "politica-nacional-de-saude-integral-da-populacao-negra-pnsipn",
+              "status": "ACTIVE",
+              "order": 20
+            },
+            {
+              "name": "Política Nacional de Promoção da Saúde (PNaPS)",
+              "slug": "politica-nacional-de-promocao-da-saude-pnaps",
+              "status": "ACTIVE",
+              "order": 21
+            },
+            {
+              "name": "Histórico da Previdência Social no Brasil",
+              "slug": "historico-da-previdencia-social-no-brasil",
+              "status": "ACTIVE",
+              "order": 22
+            }
+          ],
           "order": 13
         },
         {
           "name": "Políticas Públicas de Saúde",
           "slug": "politicas-publicas-de-saude",
-          "status": "ACTIVE",
+          "status": "INACTIVE",
           "topics": [],
           "order": 14
         },
@@ -380,41 +821,340 @@
           "name": "Português",
           "slug": "portugues",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Interpretação de Texto",
+              "slug": "interpretacao-de-texto",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Sintaxe",
+              "slug": "sintaxe",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Concordância Verbal e Nominal",
+              "slug": "concordancia-verbal-e-nominal",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Acentuação Gráfica",
+              "slug": "acentuacao-grafica",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Crase",
+              "slug": "crase",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Coesão e Conectivos",
+              "slug": "coesao-e-conectivos",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Variação Linguística e Registro",
+              "slug": "variacao-linguistica-e-registro",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Semântica e Vocabulário",
+              "slug": "semantica-e-vocabulario",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Gêneros e Tipologia Textual",
+              "slug": "generos-e-tipologia-textual",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "Voz Verbal",
+              "slug": "voz-verbal",
+              "status": "ACTIVE",
+              "order": 10
+            },
+            {
+              "name": "Ortografia",
+              "slug": "ortografia",
+              "status": "ACTIVE",
+              "order": 11
+            },
+            {
+              "name": "Morfologia (Classes de Palavras)",
+              "slug": "morfologia-classes-de-palavras",
+              "status": "ACTIVE",
+              "order": 12
+            }
+          ],
           "order": 15
         },
         {
           "name": "Raciocínio Lógico",
           "slug": "raciocinio-logico",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Lógica Proposicional",
+              "slug": "logica-proposicional",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Análise Combinatória",
+              "slug": "analise-combinatoria",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Probabilidade",
+              "slug": "probabilidade",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Sequências Lógicas",
+              "slug": "sequencias-logicas",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Porcentagem e Números Decimais",
+              "slug": "porcentagem-e-numeros-decimais",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Teoria dos Conjuntos",
+              "slug": "teoria-dos-conjuntos",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Sistemas de Equações",
+              "slug": "sistemas-de-equacoes",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Geometria Plana",
+              "slug": "geometria-plana",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Estatística Descritiva",
+              "slug": "estatistica-descritiva",
+              "status": "ACTIVE",
+              "order": 9
+            }
+          ],
           "order": 16
         },
         {
           "name": "Saúde Coletiva",
           "slug": "saude-coletiva",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Saúde do Trabalhador",
+              "slug": "saude-do-trabalhador",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Epidemiologia Básica e Bioestatística",
+              "slug": "epidemiologia-basica-e-bioestatistica",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Sistemas de Informação em Saúde (SINAN/SIM)",
+              "slug": "sistemas-de-informacao-em-saude-sinan-sim",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Identificação e Notificação de Violência",
+              "slug": "identificacao-e-notificacao-de-violencia",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Suplementação de Ferro e Anemia Ferropriva",
+              "slug": "suplementacao-de-ferro-e-anemia-ferropriva",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Calendário Nacional de Vacinação",
+              "slug": "calendario-nacional-de-vacinacao",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Técnica de Administração de Vacinas",
+              "slug": "tecnica-de-administracao-de-vacinas",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Resposta Imune Humoral e Imunoglobulinas",
+              "slug": "resposta-imune-humoral-e-imunoglobulinas",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Avaliação da Cobertura Vacinal",
+              "slug": "avaliacao-da-cobertura-vacinal",
+              "status": "ACTIVE",
+              "order": 9
+            }
+          ],
           "order": 17
         },
         {
           "name": "Saúde da Criança e do Adolescente",
           "slug": "saude-da-crianca-e-do-adolescente",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Crescimento e Desenvolvimento Infantil",
+              "slug": "crescimento-e-desenvolvimento-infantil",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Diarreia e Desidratação Infantil",
+              "slug": "diarreia-e-desidratacao-infantil",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Reanimação Neonatal",
+              "slug": "reanimacao-neonatal",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Aleitamento Materno",
+              "slug": "aleitamento-materno",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Estatuto da Criança e do Adolescente (ECA)",
+              "slug": "estatuto-da-crianca-e-do-adolescente-eca",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Principais Afecções Dermatológicas do Recém-Nascido",
+              "slug": "principais-afeccoes-dermatologicas-do-recem-nascido",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Grupos Operativos com Adolescentes",
+              "slug": "grupos-operativos-com-adolescentes",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Triagem Neonatal (Teste do Pezinho)",
+              "slug": "triagem-neonatal-teste-do-pezinho",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Síndrome Congênita do Zika Vírus",
+              "slug": "sindrome-congenita-do-zika-virus",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "Icterícia Neonatal",
+              "slug": "ictericia-neonatal",
+              "status": "ACTIVE",
+              "order": 10
+            },
+            {
+              "name": "Diabetes na Infância",
+              "slug": "diabetes-na-infancia",
+              "status": "ACTIVE",
+              "order": 11
+            },
+            {
+              "name": "Encefalopatia Neonatal e Paralisia Cerebral",
+              "slug": "encefalopatia-neonatal-e-paralisia-cerebral",
+              "status": "ACTIVE",
+              "order": 12
+            },
+            {
+              "name": "Cuidados Imediatos ao Recém-Nascido",
+              "slug": "cuidados-imediatos-ao-recem-nascido",
+              "status": "ACTIVE",
+              "order": 13
+            }
+          ],
           "order": 18
         },
         {
           "name": "Saúde da Mulher",
           "slug": "saude-da-mulher",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Planejamento Reprodutivo",
+              "slug": "planejamento-reprodutivo",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Assistência de Enfermagem ao Pré-natal, Parto e Puerpério",
+              "slug": "assistencia-de-enfermagem-ao-pre-natal-parto-e-puerperio",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "II Plano Distrital de Políticas para Mulheres do DF",
+              "slug": "ii-plano-distrital-de-politicas-para-mulheres-df",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Exame Citopatológico do Colo Uterino",
+              "slug": "exame-citopatologico-do-colo-uterino",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Queixas Ginecológicas Comuns e Sangramento Uterino",
+              "slug": "queixas-ginecologicas-comuns-e-sangramento-uterino",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Climatério e Terapia Hormonal",
+              "slug": "climaterio-e-terapia-hormonal",
+              "status": "ACTIVE",
+              "order": 6
+            }
+          ],
           "order": 19
         },
         {
           "name": "Saúde do Adulto",
           "slug": "saude-do-adulto",
-          "status": "ACTIVE",
+          "status": "INACTIVE",
           "topics": [],
           "order": 20
         },
@@ -422,43 +1162,375 @@
           "name": "Saúde do Idoso",
           "slug": "saude-do-idoso",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Agravos à Saúde do Idoso",
+              "slug": "agravos-a-saude-do-idoso",
+              "status": "ACTIVE",
+              "order": 1
+            }
+          ],
           "order": 21
         },
         {
           "name": "Saúde Mental",
           "slug": "saude-mental",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Transtornos Mentais e Comportamentais",
+              "slug": "transtornos-mentais-e-comportamentais",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Rede de Atenção Psicossocial (RAPS)",
+              "slug": "rede-de-atencao-psicossocial-raps",
+              "status": "ACTIVE",
+              "order": 2
+            }
+          ],
           "order": 22
         },
         {
           "name": "Segurança do Paciente",
           "slug": "seguranca-do-paciente",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Contenção Física do Paciente",
+              "slug": "contencao-fisica-do-paciente",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Cultura de Segurança do Paciente (PNSP)",
+              "slug": "cultura-de-seguranca-do-paciente-pnsp",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Acreditação Hospitalar e Programas de Qualidade",
+              "slug": "acreditacao-hospitalar-e-programas-de-qualidade",
+              "status": "ACTIVE",
+              "order": 3
+            }
+          ],
           "order": 23
         },
         {
           "name": "Sistematização da Assistência de Enfermagem (SAE)",
           "slug": "sistematizacao-da-assistencia-de-enfermagem-sae",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Base Normativa e Conceitual",
+              "slug": "base-normativa-e-conceitual",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "As 5 Etapas do Processo de Enfermagem",
+              "slug": "processo-de-enfermagem",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Taxonomias e Sistemas de Classificação",
+              "slug": "taxonomias-e-sistemas-de-classificacao",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Registro e Documentação",
+              "slug": "registro-e-documentacao",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Classificação de Intervenções de Enfermagem (NIC)",
+              "slug": "classificacao-de-intervencoes-de-enfermagem-nic",
+              "status": "ACTIVE",
+              "order": 5
+            }
+          ],
           "order": 24
         },
         {
           "name": "Terapia Intensiva (UTI)",
           "slug": "terapia-intensiva-uti",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Monitorização do Paciente Crítico",
+              "slug": "monitorizacao-do-paciente-critico",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Suporte Ventilatório",
+              "slug": "suporte-ventilatorio",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Suporte Hemodinâmico e Farmacológico",
+              "slug": "suporte-hemodinamico-e-farmacologico",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Cuidados Específicos do Paciente Crítico",
+              "slug": "cuidados-especificos-do-paciente-critico",
+              "status": "ACTIVE",
+              "order": 4
+            }
+          ],
           "order": 25
         },
         {
           "name": "Urgência e Emergência",
           "slug": "urgencia-e-emergencia",
           "status": "ACTIVE",
-          "topics": [],
+          "topics": [
+            {
+              "name": "Intoxicações Exógenas",
+              "slug": "intoxicacoes-exogenas",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Atendimento ao Politraumatizado",
+              "slug": "atendimento-ao-politraumatizado",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Parada Cardiorrespiratória e RCP",
+              "slug": "parada-cardiorrespiratoria-e-rcp",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Fundamentos da Urgência e Emergência",
+              "slug": "fundamentos-da-urgencia-e-emergencia",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Emergências Respiratórias",
+              "slug": "emergencias-respiratorias",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Distúrbios Hidroeletrolíticos e Ácido-Básicos",
+              "slug": "disturbios-hidroeletroliticos-e-acido-basicos",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Emergências Cardiovasculares",
+              "slug": "emergencias-cardiovasculares",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Acidente Vascular Cerebral (AVC)",
+              "slug": "acidente-vascular-cerebral-avc",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Crise Convulsiva e Emergências Neurológicas",
+              "slug": "crise-convulsiva-e-emergencias-neurologicas",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "SAMU e Atendimento Pré-Hospitalar",
+              "slug": "samu-e-atendimento-pre-hospitalar",
+              "status": "ACTIVE",
+              "order": 10
+            }
+          ],
           "order": 26
+        },
+        {
+          "name": "Legislação Aplicada à EBSERH",
+          "slug": "legislacao-aplicada-a-ebserh",
+          "status": "ACTIVE",
+          "topics": [
+            {
+              "name": "Estatuto da EBSERH",
+              "slug": "estatuto-da-ebserh",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Lei nº 12.550/2011",
+              "slug": "lei-12550-2011",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Código de Ética e Conduta da EBSERH",
+              "slug": "codigo-de-etica-e-conduta-da-ebserh",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Regimento Interno da Administração Central",
+              "slug": "regimento-interno-da-administracao-central",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Regulamento de Pessoal da EBSERH",
+              "slug": "regulamento-de-pessoal-da-ebserh",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Norma Operacional de Controle Disciplinar",
+              "slug": "norma-operacional-de-controle-disciplinar",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Regulamento de Licitações e Contratos da EBSERH",
+              "slug": "regulamento-de-licitacoes-e-contratos-da-ebserh",
+              "status": "ACTIVE",
+              "order": 7
+            }
+          ],
+          "order": 27
+        },
+        {
+          "name": "Legislação Municipal e Institucional",
+          "slug": "legislacao-municipal-e-institucional",
+          "status": "ACTIVE",
+          "topics": [
+            {
+              "name": "Estatuto e Regime Jurídico do Servidor Municipal",
+              "slug": "estatuto-e-regime-juridico-do-servidor-municipal",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Direitos Fundamentais",
+              "slug": "direitos-fundamentais",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Lei Orgânica do Distrito Federal",
+              "slug": "lei-organica-do-distrito-federal",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Regime Jurídico dos Servidores do DF (LC 840/2011)",
+              "slug": "regime-juridico-dos-servidores-do-df-lc-840-2011",
+              "status": "ACTIVE",
+              "order": 4
+            },
+            {
+              "name": "Código de Ética do Servidor Público do DF",
+              "slug": "codigo-de-etica-do-servidor-publico-do-df",
+              "status": "ACTIVE",
+              "order": 5
+            },
+            {
+              "name": "Lei Anticorrupção (Lei nº 12.846/2013)",
+              "slug": "lei-anticorrupcao-12846-2013",
+              "status": "ACTIVE",
+              "order": 6
+            },
+            {
+              "name": "Regime Jurídico dos Servidores do Pará (Lei nº 5.810/1994)",
+              "slug": "regime-juridico-dos-servidores-do-para-lei-5810-1994",
+              "status": "ACTIVE",
+              "order": 7
+            },
+            {
+              "name": "Lei de Improbidade Administrativa (Lei nº 8.429/1992)",
+              "slug": "lei-de-improbidade-administrativa-8429-1992",
+              "status": "ACTIVE",
+              "order": 8
+            },
+            {
+              "name": "Lei n.º 9.000/1996 - Código de Saúde de Curitiba",
+              "slug": "lei-9000-1996-codigo-de-saude-de-curitiba",
+              "status": "ACTIVE",
+              "order": 9
+            },
+            {
+              "name": "Conferência Municipal de Saúde do Recife",
+              "slug": "conferencia-municipal-de-saude-do-recife",
+              "status": "ACTIVE",
+              "order": 10
+            },
+            {
+              "name": "Estatuto dos Funcionários Públicos do Município do Recife",
+              "slug": "estatuto-dos-funcionarios-publicos-do-municipio-do-recife",
+              "status": "ACTIVE",
+              "order": 11
+            }
+          ],
+          "order": 28
+        },
+        {
+          "name": "Conhecimentos Gerais sobre o Distrito Federal",
+          "slug": "conhecimentos-gerais-sobre-o-distrito-federal",
+          "status": "INACTIVE",
+          "topics": [
+            {
+              "name": "Geografia, Cultura e Economia do DF",
+              "slug": "geografia-cultura-e-economia-do-df",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "RIDE do Distrito Federal e COARIDE",
+              "slug": "ride-do-distrito-federal-e-coaride",
+              "status": "ACTIVE",
+              "order": 2
+            }
+          ],
+          "order": 29
+        },
+        {
+          "name": "Conhecimentos Gerais Regionais",
+          "slug": "conhecimentos-gerais-regionais",
+          "status": "ACTIVE",
+          "order": 30,
+          "topics": [
+            {
+              "name": "História Regional",
+              "slug": "historia-regional",
+              "status": "ACTIVE",
+              "order": 1
+            },
+            {
+              "name": "Geografia Regional",
+              "slug": "geografia-regional",
+              "status": "ACTIVE",
+              "order": 2
+            },
+            {
+              "name": "Economia e Sociedade Regional",
+              "slug": "economia-e-sociedade-regional",
+              "status": "ACTIVE",
+              "order": 3
+            },
+            {
+              "name": "Instituições e Organização Regional",
+              "slug": "instituicoes-e-organizacao-regional",
+              "status": "ACTIVE",
+              "order": 4
+            }
+          ]
         }
       ],
       "order": 1
@@ -628,6 +1700,142 @@
       "boardSlug": "cebraspe",
       "year": 2025,
       "order": 1
+    },
+    {
+      "name": "Concurso Público 01/2019 EBSERH Nacional",
+      "slug": "concurso-publico-01-2019-ebserh-nacional",
+      "status": "ACTIVE",
+      "boardSlug": "ibfc",
+      "year": 2019,
+      "order": 2
+    },
+    {
+      "name": "Concurso Público 01/2023 EBSERH Nacional",
+      "slug": "concurso-publico-01-2023-ebserh-nacional",
+      "status": "ACTIVE",
+      "boardSlug": "ibfc",
+      "year": 2023,
+      "order": 3
+    },
+    {
+      "name": "Concurso SEMSA Manaus 002/2021",
+      "slug": "concurso-semsa-manaus-002-2021",
+      "status": "ACTIVE",
+      "boardSlug": "fgv",
+      "year": 2022,
+      "order": 4
+    },
+    {
+      "name": "Concurso SES-DF Edital 14/2022",
+      "slug": "concurso-ses-df-edital-14-2022",
+      "status": "ACTIVE",
+      "boardSlug": "ibfc",
+      "year": 2022,
+      "order": 5
+    },
+    {
+      "name": "Concurso Publico SESPA Edital 01/2023",
+      "slug": "concurso-publico-sespa-edital-01-2023",
+      "status": "ACTIVE",
+      "boardSlug": "instituto-consulplan",
+      "year": 2023,
+      "order": 6
+    },
+    {
+      "name": "Concurso Publico Prefeitura de Campinas Edital 01/2023",
+      "slug": "concurso-publico-prefeitura-de-campinas-edital-01-2023",
+      "status": "ACTIVE",
+      "boardSlug": "fundacao-vunesp",
+      "year": 2023,
+      "order": 7
+    },
+    {
+      "name": "Concurso Publico Prefeitura de Curitiba Edital 10/2022",
+      "slug": "concurso-publico-prefeitura-de-curitiba-edital-10-2022",
+      "status": "ACTIVE",
+      "boardSlug": "ufpr-nc",
+      "year": 2022,
+      "order": 8
+    },
+    {
+      "name": "Concurso Publico SESACRE Edital 01/2022",
+      "slug": "concurso-publico-sesacre-edital-01-2022",
+      "status": "ACTIVE",
+      "boardSlug": "ibfc",
+      "year": 2022,
+      "order": 9
+    },
+    {
+      "name": "Concurso Publico Prefeitura de Joao Pessoa Edital 02/2020",
+      "slug": "concurso-publico-prefeitura-de-joao-pessoa-edital-02-2020",
+      "status": "ACTIVE",
+      "boardSlug": "instituto-aocp",
+      "year": 2021,
+      "order": 10
+    },
+    {
+      "name": "Concurso Publico Fundacao Municipal de Saude de Niteroi Edital 1/2019",
+      "slug": "concurso-publico-fundacao-municipal-de-saude-de-niteroi-edital-1-2019",
+      "status": "ACTIVE",
+      "boardSlug": "coseac",
+      "year": 2020,
+      "order": 11
+    },
+    {
+      "name": "Concurso Publico Secretaria de Saude do Recife Edital 1/2019",
+      "slug": "concurso-publico-secretaria-de-saude-do-recife-edital-1-2019",
+      "status": "ACTIVE",
+      "boardSlug": "instituto-aocp",
+      "year": 2020,
+      "order": 12
+    },
+    {
+      "name": "Concurso Publico Prefeitura Municipal de Abreu e Lima Edital 2/2024",
+      "slug": "concurso-publico-prefeitura-municipal-de-abreu-e-lima-edital-2-2024",
+      "status": "ACTIVE",
+      "boardSlug": "fgv",
+      "year": 2024,
+      "order": 13
+    },
+    {
+      "name": "Concurso Publico Secretaria de Estado de Saude de Mato Grosso Edital 1/2024",
+      "slug": "concurso-publico-secretaria-de-estado-de-saude-de-mato-grosso-edital-1-2024",
+      "status": "ACTIVE",
+      "boardSlug": "fgv",
+      "year": 2024,
+      "order": 14
+    },
+    {
+      "name": "Concurso Publico Prefeitura Municipal de Caraguatatuba Edital 3/2023",
+      "slug": "concurso-publico-prefeitura-municipal-de-caraguatatuba-edital-3-2023",
+      "status": "ACTIVE",
+      "boardSlug": "fgv",
+      "year": 2023,
+      "order": 15
+    },
+    {
+      "name": "Concurso Publico Secretaria de Estado de Saude do Amazonas Edital 1/2014",
+      "slug": "concurso-publico-secretaria-de-estado-de-saude-do-amazonas-edital-1-2014",
+      "status": "ACTIVE",
+      "boardSlug": "fgv",
+      "year": 2014,
+      "order": 16
+    },
+    {
+      "name": "Concurso Publico Secretaria da Saude do Estado do Rio Grande do Sul Edital 1/2013",
+      "slug": "concurso-publico-secretaria-da-saude-do-estado-do-rio-grande-do-sul-edital-1-2013",
+      "status": "ACTIVE",
+      "boardSlug": "fundatec",
+      "year": 2013,
+      "order": 17
+    },
+    {
+      "name": "Concurso Publico EBSERH Nacional Edital 3/2013",
+      "slug": "concurso-publico-ebserh-nacional-edital-3-2013",
+      "status": "ACTIVE",
+      "boardSlug": "ibfc",
+      "year": 2013,
+      "order": 18
     }
   ]
 }

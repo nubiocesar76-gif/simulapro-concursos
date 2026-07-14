@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight, Flag } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 type QuestionNavigationProps = {
   canGoPrevious: boolean;
@@ -13,6 +14,7 @@ type QuestionNavigationProps = {
   onAnswer: () => void;
   onNext: () => void;
   onFinish: () => void;
+  className?: string;
 };
 
 export function QuestionNavigation({
@@ -27,58 +29,63 @@ export function QuestionNavigation({
   onAnswer,
   onNext,
   onFinish,
+  className,
 }: QuestionNavigationProps) {
   const isBusy = isAnswering || isNavigating || isFinishing;
 
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <Button
-        type="button"
-        variant="outline"
-        onClick={onPrevious}
-        disabled={!canGoPrevious || isBusy}
-        className="order-2 w-full sm:order-1 sm:w-auto"
-      >
-        <ChevronLeft className="h-4 w-4 mr-2" />
-        Anterior
-      </Button>
+    <nav
+      className={cn(
+        "sticky bottom-0 z-20 -mx-6 border-t border-border/80 bg-background/95 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-background/90 sm:px-6 xl:-mx-8",
+        className,
+      )}
+      aria-label="Navegação da questão"
+      aria-busy={isBusy}
+    >
+      <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-2 sm:flex sm:items-center sm:justify-between sm:gap-3">
+        <Button
+          type="button"
+          variant="outline"
+          onClick={onPrevious}
+          disabled={!canGoPrevious || isBusy}
+          className="col-span-2 w-full sm:col-span-1 sm:w-auto"
+        >
+          <ChevronLeft className="h-4 w-4 mr-2" />
+          Anterior
+        </Button>
 
-      <div className="order-1 w-full sm:order-2 sm:w-auto sm:min-w-[11rem]">
-        {canAnswer && (
-          <Button
-            type="button"
-            onClick={onAnswer}
-            disabled={isBusy}
-            className="w-full transition-colors"
-          >
-            {isAnswering ? "Salvando..." : "Responder"}
-          </Button>
-        )}
+        <Button
+          type="button"
+          variant={canAnswer ? "default" : "secondary"}
+          onClick={onAnswer}
+          disabled={!canAnswer || isBusy}
+          className="w-full"
+        >
+          {isAnswering ? "Salvando..." : "Responder"}
+        </Button>
 
-        {canGoNext && (
-          <Button
-            type="button"
-            onClick={onNext}
-            disabled={isBusy}
-            className="w-full transition-colors"
-          >
-            {isNavigating ? "Avançando..." : "Próxima"}
-            <ChevronRight className="h-4 w-4 ml-2" />
-          </Button>
-        )}
+        <Button
+          type="button"
+          variant={canGoNext ? "default" : "secondary"}
+          onClick={onNext}
+          disabled={!canGoNext || isBusy}
+          className="w-full"
+        >
+          {isNavigating ? "Avançando..." : "Próxima"}
+          <ChevronRight className="h-4 w-4 ml-2" />
+        </Button>
 
-        {canFinish && (
-          <Button
-            type="button"
-            onClick={onFinish}
-            disabled={isBusy}
-            className="w-full transition-colors"
-          >
-            <Flag className="h-4 w-4 mr-2" />
-            {isFinishing ? "Finalizando..." : "Finalizar Sessão"}
-          </Button>
-        )}
+        <Button
+          type="button"
+          variant={canFinish ? "default" : "secondary"}
+          onClick={onFinish}
+          disabled={!canFinish || isBusy}
+          className="col-span-2 w-full sm:col-span-1 sm:w-auto"
+        >
+          <Flag className="h-4 w-4 mr-2" />
+          {isFinishing ? "Finalizando..." : "Finalizar"}
+        </Button>
       </div>
-    </div>
+    </nav>
   );
 }

@@ -1,0 +1,1362 @@
+[
+  {
+    "question": 1,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "interpretacao-de-texto",
+    "difficulty": "Média",
+    "keywords": [
+      "narrador personagem",
+      "parcialidade",
+      "conto",
+      "efeito expressivo"
+    ],
+    "explanation": "Narrador-personagem filtra fatos com parcialidade na apresentação das ações e na caracterização, produzindo o efeito expressivo indicado na alternativa B."
+  },
+  {
+    "question": 2,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "morfologia-classes-de-palavras",
+    "difficulty": "Média",
+    "keywords": [
+      "pronome demonstrativo",
+      "morfologia",
+      "producao de sentido",
+      "vocábulo mas"
+    ],
+    "explanation": "Em contexto anafórico, 'Mas' retoma elemento anterior como pronome demonstrativo, conforme classificação morfológica da alternativa B."
+  },
+  {
+    "question": 3,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "generos-e-tipologia-textual",
+    "difficulty": "Média",
+    "keywords": [
+      "enredo",
+      "conflito narrativo",
+      "conto",
+      "sequencia de acoes"
+    ],
+    "explanation": "O conflito narrativo instaura-se quando a rotina é quebrada; no conto, isso ocorre com o início da leitura ('magno dia de começar'), alternativa C."
+  },
+  {
+    "question": 4,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "coesao-e-conectivos",
+    "difficulty": "Média",
+    "keywords": [
+      "relacao de sentido",
+      "periodos",
+      "coesao textual",
+      "sujeito oracional"
+    ],
+    "explanation": "A última oração do primeiro período funciona como sujeito oracional do segundo, estabelecendo relação coesiva descrita na alternativa B."
+  },
+  {
+    "question": 5,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "sintaxe",
+    "difficulty": "Média",
+    "keywords": [
+      "oracao subordinada",
+      "funcao sintatica",
+      "sintaxe",
+      "periodo composto"
+    ],
+    "explanation": "A oração destacada exerce função sintática compatível com a alternativa A, conforme análise do período no enunciado."
+  },
+  {
+    "question": 6,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "crase",
+    "difficulty": "Média",
+    "keywords": [
+      "crase",
+      "acento grave",
+      "regencia nominal",
+      "olheiras"
+    ],
+    "explanation": "A substituição proposta altera o contexto de crase; apenas a alternativa B manteria condição para acento grave em 'dada a', resposta B."
+  },
+  {
+    "question": 7,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "sintaxe",
+    "difficulty": "Fácil",
+    "keywords": [
+      "ordem sintatica",
+      "topico",
+      "comentario",
+      "lingua portuguesa"
+    ],
+    "explanation": "Os termos 'lá' e 'eu' aparecem em posição tópica, deslocando a ordem direta sujeito-verbo-objeto, alternativa A."
+  },
+  {
+    "question": 8,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "voz-verbal",
+    "difficulty": "Média",
+    "keywords": [
+      "voz passiva",
+      "transformacao de voz",
+      "oracao passiva",
+      "letra bordadissima"
+    ],
+    "explanation": "A reescrita na voz passiva analítica com agente da passiva corresponde à alternativa D, preservando o sentido original."
+  },
+  {
+    "question": 9,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "interpretacao-de-texto",
+    "difficulty": "Média",
+    "keywords": [
+      "narrativa",
+      "conto",
+      "leitura atenta",
+      "compreensao textual"
+    ],
+    "explanation": "A leitura global do conto permite inferir o desfecho narrativo indicado na alternativa C."
+  },
+  {
+    "question": 10,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "portugues",
+    "topic": "sintaxe",
+    "difficulty": "Média",
+    "keywords": [
+      "oracao reduzida",
+      "adjunto adverbial",
+      "sintaxe",
+      "boquiaberta"
+    ],
+    "explanation": "Em 'Boquiaberta, saí devagar', o termo inicial funciona como adjunto adverbial de modo deslocado, alternativa C."
+  },
+  {
+    "question": 11,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Difícil",
+    "keywords": [
+      "tratado de petropolis",
+      "divisao territorial",
+      "acre",
+      "historia regional"
+    ],
+    "explanation": "O Tratado de Petrópolis (1903) delimitou fronteiras envolvendo o território acreano; alternativa C identifica corretamente o acordo citado."
+  },
+  {
+    "question": 12,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "territorio federal",
+      "norma:decreto-5188-1904",
+      "acre",
+      "tratado de petropolis"
+    ],
+    "explanation": "Após o Tratado de Petrópolis, o Acre foi elevado a Território Federal pelo Decreto 5.188/1904, alternativa A."
+  },
+  {
+    "question": 13,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "seringal",
+      "latex",
+      "nordestinos",
+      "historia do acre"
+    ],
+    "explanation": "A cadeia produtiva da borracha atraiu nordestinos ao Acre como mão de obra na extração do látex, alternativa A."
+  },
+  {
+    "question": 14,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "pecuaria",
+      "acre",
+      "investimentos",
+      "economia regional"
+    ],
+    "explanation": "A partir de 1970 houve expansão da pecuária no Acre com incentivos fiscais, alternativa B."
+  },
+  {
+    "question": 15,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Fácil",
+    "keywords": [
+      "ibge",
+      "populacao",
+      "acre",
+      "demografia"
+    ],
+    "explanation": "Segundo dados do IBGE, o Acre possui a terceira menor população entre os estados brasileiros, alternativa B."
+  },
+  {
+    "question": 16,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "geografia do acre",
+      "realidade geografica",
+      "estado do acre",
+      "territorio"
+    ],
+    "explanation": "A alternativa incorreta sobre a geografia atual do Acre é a C, conforme gabarito."
+  },
+  {
+    "question": 17,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "historia das religioes",
+      "brasil",
+      "contexto historico",
+      "acre"
+    ],
+    "explanation": "A questão aborda aspectos histórico-religiosos; a alternativa A está correta segundo o gabarito oficial."
+  },
+  {
+    "question": 18,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "paisagens brasileiras",
+      "classificacao geografica",
+      "relevo",
+      "vegetacao"
+    ],
+    "explanation": "A heterogeneidade de paisagens no Brasil exige classificação conforme critérios do IBGE; alternativa D correta."
+  },
+  {
+    "question": 19,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "biodiversidade",
+      "floresta",
+      "fauna",
+      "acre"
+    ],
+    "explanation": "O Acre detém alta diversidade biológica e grande cobertura florestal, alternativa D conforme gabarito."
+  },
+  {
+    "question": 20,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+    "topic": "geografia-cultura-e-economia-do-df",
+    "difficulty": "Média",
+    "keywords": [
+      "relevo brasileiro",
+      "planaltos",
+      "planicies",
+      "depressoes"
+    ],
+    "explanation": "O relevo brasileiro é dominado por planaltos, planícies e depressões; alternativa D está correta."
+  },
+  {
+    "question": 21,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "conceitos-de-internet-e-redes",
+    "difficulty": "Média",
+    "keywords": [
+      "google",
+      "busca avancada",
+      "operador filetype",
+      "pesquisa na web"
+    ],
+    "explanation": "O operador filetype: restringe resultados ao tipo de arquivo; para PDFs com 'resultado' no nome usa-se filetype:pdf resultado, alternativa D."
+  },
+  {
+    "question": 22,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "navegadores-web",
+    "difficulty": "Fácil",
+    "keywords": [
+      "google chrome",
+      "privacidade",
+      "rastreamento",
+      "navegacao"
+    ],
+    "explanation": "Modo anônimo/privado e limpeza de cookies reduzem rastreamento; alternativa A descreve conduta correta."
+  },
+  {
+    "question": 23,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "conceitos-de-internet-e-redes",
+    "difficulty": "Média",
+    "keywords": [
+      "internet",
+      "comunicacao",
+      "recursos tecnicos",
+      "rede"
+    ],
+    "explanation": "A frase descreve uso de recursos técnicos da Internet para comunicação; alternativa C está correta."
+  },
+  {
+    "question": 24,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "microsoft-excel",
+    "difficulty": "Média",
+    "keywords": [
+      "funcoes excel",
+      "inter",
+      "se",
+      "media"
+    ],
+    "explanation": "Entre as funções listadas, =SE() é função condicional básica do Excel; alternativa C (item 2) está correta."
+  },
+  {
+    "question": 25,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "microsoft-excel",
+    "difficulty": "Difícil",
+    "keywords": [
+      "formula excel",
+      "calculo planilha",
+      "referencia celula",
+      "operadores"
+    ],
+    "explanation": "Avaliando =(C2/B2-A1+C1)*B1 com os valores da planilha do enunciado, o resultado corresponde à alternativa A."
+  },
+  {
+    "question": 26,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "microsoft-powerpoint",
+    "difficulty": "Média",
+    "keywords": [
+      "powerpoint",
+      "apresentacao",
+      "limite slides",
+      "recursos"
+    ],
+    "explanation": "Sobre recursos do PowerPoint, a alternativa D apresenta afirmativa correta conforme gabarito."
+  },
+  {
+    "question": 27,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "microsoft-word",
+    "difficulty": "Fácil",
+    "keywords": [
+      "microsoft office",
+      "aplicativos",
+      "funcionalidades",
+      "pacote office"
+    ],
+    "explanation": "O pacote Office inclui aplicativos com funções distintas; alternativa B identifica corretamente."
+  },
+  {
+    "question": 28,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "seguranca-da-informacao-e-backup",
+    "difficulty": "Média",
+    "keywords": [
+      "antivirus",
+      "firewall",
+      "seguranca",
+      "protecao"
+    ],
+    "explanation": "Antivírus e firewall têm papéis complementares na segurança; sequência V/F conforme alternativa B."
+  },
+  {
+    "question": 29,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "microsoft-word",
+    "difficulty": "Fácil",
+    "keywords": [
+      "teclas home end",
+      "microsoft word",
+      "edicao de texto",
+      "atalhos"
+    ],
+    "explanation": "HOME posiciona no início da linha e END no final, alternativa B."
+  },
+  {
+    "question": 30,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "informatica",
+    "topic": "microsoft-windows",
+    "difficulty": "Média",
+    "keywords": [
+      "microsoft-windows",
+      "sistema operacional",
+      "configuracoes",
+      "recursos"
+    ],
+    "explanation": "Sobre Windows 10, a alternativa D contém afirmativa correta segundo o gabarito IBFC."
+  },
+  {
+    "question": 31,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "lei-8080-1990",
+    "difficulty": "Média",
+    "keywords": [
+      "sasi",
+      "saude indigena",
+      "norma:lei-8080-1990",
+      "subsistema"
+    ],
+    "explanation": "A Lei 8.080/90 institui o Subsistema de Atenção à Saúde Indígena (SASI); alternativa D correta."
+  },
+  {
+    "question": 32,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "lei-8080-1990",
+    "difficulty": "Média",
+    "keywords": [
+      "trabalho de parto",
+      "parto",
+      "pos-parto",
+      "lei organica da saude"
+    ],
+    "explanation": "O Subsistema de Acompanhamento Durante o Trabalho de Parto está previsto na Lei 8.080/90; alternativa B."
+  },
+  {
+    "question": 33,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "lei-8080-1990",
+    "difficulty": "Média",
+    "keywords": [
+      "servicos privados",
+      "assistencia a saude",
+      "norma:lei-8080-1990",
+      "regulacao"
+    ],
+    "explanation": "Serviços privados de saúde são regulados pela Lei 8.080/90; alternativa A correta."
+  },
+  {
+    "question": 34,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "financiamento-do-sus",
+    "difficulty": "Média",
+    "keywords": [
+      "planejamento",
+      "orcamento",
+      "sus",
+      "financiamento"
+    ],
+    "explanation": "Planejamento e orçamento do SUS seguem dispositivos da Lei 8.080/90; alternativa B."
+  },
+  {
+    "question": 35,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "lei-geral-de-protecao-de-dados-lgpd",
+    "difficulty": "Média",
+    "keywords": [
+      "lgpd",
+      "norma:lei-13709-2018",
+      "protecao de dados",
+      "privacidade"
+    ],
+    "explanation": "A LGPD (Lei 13.709/2018) define bases legais e direitos; alternativa D correta."
+  },
+  {
+    "question": 36,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "lei-geral-de-protecao-de-dados-lgpd",
+    "difficulty": "Média",
+    "keywords": [
+      "lgpd",
+      "responsabilidade",
+      "ressarcimento",
+      "danos"
+    ],
+    "explanation": "Responsabilidade e ressarcimento de danos na LGPD seguem regras da alternativa B."
+  },
+  {
+    "question": 37,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "lei-geral-de-protecao-de-dados-lgpd",
+    "difficulty": "Média",
+    "keywords": [
+      "lgpd",
+      "tratamento de dados",
+      "bases legais",
+      "consentimento"
+    ],
+    "explanation": "A alternativa que NÃO está correta sobre a LGPD é a C, conforme gabarito."
+  },
+  {
+    "question": 38,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "constituicao-federal-1988-seguridade-social",
+    "difficulty": "Média",
+    "keywords": [
+      "competencias sus",
+      "constituicao federal",
+      "saude",
+      "seguridade social"
+    ],
+    "explanation": "Competências do SUS estão na CF/88 e leis orgânicas; alternativa D correta."
+  },
+  {
+    "question": 39,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "carta-dos-direitos-e-deveres-da-pessoa-usuaria-da-saude",
+    "difficulty": "Média",
+    "keywords": [
+      "norma:res-cns-553-2017",
+      "direitos usuarios",
+      "conselho nacional de saude",
+      "carta"
+    ],
+    "explanation": "Resolução CNS 553/2017 dispõe sobre direitos e deveres do usuário; alternativa C."
+  },
+  {
+    "question": 40,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "rdc-63-2011-boas-praticas-em-servicos-de-saude",
+    "difficulty": "Média",
+    "keywords": [
+      "anvisa",
+      "norma:rdc-anvisa-63-2011",
+      "gestao de pessoal",
+      "servicos de saude"
+    ],
+    "explanation": "RDC ANVISA 63/2011 trata de boas práticas incluindo gestão de pessoal; alternativa C."
+  },
+  {
+    "question": 41,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "politica-nacional-de-atencao-basica-pnab",
+    "difficulty": "Média",
+    "keywords": [
+      "pnab",
+      "atencao basica",
+      "coordenacao do cuidado",
+      "resolutividade"
+    ],
+    "explanation": "A PNAB garante coordenação do cuidado ampliando acesso e resolutividade; alternativa D."
+  },
+  {
+    "question": 42,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "conitec-e-incorporacao-de-tecnologias-no-sus",
+    "difficulty": "Média",
+    "keywords": [
+      "telessaude brasil",
+      "telemedicina",
+      "redes",
+      "sus"
+    ],
+    "explanation": "Programa Telessaúde Brasil Redes é iniciativa nacional de apoio à Atenção Básica; alternativa C."
+  },
+  {
+    "question": 43,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-coletiva",
+    "topic": "saude-do-trabalhador",
+    "difficulty": "Média",
+    "keywords": [
+      "vigilancia epidemiologica",
+      "doencas relacionadas ao trabalho",
+      "sinan",
+      "agravo"
+    ],
+    "explanation": "Vigilância epidemiológica de agravos relacionados ao trabalho segue normas do SUS; alternativa A."
+  },
+  {
+    "question": 44,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-coletiva",
+    "topic": "identificacao-e-notificacao-de-violencia",
+    "difficulty": "Média",
+    "keywords": [
+      "violencia",
+      "sinais sintomas",
+      "adultos",
+      "notificacao"
+    ],
+    "explanation": "Sinais sugestivos de violência em adultos incluem padrões descritos na alternativa D."
+  },
+  {
+    "question": 45,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "enfermagem-em-doencas-transmissiveis",
+    "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+    "difficulty": "Média",
+    "keywords": [
+      "dengue",
+      "manifestacoes clinicas",
+      "febre",
+      "hemorragia"
+    ],
+    "explanation": "Manifestações clínicas da dengue variam de assintomática a grave; alternativa B correta."
+  },
+  {
+    "question": 46,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-crianca-e-do-adolescente",
+    "topic": "diarreia-e-desidratacao-infantil",
+    "difficulty": "Média",
+    "keywords": [
+      "dda",
+      "diarreia aguda",
+      "desidratacao",
+      "planos a b c"
+    ],
+    "explanation": "DDAs são grupo de doenças infecciosas intestinais; manejo conforme alternativa A."
+  },
+  {
+    "question": 47,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "enfermagem-em-doencas-transmissiveis",
+    "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+    "difficulty": "Média",
+    "keywords": [
+      "corrimento uretral",
+      "ist",
+      "sindrome",
+      "masculino"
+    ],
+    "explanation": "Síndrome do corrimento uretral masculino: afirmativas V/F conforme alternativa B."
+  },
+  {
+    "question": 48,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "enfermagem-em-doencas-transmissiveis",
+    "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+    "difficulty": "Média",
+    "keywords": [
+      "soro antirrabico",
+      "sar",
+      "anticorpos",
+      "profilaxia"
+    ],
+    "explanation": "SAR contém anticorpos heterólogos para profilaxia da raiva; alternativa B."
+  },
+  {
+    "question": 49,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-coletiva",
+    "topic": "epidemiologia-basica-e-bioestatistica",
+    "difficulty": "Difícil",
+    "keywords": [
+      "vacina pentavalente",
+      "imunizacao",
+      "calendario",
+      "hepatite b"
+    ],
+    "explanation": "Esquema da vacina pentavalente conforme PNI; alternativa D correta."
+  },
+  {
+    "question": 50,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "enfermagem-em-doencas-transmissiveis",
+    "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+    "difficulty": "Média",
+    "keywords": [
+      "febre amarela",
+      "doenca infecciosa",
+      "imunoprevenivel",
+      "vacina"
+    ],
+    "explanation": "Febre amarela é doença febril aguda imunoprevenível; alternativa C."
+  },
+  {
+    "question": 51,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-coletiva",
+    "topic": "epidemiologia-basica-e-bioestatistica",
+    "difficulty": "Média",
+    "keywords": [
+      "vacina hpv",
+      "cancer colo uterino",
+      "imunizacao",
+      "quadrivalente"
+    ],
+    "explanation": "Vacina HPV quadrivalente previne lesões pré-cancerosas e condiloma; alternativa A."
+  },
+  {
+    "question": 52,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-mulher",
+    "topic": "exame-citopatologico-do-colo-uterino",
+    "difficulty": "Média",
+    "keywords": [
+      "citopatologico",
+      "papanicolau",
+      "rastreamento",
+      "colo uterino"
+    ],
+    "explanation": "Coleta citopatológica segue protocolo do MS para rastreamento; alternativa A."
+  },
+  {
+    "question": 53,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "semiologia-de-enfermagem",
+    "difficulty": "Média",
+    "keywords": [
+      "cancer de mama",
+      "rastreamento",
+      "autoexame",
+      "sinais alerta"
+    ],
+    "explanation": "Câncer de mama: crescimento descontrolado de células mamárias; alternativa C."
+  },
+  {
+    "question": 54,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-crianca-e-do-adolescente",
+    "topic": "aleitamento-materno",
+    "difficulty": "Média",
+    "keywords": [
+      "aleitamento misto",
+      "leite materno",
+      "alimentacao complementar",
+      "oms"
+    ],
+    "explanation": "Aleitamento misto inclui leite materno e outros alimentos/líquidos; lacuna da alternativa D."
+  },
+  {
+    "question": 55,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-crianca-e-do-adolescente",
+    "topic": "aleitamento-materno",
+    "difficulty": "Fácil",
+    "keywords": [
+      "producao leite",
+      "amamentacao",
+      "lactacao",
+      "manejo"
+    ],
+    "explanation": "Medidas para aumentar produção láctea incluem esvaziamento frequente e apoio; alternativa B."
+  },
+  {
+    "question": 56,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-mulher",
+    "topic": "assistencia-de-enfermagem-ao-pre-natal-parto-e-puerperio",
+    "difficulty": "Média",
+    "keywords": [
+      "gestacao",
+      "queixas comuns",
+      "enfermagem",
+      "pre-natal"
+    ],
+    "explanation": "Condutas de enfermagem perante queixas na gestação conforme alternativa D."
+  },
+  {
+    "question": 57,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "enfermagem-em-doencas-transmissiveis",
+    "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+    "difficulty": "Média",
+    "keywords": [
+      "sifilis",
+      "treponema pallidum",
+      "ist",
+      "tratamento"
+    ],
+    "explanation": "Sífilis é IST bacteriana sistêmica; condutas conforme alternativa D."
+  },
+  {
+    "question": 58,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-mulher",
+    "topic": "planejamento-reprodutivo",
+    "difficulty": "Média",
+    "keywords": [
+      "anticoncepcional",
+      "aleitamento",
+      "lactacao",
+      "metodo"
+    ],
+    "explanation": "Métodos contraceptivos durante aleitamento: afirmativas V/F conforme alternativa A."
+  },
+  {
+    "question": 59,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "feridas-e-cicatrizacao",
+    "difficulty": "Média",
+    "keywords": [
+      "ferida",
+      "carga microbiana",
+      "infeccao",
+      "colonizacao"
+    ],
+    "explanation": "Ferida infectada apresenta reação tissular intensa e carga microbiana significativa; alternativa B."
+  },
+  {
+    "question": 60,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "curativos",
+    "difficulty": "Média",
+    "keywords": [
+      "dermatite de contato",
+      "pele",
+      "irritacao",
+      "alergia"
+    ],
+    "explanation": "Dermatite de contato é reação inflamatória por exposição a agente irritante/alérgeno; alternativa D."
+  },
+  {
+    "question": 61,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "semiologia-de-enfermagem",
+    "difficulty": "Média",
+    "keywords": [
+      "catarata",
+      "cegueira",
+      "olho",
+      "visao"
+    ],
+    "explanation": "Catarata é principal causa tratável de cegueira em países em desenvolvimento; alternativa C."
+  },
+  {
+    "question": 62,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "urgencia-e-emergencia",
+    "topic": "atendimento-ao-politraumatizado",
+    "difficulty": "Média",
+    "keywords": [
+      "contusao",
+      "tecido mole",
+      "trauma",
+      "forca nao penetrante"
+    ],
+    "explanation": "Contusão é lesão de tecidos moles por força não penetrante; alternativa C."
+  },
+  {
+    "question": 63,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "sinais-vitais",
+    "difficulty": "Média",
+    "keywords": [
+      "diabetes mellitus",
+      "glicemia",
+      "metabolismo",
+      "doenca cronica"
+    ],
+    "explanation": "Diabetes mellitus caracteriza-se por hiperglicemia crônica por defeito na secreção/ação da insulina; alternativa B."
+  },
+  {
+    "question": 64,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-mental",
+    "topic": "transtornos-mentais-e-comportamentais",
+    "difficulty": "Média",
+    "keywords": [
+      "compulsao alimentar",
+      "transtorno alimentar",
+      "ingestao descontrolada",
+      "tca"
+    ],
+    "explanation": "Transtorno da Compulsão Alimentar Periódica envolve ingestão descontrolada; alternativa D."
+  },
+  {
+    "question": 65,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-mental",
+    "topic": "transtornos-mentais-e-comportamentais",
+    "difficulty": "Média",
+    "keywords": [
+      "tea",
+      "autismo",
+      "espectro autista",
+      "desenvolvimento"
+    ],
+    "explanation": "TEA: afirmativas sobre etiologia e diagnóstico conforme alternativa A."
+  },
+  {
+    "question": 66,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "urgencia-e-emergencia",
+    "topic": "intoxicacoes-exogenas",
+    "difficulty": "Difícil",
+    "keywords": [
+      "sindrome serotoninergica",
+      "droga",
+      "intoxicacao",
+      "serotonina"
+    ],
+    "explanation": "Síndrome serotoninérgica é reversível por ingestão recente de drogas serotonérgicas; alternativa A."
+  },
+  {
+    "question": 67,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "comunicacao-terapeutica",
+    "difficulty": "Média",
+    "keywords": [
+      "educacao em saude",
+      "promocao saude",
+      "comunicacao",
+      "sus"
+    ],
+    "explanation": "Educação em saúde integra promoção e participação; afirmativas V/F conforme alternativa C."
+  },
+  {
+    "question": 68,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "mobilizacao-e-transporte-do-paciente",
+    "difficulty": "Média",
+    "keywords": [
+      "posicao fowler",
+      "decubito",
+      "posicionamento",
+      "paciente"
+    ],
+    "explanation": "Posição de Fowler: decúbito dorsal com elevação do tronco; alternativa B."
+  },
+  {
+    "question": 69,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "sinais-vitais",
+    "difficulty": "Média",
+    "keywords": [
+      "hipertermia",
+      "febre",
+      "cuidados enfermagem",
+      "termorregulacao"
+    ],
+    "explanation": "Assistência ao paciente com hipertermia inclui medidas da alternativa B."
+  },
+  {
+    "question": 70,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "centro-cirurgico-e-cme",
+    "topic": "central-de-material-esterilizado",
+    "difficulty": "Média",
+    "keywords": [
+      "processamento produtos",
+      "descontaminacao",
+      "cme",
+      "esterilizacao"
+    ],
+    "explanation": "Processamento envolve descontaminação e preparo de produtos para saúde; alternativa D."
+  },
+  {
+    "question": 71,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "centro-cirurgico-e-cme",
+    "topic": "central-de-material-esterilizado",
+    "difficulty": "Média",
+    "keywords": [
+      "esterilizacao",
+      "cme",
+      "produtos saude",
+      "controle"
+    ],
+    "explanation": "Esterilização em CME segue normas técnicas; alternativa D correta."
+  },
+  {
+    "question": 72,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "centro-cirurgico-e-cme",
+    "topic": "central-de-material-esterilizado",
+    "difficulty": "Média",
+    "keywords": [
+      "material critico",
+      "esterilizacao",
+      "classificacao spaulding",
+      "produtos saude"
+    ],
+    "explanation": "Material crítico entra em contato com tecido estéril; alternativa C."
+  },
+  {
+    "question": 73,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "etica-e-legislacao-em-enfermagem",
+    "topic": "enfermagem-em-auditoria-resolucao-cofen",
+    "difficulty": "Média",
+    "keywords": [
+      "art",
+      "responsabilidade tecnica",
+      "cofen",
+      "norma:res-cofen-509-2016"
+    ],
+    "explanation": "Resolução COFEN 509/2016 trata de ART do serviço de enfermagem; alternativa C."
+  },
+  {
+    "question": 74,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "etica-e-legislacao-em-enfermagem",
+    "topic": "lei-7498-1986-exercicio-profissional-de-enfermagem",
+    "difficulty": "Média",
+    "keywords": [
+      "tecnico enfermagem",
+      "plantao",
+      "jornada",
+      "atribuicoes"
+    ],
+    "explanation": "Atribuições do técnico em plantão noturno conforme Lei 7.498/86; alternativa A."
+  },
+  {
+    "question": 75,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "historia-da-enfermagem",
+    "difficulty": "Média",
+    "keywords": [
+      "trabalho em equipe",
+      "enfermagem",
+      "historia",
+      "equipe de saude"
+    ],
+    "explanation": "Prática de trabalho em equipe de saúde teve marco na década de 1950; alternativa A."
+  },
+  {
+    "question": 76,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "administracao-em-enfermagem",
+    "topic": "enfermeiro-gestor",
+    "difficulty": "Média",
+    "keywords": [
+      "hospital magnetico",
+      "gestao",
+      "qualidade",
+      "enfermagem"
+    ],
+    "explanation": "Hospitais magnéticos possuem estrutura organizacional que subsidia prática de enfermagem; alternativa C."
+  },
+  {
+    "question": 77,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "saude-da-crianca-e-do-adolescente",
+    "topic": "crescimento-e-desenvolvimento-infantil",
+    "difficulty": "Média",
+    "keywords": [
+      "desenvolvimento infantil",
+      "marcos",
+      "atrasos",
+      "crianca"
+    ],
+    "explanation": "Conhecimento do desenvolvimento normal permite identificar atrasos e desvios; alternativa B."
+  },
+  {
+    "question": 78,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "legislacao-do-sus",
+    "topic": "politica-nacional-de-praticas-integrativas-e-complementares-pnpic",
+    "difficulty": "Média",
+    "keywords": [
+      "pnpic",
+      "praticas integrativas",
+      "sus",
+      "responsabilidades"
+    ],
+    "explanation": "PNPIC define responsabilidades institucionais para PICS no SUS; alternativa D."
+  },
+  {
+    "question": 79,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "administracao-de-medicamentos",
+    "difficulty": "Difícil",
+    "keywords": [
+      "penicilina cristalina",
+      "diluicao",
+      "ui",
+      "prescricao"
+    ],
+    "explanation": "Cálculo e diluição de 6.000.000 UI de Penicilina Cristalina conforme protocolo; alternativa C."
+  },
+  {
+    "question": 80,
+    "board": "ibfc",
+    "contest": "concurso-publico-sesacre-edital-01-2022",
+    "position": "enfermeiro",
+    "year": "2022",
+    "subject": "fundamentos-de-enfermagem",
+    "topic": "metodos-diagnosticos-complementares",
+    "difficulty": "Média",
+    "keywords": [
+      "ecg",
+      "eletrocardiograma",
+      "arritmias",
+      "diagnostico"
+    ],
+    "explanation": "ECG é padrão-ouro não invasivo para arritmias cardíacas; alternativa A."
+  }
+]

@@ -33,6 +33,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
+import { STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
 
 export function SubscriptionPage() {
   const { user } = useAuth();
@@ -72,7 +73,7 @@ export function SubscriptionPage() {
 
   if (isLoading) {
     return (
-      <div className="space-y-6 max-w-2xl">
+      <div className={STUDENT_PAGE_SHELL_NARROW} aria-busy="true" aria-label="Carregando assinatura">
         <Skeleton className="h-8 w-56" />
         <Skeleton className="h-40 rounded-xl" />
       </div>
@@ -81,11 +82,12 @@ export function SubscriptionPage() {
 
   if (isError || !subscriptions) {
     return (
-      <div className="space-y-6 max-w-2xl">
-        <div>
-          <h1 className="text-2xl font-bold">Minha Assinatura</h1>
-        </div>
+      <div className={STUDENT_PAGE_SHELL_NARROW}>
+        <header>
+          <h1 className="text-2xl font-bold tracking-tight">Minha assinatura</h1>
+        </header>
         <PageErrorState
+          title="Erro ao carregar assinatura"
           message={
             error instanceof Error ? error.message : "Não foi possível carregar sua assinatura."
           }
@@ -96,13 +98,13 @@ export function SubscriptionPage() {
   }
 
   return (
-    <div className="space-y-6 max-w-2xl">
-      <div>
-        <h1 className="text-2xl font-bold">Minha Assinatura</h1>
+    <div className={STUDENT_PAGE_SHELL_NARROW}>
+      <header>
+        <h1 className="text-2xl font-bold tracking-tight">Minha assinatura</h1>
         <p className="text-sm text-muted-foreground">
           Acompanhe sua assinatura ou escolha um plano para começar a estudar.
         </p>
-      </div>
+      </header>
 
       {subscriptions.length === 0 ? (
         <PlanCatalog onSelectPlan={openCheckout} />

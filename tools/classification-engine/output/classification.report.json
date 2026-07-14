@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-07-14T09:40:05.163Z",
+  "inputs": {
+    "rawPath": "C:\\Users\\Nubio\\Downloads\\sumulaprocore\\SimulaPro Core\\tools\\question-pipeline\\output\\questions.raw.json",
+    "classificationPath": "C:\\Users\\Nubio\\Downloads\\sumulaprocore\\SimulaPro Core\\tools\\question-pipeline\\output\\classification.json",
+    "taxonomyIndexPath": "C:\\Users\\Nubio\\Downloads\\sumulaprocore\\SimulaPro Core\\tools\\taxonomy-engine\\taxonomy.index.json",
+    "editorialRulesPath": "C:\\Users\\Nubio\\Downloads\\sumulaprocore\\SimulaPro Core\\docs\\editorial\\classification"
+  },
+  "summary": {
+    "questions": 80,
+    "approved": 80,
+    "warnings": 0,
+    "errors": 0,
+    "skippedAnuladas": 0
+  },
+  "issues": []
+}

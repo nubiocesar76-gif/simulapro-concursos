@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import { useAuth } from "@/hooks/use-auth";
@@ -20,11 +21,12 @@ import { SubjectPerformanceTable } from "@/components/app/dashboard/SubjectPerfo
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { toast } from "sonner";
+import { STUDENT_PAGE_SHELL } from "@/config/study";
 
 const DASHBOARD_FILTER_EMPTY_MESSAGES: Record<FilterStudyMode, string> = {
   FAVORITES: "Você ainda não possui questões favoritas.",
   REVIEW: "Você ainda não possui questões marcadas para revisão.",
-  WRONG_ONLY: "Você ainda não possui questões pendentes de revisão.",
+  WRONG_ONLY: "Você ainda não possui questões erradas para revisar.",
 };
 
 const FILTER_INDICATOR_COUNT_KEYS: Record<FilterStudyMode, keyof StudyFilterIndicators> = {
@@ -39,11 +41,11 @@ const FILTER_SESSION_SETTINGS = {
   show_answers: "during" as const,
 };
 
-const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
+const pageShellClass = STUDENT_PAGE_SHELL;
 
 function DashboardLoadingSkeleton() {
   return (
-    <div className={pageShellClass}>
+    <div className={pageShellClass} aria-busy="true" aria-label="Carregando dashboard">
       <div className="space-y-2">
         <Skeleton className="h-8 w-64" />
         <Skeleton className="h-4 w-96 max-w-full" />
@@ -179,6 +181,7 @@ export function StudentDashboardPage() {
           <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
         </div>
         <PageErrorState
+          title="Erro ao carregar dashboard"
           message="Não foi possível carregar seu painel. Tente novamente em instantes."
           onRetry={() => refetch()}
         />
@@ -232,7 +235,11 @@ export function StudentDashboardPage() {
           <div>
             <h2 className="text-lg font-semibold">Atalhos de estudo</h2>
             <p className="text-sm text-muted-foreground">
-              Inicie uma sessão filtrada com um clique.
+              Inicie uma sessão filtrada com um clique ou acesse a{" "}
+              <Link to="/app/review" className="font-medium text-primary underline-offset-4 hover:underline">
+                Central de Revisão
+              </Link>
+              .
             </p>
           </div>
           <StudyFilterIndicatorsBar

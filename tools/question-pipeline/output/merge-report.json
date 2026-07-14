@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-07-14T09:22:06.858Z",
+  "summary": {
+    "totalRaw": 80,
+    "totalClassification": 80,
+    "skippedAnuladas": 0,
+    "exported": 80,
+    "reviewRequiredExported": 0
+  },
+  "validation": {
+    "issues": [],
+    "ok": true
+  },
+  "convertQuestionsCompatibility": {
+    "ok": true,
+    "convertedCount": 80
+  }
+}

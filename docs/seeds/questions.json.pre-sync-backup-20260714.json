@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Na aferição de temperatura axilar, qual valor em graus Celsius indica estado afebril em adultos?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "35,0 °C"
+        },
+        {
+          "letter": "B",
+          "text": "36,5 °C"
+        },
+        {
+          "letter": "C",
+          "text": "38,5 °C"
+        },
+        {
+          "letter": "D",
+          "text": "40,0 °C"
+        },
+        {
+          "letter": "E",
+          "text": "41,0 °C"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "contest": "prefeitura-municipal-de-homologacao",
+      "subject": "fundamentos-de-enfermagem",
+      "topic": "sinais-vitais",
+      "year": 2026,
+      "explanation": "Temperatura axilar entre 36,0 °C e 37,5 °C é considerada normal em adultos.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [
+        "temperatura axilar",
+        "afebril"
+      ],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7a55e5add800bbdffacc987a6ed19bfec3a00a67462537c9c1c2a3061bed6f29"
+    },
+    {
+      "statement": "Qual é a frequência cardíaca considerada normal em um adulto saudável em repouso, segundo fundamentos de enfermagem?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "40 a 50 bpm"
+        },
+        {
+          "letter": "B",
+          "text": "60 a 100 bpm"
+        },
+        {
+          "letter": "C",
+          "text": "110 a 130 bpm"
+        },
+        {
+          "letter": "D",
+          "text": "140 a 160 bpm"
+        },
+        {
+          "letter": "E",
+          "text": "180 a 200 bpm"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "contest": "prefeitura-municipal-de-homologacao",
+      "subject": "fundamentos-de-enfermagem",
+      "topic": "sinais-vitais",
+      "year": 2026,
+      "explanation": "Em adultos, a frequência cardíaca normal em repouso situa-se entre 60 e 100 batimentos por minuto.",
+      "references": [
+        "Brunner e Suddarth",
+        "Ministério da Saúde"
+      ],
+      "status": "ACTIVE",
+      "keywords": [
+        "frequência cardíaca",
+        "sinais vitais",
+        "repouso"
+      ],
+      "source": {
+        "organization": "EBSERH",
+        "exam": "Concurso Nacional",
+        "page": 18,
+        "question": 27
+      },
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "906d124b05020cc091391556cbc3f5af065f7ad0c026592f6131380efc1bbd9b"
+    }
+  ]
+}

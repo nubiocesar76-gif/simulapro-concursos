@@ -6,7 +6,6 @@ export const REQUIRED_COLUMNS = [
   "alternative_b",
   "alternative_c",
   "alternative_d",
-  "alternative_e",
   "correct_answer",
   "position",
   "board",
@@ -18,6 +17,7 @@ export const REQUIRED_COLUMNS = [
 ] as const;
 
 export const OPTIONAL_COLUMNS = [
+  "alternative_e",
   "organization",
   "exam",
   "page",
@@ -41,3 +41,6 @@ export const ALTERNATIVE_COLUMNS = [
 ] as const;
 
 export const ALTERNATIVE_LETTERS = ["A", "B", "C", "D", "E"] as const;
+
+/** A–D são sempre obrigatórias; E é opcional (questões de 4 ou 5 alternativas). */
+export const REQUIRED_ALTERNATIVE_LETTERS = ["A", "B", "C", "D"] as const;

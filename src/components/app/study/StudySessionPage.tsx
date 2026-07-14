@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronLeft, PlayCircle } from "lucide-react";
 import {
   finishStudySession,
@@ -20,20 +20,31 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { QuestionCard } from "@/components/app/study/QuestionCard";
 import { QuestionActions } from "@/components/app/study/QuestionActions";
+import { QuestionFeedbackPanel } from "@/components/app/study/QuestionFeedbackPanel";
+import { QuestionMetadataBadges } from "@/components/app/study/QuestionMetadataBadges";
 import { QuestionNavigation } from "@/components/app/study/QuestionNavigation";
 import { QuestionOptions } from "@/components/app/study/QuestionOptions";
 import { SessionHeader } from "@/components/app/study/SessionHeader";
 import { SessionResultsView } from "@/components/app/study/SessionResultsView";
 import { SessionProgress } from "@/components/app/study/SessionProgress";
+import { SessionSummaryPanel } from "@/components/app/study/SessionSummaryPanel";
+import { StudyActiveHeader } from "@/components/app/study/StudyActiveHeader";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
+import { STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
 
 type StudySessionPageProps = {
   sessionId: string;
 };
 
 type Phase = "preview" | "active" | "completed";
+
+function formatElapsed(seconds: number) {
+  const minutes = Math.floor(seconds / 60);
+  const remainder = seconds % 60;
+  return `${minutes}:${String(remainder).padStart(2, "0")}`;
+}
 
 export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   const queryClient = useQueryClient();
@@ -136,9 +147,27 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
     onError: (e: unknown) => toast.error(formatStudyEngineError(e)),
   });
 
+  const sessionStats = useMemo(() => {
+    if (!openData) return { correctCount: 0, wrongCount: 0 };
+    const correctCount = openData.sessionQuestions.filter((row) => row.is_correct === true).length;
+    const wrongCount = openData.sessionQuestions.filter((row) => row.is_correct === false).length;
+    return { correctCount, wrongCount };
+  }, [openData?.sessionQuestions]);
+
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+
+  useEffect(() => {
+    if (!openData || phase !== "active") return;
+    const startedAt = new Date(openData.session.started_at).getTime();
+    const tick = () => setElapsedSeconds(Math.max(0, Math.floor((Date.now() - startedAt) / 1000)));
+    tick();
+    const timer = window.setInterval(tick, 1000);
+    return () => window.clearInterval(timer);
+  }, [openData?.session.started_at, phase, openData]);
+
   if (isLoading) {
     return (
-      <div className="space-y-6 max-w-2xl">
+      <div className={STUDENT_PAGE_SHELL_NARROW} aria-busy="true" aria-label="Carregando sessão">
         <Skeleton className="h-8 w-48" />
         <Card>
           <div className="p-6 space-y-4">
@@ -154,10 +183,14 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (error || !openData) {
     return (
-      <div className="space-y-6 max-w-2xl">
+      <div className={STUDENT_PAGE_SHELL_NARROW}>
         <PageErrorState
           title="Sessão não encontrada"
-          message={formatStudyEngineError(error)}
+          message={
+            error
+              ? formatStudyEngineError(error)
+              : "Não foi possível abrir esta sessão. Verifique o link ou tente novamente."
+          }
           action={
             <Button variant="outline" asChild>
               <Link to="/app/study">
@@ -183,7 +216,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   if (session.status === "FINISHED" || phase === "completed") {
     if (!results) {
       return (
-        <div className="mx-auto space-y-8 2xl:max-w-[1600px]">
+        <div className={STUDENT_PAGE_SHELL} aria-busy="true" aria-label="Carregando resultado">
           <div className="space-y-2">
             <Skeleton className="h-8 w-56" />
             <Skeleton className="h-4 w-72 max-w-full" />
@@ -208,7 +241,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (sequence.length === 0) {
     return (
-      <div className="space-y-6 max-w-2xl">
+      <div className={STUDENT_PAGE_SHELL_NARROW}>
         <EmptyState
           title="Sessão sem questões"
           description="Não há questões elegíveis para esta distribuição com as configurações atuais."
@@ -227,8 +260,8 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (phase === "preview") {
     return (
-      <div className="space-y-6 max-w-2xl">
-        <Button variant="ghost" size="sm" className="-ml-2" asChild>
+      <div className={STUDENT_PAGE_SHELL_NARROW}>
+        <Button variant="ghost" size="sm" className="-ml-2 mb-2 w-fit" asChild>
           <Link to="/app/study">
             <ChevronLeft className="h-4 w-4 mr-1" />
             Voltar
@@ -278,7 +311,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (isLoadingQuestion) {
     return (
-      <div className="space-y-4 max-w-2xl">
+      <div className={STUDENT_PAGE_SHELL_NARROW} aria-busy="true" aria-label="Carregando questão">
         <Skeleton className="h-8 w-20" />
         <Card>
           <div className="p-6 space-y-3">
@@ -300,7 +333,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (isQuestionError || !question) {
     return (
-      <div className="space-y-6 max-w-2xl">
+      <div className={STUDENT_PAGE_SHELL_NARROW}>
         <PageErrorState
           title="Erro ao carregar questão"
           message={formatStudyEngineError(questionError)}
@@ -324,62 +357,73 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   const canFinish = question.isAnswered && isLastQuestion;
 
   return (
-    <div className="space-y-4 max-w-2xl">
-      <Button variant="ghost" size="sm" className="-ml-2" asChild>
+    <div className="relative mx-auto flex min-h-[calc(100vh-8rem)] max-w-[1400px] flex-col pb-24 sm:pb-28">
+      <Button variant="ghost" size="sm" className="-ml-2 mb-2 w-fit text-muted-foreground" asChild>
         <Link to="/app/study">
           <ChevronLeft className="h-4 w-4 mr-1" />
           Voltar
         </Link>
       </Button>
 
-      <Card>
-        <SessionHeader
-          title={session.distribution_name}
-          subtitle={subtitle}
-          mode={session.mode}
-        />
-        <CardContent className="pt-0 pb-4">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div className="min-w-0 flex-1">
-              <SessionProgress
-                current={question.index + 1}
-                total={question.total}
-                label="Questão"
+      <div className="flex flex-1 flex-col gap-5 lg:flex-row lg:items-start lg:gap-8">
+        <div className="min-w-0 flex-1 space-y-6 lg:max-w-4xl">
+          <StudyActiveHeader
+            mode={session.mode}
+            currentQuestion={question.index + 1}
+            totalQuestions={question.total}
+            elapsedLabel={formatElapsed(elapsedSeconds)}
+          />
+
+          <QuestionMetadataBadges context={question.context} />
+
+          <QuestionCard statement={question.statement} imageUrl={question.context.imageUrl} />
+
+          <QuestionOptions
+            alternatives={question.alternatives}
+            value={selectedAnswer}
+            onChange={setSelectedAnswer}
+            disabled={question.isAnswered}
+            feedback={question.feedback}
+          />
+
+          {question.feedback && (
+            <div className="space-y-4 border-t border-border/50 pt-6">
+              <QuestionFeedbackPanel feedback={question.feedback} />
+              <QuestionActions
+                favorite={question.favorite}
+                reviewLater={question.reviewLater}
+                isUpdating={toggleFavorite.isPending || toggleReviewLater.isPending}
+                showNext={canGoNext}
+                isNavigating={navigateNext.isPending}
+                onToggleFavorite={() =>
+                  toggleFavorite.mutate({
+                    sessionQuestionId: question.sessionQuestionId,
+                    favorite: !question.favorite,
+                  })
+                }
+                onToggleReviewLater={() =>
+                  toggleReviewLater.mutate({
+                    sessionQuestionId: question.sessionQuestionId,
+                    reviewLater: !question.reviewLater,
+                  })
+                }
+                onNext={() => navigateNext.mutate()}
               />
             </div>
-            <p className="shrink-0 pb-0.5 text-sm text-muted-foreground">
-              {answeredCount} respondida{answeredCount !== 1 ? "s" : ""}
-            </p>
-          </div>
-        </CardContent>
-      </Card>
+          )}
+        </div>
 
-      <QuestionCard statement={question.statement} feedback={question.feedback} />
-
-      <QuestionOptions
-        alternatives={question.alternatives}
-        value={selectedAnswer}
-        onChange={setSelectedAnswer}
-        disabled={question.isAnswered}
-      />
-
-      <QuestionActions
-        favorite={question.favorite}
-        reviewLater={question.reviewLater}
-        isUpdating={toggleFavorite.isPending || toggleReviewLater.isPending}
-        onToggleFavorite={() =>
-          toggleFavorite.mutate({
-            sessionQuestionId: question.sessionQuestionId,
-            favorite: !question.favorite,
-          })
-        }
-        onToggleReviewLater={() =>
-          toggleReviewLater.mutate({
-            sessionQuestionId: question.sessionQuestionId,
-            reviewLater: !question.reviewLater,
-          })
-        }
-      />
+        <SessionSummaryPanel
+          className="w-full lg:w-64 xl:w-72 lg:shrink-0"
+          answeredCount={answeredCount}
+          correctCount={sessionStats.correctCount}
+          wrongCount={sessionStats.wrongCount}
+          totalQuestions={totalQuestions}
+          mode={session.mode}
+          packageName={session.package_name}
+          questionContext={question.context}
+        />
+      </div>
 
       <QuestionNavigation
         canGoPrevious={question.index > 0}
@@ -393,6 +437,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
         onAnswer={() => answerQuestion.mutate()}
         onNext={() => navigateNext.mutate()}
         onFinish={() => finishSession.mutate()}
+        className="mt-6"
       />
     </div>
   );

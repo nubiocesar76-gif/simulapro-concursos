@@ -1,0 +1,2820 @@
+{
+  "generatedAt": "2026-07-14T08:16:16.572Z",
+  "summary": {
+    "totalInput": 80,
+    "exported": 80,
+    "skippedAnuladas": 0,
+    "reviewRequiredExported": 0
+  },
+  "localValidation": {
+    "issues": [],
+    "ok": true
+  },
+  "convertQuestionsCompatibility": {
+    "ok": false,
+    "issueCount": 560,
+    "issues": [
+      {
+        "line": 2,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 2,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 2,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 2,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 2,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 2,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 2,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 3,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 3,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 3,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 3,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 3,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 3,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 3,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 4,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 4,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 4,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 4,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 4,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 4,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 4,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 5,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 5,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 5,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 5,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 5,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 5,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 5,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 6,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 6,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 6,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 6,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 6,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 6,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 6,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 7,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 7,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 7,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 7,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 7,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 7,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 7,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 8,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 8,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 8,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 8,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 8,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 8,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 8,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 9,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 9,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 9,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 9,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 9,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 9,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 9,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 10,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 10,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 10,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 10,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 10,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 10,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 10,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 11,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 11,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 11,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 11,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 11,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 11,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 11,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 12,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 12,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 12,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 12,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 12,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 12,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 12,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 13,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 13,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 13,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 13,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 13,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 13,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 13,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 14,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 14,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 14,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 14,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 14,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 14,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 14,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 15,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 15,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 15,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 15,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 15,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 15,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 15,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 16,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 16,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 16,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 16,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 16,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 16,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 16,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 17,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 17,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 17,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 17,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 17,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 17,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 17,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 18,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 18,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 18,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 18,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 18,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 18,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 18,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 19,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 19,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 19,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 19,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 19,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 19,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 19,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 20,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 20,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 20,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 20,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 20,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 20,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 20,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 21,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 21,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 21,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 21,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 21,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 21,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 21,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 22,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 22,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 22,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 22,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 22,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 22,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 22,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 23,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 23,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 23,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 23,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 23,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 23,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 23,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 24,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 24,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 24,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 24,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 24,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 24,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 24,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 25,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 25,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 25,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 25,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 25,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 25,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 25,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 26,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 26,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 26,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 26,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 26,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 26,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 26,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 27,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 27,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 27,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 27,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 27,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 27,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 27,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 28,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 28,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 28,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 28,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 28,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 28,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 28,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 29,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 29,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 29,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 29,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 29,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 29,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 29,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 30,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 30,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 30,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 30,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 30,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 30,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 30,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 31,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 31,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 31,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 31,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 31,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 31,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 31,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 32,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 32,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 32,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 32,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 32,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 32,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 32,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 33,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 33,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 33,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 33,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 33,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 33,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 33,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 34,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 34,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 34,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 34,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 34,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 34,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 34,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 35,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 35,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 35,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 35,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 35,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 35,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 35,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 36,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 36,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 36,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 36,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 36,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 36,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 36,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 37,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 37,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 37,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 37,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 37,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 37,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 37,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 38,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 38,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 38,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 38,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 38,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 38,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 38,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 39,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 39,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 39,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 39,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 39,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 39,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 39,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 40,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 40,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 40,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 40,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 40,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 40,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 40,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 41,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 41,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 41,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 41,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 41,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 41,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 41,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 42,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 42,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 42,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 42,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 42,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 42,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 42,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 43,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 43,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 43,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 43,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 43,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 43,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 43,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 44,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 44,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 44,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 44,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 44,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 44,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 44,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 45,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 45,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 45,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 45,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 45,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 45,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 45,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 46,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 46,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 46,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 46,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 46,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 46,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 46,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 47,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 47,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 47,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 47,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 47,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 47,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 47,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 48,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 48,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 48,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 48,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 48,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 48,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 48,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 49,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 49,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 49,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 49,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 49,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 49,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 49,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 50,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 50,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 50,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 50,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 50,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 50,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 50,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 51,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 51,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 51,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 51,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 51,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 51,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 51,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 52,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 52,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 52,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 52,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 52,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 52,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 52,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 53,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 53,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 53,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 53,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 53,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 53,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 53,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 54,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 54,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 54,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 54,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 54,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 54,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 54,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 55,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 55,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 55,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 55,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 55,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 55,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 55,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 56,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 56,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 56,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 56,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 56,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 56,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 56,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 57,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 57,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 57,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 57,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 57,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 57,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 57,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 58,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 58,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 58,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 58,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 58,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 58,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 58,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 59,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 59,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 59,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 59,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 59,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 59,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 59,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 60,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 60,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 60,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 60,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 60,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 60,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 60,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 61,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 61,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 61,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 61,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 61,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 61,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 61,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 62,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 62,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 62,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 62,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 62,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 62,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 62,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 63,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 63,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 63,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 63,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 63,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 63,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 63,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 64,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 64,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 64,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 64,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 64,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 64,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 64,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 65,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 65,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 65,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 65,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 65,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 65,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 65,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 66,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 66,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 66,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 66,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 66,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 66,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 66,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 67,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 67,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 67,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 67,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 67,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 67,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 67,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 68,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 68,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 68,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 68,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 68,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 68,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 68,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 69,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 69,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 69,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 69,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 69,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 69,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 69,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 70,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 70,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 70,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 70,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 70,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 70,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 70,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 71,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 71,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 71,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 71,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 71,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 71,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 71,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 72,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 72,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 72,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 72,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 72,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 72,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 72,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 73,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 73,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 73,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 73,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 73,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 73,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 73,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 74,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 74,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 74,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 74,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 74,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 74,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 74,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 75,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 75,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 75,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 75,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 75,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 75,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 75,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 76,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 76,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 76,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 76,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 76,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 76,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 76,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 77,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 77,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 77,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 77,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 77,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 77,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 77,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 78,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 78,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 78,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 78,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 78,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 78,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 78,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 79,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 79,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 79,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 79,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 79,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 79,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 79,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 80,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 80,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 80,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 80,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 80,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 80,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 80,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      },
+      {
+        "line": 81,
+        "field": "position",
+        "error": "Cargo é obrigatório."
+      },
+      {
+        "line": 81,
+        "field": "board",
+        "error": "Banca é obrigatória."
+      },
+      {
+        "line": 81,
+        "field": "contest",
+        "error": "Concurso é obrigatório."
+      },
+      {
+        "line": 81,
+        "field": "subject",
+        "error": "Disciplina é obrigatória."
+      },
+      {
+        "line": 81,
+        "field": "topic",
+        "error": "Assunto é obrigatório."
+      },
+      {
+        "line": 81,
+        "field": "year",
+        "error": "Ano é obrigatório."
+      },
+      {
+        "line": 81,
+        "field": "explanation",
+        "error": "Explicação é obrigatória."
+      }
+    ],
+    "note": "Campos que exigem classificação humana (position, board, contest, subject, topic, year, explanation) ficam em branco no CSV gerado por esta ferramenta, pois não são deriváveis do PDF sem fabricar conteúdo. É esperado que convert:questions rejeite o CSV até que um humano preencha esses campos — isso não é uma falha da exportação, é o limite intencional desta v1."
+  }
+}

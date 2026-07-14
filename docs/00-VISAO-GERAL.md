@@ -15,30 +15,40 @@ Esta frase orienta todas as decisões de produto e arquitetura:
 
 ---
 
+
+
 ## 1. Objetivo do projeto
 
 O **SimulaPro Concursos** é uma plataforma profissional de preparação para concursos públicos. O objetivo é oferecer um ambiente estruturado em que estudantes resolvam questões reais organizadas por **curso**, **cargo**, **banca**, **disciplina** e **assunto**, com curadoria contínua feita pela equipe administrativa.
 
 A plataforma resolve três necessidades centrais:
 
-| Necessidade | Como o SimulaPro atende |
-|-------------|-------------------------|
+
+| Necessidade         | Como o SimulaPro atende                                                       |
+| ------------------- | ----------------------------------------------------------------------------- |
 | Conteúdo organizado | Taxonomia hierárquica (curso → cargo, banca → concurso, disciplina → assunto) |
-| Estudo direcionado | O aluno escolhe uma disciplina e resolve questões do pacote publicado |
-| Acompanhamento | Registro de tentativas, estatísticas e histórico de desempenho |
+| Estudo direcionado  | O aluno escolhe uma disciplina e resolve questões do pacote publicado         |
+| Acompanhamento      | Registro de tentativas, estatísticas e histórico de desempenho                |
+
 
 O produto é dividido em **dois portais independentes**: o painel administrativo (`/admin`) e a área do aluno (`/app`), ambos integrados ao mesmo backend (Supabase / Lovable Cloud).
 
 ---
 
+
+
 ## 2. Perfis existentes
 
 O sistema reconhece exatamente **dois perfis**, definidos pelo enum `app_role` no banco de dados:
 
-| Perfil | Valor técnico | Descrição |
-|--------|---------------|-----------|
-| **Administrador** | `admin` | Produz, organiza, importa e publica conteúdo. Gerencia usuários e assinaturas. Acesso total ao painel `/admin`. |
-| **Aluno** | `student` | Estuda o conteúdo liberado pela assinatura. Acesso à área `/app`. |
+
+| Perfil            | Valor técnico | Descrição                                                                                                       |
+| ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Administrador** | `admin`       | Produz, organiza, importa e publica conteúdo. Gerencia usuários e assinaturas. Acesso total ao painel `/admin`. |
+| **Aluno**         | `student`     | Estuda o conteúdo liberado pela assinatura. Acesso à área `/app`.                                               |
+
+
+
 
 ### Regras de atribuição
 
@@ -47,16 +57,22 @@ O sistema reconhece exatamente **dois perfis**, definidos pelo enum `app_role` n
 - Não existem outros perfis (sem professor, revisor ou moderador).
 - Após o login, o redirecionamento é automático: Admin → `/admin`, Aluno → `/app`.
 
+
+
 ### Permissões (resumo)
 
-| Recurso | Admin | Aluno |
-|---------|-------|-------|
-| Taxonomia e questões | Leitura e escrita | Somente leitura do conteúdo publicado |
-| Importação e publicação | Total | Sem acesso |
-| Assinaturas | Criar e gerenciar | Ver apenas a própria |
-| Tentativas, favoritos, estatísticas | Ver todos | Apenas os próprios |
+
+| Recurso                             | Admin             | Aluno                                 |
+| ----------------------------------- | ----------------- | ------------------------------------- |
+| Taxonomia e questões                | Leitura e escrita | Somente leitura do conteúdo publicado |
+| Importação e publicação             | Total             | Sem acesso                            |
+| Assinaturas                         | Criar e gerenciar | Ver apenas a própria                  |
+| Tentativas, favoritos, estatísticas | Ver todos         | Apenas os próprios                    |
+
 
 ---
+
+
 
 ## 3. Fluxo do Admin
 
@@ -72,7 +88,13 @@ flowchart LR
     F --> G[Vincular assinatura ao aluno]
 ```
 
+
+
+
+
 ### Etapas detalhadas
+
+
 
 #### 3.1 Configurar a taxonomia de conteúdo
 
@@ -85,11 +107,15 @@ O Admin cadastra a estrutura base que classifica as questões:
 - **Disciplinas** — ex.: Direito Constitucional, Português
 - **Assuntos** — vinculados a uma disciplina
 
+
+
 #### 3.2 Montar pacotes e versões
 
 - **Pacotes** agrupam conjuntos de questões para um curso.
 - **Versões** representam releases do pacote (ex.: `v1.0`, `v1.1`).
 - Apenas **uma versão por pacote** pode estar publicada por vez; ao publicar uma nova, as anteriores são despublicadas automaticamente.
+
+
 
 #### 3.3 Importar questões
 
@@ -102,6 +128,8 @@ O Admin **não cadastra questões manualmente** (não há botão "Nova Questão"
 5. Revisar o relatório de validação.
 6. **Aplicar** o lote — as questões são inseridas no banco e a taxonomia é criada automaticamente quando necessário.
 
+
+
 #### 3.4 Publicar conteúdo
 
 Na tela de **Versões**, o Admin publica a versão desejada. A partir desse momento:
@@ -109,10 +137,14 @@ Na tela de **Versões**, o Admin publica a versão desejada. A partir desse mome
 - Os alunos com assinatura ativa naquele pacote passam a ver o conteúdo da versão publicada.
 - O dashboard do Admin exibe métricas de questões publicadas e em revisão.
 
+
+
 #### 3.5 Gerenciar usuários e assinaturas
 
 - **Usuários** — lista de perfis cadastrados (Admin e Aluno).
 - **Assinaturas** — vincula um aluno a um **curso** e a um **pacote**. Sem assinatura ativa, o aluno não acessa conteúdo de estudo.
+
+
 
 #### 3.6 Monitorar o sistema
 
@@ -120,24 +152,28 @@ O **Dashboard** do Admin consolida contagens de cursos, pacotes, versões, quest
 
 ### Rotas do portal Admin
 
-| Rota | Função |
-|------|--------|
-| `/admin` | Dashboard |
-| `/admin/courses` | CRUD de cursos |
-| `/admin/positions` | CRUD de cargos |
-| `/admin/boards` | CRUD de bancas |
-| `/admin/exams` | CRUD de concursos |
-| `/admin/subjects` | CRUD de disciplinas |
-| `/admin/topics` | CRUD de assuntos |
-| `/admin/questions` | Listar, filtrar e editar questões (sem criação manual) |
-| `/admin/import` | Wizard de importação |
-| `/admin/export` | Exportar dados |
-| `/admin/packages` | CRUD de pacotes |
-| `/admin/versions` | CRUD e publicação de versões |
-| `/admin/users` | Lista de usuários |
-| `/admin/subscriptions` | CRUD de assinaturas |
+
+| Rota                   | Função                                                 |
+| ---------------------- | ------------------------------------------------------ |
+| `/admin`               | Dashboard                                              |
+| `/admin/courses`       | CRUD de cursos                                         |
+| `/admin/positions`     | CRUD de cargos                                         |
+| `/admin/boards`        | CRUD de bancas                                         |
+| `/admin/exams`         | CRUD de concursos                                      |
+| `/admin/subjects`      | CRUD de disciplinas                                    |
+| `/admin/topics`        | CRUD de assuntos                                       |
+| `/admin/questions`     | Listar, filtrar e editar questões (sem criação manual) |
+| `/admin/import`        | Wizard de importação                                   |
+| `/admin/export`        | Exportar dados                                         |
+| `/admin/packages`      | CRUD de pacotes                                        |
+| `/admin/versions`      | CRUD e publicação de versões                           |
+| `/admin/users`         | Lista de usuários                                      |
+| `/admin/subscriptions` | CRUD de assinaturas                                    |
+
 
 ---
+
+
 
 ## 4. Fluxo do Aluno
 
@@ -153,12 +189,20 @@ flowchart LR
     F --> G[Ver resultado da sessão]
 ```
 
+
+
+
+
 ### Etapas detalhadas
+
+
 
 #### 4.1 Autenticação
 
 - O aluno acessa `/auth` para login ou cadastro (e-mail e senha).
 - Novos cadastros recebem perfil **Aluno** automaticamente.
+
+
 
 #### 4.2 Dashboard
 
@@ -185,48 +229,64 @@ Cada resposta é registrada em `question_attempts` para histórico e estatístic
 
 ### Rotas do portal Aluno (MVP atual)
 
-| Rota | Função |
-|------|--------|
-| `/app` | Dashboard com resumo da assinatura |
-| `/app/study` | Sessão de estudo por disciplina |
+
+| Rota         | Função                             |
+| ------------ | ---------------------------------- |
+| `/app`       | Dashboard com resumo da assinatura |
+| `/app/study` | Sessão de estudo por disciplina    |
+
 
 > Rotas planejadas para etapas futuras: histórico (`/app/history`), favoritos (`/app/favorites`), estatísticas (`/app/stats`), perfil e configurações.
 
 ---
 
+
+
 ## 5. Escopo do MVP
+
+
 
 ### Dentro do escopo
 
-| Área | O que está incluído |
-|------|---------------------|
-| **Autenticação** | Login, cadastro e redirecionamento por perfil |
-| **Taxonomia** | CRUD completo de cursos, cargos, bancas, concursos, disciplinas e assuntos |
-| **Questões** | Importação em lote (CSV/XLSX/JSON), validação, staging e aplicação |
-| **Pacotes** | Criação de pacotes, versões e publicação (uma versão ativa por pacote) |
-| **Assinaturas** | Vínculo aluno ↔ curso ↔ pacote |
-| **Estudo** | Seleção de disciplina, sessão de questões com correção e resultado |
-| **Histórico** | Registro de tentativas por questão (`question_attempts`) |
-| **Administração** | Dashboard, listagem de usuários, exportação de dados |
-| **Segurança** | RLS no Supabase, roles `admin`/`student`, função `has_role` |
-| **Design** | Interface premium com Shadcn UI, responsiva, tokens semânticos |
+
+| Área              | O que está incluído                                                        |
+| ----------------- | -------------------------------------------------------------------------- |
+| **Autenticação**  | Login, cadastro e redirecionamento por perfil                              |
+| **Taxonomia**     | CRUD completo de cursos, cargos, bancas, concursos, disciplinas e assuntos |
+| **Questões**      | Importação em lote (CSV/XLSX/JSON), validação, staging e aplicação         |
+| **Pacotes**       | Criação de pacotes, versões e publicação (uma versão ativa por pacote)     |
+| **Assinaturas**   | Vínculo aluno ↔ curso ↔ pacote                                             |
+| **Estudo**        | Seleção de disciplina, sessão de questões com correção e resultado         |
+| **Histórico**     | Registro de tentativas por questão (`question_attempts`)                   |
+| **Administração** | Dashboard, listagem de usuários, exportação de dados                       |
+| **Segurança**     | RLS no Supabase, roles `admin`/`student`, função `has_role`                |
+| **Design**        | Interface premium com Shadcn UI, responsiva, tokens semânticos             |
+
+
+
 
 ### Fora do escopo (MVP)
 
-| Item | Motivo |
-|------|--------|
-| IA generativa | Não faz parte da proposta inicial |
-| Cadastro manual de questões | Conteúdo entra exclusivamente por importação |
-| Pagamento / checkout | Assinaturas são gerenciadas manualmente pelo Admin |
-| Simulados personalizados | Aluno estuda por disciplina, sem montagem de provas |
-| Meta diária, cronômetro, tempo estimado | Simplificação intencional do fluxo de estudo |
-| Perfis extras (professor, revisor) | Apenas Admin e Aluno |
-| Favoritos e estatísticas avançadas (UI) | Schema pronto; telas do aluno em etapa futura |
-| Logs e configurações (UI Admin) | Planejados; não bloqueiam o MVP |
+
+| Item                                    | Motivo                                              |
+| --------------------------------------- | --------------------------------------------------- |
+| IA generativa                           | Não faz parte da proposta inicial                   |
+| Cadastro manual de questões             | Conteúdo entra exclusivamente por importação        |
+| Pagamento / checkout                    | Assinaturas são gerenciadas manualmente pelo Admin  |
+| Simulados personalizados                | Aluno estuda por disciplina, sem montagem de provas |
+| Meta diária, cronômetro, tempo estimado | Simplificação intencional do fluxo de estudo        |
+| Perfis extras (professor, revisor)      | Apenas Admin e Aluno                                |
+| Favoritos e estatísticas avançadas (UI) | Schema pronto; telas do aluno em etapa futura       |
+| Logs e configurações (UI Admin)         | Planejados; não bloqueiam o MVP                     |
+
 
 ---
 
+
+
 ## 6. Estrutura geral da plataforma
+
+
 
 ### Arquitetura de alto nível
 
@@ -245,15 +305,21 @@ Cada resposta é registrada em `question_attempts` para histórico e estatístic
 └─────────────────────────────────────────────────────────┘
 ```
 
+
+
 ### Stack tecnológica
 
-| Camada | Tecnologia |
-|--------|------------|
-| Framework | TanStack Start (roteamento file-based) |
-| UI | React 19, Shadcn UI, Tailwind CSS |
-| Estado servidor | TanStack Query |
-| Backend | Supabase (Auth, PostgreSQL, RLS) |
-| Linguagem | TypeScript |
+
+| Camada          | Tecnologia                             |
+| --------------- | -------------------------------------- |
+| Framework       | TanStack Start (roteamento file-based) |
+| UI              | React 19, Shadcn UI, Tailwind CSS      |
+| Estado servidor | TanStack Query                         |
+| Backend         | Supabase (Auth, PostgreSQL, RLS)       |
+| Linguagem       | TypeScript                             |
+
+
+
 
 ### Modelo de dados (entidades principais)
 
@@ -274,6 +340,8 @@ favorites
 statistics
 ```
 
+
+
 ### Relação entre entidades-chave
 
 - Um **pacote** pertence opcionalmente a um **curso**.
@@ -282,14 +350,20 @@ statistics
 - Uma **assinatura** liga um **aluno** a um **curso** e a um **pacote**.
 - O aluno estuda apenas questões da **versão publicada** do pacote da sua assinatura.
 
+
+
 ### Páginas públicas
 
-| Rota | Função |
-|------|--------|
-| `/` | Landing page com apresentação do produto |
-| `/auth` | Login e cadastro |
+
+| Rota    | Função                                   |
+| ------- | ---------------------------------------- |
+| `/`     | Landing page com apresentação do produto |
+| `/auth` | Login e cadastro                         |
+
 
 ---
+
+
 
 ## Resumo
 
@@ -298,3 +372,4 @@ O SimulaPro Concursos é uma plataforma de dois portais — **Admin** e **Aluno*
 A frase guia resume a divisão de responsabilidades:
 
 > **Admin produz e publica conteúdo. Aluno apenas estuda o conteúdo comprado.**
+

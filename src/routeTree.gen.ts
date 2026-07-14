@@ -19,6 +19,7 @@ import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authentic
 import { Route as ApiWebhooksAsaasRouteImport } from './routes/api/webhooks/asaas'
 import { Route as AuthenticatedAppSubscriptionRouteImport } from './routes/_authenticated/app/subscription'
 import { Route as AuthenticatedAppStudyRouteImport } from './routes/_authenticated/app/study'
+import { Route as AuthenticatedAppReviewRouteImport } from './routes/_authenticated/app/review'
 import { Route as AuthenticatedAppHistoryRouteImport } from './routes/_authenticated/app/history'
 import { Route as AuthenticatedAdminVersionsRouteImport } from './routes/_authenticated/admin/versions'
 import { Route as AuthenticatedAdminUsersRouteImport } from './routes/_authenticated/admin/users'
@@ -92,6 +93,11 @@ const AuthenticatedAppSubscriptionRoute =
 const AuthenticatedAppStudyRoute = AuthenticatedAppStudyRouteImport.update({
   id: '/study',
   path: '/study',
+  getParentRoute: () => AuthenticatedAppRouteRoute,
+} as any)
+const AuthenticatedAppReviewRoute = AuthenticatedAppReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
   getParentRoute: () => AuthenticatedAppRouteRoute,
 } as any)
 const AuthenticatedAppHistoryRoute = AuthenticatedAppHistoryRouteImport.update({
@@ -257,6 +263,7 @@ export interface FileRoutesByFullPath {
   '/admin/users': typeof AuthenticatedAdminUsersRoute
   '/admin/versions': typeof AuthenticatedAdminVersionsRoute
   '/app/history': typeof AuthenticatedAppHistoryRoute
+  '/app/review': typeof AuthenticatedAppReviewRoute
   '/app/study': typeof AuthenticatedAppStudyRouteWithChildren
   '/app/subscription': typeof AuthenticatedAppSubscriptionRoute
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
@@ -288,6 +295,7 @@ export interface FileRoutesByTo {
   '/admin/users': typeof AuthenticatedAdminUsersRoute
   '/admin/versions': typeof AuthenticatedAdminVersionsRoute
   '/app/history': typeof AuthenticatedAppHistoryRoute
+  '/app/review': typeof AuthenticatedAppReviewRoute
   '/app/subscription': typeof AuthenticatedAppSubscriptionRoute
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
   '/admin': typeof AuthenticatedAdminIndexRoute
@@ -324,6 +332,7 @@ export interface FileRoutesById {
   '/_authenticated/admin/users': typeof AuthenticatedAdminUsersRoute
   '/_authenticated/admin/versions': typeof AuthenticatedAdminVersionsRoute
   '/_authenticated/app/history': typeof AuthenticatedAppHistoryRoute
+  '/_authenticated/app/review': typeof AuthenticatedAppReviewRoute
   '/_authenticated/app/study': typeof AuthenticatedAppStudyRouteWithChildren
   '/_authenticated/app/subscription': typeof AuthenticatedAppSubscriptionRoute
   '/api/webhooks/asaas': typeof ApiWebhooksAsaasRoute
@@ -361,6 +370,7 @@ export interface FileRouteTypes {
     | '/admin/users'
     | '/admin/versions'
     | '/app/history'
+    | '/app/review'
     | '/app/study'
     | '/app/subscription'
     | '/api/webhooks/asaas'
@@ -392,6 +402,7 @@ export interface FileRouteTypes {
     | '/admin/users'
     | '/admin/versions'
     | '/app/history'
+    | '/app/review'
     | '/app/subscription'
     | '/api/webhooks/asaas'
     | '/admin'
@@ -427,6 +438,7 @@ export interface FileRouteTypes {
     | '/_authenticated/admin/users'
     | '/_authenticated/admin/versions'
     | '/_authenticated/app/history'
+    | '/_authenticated/app/review'
     | '/_authenticated/app/study'
     | '/_authenticated/app/subscription'
     | '/api/webhooks/asaas'
@@ -519,6 +531,13 @@ declare module '@tanstack/react-router' {
       path: '/study'
       fullPath: '/app/study'
       preLoaderRoute: typeof AuthenticatedAppStudyRouteImport
+      parentRoute: typeof AuthenticatedAppRouteRoute
+    }
+    '/_authenticated/app/review': {
+      id: '/_authenticated/app/review'
+      path: '/review'
+      fullPath: '/app/review'
+      preLoaderRoute: typeof AuthenticatedAppReviewRouteImport
       parentRoute: typeof AuthenticatedAppRouteRoute
     }
     '/_authenticated/app/history': {
@@ -805,6 +824,7 @@ const AuthenticatedAppStudyRouteWithChildren =
 
 interface AuthenticatedAppRouteRouteChildren {
   AuthenticatedAppHistoryRoute: typeof AuthenticatedAppHistoryRoute
+  AuthenticatedAppReviewRoute: typeof AuthenticatedAppReviewRoute
   AuthenticatedAppStudyRoute: typeof AuthenticatedAppStudyRouteWithChildren
   AuthenticatedAppSubscriptionRoute: typeof AuthenticatedAppSubscriptionRoute
   AuthenticatedAppIndexRoute: typeof AuthenticatedAppIndexRoute
@@ -812,6 +832,7 @@ interface AuthenticatedAppRouteRouteChildren {
 
 const AuthenticatedAppRouteRouteChildren: AuthenticatedAppRouteRouteChildren = {
   AuthenticatedAppHistoryRoute: AuthenticatedAppHistoryRoute,
+  AuthenticatedAppReviewRoute: AuthenticatedAppReviewRoute,
   AuthenticatedAppStudyRoute: AuthenticatedAppStudyRouteWithChildren,
   AuthenticatedAppSubscriptionRoute: AuthenticatedAppSubscriptionRoute,
   AuthenticatedAppIndexRoute: AuthenticatedAppIndexRoute,

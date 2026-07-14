@@ -1,24 +1,18 @@
 import { Link, useNavigate } from "@tanstack/react-router";
 import { useMutation } from "@tanstack/react-query";
 import { Fragment, useEffect, useMemo, useState } from "react";
-import {
-  CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
-  RotateCcw,
-  X,
-  XCircle,
-} from "lucide-react";
-import { SessionHeader } from "@/components/app/study/SessionHeader";
+import { CheckCircle2, ChevronLeft, ChevronRight, X, XCircle } from "lucide-react";
 import { QuestionCard } from "@/components/app/study/QuestionCard";
+import { QuestionFeedbackPanel } from "@/components/app/study/QuestionFeedbackPanel";
+import { SessionResultsActions } from "@/components/app/study/SessionResultsActions";
+import { SessionResultsPerformanceTable } from "@/components/app/study/SessionResultsPerformanceTable";
+import { SessionResultsRecommendations } from "@/components/app/study/SessionResultsRecommendations";
+import { SessionResultsSummaryCards } from "@/components/app/study/SessionResultsSummaryCards";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Collapsible,
-  CollapsibleContent,
-} from "@/components/ui/collapsible";
+import { Collapsible, CollapsibleContent } from "@/components/ui/collapsible";
 import {
   Table,
   TableBody,
@@ -28,6 +22,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { formatDashboardDate, formatStudyDuration } from "@/lib/student-dashboard";
+import { buildSessionResultsAnalytics } from "@/lib/session-results-analytics";
 import type { SessionResults, StudySessionDetail } from "@/lib/study-engine";
 import {
   createStudySession,
@@ -35,9 +30,10 @@ import {
   STUDY_MODE_LABELS,
 } from "@/lib/study-session";
 import { toast } from "sonner";
+import { STUDENT_PAGE_SHELL } from "@/config/study";
 
 const RESULTS_PAGE_SIZE = 25;
-const pageShellClass = "mx-auto space-y-8 2xl:max-w-[1600px]";
+const pageShellClass = STUDENT_PAGE_SHELL;
 
 type ListFilter = "all" | "correct" | "wrong";
 
@@ -58,8 +54,8 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
   const [page, setPage] = useState(1);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
-  const { summary } = results;
-  const subtitle = `${session.course_name} · ${session.package_name} · v${session.version_number}`;
+  const analytics = useMemo(() => buildSessionResultsAnalytics(results), [results]);
+  const { summary } = analytics;
 
   const filteredItems = useMemo(() => {
     if (listFilter === "correct") {
@@ -109,114 +105,62 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
 
   return (
     <div className={pageShellClass}>
-      <header>
+      <header className="space-y-1">
         <h1 className="text-2xl font-bold tracking-tight">Resultado da sessão</h1>
         <p className="text-sm text-muted-foreground">
-          Confira seu desempenho e revise as questões respondidas.
+          Diagnóstico completo — entenda onde foi bem, onde errou e o que revisar em seguida.
+        </p>
+        <p className="text-xs text-muted-foreground">
+          {session.distribution_name} · {STUDY_MODE_LABELS[session.mode]} ·{" "}
+          {formatDashboardDate(results.sessionDate)}
         </p>
       </header>
 
-      <section className="space-y-4" aria-label="Resumo do desempenho">
-        <div className="grid grid-cols-2 items-stretch gap-4 lg:grid-cols-[1fr_11rem_11rem]">
-          <Card className="col-span-2 flex flex-col justify-center lg:col-span-1">
-            <CardContent className="space-y-1 p-6">
-              <p className="text-2xl font-semibold tabular-nums tracking-tight">
-                {summary.percentage}%
-              </p>
-              <p className="text-lg font-semibold">Aproveitamento</p>
-              <p className="text-sm text-muted-foreground tabular-nums">
-                {summary.answeredCount} de {summary.totalQuestions} respondidas
-              </p>
-            </CardContent>
-          </Card>
+      <SessionResultsSummaryCards summary={summary} />
 
-          <Card className="flex flex-col justify-center">
-            <CardContent className="space-y-1 p-5">
-              <p className="text-xs text-muted-foreground">Acertos</p>
-              <p className="text-2xl font-semibold tabular-nums tracking-tight">
-                {summary.correctCount}
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="flex flex-col justify-center">
-            <CardContent className="space-y-1 p-5">
-              <p className="text-xs text-muted-foreground">Erros</p>
-              <p className="text-2xl font-semibold tabular-nums tracking-tight">
-                {summary.wrongCount}
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        <p className="text-xs text-muted-foreground tabular-nums">
-          Tempo total de estudo: {formatStudyDuration(summary.totalTimeSeconds)} · Tempo médio/questão:{" "}
-          {formatStudyDuration(summary.averageTimeSeconds)}
-        </p>
-      </section>
-
-      <section className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center" aria-label="Próximas ações">
-        <Button asChild className="order-1 w-full sm:w-auto">
-          <Link to="/app/study">Nova sessão</Link>
-        </Button>
-        <Button
-          type="button"
-          variant="outline"
-          className="order-2 w-full sm:w-auto"
-          onClick={() => retryWrongSession.mutate()}
-          disabled={summary.wrongCount === 0 || retryWrongSession.isPending}
-        >
-          <RotateCcw className="h-4 w-4 mr-2" aria-hidden="true" />
-          {retryWrongSession.isPending ? "Criando..." : "Refazer apenas erradas"}
-        </Button>
-        <Button variant="link" size="sm" className="order-3 h-9 px-0 sm:ml-auto" asChild>
-          <Link to="/app">Voltar ao Dashboard</Link>
-        </Button>
-      </section>
-
-      <Card className="text-sm">
-        <SessionHeader
-          title={session.distribution_name}
-          subtitle={subtitle}
-          mode={session.mode}
+      <div className="grid gap-6 xl:grid-cols-2">
+        <SessionResultsPerformanceTable
+          title="Desempenho por disciplina"
+          description="Ordenado do menor para o maior aproveitamento."
+          groups={analytics.subjects}
+          nameColumnLabel="Disciplina"
+          emptyMessage="Nenhuma disciplina identificada nas questões respondidas."
         />
-        <CardContent className="grid gap-3 pb-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <p className="text-xs text-muted-foreground">Curso</p>
-            <p className="truncate font-medium">{session.course_name}</p>
-          </div>
-          <div>
-            <p className="text-xs text-muted-foreground">Pacote</p>
-            <p className="truncate font-medium">{session.package_name}</p>
-          </div>
-          <div>
-            <p className="text-xs text-muted-foreground">Versão</p>
-            <p className="font-medium tabular-nums">v{session.version_number}</p>
-          </div>
-          <div>
-            <p className="text-xs text-muted-foreground">Distribuição</p>
-            <p className="truncate font-medium">{session.distribution_name}</p>
-          </div>
-          <div>
-            <p className="text-xs text-muted-foreground">Modo</p>
-            <p className="font-medium">{STUDY_MODE_LABELS[session.mode]}</p>
-          </div>
-          <div>
-            <p className="text-xs text-muted-foreground">Data/Hora</p>
-            <p className="font-medium tabular-nums">{formatDashboardDate(results.sessionDate)}</p>
-          </div>
-        </CardContent>
-      </Card>
+        <SessionResultsPerformanceTable
+          title="Desempenho por assunto"
+          description="Somente assuntos com questões respondidas nesta sessão."
+          groups={analytics.topics}
+          nameColumnLabel="Assunto"
+          emptyMessage="Nenhum assunto identificado nas questões respondidas."
+        />
+      </div>
 
-      <Card>
+      <SessionResultsPerformanceTable
+        title="Desempenho por banca"
+        description="Comparativo de acertos por banca examinadora."
+        groups={analytics.boards}
+        nameColumnLabel="Banca"
+        emptyMessage="Nenhuma banca identificada nas questões respondidas."
+        formatValue={(group) => `${group.correct}/${group.total}`}
+      />
+
+      <SessionResultsRecommendations recommendations={analytics.recommendations} />
+
+      <SessionResultsActions
+        wrongCount={summary.wrongCount}
+        isCreatingReview={retryWrongSession.isPending}
+        onReviewErrors={() => retryWrongSession.mutate()}
+      />
+
+      <Card className="border-border/60 shadow-none">
         <CardHeader className="flex flex-col gap-4 space-y-0 sm:flex-row sm:items-center sm:justify-between">
           <div className="min-w-0">
-            <CardTitle>Questões respondidas</CardTitle>
+            <CardTitle>Questões da sessão</CardTitle>
             <CardDescription>
               Exibindo {filterLabel(listFilter)} ({filteredItems.length} de {summary.totalQuestions})
             </CardDescription>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar questões">
             <Button
               type="button"
               size="sm"
@@ -267,11 +211,12 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                   <TableHeader>
                     <TableRow>
                       <TableHead className="min-w-[3rem]">#</TableHead>
-                      <TableHead className="min-w-[12rem]">Enunciado</TableHead>
-                      <TableHead className="min-w-[5rem]">Sua resp.</TableHead>
-                      <TableHead className="min-w-[5rem]">Gabarito</TableHead>
-                      <TableHead className="min-w-[7rem]">Resultado</TableHead>
-                      <TableHead className="min-w-[7rem] text-right">Ação</TableHead>
+                      <TableHead className="min-w-[10rem]">Questão</TableHead>
+                      <TableHead className="min-w-[8rem]">Disciplina</TableHead>
+                      <TableHead className="min-w-[8rem]">Assunto</TableHead>
+                      <TableHead className="min-w-[6rem]">Status</TableHead>
+                      <TableHead className="min-w-[5rem]">Tempo</TableHead>
+                      <TableHead className="min-w-[6rem] text-right">Ações</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
@@ -279,11 +224,15 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                       <Fragment key={item.sessionQuestionId}>
                         <TableRow>
                           <TableCell className="font-medium tabular-nums">{item.order}</TableCell>
-                          <TableCell className="max-w-md">
+                          <TableCell className="max-w-xs">
                             <p className="line-clamp-2 text-sm">{item.statementSummary}</p>
                           </TableCell>
-                          <TableCell className="tabular-nums">{item.selectedAnswer ?? "—"}</TableCell>
-                          <TableCell className="tabular-nums">{item.correctAnswer ?? "—"}</TableCell>
+                          <TableCell className="text-sm text-muted-foreground">
+                            {item.subjectName ?? "—"}
+                          </TableCell>
+                          <TableCell className="text-sm text-muted-foreground">
+                            {item.topicName ?? "—"}
+                          </TableCell>
                           <TableCell>
                             {!item.isAnswered ? (
                               <Badge variant="outline">Não respondida</Badge>
@@ -295,41 +244,39 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                               <Badge variant="destructive">Incorreta</Badge>
                             )}
                           </TableCell>
+                          <TableCell className="tabular-nums text-sm text-muted-foreground">
+                            {item.responseTimeSeconds != null
+                              ? formatStudyDuration(item.responseTimeSeconds)
+                              : "—"}
+                          </TableCell>
                           <TableCell className="text-right">
                             <Button
                               variant="outline"
                               size="sm"
                               onClick={() => handleReviewQuestion(item.sessionQuestionId)}
                             >
-                              {expandedId === item.sessionQuestionId ? "Ocultar" : "Revisar questão"}
+                              {expandedId === item.sessionQuestionId ? "Fechar" : "Abrir questão"}
                             </Button>
                           </TableCell>
                         </TableRow>
 
                         {expandedId === item.sessionQuestionId && (
                           <TableRow>
-                            <TableCell colSpan={6} className="bg-muted/30 p-0">
+                            <TableCell colSpan={7} className="bg-muted/30 p-0">
                               <Collapsible open onOpenChange={(open) => !open && setExpandedId(null)}>
                                 <CollapsibleContent className="space-y-0">
-                                  <div className="p-4">
-                                    <QuestionCard
-                                      statement={item.statement}
-                                      feedback={
-                                        item.isAnswered && item.correctAnswer
-                                          ? {
-                                              isCorrect: item.isCorrect === true,
-                                              correctAnswer: item.correctAnswer,
-                                              explanation: item.explanation,
-                                              bibliography: null,
-                                              legalReference: null,
-                                            }
-                                          : null
-                                      }
-                                    />
-                                    {item.explanation && !item.isAnswered && (
-                                      <p className="mt-2 text-sm text-muted-foreground">
-                                        {item.explanation}
-                                      </p>
+                                  <div className="space-y-4 p-4">
+                                    <QuestionCard statement={item.statement} />
+                                    {item.isAnswered && item.correctAnswer && (
+                                      <QuestionFeedbackPanel
+                                        feedback={{
+                                          isCorrect: item.isCorrect === true,
+                                          correctAnswer: item.correctAnswer,
+                                          explanation: item.explanation,
+                                          bibliography: null,
+                                          legalReference: null,
+                                        }}
+                                      />
                                     )}
                                   </div>
                                   <div className="flex justify-end border-t border-border px-4 py-2">

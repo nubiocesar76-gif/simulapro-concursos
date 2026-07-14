@@ -1,54 +1,24 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import type { QuestionFeedback } from "@/lib/study-engine";
-import { CheckCircle2, XCircle } from "lucide-react";
-
 type QuestionCardProps = {
   statement: string;
-  feedback?: QuestionFeedback | null;
+  imageUrl?: string | null;
 };
 
-export function QuestionCard({ statement, feedback }: QuestionCardProps) {
+export function QuestionCard({ statement, imageUrl }: QuestionCardProps) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-base font-medium leading-relaxed">Enunciado</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <p className="text-base leading-relaxed whitespace-pre-wrap">{statement}</p>
+    <article className="space-y-6">
+      <p className="text-lg leading-[1.8] whitespace-pre-wrap text-foreground sm:text-xl sm:leading-[1.85] md:text-[1.35rem] md:leading-[1.9]">
+        {statement}
+      </p>
 
-        {feedback && (
-          <Alert
-            className={
-              feedback.isCorrect
-                ? "border-success/50 bg-success/5 text-success"
-                : undefined
-            }
-            variant={feedback.isCorrect ? "default" : "destructive"}
-          >
-            {feedback.isCorrect ? (
-              <CheckCircle2 className="h-4 w-4" />
-            ) : (
-              <XCircle className="h-4 w-4" />
-            )}
-            <AlertTitle>{feedback.isCorrect ? "Resposta correta" : "Resposta incorreta"}</AlertTitle>
-            <AlertDescription className="space-y-2 text-sm">
-              <p>Gabarito: {feedback.correctAnswer}</p>
-              {feedback.explanation && <p>{feedback.explanation}</p>}
-              {feedback.bibliography && (
-                <p>
-                  <span className="font-medium">Bibliografia:</span> {feedback.bibliography}
-                </p>
-              )}
-              {feedback.legalReference && (
-                <p>
-                  <span className="font-medium">Referência legal:</span> {feedback.legalReference}
-                </p>
-              )}
-            </AlertDescription>
-          </Alert>
-        )}
-      </CardContent>
-    </Card>
+      {imageUrl && (
+        <figure className="mx-auto w-full max-w-3xl overflow-hidden rounded-xl border border-border/50 bg-muted/20 p-4 sm:p-5">
+          <img
+            src={imageUrl}
+            alt="Ilustração do enunciado"
+            className="mx-auto max-h-[min(24rem,60vh)] w-full object-contain"
+          />
+        </figure>
+      )}
+    </article>
   );
 }
