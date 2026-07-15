@@ -9,7 +9,7 @@ import {
   buildCustomerExternalReference,
   buildExternalReference,
 } from "@/integrations/asaas/reference.server";
-import { findCommercialPlan } from "@/config/commercial-plans";
+import { COMMERCIAL_PLANS, findCommercialPlan } from "@/config/commercial-plans";
 
 export type AsaasDisplayStatus =
   "ATIVA" | "AGUARDANDO_PAGAMENTO" | "CANCELADA" | "EM_ATRASO" | "NAO_ENCONTRADA";
@@ -25,40 +25,46 @@ async function lookupAsaasLiveStatus(
   userId: string,
   distributionId: string,
 ): Promise<AsaasLiveStatus> {
-  const ref = buildExternalReference(userId, distributionId);
-  const subscription = await AsaasService.buscarAssinaturaPorExternalReference(ref);
+  // O externalReference agora inclui o planId (Sprint P0.5A), e a assinatura local
+  // não guarda qual plano foi comprado — por isso tentamos cada plano comercial que
+  // aponta para esta distribuição até encontrar a assinatura correspondente no Asaas.
+  const candidatePlans = COMMERCIAL_PLANS.filter((plan) => plan.distributionId === distributionId);
 
-  if (!subscription) {
+  for (const plan of candidatePlans) {
+    const ref = buildExternalReference(userId, distributionId, plan.id);
+    const subscription = await AsaasService.buscarAssinaturaPorExternalReference(ref);
+    if (!subscription) continue;
+
+    const latestPayment = await AsaasService.buscarCobrancaMaisRecente(subscription.id).catch(
+      () => null,
+    );
+
+    let displayStatus: AsaasDisplayStatus = "ATIVA";
+    if (subscription.status !== "ACTIVE") {
+      displayStatus = "CANCELADA";
+    } else if (latestPayment?.status === "OVERDUE") {
+      displayStatus = "EM_ATRASO";
+    } else if (
+      latestPayment &&
+      latestPayment.status !== "CONFIRMED" &&
+      latestPayment.status !== "RECEIVED"
+    ) {
+      displayStatus = "AGUARDANDO_PAGAMENTO";
+    }
+
     return {
-      displayStatus: "NAO_ENCONTRADA",
-      nextDueDate: null,
-      billingType: null,
-      invoiceUrl: null,
+      displayStatus,
+      nextDueDate: subscription.nextDueDate ?? null,
+      billingType: subscription.billingType ?? null,
+      invoiceUrl: latestPayment?.invoiceUrl ?? null,
     };
   }
 
-  const latestPayment = await AsaasService.buscarCobrancaMaisRecente(subscription.id).catch(
-    () => null,
-  );
-
-  let displayStatus: AsaasDisplayStatus = "ATIVA";
-  if (subscription.status !== "ACTIVE") {
-    displayStatus = "CANCELADA";
-  } else if (latestPayment?.status === "OVERDUE") {
-    displayStatus = "EM_ATRASO";
-  } else if (
-    latestPayment &&
-    latestPayment.status !== "CONFIRMED" &&
-    latestPayment.status !== "RECEIVED"
-  ) {
-    displayStatus = "AGUARDANDO_PAGAMENTO";
-  }
-
   return {
-    displayStatus,
-    nextDueDate: subscription.nextDueDate ?? null,
-    billingType: subscription.billingType ?? null,
-    invoiceUrl: latestPayment?.invoiceUrl ?? null,
+    displayStatus: "NAO_ENCONTRADA",
+    nextDueDate: null,
+    billingType: null,
+    invoiceUrl: null,
   };
 }
 
@@ -108,7 +114,7 @@ export const iniciarCheckout = createServerFn({ method: "POST" })
       });
     }
 
-    const subscriptionRef = buildExternalReference(context.userId, plan.distributionId);
+    const subscriptionRef = buildExternalReference(context.userId, plan.distributionId, plan.id);
     const existingSubscription =
       await AsaasService.buscarAssinaturaPorExternalReference(subscriptionRef);
     if (existingSubscription?.status === "ACTIVE") {

@@ -1,8 +1,8 @@
 {
   "metadata": {
     "version": "1.0.0",
-    "generatedAt": "2026-07-14T11:09:28.278Z",
-    "generatedBy": "SimulaPro Question Seed Engine",
+    "generatedAt": "2026-07-15T18:22:25.168Z",
+    "generatedBy": "SimulaPro Demo Copy (Sprint P1.4)",
     "description": "Banco Oficial de Questões",
     "environment": "development"
   },
@@ -43480,6 +43480,1086 @@
         "question": 43
       },
       "contentHash": "fff80b6ecd3a68eb6639ded59a7efd70695a5b25ceea98a28c82ca488b16d2c9"
+    },
+    {
+      "statement": "Através da escala de coma de Glasgow é possível mensurar o nível de consciência dos pacientes, assinale a alternativa que não é considerada uma variável a ser avaliada.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Abertura ocular"
+        },
+        {
+          "letter": "B",
+          "text": "Resposta verbal"
+        },
+        {
+          "letter": "C",
+          "text": "Resposta motora"
+        },
+        {
+          "letter": "D",
+          "text": "Resposta pupilar"
+        },
+        {
+          "letter": "E",
+          "text": "Resposta sensorial"
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "urgencia-e-emergencia",
+      "topic": "atendimento-ao-politraumatizado",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "A Escala de Coma de Glasgow avalia três domínios: abertura ocular, resposta verbal e resposta motora; \"resposta sensorial\" não é uma das variáveis avaliadas, conforme a alternativa E.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 9,
+        "question": 54,
+        "organization": "EBSERH"
+      },
+      "contentHash": "4106f56bf3a5d91410b1d8a474ec4d933d1dbcd9702d3470040af05b06c770df",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "4c643964-6051-4ae8-b788-82c795fd76e5",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Carlos Eduardo, obeso, 39 anos, foi atropelado em via pública. Houve uma lesão profunda com fratura exposta em membro inferior direito, corte profundo na região frontal do crânio, membro superior direito com edema e hematomas extensos; assim que ocorreu o acidente ele estava consciente e orientado, respondeu seu nome, que era diabético e hipertenso. Ao dar entrada no pronto-socorro, cerca de 30 minutos após o acidente, foi reavaliado e apresentava confusão mental, sonolência, abertura ocular apenas se estimulado (dor), com extensão dos membros superiores, as pupilas fotorreagentes. De acordo com a pontuação obtida na escala de coma de Glasgow, assinale a alternativa que apresenta que tipo de trauma esse paciente apresenta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Nível leve"
+        },
+        {
+          "letter": "B",
+          "text": "Nível moderado"
+        },
+        {
+          "letter": "C",
+          "text": "Nível grave"
+        },
+        {
+          "letter": "D",
+          "text": "Coma"
+        },
+        {
+          "letter": "E",
+          "text": "Estável"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "urgencia-e-emergencia",
+      "topic": "atendimento-ao-politraumatizado",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "Abertura ocular à dor (2) + resposta verbal confusa (4) + resposta motora em extensão/descerebração (2) totalizam 8 pontos na Escala de Glasgow, classificando o trauma como de nível grave (≤8), conforme a alternativa C.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 9,
+        "question": 55,
+        "organization": "EBSERH"
+      },
+      "contentHash": "c4eca92677c5b71cea85caca42a30c48e2454ce954208698d8b1a7d87dd1e5b0",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "9748e81c-be6f-4dd3-ada3-d3559ea17a80",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Sobre compressões torácicas eficientes e de boa qualidade, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) Deprimir o tórax em pelo menos 5 cm (sem exceder 6 cm). ( ) Manter frequência de compressões em 100 a 120 compressões/min. ( ) Mãos entrelaçadas. ( ) Alternar os profissionais que aplicam as compressões a cada 2 min. ( ) Evitar o completo retorno entre as compressões. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "V-V-V-V-V"
+        },
+        {
+          "letter": "B",
+          "text": "V-V-F-V-V"
+        },
+        {
+          "letter": "C",
+          "text": "V-V-V-V-F"
+        },
+        {
+          "letter": "D",
+          "text": "F-V-V-V-V"
+        },
+        {
+          "letter": "E",
+          "text": "V-F-V-F-V"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "urgencia-e-emergencia",
+      "topic": "parada-cardiorrespiratoria-e-rcp",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "As quatro primeiras práticas (profundidade de 5-6 cm, frequência de 100-120/min, mãos entrelaçadas e rodízio a cada 2 min) são recomendações corretas de RCP de alta qualidade; a última é falsa, pois a diretriz recomenda permitir o retorno completo do tórax entre as compressões, e não evitá-lo — resultando em V, V, V, V, F, conforme a alternativa C.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 10,
+        "question": 59,
+        "organization": "EBSERH"
+      },
+      "contentHash": "f596a114d66b8334a7e5866b1356a677e7f0f1c0224e31e32ba98bbf2e39fcfd",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "027ddecf-d60d-4ae0-b1b0-b35edfd50eba",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Assinale a alternativa que não apresenta sinais e sintomas de pneumotórax hipertensivo.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Percussão hipersonora"
+        },
+        {
+          "letter": "B",
+          "text": "Percussão hiposonora"
+        },
+        {
+          "letter": "C",
+          "text": "Desvio de traquéia contra-lateral"
+        },
+        {
+          "letter": "D",
+          "text": "Distensão das veias do pescoço"
+        },
+        {
+          "letter": "E",
+          "text": "Ausência de sons respiratórios (murmúrio vesicular)"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "urgencia-e-emergencia",
+      "topic": "emergencias-respiratorias",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "No pneumotórax hipertensivo a percussão é hipersonora (timpânica) devido ao ar acumulado, e não hiposonora — a alternativa B descreve um achado incompatível com esse quadro, sendo a resposta correta.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 9,
+        "question": 51,
+        "organization": "EBSERH"
+      },
+      "contentHash": "8a47e1657dc7315d095fe1a3a2d3153456f911f9c4181cc7187bc7e320c75297",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "40754dfa-1ad7-4b88-8a69-6f1a92af7aac",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "A distribuição percentual do total de profissionais de enfermagem para as 24 horas de cada unidade de internação deve observar o sistema de classificação e as proporções mínimas. Diante do exposto, assinale a alternativa incorreta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Para cuidado mínimo e intermediário: 33% são enfermeiros (mínimo de seis) e os demais auxiliares e/ou técnicos de enfermagem"
+        },
+        {
+          "letter": "B",
+          "text": "Para cuidado de alta dependência: 36% são enfermeiros e os demais técnicos e/ou auxiliares de enfermagem"
+        },
+        {
+          "letter": "C",
+          "text": "Para cuidado semi-intensivo: 42% são enfermeiros e os demais técnicos e/ou auxiliares de enfermagem"
+        },
+        {
+          "letter": "D",
+          "text": "Para cuidado semi-intensivo: 42% são enfermeiros e os demais técnicos de enfermagem"
+        },
+        {
+          "letter": "E",
+          "text": "Para cuidado intensivo: 52% são enfermeiros e os demais técnicos de enfermagem"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "administracao-em-enfermagem",
+      "topic": "dimensionamento-de-pessoal-de-enfermagem",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "A alternativa incorreta é a C: para cuidado semi-intensivo, os demais profissionais (além dos 42% de enfermeiros) devem ser exclusivamente técnicos de enfermagem, sem a presença de auxiliares — diferente do texto da alternativa, que inclui indevidamente \"auxiliares\".",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 8,
+        "question": 46,
+        "organization": "EBSERH"
+      },
+      "contentHash": "c1c01f35fe71af40acad678d5f5b4a7614d91505c821e0734d4097bfe8c6376b",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "43f43711-f102-4556-9dda-1f1e02ce8af7",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "A ______ é um fármaco inotrópico utilizado no tratamento da insuficiência cardíaca descompensada e nos choques sépticos e cardiogênicos. Atua no volume sistólico, eleva o débito cardíaco, a pressão arterial e a frequência cardíaca, além de reduzir a resistência vascular periférica. Assinale a alternativa que preencha corretamente a lacuna.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Noradrenalina"
+        },
+        {
+          "letter": "B",
+          "text": "Adrenalina"
+        },
+        {
+          "letter": "C",
+          "text": "Adenosina"
+        },
+        {
+          "letter": "D",
+          "text": "Dobutamina"
+        },
+        {
+          "letter": "E",
+          "text": "Vasopressina"
+        }
+      ],
+      "correctAnswer": "D",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "farmacologia",
+      "topic": "farmacos-vasoativos-e-inotropicos",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "A dobutamina é o fármaco inotrópico que eleva o débito cardíaco e reduz a resistência vascular periférica, sendo indicada na insuficiência cardíaca descompensada e nos choques sépticos e cardiogênicos, conforme a alternativa D.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 9,
+        "question": 58,
+        "organization": "EBSERH"
+      },
+      "contentHash": "e69f05c22e881d5f2928db00db804b3b1fcfee23e0d8f72c5da19fcee7aee035",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "b6d28069-ef0e-4adf-b0cf-0151e8d836df",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "A precaução para gotículas é indicada para evitar a transmissão de agentes infecciosos pelo depósito de gotículas nas mucosas. Assinale a alternativa que apresenta indicações para esta precaução.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Meningites bacterianas, hantavirose"
+        },
+        {
+          "letter": "B",
+          "text": "Influenza, tuberculose"
+        },
+        {
+          "letter": "C",
+          "text": "Aspergilose, hantavirose"
+        },
+        {
+          "letter": "D",
+          "text": "Rubéola, meningites bacterianas"
+        },
+        {
+          "letter": "E",
+          "text": "Influenza, Aspergilose"
+        }
+      ],
+      "correctAnswer": "D",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "Rubéola e meningites bacterianas são doenças transmitidas por gotículas, exigindo precaução específica para esse modo de transmissão, conforme a alternativa D; tuberculose (aerossóis) e aspergilose/hantavirose (não transmitidas de pessoa a pessoa por gotículas) não se enquadram nesse grupo.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 8,
+        "question": 50,
+        "organization": "EBSERH"
+      },
+      "contentHash": "f4055bcaa64697e1d7c3d5f1aa64bdad6ad1fdeec4c5a7b5f90eb9d1e1c773ed",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "8e8e0aff-2380-41fe-87ec-7169b7086539",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "A contenção física envolve técnicas desenvolvidas para restringir movimentos corporais e evitar comportamentos destrutivos. Analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F). ( ) Tem como objetivo controlar o comportamento do indivíduo para preservar sua própria segurança e integridade ou de terceiros. ( ) Na operacionalização da contenção física, sugere-se um mínimo de cinco membros da equipe, sendo que um membro assume o papel de líder. ( ) As contenções podem expor o cliente a complicações como redução da perfusão tecidual em extremidades, embolia pulmonar, aspiração, asfixia, lesão do plexo braquial, fraturas, entre outras. ( ) Reconhecida como primeiro recurso para o controle do comportamento e redução do risco de violência e danos. ( ) No Brasil, apenas as contenções químicas devem ser prescritas por médicos. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "V - V - V - F - V"
+        },
+        {
+          "letter": "B",
+          "text": "F - F - F - V - F"
+        },
+        {
+          "letter": "C",
+          "text": "V - V - F - F - F"
+        },
+        {
+          "letter": "D",
+          "text": "V - V - V - F - F"
+        },
+        {
+          "letter": "E",
+          "text": "V - F - V - V - F"
+        }
+      ],
+      "correctAnswer": "D",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "seguranca-do-paciente",
+      "topic": "contencao-fisica-do-paciente",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "As três primeiras afirmativas descrevem corretamente objetivo, operacionalização (5 membros, 1 líder) e complicações da contenção física; a quarta é falsa porque a contenção deve ser o último recurso, não o primeiro; a quinta também é falsa, pois tanto a contenção física quanto a química devem ser prescritas/registradas por profissional habilitado — resultando em V, V, V, F, F, conforme a alternativa D.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 8,
+        "question": 47,
+        "organization": "EBSERH"
+      },
+      "contentHash": "a657269cde2799fe9a6fc6d5e4c7cb82064d08147c3c8be8d7e3b3717b8550db",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "b51f0649-86c9-46e0-99b4-8e9699d1e688",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "A Resolução - RDC Nº 15, de 15 de março de 2012, dispõe sobre requisitos de boas práticas para o processamento de produtos para saúde. Diante do exposto, analise as afirmativas abaixo. I. É permitido o uso de estufas para esterilização de produtos de saúde. II. É obrigatório a realização de teste para avaliar o desempenho do sistema de remoção de ar (Bowie & Dick) da autoclave assistida por bomba de vácuo, no primeiro ciclo do dia. III. O rótulo de identificação da embalagem deve conter o nome do produto, número do lote, data da esterilização, data limite de uso, método de esterilização, nome do responsável pelo preparo. IV. As leitoras de indicadores biológicos e as seladoras térmicas devem ser calibradas, no mínimo, anualmente. Assinale a alternativa correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Apenas as afirmativas I, II e III estão corretas"
+        },
+        {
+          "letter": "B",
+          "text": "Apenas as afirmativas I, II e IV estão corretas"
+        },
+        {
+          "letter": "C",
+          "text": "Apenas as afirmativas I e III estão corretas"
+        },
+        {
+          "letter": "D",
+          "text": "Apenas as afirmativas II e III estão corretas"
+        },
+        {
+          "letter": "E",
+          "text": "Apenas as afirmativas II, III e IV estão corretas"
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "As afirmativas II, III e IV reproduzem corretamente exigências da RDC nº 15/2012 (teste de Bowie & Dick diário, rotulagem completa da embalagem e calibração anual dos equipamentos); a I é falsa porque a RDC nº 15/2012 proíbe o uso de estufas (calor seco) para esterilização de produtos para saúde, restando corretas apenas II, III e IV.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 9,
+        "question": 57,
+        "organization": "EBSERH"
+      },
+      "contentHash": "bbcf390ebafc9831b69f8f9b1974cf4cd75b10adccbcb9ad3292850c3a837547",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "e550e3d0-b8ae-4cc3-967d-ababb3d8bc3d",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Sobre o gerenciamento dos resíduos de serviços de saúde (RSS) do grupo A – subgrupo A1, assinale a alternativa incorreta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Os RSS resultantes de atividades com vacinação com microrganismos vivos, atenuados ou inativados devem ser tratados antes da disposição final ambientalmente adequada"
+        },
+        {
+          "letter": "B",
+          "text": "Os frascos de vacinas com expiração do prazo de validade com conteúdo inutilizado ou com restos do produto e seringas, quando desconectadas, não precisam ser tratados antes da disposição final ambiental"
+        },
+        {
+          "letter": "C",
+          "text": "As bolsas de sangue e de hemocomponentes rejeitadas por contaminação, por má conservação, com prazo de validade vencido e oriundas de coleta incompleta devem ser tratados antes da disposição final ambientalmente adequada"
+        },
+        {
+          "letter": "D",
+          "text": "As sobras de amostras de laboratório contendo sangue ou líquidos corpóreos podem ser descartadas diretamente no sistema de coleta de esgotos, desde que atendam respectivamente as regras estabelecidas pelos órgãos ambientais e pelos serviços de saneamento competentes"
+        },
+        {
+          "letter": "E",
+          "text": "As agulhas e o conjunto seringa-agulha utilizadas na aplicação de vacinas, quando não desconectadas, devem atender às regras de manejo dos resíduos perfurocortantes"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "biosseguranca",
+      "topic": "gerenciamento-de-residuos-de-servicos-de-saude",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "A alternativa incorreta é a B: os frascos de vacinas com microrganismos vivos, atenuados ou inativados e as seringas a eles associadas (mesmo desconectadas) integram o subgrupo A1 e devem, sim, ser tratados antes da disposição final.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 7,
+        "question": 43,
+        "organization": "EBSERH"
+      },
+      "contentHash": "e48499ba1ff9608c4db24013b6fd5b684c477d4debf49445a57ef331da2af310",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "a55d5bc7-f275-45bd-9c0d-8d9b5bc2c411",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Para determinação de morte encefálica é obrigatório a realização dos seguintes procedimentos: ( ) Dois exames clínicos que confirmem coma não perceptivo e ausência de função do tronco encefálico. ( ) Teste de apneia que confirme ausência de movimentos respiratórios após estimulação máxima dos centros respiratórios. ( ) Exame complementar que comprove ausência de atividade encefálica. ( ) Presença de lesão encefálica de causa conhecida, irreversível e capaz de causar morte encefálica. Analise as afirmativas abaixo, dê valores Verdadeiro (V) ou Falso (F) e assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "V - V - V - V"
+        },
+        {
+          "letter": "B",
+          "text": "V - V - V - F"
+        },
+        {
+          "letter": "C",
+          "text": "V - F - V - F"
+        },
+        {
+          "letter": "D",
+          "text": "F - V - V - V"
+        },
+        {
+          "letter": "E",
+          "text": "V - V - F - V"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "saude-do-adulto",
+      "topic": "doacao-e-transplante-de-orgaos",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "Os quatro procedimentos listados (dois exames clínicos, teste de apneia, exame complementar e confirmação de lesão encefálica de causa conhecida e irreversível) são todos exigidos pelo protocolo de determinação de morte encefálica, estando todas as afirmativas corretas, conforme a alternativa A.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 9,
+        "question": 56,
+        "organization": "EBSERH"
+      },
+      "contentHash": "4860d522d678305a2f717a3af59544de434ad42efb34592b400a2e73bbaefcdb",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "6f5cd673-f61a-42bf-8e53-da775a959d17",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "De acordo com as Diretrizes de Atenção à Gestante, a cirurgia cesariana, assinale a alternativa incorreta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "O contato pele a pele precoce entre a mãe e o recém-nascido deve ser assegurado e facilitado"
+        },
+        {
+          "letter": "B",
+          "text": "É recomendado o clampeamento tardio do cordão umbilical para o recém-nascido a termo e pré termo com ritmo respiratório normal, tônus normal, com líquido meconial"
+        },
+        {
+          "letter": "C",
+          "text": "É recomendado suporte adicional para a mulher que foi submetida à cesariana para ajudá-las a iniciar o aleitamento materno tão logo após o parto"
+        },
+        {
+          "letter": "D",
+          "text": "Para gestantes com vírus da imunodeficiência humana, em uso de antirretroviral e com supressão da carga viral sustentada, caso não haja indicação de cesárea por outro motivo a via de parto vaginal é indicada"
+        },
+        {
+          "letter": "E",
+          "text": "Para gestantes com vírus da imunodeficiência humana, a cesárea eletiva deve ser realizada na 38ª semana de gestação, a fim de se evitar a prematuridade e/ou o trabalho de parto e a ruptura prematura das membranas"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "saude-da-mulher",
+      "topic": "assistencia-de-enfermagem-ao-pre-natal-parto-e-puerperio",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "A alternativa incorreta é a B: o clampeamento tardio não é recomendado quando há presença de líquido meconial — nessa condição a diretriz orienta avaliação e conduta específica, tornando a generalização da alternativa incorreta.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 7,
+        "question": 41,
+        "organization": "EBSERH"
+      },
+      "contentHash": "8b8075ea9a8d24036d4d823a63eb0043b5a1adfeda99005675e86266e3eb0ca0",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "75a69717-283d-43fd-b2c9-2975e54dcdbe",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Diarreia é o aumento no número de evacuações por dia e as fezes são amolecidas ou líquidas. A diarreia é um sintoma que, por sua vez, pode ser causado por várias doenças diferentes. Diante do exposto, analise as afirmativas abaixo. I. A diarreia aguda geralmente é causada por vírus, bactérias e parasitas intestinais, apresentando maior risco de desidratação, que é a principal complicação. II. As consequências mais temidas por diarreia crônica são desnutrição, parada de crescimento, anemia e outras deficiências. III. As diarreias podem ser classificadas em diarreia aguda, persistente e crônica. IV. O aleitamento materno diminui a frequência de episódios de diarreia na vida da criança e também está associado com evoluções menos graves e menor necessidade de hospitalização. Assinale a alternativa correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Apenas as afirmativas I, II e IV estão corretas"
+        },
+        {
+          "letter": "B",
+          "text": "Apenas as afirmativas I, III e IV estão corretas"
+        },
+        {
+          "letter": "C",
+          "text": "Apenas as afirmativas I, II e III estão corretas"
+        },
+        {
+          "letter": "D",
+          "text": "Apenas as afirmativas I e IV estão corretas"
+        },
+        {
+          "letter": "E",
+          "text": "As afirmativas I, II, III e IV estão corretas"
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "diarreia-e-desidratacao-infantil",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "As quatro afirmativas descrevem corretamente as causas, classificação, complicações e o papel protetor do aleitamento materno frente à diarreia infantil, estando todas corretas, conforme a alternativa E.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 10,
+        "question": 60,
+        "organization": "EBSERH"
+      },
+      "contentHash": "1895bfe2765634f3a47e05883c8612a17590605535222e13282320c484637154",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "02ff1cb1-d191-41ff-8f1b-cf0fefeb684c",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Idealmente cada vacina deve ser administrada em um grupo muscular diferente, caso necessário. Assinale a alternativa que apresenta se é possível a administração de mais de uma vacina em um mesmo grupo muscular.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Sim, respeitando a distância de 2,5 cm entre uma vacina e outra"
+        },
+        {
+          "letter": "B",
+          "text": "Sim, respeitando a distância de 10 cm entre uma vacina e outra"
+        },
+        {
+          "letter": "C",
+          "text": "Sim, respeitando intervalo de 30 minutos entre uma vacina e outra"
+        },
+        {
+          "letter": "D",
+          "text": "Sim, respeitando o intervalo de 3 horas entre uma vacina e outra"
+        },
+        {
+          "letter": "E",
+          "text": "Não é possível a administração no mesmo grupo muscular, independentemente do tempo e distância"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "É possível administrar mais de uma vacina no mesmo grupo muscular, desde que respeitada a distância mínima de 2,5 cm entre os pontos de aplicação, conforme a alternativa A.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 8,
+        "question": 45,
+        "organization": "EBSERH"
+      },
+      "contentHash": "1f5407a9eff663e583f566780dab02bef4b21c7805b458debf9770e33c222032",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "3c3c2176-7135-41f8-a488-50a454f15448",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Texto I — \"Nizia Figueira, sua criada\" (Mário de Andrade): \"Belazarte me contou: Pois eu acho que tem. Você já sabe que sou cristão... Essas coisas de felicidade e infelicidade não têm significado nenhum, si a gente se compara consigo mesmo. Infelicidade é fenômeno de relação, só mesmo a gente olhando pro vizinho é que diz o “atendite et videte” (expressão latina do livro bíblico das Lamentações: “Olhai e vede”). Macaco, olhe o seu rabo! isso sim, me parece o cruzamento da filosofia cristã com a precisão de felicidade neste mundo duro. Inda é bom quando a gente inventa a ilusão da vaidade, e em vez de falar que é mais desinfeliz, fala que é mais feliz... Toquei em rabo, e estou lembrando o caso do elefante, você sabe? Pois não vê que um dia o elefante topou com uma penuginha de beija-flor caída numa folha, vai, amarrou a penuginha no rabo com uma corda grossa, e principiou todo passeando na serrapilheira da jungla. Uma elefanta mocetona que já estava carecendo de senhor pra cumprir seu destino, viu o bicho tão bonito, mexe pra cá, mexe pra lá, ondulando feito onda quieta, e engraçou. Falou assim: ‘Que elefante mais bonito, porca la miséria!’ Pois ele virou pra ela encrespado e: ‘Dobre a língua, sabe! Elefante não senhora! sou beija-flor.’ E foi-se. Eis aí um tipo que ao menos soube criar felicidade com uma ilusão sarapintada. É ridículo, é, mas que diabo! nem toda a gente consegue a grandeza de se tomar como referência de si mesmo. [...]\" De acordo com o sentido proposto pelo texto, ao afirmar que \"Infelicidade é fenômeno de relação\", o narrador sugere que a infelicidade é:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "percebida apenas pelos outros sempre."
+        },
+        {
+          "letter": "B",
+          "text": "sempre causada pela ação do outro."
+        },
+        {
+          "letter": "C",
+          "text": "sentida ao comparar-se com os outros."
+        },
+        {
+          "letter": "D",
+          "text": "um fenômeno ilusório e inexplicável."
+        },
+        {
+          "letter": "E",
+          "text": "impossível de ser vista pelas outras pessoas."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "portugues",
+      "topic": "interpretacao-de-texto",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "O texto afirma que \"só mesmo a gente olhando pro vizinho é que diz\" — ou seja, a infelicidade surge da comparação do indivíduo com os outros, conforme a alternativa C.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 1,
+        "question": 2,
+        "organization": "EBSERH"
+      },
+      "contentHash": "849f65cb1c026178fffcd1d42820da557e3c3c095d3964cb53061d5157b65fae",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "10f91009-c393-4607-8a2c-1aaa139c578a",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Texto II — \"Redes sociais, perigos e distorção da realidade\" (g1.globo.com, acesso em 11/10/2023): \"Os jovens de hoje são filhos de uma sociedade do consumo — não só de bens materiais, mas também de informação. Este mundo tecnológico em que vivemos promove constantemente mudanças no jeito humano de se relacionar, e as redes sociais são fruto desse movimento. As pessoas nascidas neste milênio, em especial, são muito íntimas dos espaços virtuais de interação, os quais, para a maioria das pessoas, representam uma ponte com o “mundo real”. As redes sociais, no entanto, potencializam os equívocos na compreensão do que é a vida. “Por terem facilidade em manusear os dispositivos e lidar com suas funcionalidades, os adolescentes, e até mesmo as crianças, passam a acreditar que o mundo das telas é o mundo legal e seguro, enquanto que o que está fora das telas é chato”, diz a especialista em Psicologia do Centro de Inovação Pedagógica, Pesquisa e Desenvolvimento (CIPP) do Grupo Positivo, Maísa Pannuti. Nesse sentido, para esses jovens, as redes sociais tornaram-se de fato uma nova realidade, caracterizada por uma sociedade de perfis. Conforme explica a psicóloga escolar, a hiperexposição é um dos retratos dessa distorção de percepções à qual os jovens estão submetidos: tudo o que é valorizado socialmente é exposto e aquilo que não é valorizado socialmente é escondido. Há, inclusive, uma falta de diferenciação entre o que é público e o que é privado. “Desse modo, surgem perfis que não correspondem à realidade. Afinal, a natureza das relações sociais é bastante diversa da natureza das relações que se estabelecem no mundo digital”. Nesse processo, todas as respostas virtuais — os likes, os compartilhamentos, os seguidores, etc. — acabam se tornando não apenas reais, mas cruciais. “Surge a ilusão de que o olhar do outro é o que garante a minha sobrevivência”, complementa.\" O emprego do acento grave em \"dessa distorção de percepções à qual os jovens estão submetidos\" (3º§) justifica-se:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "pelo gênero feminino do pronome relativo \"qual\"."
+        },
+        {
+          "letter": "B",
+          "text": "por fazer parte de uma expressão adverbial feminina."
+        },
+        {
+          "letter": "C",
+          "text": "pela exigência de regência do verbo \"estão\"."
+        },
+        {
+          "letter": "D",
+          "text": "pela presença anterior do substantivo \"percepções\"."
+        },
+        {
+          "letter": "E",
+          "text": "em função da regência do vocábulo \"submetidos\"."
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "portugues",
+      "topic": "crase",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "O verbo \"submeter\" rege a preposição \"a\", e o pronome relativo \"qual\" está no feminino (\"à qual\"), justificando a crase pela regência do vocábulo \"submetidos\", conforme a alternativa E.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 2,
+        "question": 9,
+        "organization": "EBSERH"
+      },
+      "contentHash": "33ec05d1c5478a5b9cdb9fc3295c47febd3dab37a89d84848f935636c5235c36",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "f7bcd478-ee88-4e92-80f0-46df446cded2",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Analise a tabela abaixo e dê valores Verdadeiro (V) ou Falso (F) na coluna P∧Q. P=V,Q=V; P=V,Q=F; P=F,Q=V; P=F,Q=F. Assinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "V - F - F - F"
+        },
+        {
+          "letter": "B",
+          "text": "V - V - V - F"
+        },
+        {
+          "letter": "C",
+          "text": "V - F - V - F"
+        },
+        {
+          "letter": "D",
+          "text": "F - V - F - V"
+        },
+        {
+          "letter": "E",
+          "text": "F - V - V - V"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "raciocinio-logico",
+      "topic": "logica-proposicional",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "A conjunção P∧Q só é verdadeira quando ambas as proposições são verdadeiras, resultando em V, F, F, F, conforme a alternativa A.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 3,
+        "question": 14,
+        "organization": "EBSERH"
+      },
+      "contentHash": "57831403b0c1b27114048305dfe2ea1aa82973d6694bef61fecfed80da0b9b23",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "c8957f42-277f-4c3a-8dd7-20c05335bf93",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Uma pizza foi cortada em 8 partes iguais. Duas pessoas comeram 1/4 da pizza cada uma. Assinale a alternativa que apresenta quanto sobrou da pizza.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "0.5"
+        },
+        {
+          "letter": "B",
+          "text": "0.6"
+        },
+        {
+          "letter": "C",
+          "text": "0.45"
+        },
+        {
+          "letter": "D",
+          "text": "0.55"
+        },
+        {
+          "letter": "E",
+          "text": "0.4"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "raciocinio-logico",
+      "topic": "porcentagem-e-numeros-decimais",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "Cada pessoa comeu 1/4 (25%) da pizza; juntas comeram 50%, restando 50%, conforme a alternativa A.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 3,
+        "question": 15,
+        "organization": "EBSERH"
+      },
+      "contentHash": "ce0bdc73e51d2636735f2e222b44ca7a7d369e5c3163c2e0302f0933c1b621fa",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "760da91c-c91a-4ef6-8969-c09407895593",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "A saúde é um direito de cidadania de todas as pessoas e cabe ao Estado assegurar este direito, sendo que o acesso às ações e serviços deve ser garantido a todas as pessoas, independentemente de sexo, raça, ocupação ou outras características sociais ou pessoais. Assinale a alternativa que apresenta qual princípio do SUS se encaixa nesta descrição.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Equidade"
+        },
+        {
+          "letter": "B",
+          "text": "Universalização"
+        },
+        {
+          "letter": "C",
+          "text": "Integralidade"
+        },
+        {
+          "letter": "D",
+          "text": "Regionalização"
+        },
+        {
+          "letter": "E",
+          "text": "Hierarquização"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "legislacao-do-sus",
+      "topic": "principios-e-diretrizes-do-sus",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "O acesso garantido a todas as pessoas, sem distinção, corresponde ao princípio da Universalização, conforme a alternativa B.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 8,
+        "question": 48,
+        "organization": "EBSERH"
+      },
+      "contentHash": "0e585f11b30d11571dfc175cfb2fefca8bda49b5870ed7c7bfb900d597daacb8",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "08273a41-f090-4087-8e55-d8b43ebad5f8",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
+    },
+    {
+      "statement": "Ante o que dispõe a Lei Orgânica da Saúde (Lei Federal nº 8.080/90) e suas alterações, analise as afirmativas abaixo. I. A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício. II. O dever do Estado de garantir a saúde consiste na formulação e execução de políticas econômicas e sociais que visem à eliminação de riscos de doenças e de outros agravos e no estabelecimento de condições que assegurem acesso regional e igualitário às ações e aos serviços para a sua promoção, proteção e recuperação. III. O dever do Estado exclui o das pessoas, da família, das empresas e da sociedade. Assinale a alternativa correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Apenas a afirmativa I é verdadeira"
+        },
+        {
+          "letter": "B",
+          "text": "Apenas as afirmativas I e II são verdadeiras"
+        },
+        {
+          "letter": "C",
+          "text": "As afirmativas I, II e III são falsas"
+        },
+        {
+          "letter": "D",
+          "text": "Apenas as afirmativas II e III são verdadeiras"
+        },
+        {
+          "letter": "E",
+          "text": "Apenas as afirmativas I e III são verdadeiras"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "contest": "concurso-publico-01-2023-ebserh-nacional",
+      "subject": "legislacao-do-sus",
+      "topic": "lei-8080-1990",
+      "package": "primeiro-simulado-gratis",
+      "packageVersion": "1.0",
+      "year": 2023,
+      "explanation": "As afirmativas I e II reproduzem corretamente o art. 2º da Lei nº 8.080/90; a III é falsa porque o dever do Estado NÃO exclui o das pessoas, família, empresas e sociedade — pelo contrário, o texto legal expressamente afirma que o dever do Estado não exclui os demais, restando corretas apenas I e II.",
+      "references": [],
+      "status": "ACTIVE",
+      "keywords": [],
+      "source": {
+        "exam": "Concurso Público 01/2023 – EBSERH Nacional (Edital nº 3 - Área Assistencial) – IBFC_109_ENFERMEIRO",
+        "page": 4,
+        "question": 24,
+        "organization": "EBSERH"
+      },
+      "contentHash": "e7c22c281c4a9ab7b1e2d2577ce48eb0e40b45643082a68c174f80ac5874bb8b",
+      "metadata": {
+        "demo": true,
+        "origin": {
+          "questionId": "9f63e397-36a2-48fc-b55b-af3fbb302d56",
+          "examId": "0161972f-801c-4408-a508-ab84e30de31d",
+          "packageVersionId": "940ad0d6-1147-4ba1-be1a-0b07c34cb76b",
+          "copiedAt": "2026-07-15T18:22:25.168Z"
+        }
+      }
     }
   ]
 }

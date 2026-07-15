@@ -40,7 +40,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Skeleton } from "@/components/ui/skeleton";
 import { StudyBuilderFiltersPanel } from "@/components/app/study/StudyBuilderFiltersPanel";
 import { StudyBuilderSummary } from "@/components/app/study/StudyBuilderSummary";
-import { EmptyState } from "@/components/shared/EmptyState";
+import { ActivatePlanCard } from "@/components/shared/ActivatePlanCard";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
@@ -417,16 +417,12 @@ export function StudyPage() {
       <header>
         <h1 className="text-2xl font-bold tracking-tight">Estudo</h1>
         <p className="text-sm text-muted-foreground">
-          Selecione uma distribuição liberada pela sua assinatura para configurar uma sessão.
+          Escolha um dos conteúdos liberados para configurar uma sessão de estudo.
         </p>
       </header>
 
       {distributions.length === 0 ? (
-        <EmptyState
-          title="Nenhuma distribuição disponível"
-          description="Verifique se você possui assinatura ativa vinculada a uma distribuição."
-          icon={BookOpen}
-        />
+        <ActivatePlanCard />
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
           {distributions.map((dist) => (

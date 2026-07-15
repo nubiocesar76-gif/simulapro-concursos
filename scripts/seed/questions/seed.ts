@@ -1,5 +1,6 @@
 import { computeContentHash } from "./hash.ts";
 import {
+  buildOriginKey,
   buildSeedMetadata,
   formatAlternativesForDb as formatAlternatives,
   loadQuestionIndex,
@@ -46,8 +47,15 @@ async function flushBatch(db: SeedDb, batch: InsertRow[], report: QuestionSeedRe
   batch.length = 0;
 }
 
-export async function seedQuestions(db: SeedDb, file: QuestionsSeedFile, report: QuestionSeedReport) {
-  const [maps, index] = await Promise.all([loadTaxonomyMaps(db), loadQuestionIndex(db)]);
+export async function seedQuestions(
+  db: SeedDb,
+  file: QuestionsSeedFile,
+  report: QuestionSeedReport,
+) {
+  const [maps, { hashIndex, originIndex }] = await Promise.all([
+    loadTaxonomyMaps(db),
+    loadQuestionIndex(db),
+  ]);
   const sorted = [...file.questions].sort((a, b) => {
     const hashA = computeContentHash(a.statement, a.alternatives, a.correctAnswer);
     const hashB = computeContentHash(b.statement, b.alternatives, b.correctAnswer);
@@ -58,12 +66,31 @@ export async function seedQuestions(db: SeedDb, file: QuestionsSeedFile, report:
 
   for (const item of sorted) {
     const contentHash = computeContentHash(item.statement, item.alternatives, item.correctAnswer);
-    if (index.has(contentHash)) {
+
+    // Itens com metadata.origin.questionId são cópias rastreáveis (ex.: demo — ver
+    // docs/commercial/FREEMIUM_ARCHITECTURE.md). Para esses, a deduplicação não é por
+    // hash de conteúdo (a cópia é intencionalmente idêntica ao original), e sim por
+    // "esta origem já foi copiada para esta package_version?" — verificado abaixo,
+    // depois de resolver o package_version_id real do item.
+    const origin = item.metadata?.origin as { questionId?: unknown } | undefined;
+    const originQuestionId = typeof origin?.questionId === "string" ? origin.questionId : undefined;
+
+    if (!originQuestionId && hashIndex.has(contentHash)) {
       ignoreQuestion(report, contentHash.slice(0, 12));
       continue;
     }
 
     const taxonomyIds = await resolveQuestionTaxonomyIds(db, item, maps);
+
+    if (originQuestionId) {
+      const originKey = buildOriginKey(taxonomyIds.package_version_id, originQuestionId);
+      if (originIndex.has(originKey)) {
+        ignoreQuestion(report, contentHash.slice(0, 12));
+        continue;
+      }
+      originIndex.add(originKey);
+    }
+
     batch.push({
       statement: item.statement.trim(),
       alternatives: formatAlternatives(item.alternatives),
@@ -74,7 +101,7 @@ export async function seedQuestions(db: SeedDb, file: QuestionsSeedFile, report:
       metadata: buildSeedMetadata(item, contentHash),
       contentHash,
     });
-    index.set(contentHash, "pending");
+    hashIndex.set(contentHash, "pending");
 
     if (batch.length >= INSERT_BATCH_SIZE) {
       await flushBatch(db, batch, report);

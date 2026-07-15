@@ -70,6 +70,7 @@ const questionSeedItemBaseSchema = z.object({
   keywords: z.array(z.string().trim()).default([]),
   source: questionSourceSchema.optional(),
   contentHash: z.string().trim().optional(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
 export const questionSeedItemSchema = questionSeedItemBaseSchema.superRefine((item, ctx) => {

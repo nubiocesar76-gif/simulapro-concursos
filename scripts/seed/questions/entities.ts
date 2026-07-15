@@ -84,7 +84,8 @@ export async function loadTaxonomyMaps(db: SeedDb): Promise<TaxonomyMaps> {
   const contestKeyToId = new Map<string, string>();
   for (const exam of exams ?? []) {
     const boardSlug = boardIdToSlug.get(exam.board_id);
-    if (boardSlug) contestKeyToId.set(contestKey(boardSlug, generatePackageSlug(exam.name)), exam.id);
+    if (boardSlug)
+      contestKeyToId.set(contestKey(boardSlug, generatePackageSlug(exam.name)), exam.id);
   }
 
   return {
@@ -98,34 +99,52 @@ export async function loadTaxonomyMaps(db: SeedDb): Promise<TaxonomyMaps> {
   };
 }
 
-export async function loadQuestionIndex(db: SeedDb): Promise<QuestionIndex> {
-  const index: QuestionIndex = new Map();
+// Chave de deduplicação para questões copiadas com rastreabilidade (ex.: cópias da
+// demo — ver docs/commercial/FREEMIUM_ARCHITECTURE.md, Alternativa E). Escopada por
+// package_version_id: a mesma questão original pode, em tese, ser copiada para versões
+// diferentes sem colidir — o que não pode acontecer é a mesma origem duas vezes na
+// mesma versão.
+export type OriginIndex = Set<string>;
+
+export function buildOriginKey(packageVersionId: string | null, originQuestionId: string): string {
+  return `${packageVersionId ?? "null"}:${originQuestionId}`;
+}
+
+export async function loadQuestionIndex(
+  db: SeedDb,
+): Promise<{ hashIndex: QuestionIndex; originIndex: OriginIndex }> {
+  const hashIndex: QuestionIndex = new Map();
+  const originIndex: OriginIndex = new Set();
   let from = 0;
 
   while (true) {
     const { data, error } = await db
       .from("questions")
-      .select("id,statement,alternatives,correct_answer,metadata")
+      .select("id,statement,alternatives,correct_answer,metadata,package_version_id")
       .range(from, from + EXPORT_PAGE_SIZE - 1);
     if (error) throw error;
     if (!data?.length) break;
 
     for (const row of data) {
-      const metadata = (row.metadata && typeof row.metadata === "object" ? row.metadata : {}) as Record<
-        string,
-        unknown
-      >;
+      const metadata = (
+        row.metadata && typeof row.metadata === "object" ? row.metadata : {}
+      ) as Record<string, unknown>;
       const storedHash = typeof metadata.contentHash === "string" ? metadata.contentHash : null;
       const hash =
         storedHash ?? computeContentHashFromDb(row.statement, row.alternatives, row.correct_answer);
-      index.set(hash, row.id);
+      hashIndex.set(hash, row.id);
+
+      const origin = metadata.origin as { questionId?: unknown } | undefined;
+      if (origin && typeof origin.questionId === "string") {
+        originIndex.add(buildOriginKey(row.package_version_id, origin.questionId));
+      }
     }
 
     if (data.length < EXPORT_PAGE_SIZE) break;
     from += EXPORT_PAGE_SIZE;
   }
 
-  return index;
+  return { hashIndex, originIndex };
 }
 
 export async function resolveQuestionTaxonomyIds(
@@ -176,7 +195,8 @@ export async function resolveQuestionTaxonomyIds(
     topic_id = maps.topicKeyToId.get(key) ?? null;
     if (!topic_id && subject_id) {
       const resolved = await resolveTopic(db, subject_id, item.topic, item.topic);
-      if (!resolved) throw new Error(`Assunto "${item.topic}" não encontrado em "${item.subject}".`);
+      if (!resolved)
+        throw new Error(`Assunto "${item.topic}" não encontrado em "${item.subject}".`);
       topic_id = resolved.id;
       maps.topicKeyToId.set(key, topic_id);
     }
@@ -200,7 +220,8 @@ export async function resolveQuestionTaxonomyIds(
     exam_id = maps.contestKeyToId.get(key) ?? null;
     if (!exam_id && board_id) {
       const resolved = await resolveContest(db, board_id, item.contest, item.contest);
-      if (!resolved) throw new Error(`Concurso "${item.contest}" não encontrado em "${item.board}".`);
+      if (!resolved)
+        throw new Error(`Concurso "${item.contest}" não encontrado em "${item.board}".`);
       exam_id = resolved.id;
       maps.contestKeyToId.set(key, exam_id);
     }
@@ -210,7 +231,8 @@ export async function resolveQuestionTaxonomyIds(
   if (item.package || item.packageVersion) {
     if (!item.package) throw new Error(`packageVersion "${item.packageVersion}" requer package.`);
     if (!item.packageVersion) throw new Error(`package "${item.package}" requer packageVersion.`);
-    if (!item.position) throw new Error(`package "${item.package}" requer position (para resolver o curso).`);
+    if (!item.position)
+      throw new Error(`package "${item.package}" requer position (para resolver o curso).`);
     const courseId = maps.positionSlugToCourseId.get(item.position);
     if (!courseId) throw new Error(`Curso não resolvido para o cargo "${item.position}".`);
 
@@ -235,6 +257,7 @@ export function buildSeedMetadata(item: QuestionSeedItem, contentHash: string) {
   const metadata: Record<string, unknown> = { contentHash };
   if (item.references.length) metadata.references = item.references;
   if (item.source && Object.keys(item.source).length) metadata.source = item.source;
+  if (item.metadata && Object.keys(item.metadata).length) Object.assign(metadata, item.metadata);
   return metadata;
 }
 

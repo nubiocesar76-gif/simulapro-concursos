@@ -19,7 +19,7 @@ import { RecentSessions } from "@/components/app/dashboard/RecentSessions";
 import { StudyFilterIndicatorsBar } from "@/components/app/dashboard/StudyFilterIndicators";
 import { SubjectPerformanceTable } from "@/components/app/dashboard/SubjectPerformanceTable";
 import { PageErrorState } from "@/components/shared/PageErrorState";
-import { EmptyState } from "@/components/shared/EmptyState";
+import { ActivatePlanCard } from "@/components/shared/ActivatePlanCard";
 import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL } from "@/config/study";
 
@@ -212,16 +212,13 @@ export function StudentDashboardPage() {
 
         <div className="space-y-4">
           <div>
-            <h2 className="text-lg font-semibold">Minhas distribuições</h2>
+            <h2 className="text-lg font-semibold">Seu Acervo</h2>
             <p className="text-sm text-muted-foreground">
-              Conteúdos liberados pela sua assinatura.
+              O conteúdo disponível para você estudar.
             </p>
           </div>
           {data.distributions.length === 0 ? (
-            <EmptyState
-              title="Nenhuma distribuição liberada"
-              description="Fale com o administrador para ativar sua assinatura."
-            />
+            <ActivatePlanCard />
           ) : (
             <div className="grid items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
               {data.distributions.map((distribution) => (
