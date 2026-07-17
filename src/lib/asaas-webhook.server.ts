@@ -268,207 +268,248 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
 
   await recordAsaasLog("asaas.webhook.received", eventId, { event: payload.event });
 
-  switch (payload.event) {
-    case "PAYMENT_CONFIRMED":
-    case "PAYMENT_RECEIVED": {
-      const ref = parseExternalReference(payload.payment?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "payment_confirmed_or_received",
-          message: "externalReference ausente ou inválida",
+  // Bug G5.2: uma exceção não tratada dentro do switch (ex.: o 42P10 corrigido nesta
+  // mesma sprint) escapava sem deixar nenhum rastro em `logs` — só "received" ficava
+  // gravado, e a investigação dependia inteiramente dos logs da Vercel. Este try/catch
+  // só adiciona uma rede de observabilidade: grava o erro antes de relançar, sem mudar
+  // o status HTTP devolvido (a rota já trata a exceção relançada do mesmo jeito) e sem
+  // tocar na reivindicação de idempotência (o evento já foi marcado como reivindicado
+  // antes deste ponto — pendência documentada, não resolvida aqui).
+  try {
+    switch (payload.event) {
+      case "PAYMENT_CONFIRMED":
+      case "PAYMENT_RECEIVED": {
+        const ref = parseExternalReference(payload.payment?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "payment_confirmed_or_received",
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        // Bug encontrado na homologação (Sprint 4.2E): sem `payment.subscription`,
+        // resolveNextExpiry caía no fallback `null` e a ativação concedia acesso sem
+        // vencimento (para sempre). Como o checkout desta plataforma só cria cobrança via
+        // assinatura, um pagamento confirmado sem vínculo de assinatura é entrada
+        // inesperada — não ativa nem renova, só registra o erro para investigação manual.
+        if (!payload.payment?.subscription) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "payment_confirmed_or_received",
+            message:
+              "payment.subscription ausente — pagamento não vinculado a uma assinatura, ativação recusada",
+          });
+          break;
+        }
+
+        if (!ref.planId) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "payment_confirmed_or_received",
+            message:
+              "planId ausente no externalReference (referência de formato legado ou incompleta) — ativação recusada",
+            distribution_id: ref.distributionId,
+          });
+          break;
+        }
+
+        const plan = findCommercialPlan(ref.planId);
+        if (!plan) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "payment_confirmed_or_received",
+            message:
+              "planId não corresponde a nenhum plano comercial configurado — ativação recusada",
+            plan_id: ref.planId,
+            distribution_id: ref.distributionId,
+          });
+          break;
+        }
+
+        const expiresAt = computeCommercialExpiresAt(plan.accessDurationMonths);
+        await activateOrRenewSubscription({
+          userId: ref.userId,
+          distributionId: ref.distributionId,
+          expiresAt,
+          eventId,
         });
+
+        try {
+          await AsaasService.cancelarAssinatura(payload.payment.subscription);
+        } catch (error) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "cancel_after_activation",
+            message:
+              error instanceof Error ? error.message : "falha ao cancelar assinatura no Asaas",
+            asaas_subscription_id: payload.payment.subscription,
+            user_id: ref.userId,
+            distribution_id: ref.distributionId,
+          });
+        }
         break;
       }
-      // Bug encontrado na homologação (Sprint 4.2E): sem `payment.subscription`,
-      // resolveNextExpiry caía no fallback `null` e a ativação concedia acesso sem
-      // vencimento (para sempre). Como o checkout desta plataforma só cria cobrança via
-      // assinatura, um pagamento confirmado sem vínculo de assinatura é entrada
-      // inesperada — não ativa nem renova, só registra o erro para investigação manual.
-      if (!payload.payment?.subscription) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "payment_confirmed_or_received",
-          message:
-            "payment.subscription ausente — pagamento não vinculado a uma assinatura, ativação recusada",
+
+      case "PAYMENT_OVERDUE": {
+        const ref = parseExternalReference(payload.payment?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "payment_overdue",
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        await deactivateSubscription({
+          userId: ref.userId,
+          distributionId: ref.distributionId,
+          eventId,
+          reason: "overdue",
         });
         break;
       }
 
-      if (!ref.planId) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "payment_confirmed_or_received",
-          message:
-            "planId ausente no externalReference (referência de formato legado ou incompleta) — ativação recusada",
-          distribution_id: ref.distributionId,
+      case "PAYMENT_REFUNDED": {
+        const ref = parseExternalReference(payload.payment?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "payment_refunded",
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        await deactivateSubscription({
+          userId: ref.userId,
+          distributionId: ref.distributionId,
+          eventId,
+          reason: "refunded",
         });
         break;
       }
 
-      const plan = findCommercialPlan(ref.planId);
-      if (!plan) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "payment_confirmed_or_received",
-          message:
-            "planId não corresponde a nenhum plano comercial configurado — ativação recusada",
-          plan_id: ref.planId,
-          distribution_id: ref.distributionId,
-        });
-        break;
-      }
-
-      const expiresAt = computeCommercialExpiresAt(plan.accessDurationMonths);
-      await activateOrRenewSubscription({
-        userId: ref.userId,
-        distributionId: ref.distributionId,
-        expiresAt,
-        eventId,
-      });
-
-      try {
-        await AsaasService.cancelarAssinatura(payload.payment.subscription);
-      } catch (error) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "cancel_after_activation",
-          message: error instanceof Error ? error.message : "falha ao cancelar assinatura no Asaas",
-          asaas_subscription_id: payload.payment.subscription,
+      case "PAYMENT_REFUND_IN_PROGRESS":
+      case "PAYMENT_CHARGEBACK_REQUESTED":
+      case "PAYMENT_CHARGEBACK_DISPUTE":
+      case "PAYMENT_AWAITING_CHARGEBACK_REVERSAL": {
+        const paymentLogAction: Record<string, string> = {
+          PAYMENT_REFUND_IN_PROGRESS: "asaas.payment.refund_in_progress",
+          PAYMENT_CHARGEBACK_REQUESTED: "asaas.payment.chargeback_requested",
+          PAYMENT_CHARGEBACK_DISPUTE: "asaas.payment.chargeback_dispute",
+          PAYMENT_AWAITING_CHARGEBACK_REVERSAL: "asaas.payment.chargeback_reversal_pending",
+        };
+        const ref = parseExternalReference(payload.payment?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: payload.event.toLowerCase(),
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        const existing = await findSubscription(ref.userId, ref.distributionId);
+        if (!existing) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: payload.event.toLowerCase(),
+            message: "assinatura local não encontrada",
+          });
+          break;
+        }
+        await recordAsaasLog(paymentLogAction[payload.event], eventId, {
           user_id: ref.userId,
           distribution_id: ref.distributionId,
         });
+        break;
       }
-      break;
-    }
 
-    case "PAYMENT_OVERDUE": {
-      const ref = parseExternalReference(payload.payment?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "payment_overdue",
-          message: "externalReference ausente ou inválida",
+      case "PAYMENT_DELETED": {
+        // Remover uma cobrança pontual não implica cancelar a assinatura —
+        // SUBSCRIPTION_CANCELLED é o evento responsável por isso. Só registramos.
+        await recordAsaasLog("asaas.webhook.payment_deleted", eventId, {
+          payment_id: payload.payment?.id ?? null,
         });
         break;
       }
-      await deactivateSubscription({
-        userId: ref.userId,
-        distributionId: ref.distributionId,
-        eventId,
-        reason: "overdue",
-      });
-      break;
-    }
 
-    case "PAYMENT_REFUNDED": {
-      const ref = parseExternalReference(payload.payment?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "payment_refunded",
-          message: "externalReference ausente ou inválida",
-        });
-        break;
-      }
-      await deactivateSubscription({
-        userId: ref.userId,
-        distributionId: ref.distributionId,
-        eventId,
-        reason: "refunded",
-      });
-      break;
-    }
-
-    case "PAYMENT_REFUND_IN_PROGRESS":
-    case "PAYMENT_CHARGEBACK_REQUESTED":
-    case "PAYMENT_CHARGEBACK_DISPUTE":
-    case "PAYMENT_AWAITING_CHARGEBACK_REVERSAL": {
-      const paymentLogAction: Record<string, string> = {
-        PAYMENT_REFUND_IN_PROGRESS: "asaas.payment.refund_in_progress",
-        PAYMENT_CHARGEBACK_REQUESTED: "asaas.payment.chargeback_requested",
-        PAYMENT_CHARGEBACK_DISPUTE: "asaas.payment.chargeback_dispute",
-        PAYMENT_AWAITING_CHARGEBACK_REVERSAL: "asaas.payment.chargeback_reversal_pending",
-      };
-      const ref = parseExternalReference(payload.payment?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: payload.event.toLowerCase(),
-          message: "externalReference ausente ou inválida",
-        });
-        break;
-      }
-      const existing = await findSubscription(ref.userId, ref.distributionId);
-      if (!existing) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: payload.event.toLowerCase(),
-          message: "assinatura local não encontrada",
-        });
-        break;
-      }
-      await recordAsaasLog(paymentLogAction[payload.event], eventId, {
-        user_id: ref.userId,
-        distribution_id: ref.distributionId,
-      });
-      break;
-    }
-
-    case "PAYMENT_DELETED": {
-      // Remover uma cobrança pontual não implica cancelar a assinatura —
-      // SUBSCRIPTION_CANCELLED é o evento responsável por isso. Só registramos.
-      await recordAsaasLog("asaas.webhook.payment_deleted", eventId, {
-        payment_id: payload.payment?.id ?? null,
-      });
-      break;
-    }
-
-    case "SUBSCRIPTION_CREATED": {
-      const ref = parseExternalReference(payload.subscription?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "subscription_created",
-          message: "externalReference ausente ou inválida",
-        });
-        break;
-      }
-      if (!(await distributionExists(ref.distributionId))) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "subscription_created",
-          message: "distribution_id inválido",
-        });
-        break;
-      }
-      // Cria o vínculo local sem liberar acesso — a ativação real só acontece em
-      // PAYMENT_CONFIRMED/PAYMENT_RECEIVED. ON CONFLICT DO NOTHING (upsert +
-      // ignoreDuplicates) no lugar do SELECT-então-INSERT anterior: se o vínculo já
-      // existir (inclusive por uma entrega concorrente deste mesmo evento), o
-      // conflito é ignorado atomicamente pelo banco em vez de arriscar duas linhas.
-      const { error: createError } = await supabaseAdmin.from("subscriptions").upsert(
-        {
+      case "SUBSCRIPTION_CREATED": {
+        const ref = parseExternalReference(payload.subscription?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "subscription_created",
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        if (!(await distributionExists(ref.distributionId))) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "subscription_created",
+            message: "distribution_id inválido",
+          });
+          break;
+        }
+        // Cria o vínculo local sem liberar acesso — a ativação real só acontece em
+        // PAYMENT_CONFIRMED/PAYMENT_RECEIVED. ON CONFLICT DO NOTHING (upsert +
+        // ignoreDuplicates) no lugar do SELECT-então-INSERT anterior: se o vínculo já
+        // existir (inclusive por uma entrega concorrente deste mesmo evento), o
+        // conflito é ignorado atomicamente pelo banco em vez de arriscar duas linhas.
+        const { error: createError } = await supabaseAdmin.from("subscriptions").upsert(
+          {
+            user_id: ref.userId,
+            distribution_id: ref.distributionId,
+            status: "INACTIVE",
+            starts_at: new Date().toISOString(),
+            expires_at: null,
+          },
+          { onConflict: "user_id,distribution_id", ignoreDuplicates: true },
+        );
+        if (createError) throw createError;
+        await recordAsaasLog("asaas.subscription.created", eventId, {
           user_id: ref.userId,
           distribution_id: ref.distributionId,
-          status: "INACTIVE",
-          starts_at: new Date().toISOString(),
-          expires_at: null,
-        },
-        { onConflict: "user_id,distribution_id", ignoreDuplicates: true },
-      );
-      if (createError) throw createError;
-      await recordAsaasLog("asaas.subscription.created", eventId, {
-        user_id: ref.userId,
-        distribution_id: ref.distributionId,
-      });
-      break;
-    }
-
-    case "SUBSCRIPTION_UPDATED": {
-      const ref = parseExternalReference(payload.subscription?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "subscription_updated",
-          message: "externalReference ausente ou inválida",
         });
         break;
       }
-      if (payload.subscription?.status && payload.subscription.status !== "ACTIVE") {
-        if (isCommercialFixedTermPlan(ref.distributionId)) {
+
+      case "SUBSCRIPTION_UPDATED": {
+        const ref = parseExternalReference(payload.subscription?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "subscription_updated",
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        if (payload.subscription?.status && payload.subscription.status !== "ACTIVE") {
+          if (isCommercialFixedTermPlan(ref.distributionId)) {
+            await recordAsaasLog("asaas.subscription.updated", eventId, {
+              user_id: ref.userId,
+              distribution_id: ref.distributionId,
+              asaas_status: payload.subscription.status,
+              note: "cancelamento técnico pós-pagamento — acesso local preservado",
+            });
+          } else {
+            await deactivateSubscription({
+              userId: ref.userId,
+              distributionId: ref.distributionId,
+              eventId,
+              reason: "updated_inactive",
+            });
+          }
+        } else {
           await recordAsaasLog("asaas.subscription.updated", eventId, {
             user_id: ref.userId,
             distribution_id: ref.distributionId,
-            asaas_status: payload.subscription.status,
+          });
+        }
+        break;
+      }
+
+      case "SUBSCRIPTION_CANCELLED": {
+        const ref = parseExternalReference(payload.subscription?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "subscription_cancelled",
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        if (isCommercialFixedTermPlan(ref.distributionId)) {
+          await recordAsaasLog("asaas.subscription.cancelled", eventId, {
+            user_id: ref.userId,
+            distribution_id: ref.distributionId,
             note: "cancelamento técnico pós-pagamento — acesso local preservado",
           });
         } else {
@@ -476,42 +517,17 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
             userId: ref.userId,
             distributionId: ref.distributionId,
             eventId,
-            reason: "updated_inactive",
+            reason: "cancelled",
           });
         }
-      } else {
-        await recordAsaasLog("asaas.subscription.updated", eventId, {
-          user_id: ref.userId,
-          distribution_id: ref.distributionId,
-        });
-      }
-      break;
-    }
-
-    case "SUBSCRIPTION_CANCELLED": {
-      const ref = parseExternalReference(payload.subscription?.externalReference);
-      if (!ref) {
-        await recordAsaasLog("asaas.webhook.error", eventId, {
-          stage: "subscription_cancelled",
-          message: "externalReference ausente ou inválida",
-        });
         break;
       }
-      if (isCommercialFixedTermPlan(ref.distributionId)) {
-        await recordAsaasLog("asaas.subscription.cancelled", eventId, {
-          user_id: ref.userId,
-          distribution_id: ref.distributionId,
-          note: "cancelamento técnico pós-pagamento — acesso local preservado",
-        });
-      } else {
-        await deactivateSubscription({
-          userId: ref.userId,
-          distributionId: ref.distributionId,
-          eventId,
-          reason: "cancelled",
-        });
-      }
-      break;
     }
+  } catch (error) {
+    await recordAsaasLog("asaas.webhook.error", eventId, {
+      stage: "unhandled_exception",
+      message: error instanceof Error ? error.message : "erro desconhecido ao processar evento",
+    });
+    throw error;
   }
 }

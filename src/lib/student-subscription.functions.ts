@@ -68,6 +68,20 @@ async function lookupAsaasLiveStatus(
   };
 }
 
+// Bug G4: "ACTIVE" numa assinatura do Asaas só significa que existe uma cobrança
+// recorrente cadastrada lá — não significa que algum pagamento foi confirmado. Um
+// checkout abandonado (usuário nunca paga) deixa a assinatura no Asaas em ACTIVE para
+// sempre, porque só o webhook de pagamento confirmado a cancela. Por isso quem decide
+// se o usuário já tem acesso é exclusivamente o banco local (`subscriptions`, ativada
+// só pelo webhook) — o mesmo critério de vigência já usado em study-session.ts e
+// study-engine.ts (status ACTIVE + dentro de starts_at/expires_at).
+function isLocalSubscriptionCurrentlyActive(startsAt: string, expiresAt: string | null): boolean {
+  const now = Date.now();
+  if (new Date(startsAt).getTime() > now) return false;
+  if (expiresAt && new Date(expiresAt).getTime() < now) return false;
+  return true;
+}
+
 // Usada tanto na carga inicial da tela "Minha Assinatura" quanto no botão "Atualizar" —
 // mesma consulta ao vivo, sem escrever em `subscriptions` (ativação é só do webhook).
 export const getAsaasLiveStatus = createServerFn({ method: "GET" })
@@ -115,9 +129,23 @@ export const iniciarCheckout = createServerFn({ method: "POST" })
     }
 
     const subscriptionRef = buildExternalReference(context.userId, plan.distributionId, plan.id);
-    const existingSubscription =
-      await AsaasService.buscarAssinaturaPorExternalReference(subscriptionRef);
-    if (existingSubscription?.status === "ACTIVE") {
+
+    // Quem decide se o usuário já tem acesso é o banco local, não o Asaas (Bug G4) —
+    // ver `isLocalSubscriptionCurrentlyActive` acima. `buscarAssinaturaPorExternalReference`
+    // continua existindo e sendo usada em `lookupAsaasLiveStatus`, só não serve mais como
+    // critério de bloqueio de um novo checkout.
+    const { data: localSubscription, error: localSubscriptionError } = await context.supabase
+      .from("subscriptions")
+      .select("starts_at, expires_at")
+      .eq("user_id", context.userId)
+      .eq("distribution_id", plan.distributionId)
+      .eq("status", "ACTIVE")
+      .maybeSingle();
+    if (localSubscriptionError) throw localSubscriptionError;
+    if (
+      localSubscription &&
+      isLocalSubscriptionCurrentlyActive(localSubscription.starts_at, localSubscription.expires_at)
+    ) {
       throw new Error("Você já possui uma assinatura ativa para este plano.");
     }
 
