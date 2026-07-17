@@ -64,10 +64,6 @@ function AuthPage() {
         data: { full_name: String(form.get("full_name") ?? "") },
       },
     });
-    console.log({
-      signupData: data,
-      signupError: signupError,
-    });
     setBusy(false);
     if (signupError) return toast.error(signupError.message);
     if (data.session) {

@@ -26,7 +26,13 @@ function loadAsaasConfig(): AsaasConfig {
   const apiKey = process.env.ASAAS_API_KEY;
   const environmentRaw = process.env.ASAAS_ENVIRONMENT;
   const webhookSecret = process.env.ASAAS_WEBHOOK_SECRET;
-  const appUrl = process.env.APP_URL;
+  // APP_URL is the official variable; aliases below are read-only fallbacks for legacy/production setups.
+  const appUrl =
+    process.env.APP_URL ??
+    process.env.URL_DO_APLICATIVO ??
+    process.env.VITE_APP_URL ??
+    process.env.NEXT_PUBLIC_APP_URL ??
+    process.env.PUBLIC_APP_URL;
 
   const missing = [
     ...(!apiKey ? ["ASAAS_API_KEY"] : []),

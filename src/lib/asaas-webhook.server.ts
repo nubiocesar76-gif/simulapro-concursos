@@ -1,11 +1,16 @@
 // Server-only. Lógica de negócio do webhook do Asaas: autenticidade, idempotência,
 // despacho de eventos e sincronização de `subscriptions`.
 //
-// Reaproveita 100% a estrutura já homologada: mesma tabela `subscriptions`, mesmos
-// campos (`status`, `expires_at`), mesma tabela `logs` para auditoria — nenhuma tabela,
-// coluna ou lógica de permissão nova. Correlação evento → assinatura local é feita via
-// `externalReference` (ver `integrations/asaas/reference.server.ts`), já que não há
-// coluna própria para guardar o ID da assinatura/cliente no Asaas nesta sprint.
+// Reaproveita a estrutura já homologada: mesma tabela `subscriptions`, mesmos campos
+// (`status`, `expires_at`), mesma tabela `logs` para auditoria de eventos de negócio.
+// Correlação evento → assinatura local é feita via `externalReference` (ver
+// `integrations/asaas/reference.server.ts`), já que não há coluna própria para guardar
+// o ID da assinatura/cliente no Asaas nesta sprint.
+//
+// Idempotência (Sprint D7): a tabela dedicada `asaas_webhook_events` (id textual do
+// evento do Asaas como PRIMARY KEY) substitui o dedupe por SELECT-então-INSERT em
+// `logs` — ver `tryClaimWebhookEvent` abaixo e
+// supabase/migrations/20260717000000_asaas_webhook_idempotency.sql.
 
 import { timingSafeEqual } from "node:crypto";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
@@ -68,50 +73,71 @@ function resolveEventId(payload: AsaasWebhookPayload): string {
 }
 
 // --- Log/auditoria — nunca grava dado sensível (cartão, token, API key) ---
-
+//
+// Sprint D9: `logs.entity_id` é UUID (ver Sprint D8) e o eventId do Asaas não tem
+// garantia de ser UUID (id textual do Asaas, ou o fallback "${event}:${nestedId}" que
+// nunca é UUID por construção). Gravar eventId ali fazia o INSERT falhar na validação
+// de tipo do Postgres — silenciosamente, porque o retorno `{ error }` nunca era lido
+// (o supabase-js não lança exceção em erro do Postgrest por padrão). Correção: eventId
+// passa a viajar dentro de `metadata` (JSONB, já existente, sem nova coluna/tabela) sob
+// a chave `asaas_event_id`; `entity_id` permanece null para logs do webhook. O erro de
+// escrita agora é lido e logado no console do servidor, sem derrubar o processamento.
 async function recordAsaasLog(
   action: string,
-  entityId: string | null,
+  eventId: string | null,
   metadata: Record<string, any>,
 ) {
   try {
-    await supabaseAdmin.from("logs").insert({
+    const { error } = await supabaseAdmin.from("logs").insert({
       user_id: null,
       action,
       entity: "asaas_webhook",
-      entity_id: entityId,
-      metadata,
+      entity_id: null,
+      metadata: { ...metadata, asaas_event_id: eventId },
     });
-  } catch {
-    // nunca deixa o webhook falhar por causa do log
+    if (error) {
+      console.error(`[asaas webhook] falha ao gravar log (action="${action}"): ${error.message}`);
+    }
+  } catch (err) {
+    // Falha de rede/infra ao gravar o log — nunca deixa o webhook falhar por causa disso;
+    // o log é uma operação auxiliar, não deve bloquear ativação/renovação de assinatura.
+    console.error(
+      `[asaas webhook] exceção ao gravar log (action="${action}"): ${
+        err instanceof Error ? err.message : "erro desconhecido"
+      }`,
+    );
   }
 }
 
-// --- Idempotência, reaproveitando a tabela `logs` já existente como ledger ---
-
-async function wasEventAlreadyProcessed(eventId: string): Promise<boolean> {
+// --- Idempotência real, via tabela dedicada `asaas_webhook_events` (Sprint D7) ---
+//
+// INSERT ... ON CONFLICT DO NOTHING (upsert + ignoreDuplicates) reivindica o evento
+// atomicamente: se outra requisição concorrente já reivindicou o mesmo event_id, o
+// conflito é ignorado no próprio banco e nenhuma linha é retornada — sem depender de
+// um SELECT prévio, que é onde a auditoria D6 encontrou a condição de corrida.
+// A reivindicação acontece ANTES do processamento (não depois), então um evento só é
+// considerado "processado" quando garantidamente nenhuma outra entrega dele está em
+// andamento — não quando o processamento termina.
+async function tryClaimWebhookEvent(eventId: string, eventName: string): Promise<boolean> {
   const { data, error } = await supabaseAdmin
-    .from("logs")
-    .select("id")
-    .eq("action", "asaas.webhook.processed")
-    .eq("entity_id", eventId)
-    .limit(1)
-    .maybeSingle();
+    .from("asaas_webhook_events")
+    .upsert(
+      { event_id: eventId, event_name: eventName },
+      { onConflict: "event_id", ignoreDuplicates: true },
+    )
+    .select("event_id");
 
   if (error) {
     // Falha na checagem: preferimos arriscar reprocessar (os handlers abaixo são
     // idempotentes por natureza — upsert por user_id+distribution_id) a perder o evento.
     await recordAsaasLog("asaas.webhook.error", eventId, {
-      stage: "idempotency_check",
+      stage: "idempotency_claim",
       message: error.message,
     });
-    return false;
+    return true;
   }
-  return !!data;
-}
 
-async function markEventProcessed(eventId: string, eventName: string) {
-  await recordAsaasLog("asaas.webhook.processed", eventId, { event: eventName });
+  return (data?.length ?? 0) > 0;
 }
 
 // --- Sincronização de assinatura, reaproveitando a estrutura já homologada ---
@@ -129,7 +155,7 @@ async function distributionExists(distributionId: string): Promise<boolean> {
 async function findSubscription(userId: string, distributionId: string) {
   const { data, error } = await supabaseAdmin
     .from("subscriptions")
-    .select("id, status")
+    .select("id, status, starts_at")
     .eq("user_id", userId)
     .eq("distribution_id", distributionId)
     .maybeSingle();
@@ -157,22 +183,25 @@ async function activateOrRenewSubscription(params: {
   const existing = await findSubscription(userId, distributionId);
   const wasActive = existing?.status === "ACTIVE";
 
-  if (existing) {
-    const { error } = await supabaseAdmin
-      .from("subscriptions")
-      .update({ status: "ACTIVE", expires_at: expiresAt })
-      .eq("id", existing.id);
-    if (error) throw error;
-  } else {
-    const { error } = await supabaseAdmin.from("subscriptions").insert({
+  // Upsert único (INSERT ... ON CONFLICT DO UPDATE) no lugar do INSERT/UPDATE
+  // condicionados ao SELECT acima — a decisão de criar vs. atualizar deixa de
+  // depender de dois passos separados e passa a ser resolvida atomicamente
+  // pela unique index já existente em subscriptions(user_id, distribution_id)
+  // (ver supabase/migrations/20260705000000_subscriptions_distribution.sql),
+  // eliminando a janela de corrida em que duas execuções concorrentes viam
+  // "não existe" e tentavam inserir duas linhas. `starts_at` é reaproveitado
+  // da leitura acima para preservar a data original de início em renovações.
+  const { error } = await supabaseAdmin.from("subscriptions").upsert(
+    {
       user_id: userId,
       distribution_id: distributionId,
       status: "ACTIVE",
-      starts_at: new Date().toISOString(),
+      starts_at: existing?.starts_at ?? new Date().toISOString(),
       expires_at: expiresAt,
-    });
-    if (error) throw error;
-  }
+    },
+    { onConflict: "user_id,distribution_id" },
+  );
+  if (error) throw error;
 
   await recordAsaasLog(
     wasActive ? "asaas.subscription.renewed" : "asaas.subscription.activated",
@@ -233,7 +262,7 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
     return;
   }
 
-  if (await wasEventAlreadyProcessed(eventId)) {
+  if (!(await tryClaimWebhookEvent(eventId, payload.event))) {
     return;
   }
 
@@ -402,19 +431,22 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
         });
         break;
       }
-      const existing = await findSubscription(ref.userId, ref.distributionId);
-      if (!existing) {
-        // Cria o vínculo local sem liberar acesso — a ativação real só acontece
-        // em PAYMENT_CONFIRMED/PAYMENT_RECEIVED.
-        const { error } = await supabaseAdmin.from("subscriptions").insert({
+      // Cria o vínculo local sem liberar acesso — a ativação real só acontece em
+      // PAYMENT_CONFIRMED/PAYMENT_RECEIVED. ON CONFLICT DO NOTHING (upsert +
+      // ignoreDuplicates) no lugar do SELECT-então-INSERT anterior: se o vínculo já
+      // existir (inclusive por uma entrega concorrente deste mesmo evento), o
+      // conflito é ignorado atomicamente pelo banco em vez de arriscar duas linhas.
+      const { error: createError } = await supabaseAdmin.from("subscriptions").upsert(
+        {
           user_id: ref.userId,
           distribution_id: ref.distributionId,
           status: "INACTIVE",
           starts_at: new Date().toISOString(),
           expires_at: null,
-        });
-        if (error) throw error;
-      }
+        },
+        { onConflict: "user_id,distribution_id", ignoreDuplicates: true },
+      );
+      if (createError) throw createError;
       await recordAsaasLog("asaas.subscription.created", eventId, {
         user_id: ref.userId,
         distribution_id: ref.distributionId,
@@ -482,6 +514,4 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
       break;
     }
   }
-
-  await markEventProcessed(eventId, payload.event);
 }

@@ -39,6 +39,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      asaas_webhook_events: {
+        Row: {
+          event_id: string
+          event_name: string
+          processed_at: string
+        }
+        Insert: {
+          event_id: string
+          event_name: string
+          processed_at?: string
+        }
+        Update: {
+          event_id?: string
+          event_name?: string
+          processed_at?: string
+        }
+        Relationships: []
+      }
       boards: {
         Row: {
           acronym: string | null

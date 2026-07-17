@@ -7,6 +7,15 @@ import { isAuthenticWebhookRequest, processAsaasWebhookEvent } from "@/lib/asaas
 export const Route = createFileRoute("/api/webhooks/asaas")({
   server: {
     handlers: {
+      // Sem um handler para os demais métodos, o TanStack Start deixa a requisição
+      // cair no pipeline normal de SSR de página (esta rota não define `component`),
+      // servindo o shell React e quebrando no cliente com "Invariant failed". `ANY`
+      // é a chave reconhecida pelo framework para pegar qualquer método não listado
+      // explicitamente (ver `handlers[requestMethod] ?? handlers["ANY"]` em
+      // node_modules/@tanstack/start-server-core/dist/esm/createStartHandler.js) —
+      // aqui ela intercepta GET/HEAD/PUT/etc. antes de chegarem ao renderizador de
+      // página, sem afetar o handler de POST abaixo.
+      ANY: () => new Response(null, { status: 405, headers: { Allow: "POST" } }),
       POST: async ({ request }) => {
         const contentType = request.headers.get("content-type") ?? "";
         if (!contentType.includes("application/json")) {
