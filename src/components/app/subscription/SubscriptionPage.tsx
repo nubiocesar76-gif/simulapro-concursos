@@ -15,7 +15,9 @@ import {
   iniciarCheckout,
   type AsaasLiveStatus,
 } from "@/lib/student-subscription.functions";
+import { iniciarPlanoFree } from "@/lib/free-subscription.functions";
 import { COMMERCIAL_PLANS } from "@/config/commercial-plans";
+import { FREE_PLAN_DISTRIBUTION_ID } from "@/config/free-plan";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,6 +36,17 @@ import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
+
+// Mesmo critério de vigência usado no backend (Bug G4/G4.1) — só decide o que
+// mostrar na tela, não decide acesso de verdade (isso continua sendo feito pelo
+// servidor em cada server function).
+function isCurrentlyActive(subscription: MySubscriptionRow): boolean {
+  if (subscription.status !== "ACTIVE") return false;
+  const now = Date.now();
+  if (new Date(subscription.starts_at).getTime() > now) return false;
+  if (subscription.expires_at && new Date(subscription.expires_at).getTime() < now) return false;
+  return true;
+}
 
 export function SubscriptionPage() {
   const { user } = useAuth();
@@ -59,6 +72,16 @@ export function SubscriptionPage() {
     },
     onError: (e: unknown) =>
       toast.error(e instanceof Error ? e.message : "Erro ao iniciar checkout."),
+  });
+
+  const freePlan = useMutation({
+    mutationFn: () => iniciarPlanoFree(),
+    onSuccess: () => {
+      toast.success("Plano Free ativado! Bem-vindo ao SimulaPro.");
+      refetch();
+    },
+    onError: (e: unknown) =>
+      toast.error(e instanceof Error ? e.message : "Erro ao ativar o Plano Free."),
   });
 
   function openCheckout(planId: string) {
@@ -106,14 +129,26 @@ export function SubscriptionPage() {
         </p>
       </header>
 
-      {subscriptions.length === 0 ? (
-        <PlanCatalog onSelectPlan={openCheckout} />
-      ) : (
+      {subscriptions.length > 0 && (
         <div className="space-y-4">
           {subscriptions.map((subscription) => (
             <SubscriptionCard key={subscription.id} subscription={subscription} />
           ))}
         </div>
+      )}
+
+      {/* O catálogo (Free + planos pagos) some quando já existe assinatura paga
+          vigente — não faz sentido oferecer upgrade ou o plano free para quem já tem
+          acesso completo. Continua visível para quem só tem (ou não tem nenhuma)
+          assinatura free, para permitir o upgrade descrito na validação da G6.0. */}
+      {!subscriptions.some(
+        (s) => s.distribution_id !== FREE_PLAN_DISTRIBUTION_ID && isCurrentlyActive(s),
+      ) && (
+        <PlanCatalog
+          onSelectPlan={openCheckout}
+          onActivateFree={() => freePlan.mutate()}
+          freePending={freePlan.isPending}
+        />
       )}
 
       <Dialog open={!!checkoutPlanId} onOpenChange={(open) => !open && setCheckoutPlanId(null)}>
@@ -223,35 +258,67 @@ function SubscriptionCard({ subscription }: { subscription: MySubscriptionRow })
   );
 }
 
-function PlanCatalog({ onSelectPlan }: { onSelectPlan: (planId: string) => void }) {
-  if (COMMERCIAL_PLANS.length === 0) {
-    return (
-      <EmptyState
-        title="Nenhum plano disponível no momento"
-        description="Fale com o administrador para saber mais sobre as opções de assinatura."
-        icon={CreditCard}
-      />
-    );
-  }
-
+function PlanCatalog({
+  onSelectPlan,
+  onActivateFree,
+  freePending,
+}: {
+  onSelectPlan: (planId: string) => void;
+  onActivateFree: () => void;
+  freePending: boolean;
+}) {
   return (
-    <div className="grid gap-4 sm:grid-cols-2">
-      {COMMERCIAL_PLANS.map((plan) => (
-        <Card key={plan.id}>
-          <CardHeader>
-            <CardTitle className="text-lg">{plan.label}</CardTitle>
-            <CardDescription>{plan.description}</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <p className="text-2xl font-semibold tracking-tight">
-              R$ {plan.value.toFixed(2).replace(".", ",")}
-            </p>
-            <Button className="w-full" onClick={() => onSelectPlan(plan.id)}>
-              Assinar
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
+    <div className="space-y-4">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">Plano Free</CardTitle>
+          <CardDescription>Comece a estudar agora, sem custo.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-2xl font-semibold tracking-tight">R$ 0,00</p>
+          <ul className="text-sm text-muted-foreground space-y-1 list-disc pl-4">
+            <li>Acesso ao primeiro simulado</li>
+            <li>Acesso imediato</li>
+            <li>Sem cartão</li>
+            <li>Sem cobrança</li>
+          </ul>
+          <Button
+            className="w-full"
+            variant="outline"
+            onClick={onActivateFree}
+            disabled={freePending}
+          >
+            {freePending ? "Ativando..." : "Começar Grátis"}
+          </Button>
+        </CardContent>
+      </Card>
+
+      {COMMERCIAL_PLANS.length === 0 ? (
+        <EmptyState
+          title="Nenhum plano pago disponível no momento"
+          description="Fale com o administrador para saber mais sobre as opções de assinatura."
+          icon={CreditCard}
+        />
+      ) : (
+        <div className="grid gap-4 sm:grid-cols-2">
+          {COMMERCIAL_PLANS.map((plan) => (
+            <Card key={plan.id}>
+              <CardHeader>
+                <CardTitle className="text-lg">{plan.label}</CardTitle>
+                <CardDescription>{plan.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-2xl font-semibold tracking-tight">
+                  R$ {plan.value.toFixed(2).replace(".", ",")}
+                </p>
+                <Button className="w-full" onClick={() => onSelectPlan(plan.id)}>
+                  Assinar
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
