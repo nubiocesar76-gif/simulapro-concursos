@@ -8,6 +8,8 @@ import {
   TAXONOMY_SEED_PATH,
   writeJsonFile,
 } from "../../core/io.ts";
+import { loadEnv, projectRoot } from "../../core/env.ts";
+import { createSeedClient } from "../../core/client.ts";
 import { computeContentHash } from "../hash.ts";
 import {
   CONVERTER_ENGINE_NAME,
@@ -15,10 +17,12 @@ import {
   DEFAULT_QUESTIONS_VERSION,
 } from "../metadata.ts";
 import { questionsSeedSchema, type QuestionSeedItem, type QuestionsSeedFile } from "../schema.ts";
+import { loadTaxonomyMaps } from "../entities.ts";
 import { taxonomySeedSchema } from "../../taxonomy/schema.ts";
+import { resolvePackageVersion } from "../../taxonomy/entities.ts";
 import { detectMissingColumns, readSpreadsheet } from "./parse.ts";
 import { loadTaxonomySets } from "./taxonomy.ts";
-import { printConvertReport, validateRows } from "./validate.ts";
+import { printConvertReport, validateRows, type ConvertIssue } from "./validate.ts";
 
 export type ConvertQuestionsResult =
   | { ok: true; outputPath: string; count: number }
@@ -145,12 +149,98 @@ export function convertQuestions(inputPath?: string, outputPath = QUESTIONS_SEED
   return { ok: true, outputPath, count: questions.length };
 }
 
-export function runConvertQuestions(inputPath?: string, outputPath?: string) {
+/**
+ * Sprint G7.5A — Melhoria 3. Lacuna identificada na análise: `package`/`package_version`
+ * não tinham validação antecipada de existência (só formato/regex, em validateRows) —
+ * a existência real só era descoberta tarde, dentro de seed:questions.
+ *
+ * A fonte oficial de package/package_version é o banco (não há espelho em
+ * taxonomy.json), então esta checagem precisa ser assíncrona — por isso fica isolada
+ * aqui, fora de `convertQuestions()` (síncrona, usada também por
+ * tools/question-pipeline/src/merge.ts e export.ts, que não devem mudar).
+ *
+ * Relê o mesmo arquivo já convertido com sucesso (mesma função `readSpreadsheet` usada
+ * dentro de `convertQuestions`) só para recuperar position/package/package_version com
+ * o número de linha original — nenhuma consulta nova é escrita: `loadTaxonomyMaps`
+ * (position → course_id) e `resolvePackageVersion` são os mesmos resolvers que
+ * seed:questions já usa.
+ */
+async function validatePackageReferences(
+  inputPath: string,
+  headerLine = 1,
+): Promise<ConvertIssue[]> {
+  const rows = readSpreadsheet(inputPath);
+  const rowsWithPackage = rows
+    .map((row, index) => ({ row, line: headerLine + 1 + index }))
+    .filter(({ row }) => (row.package ?? "").trim());
+
+  if (!rowsWithPackage.length) return [];
+
+  loadEnv(projectRoot());
+  const db = createSeedClient();
+  const maps = await loadTaxonomyMaps(db);
+
+  const issues: ConvertIssue[] = [];
+  const packageVersionCache = new Map<string, boolean>();
+
+  for (const { row, line } of rowsWithPackage) {
+    const position = row.position ?? "";
+    const packageSlug = row.package ?? "";
+    const packageVersion = row.package_version
+      ? /^\d+$/.test(row.package_version)
+        ? `${row.package_version}.0`
+        : row.package_version
+      : "";
+
+    const courseId = maps.positionSlugToCourseId.get(position);
+    if (!courseId) {
+      issues.push({
+        line,
+        field: "package",
+        error: `Curso não resolvido para o cargo "${position}" (necessário para validar o package).`,
+      });
+      continue;
+    }
+
+    const cacheKey = `${courseId}/${packageSlug}/${packageVersion}`;
+    let exists = packageVersionCache.get(cacheKey);
+    if (exists === undefined) {
+      const resolved = await resolvePackageVersion(db, courseId, packageSlug, packageVersion);
+      exists = !!resolved;
+      packageVersionCache.set(cacheKey, exists);
+    }
+    if (!exists) {
+      issues.push({
+        line,
+        field: "package_version",
+        error: `Pacote "${packageSlug}" versão "${packageVersion}" não encontrado no banco para o curso do cargo "${position}".`,
+      });
+    }
+  }
+
+  return issues;
+}
+
+export async function runConvertQuestions(
+  inputPath?: string,
+  outputPath?: string,
+): Promise<number> {
   const result = convertQuestions(inputPath, outputPath);
   if (!result.ok) {
     printConvertReport(result.issues);
     return 1;
   }
+
+  const resolvedInput = resolveInputPath(inputPath);
+  const packageIssues = resolvedInput ? await validatePackageReferences(resolvedInput) : [];
+  if (packageIssues.length) {
+    printConvertReport(packageIssues);
+    console.error(
+      `\n${result.outputPath} foi escrito, mas contém referência de package/package_version inexistente no banco — não use este arquivo em "npm run seed:questions" antes de corrigir.`,
+    );
+    return 1;
+  }
+
   console.log(`Conversão concluída: ${result.outputPath}`);
   console.log(`Questões convertidas: ${result.count}`);
   return 0;

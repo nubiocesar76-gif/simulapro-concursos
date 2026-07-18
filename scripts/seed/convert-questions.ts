@@ -16,4 +16,5 @@ import { runConvertQuestions } from "./questions/convert/convert.ts";
 const inputArg = process.argv[2];
 const outputArg = process.argv[3];
 
-process.exit(runConvertQuestions(inputArg, outputArg));
+const exitCode = await runConvertQuestions(inputArg, outputArg);
+process.exit(exitCode);
