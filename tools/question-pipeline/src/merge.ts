@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -10,6 +10,7 @@ import {
 } from "./validate-classification.ts";
 import { REQUIRED_COLUMNS, REQUIRED_ALTERNATIVE_LETTERS } from "../../../scripts/seed/questions/convert/columns.ts";
 import { convertQuestions } from "../../../scripts/seed/questions/convert/convert.ts";
+import { QUESTIONS_IMPORT_CSV_PATH } from "../../../scripts/seed/core/io.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, "..");
@@ -70,6 +71,36 @@ async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true });
   const csvPath = resolve(OUTPUT_DIR, "questions.csv");
   await writeFile(csvPath, csv, "utf-8");
+
+  // Sprint G7.5A — elimina a cópia manual do CSV para docs/imports/: o mesmo
+  // conteúdo escrito acima também é gravado direto no caminho que
+  // convert:questions já lê (QUESTIONS_IMPORT_CSV_PATH, scripts/seed/core/io.ts).
+  // Nenhum formato muda — é o mesmo `csv` gerado por mergeQuestionsToCsv, só
+  // gravado em dois lugares. O código de saída (exit 1) continua avaliando as
+  // mesmas validações de sempre, então um CSV com problema ainda é sinalizado
+  // do mesmo jeito, agora nos dois arquivos.
+  //
+  // Aviso pré-substituição (sem bloquear, sem prompt): a idade real dos dados
+  // não é a data de questions.csv (reescrito a cada rodada), é a de
+  // questions.raw.json (rawPath) — é ela que revela se a extração por trás
+  // deste merge é de hoje ou de um piloto antigo esquecido em output/.
+  const rawStat = await stat(rawPath);
+  const destExistedBefore = existsSync(QUESTIONS_IMPORT_CSV_PATH);
+  const destStatBefore = destExistedBefore ? await stat(QUESTIONS_IMPORT_CSV_PATH) : null;
+
+  console.log("\n=== Substituição de docs/imports/questions.csv ===");
+  console.log(`Origem (dados extraídos): ${rawPath}`);
+  console.log(`  Gerado/extraído em: ${rawStat.mtime.toLocaleString("pt-BR")}`);
+  console.log(`Destino: ${QUESTIONS_IMPORT_CSV_PATH}`);
+  if (destStatBefore) {
+    console.log(`  Última modificação do destino: ${destStatBefore.mtime.toLocaleString("pt-BR")}`);
+    console.log("  O conteúdo atual do destino será SUBSTITUÍDO pelo conteúdo gerado a partir da origem acima.");
+  } else {
+    console.log("  Destino ainda não existe — será criado agora.");
+  }
+
+  await mkdir(dirname(QUESTIONS_IMPORT_CSV_PATH), { recursive: true });
+  await writeFile(QUESTIONS_IMPORT_CSV_PATH, csv, "utf-8");
 
   const localIssues = [...issues];
 
@@ -158,6 +189,9 @@ async function main() {
   }
 
   console.log(`\nArquivos gerados em: ${OUTPUT_DIR}`);
+  console.log(
+    `Copiado também para: ${QUESTIONS_IMPORT_CSV_PATH} (não é mais necessário copiar manualmente antes de "npm run convert:questions")`,
+  );
 
   if (validationErrors.length > 0) process.exit(1);
 }
