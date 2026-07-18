@@ -18,6 +18,7 @@
     "export:taxonomy": "tsx scripts/seed/export-taxonomy.ts",
     "seed:questions": "tsx scripts/seed/run-questions.ts",
     "export:questions": "tsx scripts/seed/export-questions.ts",
+    "sync:questions": "npm run seed:questions && npm run export:questions",
     "convert:questions": "tsx scripts/seed/convert-questions.ts",
     "pipeline:init": "tsx scripts/seed/init-pdf-pipeline.ts",
     "pipeline:extract": "tsx tools/question-pipeline/src/run.ts",
