@@ -1,4 +1,5 @@
 import type { QuestionFeedback } from "@/lib/study-engine";
+import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 import { CheckCircle2, XCircle } from "lucide-react";
 
 type QuestionFeedbackPanelProps = {
@@ -10,38 +11,62 @@ export function QuestionFeedbackPanel({ feedback }: QuestionFeedbackPanelProps) 
     <section
       className={
         feedback.isCorrect
-          ? "rounded-xl border border-success/30 bg-success/[0.04] p-5 sm:p-6"
-          : "rounded-xl border border-destructive/30 bg-destructive/[0.04] p-5 sm:p-6"
+          ? "rounded-[var(--ds-radius-lg)] border border-[color:var(--ds-color-success)]/30 bg-[color:var(--ds-color-success)]/[0.04] p-5 sm:p-6"
+          : "rounded-[var(--ds-radius-lg)] border border-[color:var(--ds-color-error)]/30 bg-[color:var(--ds-color-error)]/[0.04] p-5 sm:p-6"
       }
       aria-live="polite"
     >
-      <div className="flex items-center gap-2.5">
+      <div className="flex items-center gap-[var(--ds-space-2)]">
         {feedback.isCorrect ? (
-          <CheckCircle2 className="h-5 w-5 shrink-0 text-success" />
+          <CheckCircle2
+            className="h-5 w-5 shrink-0 text-[color:var(--ds-color-success)]"
+            aria-hidden="true"
+          />
         ) : (
-          <XCircle className="h-5 w-5 shrink-0 text-destructive" />
+          <XCircle
+            className="h-5 w-5 shrink-0 text-[color:var(--ds-color-error)]"
+            aria-hidden="true"
+          />
         )}
-        <h2 className="text-base font-semibold text-foreground">
+        <h2
+          className="text-[color:var(--ds-color-text-primary)]"
+          style={{ fontSize: dsFontSize.base, fontWeight: dsFontWeight.semibold }}
+        >
           {feedback.isCorrect ? "Correta" : "Incorreta"}
         </h2>
       </div>
 
-      <div className="mt-5 space-y-5 border-t border-border/40 pt-5">
+      <div
+        className="mt-5 flex flex-col gap-[var(--ds-space-5)] border-t pt-5"
+        style={{ borderColor: "var(--ds-color-border)" }}
+      >
         <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+          <p
+            className="uppercase tracking-[0.08em] text-[color:var(--ds-color-text-secondary)]"
+            style={{ fontSize: dsFontSize.xs, fontWeight: dsFontWeight.medium }}
+          >
             Resposta correta
           </p>
-          <p className="mt-1 text-base font-semibold text-foreground">
+          <p
+            className="mt-1 text-[color:var(--ds-color-text-primary)]"
+            style={{ fontSize: dsFontSize.base, fontWeight: dsFontWeight.semibold }}
+          >
             Alternativa {feedback.correctAnswer}
           </p>
         </div>
 
         {feedback.explanation && (
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+            <p
+              className="uppercase tracking-[0.08em] text-[color:var(--ds-color-text-secondary)]"
+              style={{ fontSize: dsFontSize.xs, fontWeight: dsFontWeight.medium }}
+            >
               Explicação
             </p>
-            <p className="mt-1.5 text-sm leading-relaxed whitespace-pre-wrap text-foreground/90 sm:text-base sm:leading-relaxed">
+            <p
+              className="mt-1.5 whitespace-pre-wrap leading-relaxed text-[color:var(--ds-color-text-primary)]"
+              style={{ fontSize: dsFontSize.sm }}
+            >
               {feedback.explanation}
             </p>
           </div>
@@ -49,10 +74,16 @@ export function QuestionFeedbackPanel({ feedback }: QuestionFeedbackPanelProps) 
 
         {(feedback.bibliography || feedback.legalReference) && (
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+            <p
+              className="uppercase tracking-[0.08em] text-[color:var(--ds-color-text-secondary)]"
+              style={{ fontSize: dsFontSize.xs, fontWeight: dsFontWeight.medium }}
+            >
               Referência
             </p>
-            <div className="mt-1.5 space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <div
+              className="mt-1.5 flex flex-col gap-1 leading-relaxed text-[color:var(--ds-color-text-secondary)]"
+              style={{ fontSize: dsFontSize.sm }}
+            >
               {feedback.bibliography && <p>{feedback.bibliography}</p>}
               {feedback.legalReference && <p>{feedback.legalReference}</p>}
             </div>

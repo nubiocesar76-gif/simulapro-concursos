@@ -223,14 +223,26 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
     (distributionRows ?? []).map((row) => [row.id, row.package_version_id]),
   );
 
-  const { data: questionRows, error: questionError } = versionIds.length
-    ? await supabase
+  const QUESTIONS_PAGE_SIZE = 1000;
+  const questionRows: Array<{ package_version_id: string | null }> = [];
+
+  if (versionIds.length) {
+    let from = 0;
+    for (;;) {
+      const { data, error: questionError } = await supabase
         .from("questions")
         .select("package_version_id")
         .in("package_version_id", versionIds)
-    : { data: [], error: null };
+        .range(from, from + QUESTIONS_PAGE_SIZE - 1);
 
-  if (questionError) throw questionError;
+      if (questionError) throw questionError;
+
+      const page = data ?? [];
+      questionRows.push(...page);
+      if (page.length < QUESTIONS_PAGE_SIZE) break;
+      from += QUESTIONS_PAGE_SIZE;
+    }
+  }
 
   const questionCountByVersion = new Map<string, number>();
   for (const row of questionRows ?? []) {

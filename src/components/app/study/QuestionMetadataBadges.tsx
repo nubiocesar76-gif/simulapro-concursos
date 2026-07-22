@@ -1,13 +1,11 @@
 import type { QuestionContext } from "@/lib/study-engine";
 import { cn } from "@/lib/utils";
+import { Badge } from "@/components/design-system";
 
 type QuestionMetadataBadgesProps = {
   context: QuestionContext;
   className?: string;
 };
-
-const badgeClass =
-  "inline-flex items-center rounded-md bg-muted/40 px-2 py-0.5 text-xs font-normal text-muted-foreground";
 
 export function QuestionMetadataBadges({ context, className }: QuestionMetadataBadgesProps) {
   const items = [
@@ -20,11 +18,11 @@ export function QuestionMetadataBadges({ context, className }: QuestionMetadataB
   if (!items.length) return null;
 
   return (
-    <div className={cn("flex flex-wrap items-center gap-1.5", className)}>
+    <div className={cn("flex flex-wrap items-center gap-[var(--ds-space-2)]", className)}>
       {items.map((item) => (
-        <span key={item.label} className={badgeClass}>
-          {item.label}: {item.value}
-        </span>
+        <Badge key={item.label} variant="outline" size="sm" className="tracking-[0.04em]">
+          {item.label.toUpperCase()}: {item.value}
+        </Badge>
       ))}
     </div>
   );

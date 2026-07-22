@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Flag } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/design-system";
 import { cn } from "@/lib/utils";
 
 type QuestionNavigationProps = {
@@ -36,9 +36,10 @@ export function QuestionNavigation({
   return (
     <nav
       className={cn(
-        "sticky bottom-0 z-20 -mx-6 border-t border-border/80 bg-background/95 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-background/90 sm:px-6 xl:-mx-8",
+        "sticky bottom-0 z-20 -mx-6 border-t bg-[color:var(--ds-color-surface)]/95 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-[color:var(--ds-color-surface)]/90 sm:px-6 xl:-mx-8",
         className,
       )}
+      style={{ borderColor: "var(--ds-color-border)" }}
       aria-label="Navegação da questão"
       aria-busy={isBusy}
     >
@@ -49,40 +50,42 @@ export function QuestionNavigation({
           onClick={onPrevious}
           disabled={!canGoPrevious || isBusy}
           className="col-span-2 w-full sm:col-span-1 sm:w-auto"
+          leftIcon={<ChevronLeft />}
         >
-          <ChevronLeft className="h-4 w-4 mr-2" />
           Anterior
         </Button>
 
         <Button
           type="button"
-          variant={canAnswer ? "default" : "secondary"}
+          variant={canAnswer ? "primary" : "secondary"}
           onClick={onAnswer}
           disabled={!canAnswer || isBusy}
-          className="w-full"
+          fullWidth
+          className="sm:w-auto"
         >
           {isAnswering ? "Salvando..." : "Responder"}
         </Button>
 
         <Button
           type="button"
-          variant={canGoNext ? "default" : "secondary"}
+          variant={canGoNext ? "primary" : "secondary"}
           onClick={onNext}
           disabled={!canGoNext || isBusy}
-          className="w-full"
+          fullWidth
+          className="sm:w-auto"
+          rightIcon={<ChevronRight />}
         >
           {isNavigating ? "Avançando..." : "Próxima"}
-          <ChevronRight className="h-4 w-4 ml-2" />
         </Button>
 
         <Button
           type="button"
-          variant={canFinish ? "default" : "secondary"}
+          variant={canFinish ? "primary" : "secondary"}
           onClick={onFinish}
           disabled={!canFinish || isBusy}
           className="col-span-2 w-full sm:col-span-1 sm:w-auto"
+          leftIcon={<Flag />}
         >
-          <Flag className="h-4 w-4 mr-2" />
           {isFinishing ? "Finalizando..." : "Finalizar"}
         </Button>
       </div>

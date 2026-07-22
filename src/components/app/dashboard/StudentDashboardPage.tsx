@@ -11,7 +11,8 @@ import {
   StudySessionError,
   type FilterStudyMode,
 } from "@/lib/study-session";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Page, Skeleton } from "@/components/design-system";
+import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 import { ContinueStudyCard } from "@/components/app/dashboard/ContinueStudyCard";
 import { DashboardStats } from "@/components/app/dashboard/DashboardStats";
 import { DistributionCard } from "@/components/app/dashboard/DistributionCard";
@@ -22,6 +23,12 @@ import { PageErrorState } from "@/components/shared/PageErrorState";
 import { ActivatePlanCard } from "@/components/shared/ActivatePlanCard";
 import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL } from "@/config/study";
+
+const sectionTitleStyle: React.CSSProperties = {
+  fontSize: dsFontSize.lg,
+  fontWeight: dsFontWeight.semibold,
+};
+const sectionDescriptionStyle: React.CSSProperties = { fontSize: dsFontSize.sm };
 
 const DASHBOARD_FILTER_EMPTY_MESSAGES: Record<FilterStudyMode, string> = {
   FAVORITES: "Você ainda não possui questões favoritas.",
@@ -41,72 +48,88 @@ const FILTER_SESSION_SETTINGS = {
   show_answers: "during" as const,
 };
 
-const pageShellClass = STUDENT_PAGE_SHELL;
+/**
+ * `grid grid-cols-[minmax(0,1fr)]` (em vez de bloco comum) no shell da
+ * página: sem isso, a largura mínima das tabelas internas (colunas com
+ * `min-w` fixo) se propaga para cima através do AppShell real (fora do
+ * escopo desta sprint) e força rolagem horizontal da página inteira em
+ * telas estreitas — o `minmax(0, 1fr)` é o truque padrão para zerar essa
+ * contribuição de largura mínima automática, resolvendo só a partir daqui,
+ * sem tocar no AppShell. A rolagem interna de cada tabela (`overflow-x-auto`
+ * já existente) continua funcionando normalmente.
+ */
+const pageShellClass = `${STUDENT_PAGE_SHELL} grid grid-cols-[minmax(0,1fr)]`;
+
+const CHIP_HEIGHT = "calc(var(--ds-space-8) + var(--ds-space-1))";
 
 function DashboardLoadingSkeleton() {
   return (
     <div className={pageShellClass} aria-busy="true" aria-label="Carregando dashboard">
-      <div className="space-y-2">
-        <Skeleton className="h-8 w-64" />
-        <Skeleton className="h-4 w-96 max-w-full" />
+      <div className="flex flex-col gap-[var(--ds-space-2)]">
+        <Skeleton width="40%" height="var(--ds-space-8)" />
+        <Skeleton width="60%" height="var(--ds-space-4)" />
       </div>
 
-      <section className="space-y-6" aria-hidden="true">
-        <div className="space-y-2">
-          <Skeleton className="h-6 w-48" />
-          <Skeleton className="h-4 w-72 max-w-full" />
+      <section className="flex flex-col gap-[var(--ds-space-6)]" aria-hidden="true">
+        <div className="flex flex-col gap-[var(--ds-space-2)]">
+          <Skeleton width="30%" height="var(--ds-space-6)" />
+          <Skeleton width="50%" height="var(--ds-space-4)" />
         </div>
-        <Skeleton className="h-36 rounded-lg" />
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <Skeleton className="h-6 w-44" />
-            <Skeleton className="h-4 w-56" />
+        <Skeleton width="100%" height="9rem" radius="lg" />
+        <div className="flex flex-col gap-[var(--ds-space-4)]">
+          <div className="flex flex-col gap-[var(--ds-space-2)]">
+            <Skeleton width="28%" height="var(--ds-space-6)" />
+            <Skeleton width="40%" height="var(--ds-space-4)" />
           </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-[var(--ds-space-4)] md:grid-cols-2 xl:grid-cols-3">
             {[1, 2, 3].map((item) => (
-              <Skeleton key={item} className="h-52 rounded-lg" />
+              <Skeleton key={item} width="100%" height="13rem" radius="lg" />
             ))}
           </div>
         </div>
-        <div className="space-y-4">
-          <div className="space-y-2">
-            <Skeleton className="h-6 w-40" />
-            <Skeleton className="h-4 w-52" />
+        <div className="flex flex-col gap-[var(--ds-space-4)]">
+          <div className="flex flex-col gap-[var(--ds-space-2)]">
+            <Skeleton width="25%" height="var(--ds-space-6)" />
+            <Skeleton width="35%" height="var(--ds-space-4)" />
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-[var(--ds-space-3)]">
             {[1, 2, 3].map((item) => (
-              <Skeleton key={item} className="h-9 w-36 rounded-lg" />
+              <Skeleton key={item} width="9rem" height={CHIP_HEIGHT} radius="lg" />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="space-y-6" aria-hidden="true">
-        <div className="space-y-2">
-          <Skeleton className="h-6 w-52" />
-          <Skeleton className="h-4 w-72 max-w-full" />
+      <section className="flex flex-col gap-[var(--ds-space-6)]" aria-hidden="true">
+        <div className="flex flex-col gap-[var(--ds-space-2)]">
+          <Skeleton width="32%" height="var(--ds-space-6)" />
+          <Skeleton width="50%" height="var(--ds-space-4)" />
         </div>
-        <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid items-stretch gap-[var(--ds-space-4)] sm:grid-cols-2 lg:grid-cols-4">
           {[1, 2, 3, 4].map((item) => (
-            <Skeleton key={item} className="h-28 rounded-lg" />
+            <Skeleton key={item} width="100%" height="7rem" radius="lg" />
           ))}
         </div>
-        <div className="rounded-lg border p-6 space-y-4">
-          <Skeleton className="h-6 w-40" />
-          <Skeleton className="h-4 w-56" />
-          <div className="space-y-2">
-            {[1, 2, 3, 4, 5].map((item) => (
-              <Skeleton key={item} className="h-12 w-full rounded-lg" />
-            ))}
+        <div className="rounded-[var(--ds-radius-lg)] border border-[color:var(--ds-color-border)] p-[var(--ds-space-6)]">
+          <div className="flex flex-col gap-[var(--ds-space-4)]">
+            <Skeleton width="28%" height="var(--ds-space-6)" />
+            <Skeleton width="40%" height="var(--ds-space-4)" />
+            <div className="flex flex-col gap-[var(--ds-space-2)]">
+              {[1, 2, 3, 4, 5].map((item) => (
+                <Skeleton key={item} width="100%" height="var(--ds-space-12)" radius="lg" />
+              ))}
+            </div>
           </div>
         </div>
-        <div className="rounded-lg border p-6 space-y-4">
-          <Skeleton className="h-6 w-52" />
-          <Skeleton className="h-4 w-64" />
-          <div className="space-y-2">
-            {[1, 2, 3].map((item) => (
-              <Skeleton key={item} className="h-12 w-full rounded-lg" />
-            ))}
+        <div className="rounded-[var(--ds-radius-lg)] border border-[color:var(--ds-color-border)] p-[var(--ds-space-6)]">
+          <div className="flex flex-col gap-[var(--ds-space-4)]">
+            <Skeleton width="32%" height="var(--ds-space-6)" />
+            <Skeleton width="45%" height="var(--ds-space-4)" />
+            <div className="flex flex-col gap-[var(--ds-space-2)]">
+              {[1, 2, 3].map((item) => (
+                <Skeleton key={item} width="100%" height="var(--ds-space-12)" radius="lg" />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -177,9 +200,7 @@ export function StudentDashboardPage() {
   if (error || !data) {
     return (
       <div className={pageShellClass}>
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight">Dashboard</h1>
-        </div>
+        <Page title="Dashboard" />
         <PageErrorState
           title="Erro ao carregar dashboard"
           message="Não foi possível carregar seu painel. Tente novamente em instantes."
@@ -191,36 +212,42 @@ export function StudentDashboardPage() {
 
   return (
     <div className={pageShellClass}>
-      <header>
-        <h1 className="text-2xl font-bold tracking-tight">
-          Olá, {profile?.full_name ?? "estudante"}
-        </h1>
-        <p className="text-sm text-muted-foreground">
-          Seu resumo de estudos e ponto de entrada para continuar aprendendo.
-        </p>
-      </header>
+      <Page
+        title={`Olá, ${profile?.full_name ?? "estudante"}`}
+        description="Seu resumo de estudos e ponto de entrada para continuar aprendendo."
+      />
 
-      <section className="space-y-6" aria-label="O que fazer agora">
-        <div>
-          <h2 className="text-lg font-semibold">O que fazer agora</h2>
-          <p className="text-sm text-muted-foreground">
+      <section className="flex flex-col gap-[var(--ds-space-6)]" aria-label="O que fazer agora">
+        <div className="flex flex-col gap-[var(--ds-space-1)]">
+          <h2 className="text-[color:var(--ds-color-text-primary)]" style={sectionTitleStyle}>
+            O que fazer agora
+          </h2>
+          <p
+            className="text-[color:var(--ds-color-text-secondary)]"
+            style={sectionDescriptionStyle}
+          >
             Retome uma sessão, escolha uma distribuição ou use um atalho filtrado.
           </p>
         </div>
 
         {data.continueStudy && <ContinueStudyCard session={data.continueStudy} />}
 
-        <div className="space-y-4">
-          <div>
-            <h2 className="text-lg font-semibold">Seu Acervo</h2>
-            <p className="text-sm text-muted-foreground">
+        <div className="flex flex-col gap-[var(--ds-space-4)]">
+          <div className="flex flex-col gap-[var(--ds-space-1)]">
+            <h2 className="text-[color:var(--ds-color-text-primary)]" style={sectionTitleStyle}>
+              Seu Acervo
+            </h2>
+            <p
+              className="text-[color:var(--ds-color-text-secondary)]"
+              style={sectionDescriptionStyle}
+            >
               O conteúdo disponível para você estudar.
             </p>
           </div>
           {data.distributions.length === 0 ? (
             <ActivatePlanCard />
           ) : (
-            <div className="grid items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid items-stretch gap-[var(--ds-space-4)] md:grid-cols-2 xl:grid-cols-3">
               {data.distributions.map((distribution) => (
                 <DistributionCard key={distribution.distribution_id} distribution={distribution} />
               ))}
@@ -228,12 +255,20 @@ export function StudentDashboardPage() {
           )}
         </div>
 
-        <div className="space-y-4">
-          <div>
-            <h2 className="text-lg font-semibold">Atalhos de estudo</h2>
-            <p className="text-sm text-muted-foreground">
+        <div className="flex flex-col gap-[var(--ds-space-4)]">
+          <div className="flex flex-col gap-[var(--ds-space-1)]">
+            <h2 className="text-[color:var(--ds-color-text-primary)]" style={sectionTitleStyle}>
+              Atalhos de estudo
+            </h2>
+            <p
+              className="text-[color:var(--ds-color-text-secondary)]"
+              style={sectionDescriptionStyle}
+            >
               Inicie uma sessão filtrada com um clique ou acesse a{" "}
-              <Link to="/app/review" className="font-medium text-primary underline-offset-4 hover:underline">
+              <Link
+                to="/app/review"
+                className="font-medium text-[color:var(--ds-color-action)] underline-offset-4 hover:underline"
+              >
                 Central de Revisão
               </Link>
               .
@@ -247,10 +282,15 @@ export function StudentDashboardPage() {
         </div>
       </section>
 
-      <section className="space-y-6" aria-label="Como você está indo">
-        <div>
-          <h2 className="text-lg font-semibold">Como você está indo</h2>
-          <p className="text-sm text-muted-foreground">
+      <section className="flex flex-col gap-[var(--ds-space-6)]" aria-label="Como você está indo">
+        <div className="flex flex-col gap-[var(--ds-space-1)]">
+          <h2 className="text-[color:var(--ds-color-text-primary)]" style={sectionTitleStyle}>
+            Como você está indo
+          </h2>
+          <p
+            className="text-[color:var(--ds-color-text-secondary)]"
+            style={sectionDescriptionStyle}
+          >
             Resumo do seu progresso e desempenho por disciplina.
           </p>
         </div>

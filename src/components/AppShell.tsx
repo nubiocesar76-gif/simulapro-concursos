@@ -1,10 +1,11 @@
 import { Link, Navigate, Outlet, useNavigate, useRouterState } from "@tanstack/react-router";
 import { type LucideIcon } from "lucide-react";
-import { GraduationCap, LogOut } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/design-system";
 import {
   Sidebar,
   SidebarContent,
@@ -34,10 +35,12 @@ export function AppShell({ brand, requireRole, groups }: Props) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const navigate = useNavigate();
   const qc = useQueryClient();
+  const isAdminPortal = brand.toLowerCase().includes("admin");
 
   if (loading || (requireRole && user && role === null)) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-background">
+        <Logo orientation="vertical" theme="light" className="h-20 w-auto" />
         <p className="text-sm text-muted-foreground">Carregando...</p>
       </div>
     );
@@ -64,11 +67,18 @@ export function AppShell({ brand, requireRole, groups }: Props) {
         <Sidebar collapsible="icon">
           <SidebarHeader>
             <div className="flex items-center gap-2 px-2 py-1.5">
-              <div className="grid h-8 w-8 place-items-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground">
-                <GraduationCap className="h-4 w-4" />
-              </div>
-              <div className="font-semibold text-sidebar-foreground group-data-[collapsible=icon]:hidden">
-                {brand}
+              <Logo
+                orientation="mark"
+                theme="dark"
+                className="hidden h-7 w-7 shrink-0 group-data-[collapsible=icon]:block"
+              />
+              <div className="flex items-center gap-2 group-data-[collapsible=icon]:hidden">
+                <Logo orientation="horizontal" theme="dark" className="h-7 w-auto" />
+                {isAdminPortal ? (
+                  <span className="shrink-0 rounded-full bg-sidebar-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-sidebar-accent-foreground">
+                    Admin
+                  </span>
+                ) : null}
               </div>
             </div>
           </SidebarHeader>
@@ -100,7 +110,12 @@ export function AppShell({ brand, requireRole, groups }: Props) {
             <div className="px-2 py-2 text-xs text-sidebar-foreground/70 group-data-[collapsible=icon]:hidden truncate">
               {user.email}
             </div>
-            <Button variant="ghost" size="sm" onClick={handleLogout} className="justify-start text-sidebar-foreground hover:bg-sidebar-accent">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleLogout}
+              className="justify-start text-sidebar-foreground hover:bg-sidebar-accent"
+            >
               <LogOut className="h-4 w-4" />
               <span className="group-data-[collapsible=icon]:hidden">Sair</span>
             </Button>
@@ -108,9 +123,14 @@ export function AppShell({ brand, requireRole, groups }: Props) {
         </Sidebar>
 
         <div className="flex-1 flex flex-col">
-          <header className="h-14 flex items-center border-b bg-card px-4 gap-2">
+          <header className="h-14 flex items-center border-b bg-card px-4 gap-2.5">
             <SidebarTrigger />
-            <div className="text-sm font-medium text-muted-foreground">{brand}</div>
+            <Logo orientation="horizontal" theme="light" className="h-5 w-auto" />
+            {isAdminPortal ? (
+              <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                Admin
+              </span>
+            ) : null}
           </header>
           <main className="flex-1 bg-background p-6 xl:p-8">
             <Outlet />

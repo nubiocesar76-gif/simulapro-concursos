@@ -1,8 +1,8 @@
-import { Star, Pin, XCircle, Loader2 } from "lucide-react";
+import { Star, Pin, XCircle } from "lucide-react";
 import type { StudyFilterIndicators } from "@/lib/student-dashboard";
 import type { FilterStudyMode } from "@/lib/study-session";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge, Button } from "@/components/design-system";
+import { dsFontSize } from "@/styles/design-system/tokens";
 
 type StudyFilterIndicatorsProps = {
   indicators: StudyFilterIndicators;
@@ -27,44 +27,36 @@ export function StudyFilterIndicatorsBar({
   ];
 
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-[var(--ds-space-3)]">
       {items.map((item) => {
         const Icon = item.icon;
         const isLoading = loadingShortcut === item.mode;
         const isDisabled = item.value === 0 || isLoading;
-
-        if (onShortcutClick) {
-          return (
-            <Button
-              key={item.mode}
-              type="button"
-              variant="outline"
-              className="h-9 gap-2"
-              onClick={() => onShortcutClick(item.mode)}
-              disabled={isDisabled}
-              aria-busy={isLoading}
-              aria-label={
-                isDisabled && item.value === 0
-                  ? `${item.label}: nenhuma questão disponível`
-                  : `Iniciar sessão de ${item.label.toLowerCase()}`
-              }
-            >
-              {isLoading ? (
-                <Loader2 className="h-4 w-4 animate-spin text-primary" aria-hidden="true" />
-              ) : (
-                <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
-              )}
-              <span>{item.label}</span>
-              <Badge variant="secondary" className="tabular-nums">
-                {item.value}
-              </Badge>
-            </Button>
-          );
-        }
+        const iconEl = (
+          <Icon
+            className="text-[color:var(--ds-color-action)]"
+            aria-hidden="true"
+            style={{ width: dsFontSize.base, height: dsFontSize.base }}
+          />
+        );
 
         return (
-          <Button key={item.mode} type="button" variant="outline" className="h-9 gap-2" disabled>
-            <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
+          <Button
+            key={item.mode}
+            type="button"
+            variant="outline"
+            loading={onShortcutClick ? isLoading : false}
+            leftIcon={iconEl}
+            onClick={onShortcutClick ? () => onShortcutClick(item.mode) : undefined}
+            disabled={onShortcutClick ? isDisabled : true}
+            aria-label={
+              onShortcutClick && isDisabled && item.value === 0
+                ? `${item.label}: nenhuma questão disponível`
+                : onShortcutClick
+                  ? `Iniciar sessão de ${item.label.toLowerCase()}`
+                  : undefined
+            }
+          >
             <span>{item.label}</span>
             <Badge variant="secondary" className="tabular-nums">
               {item.value}

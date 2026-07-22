@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronLeft, PlayCircle } from "lucide-react";
@@ -15,21 +15,26 @@ import {
   startStudySession,
 } from "@/lib/study-engine";
 import { STUDY_MODE_LABELS } from "@/lib/study-session";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Badge,
+  Button,
+  Card,
+  CardContent,
+  Section,
+  Skeleton,
+  EmptyState,
+} from "@/components/design-system";
+import { dsFontSize } from "@/styles/design-system/tokens";
 import { QuestionCard } from "@/components/app/study/QuestionCard";
 import { QuestionActions } from "@/components/app/study/QuestionActions";
 import { QuestionFeedbackPanel } from "@/components/app/study/QuestionFeedbackPanel";
 import { QuestionMetadataBadges } from "@/components/app/study/QuestionMetadataBadges";
 import { QuestionNavigation } from "@/components/app/study/QuestionNavigation";
 import { QuestionOptions } from "@/components/app/study/QuestionOptions";
-import { SessionHeader } from "@/components/app/study/SessionHeader";
 import { SessionResultsView } from "@/components/app/study/SessionResultsView";
 import { SessionProgress } from "@/components/app/study/SessionProgress";
 import { SessionSummaryPanel } from "@/components/app/study/SessionSummaryPanel";
 import { StudyActiveHeader } from "@/components/app/study/StudyActiveHeader";
-import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
@@ -46,20 +51,46 @@ function formatElapsed(seconds: number) {
   return `${minutes}:${String(remainder).padStart(2, "0")}`;
 }
 
+const narrowShellClass = `${STUDENT_PAGE_SHELL_NARROW} grid grid-cols-[minmax(0,1fr)]`;
+const wideShellClass = `${STUDENT_PAGE_SHELL} grid grid-cols-[minmax(0,1fr)]`;
+const iconSizeStyle = { width: dsFontSize.base, height: dsFontSize.base };
+
+function BackToStudyButton() {
+  return (
+    <Button variant="outline" asChild>
+      <Link to="/app/study">
+        <ChevronLeft aria-hidden="true" style={iconSizeStyle} />
+        Voltar ao estudo
+      </Link>
+    </Button>
+  );
+}
+
 export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
   const [phase, setPhase] = useState<Phase>("preview");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const questionStartedAt = useRef(Date.now());
 
-  const { data: openData, isLoading, error } = useQuery({
+  const {
+    data: openData,
+    isLoading,
+    error,
+  } = useQuery({
     queryKey: ["study-session-open", sessionId],
     queryFn: () => openStudySession(sessionId),
     retry: false,
   });
 
-  const { data: question, isLoading: isLoadingQuestion, isError: isQuestionError, error: questionError, refetch: refetchQuestion } = useQuery({
+  const {
+    data: question,
+    isLoading: isLoadingQuestion,
+    isError: isQuestionError,
+    error: questionError,
+    refetch: refetchQuestion,
+  } = useQuery({
     queryKey: ["study-question", sessionId, currentIndex],
     queryFn: () => loadQuestion(sessionId, currentIndex),
     enabled: phase === "active",
@@ -167,15 +198,15 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (isLoading) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW} aria-busy="true" aria-label="Carregando sessão">
-        <Skeleton className="h-8 w-48" />
+      <div className={narrowShellClass} aria-busy="true" aria-label="Carregando sessão">
+        <Skeleton width="60%" height="var(--ds-space-8)" />
         <Card>
-          <div className="p-6 space-y-4">
-            <Skeleton className="h-6 w-3/4" />
-            <Skeleton className="h-4 w-1/2" />
-            <Skeleton className="h-2 w-full" />
-            <Skeleton className="h-10 w-full" />
-          </div>
+          <CardContent className="flex flex-col gap-[var(--ds-space-4)] p-[var(--ds-space-6)]">
+            <Skeleton width="75%" height="var(--ds-space-6)" />
+            <Skeleton width="50%" height="var(--ds-space-4)" />
+            <Skeleton width="100%" height="var(--ds-space-2)" />
+            <Skeleton width="100%" height="var(--ds-space-10)" radius="lg" />
+          </CardContent>
         </Card>
       </div>
     );
@@ -183,7 +214,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (error || !openData) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW}>
+      <div className={narrowShellClass}>
         <PageErrorState
           title="Sessão não encontrada"
           message={
@@ -191,14 +222,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
               ? formatStudyEngineError(error)
               : "Não foi possível abrir esta sessão. Verifique o link ou tente novamente."
           }
-          action={
-            <Button variant="outline" asChild>
-              <Link to="/app/study">
-                <ChevronLeft className="h-4 w-4 mr-2" />
-                Voltar ao estudo
-              </Link>
-            </Button>
-          }
+          action={<BackToStudyButton />}
         />
       </div>
     );
@@ -207,31 +231,34 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
   const { session, sequence, sessionQuestions, answeredCount, results } = openData;
   const subtitle = `${session.course_name} · ${session.package_name} · v${session.version_number}`;
   const quantityLabel =
-    session.settings.question_count === "all"
-      ? "Todas"
-      : String(session.settings.question_count);
+    session.settings.question_count === "all" ? "Todas" : String(session.settings.question_count);
   const totalQuestions = sessionQuestions.length || sequence.length;
   const hasStarted = sessionQuestions.length > 0;
 
   if (session.status === "FINISHED" || phase === "completed") {
     if (!results) {
       return (
-        <div className={STUDENT_PAGE_SHELL} aria-busy="true" aria-label="Carregando resultado">
-          <div className="space-y-2">
-            <Skeleton className="h-8 w-56" />
-            <Skeleton className="h-4 w-72 max-w-full" />
+        <div className={wideShellClass} aria-busy="true" aria-label="Carregando resultado">
+          <div className="flex flex-col gap-[var(--ds-space-2)]">
+            <Skeleton width="45%" height="var(--ds-space-8)" />
+            <Skeleton width="60%" height="var(--ds-space-4)" />
           </div>
-          <div className="grid items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-[1fr_11rem_11rem]">
-            <Skeleton className="h-32 rounded-lg sm:col-span-2 lg:col-span-1" />
-            <Skeleton className="h-24 rounded-lg" />
-            <Skeleton className="h-24 rounded-lg" />
+          <div className="grid items-stretch gap-[var(--ds-space-4)] sm:grid-cols-2 lg:grid-cols-[1fr_11rem_11rem]">
+            <Skeleton
+              width="100%"
+              height="8rem"
+              radius="lg"
+              className="sm:col-span-2 lg:col-span-1"
+            />
+            <Skeleton width="100%" height="6rem" radius="lg" />
+            <Skeleton width="100%" height="6rem" radius="lg" />
           </div>
-          <div className="flex flex-wrap gap-3">
-            <Skeleton className="h-9 w-32 rounded-lg" />
-            <Skeleton className="h-9 w-44 rounded-lg" />
+          <div className="flex flex-wrap gap-[var(--ds-space-3)]">
+            <Skeleton width="8rem" height="var(--ds-space-9)" radius="lg" />
+            <Skeleton width="11rem" height="var(--ds-space-9)" radius="lg" />
           </div>
-          <Skeleton className="h-40 rounded-lg" />
-          <Skeleton className="h-64 rounded-lg" />
+          <Skeleton width="100%" height="10rem" radius="lg" />
+          <Skeleton width="100%" height="16rem" radius="lg" />
         </div>
       );
     }
@@ -241,18 +268,16 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (sequence.length === 0) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW}>
+      <div className={narrowShellClass}>
         <EmptyState
           title="Sessão sem questões"
           description="Não há questões elegíveis para esta distribuição com as configurações atuais."
-          action={
-            <Button variant="outline" asChild>
-              <Link to="/app/study">
-                <ChevronLeft className="h-4 w-4 mr-2" />
-                Voltar ao estudo
-              </Link>
-            </Button>
-          }
+          action={{
+            label: "Voltar ao estudo",
+            icon: <ChevronLeft style={iconSizeStyle} />,
+            variant: "outline",
+            onClick: () => navigate({ to: "/app/study" }),
+          }}
         />
       </div>
     );
@@ -260,72 +285,75 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (phase === "preview") {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW}>
-        <Button variant="ghost" size="sm" className="-ml-2 mb-2 w-fit" asChild>
+      <div className={narrowShellClass}>
+        <Button variant="ghost" size="sm" className="-ml-2 mb-1 w-fit" asChild>
           <Link to="/app/study">
-            <ChevronLeft className="h-4 w-4 mr-1" />
+            <ChevronLeft aria-hidden="true" style={iconSizeStyle} />
             Voltar
           </Link>
         </Button>
 
-        <Card>
-          <SessionHeader
-            title={session.distribution_name}
-            subtitle={subtitle}
-            mode={session.mode}
-          />
-          <CardContent className="space-y-6">
-            <div className="grid grid-cols-2 gap-4 text-sm">
+        <Section
+          title={session.distribution_name}
+          description={subtitle}
+          actions={<Badge variant="secondary">{STUDY_MODE_LABELS[session.mode]}</Badge>}
+        >
+          <div className="flex flex-col gap-[var(--ds-space-6)]">
+            <div
+              className="grid grid-cols-2 gap-[var(--ds-space-4)]"
+              style={{ fontSize: dsFontSize.sm }}
+            >
               <div>
-                <p className="text-muted-foreground">Modo</p>
-                <p className="font-medium">{STUDY_MODE_LABELS[session.mode]}</p>
+                <p className="text-[color:var(--ds-color-text-secondary)]">Modo</p>
+                <p className="font-medium text-[color:var(--ds-color-text-primary)]">
+                  {STUDY_MODE_LABELS[session.mode]}
+                </p>
               </div>
               <div>
-                <p className="text-muted-foreground">Quantidade</p>
-                <p className="font-medium">{quantityLabel}</p>
+                <p className="text-[color:var(--ds-color-text-secondary)]">Quantidade</p>
+                <p className="font-medium text-[color:var(--ds-color-text-primary)]">
+                  {quantityLabel}
+                </p>
               </div>
             </div>
 
-            <SessionProgress
-              current={answeredCount}
-              total={totalQuestions}
-            />
+            <SessionProgress current={answeredCount} total={totalQuestions} />
 
             <Button
-              className="w-full"
+              fullWidth
+              leftIcon={<PlayCircle style={iconSizeStyle} />}
               onClick={() => startSession.mutate()}
               disabled={startSession.isPending}
             >
-              <PlayCircle className="h-4 w-4 mr-2" />
               {startSession.isPending
                 ? "Iniciando..."
                 : hasStarted
                   ? "Continuar resolução"
                   : "Iniciar resolução"}
             </Button>
-          </CardContent>
-        </Card>
+          </div>
+        </Section>
       </div>
     );
   }
 
   if (isLoadingQuestion) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW} aria-busy="true" aria-label="Carregando questão">
-        <Skeleton className="h-8 w-20" />
+      <div className={narrowShellClass} aria-busy="true" aria-label="Carregando questão">
+        <Skeleton width="20%" height="var(--ds-space-8)" />
         <Card>
-          <div className="p-6 space-y-3">
-            <Skeleton className="h-6 w-3/4" />
-            <Skeleton className="h-4 w-1/2" />
-            <Skeleton className="h-2 w-full" />
-          </div>
+          <CardContent className="flex flex-col gap-[var(--ds-space-3)] p-[var(--ds-space-6)]">
+            <Skeleton width="75%" height="var(--ds-space-6)" />
+            <Skeleton width="50%" height="var(--ds-space-4)" />
+            <Skeleton width="100%" height="var(--ds-space-2)" />
+          </CardContent>
         </Card>
         <Card>
-          <div className="p-6 space-y-4">
-            <Skeleton className="h-24 w-full" />
-            <Skeleton className="h-12 w-full" />
-            <Skeleton className="h-12 w-full" />
-          </div>
+          <CardContent className="flex flex-col gap-[var(--ds-space-4)] p-[var(--ds-space-6)]">
+            <Skeleton width="100%" height="6rem" />
+            <Skeleton width="100%" height="3rem" />
+            <Skeleton width="100%" height="3rem" />
+          </CardContent>
         </Card>
       </div>
     );
@@ -333,19 +361,12 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   if (isQuestionError || !question) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW}>
+      <div className={narrowShellClass}>
         <PageErrorState
           title="Erro ao carregar questão"
           message={formatStudyEngineError(questionError)}
           onRetry={() => refetchQuestion()}
-          action={
-            <Button variant="outline" asChild>
-              <Link to="/app/study">
-                <ChevronLeft className="h-4 w-4 mr-2" />
-                Voltar ao estudo
-              </Link>
-            </Button>
-          }
+          action={<BackToStudyButton />}
         />
       </div>
     );
@@ -358,15 +379,20 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   return (
     <div className="relative mx-auto flex min-h-[calc(100vh-8rem)] max-w-[1400px] flex-col pb-24 sm:pb-28">
-      <Button variant="ghost" size="sm" className="-ml-2 mb-2 w-fit text-muted-foreground" asChild>
+      <Button
+        variant="ghost"
+        size="sm"
+        className="-ml-2 mb-2 w-fit text-[color:var(--ds-color-text-secondary)]"
+        asChild
+      >
         <Link to="/app/study">
-          <ChevronLeft className="h-4 w-4 mr-1" />
+          <ChevronLeft aria-hidden="true" style={iconSizeStyle} />
           Voltar
         </Link>
       </Button>
 
-      <div className="flex flex-1 flex-col gap-5 lg:flex-row lg:items-start lg:gap-8">
-        <div className="min-w-0 flex-1 space-y-6 lg:max-w-4xl">
+      <div className="flex flex-1 flex-col gap-[var(--ds-space-5)] lg:flex-row lg:items-start lg:gap-[var(--ds-space-8)]">
+        <div className="flex min-w-0 flex-1 flex-col gap-[var(--ds-space-6)] lg:max-w-4xl">
           <StudyActiveHeader
             mode={session.mode}
             currentQuestion={question.index + 1}
@@ -387,7 +413,10 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
           />
 
           {question.feedback && (
-            <div className="space-y-4 border-t border-border/50 pt-6">
+            <div
+              className="flex flex-col gap-[var(--ds-space-4)] border-t pt-[var(--ds-space-6)]"
+              style={{ borderColor: "var(--ds-color-border)" }}
+            >
               <QuestionFeedbackPanel feedback={question.feedback} />
               <QuestionActions
                 favorite={question.favorite}
@@ -437,7 +466,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
         onAnswer={() => answerQuestion.mutate()}
         onNext={() => navigateNext.mutate()}
         onFinish={() => finishSession.mutate()}
-        className="mt-6"
+        className="mt-[var(--ds-space-6)]"
       />
     </div>
   );

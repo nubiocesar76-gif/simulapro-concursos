@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="100%" height="100%" fill="none">
+                                <g id="Isometric-Cube-Icon">
+                                    <path d="M 40 12 L 72 29 L 40 46 L 8 29 Z" fill="url(#grad-top-1)"></path>
+                                    <path d="M 8 29 L 40 46 L 40 82 L 8 65 Z" fill="url(#grad-left-1)"></path>
+                                    <path d="M 40 46 L 72 29 L 72 65 L 40 82 Z" fill="url(#grad-right-1)"></path>
+                                    <path d="M 24 37 L 40 46 L 56 37 M 40 46 L 40 68" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                <g id="Text-Brand">
+                                    <text x="88" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="32" fill="#FFFFFF" letter-spacing="-0.5">
+                                        Simula<tspan fill="#0052FF">PRO</tspan>
+                                    </text>
+                                    <text x="89" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#06B6D4" letter-spacing="4">
+                                        CONCURSOS
+                                    </text>
+                                </g>
+                                <defs>
+                                    <linearGradient id="grad-top-1" x1="8" y1="12" x2="72" y2="46" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#22D3EE"></stop>
+                                        <stop offset="1" stop-color="#00A3FF"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="grad-left-1" x1="8" y1="29" x2="40" y2="82" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#0052FF"></stop>
+                                        <stop offset="1" stop-color="#003199"></stop>
+                                    </linearGradient>
+                                    <linearGradient id="grad-right-1" x1="40" y1="29" x2="72" y2="82" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1B63FF"></stop>
+                                        <stop offset="1" stop-color="#0052FF"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>

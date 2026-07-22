@@ -183,16 +183,29 @@ async function validateSessionAccess(userId: string, distributionId: string) {
 }
 
 async function fetchOrderedSessionQuestions(sessionId: string): Promise<StudySessionQuestionRow[]> {
-  const { data, error } = await supabase
-    .from("study_session_questions")
-    .select(
-      "id, study_session_id, question_id, question_order, selected_answer, correct_answer, is_correct, answered_at, response_time_seconds, favorite, review_later",
-    )
-    .eq("study_session_id", sessionId)
-    .order("question_order", { ascending: true });
+  const PAGE_SIZE = 1000;
+  const rows: StudySessionQuestionRow[] = [];
 
-  if (error) throw error;
-  return data ?? [];
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from("study_session_questions")
+      .select(
+        "id, study_session_id, question_id, question_order, selected_answer, correct_answer, is_correct, answered_at, response_time_seconds, favorite, review_later",
+      )
+      .eq("study_session_id", sessionId)
+      .order("question_order", { ascending: true })
+      .range(from, from + PAGE_SIZE - 1);
+
+    if (error) throw error;
+
+    const page = data ?? [];
+    rows.push(...page);
+    if (page.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+
+  return rows;
 }
 
 function getResumeIndex(rows: StudySessionQuestionRow[]): number {
@@ -496,14 +509,27 @@ export async function getSessionQuestions(session: StudySessionDetail): Promise<
     return data ?? [];
   }
 
-  const { data, error } = await supabase
-    .from("questions")
-    .select("id, statement, created_at")
-    .eq("package_version_id", session.package_version_id)
-    .order("created_at", { ascending: true });
+  const PAGE_SIZE = 1000;
+  const rows: SessionQuestion[] = [];
 
-  if (error) throw error;
-  return data ?? [];
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from("questions")
+      .select("id, statement, created_at")
+      .eq("package_version_id", session.package_version_id)
+      .order("created_at", { ascending: true })
+      .range(from, from + PAGE_SIZE - 1);
+
+    if (error) throw error;
+
+    const page = data ?? [];
+    rows.push(...page);
+    if (page.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+
+  return rows;
 }
 
 function shuffleQuestions<T>(items: T[]): T[] {

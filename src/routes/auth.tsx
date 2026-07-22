@@ -1,6 +1,5 @@
 import { createFileRoute, Navigate, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth, fetchRole } from "@/hooks/use-auth";
+import { Logo } from "@/components/design-system";
 
 export const Route = createFileRoute("/auth")({
   component: AuthPage,
@@ -24,7 +24,8 @@ function AuthPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen bg-background flex flex-col items-center justify-center gap-4">
+        <Logo orientation="vertical" theme="light" className="h-20 w-auto" />
         <p className="text-sm text-muted-foreground">Carregando...</p>
       </div>
     );
@@ -76,17 +77,18 @@ function AuthPage() {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <div className="mb-8 flex items-center justify-center gap-2 font-bold text-xl">
-          <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-primary-foreground">
-            <GraduationCap className="h-5 w-5" />
-          </div>
-          SimulaPro
+        <div className="mb-8 flex items-center justify-center">
+          <Logo orientation="vertical" theme="light" className="h-24 w-auto" />
         </div>
         <div className="rounded-xl border bg-card p-6 shadow-sm">
           <Tabs defaultValue="login">
             <TabsList className="w-full">
-              <TabsTrigger value="login" className="flex-1">Entrar</TabsTrigger>
-              <TabsTrigger value="signup" className="flex-1">Criar conta</TabsTrigger>
+              <TabsTrigger value="login" className="flex-1">
+                Entrar
+              </TabsTrigger>
+              <TabsTrigger value="signup" className="flex-1">
+                Criar conta
+              </TabsTrigger>
             </TabsList>
             <TabsContent value="login">
               <form onSubmit={handleLogin} className="space-y-3 pt-4">

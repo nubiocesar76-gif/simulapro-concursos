@@ -1,10 +1,8 @@
 import { ChevronDown, PanelRightClose, PanelRightOpen } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button, Card, CardContent, CardHeader, Divider } from "@/components/design-system";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { Progress } from "@/components/ui/progress";
-import { Separator } from "@/components/ui/separator";
+import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 import type { QuestionContext } from "@/lib/study-engine";
 import { STUDY_MODE_LABELS, type StudyMode } from "@/lib/study-session";
 
@@ -21,9 +19,17 @@ type SessionSummaryPanelProps = {
 
 function StatRow({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="flex items-start justify-between gap-3 text-sm">
-      <span className="text-muted-foreground">{label}</span>
-      <span className="max-w-[58%] text-right font-medium leading-snug text-foreground">{value}</span>
+    <div
+      className="flex items-start justify-between gap-[var(--ds-space-3)]"
+      style={{ fontSize: dsFontSize.sm }}
+    >
+      <span className="text-[color:var(--ds-color-text-secondary)]">{label}</span>
+      <span
+        className="max-w-[58%] text-right leading-snug text-[color:var(--ds-color-text-primary)]"
+        style={{ fontWeight: dsFontWeight.medium }}
+      >
+        {value}
+      </span>
     </div>
   );
 }
@@ -44,22 +50,42 @@ function PanelContent({
 }: Omit<SessionSummaryPanelProps, "className">) {
   const remaining = Math.max(totalQuestions - answeredCount, 0);
   const percentage = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
-  const progressPercent = totalQuestions > 0 ? Math.round((answeredCount / totalQuestions) * 100) : 0;
+  const progressPercent =
+    totalQuestions > 0 ? Math.round((answeredCount / totalQuestions) * 100) : 0;
 
   return (
-    <div className="space-y-5">
+    <div className="flex flex-col gap-[var(--ds-space-5)]">
       <div>
-        <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+        <p
+          className="mb-2 uppercase tracking-[0.08em] text-[color:var(--ds-color-text-secondary)]"
+          style={{ fontSize: dsFontSize.xs, fontWeight: dsFontWeight.medium }}
+        >
           Resumo
         </p>
-        <div className="space-y-2">
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
+        <div className="flex flex-col gap-[var(--ds-space-2)]">
+          <div
+            className="flex items-center justify-between text-[color:var(--ds-color-text-secondary)]"
+            style={{ fontSize: dsFontSize.xs }}
+          >
             <span>Progresso</span>
-            <span className="font-medium tabular-nums">{progressPercent}%</span>
+            <span
+              className="tabular-nums text-[color:var(--ds-color-text-primary)]"
+              style={{ fontWeight: dsFontWeight.medium }}
+            >
+              {progressPercent}%
+            </span>
           </div>
-          <Progress value={progressPercent} className="h-2" />
+          <div
+            className="h-1.5 w-full overflow-hidden rounded-full"
+            style={{ background: "var(--ds-color-border)" }}
+          >
+            <div
+              className="h-full rounded-full transition-[width] duration-[var(--ds-motion-duration-base)] ease-[var(--ds-motion-ease-standard)]"
+              style={{ width: `${progressPercent}%`, background: "var(--ds-color-action)" }}
+            />
+          </div>
         </div>
-        <div className="mt-4 space-y-2">
+        <div className="mt-4 flex flex-col gap-[var(--ds-space-2)]">
           <StatRow label="Respondidas" value={answeredCount} />
           <StatRow label="Acertos" value={correctCount} />
           <StatRow label="Erros" value={wrongCount} />
@@ -68,13 +94,16 @@ function PanelContent({
         </div>
       </div>
 
-      <Separator />
+      <Divider />
 
       <div>
-        <p className="mb-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
+        <p
+          className="mb-3 uppercase tracking-[0.08em] text-[color:var(--ds-color-text-secondary)]"
+          style={{ fontSize: dsFontSize.xs, fontWeight: dsFontWeight.medium }}
+        >
           Contexto
         </p>
-        <div className="space-y-2">
+        <div className="flex flex-col gap-[var(--ds-space-2)]">
           <StatRow label="Modo" value={STUDY_MODE_LABELS[mode]} />
           <ContextRow label="Banco" value={packageName} />
           <ContextRow label="Banca" value={questionContext.boardName} />
@@ -112,16 +141,19 @@ export function SessionSummaryPanel({
   return (
     <>
       <aside className={`hidden lg:block ${className ?? ""}`}>
-        <Card className="sticky top-4 border-border/60 shadow-none">
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 pt-4">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
+        <Card padding="none" className="sticky top-4 shadow-none">
+          <CardHeader className="flex flex-row items-center justify-between gap-2 pb-2">
+            <span
+              className="text-[color:var(--ds-color-text-secondary)]"
+              style={{ fontSize: dsFontSize.sm, fontWeight: dsFontWeight.medium }}
+            >
               Contexto da sessão
-            </CardTitle>
+            </span>
             <Button
               type="button"
               variant="ghost"
-              size="icon"
-              className="h-8 w-8 shrink-0"
+              size="sm"
+              className="h-8 w-8 shrink-0 p-0"
               onClick={() => setDesktopCollapsed((open) => !open)}
               aria-label={desktopCollapsed ? "Expandir painel" : "Recolher painel"}
             >
@@ -133,7 +165,7 @@ export function SessionSummaryPanel({
             </Button>
           </CardHeader>
           {!desktopCollapsed && (
-            <CardContent className="pb-5">
+            <CardContent className="pt-0 pb-5">
               <PanelContent {...panelProps} />
             </CardContent>
           )}
@@ -141,14 +173,19 @@ export function SessionSummaryPanel({
       </aside>
 
       <Collapsible open={mobileOpen} onOpenChange={setMobileOpen} className="lg:hidden">
-        <Card className="border-border/60 shadow-none">
+        <Card padding="none" className="shadow-none">
           <CollapsibleTrigger asChild>
             <Button
               type="button"
               variant="ghost"
               className="flex h-auto w-full items-center justify-between rounded-b-none px-4 py-3"
             >
-              <span className="text-sm font-medium text-muted-foreground">Contexto da sessão</span>
+              <span
+                className="text-[color:var(--ds-color-text-secondary)]"
+                style={{ fontSize: dsFontSize.sm, fontWeight: dsFontWeight.medium }}
+              >
+                Contexto da sessão
+              </span>
               <ChevronDown
                 className={`h-4 w-4 transition-transform ${mobileOpen ? "rotate-180" : ""}`}
               />

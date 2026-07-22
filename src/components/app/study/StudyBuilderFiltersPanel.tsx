@@ -1,11 +1,5 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
+import { Select } from "@/components/design-system";
+import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 import type { StudyBuilderFilters, StudyBuilderOption } from "@/lib/study-builder";
 import { ALL_FILTER } from "@/lib/study-builder";
 
@@ -25,26 +19,24 @@ function FilterSelect({
   options,
   onChange,
   disabled = false,
-  placeholder = "Todos",
+  placeholder,
   allLabel = "Todos",
 }: FilterSelectProps) {
   return (
-    <div className="space-y-2">
-      <Label className="text-sm font-medium">{label}</Label>
-      <Select value={value} onValueChange={onChange} disabled={disabled}>
-        <SelectTrigger>
-          <SelectValue placeholder={placeholder} />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value={ALL_FILTER}>{allLabel}</SelectItem>
-          {options.map((option) => (
-            <SelectItem key={option.id} value={option.id}>
-              {option.label} ({option.count})
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </div>
+    <Select
+      label={label}
+      value={value}
+      onChange={(event) => onChange(event.target.value)}
+      disabled={disabled}
+      placeholder={placeholder}
+    >
+      <option value={ALL_FILTER}>{allLabel}</option>
+      {options.map((option) => (
+        <option key={option.id} value={option.id}>
+          {option.label} ({option.count})
+        </option>
+      ))}
+    </Select>
   );
 }
 
@@ -72,15 +64,23 @@ export function StudyBuilderFiltersPanel({
   }
 
   return (
-    <div className="space-y-5">
+    <div className="flex flex-col gap-[var(--ds-space-5)]">
       <div>
-        <h2 className="text-sm font-semibold tracking-tight">Filtrar questões</h2>
-        <p className="mt-1 text-xs text-muted-foreground">
+        <h2
+          className="tracking-tight text-[color:var(--ds-color-text-primary)]"
+          style={{ fontSize: dsFontSize.sm, fontWeight: dsFontWeight.semibold }}
+        >
+          Filtrar questões
+        </h2>
+        <p
+          className="mt-1 text-[color:var(--ds-color-text-secondary)]"
+          style={{ fontSize: dsFontSize.xs }}
+        >
           Refine o acervo usando a taxonomia oficial. O contador atualiza automaticamente.
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-[var(--ds-space-4)] sm:grid-cols-2">
         <FilterSelect
           label="Banca"
           value={filters.boardId}

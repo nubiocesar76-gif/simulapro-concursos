@@ -1,5 +1,5 @@
 import { ChevronRight, Pin, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/design-system";
 
 type QuestionActionsProps = {
   favorite: boolean;
@@ -25,32 +25,40 @@ export function QuestionActions({
   onNext,
 }: QuestionActionsProps) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-      <div className="flex flex-wrap gap-2">
+    <div className="flex flex-col gap-[var(--ds-space-3)] sm:flex-row sm:flex-wrap sm:items-center">
+      <div className="flex flex-wrap gap-[var(--ds-space-2)]">
         <Button
           type="button"
           variant="outline"
           size="sm"
-          className={favorite ? "border-primary/40 text-primary" : "text-muted-foreground"}
+          className={
+            favorite
+              ? "border-[color:var(--ds-color-action)]/40 text-[color:var(--ds-color-action)]"
+              : "text-[color:var(--ds-color-text-secondary)]"
+          }
           onClick={onToggleFavorite}
           disabled={disabled || isUpdating}
           aria-pressed={favorite}
           aria-label={favorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+          leftIcon={<Star className={favorite ? "fill-current" : ""} />}
         >
-          <Star className={`h-4 w-4 mr-1.5 ${favorite ? "fill-current" : ""}`} />
           {isUpdating ? "Salvando..." : favorite ? "Favoritada" : "Favoritar"}
         </Button>
         <Button
           type="button"
           variant="outline"
           size="sm"
-          className={reviewLater ? "border-primary/40 text-primary" : "text-muted-foreground"}
+          className={
+            reviewLater
+              ? "border-[color:var(--ds-color-action)]/40 text-[color:var(--ds-color-action)]"
+              : "text-[color:var(--ds-color-text-secondary)]"
+          }
           onClick={onToggleReviewLater}
           disabled={disabled || isUpdating}
           aria-pressed={reviewLater}
           aria-label={reviewLater ? "Remover da lista de revisão" : "Marcar para revisar depois"}
+          leftIcon={<Pin className={reviewLater ? "fill-current" : ""} />}
         >
-          <Pin className={`h-4 w-4 mr-1.5 ${reviewLater ? "fill-current" : ""}`} />
           {isUpdating ? "Salvando..." : reviewLater ? "Marcada p/ revisão" : "Revisar depois"}
         </Button>
       </div>
@@ -61,9 +69,9 @@ export function QuestionActions({
           className="w-full sm:ml-auto sm:w-auto"
           onClick={onNext}
           disabled={isNavigating || isUpdating}
+          rightIcon={<ChevronRight />}
         >
           {isNavigating ? "Avançando..." : "Próxima questão"}
-          <ChevronRight className="h-4 w-4 ml-2" />
         </Button>
       )}
     </div>

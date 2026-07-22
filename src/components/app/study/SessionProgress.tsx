@@ -1,4 +1,4 @@
-import { Progress } from "@/components/ui/progress";
+import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 
 type SessionProgressProps = {
   current: number;
@@ -10,14 +10,29 @@ export function SessionProgress({ current, total, label = "Progresso" }: Session
   const percent = total > 0 ? Math.round((current / total) * 100) : 0;
 
   return (
-    <div className="space-y-2">
-      <div className="flex items-center justify-between text-sm">
-        <span className="text-muted-foreground">{label}</span>
-        <span className="font-medium">
+    <div className="flex flex-col gap-[var(--ds-space-2)]">
+      <div className="flex items-center justify-between" style={{ fontSize: dsFontSize.sm }}>
+        <span className="text-[color:var(--ds-color-text-secondary)]">{label}</span>
+        <span
+          className="text-[color:var(--ds-color-text-primary)]"
+          style={{ fontWeight: dsFontWeight.medium }}
+        >
           {current} de {total}
         </span>
       </div>
-      <Progress value={percent} className="h-2" />
+      <div
+        className="h-2 w-full overflow-hidden rounded-full"
+        style={{ background: "var(--ds-color-border)" }}
+        role="progressbar"
+        aria-valuenow={percent}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
+        <div
+          className="h-full rounded-full transition-[width] duration-[var(--ds-motion-duration-base)] ease-[var(--ds-motion-ease-standard)]"
+          style={{ width: `${percent}%`, background: "var(--ds-color-action)" }}
+        />
+      </div>
     </div>
   );
 }

@@ -32,12 +32,18 @@ import {
   toSessionFilters,
   type StudyBuilderFilters,
 } from "@/lib/study-builder";
-import { Button } from "@/components/ui/button";
+import {
+  Button,
+  Badge,
+  Card,
+  CardContent,
+  CardHeader,
+  Page,
+  Skeleton,
+} from "@/components/design-system";
+import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Skeleton } from "@/components/ui/skeleton";
 import { StudyBuilderFiltersPanel } from "@/components/app/study/StudyBuilderFiltersPanel";
 import { StudyBuilderSummary } from "@/components/app/study/StudyBuilderSummary";
 import { ActivatePlanCard } from "@/components/shared/ActivatePlanCard";
@@ -46,6 +52,16 @@ import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
 
 type Step = "list" | "configure" | "created";
+
+/**
+ * `grid grid-cols-[minmax(0,1fr)]`: mesmo truque do DS-005 (ver
+ * StudentDashboardPage) para impedir que a largura mínima de grids/painéis
+ * internos force rolagem horizontal da página inteira através do AppShell.
+ */
+const pageShellClass = `${STUDENT_PAGE_SHELL} grid grid-cols-[minmax(0,1fr)]`;
+const narrowShellClass = `${STUDENT_PAGE_SHELL_NARROW} grid grid-cols-[minmax(0,1fr)]`;
+
+const iconSizeStyle = { width: dsFontSize.base, height: dsFontSize.base };
 
 export function StudyPage() {
   const { user } = useAuth();
@@ -61,7 +77,13 @@ export function StudyPage() {
     DEFAULT_STUDY_BUILDER_FILTERS,
   );
 
-  const { data: distributions = [], isLoading, isError, error, refetch } = useQuery({
+  const {
+    data: distributions = [],
+    isLoading,
+    isError,
+    error,
+    refetch,
+  } = useQuery({
     queryKey: ["available-distributions", user?.id],
     enabled: !!user,
     queryFn: () => fetchAvailableDistributions(user!.id),
@@ -153,21 +175,21 @@ export function StudyPage() {
 
   if (isLoading) {
     return (
-      <div className={STUDENT_PAGE_SHELL} aria-busy="true" aria-label="Carregando estudo">
-        <div>
-          <Skeleton className="h-8 w-32" />
-          <Skeleton className="mt-2 h-4 w-64" />
+      <div className={pageShellClass} aria-busy="true" aria-label="Carregando estudo">
+        <div className="flex flex-col gap-[var(--ds-space-2)]">
+          <Skeleton width="30%" height="var(--ds-space-8)" />
+          <Skeleton width="45%" height="var(--ds-space-4)" />
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-[var(--ds-space-4)] sm:grid-cols-2 lg:grid-cols-3">
           {[1, 2, 3].map((i) => (
             <Card key={i}>
               <CardHeader>
-                <Skeleton className="h-5 w-2/3" />
-                <Skeleton className="h-4 w-1/2" />
+                <Skeleton width="65%" height="var(--ds-space-5)" />
+                <Skeleton width="50%" height="var(--ds-space-4)" />
               </CardHeader>
-              <CardContent>
-                <Skeleton className="h-4 w-full" />
-                <Skeleton className="mt-3 h-10 w-full" />
+              <CardContent className="pt-0 flex flex-col gap-[var(--ds-space-3)]">
+                <Skeleton width="100%" height="var(--ds-space-4)" />
+                <Skeleton width="100%" height="var(--ds-space-10)" radius="lg" />
               </CardContent>
             </Card>
           ))}
@@ -178,10 +200,8 @@ export function StudyPage() {
 
   if (isError) {
     return (
-      <div className={STUDENT_PAGE_SHELL}>
-        <header>
-          <h1 className="text-2xl font-bold tracking-tight">Estudo</h1>
-        </header>
+      <div className={pageShellClass}>
+        <Page title="Estudo" />
         <PageErrorState
           title="Erro ao carregar estudo"
           message={formatStudySessionError(error)}
@@ -193,34 +213,53 @@ export function StudyPage() {
 
   if (step === "created" && selected && createdSessionId) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW}>
-        <header>
-          <h1 className="text-2xl font-bold tracking-tight">Sessão criada</h1>
-          <p className="text-sm text-muted-foreground">
-            Sua sessão está pronta. Inicie a resolução quando quiser.
-          </p>
-        </header>
+      <div className={narrowShellClass}>
+        <Page
+          title="Sessão criada"
+          description="Sua sessão está pronta. Inicie a resolução quando quiser."
+        />
         <Card>
           <CardHeader>
-            <CardTitle>{selected.distribution_name}</CardTitle>
-            <CardDescription>
+            <span
+              className="text-[color:var(--ds-color-text-primary)]"
+              style={{ fontSize: dsFontSize.lg, fontWeight: dsFontWeight.semibold }}
+            >
+              {selected.distribution_name}
+            </span>
+            <span
+              className="text-[color:var(--ds-color-text-secondary)]"
+              style={{ fontSize: dsFontSize.sm }}
+            >
               {selected.course_name} · {selected.package_name} · v{selected.version_number}
-            </CardDescription>
+            </span>
           </CardHeader>
-          <CardContent className="space-y-2 text-sm">
-            <p><span className="text-muted-foreground">Modo:</span> {STUDY_MODE_LABELS[mode]}</p>
-            <p><span className="text-muted-foreground">Questões:</span> {selectedQuantityLabel}</p>
-            <Badge>Em andamento</Badge>
+          <CardContent className="pt-0 flex flex-col gap-[var(--ds-space-2)]">
+            <p style={{ fontSize: dsFontSize.sm }}>
+              <span className="text-[color:var(--ds-color-text-secondary)]">Modo:</span>{" "}
+              {STUDY_MODE_LABELS[mode]}
+            </p>
+            <p style={{ fontSize: dsFontSize.sm }}>
+              <span className="text-[color:var(--ds-color-text-secondary)]">Questões:</span>{" "}
+              {selectedQuantityLabel}
+            </p>
+            <div>
+              <Badge>Em andamento</Badge>
+            </div>
           </CardContent>
         </Card>
-        <div className="flex flex-col gap-2 sm:flex-row">
+        <div className="flex flex-col gap-[var(--ds-space-2)] sm:flex-row">
           <Button asChild className="flex-1">
             <Link to="/app/study/$sessionId" params={{ sessionId: createdSessionId }}>
-              <PlayCircle className="h-4 w-4 mr-2" /> Iniciar sessão
+              <PlayCircle aria-hidden="true" style={iconSizeStyle} />
+              Iniciar sessão
             </Link>
           </Button>
-          <Button variant="outline" onClick={resetFlow}>
-            <ChevronLeft className="h-4 w-4 mr-2" /> Voltar
+          <Button
+            variant="outline"
+            leftIcon={<ChevronLeft style={iconSizeStyle} />}
+            onClick={resetFlow}
+          >
+            Voltar
           </Button>
         </div>
       </div>
@@ -233,13 +272,29 @@ export function StudyPage() {
     const canCreate = matchingCount > 0 && !isLoadingCatalog && !createSession.isPending;
 
     return (
-      <div className={`${STUDENT_PAGE_SHELL} max-w-5xl`}>
-        <div>
-          <Button variant="ghost" size="sm" className="mb-2 -ml-2" onClick={() => setStep("list")}>
-            <ChevronLeft className="h-4 w-4 mr-1" /> Voltar
+      <div className={`${pageShellClass} max-w-5xl`}>
+        <div className="flex flex-col gap-[var(--ds-space-1)]">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="-ml-2 mb-1 self-start"
+            leftIcon={<ChevronLeft style={iconSizeStyle} />}
+            onClick={() => setStep("list")}
+          >
+            Voltar
           </Button>
-          <h1 className="text-2xl font-bold">Configurar sessão</h1>
-          <p className="text-sm text-muted-foreground">{selected.distribution_name}</p>
+          <h1
+            className="text-[color:var(--ds-color-text-primary)]"
+            style={{ fontSize: dsFontSize["2xl"], fontWeight: dsFontWeight.bold }}
+          >
+            Configurar sessão
+          </h1>
+          <p
+            className="text-[color:var(--ds-color-text-secondary)]"
+            style={{ fontSize: dsFontSize.sm }}
+          >
+            {selected.distribution_name}
+          </p>
         </div>
 
         {isCatalogError ? (
@@ -248,9 +303,9 @@ export function StudyPage() {
             message={formatStudySessionError(catalogError)}
           />
         ) : (
-          <div className="grid gap-6 lg:grid-cols-[1fr_18rem] xl:grid-cols-[1fr_20rem]">
+          <div className="grid gap-[var(--ds-space-6)] lg:grid-cols-[1fr_18rem] xl:grid-cols-[1fr_20rem]">
             <Card>
-              <CardContent className="space-y-8 pt-6">
+              <CardContent className="pt-[var(--ds-space-6)] flex flex-col gap-[var(--ds-space-8)]">
                 <ConfigGroup label="Modo">
                   <RadioGroup
                     value={mode}
@@ -258,23 +313,26 @@ export function StudyPage() {
                       setMode(value as StudyModeSelectable);
                       setBuilderFilters(DEFAULT_STUDY_BUILDER_FILTERS);
                     }}
-                    className="grid gap-2 sm:grid-cols-2"
+                    className="grid gap-[var(--ds-space-2)] sm:grid-cols-2"
                   >
                     {STUDY_MODES_SELECTABLE.map((item) => (
-                      <label key={item} className="flex items-center gap-2 cursor-pointer">
+                      <label
+                        key={item}
+                        className="flex items-center gap-[var(--ds-space-2)] cursor-pointer"
+                      >
                         <RadioGroupItem value={item} />
-                        <span>{STUDY_MODE_LABELS[item]}</span>
+                        <span style={{ fontSize: dsFontSize.sm }}>{STUDY_MODE_LABELS[item]}</span>
                       </label>
                     ))}
                   </RadioGroup>
                 </ConfigGroup>
 
                 {isLoadingCatalog ? (
-                  <div className="space-y-4">
-                    <Skeleton className="h-4 w-40" />
-                    <Skeleton className="h-10 w-full" />
-                    <Skeleton className="h-10 w-full" />
-                    <Skeleton className="h-10 w-full" />
+                  <div className="flex flex-col gap-[var(--ds-space-4)]">
+                    <Skeleton width="35%" height="var(--ds-space-4)" />
+                    <Skeleton width="100%" height="var(--ds-space-10)" radius="lg" />
+                    <Skeleton width="100%" height="var(--ds-space-10)" radius="lg" />
+                    <Skeleton width="100%" height="var(--ds-space-10)" radius="lg" />
                   </div>
                 ) : (
                   <StudyBuilderFiltersPanel
@@ -295,12 +353,17 @@ export function StudyPage() {
                         onValueChange={(value) =>
                           setQuantity(value === "all" ? "all" : (Number(value) as SessionQuantity))
                         }
-                        className="grid grid-cols-2 sm:grid-cols-3 gap-2"
+                        className="grid grid-cols-2 gap-[var(--ds-space-2)] sm:grid-cols-3"
                       >
                         {SESSION_QUANTITY_OPTIONS.map((item) => (
-                          <label key={String(item)} className="flex items-center gap-2 cursor-pointer">
+                          <label
+                            key={String(item)}
+                            className="flex items-center gap-[var(--ds-space-2)] cursor-pointer"
+                          >
                             <RadioGroupItem value={String(item)} />
-                            <span>{item === "all" ? "Todas" : item}</span>
+                            <span style={{ fontSize: dsFontSize.sm }}>
+                              {item === "all" ? "Todas" : item}
+                            </span>
                           </label>
                         ))}
                       </RadioGroup>
@@ -310,15 +373,15 @@ export function StudyPage() {
                       <RadioGroup
                         value={order}
                         onValueChange={(value) => setOrder(value as QuestionOrder)}
-                        className="grid gap-2"
+                        className="grid gap-[var(--ds-space-2)]"
                       >
-                        <label className="flex items-center gap-2 cursor-pointer">
+                        <label className="flex items-center gap-[var(--ds-space-2)] cursor-pointer">
                           <RadioGroupItem value="random" />
-                          <span>Aleatória</span>
+                          <span style={{ fontSize: dsFontSize.sm }}>Aleatória</span>
                         </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
+                        <label className="flex items-center gap-[var(--ds-space-2)] cursor-pointer">
                           <RadioGroupItem value="sequential" />
-                          <span>Sequencial</span>
+                          <span style={{ fontSize: dsFontSize.sm }}>Sequencial</span>
                         </label>
                       </RadioGroup>
                     </ConfigGroup>
@@ -326,8 +389,12 @@ export function StudyPage() {
                 )}
 
                 {isFilterMode && (
-                  <p className="text-sm text-muted-foreground">
-                    Este modo utiliza apenas as questões filtradas do seu histórico nesta distribuição.
+                  <p
+                    className="text-[color:var(--ds-color-text-secondary)]"
+                    style={{ fontSize: dsFontSize.sm }}
+                  >
+                    Este modo utiliza apenas as questões filtradas do seu histórico nesta
+                    distribuição.
                   </p>
                 )}
 
@@ -336,15 +403,15 @@ export function StudyPage() {
                     <RadioGroup
                       value={showAnswers}
                       onValueChange={(value) => setShowAnswers(value as ShowAnswersTiming)}
-                      className="grid gap-2"
+                      className="grid gap-[var(--ds-space-2)]"
                     >
-                      <label className="flex items-center gap-2 cursor-pointer">
+                      <label className="flex items-center gap-[var(--ds-space-2)] cursor-pointer">
                         <RadioGroupItem value="during" />
-                        <span>Durante</span>
+                        <span style={{ fontSize: dsFontSize.sm }}>Durante</span>
                       </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
+                      <label className="flex items-center gap-[var(--ds-space-2)] cursor-pointer">
                         <RadioGroupItem value="final" />
-                        <span>Apenas no final</span>
+                        <span style={{ fontSize: dsFontSize.sm }}>Apenas no final</span>
                       </label>
                     </RadioGroup>
                   </ConfigGroup>
@@ -352,40 +419,47 @@ export function StudyPage() {
 
                 {isExamMode && (
                   <ConfigGroup label="Mostrar respostas">
-                    <RadioGroup value="final" className="grid gap-2" disabled>
-                      <label className="flex items-center gap-2 opacity-50">
+                    <RadioGroup value="final" className="grid gap-[var(--ds-space-2)]" disabled>
+                      <label className="flex items-center gap-[var(--ds-space-2)] opacity-50">
                         <RadioGroupItem value="during" disabled />
-                        <span>Durante</span>
+                        <span style={{ fontSize: dsFontSize.sm }}>Durante</span>
                       </label>
-                      <label className="flex items-center gap-2 cursor-pointer">
+                      <label className="flex items-center gap-[var(--ds-space-2)] cursor-pointer">
                         <RadioGroupItem value="final" />
-                        <span>Apenas no final</span>
+                        <span style={{ fontSize: dsFontSize.sm }}>Apenas no final</span>
                       </label>
                     </RadioGroup>
-                    <p className="text-xs text-muted-foreground mt-1">
+                    <p
+                      className="mt-1 text-[color:var(--ds-color-text-secondary)]"
+                      style={{ fontSize: dsFontSize.xs }}
+                    >
                       No modo Prova, respostas só são exibidas ao final.
                     </p>
                   </ConfigGroup>
                 )}
 
                 {matchingCount === 0 && !isLoadingCatalog && (
-                  <p className="text-sm text-destructive">
+                  <p
+                    className="text-[color:var(--ds-color-error)]"
+                    style={{ fontSize: dsFontSize.sm }}
+                  >
                     Nenhuma questão encontrada para os filtros escolhidos.
                   </p>
                 )}
 
                 <Button
-                  className="w-full lg:hidden"
+                  fullWidth
+                  className="lg:hidden"
+                  leftIcon={<PlayCircle style={iconSizeStyle} />}
                   onClick={() => createSession.mutate()}
                   disabled={!canCreate}
                 >
-                  <PlayCircle className="h-4 w-4 mr-2" />
                   {createSession.isPending ? "Criando sessão..." : "Criar sessão"}
                 </Button>
               </CardContent>
             </Card>
 
-            <div className="space-y-4">
+            <div className="flex flex-col gap-[var(--ds-space-4)]">
               <StudyBuilderSummary
                 packageName={selected.package_name}
                 mode={mode}
@@ -398,11 +472,12 @@ export function StudyPage() {
               />
 
               <Button
-                className="hidden w-full lg:inline-flex"
+                fullWidth
+                className="hidden lg:inline-flex"
+                leftIcon={<PlayCircle style={iconSizeStyle} />}
                 onClick={() => createSession.mutate()}
                 disabled={!canCreate}
               >
-                <PlayCircle className="h-4 w-4 mr-2" />
                 {createSession.isPending ? "Criando sessão..." : "Criar sessão"}
               </Button>
             </div>
@@ -413,34 +488,51 @@ export function StudyPage() {
   }
 
   return (
-    <div className={STUDENT_PAGE_SHELL}>
-      <header>
-        <h1 className="text-2xl font-bold tracking-tight">Estudo</h1>
-        <p className="text-sm text-muted-foreground">
-          Escolha um dos conteúdos liberados para configurar uma sessão de estudo.
-        </p>
-      </header>
+    <div className={pageShellClass}>
+      <Page
+        title="Estudo"
+        description="Escolha um dos conteúdos liberados para configurar uma sessão de estudo."
+      />
 
       {distributions.length === 0 ? (
         <ActivatePlanCard />
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-[var(--ds-space-4)] sm:grid-cols-2">
           {distributions.map((dist) => (
-            <Card key={dist.distribution_id} className="hover:border-primary/40 transition-colors">
+            <Card key={dist.distribution_id} hover>
               <CardHeader>
-                <div className="flex items-start justify-between gap-2">
-                  <CardTitle className="text-lg">{dist.distribution_name}</CardTitle>
-                  <BookOpen className="h-5 w-5 text-primary shrink-0" />
+                <div className="flex items-start justify-between gap-[var(--ds-space-2)]">
+                  <span
+                    className="text-[color:var(--ds-color-text-primary)]"
+                    style={{ fontSize: dsFontSize.lg, fontWeight: dsFontWeight.semibold }}
+                  >
+                    {dist.distribution_name}
+                  </span>
+                  <BookOpen
+                    aria-hidden="true"
+                    className="shrink-0"
+                    style={{
+                      width: dsFontSize.lg,
+                      height: dsFontSize.lg,
+                      color: "var(--ds-color-action)",
+                    }}
+                  />
                 </div>
-                <CardDescription>
+                <span
+                  className="text-[color:var(--ds-color-text-secondary)]"
+                  style={{ fontSize: dsFontSize.sm }}
+                >
                   {dist.course_name} · {dist.package_name}
-                </CardDescription>
+                </span>
               </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="text-xs text-muted-foreground">
+              <CardContent className="pt-0 flex flex-col gap-[var(--ds-space-3)]">
+                <div
+                  className="text-[color:var(--ds-color-text-secondary)]"
+                  style={{ fontSize: dsFontSize.xs }}
+                >
                   Versão {dist.version_number} — {dist.version_name}
                 </div>
-                <Button className="w-full" onClick={() => openConfigure(dist)}>
+                <Button fullWidth onClick={() => openConfigure(dist)}>
                   Configurar sessão
                 </Button>
               </CardContent>
@@ -454,8 +546,13 @@ export function StudyPage() {
 
 function ConfigGroup({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="space-y-2">
-      <Label className="text-sm font-medium">{label}</Label>
+    <div className="flex flex-col gap-[var(--ds-space-2)]">
+      <Label
+        className="text-[color:var(--ds-color-text-primary)]"
+        style={{ fontSize: dsFontSize.sm, fontWeight: dsFontWeight.medium }}
+      >
+        {label}
+      </Label>
       {children}
     </div>
   );

@@ -79,7 +79,7 @@ function summarizeStatement(text: string, maxLength = 120): string {
 }
 
 function boardLabel(board: { name: string; acronym: string | null } | null): string {
-  return board?.acronym?.trim() || board?.name?.trim() || null;
+  return board?.acronym?.trim() || board?.name?.trim() || "";
 }
 
 function toBuilderQuestion(row: {
@@ -98,7 +98,8 @@ function toBuilderQuestion(row: {
     boardId: row.board_id,
     subjectId: row.subject_id,
     topicId: row.topic_id,
-    boardLabel: boardLabel(row.boards as { name: string; acronym: string | null } | null) ?? "Sem banca",
+    boardLabel:
+      boardLabel(row.boards as { name: string; acronym: string | null } | null) ?? "Sem banca",
     subjectLabel: (row.subjects as { name: string } | null)?.name?.trim() || "Sem disciplina",
     topicLabel: (row.topics as { name: string } | null)?.name?.trim() || "Sem assunto",
   };
@@ -211,7 +212,8 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
   if (sessionIds.length) {
     const { data, error } = await supabase
       .from("study_session_questions")
-      .select(`
+      .select(
+        `
         id,
         study_session_id,
         question_id,
@@ -233,7 +235,8 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
           topics(name)
         ),
         study_sessions(distribution_id)
-      `)
+      `,
+      )
       .in("study_session_id", sessionIds);
 
     if (error) throw error;
@@ -320,9 +323,26 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
   let catalogQuestions: StudyBuilderQuestion[] = [];
 
   if (versionIds.length) {
-    const { data: acervoRows, error: acervoError } = await supabase
-      .from("questions")
-      .select(`
+    const PAGE_SIZE = 1000;
+    const acervoRows: Array<{
+      id: string;
+      statement: string;
+      year: number | null;
+      board_id: string | null;
+      subject_id: string | null;
+      topic_id: string | null;
+      package_version_id: string;
+      boards: { name: string; acronym: string | null } | null;
+      subjects: { name: string } | null;
+      topics: { name: string } | null;
+    }> = [];
+
+    let from = 0;
+    for (;;) {
+      const { data, error: acervoError } = await supabase
+        .from("questions")
+        .select(
+          `
         id,
         statement,
         year,
@@ -333,14 +353,22 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
         boards(name, acronym),
         subjects(name),
         topics(name)
-      `)
-      .in("package_version_id", versionIds);
+      `,
+        )
+        .in("package_version_id", versionIds)
+        .range(from, from + PAGE_SIZE - 1);
 
-    if (acervoError) throw acervoError;
+      if (acervoError) throw acervoError;
 
-    catalogQuestions = (acervoRows ?? []).map((row) => toBuilderQuestion(row));
+      const page = data ?? [];
+      acervoRows.push(...(page as typeof acervoRows));
+      if (page.length < PAGE_SIZE) break;
+      from += PAGE_SIZE;
+    }
 
-    unansweredItems = (acervoRows ?? [])
+    catalogQuestions = acervoRows.map((row) => toBuilderQuestion(row));
+
+    unansweredItems = acervoRows
       .filter((row) => !answeredQuestionIds.has(row.id))
       .map((row) => {
         const distribution = distributionByVersion.get(row.package_version_id);
@@ -392,10 +420,7 @@ export function paginateReviewCenter(
       ? snapshot.unansweredItems
       : applyTabFilter(snapshot.items, filters.tab);
 
-  const catalog =
-    filters.tab === "unanswered"
-      ? snapshot.catalogQuestions
-      : catalogFromItems(pool);
+  const catalog = filters.tab === "unanswered" ? snapshot.catalogQuestions : catalogFromItems(pool);
 
   const builderFilters: StudyBuilderFilters = {
     boardId: filters.boardId,

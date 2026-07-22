@@ -35,10 +35,33 @@ function ExportPage() {
 
   async function handleExport() {
     setBusy(true);
-    const { data, error } = await supabase.from(table as any).select("*");
+    let rows: any[] = [];
+    if (table === "questions") {
+      const PAGE_SIZE = 1000;
+      let from = 0;
+      for (;;) {
+        const { data, error } = await supabase
+          .from("questions")
+          .select("*")
+          .range(from, from + PAGE_SIZE - 1);
+        if (error) {
+          setBusy(false);
+          return toast.error(error.message);
+        }
+        const page = data ?? [];
+        rows.push(...page);
+        if (page.length < PAGE_SIZE) break;
+        from += PAGE_SIZE;
+      }
+    } else {
+      const { data, error } = await supabase.from(table as any).select("*");
+      if (error) {
+        setBusy(false);
+        return toast.error(error.message);
+      }
+      rows = data ?? [];
+    }
     setBusy(false);
-    if (error) return toast.error(error.message);
-    const rows = data ?? [];
     if (format === "json") download(`${table}.json`, JSON.stringify(rows, null, 2), "application/json");
     else if (format === "csv") download(`${table}.csv`, toCsv(rows), "text/csv");
     else download(`${table}.xls`, toCsv(rows), "application/vnd.ms-excel");

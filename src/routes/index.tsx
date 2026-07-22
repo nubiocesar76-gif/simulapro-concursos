@@ -1,32 +1,23 @@
+import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BarChart3,
   BookMarked,
   BookOpen,
-  CheckCircle2,
   ClipboardList,
+  Clock,
   Filter,
-  GraduationCap,
   History,
+  Play,
   RotateCcw,
   ShieldCheck,
-  Sparkles,
   Target,
   TrendingUp,
   UserPlus,
   type LucideIcon,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Button, Logo as BrandLogo } from "@/components/design-system";
 import { COMMERCIAL_PLANS } from "@/config/commercial-plans";
 
 export const Route = createFileRoute("/")({
@@ -60,19 +51,59 @@ export const Route = createFileRoute("/")({
           "Treine com questões oficiais organizadas por banca, disciplina e assunto. Sem cobrança automática.",
       },
     ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      },
+    ],
   }),
   component: Landing,
 });
 
-const BANKS = [
-  "IBFC",
-  "FGV",
-  "Instituto AOCP",
-  "VUNESP",
-  "Instituto Consulplan",
-  "FUNDATEC",
-  "UFPR/NC",
-  "COSEAC",
+/**
+ * Paleta desta Landing — reproduzida 1:1 do arquivo aprovado no Claude
+ * Design ("Landing Page.dc.html"). Onde o valor já existe na DS-001
+ * (`@/styles/design-system/tokens.css`), reaproveitamos o token; onde o
+ * design introduz um valor novo específico da Landing (fundo/bordas mais
+ * claros que o resto do app), usamos a constante literal — são valores da
+ * Landing, não tokens do Design System da aplicação autenticada.
+ */
+const LANDING = {
+  primary: "var(--ds-color-action)", // #2563EB
+  textPrimary: "var(--ds-color-primary)", // #0A1633
+  textSecondary: "var(--ds-color-text-secondary)", // #64748B
+  surface: "var(--ds-color-surface)", // #FFFFFF
+  success: "var(--ds-color-success)",
+  background: "#EEF2F6",
+  surfaceSubtle: "#F2F5F9",
+  border: "#E3E8EF",
+  divider: "#EDF1F5",
+} as const;
+
+const fontFamily = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
+
+const NAV_LINKS = [
+  { href: "#como-funciona", label: "Como funciona" },
+  { href: "#recursos", label: "Recursos" },
+  { href: "#planos", label: "Planos" },
+  { href: "#faq", label: "FAQ" },
+];
+
+/**
+ * Estatísticas — números reais, conferidos diretamente no banco nesta
+ * sprint (nenhum valor de exemplo do Claude Design foi mantido aqui: o
+ * arquivo original mostrava "120.000+ Questões / 98% Satisfação", que não
+ * correspondem ao Acervo real e não podiam ser reproduzidos como se
+ * fossem — ver relatório da entrega).
+ */
+const STATS = [
+  { value: "1.100+", label: "Questões" },
+  { value: "22", label: "Bancas" },
+  { value: "30", label: "Disciplinas" },
+  { value: "100%", label: "Oficiais" },
 ];
 
 const HOW_IT_WORKS: Array<{ icon: LucideIcon; title: string; description: string }> = [
@@ -138,6 +169,52 @@ const FEATURES: Array<{ icon: LucideIcon; title: string; description: string }> 
   },
 ];
 
+const DIFFERENTIATORS = [
+  {
+    title: "Banca real, não genérica",
+    description:
+      "Questões filtradas exatamente pelo estilo de cobrança de cada banca organizadora de Enfermagem.",
+  },
+  {
+    title: "Evolução mensurável",
+    description:
+      "Cada sessão mostra sua curva de progresso por disciplina, não apenas um número isolado.",
+  },
+  {
+    title: "Foco sem distração",
+    description:
+      "Interface pensada para sessões longas de estudo, sem ruído visual nem gamificação.",
+  },
+  {
+    title: "Acervo em produção contínua",
+    description:
+      "Novas provas passam por classificação e revisão antes de entrar no banco de questões.",
+  },
+];
+
+const BENEFITS: Array<{ icon: LucideIcon; title: string; description: string }> = [
+  {
+    icon: Target,
+    title: "Aprenda como a banca cobra",
+    description: "Questões organizadas pelo padrão real de cada concurso de Enfermagem.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Acompanhe sua evolução",
+    description: "Resultados claros mostram seu progresso real por disciplina ao longo do tempo.",
+  },
+  {
+    icon: Clock,
+    title: "Estude com foco",
+    description: "Um ambiente desenhado para concentração, sem distrações nem ruído visual.",
+  },
+  {
+    icon: BookMarked,
+    title: "Organize seu conteúdo",
+    description: "Favoritos, Central de Revisão e Histórico em um só lugar.",
+  },
+];
+
 const FAQ_ITEMS = [
   {
     question: "Vale a pena?",
@@ -171,22 +248,12 @@ const FAQ_ITEMS = [
   },
 ];
 
-const plan = COMMERCIAL_PLANS[0];
-
 function jsonLd(planValue?: number, planMonths?: number) {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "Organization",
-        name: "SimulaPro",
-        url: "https://simulapro.com.br",
-      },
-      {
-        "@type": "WebSite",
-        name: "SimulaPro",
-        url: "https://simulapro.com.br",
-      },
+      { "@type": "Organization", name: "SimulaPro", url: "https://simulapro.com.br" },
+      { "@type": "WebSite", name: "SimulaPro", url: "https://simulapro.com.br" },
       {
         "@type": "Product",
         name: "SimulaPro — Plano Fundador",
@@ -219,91 +286,164 @@ function jsonLd(planValue?: number, planMonths?: number) {
   };
 }
 
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-}: {
-  eyebrow?: string;
-  title: string;
-  description?: string;
-}) {
+/* ------------------------------------------------------------------ */
+/* Peças pequenas                                                       */
+/* ------------------------------------------------------------------ */
+
+/** Logo oficial da marca — `variant="dark"` (texto escuro) para fundos
+ * claros, `variant="light"` (texto branco) para fundos escuros. */
+function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
   return (
-    <div className="mx-auto max-w-2xl text-center">
-      {eyebrow && (
-        <p className="text-sm font-medium uppercase tracking-wide text-primary">{eyebrow}</p>
-      )}
-      <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
-      {description && (
-        <p className="mt-4 text-base text-muted-foreground sm:text-lg">{description}</p>
-      )}
+    <BrandLogo
+      orientation="horizontal"
+      theme={variant === "light" ? "dark" : "light"}
+      className="h-[30px] w-auto"
+    />
+  );
+}
+
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="text-[11px] font-bold tracking-[0.12em]" style={{ color: LANDING.primary }}>
+      {children}
     </div>
   );
 }
 
-function DashboardPreview() {
+function SectionHeading({
+  eyebrow,
+  title,
+  className = "",
+}: {
+  eyebrow: string;
+  title: string;
+  className?: string;
+}) {
   return (
-    <div className="rounded-2xl border border-border/60 bg-card p-4 shadow-sm">
-      <p className="mb-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-        Dashboard
-      </p>
-      <div className="grid grid-cols-2 gap-2">
+    <div className={`mx-auto max-w-[640px] text-center ${className}`}>
+      <Eyebrow>{eyebrow}</Eyebrow>
+      <h2
+        className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
+        style={{ color: LANDING.textPrimary }}
+      >
+        {title}
+      </h2>
+    </div>
+  );
+}
+
+/** Chrome de navegador (barra com 3 pontos) usado nos mockups do produto. */
+function BrowserChrome({ label }: { label?: string }) {
+  return (
+    <div
+      className="flex items-center gap-1.5 border-b px-3.5 py-2.5"
+      style={{ background: LANDING.surfaceSubtle, borderColor: LANDING.divider }}
+    >
+      <span className="h-2 w-2 rounded-full" style={{ background: LANDING.border }} />
+      <span className="h-2 w-2 rounded-full" style={{ background: LANDING.border }} />
+      <span className="h-2 w-2 rounded-full" style={{ background: LANDING.border }} />
+      {label ? (
+        <span className="ml-2.5 flex items-center gap-1.5">
+          <BrandLogo orientation="mark" aria-hidden="true" className="h-3.5 w-3.5" />
+          <span className="text-[11px] font-semibold" style={{ color: LANDING.textSecondary }}>
+            {label}
+          </span>
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* Recriações reais do produto (usadas no mockup do Hero e na           */
+/* "Demonstração do sistema") — montadas com os componentes reais do    */
+/* Design System (Card/Badge), não capturas de tela, mas com a mesma    */
+/* aparência e dados de exemplo realistas.                              */
+/* ------------------------------------------------------------------ */
+
+function MiniDashboardPreview() {
+  return (
+    <div className="flex h-full flex-col justify-between p-4">
+      <div className="grid grid-cols-2 gap-2.5">
         {[
           { label: "Questões respondidas", value: "184" },
           { label: "Aproveitamento", value: "71%" },
         ].map((item) => (
-          <div key={item.label} className="rounded-lg border border-border/50 bg-muted/20 p-3">
-            <p className="text-[0.65rem] text-muted-foreground">{item.label}</p>
-            <p className="text-lg font-semibold tabular-nums">{item.value}</p>
+          <div
+            key={item.label}
+            className="rounded-lg border p-2.5"
+            style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+          >
+            <p className="text-[10px]" style={{ color: LANDING.textSecondary }}>
+              {item.label}
+            </p>
+            <p className="text-lg font-bold tabular-nums" style={{ color: LANDING.textPrimary }}>
+              {item.value}
+            </p>
           </div>
         ))}
       </div>
-      <div className="mt-3 space-y-1.5 rounded-lg border border-border/50 bg-muted/20 p-3">
-        <div className="flex items-center justify-between text-[0.7rem] text-muted-foreground">
+      <div
+        className="mt-2.5 space-y-1.5 rounded-lg border p-2.5"
+        style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+      >
+        <div
+          className="flex items-center justify-between text-[10px]"
+          style={{ color: LANDING.textSecondary }}
+        >
           <span>Legislação do SUS</span>
           <span className="tabular-nums">58%</span>
         </div>
-        <div className="h-1.5 w-full rounded-full bg-muted">
-          <div className="h-1.5 w-[58%] rounded-full bg-warning" />
+        <div className="h-1.5 w-full rounded-full" style={{ background: LANDING.border }}>
+          <div
+            className="h-1.5 w-[58%] rounded-full"
+            style={{ background: "var(--ds-color-warning)" }}
+          />
         </div>
       </div>
     </div>
   );
 }
 
-function SessionPreview() {
+function MiniStudyPreview() {
   return (
-    <div className="rounded-2xl border border-border/60 bg-card p-4 shadow-sm">
-      <p className="mb-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-        Sessão de estudo
-      </p>
+    <div className="flex h-full flex-col justify-between p-4">
       <div className="space-y-1.5">
-        <div className="flex items-center justify-between text-[0.7rem] text-muted-foreground">
+        <div
+          className="flex items-center justify-between text-[10px]"
+          style={{ color: LANDING.textSecondary }}
+        >
           <span>Questão 6 de 20</span>
           <span>Modo Estudo</span>
         </div>
-        <div className="h-1.5 w-full rounded-full bg-muted">
-          <div className="h-1.5 w-[30%] rounded-full bg-primary" />
+        <div className="h-1.5 w-full rounded-full" style={{ background: LANDING.border }}>
+          <div className="h-1.5 w-[30%] rounded-full" style={{ background: LANDING.primary }} />
         </div>
       </div>
-      <div className="mt-3 space-y-2">
+      <div className="mt-2.5 space-y-1.5">
         {["A", "B", "C"].map((letter, index) => (
           <div
             key={letter}
-            className={`flex items-center gap-2 rounded-lg border px-2.5 py-2 text-[0.7rem] ${
+            className="flex items-center gap-2 rounded-lg border px-2 py-1.5 text-[10.5px]"
+            style={
               index === 1
-                ? "border-success/50 bg-success/[0.06] text-foreground"
-                : "border-border/50 bg-muted/10 text-muted-foreground"
-            }`}
+                ? { borderColor: "var(--ds-color-success)", background: "rgba(34,197,94,0.06)" }
+                : { borderColor: LANDING.border, background: LANDING.surfaceSubtle }
+            }
           >
             <span
-              className={`grid h-5 w-5 shrink-0 place-items-center rounded-md text-[0.65rem] font-semibold ${
-                index === 1 ? "bg-success text-success-foreground" : "bg-muted"
-              }`}
+              className="grid h-4 w-4 shrink-0 place-items-center rounded text-[9px] font-bold"
+              style={
+                index === 1
+                  ? { background: "var(--ds-color-success)", color: "#fff" }
+                  : { background: LANDING.border, color: LANDING.textPrimary }
+              }
             >
               {letter}
             </span>
-            <span className="truncate">Alternativa de exemplo {index + 1}</span>
+            <span className="truncate" style={{ color: LANDING.textPrimary }}>
+              Alternativa de exemplo {index + 1}
+            </span>
           </div>
         ))}
       </div>
@@ -311,12 +451,9 @@ function SessionPreview() {
   );
 }
 
-function ResultsPreview() {
+function MiniResultsPreview() {
   return (
-    <div className="rounded-2xl border border-border/60 bg-card p-4 shadow-sm">
-      <p className="mb-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-        Resultados
-      </p>
+    <div className="flex h-full flex-col justify-between p-4">
       <div className="grid grid-cols-3 gap-2">
         {[
           { label: "Acertos", value: "14" },
@@ -325,18 +462,27 @@ function ResultsPreview() {
         ].map((item) => (
           <div
             key={item.label}
-            className="rounded-lg border border-border/50 bg-muted/20 p-2.5 text-center"
+            className="rounded-lg border p-2 text-center"
+            style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
           >
-            <p className="text-[0.6rem] text-muted-foreground">{item.label}</p>
-            <p className="text-base font-semibold tabular-nums">{item.value}</p>
+            <p className="text-[9.5px]" style={{ color: LANDING.textSecondary }}>
+              {item.label}
+            </p>
+            <p className="text-sm font-bold tabular-nums" style={{ color: LANDING.textPrimary }}>
+              {item.value}
+            </p>
           </div>
         ))}
       </div>
-      <div className="mt-3 space-y-1.5">
+      <div className="mt-2.5 space-y-1.5">
         {["Administração em Enfermagem", "Saúde Coletiva"].map((name, index) => (
-          <div key={name} className="flex items-center justify-between text-[0.7rem]">
-            <span className="truncate text-muted-foreground">{name}</span>
-            <span className="tabular-nums font-medium">{index === 0 ? "52%" : "83%"}</span>
+          <div key={name} className="flex items-center justify-between text-[10.5px]">
+            <span className="truncate" style={{ color: LANDING.textSecondary }}>
+              {name}
+            </span>
+            <span className="font-semibold tabular-nums" style={{ color: LANDING.textPrimary }}>
+              {index === 0 ? "52%" : "83%"}
+            </span>
           </div>
         ))}
       </div>
@@ -344,34 +490,65 @@ function ResultsPreview() {
   );
 }
 
-function ReviewPreview() {
+/* ------------------------------------------------------------------ */
+/* FAQ — accordion próprio (visual do Claude Design), copy real         */
+/* ------------------------------------------------------------------ */
+
+function FaqAccordion({ items }: { items: typeof FAQ_ITEMS }) {
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
+
   return (
-    <div className="rounded-2xl border border-border/60 bg-card p-4 shadow-sm">
-      <p className="mb-3 text-xs font-medium uppercase tracking-wide text-muted-foreground">
-        Central de Revisão
-      </p>
-      <div className="grid grid-cols-2 gap-2">
-        {[
-          { label: "Favoritas", value: "12" },
-          { label: "Erradas", value: "9" },
-        ].map((item) => (
-          <div key={item.label} className="rounded-lg border border-border/50 bg-muted/20 p-2.5">
-            <p className="text-[0.6rem] text-muted-foreground">{item.label}</p>
-            <p className="text-base font-semibold tabular-nums">{item.value}</p>
+    <div className="flex flex-col">
+      {items.map((item, index) => {
+        const isOpen = openIndex === index;
+        return (
+          <div
+            key={item.question}
+            className="cursor-pointer border-b py-[22px]"
+            style={{ borderColor: LANDING.divider }}
+            onClick={() => setOpenIndex(isOpen ? null : index)}
+          >
+            <div className="flex items-center justify-between gap-4">
+              <span className="text-[15.5px] font-bold" style={{ color: LANDING.textPrimary }}>
+                {item.question}
+              </span>
+              <span
+                className="text-lg leading-none"
+                style={{ color: LANDING.textSecondary }}
+                aria-hidden="true"
+              >
+                {isOpen ? "–" : "+"}
+              </span>
+            </div>
+            {isOpen ? (
+              <div
+                className="mt-3 max-w-[640px] text-sm leading-relaxed"
+                style={{ color: LANDING.textSecondary }}
+              >
+                {item.answer}
+              </div>
+            ) : null}
           </div>
-        ))}
-      </div>
-      <div className="mt-3 flex items-center gap-2 rounded-lg border border-border/50 bg-muted/10 px-2.5 py-2 text-[0.7rem] text-muted-foreground">
-        <RotateCcw className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-        <span className="truncate">Refazer apenas as questões erradas</span>
-      </div>
+        );
+      })}
     </div>
   );
 }
+
+/* ------------------------------------------------------------------ */
+/* Página                                                               */
+/* ------------------------------------------------------------------ */
 
 function Landing() {
+  const plan = COMMERCIAL_PLANS.find((p) => p.id === "plano-fundador") ?? COMMERCIAL_PLANS[0];
+  const otherPlans = COMMERCIAL_PLANS.filter((p) => p.id !== plan?.id);
+  const allPlans = plan ? [plan, ...otherPlans] : COMMERCIAL_PLANS;
+
   return (
-    <div className="min-h-screen bg-background">
+    <div
+      className="min-h-screen"
+      style={{ background: LANDING.surface, color: LANDING.textPrimary, fontFamily }}
+    >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -379,230 +556,489 @@ function Landing() {
         }}
       />
 
-      <header className="sticky top-0 z-30 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-          <div className="flex items-center gap-2 font-bold tracking-tight">
-            <div className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-              <GraduationCap className="h-4 w-4" aria-hidden="true" />
-            </div>
-            SimulaPro
-          </div>
-          <div className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm">
-              <Link to="/auth">Entrar</Link>
-            </Button>
-            <Button asChild size="sm">
-              <Link to="/auth">
-                Começar agora
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
+      {/* HEADER */}
+      <header
+        className="flex items-center justify-between border-b px-6 py-5 sm:px-16"
+        style={{ borderColor: LANDING.divider }}
+      >
+        <Link to="/">
+          <Logo />
+        </Link>
+
+        <nav className="hidden items-center gap-9 lg:flex">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-semibold"
+              style={{ color: LANDING.textPrimary }}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3 sm:gap-4.5">
+          <Link to="/auth" className="text-sm font-semibold" style={{ color: LANDING.textPrimary }}>
+            Entrar
+          </Link>
+          <Button asChild size="md">
+            <Link to="/auth">Começar agora</Link>
+          </Button>
         </div>
       </header>
 
       <main>
-        {/* 1. Hero */}
-        <section className="relative overflow-hidden">
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-gradient-to-b from-primary/[0.06] via-accent/[0.04] to-transparent"
-            aria-hidden="true"
-          />
-          <div className="mx-auto max-w-6xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:pt-28">
-            <div className="mx-auto max-w-3xl text-center">
-              <Badge
-                variant="outline"
-                className="mx-auto gap-1.5 border-primary/30 bg-primary/5 text-primary"
+        {/* HERO */}
+        <section
+          className="px-6 pb-16 pt-16 sm:px-16 sm:pb-20 sm:pt-16 lg:pb-[88px] lg:pt-[76px]"
+          style={{ background: LANDING.background }}
+        >
+          <div className="mx-auto flex max-w-[1312px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
+            <div className="max-w-[480px] text-center lg:flex-none lg:text-left">
+              <Eyebrow>PLATAFORMA PARA APROVAÇÃO EM ENFERMAGEM</Eyebrow>
+              <h1
+                className="mt-4 text-[32px] font-extrabold leading-[1.14] tracking-[-0.02em] sm:text-[38px] lg:text-[44px]"
+                style={{ color: LANDING.textPrimary }}
               >
-                <Sparkles className="h-3 w-3" aria-hidden="true" />
-                Especializado em concursos de Enfermagem
-              </Badge>
-              <h1 className="mx-auto mt-6 max-w-2xl text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-                Estude Enfermagem por questões oficiais, organizadas do seu jeito
+                Estude Enfermagem por questões oficiais, organizadas do seu jeito.
               </h1>
-              <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
+              <p
+                className="mx-auto mt-5 max-w-[440px] text-base leading-relaxed lg:mx-0"
+                style={{ color: LANDING.textSecondary }}
+              >
                 Questões reais de bancas organizadoras, filtradas por disciplina e assunto, com
                 acompanhamento de evolução para você saber exatamente onde estudar primeiro.
               </p>
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
                 <Button asChild size="lg">
                   <Link to="/auth">
                     Começar agora
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href="#como-funciona">Ver como funciona</a>
+                <Button asChild variant="outline" size="lg">
+                  <a href="#como-funciona">
+                    <Play className="h-3 w-3" aria-hidden="true" fill="currentColor" />
+                    Ver como funciona
+                  </a>
                 </Button>
+              </div>
+              <div className="mt-10 flex items-center justify-center gap-0 overflow-x-auto lg:justify-start">
+                {STATS.map((stat, index) => (
+                  <div
+                    key={stat.label}
+                    className="px-4 first:pl-0 sm:px-6"
+                    style={
+                      index < STATS.length - 1
+                        ? { borderRight: `1px solid ${LANDING.border}` }
+                        : undefined
+                    }
+                  >
+                    <div
+                      className="text-lg font-extrabold tracking-[-0.01em] sm:text-xl"
+                      style={{ color: LANDING.textPrimary }}
+                    >
+                      {stat.value}
+                    </div>
+                    <div className="text-xs font-semibold" style={{ color: LANDING.textSecondary }}>
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="mx-auto mt-16 grid max-w-4xl gap-4 sm:grid-cols-2">
-              <DashboardPreview />
-              <SessionPreview />
+            <div className="relative w-full max-w-[560px] lg:h-[400px] lg:flex-1">
+              <div
+                className="relative w-full overflow-hidden rounded-[12px] border bg-white shadow-[0_4px_12px_rgba(10,22,51,0.06),0_24px_48px_rgba(10,22,51,0.12)] lg:absolute lg:left-0 lg:top-0 lg:w-[520px]"
+                style={{ borderColor: LANDING.border }}
+              >
+                <BrowserChrome label="app.simulapro.com.br" />
+                <div className="h-[280px] sm:h-[320px] lg:h-[347px]">
+                  <MiniDashboardPreview />
+                </div>
+              </div>
+
+              <div
+                className="relative mt-4 ml-auto w-[220px] overflow-hidden rounded-[14px] border bg-white shadow-[0_8px_24px_rgba(10,22,51,0.14)] lg:absolute lg:right-[14px] lg:bottom-[26px] lg:mt-0"
+                style={{ borderColor: LANDING.border }}
+              >
+                <div className="h-[196px]">
+                  <MiniStudyPreview />
+                </div>
+                <div
+                  className="absolute bottom-2.5 left-2.5 rounded-[6px] px-2.5 py-1.5 text-[10.5px] font-bold text-white"
+                  style={{ background: "rgba(10,22,51,0.85)" }}
+                >
+                  Modo de estudo focado
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* 2. Principais bancas */}
-        <section className="border-y border-border/60 bg-muted/20 py-10">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <p className="text-center text-xs font-medium uppercase tracking-wide text-muted-foreground">
-              Questões de provas aplicadas por bancas organizadoras reais
-            </p>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-2.5">
-              {BANKS.map((bank) => (
-                <Badge key={bank} variant="secondary" className="px-3 py-1.5 text-sm font-medium">
-                  {bank}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 3. Como funciona */}
-        <section id="como-funciona" className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
-          <SectionHeading
-            eyebrow="Como funciona"
-            title="Da conta ao primeiro resultado, em cinco passos"
-            description="Sem etapas escondidas — você sabe exatamente o que vem a seguir em cada momento."
-          />
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {HOW_IT_WORKS.map((step, index) => (
-              <div key={step.title} className="relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary">
-                    <step.icon className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <p className="mt-4 text-sm font-semibold">
-                    {index + 1}. {step.title}
-                  </p>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{step.description}</p>
+        {/* PROVA SOCIAL (faixa escura) */}
+        <section
+          className="flex flex-col items-center justify-center gap-6 px-6 py-9 sm:px-16 lg:flex-row lg:gap-0"
+          style={{ background: LANDING.textPrimary }}
+        >
+          <div className="flex flex-wrap items-center justify-center gap-y-4">
+            {STATS.map((stat, index) => (
+              <div
+                key={stat.label}
+                className="px-6 text-center sm:px-11"
+                style={
+                  index < STATS.length - 1
+                    ? { borderRight: "1px solid rgba(255,255,255,0.1)" }
+                    : undefined
+                }
+              >
+                <div className="text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-[26px]">
+                  {stat.value}
+                </div>
+                <div
+                  className="mt-1 text-xs font-semibold"
+                  style={{ color: "rgba(255,255,255,0.55)" }}
+                >
+                  {stat.label === "Questões"
+                    ? "Questões organizadas"
+                    : stat.label === "Bancas"
+                      ? "Bancas cobertas"
+                      : stat.label === "Disciplinas"
+                        ? "Disciplinas mapeadas"
+                        : "Questões oficiais"}
                 </div>
               </div>
             ))}
           </div>
+          <div
+            className="max-w-xs text-center text-[13px] font-semibold lg:ml-11 lg:max-w-none lg:pl-0 lg:text-left"
+            style={{ color: "rgba(255,255,255,0.55)" }}
+          >
+            Acervo em produção contínua, com classificação e revisão a cada nova prova.
+          </div>
         </section>
 
-        {/* 4. Funcionalidades */}
-        <section className="border-y border-border/60 bg-muted/20 py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <SectionHeading
-              eyebrow="Funcionalidades"
-              title="Tudo que você precisa para treinar com foco"
-              description="Sem recursos genéricos — cada peça existe para resolver um problema específico de quem estuda com o tempo contado."
+        {/* COMO FUNCIONA */}
+        <section id="como-funciona" className="px-6 py-16 sm:px-16 sm:py-24">
+          <SectionHeading eyebrow="COMO FUNCIONA" title="Um caminho claro até a aprovação" />
+          <div className="relative mx-auto mt-14 flex max-w-[1312px] flex-col gap-10 sm:grid sm:grid-cols-2 sm:gap-6 lg:flex lg:flex-row lg:justify-between">
+            <div
+              className="absolute top-[22px] right-11 left-11 hidden h-px lg:block"
+              style={{ background: LANDING.border }}
+              aria-hidden="true"
             />
-            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {FEATURES.map((feature) => (
-                <Card key={feature.title} className="border-border/60 shadow-none">
-                  <CardHeader>
-                    <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
-                      <feature.icon className="h-5 w-5" aria-hidden="true" />
-                    </div>
-                    <CardTitle className="mt-3 text-lg">{feature.title}</CardTitle>
-                    <CardDescription>{feature.description}</CardDescription>
-                  </CardHeader>
-                </Card>
+            {HOW_IT_WORKS.map((step) => (
+              <div
+                key={step.title}
+                className="relative flex flex-1 flex-col items-center px-3 text-center"
+              >
+                <div
+                  className="relative z-[1] mb-4 flex h-11 w-11 items-center justify-center rounded-full border-[1.5px]"
+                  style={{ background: LANDING.surface, borderColor: LANDING.border }}
+                >
+                  <step.icon
+                    className="h-[18px] w-[18px]"
+                    style={{ color: LANDING.textPrimary }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p className="text-sm font-bold" style={{ color: LANDING.textPrimary }}>
+                  {step.title}
+                </p>
+                <p
+                  className="mt-1.5 text-[12.5px] leading-relaxed"
+                  style={{ color: LANDING.textSecondary }}
+                >
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* RECURSOS */}
+        <section id="recursos" className="px-6 pb-16 sm:px-16 sm:pb-24">
+          <SectionHeading
+            eyebrow="PRINCIPAIS FUNCIONALIDADES"
+            title="Tudo o que você precisa em um só lugar"
+          />
+          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {FEATURES.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-[14px] border p-6"
+                style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+              >
+                <div
+                  className="mb-4 flex h-[38px] w-[38px] items-center justify-center rounded-[9px] border"
+                  style={{ background: LANDING.surface, borderColor: LANDING.border }}
+                >
+                  <feature.icon
+                    className="h-[17px] w-[17px]"
+                    style={{ color: LANDING.textPrimary }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p className="text-[14.5px] font-bold" style={{ color: LANDING.textPrimary }}>
+                  {feature.title}
+                </p>
+                <p
+                  className="mt-1.5 text-[12.5px] leading-relaxed"
+                  style={{ color: LANDING.textSecondary }}
+                >
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* POR QUE O SIMULAPRO */}
+        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
+          <div
+            className="mx-auto flex max-w-[1312px] flex-col gap-10 rounded-[20px] border p-8 sm:p-12 lg:flex-row lg:gap-16 lg:px-[72px] lg:py-16"
+            style={{ borderColor: LANDING.border, background: LANDING.surface }}
+          >
+            <div className="lg:w-[360px] lg:flex-none">
+              <Eyebrow>POR QUE O SIMULAPRO</Eyebrow>
+              <h2
+                className="mt-3.5 text-2xl font-extrabold leading-tight tracking-[-0.01em] sm:text-[28px]"
+                style={{ color: LANDING.textPrimary }}
+              >
+                Feito para quem estuda com seriedade
+              </h2>
+            </div>
+            <div className="flex flex-1 flex-col gap-5 sm:gap-[22px]">
+              {DIFFERENTIATORS.map((item) => (
+                <div key={item.title} className="flex items-start gap-4">
+                  <div
+                    className="mt-0.5 flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-[7px] border"
+                    style={{ background: LANDING.surfaceSubtle, borderColor: LANDING.border }}
+                  >
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                      <path
+                        d="M2.5 6.5L5 9L10.5 3.5"
+                        stroke={LANDING.success}
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[15px] font-bold" style={{ color: LANDING.textPrimary }}>
+                      {item.title}
+                    </p>
+                    <p
+                      className="mt-0.5 text-[13.5px] leading-relaxed"
+                      style={{ color: LANDING.textSecondary }}
+                    >
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* 5. Screenshots (ilustrativos — o produto real não tem imagens de tela publicadas ainda) */}
-        <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        {/* DEMONSTRAÇÃO DO SISTEMA */}
+        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
           <SectionHeading
-            eyebrow="O produto"
-            title="Uma prévia do que você encontra depois de entrar"
-            description="Representação da interface real do SimulaPro — dashboard, sessão de estudo, resultados e central de revisão."
+            eyebrow="DEMONSTRAÇÃO DO SISTEMA"
+            title="A plataforma que você vai usar todos os dias"
           />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <DashboardPreview />
-            <SessionPreview />
-            <ResultsPreview />
-            <ReviewPreview />
+          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-6 sm:grid-cols-3">
+            {[
+              { title: "Central de preparação", Preview: MiniDashboardPreview },
+              { title: "Modo de estudo focado", Preview: MiniStudyPreview },
+              { title: "Diagnóstico de desempenho", Preview: MiniResultsPreview },
+            ].map(({ title, Preview }) => (
+              <div key={title}>
+                <div
+                  className="overflow-hidden rounded-[12px] border bg-white shadow-[0_4px_16px_rgba(10,22,51,0.06)]"
+                  style={{ borderColor: LANDING.border }}
+                >
+                  <BrowserChrome />
+                  <div className="h-[220px] sm:h-[240px]">
+                    <Preview />
+                  </div>
+                </div>
+                <p
+                  className="mt-3.5 text-center text-[13.5px] font-bold"
+                  style={{ color: LANDING.textPrimary }}
+                >
+                  {title}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* 6. Plano */}
-        <section id="planos" className="border-y border-border/60 bg-muted/20 py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <SectionHeading eyebrow="Oferta de lançamento" title="Plano Fundador" />
-            <div className="mx-auto mt-12 max-w-md">
-              <Card className="border-primary/30 shadow-sm">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-xl">{plan?.label ?? "Plano Fundador"}</CardTitle>
-                    <Badge>Vagas limitadas</Badge>
+        {/* BENEFÍCIOS */}
+        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
+          <SectionHeading eyebrow="BENEFÍCIOS" title="Resultados que você consegue medir" />
+          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {BENEFITS.map((benefit) => (
+              <div key={benefit.title} className="px-5 py-7 text-center">
+                <div
+                  className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border"
+                  style={{ background: LANDING.surfaceSubtle, borderColor: LANDING.border }}
+                >
+                  <benefit.icon
+                    className="h-5 w-5"
+                    style={{ color: LANDING.textPrimary }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p className="text-[14.5px] font-bold" style={{ color: LANDING.textPrimary }}>
+                  {benefit.title}
+                </p>
+                <p
+                  className="mt-1.5 text-[12.5px] leading-relaxed"
+                  style={{ color: LANDING.textSecondary }}
+                >
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* PLANOS — dados reais de @/config/commercial-plans, layout do Claude Design */}
+        <section
+          id="planos"
+          className="px-6 pt-16 pb-16 sm:px-16 sm:pt-24 sm:pb-24"
+          style={{ background: LANDING.background }}
+        >
+          <SectionHeading eyebrow="PLANOS" title="Escolha como quer se preparar" />
+          <div
+            className={`mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-5 ${
+              allPlans.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
+            }`}
+          >
+            {allPlans.map((p, index) => {
+              const highlighted = index === 0;
+              return (
+                <div
+                  key={p.id}
+                  className="relative rounded-[16px] border px-7 py-8"
+                  style={
+                    highlighted
+                      ? { background: LANDING.textPrimary, borderColor: LANDING.textPrimary }
+                      : { background: LANDING.surface, borderColor: LANDING.border }
+                  }
+                >
+                  {highlighted ? (
+                    <div
+                      className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
+                      style={{ background: LANDING.primary }}
+                    >
+                      MAIS POPULAR
+                    </div>
+                  ) : null}
+                  <div
+                    className="text-sm font-bold"
+                    style={{ color: highlighted ? "#7DA6F5" : LANDING.textSecondary }}
+                  >
+                    {p.label.toUpperCase()}
                   </div>
-                  <CardDescription>
-                    {plan?.description ??
-                      "Acesso completo ao Acervo Enfermeiro por um ciclo de estudo."}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {plan && (
-                    <p className="text-4xl font-bold tracking-tight">
-                      R$ {plan.value.toFixed(2).replace(".", ",")}
-                      <span className="ml-1.5 text-base font-normal text-muted-foreground">
-                        / {plan.accessDurationMonths} meses
-                      </span>
-                    </p>
-                  )}
-                  <ul className="space-y-2.5 text-sm">
+                  <div className="mt-1.5 flex items-baseline gap-1.5">
+                    <span
+                      className="text-[32px] font-extrabold tracking-[-0.02em]"
+                      style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
+                    >
+                      R$ {p.value.toFixed(2).replace(".", ",")}
+                    </span>
+                    <span
+                      className="text-[13px] font-semibold"
+                      style={{
+                        color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
+                      }}
+                    >
+                      / {p.accessDurationMonths} {p.accessDurationMonths === 1 ? "mês" : "meses"}
+                    </span>
+                  </div>
+                  <p
+                    className="mt-1.5 text-[12.5px]"
+                    style={{
+                      color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
+                    }}
+                  >
+                    {p.description}
+                  </p>
+                  <div className="mt-6 mb-[26px] flex flex-col gap-2.5">
                     {[
                       "Acesso completo ao Acervo Enfermeiro",
                       "Sem cobrança automática ao final do ciclo",
                       "Garantia incondicional de 7 dias",
-                      "Vagas limitadas da primeira leva",
+                      "Suporte por e-mail",
                     ].map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <CheckCircle2
-                          className="mt-0.5 h-4 w-4 shrink-0 text-success"
+                      <div key={item} className="flex items-center gap-2">
+                        <svg
+                          width="13"
+                          height="13"
+                          viewBox="0 0 13 13"
+                          fill="none"
                           aria-hidden="true"
-                        />
-                        <span>{item}</span>
-                      </li>
+                        >
+                          <path
+                            d="M2.5 6.5L5 9L10.5 3.5"
+                            stroke={highlighted ? LANDING.primary : LANDING.success}
+                            strokeWidth="1.6"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <span
+                          className="text-[13px] font-medium"
+                          style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
+                        >
+                          {item}
+                        </span>
+                      </div>
                     ))}
-                  </ul>
-                  <Button asChild className="w-full" size="lg">
-                    <Link to="/auth">
-                      Garantir minha vaga
-                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </Link>
+                  </div>
+                  <Button
+                    asChild
+                    fullWidth
+                    variant={highlighted ? "primary" : "outline"}
+                    className={highlighted ? undefined : "border-[#E3E8EF]"}
+                  >
+                    <Link to="/auth">Assinar</Link>
                   </Button>
-                  <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
-                    <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
-                    Garantia de 7 dias, sem burocracia
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
-        {/* 7. FAQ */}
-        <section className="mx-auto max-w-3xl px-4 py-20 sm:px-6">
-          <SectionHeading title="Perguntas frequentes" />
-          <Accordion type="single" collapsible className="mt-10 w-full">
-            {FAQ_ITEMS.map((item) => (
-              <AccordionItem key={item.question} value={item.question}>
-                <AccordionTrigger className="text-left text-base">{item.question}</AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        {/* FAQ */}
+        <section id="faq" className="mx-auto max-w-[760px] px-6 py-16 sm:px-16 sm:py-24">
+          <div className="mb-12 text-center">
+            <Eyebrow>DÚVIDAS FREQUENTES</Eyebrow>
+            <h2
+              className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
+              style={{ color: LANDING.textPrimary }}
+            >
+              Perguntas frequentes
+            </h2>
+          </div>
+          <FaqAccordion items={FAQ_ITEMS} />
         </section>
 
-        {/* 8. CTA final */}
-        <section className="border-t border-border/60 bg-muted/20 py-20">
-          <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
-            <Target className="mx-auto h-8 w-8 text-primary" aria-hidden="true" />
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+        {/* CTA FINAL */}
+        <section className="px-6 pb-16 sm:px-16 sm:pb-16">
+          <div
+            className="mx-auto max-w-[1312px] rounded-[20px] px-6 py-16 text-center sm:px-16 sm:py-[72px]"
+            style={{ background: LANDING.textPrimary }}
+          >
+            <h2 className="text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-[32px]">
               O Acervo Enfermeiro está organizado. As vagas do Plano Fundador não são ilimitadas.
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-3.5 text-[15px]" style={{ color: "rgba(255,255,255,0.6)" }}>
               Garanta acesso agora, com garantia de 7 dias e sem assinatura automática.
             </p>
             <div className="mt-8 flex justify-center">
@@ -617,39 +1053,47 @@ function Landing() {
         </section>
       </main>
 
-      <footer className="border-t border-border/60 py-10">
-        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 text-center sm:px-6">
-          <div className="flex items-center gap-2 font-semibold">
-            <div className="grid h-7 w-7 place-items-center rounded-md bg-primary text-primary-foreground">
-              <GraduationCap className="h-3.5 w-3.5" aria-hidden="true" />
-            </div>
-            SimulaPro
+      {/* FOOTER */}
+      <footer
+        className="flex flex-col items-center gap-4 border-t px-6 py-8 text-center sm:flex-row sm:justify-between sm:px-16 sm:text-left"
+        style={{ borderColor: LANDING.divider }}
+      >
+        <div className="flex flex-col items-center gap-2.5 sm:items-start">
+          <Logo />
+          <div className="text-[13px]" style={{ color: LANDING.textSecondary }}>
+            © {new Date().getFullYear()} SimulaPro Concursos. Todos os direitos reservados.
           </div>
-          <p className="text-xs text-muted-foreground">
-            Plataforma especializada em questões oficiais para concursos de Enfermagem.
-          </p>
-          <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
-            <Link to="/privacidade" className="hover:text-foreground hover:underline">
-              Privacidade
-            </Link>
-            <Link to="/termos" className="hover:text-foreground hover:underline">
-              Termos
-            </Link>
-            <Link to="/reembolso" className="hover:text-foreground hover:underline">
-              Reembolso
-            </Link>
-            <a
-              href="mailto:suporte@simulapro.com.br"
-              className="hover:text-foreground hover:underline"
-            >
-              Suporte
-            </a>
-          </nav>
-          <Separator className="my-1 w-24" />
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} SimulaPro. Todos os direitos reservados.
-          </p>
         </div>
+        <nav className="flex flex-wrap items-center justify-center gap-5 sm:gap-7">
+          <Link
+            to="/privacidade"
+            className="text-[13px] font-semibold hover:underline"
+            style={{ color: LANDING.textSecondary }}
+          >
+            Privacidade
+          </Link>
+          <Link
+            to="/termos"
+            className="text-[13px] font-semibold hover:underline"
+            style={{ color: LANDING.textSecondary }}
+          >
+            Termos
+          </Link>
+          <Link
+            to="/reembolso"
+            className="text-[13px] font-semibold hover:underline"
+            style={{ color: LANDING.textSecondary }}
+          >
+            Reembolso
+          </Link>
+          <a
+            href="mailto:suporte@simulapro.com.br"
+            className="text-[13px] font-semibold hover:underline"
+            style={{ color: LANDING.textSecondary }}
+          >
+            Suporte
+          </a>
+        </nav>
       </footer>
     </div>
   );

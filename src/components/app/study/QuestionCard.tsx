@@ -1,3 +1,5 @@
+import { dsFontWeight } from "@/styles/design-system/tokens";
+
 type QuestionCardProps = {
   statement: string;
   imageUrl?: string | null;
@@ -5,13 +7,22 @@ type QuestionCardProps = {
 
 export function QuestionCard({ statement, imageUrl }: QuestionCardProps) {
   return (
-    <article className="space-y-6">
-      <p className="text-lg leading-[1.8] whitespace-pre-wrap text-foreground sm:text-xl sm:leading-[1.85] md:text-[1.35rem] md:leading-[1.9]">
+    <article className="flex flex-col gap-[var(--ds-space-6)]">
+      <p
+        className="whitespace-pre-wrap text-[color:var(--ds-color-text-primary)]"
+        style={{ fontSize: "1.1875rem", fontWeight: dsFontWeight.medium, lineHeight: 1.75 }}
+      >
         {statement}
       </p>
 
       {imageUrl && (
-        <figure className="mx-auto w-full max-w-3xl overflow-hidden rounded-xl border border-border/50 bg-muted/20 p-4 sm:p-5">
+        <figure
+          className="mx-auto w-full max-w-3xl overflow-hidden rounded-[var(--ds-radius-lg)] border p-4 sm:p-5"
+          style={{
+            borderColor: "var(--ds-color-border)",
+            background: "var(--ds-color-background)",
+          }}
+        >
           <img
             src={imageUrl}
             alt="Ilustração do enunciado"

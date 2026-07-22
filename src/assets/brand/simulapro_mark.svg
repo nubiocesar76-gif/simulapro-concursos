@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="54 4 92 92" width="100%" height="100%" fill="none">
+  <g id="Center-Cube">
+    <path d="M 100 10 L 138 30 L 100 50 L 62 30 Z" fill="url(#mark-top)"></path>
+    <path d="M 62 30 L 100 50 L 100 90 L 62 70 Z" fill="url(#mark-left)"></path>
+    <path d="M 100 50 L 138 30 L 138 70 L 100 90 Z" fill="url(#mark-right)"></path>
+    <path d="M 81 40 L 100 50 L 119 40 M 100 50 L 100 75" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </g>
+  <defs>
+    <linearGradient id="mark-top" x1="62" y1="10" x2="138" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"></stop>
+      <stop offset="1" stop-color="#00A3FF"></stop>
+    </linearGradient>
+    <linearGradient id="mark-left" x1="62" y1="30" x2="100" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0052FF"></stop>
+      <stop offset="1" stop-color="#003199"></stop>
+    </linearGradient>
+    <linearGradient id="mark-right" x1="100" y1="30" x2="138" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B63FF"></stop>
+      <stop offset="1" stop-color="#0052FF"></stop>
+    </linearGradient>
+  </defs>
+</svg>

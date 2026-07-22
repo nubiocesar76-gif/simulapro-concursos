@@ -20,9 +20,7 @@ function NotFoundComponent() {
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold">Página não encontrada</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          A página que você procura não existe.
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">A página que você procura não existe.</p>
         <div className="mt-6">
           <Link
             to="/"
@@ -47,9 +45,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold">Falha ao carregar</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Algo deu errado. Tente novamente.
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">Algo deu errado. Tente novamente.</p>
         <div className="mt-6 flex justify-center gap-2">
           <button
             onClick={() => {
@@ -89,10 +85,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Estude concursos com organização profissional de questões e simulados.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "SimulaPro" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
       { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },

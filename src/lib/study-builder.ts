@@ -204,6 +204,56 @@ export function getFilterLabel(
   return options.find((option) => option.id === value)?.label ?? allLabel;
 }
 
+/**
+ * A API do Supabase/PostgREST limita cada resposta a, no máximo, 1000 linhas por padrão.
+ * `.select()` sem `.range()` é truncado silenciosamente nesse teto — pacotes com mais de
+ * 1000 questões perdiam o restante do acervo no catálogo do construtor de sessão sem
+ * nenhum erro visível. Paginamos explicitamente até esgotar os resultados.
+ */
+const PAGE_SIZE = 1000;
+
+async function fetchAllQuestionsForPackageVersion(packageVersionId: string) {
+  const rows: Array<{
+    id: string;
+    year: number | null;
+    board_id: string | null;
+    subject_id: string | null;
+    topic_id: string | null;
+    boards: unknown;
+    subjects: unknown;
+    topics: unknown;
+  }> = [];
+
+  let from = 0;
+  for (;;) {
+    const { data, error } = await supabase
+      .from("questions")
+      .select(
+        `
+        id,
+        year,
+        board_id,
+        subject_id,
+        topic_id,
+        boards(id, name, acronym),
+        subjects(id, name),
+        topics(id, name, subject_id)
+      `,
+      )
+      .eq("package_version_id", packageVersionId)
+      .range(from, from + PAGE_SIZE - 1);
+
+    if (error) throw error;
+
+    const page = data ?? [];
+    rows.push(...(page as typeof rows));
+    if (page.length < PAGE_SIZE) break;
+    from += PAGE_SIZE;
+  }
+
+  return rows;
+}
+
 export async function fetchStudyBuilderCatalog(
   distributionId: string,
   userId: string,
@@ -217,21 +267,7 @@ export async function fetchStudyBuilderCatalog(
     allowedIds = new Set(ids);
   }
 
-  const { data, error } = await supabase
-    .from("questions")
-    .select(`
-      id,
-      year,
-      board_id,
-      subject_id,
-      topic_id,
-      boards(id, name, acronym),
-      subjects(id, name),
-      topics(id, name, subject_id)
-    `)
-    .eq("package_version_id", packageVersionId);
-
-  if (error) throw error;
+  const data = await fetchAllQuestionsForPackageVersion(packageVersionId);
 
   const questions: StudyBuilderQuestion[] = (data ?? [])
     .filter((row) => !allowedIds || allowedIds.has(row.id))
