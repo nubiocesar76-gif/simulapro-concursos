@@ -1,7 +1,8 @@
-import { createFileRoute, Navigate, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, Navigate, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/ui/password-input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
@@ -17,6 +18,10 @@ function AuthPage() {
   const { user, role, loading, error } = useAuth();
   const navigate = useNavigate();
   const [busy, setBusy] = useState(false);
+  const [signupPassword, setSignupPassword] = useState("");
+  const [signupConfirmPassword, setSignupConfirmPassword] = useState("");
+  const passwordMismatch =
+    signupConfirmPassword.length > 0 && signupPassword !== signupConfirmPassword;
 
   useEffect(() => {
     if (error) toast.error(error);
@@ -56,6 +61,10 @@ function AuthPage() {
 
   async function handleSignup(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (signupPassword !== signupConfirmPassword) {
+      toast.error("As senhas não coincidem.");
+      return;
+    }
     const form = new FormData(e.currentTarget);
     setBusy(true);
     const { data, error: signupError } = await supabase.auth.signUp({
@@ -99,6 +108,14 @@ function AuthPage() {
                 <div>
                   <Label htmlFor="l-pw">Senha</Label>
                   <Input id="l-pw" name="password" type="password" required />
+                  <div className="mt-1 text-right">
+                    <Link
+                      to="/recuperar-senha"
+                      className="text-sm text-muted-foreground hover:text-foreground"
+                    >
+                      Esqueci minha senha?
+                    </Link>
+                  </div>
                 </div>
                 <Button type="submit" className="w-full" disabled={busy}>
                   {busy ? "Entrando..." : "Entrar"}
@@ -117,9 +134,30 @@ function AuthPage() {
                 </div>
                 <div>
                   <Label htmlFor="s-pw">Senha</Label>
-                  <Input id="s-pw" name="password" type="password" required minLength={6} />
+                  <PasswordInput
+                    id="s-pw"
+                    name="password"
+                    required
+                    minLength={6}
+                    value={signupPassword}
+                    onChange={(e) => setSignupPassword(e.target.value)}
+                  />
                 </div>
-                <Button type="submit" className="w-full" disabled={busy}>
+                <div>
+                  <Label htmlFor="s-pw-confirm">Repetir senha</Label>
+                  <PasswordInput
+                    id="s-pw-confirm"
+                    name="confirm_password"
+                    required
+                    minLength={6}
+                    value={signupConfirmPassword}
+                    onChange={(e) => setSignupConfirmPassword(e.target.value)}
+                  />
+                  {passwordMismatch && (
+                    <p className="mt-1 text-sm text-destructive">As senhas não coincidem.</p>
+                  )}
+                </div>
+                <Button type="submit" className="w-full" disabled={busy || passwordMismatch}>
                   {busy ? "Criando..." : "Criar conta"}
                 </Button>
               </form>
