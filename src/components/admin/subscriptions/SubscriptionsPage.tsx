@@ -112,7 +112,9 @@ export function SubscriptionsPage() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from("content_distributions")
-        .select("id, name, status, package_versions(version_number, packages(name, courses(name)))")
+        .select(
+          "id, name, status, package_versions(version_number, packages(name, course_id, courses(name)))",
+        )
         .eq("status", "ACTIVE")
         .order("name");
       if (error) throw error;
@@ -207,10 +209,17 @@ export function SubscriptionsPage() {
       if (!userId) throw new Error("Usuário é obrigatório.");
       if (!distributionId) throw new Error("Distribuição é obrigatória.");
 
+      const courseId = distributions.find((d) => d.id === distributionId)?.package_versions
+        ?.packages?.course_id;
+      if (!courseId) {
+        throw new Error("Não foi possível determinar o curso da distribuição selecionada.");
+      }
+
       const dates = validateSubscriptionDates(startsAt, expiresAt);
       const payload = {
         user_id: userId,
         distribution_id: distributionId,
+        course_id: courseId,
         status,
         ...dates,
       };
@@ -463,7 +472,7 @@ export function SubscriptionsPage() {
             </div>
             <div>
               <Label>Distribuição *</Label>
-              <Select value={distributionId} onValueChange={setDistributionId} disabled={!!editing}>
+              <Select value={distributionId} onValueChange={setDistributionId}>
                 <SelectTrigger><SelectValue placeholder="Selecione a distribuição" /></SelectTrigger>
                 <SelectContent>
                   {distributions.length === 0 ? (
