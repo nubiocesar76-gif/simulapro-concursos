@@ -1,0 +1,1184 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Na sala de vacinacao, instancia local e ultimo elo da Rede de Frio antes da administracao ao usuario, o equipamento de refrigeracao destinado a conservacao dos imunobiologicos deve ser:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "um refrigerador domestico comum, compartilhado com alimentos e outros produtos, sem qualquer restricao."
+        },
+        {
+          "letter": "B",
+          "text": "de uso exclusivo para imunobiologicos, nao compartilhado com alimentos, medicamentos ou outros materiais."
+        },
+        {
+          "letter": "C",
+          "text": "opcional, podendo os imunobiologicos ficarem a temperatura ambiente por curtos periodos sem qualquer prejuizo."
+        },
+        {
+          "letter": "D",
+          "text": "qualquer freezer domestico, independentemente da temperatura atingida."
+        },
+        {
+          "letter": "E",
+          "text": "dispensavel, desde que os imunobiologicos sejam usados no mesmo dia do recebimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "O refrigerador da sala de vacinacao deve ser de uso exclusivo para imunobiologicos, nao compartilhado com alimentos ou outros materiais.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "034a34a7bbff378e8192b11e2a76da4964d6088b8a80b5844d93f84b0cb84778"
+    },
+    {
+      "statement": "Os Eventos Adversos Pos-Vacinacao (EAPV) graves ou inusitados devem ser:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "tratados apenas localmente, sem qualquer registro formal."
+        },
+        {
+          "letter": "B",
+          "text": "notificados ao sistema de vigilancia de eventos adversos (integrado ao SI-PNI/sistema de informacao vigente), permitindo o monitoramento da seguranca dos imunobiologicos em uso."
+        },
+        {
+          "letter": "C",
+          "text": "omitidos, para nao gerar inseguranca na populacao."
+        },
+        {
+          "letter": "D",
+          "text": "notificados apenas se o paciente falecer."
+        },
+        {
+          "letter": "E",
+          "text": "de responsabilidade exclusiva do fabricante do imunobiologico, sem participacao do servico de saude."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "EAPV graves/inusitados devem ser notificados ao sistema de vigilancia, permitindo monitoramento continuo da seguranca dos imunobiologicos.",
+      "references": [
+        "Ministerio da Saude, vigilancia de eventos adversos pos-vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1110bb4b33010d3e55635592ff23c298a80656fda0af57975a6cfd0a9227f0d9"
+    },
+    {
+      "statement": "Na estrutura da Rede de Frio do PNI, a instancia nacional e responsavel por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aplicar diretamente as vacinas na populacao."
+        },
+        {
+          "letter": "B",
+          "text": "receber os imunobiologicos do laboratorio produtor/fornecedor internacional e distribui-los as instancias estaduais, mantendo grandes camaras frias de armazenamento."
+        },
+        {
+          "letter": "C",
+          "text": "realizar exclusivamente o controle de qualidade laboratorial das vacinas apos aplicadas."
+        },
+        {
+          "letter": "D",
+          "text": "substituir integralmente as instancias estaduais e municipais."
+        },
+        {
+          "letter": "E",
+          "text": "atuar apenas em campanhas de vacinacao, nao na rotina."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A instancia nacional recebe os imunobiologicos dos produtores/fornecedores e distribui as instancias estaduais, mantendo grandes camaras frias.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1e04afbce24ce08dba58baf43eb94002d6c3415ca76de7c8affba7b30bded4a0"
+    },
+    {
+      "statement": "A via subcutanea de administracao de vacinas, utilizada por exemplo para a vacina triplice viral (SCR) e a vacina febre amarela, caracteriza-se por injecao aplicada com angulo de, aproximadamente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "90 graus, perpendicular a pele."
+        },
+        {
+          "letter": "B",
+          "text": "45 graus em relacao a pele, no tecido subcutaneo."
+        },
+        {
+          "letter": "C",
+          "text": "15 graus, quase paralelo a pele."
+        },
+        {
+          "letter": "D",
+          "text": "nao ha angulo padronizado para via subcutanea."
+        },
+        {
+          "letter": "E",
+          "text": "a via subcutanea nunca e usada para vacinas, apenas para insulina."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "A via subcutanea e aplicada com angulo de aproximadamente 45 graus, atingindo o tecido subcutaneo.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "23fb444d9c27640e9a018838dea51c1b0f4d4ec61afb37fc181cef753b174ee6"
+    },
+    {
+      "statement": "A base normativa nacional que estabelece diretrizes tecnicas e operacionais para a Rede de Frio no ambito do Programa Nacional de Imunizacoes e o Manual de Rede de Frio, vinculado a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Portaria MS/GM no 1.498/2013."
+        },
+        {
+          "letter": "B",
+          "text": "Lei no 8.080/1990, exclusivamente."
+        },
+        {
+          "letter": "C",
+          "text": "Resolucao COFEN no 564/2017."
+        },
+        {
+          "letter": "D",
+          "text": "RDC ANVISA no 15/2012."
+        },
+        {
+          "letter": "E",
+          "text": "Portaria MS/GM no 2.616/1998."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A Portaria MS/GM no 1.498/2013 e a base normativa vinculada ao Manual de Rede de Frio.",
+      "references": [
+        "Ministerio da Saude, Portaria MS/GM no 1.498/2013."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2b860ffb674b32fed10b827603f30f4a5f7d349edf717008f647233ab42f297f"
+    },
+    {
+      "statement": "Na estrutura hierarquica da Rede de Frio, entre a instancia nacional e a instancia municipal, situa-se a instancia:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "internacional."
+        },
+        {
+          "letter": "B",
+          "text": "regional/estadual, responsavel por armazenar e distribuir os imunobiologicos as instancias municipais de sua area de abrangencia."
+        },
+        {
+          "letter": "C",
+          "text": "apenas a sala de vacinacao."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente hospitalar."
+        },
+        {
+          "letter": "E",
+          "text": "nao existe instancia intermediaria, sendo o fluxo direto do nivel nacional ao local."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A instancia regional/estadual armazena e distribui os imunobiologicos as instancias municipais, situando-se entre a nacional e a municipal.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2fdb7801fad6141571b67ff42e5afa85ea973f95dd5d09b56594a6496ff2a3ff"
+    },
+    {
+      "statement": "Em relacao a via intramuscular de administracao de vacinas, o local preferencial de aplicacao varia conforme a idade do individuo, sendo o vasto lateral da coxa o local preferencial em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "adultos, exclusivamente."
+        },
+        {
+          "letter": "B",
+          "text": "lactentes (menores de 1 ano, especialmente antes de andarem), pela maior massa muscular disponivel nessa faixa etaria."
+        },
+        {
+          "letter": "C",
+          "text": "idosos, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "gestantes, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "nenhuma faixa etaria especifica, sendo sempre indiferente o local."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "O vasto lateral da coxa e o local intramuscular preferencial em lactentes, pela massa muscular mais desenvolvida nessa regiao nessa faixa etaria.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "40c215c04851f36ff30cb67801b39a579966163d7f5b0c3ca93e2e34c9c160ce"
+    },
+    {
+      "statement": "Em relacao a organizacao interna do refrigerador de imunobiologicos na sala de vacinacao, e uma pratica recomendada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "armazenar os imunobiologicos na porta do equipamento, por ser o local de mais facil acesso."
+        },
+        {
+          "letter": "B",
+          "text": "evitar armazenar os imunobiologicos na porta do equipamento (area de maior variacao de temperatura), organiza-los com espacamento adequado entre as caixas para permitir circulacao de ar frio, e manter garrafas com agua no fundo/prateleiras inferiores para ajudar a estabilizar a temperatura."
+        },
+        {
+          "letter": "C",
+          "text": "lotar completamente todas as prateleiras, sem qualquer espacamento, para 'economizar espaco'."
+        },
+        {
+          "letter": "D",
+          "text": "armazenar alimentos e imunobiologicos juntos, desde que na mesma prateleira."
+        },
+        {
+          "letter": "E",
+          "text": "desligar o equipamento a noite, para 'economizar energia'."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "Evitar a porta (maior variacao de temperatura), manter espacamento para circulacao de ar e usar garrafas de agua para estabilizar temperatura sao praticas recomendadas.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "41037b12d837eefc2bfdfdfa99a14eda46b65d14fc3fe951db3ab2f7b4e46972"
+    },
+    {
+      "statement": "A transferencia natural de anticorpos maternos (predominantemente da classe IgG) atraves da placenta para o feto, conferindo protecao temporaria ao recem-nascido nos primeiros meses de vida, e um exemplo de imunidade:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ativa artificial."
+        },
+        {
+          "letter": "B",
+          "text": "passiva natural."
+        },
+        {
+          "letter": "C",
+          "text": "ativa natural."
+        },
+        {
+          "letter": "D",
+          "text": "passiva artificial."
+        },
+        {
+          "letter": "E",
+          "text": "nenhuma das anteriores, pois nao constitui imunidade."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "imunizacao",
+      "topic": "resposta-imune-humoral-e-imunoglobulinas",
+      "explanation": "A transferencia placentaria de IgG materna e imunidade passiva natural - passiva porque os anticorpos sao transferidos prontos, natural porque ocorre por processo fisiologico, nao por intervencao medica.",
+      "references": [
+        "Literatura de imunologia basica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "443133a6b50fbb7b49cab1b029cdcc13e19e9a6ed30016cc082f490c93941819"
+    },
+    {
+      "statement": "Um paciente sofre mordedura de um animal com suspeita de raiva, em ferimento grave, classificado como de alto risco. Conforme protocolo de profilaxia antirrabica humana, a conduta pode incluir, alem da vacina antirrabica, a administracao de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas antibiotico, sem qualquer imunobiologico especifico."
+        },
+        {
+          "letter": "B",
+          "text": "soro ou imunoglobulina antirrabica, disponibilizado por meio dos Centros de Referencia para Imunobiologicos Especiais (CRIE), conforme avaliacao de risco do caso."
+        },
+        {
+          "letter": "C",
+          "text": "apenas analgesico, sem qualquer profilaxia especifica."
+        },
+        {
+          "letter": "D",
+          "text": "vacina de virus vivo atenuado contra raiva, nunca inativada."
+        },
+        {
+          "letter": "E",
+          "text": "nenhuma conduta especifica alem da limpeza do ferimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "imunizacao",
+      "topic": "resposta-imune-humoral-e-imunoglobulinas",
+      "explanation": "Em ferimentos de alto risco, alem da vacina, pode ser indicado soro/imunoglobulina antirrabica, disponibilizado via CRIE, conforme avaliacao de risco.",
+      "references": [
+        "Ministerio da Saude, profilaxia antirrabica humana",
+        "CRIE."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "50255a3157fd8b8e211317d6d140e23a4d395fea247255df82c8b8565b1dd6d7"
+    },
+    {
+      "statement": "A cadeia de frio (ou rede de frio), no contexto da imunizacao, e definida como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o conjunto de normas apenas de transporte de vacinas, sem relacao com armazenamento."
+        },
+        {
+          "letter": "B",
+          "text": "o conjunto de procedimentos tecnicos e administrativos que garante a manutencao da temperatura adequada dos imunobiologicos desde sua producao ate o momento da administracao ao usuario."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente o equipamento de refrigeracao da sala de vacinacao."
+        },
+        {
+          "letter": "D",
+          "text": "um procedimento aplicavel apenas durante emergencias de saude publica."
+        },
+        {
+          "letter": "E",
+          "text": "uma norma exclusiva de responsabilidade do fabricante, sem participacao do servico de saude local."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A cadeia de frio abrange todo o percurso do imunobiologico, da producao a administracao, nao apenas transporte ou um unico equipamento.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6cd6e941c752e7ecc4bc70747c37ec33cfa691e346bc17267b2e3989069bba3d"
+    },
+    {
+      "statement": "A faixa de temperatura recomendada para a conservacao da maioria dos imunobiologicos no refrigerador da sala de vacinacao, segundo as normas de Rede de Frio, e de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "-20 graus C a -10 graus C."
+        },
+        {
+          "letter": "B",
+          "text": "+2 graus C a +8 graus C."
+        },
+        {
+          "letter": "C",
+          "text": "+15 graus C a +20 graus C."
+        },
+        {
+          "letter": "D",
+          "text": "0 graus C exatos, sem variacao admitida."
+        },
+        {
+          "letter": "E",
+          "text": "temperatura ambiente, sem necessidade de refrigeracao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A faixa recomendada para a maioria dos imunobiologicos no refrigerador e de +2 graus C a +8 graus C.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7ce9f46ad78b1623df7366b6e1ef985d64be89c55cea0d1b060b3061b77a0744"
+    },
+    {
+      "statement": "O monitoramento sistematico da temperatura do refrigerador de imunobiologicos, incluindo o registro em mapa/planilha de controle (idealmente com leituras de temperatura minima e maxima ao longo do dia), tem como principal finalidade:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas cumprir uma exigencia burocratica, sem relacao com a qualidade dos imunobiologicos."
+        },
+        {
+          "letter": "B",
+          "text": "permitir a deteccao precoce de variacoes de temperatura fora da faixa recomendada, possibilitando intervencao oportuna antes que os imunobiologicos sejam comprometidos."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de manutencao preventiva do equipamento."
+        },
+        {
+          "letter": "D",
+          "text": "ser realizado apenas uma vez por semana, independentemente do fluxo da sala de vacinacao."
+        },
+        {
+          "letter": "E",
+          "text": "ser de responsabilidade exclusiva do tecnico de manutencao do equipamento, sem participacao da equipe de enfermagem."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "O registro sistematico de temperatura permite deteccao precoce de variacoes, possibilitando intervencao oportuna antes de comprometer os imunobiologicos.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7ef81acb9cb0edc7d389ac81d628b0a0d8dbc44c81c8e9d6858ba37ea2484be2"
+    },
+    {
+      "statement": "Quanto a composicao, as vacinas podem ser classificadas, entre outras categorias, em vacinas de virus/bacteria vivos atenuados, vacinas inativadas (virus/bacteria mortos), vacinas de subunidade/toxoide (fragmento do agente ou toxina inativada) e vacinas conjugadas (antigeno polissacaridico ligado a uma proteina carreadora, para melhorar a resposta imune em criancas pequenas). Um exemplo de vacina conjugada do calendario basico brasileiro e a vacina:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "BCG."
+        },
+        {
+          "letter": "B",
+          "text": "Pneumococica conjugada."
+        },
+        {
+          "letter": "C",
+          "text": "Febre Amarela."
+        },
+        {
+          "letter": "D",
+          "text": "Triplice Viral."
+        },
+        {
+          "letter": "E",
+          "text": "Varicela."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "imunizacao",
+      "topic": "resposta-imune-humoral-e-imunoglobulinas",
+      "explanation": "A vacina pneumococica conjugada liga o antigeno polissacaridico a uma proteina carreadora, melhorando a resposta imune em criancas pequenas.",
+      "references": [
+        "Literatura de imunologia basica",
+        "Ministerio da Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "83399d54da4ea222d6703375387cda3fcb42c5a14995ad0a1125401c2ad96ef1"
+    },
+    {
+      "statement": "A avaliacao da cobertura vacinal pode ser realizada por diferentes metodos, entre eles o metodo administrativo (baseado nos registros de doses aplicadas no Sistema de Informacao do PNI - SI-PNI, em relacao a populacao-alvo estimada) e o inquerito de cobertura vacinal (baseado em amostragem domiciliar). Uma limitacao reconhecida do metodo administrativo e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser sempre mais impreciso que o inquerito, em qualquer circunstancia."
+        },
+        {
+          "letter": "B",
+          "text": "depender da qualidade do registro das doses aplicadas e da estimativa populacional utilizada como denominador, podendo gerar distorcoes (para mais ou para menos) quando esses dados sao imprecisos."
+        },
+        {
+          "letter": "C",
+          "text": "nao poder ser realizado em nenhuma circunstancia no Brasil."
+        },
+        {
+          "letter": "D",
+          "text": "exigir amostragem domiciliar obrigatoria."
+        },
+        {
+          "letter": "E",
+          "text": "ser aplicavel apenas a vacinas de dose unica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "imunizacao",
+      "topic": "avaliacao-da-cobertura-vacinal",
+      "explanation": "O metodo administrativo depende da qualidade do registro e da estimativa populacional (denominador), podendo gerar distorcoes quando esses dados sao imprecisos.",
+      "references": [
+        "Ministerio da Saude, SI-PNI, metodos de avaliacao de cobertura vacinal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "87202d67eb81d5826afefe4c59f8efdf20a5f41d86efe04f10149bc15ac6eba0"
+    },
+    {
+      "statement": "Sao consideradas falsas contraindicacoes a vacinacao, nao devendo adiar ou impedir a administracao de vacinas, entre outras situacoes:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "doenca aguda grave, com necessidade de internacao hospitalar."
+        },
+        {
+          "letter": "B",
+          "text": "doenca benigna leve, como resfriado comum ou diarreia leve, sem febre, em crianca com bom estado geral."
+        },
+        {
+          "letter": "C",
+          "text": "imunodeficiencia grave, para vacinas de virus vivo atenuado."
+        },
+        {
+          "letter": "D",
+          "text": "historia de reacao anafilatica a dose anterior da mesma vacina."
+        },
+        {
+          "letter": "E",
+          "text": "alergia grave confirmada a componente presente na vacina."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "Doenca benigna leve, sem febre e com bom estado geral, e falsa contraindicacao - nao adia nem impede a vacinacao.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8e2e3ada52a3fbea2836a62d3921df498ce59bec3b661efdad43967afa953d61"
+    },
+    {
+      "statement": "A instancia municipal da Rede de Frio e responsavel por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "fabricar os imunobiologicos utilizados no municipio."
+        },
+        {
+          "letter": "B",
+          "text": "receber os imunobiologicos da instancia regional/estadual e distribui-los as salas de vacinacao (instancia local) de sua rede de saude."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de sala de vacinacao."
+        },
+        {
+          "letter": "D",
+          "text": "realizar apenas o descarte de imunobiologicos vencidos."
+        },
+        {
+          "letter": "E",
+          "text": "atuar exclusivamente em hospitais privados."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A instancia municipal recebe da estadual e distribui as salas de vacinacao, instancia local.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "92d386d073caf5d03c15803138ea366a3f84dcb314205047bbd4552c91c2f5f8"
+    },
+    {
+      "statement": "A meta de cobertura vacinal recomendada para a maioria das vacinas do calendario basico infantil, necessaria para garantir protecao coletiva (imunidade de rebanho) contra doencas imunopreveniveis, e, de forma geral, de pelo menos:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "50% da populacao-alvo."
+        },
+        {
+          "letter": "B",
+          "text": "95% da populacao-alvo."
+        },
+        {
+          "letter": "C",
+          "text": "10% da populacao-alvo."
+        },
+        {
+          "letter": "D",
+          "text": "nao ha meta de cobertura definida."
+        },
+        {
+          "letter": "E",
+          "text": "30% da populacao-alvo, apenas em areas urbanas."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "imunizacao",
+      "topic": "avaliacao-da-cobertura-vacinal",
+      "explanation": "A meta de cobertura recomendada para a maioria das vacinas do calendario basico e de pelo menos 95%, necessaria para imunidade coletiva.",
+      "references": [
+        "Ministerio da Saude, indicadores do PNI."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "970b611d9486b7d56701ca8f972146c9333b573292116906206f144fa8961c96"
+    },
+    {
+      "statement": "Em relacao aos tipos de imunidade adquirida, a imunidade conferida pela vacinacao e classificada como imunidade ativa, pois:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o proprio organismo produz seus anticorpos em resposta ao estimulo antigenico, gerando protecao duradoura, muitas vezes com memoria imunologica."
+        },
+        {
+          "letter": "B",
+          "text": "os anticorpos sao transferidos prontos de outra fonte (soro/imunoglobulina), sem o organismo participar da producao."
+        },
+        {
+          "letter": "C",
+          "text": "nao gera qualquer memoria imunologica, sendo sempre temporaria."
+        },
+        {
+          "letter": "D",
+          "text": "e identica, em mecanismo, a imunidade passiva."
+        },
+        {
+          "letter": "E",
+          "text": "depende exclusivamente da idade do individuo, sem relacao com producao de anticorpos."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "imunizacao",
+      "topic": "resposta-imune-humoral-e-imunoglobulinas",
+      "explanation": "A imunidade ativa (vacinacao) resulta da producao propria de anticorpos pelo organismo, gerando protecao duradoura e memoria imunologica.",
+      "references": [
+        "Literatura de imunologia basica",
+        "Ministerio da Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a17273ce5f37490ba9fa05389cae40ad563140fc59a0ce357770919897ca270e"
+    },
+    {
+      "statement": "Durante uma falha de energia eletrica prolongada na sala de vacinacao, a equipe de enfermagem verifica que a temperatura do refrigerador de imunobiologicos comecou a se elevar, ultrapassando a faixa recomendada. A conduta correta, imediatamente, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "descartar automaticamente todos os imunobiologicos armazenados, sem qualquer avaliacao tecnica adicional."
+        },
+        {
+          "letter": "B",
+          "text": "registrar a temperatura e o horario da ocorrencia, isolar os imunobiologicos potencialmente comprometidos, buscar transferencia para outro equipamento com temperatura adequada (quando disponivel) e comunicar a instancia responsavel para avaliacao tecnica da estabilidade dos produtos antes de qualquer decisao de uso ou descarte."
+        },
+        {
+          "letter": "C",
+          "text": "continuar usando os imunobiologicos normalmente, sem qualquer registro do ocorrido."
+        },
+        {
+          "letter": "D",
+          "text": "aguardar 7 dias antes de qualquer conduta."
+        },
+        {
+          "letter": "E",
+          "text": "transferir os imunobiologicos para um freezer domestico comum, sem qualquer controle de temperatura."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "Diante de falha de temperatura, a conduta e registrar, isolar, buscar transferencia adequada e comunicar a instancia responsavel para avaliacao tecnica - nunca descartar automaticamente nem continuar usando sem avaliacao.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a62dc5b4ee94f6b08be92dd4cddae155e47ee72381fc6f7d02426806331a9d00"
+    },
+    {
+      "statement": "Um lote de vacinas e encontrado armazenado fora da faixa de temperatura recomendada por um periodo determinado, sem que a equipe tenha certeza do tempo exato de exposicao. A conduta tecnicamente correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "descartar imediatamente todo o lote, sem qualquer investigacao, presumindo perda total."
+        },
+        {
+          "letter": "B",
+          "text": "utilizar normalmente o lote, presumindo que a exposicao nao trouxe qualquer prejuizo."
+        },
+        {
+          "letter": "C",
+          "text": "isolar o lote (identificando-o como sob suspeita), nao utiliza-lo ate nova orientacao, e comunicar a instancia responsavel (regional/estadual) para avaliacao tecnica da estabilidade/potencia do produto antes de definir seu uso ou descarte."
+        },
+        {
+          "letter": "D",
+          "text": "aplicar o lote apenas em pacientes de baixo risco, como forma de 'testar' sua eficacia."
+        },
+        {
+          "letter": "E",
+          "text": "devolver o lote ao fabricante sem qualquer registro ou comunicacao previa."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "A conduta correta e isolar, nao utilizar ate nova orientacao e comunicar a instancia responsavel para avaliacao tecnica - nem descarte automatico, nem uso presumido, nem 'teste' em pacientes.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a87165517923ca464d42f63b2df37aec081231191045c3748660778b8f337ac4"
+    },
+    {
+      "statement": "Em relacao ao aprazamento de doses de uma mesma vacina em esquema de multiplas doses, e tecnicamente correto orientar que, caso uma dose seja aplicada com atraso em relacao a data prevista, a conduta correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "reiniciar todo o esquema vacinal desde a primeira dose, independentemente do tempo de atraso."
+        },
+        {
+          "letter": "B",
+          "text": "prosseguir o esquema a partir da dose em atraso, sem necessidade de reinicia-lo, respeitando o intervalo minimo entre as doses subsequentes (o intervalo pode ser prorrogado, mas nao reduzido)."
+        },
+        {
+          "letter": "C",
+          "text": "descartar a possibilidade de completar o esquema apos qualquer atraso."
+        },
+        {
+          "letter": "D",
+          "text": "aplicar duas doses simultaneamente para 'compensar' o atraso."
+        },
+        {
+          "letter": "E",
+          "text": "reduzir o intervalo minimo entre as doses restantes para compensar o tempo perdido."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "Atraso em esquema multidose nao exige reinicio; o esquema prossegue da dose atrasada, respeitando o intervalo minimo (que pode ser prorrogado, nunca reduzido).",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "af2470a939976b350a3921a4d89eda04793d2ee01103f5a6095183889833935a"
+    },
+    {
+      "statement": "No transporte de imunobiologicos entre instancias da Rede de Frio, as caixas termicas devem utilizar, para manutencao da temperatura, preferencialmente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "gelo comum (agua congelada) em contato direto com os imunobiologicos."
+        },
+        {
+          "letter": "B",
+          "text": "bobinas de gelo reciclavel (gelox), evitando contato direto entre o imunobiologico e a fonte de frio extremo, prevenindo congelamento acidental de produtos que nao podem ser congelados."
+        },
+        {
+          "letter": "C",
+          "text": "nenhuma fonte de frio, apenas o isolamento termico da caixa."
+        },
+        {
+          "letter": "D",
+          "text": "gelo seco em contato direto, para qualquer tipo de imunobiologico."
+        },
+        {
+          "letter": "E",
+          "text": "agua morna, para 'equilibrar' a temperatura durante o transporte."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "imunizacao",
+      "topic": "cadeia-de-frio-e-conservacao-de-imunobiologicos",
+      "explanation": "Bobinas de gelo reciclavel, sem contato direto com o imunobiologico, previnem congelamento acidental de produtos sensiveis ao congelamento.",
+      "references": [
+        "Ministerio da Saude, Manual de Rede de Frio."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b11bda8da9a35ddc98b0e4359e4f531b8febe1751796f24be06516f8562b43ff"
+    },
+    {
+      "statement": "A vacina BCG (Bacilo Calmette-Guerin), que confere protecao contra as formas graves de tuberculose, e administrada, no calendario basico, em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "dose unica, preferencialmente ao nascer, por via intradermica, na regiao do braco direito."
+        },
+        {
+          "letter": "B",
+          "text": "multiplas doses ao longo da vida, por via intramuscular."
+        },
+        {
+          "letter": "C",
+          "text": "via oral, em esquema de 3 doses."
+        },
+        {
+          "letter": "D",
+          "text": "via subcutanea, exclusivamente na adolescencia."
+        },
+        {
+          "letter": "E",
+          "text": "dose unica, exclusivamente aos 15 meses de idade."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "imunizacao",
+      "topic": "calendario-nacional-de-vacinacao",
+      "explanation": "A BCG e administrada em dose unica, preferencialmente ao nascer, por via intradermica, no braco direito.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bb94d4df07da27515486b98acce66477e9e52a71e89ff27bd31a87e94b12d8d3"
+    },
+    {
+      "statement": "A vacina BCG e administrada por via intradermica, tecnica que se caracteriza pela formacao de uma pequena elevacao na pele (papula) no local da aplicacao, e e aplicada, no calendario basico, na regiao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "do braco direito, na insercao inferior do musculo deltoide."
+        },
+        {
+          "letter": "B",
+          "text": "glutea, exclusivamente."
+        },
+        {
+          "letter": "C",
+          "text": "do vasto lateral da coxa."
+        },
+        {
+          "letter": "D",
+          "text": "abdominal."
+        },
+        {
+          "letter": "E",
+          "text": "do couro cabeludo."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "A BCG e aplicada por via intradermica na insercao inferior do musculo deltoide do braco direito.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bec6ad6764bba3df12bb743c8eb0fa55258c2024ae068e0e5132ef7518cf4df5"
+    },
+    {
+      "statement": "A vacina Febre Amarela, de virus vivo atenuado, e, em regra, contraindicada para gestantes e pessoas com imunodeficiencia grave. Entretanto, em situacao de risco epidemiologico (ex.: exposicao a area de circulacao viral confirmada), a decisao sobre vacinar uma gestante deve:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser automaticamente negativa, sem qualquer avaliacao, em qualquer circunstancia."
+        },
+        {
+          "letter": "B",
+          "text": "considerar individualmente o risco-beneficio, avaliado pela equipe de saude, podendo ser indicada quando o risco de exposicao ao virus superar o risco teorico da vacina."
+        },
+        {
+          "letter": "C",
+          "text": "ser tomada exclusivamente pela gestante, sem orientacao tecnica."
+        },
+        {
+          "letter": "D",
+          "text": "ser sempre positiva, independentemente do contexto epidemiologico."
+        },
+        {
+          "letter": "E",
+          "text": "depender exclusivamente da vontade do parceiro da gestante."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "imunizacao",
+      "topic": "calendario-nacional-de-vacinacao",
+      "explanation": "A contraindicacao em gestantes nao e absoluta; em situacao de risco epidemiologico real, a decisao e individualizada por avaliacao de risco-beneficio.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d31d54fa68943d5a3386a7797e7226975d28b50af7af99f9a87fb3982a8f3a71"
+    },
+    {
+      "statement": "O uso de antibioticos por via oral, em um paciente sem quadro infeccioso grave, em relacao a administracao de vacinas, e considerado:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "contraindicacao absoluta, exigindo suspensao do antibiotico antes de vacinar."
+        },
+        {
+          "letter": "B",
+          "text": "falsa contraindicacao - o uso de antibiotico, isoladamente, nao impede a vacinacao."
+        },
+        {
+          "letter": "C",
+          "text": "motivo para aplicar dose reduzida da vacina."
+        },
+        {
+          "letter": "D",
+          "text": "motivo para trocar a via de administracao da vacina."
+        },
+        {
+          "letter": "E",
+          "text": "contraindicacao apenas para vacinas de virus vivo atenuado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "Uso de antibiotico, isoladamente, e falsa contraindicacao - nao impede a vacinacao.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d4312684d0051571a92ab7645652f0b7748d673a167267c1e24713cea7df6864"
+    },
+    {
+      "statement": "A taxa de abandono, indicador utilizado na avaliacao da cobertura vacinal, e calculada com base na diferenca entre:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o numero de nascidos vivos e o numero de obitos no periodo."
+        },
+        {
+          "letter": "B",
+          "text": "o numero de doses iniciais (1a dose) e o numero de doses finais (ultima dose) de um esquema de multiplas doses, aplicadas na mesma coorte de individuos."
+        },
+        {
+          "letter": "C",
+          "text": "o numero de vacinas em estoque e o numero de vacinas aplicadas."
+        },
+        {
+          "letter": "D",
+          "text": "o numero de profissionais vacinados e o numero de profissionais nao vacinados."
+        },
+        {
+          "letter": "E",
+          "text": "o numero de salas de vacina existentes e o numero de salas em funcionamento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "imunizacao",
+      "topic": "avaliacao-da-cobertura-vacinal",
+      "explanation": "A taxa de abandono reflete a diferenca entre a 1a e a ultima dose de um esquema multidose, na mesma coorte.",
+      "references": [
+        "Ministerio da Saude, indicadores do PNI."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "dd7ce85399c847da3d7fd1c9087a52012542d447dc85713c838d3bde67be51f9"
+    },
+    {
+      "statement": "Um profissional de enfermagem, nao vacinado contra hepatite B (ou com esquema vacinal incompleto/desconhecido), sofre acidente com material perfurocortante contaminado por sangue de paciente com sorologia positiva para hepatite B. A conduta imediata, alem dos cuidados locais com o ferimento, inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aguardar sintomas antes de qualquer conduta profilatica."
+        },
+        {
+          "letter": "B",
+          "text": "avaliacao medica para profilaxia pos-exposicao (que pode incluir vacina e/ou imunoglobulina especifica, conforme situacao vacinal do profissional e protocolo institucional), alem de notificacao do acidente de trabalho."
+        },
+        {
+          "letter": "C",
+          "text": "automedicacao com antibiotico de amplo espectro."
+        },
+        {
+          "letter": "D",
+          "text": "dispensa de qualquer notificacao, por se tratar de rotina do trabalho em saude."
+        },
+        {
+          "letter": "E",
+          "text": "isolamento do profissional por 30 dias, independentemente de avaliacao medica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "imunizacao",
+      "topic": "calendario-nacional-de-vacinacao",
+      "explanation": "Acidente com material biologico exige avaliacao medica para profilaxia pos-exposicao (vacina/imunoglobulina conforme caso) e notificacao, nunca automedicacao ou omissao de registro.",
+      "references": [
+        "Ministerio da Saude, protocolos de profilaxia pos-exposicao a material biologico."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e650aec806d49e312b133deca84af3e7540a450dc5b8bcb8ba5d0f74ef38929a"
+    },
+    {
+      "statement": "Um paciente com imunodeficiencia grave (ex.: em quimioterapia intensiva ou com determinadas imunodeficiencias primarias) necessita de atualizacao vacinal. Em relacao as vacinas de virus vivo atenuado (como triplice viral e febre amarela) nesse contexto, a conduta tecnicamente correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "administrar normalmente, sem qualquer restricao, ja que toda vacina e segura."
+        },
+        {
+          "letter": "B",
+          "text": "considerar a imunodeficiencia grave uma contraindicacao real a vacinas de virus vivo atenuado, avaliando individualmente com a equipe medica responsavel antes de qualquer decisao."
+        },
+        {
+          "letter": "C",
+          "text": "administrar em dose dobrada, para compensar a imunossupressao."
+        },
+        {
+          "letter": "D",
+          "text": "substituir automaticamente por soro, sem qualquer avaliacao vacinal especifica."
+        },
+        {
+          "letter": "E",
+          "text": "adiar toda e qualquer vacina, inclusive as inativadas, indefinidamente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "imunizacao",
+      "topic": "tecnica-de-administracao-de-vacinas",
+      "explanation": "Imunodeficiencia grave e contraindicacao real a vacinas de virus vivo atenuado, exigindo avaliacao individualizada com a equipe medica; vacinas inativadas nao tem essa restricao absoluta.",
+      "references": [
+        "Ministerio da Saude, Manual de Normas e Procedimentos para Vacinacao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ed33b110c90dfd40310d1a9a0ca0a37c7c7cdc71656b1fb0fc08b60d9b7ee6e0"
+    }
+  ]
+}

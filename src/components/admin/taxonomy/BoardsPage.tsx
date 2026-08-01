@@ -7,6 +7,7 @@ import { logEvent } from "@/lib/log";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Table,
   TableBody,
@@ -68,17 +69,22 @@ export function BoardsPage() {
   const [editing, setEditing] = useState<Board | null>(null);
   const [name, setName] = useState("");
   const [acronym, setAcronym] = useState("");
+  const [styleSummary, setStyleSummary] = useState("");
   const [deleteTarget, setDeleteTarget] = useState<Board | null>(null);
   const [deleteDeps, setDeleteDeps] = useState<DeleteDep[] | null>(null);
+
+  const STYLE_SUMMARY_MAX_LENGTH = 600;
 
   useEffect(() => {
     if (!dialogOpen) return;
     if (editing) {
       setName(editing.name);
       setAcronym(editing.acronym ?? "");
+      setStyleSummary(editing.style_summary ?? "");
     } else {
       setName("");
       setAcronym("");
+      setStyleSummary("");
     }
   }, [dialogOpen, editing]);
 
@@ -110,9 +116,15 @@ export function BoardsPage() {
       const payload = {
         name: validateName(name),
         acronym: acronym.trim() || null,
+        style_summary: styleSummary.trim() || null,
       };
       if (payload.acronym && payload.acronym.length > 20) {
         throw new Error("Sigla deve ter no máximo 20 caracteres.");
+      }
+      if (payload.style_summary && payload.style_summary.length > STYLE_SUMMARY_MAX_LENGTH) {
+        throw new Error(
+          `Estilo da banca deve ter no máximo ${STYLE_SUMMARY_MAX_LENGTH} caracteres.`,
+        );
       }
 
       const dupQuery = supabase.from("boards").select("id").ilike("name", payload.name).limit(1);
@@ -122,7 +134,10 @@ export function BoardsPage() {
       if (existing?.length) throw new Error("Já existe uma banca com este nome.");
 
       if (editing?.id) {
-        const { error: updateError } = await supabase.from("boards").update(payload).eq("id", editing.id);
+        const { error: updateError } = await supabase
+          .from("boards")
+          .update(payload)
+          .eq("id", editing.id);
         if (updateError) throw updateError;
         await logEvent("board.update", "boards", editing.id, { name: payload.name });
         return;
@@ -179,14 +194,24 @@ export function BoardsPage() {
           <h1 className="text-2xl font-bold tracking-tight">Bancas</h1>
           <p className="text-sm text-muted-foreground">Bancas organizadoras de concursos.</p>
         </div>
-        <Button className="shrink-0" onClick={() => { setEditing(null); setDialogOpen(true); }}>
+        <Button
+          className="shrink-0"
+          onClick={() => {
+            setEditing(null);
+            setDialogOpen(true);
+          }}
+        >
           <Plus className="h-4 w-4 mr-2" aria-hidden="true" />
           Nova banca
         </Button>
       </div>
 
       <AdminFiltersCard>
-        <TaxonomySearch value={search} onChange={setSearch} placeholder="Buscar por nome ou sigla..." />
+        <TaxonomySearch
+          value={search}
+          onChange={setSearch}
+          placeholder="Buscar por nome ou sigla..."
+        />
       </AdminFiltersCard>
 
       <div className="overflow-x-auto rounded-lg border bg-card">
@@ -215,12 +240,27 @@ export function BoardsPage() {
                 <TableRow key={row.id}>
                   <TableCell className="font-medium">{row.name}</TableCell>
                   <TableCell className="text-muted-foreground">{row.acronym ?? "—"}</TableCell>
-                  <TableCell className="text-sm text-muted-foreground">{formatDate(row.created_at)}</TableCell>
+                  <TableCell className="text-sm text-muted-foreground">
+                    {formatDate(row.created_at)}
+                  </TableCell>
                   <TableCell className="text-right">
-                    <Button size="icon" variant="ghost" aria-label={`Editar ${row.name}`} onClick={() => { setEditing(row); setDialogOpen(true); }}>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`Editar ${row.name}`}
+                      onClick={() => {
+                        setEditing(row);
+                        setDialogOpen(true);
+                      }}
+                    >
                       <Pencil className="h-4 w-4" aria-hidden="true" />
                     </Button>
-                    <Button size="icon" variant="ghost" aria-label={`Excluir ${row.name}`} onClick={() => openDeleteDialog(row)}>
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      aria-label={`Excluir ${row.name}`}
+                      onClick={() => openDeleteDialog(row)}
+                    >
                       <Trash2 className="h-4 w-4" aria-hidden="true" />
                     </Button>
                   </TableCell>
@@ -233,33 +273,87 @@ export function BoardsPage() {
 
       <TaxonomyPagination page={page} total={total} onPageChange={setPage} />
 
-      <Dialog open={dialogOpen} onOpenChange={(open) => { setDialogOpen(open); if (!open) setEditing(null); }}>
+      <Dialog
+        open={dialogOpen}
+        onOpenChange={(open) => {
+          setDialogOpen(open);
+          if (!open) setEditing(null);
+        }}
+      >
         <DialogContent>
           <DialogHeader>
             <DialogTitle>{editing ? "Editar banca" : "Nova banca"}</DialogTitle>
-            <DialogDescription>Cadastre a banca organizadora. O nome deve ser único.</DialogDescription>
+            <DialogDescription>
+              Cadastre a banca organizadora. O nome deve ser único.
+            </DialogDescription>
           </DialogHeader>
-          <form onSubmit={(e) => { e.preventDefault(); save.mutate(); }} className="space-y-3">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              save.mutate();
+            }}
+            className="space-y-3"
+          >
             <div>
               <Label htmlFor="board-name">Nome *</Label>
-              <Input id="board-name" value={name} onChange={(e) => setName(e.target.value)} maxLength={200} required />
+              <Input
+                id="board-name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                maxLength={200}
+                required
+              />
             </div>
             <div>
               <Label htmlFor="board-acronym">Sigla</Label>
-              <Input id="board-acronym" value={acronym} onChange={(e) => setAcronym(e.target.value)} maxLength={20} placeholder="Ex.: CEBRASPE" />
+              <Input
+                id="board-acronym"
+                value={acronym}
+                onChange={(e) => setAcronym(e.target.value)}
+                maxLength={20}
+                placeholder="Ex.: CEBRASPE"
+              />
+            </div>
+            <div>
+              <Label htmlFor="board-style-summary">Estilo da banca (SIA)</Label>
+              <Textarea
+                id="board-style-summary"
+                value={styleSummary}
+                onChange={(e) => setStyleSummary(e.target.value)}
+                maxLength={STYLE_SUMMARY_MAX_LENGTH}
+                rows={3}
+                placeholder="Como esta banca costuma cobrar — texto curto exibido ao aluno após responder (Bloco 3 do SIA)."
+              />
+              <p className="mt-1 text-xs text-muted-foreground">
+                {styleSummary.length}/{STYLE_SUMMARY_MAX_LENGTH} caracteres
+              </p>
             </div>
             <DialogFooter>
-              <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>Cancelar</Button>
-              <Button type="submit" disabled={save.isPending}>{save.isPending ? "Salvando..." : "Salvar"}</Button>
+              <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>
+                Cancelar
+              </Button>
+              <Button type="submit" disabled={save.isPending}>
+                {save.isPending ? "Salvando..." : "Salvar"}
+              </Button>
             </DialogFooter>
           </form>
         </DialogContent>
       </Dialog>
 
-      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => { if (!open) { setDeleteTarget(null); setDeleteDeps(null); } }}>
+      <AlertDialog
+        open={!!deleteTarget}
+        onOpenChange={(open) => {
+          if (!open) {
+            setDeleteTarget(null);
+            setDeleteDeps(null);
+          }
+        }}
+      >
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{deleteBlocked ? "Exclusão bloqueada" : "Excluir banca?"}</AlertDialogTitle>
+            <AlertDialogTitle>
+              {deleteBlocked ? "Exclusão bloqueada" : "Excluir banca?"}
+            </AlertDialogTitle>
             <AlertDialogDescription asChild>
               <div className="space-y-2 text-sm text-muted-foreground">
                 {deleteBlocked ? (
@@ -268,7 +362,15 @@ export function BoardsPage() {
                       A banca <strong>{deleteTarget?.name}</strong> possui vínculos e não pode ser
                       excluída. Remova-os antes em Concursos e Questões.
                     </p>
-                    <ul className="list-disc pl-5">{deleteDeps?.filter((d) => d.count > 0).map((d) => <li key={d.label}>{d.count} {d.label}.</li>)}</ul>
+                    <ul className="list-disc pl-5">
+                      {deleteDeps
+                        ?.filter((d) => d.count > 0)
+                        .map((d) => (
+                          <li key={d.label}>
+                            {d.count} {d.label}.
+                          </li>
+                        ))}
+                    </ul>
                   </>
                 ) : (
                   <p>
@@ -280,10 +382,19 @@ export function BoardsPage() {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            {deleteBlocked ? <AlertDialogCancel>Entendi</AlertDialogCancel> : (
+            {deleteBlocked ? (
+              <AlertDialogCancel>Entendi</AlertDialogCancel>
+            ) : (
               <>
                 <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" disabled={remove.isPending} onClick={(e) => { e.preventDefault(); if (deleteTarget) remove.mutate(deleteTarget); }}>
+                <AlertDialogAction
+                  className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                  disabled={remove.isPending}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (deleteTarget) remove.mutate(deleteTarget);
+                  }}
+                >
                   {remove.isPending ? "Excluindo..." : "Excluir"}
                 </AlertDialogAction>
               </>

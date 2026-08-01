@@ -1,0 +1,1260 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "A Infeccao de Sitio Cirurgico (ISC), uma das principais Infeccoes Relacionadas a Assistencia a Saude monitoradas pela CCIH, e classificada, quanto a profundidade do acometimento, em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas superficial, sem outras subdivisoes reconhecidas."
+        },
+        {
+          "letter": "B",
+          "text": "incisional superficial, incisional profunda e de orgao/espaco."
+        },
+        {
+          "letter": "C",
+          "text": "apenas de orgao/espaco, independentemente da profundidade real."
+        },
+        {
+          "letter": "D",
+          "text": "leve, moderada e grave, exclusivamente conforme sintoma febril."
+        },
+        {
+          "letter": "E",
+          "text": "aguda e cronica, exclusivamente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A classificacao padrao de ISC e: incisional superficial, incisional profunda e de orgao/espaco.",
+      "references": [
+        "ANVISA, Medidas de Prevencao de Infeccao Relacionada a Assistencia a Saude - ISC."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0876db8a4ec4d8af6ffca798b947fad7335c2331dac6e3b151d444f2a964299b"
+    },
+    {
+      "statement": "Conforme a Portaria MS/GM no 2.616/1998, que regulamenta o Programa de Controle de Infeccao Hospitalar, a Comissao de Controle de Infeccao Hospitalar (CCIH) deve ser constituida por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente medicos, sem participacao de outras categorias profissionais."
+        },
+        {
+          "letter": "B",
+          "text": "membros consultores e membros executores, com representacao multiprofissional (incluindo Enfermeiro), sendo o Servico de Controle de Infeccao Hospitalar (SCIH) responsavel pela execucao das acoes."
+        },
+        {
+          "letter": "C",
+          "text": "apenas representantes da direcao administrativa do hospital."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente Tecnicos de Enfermagem, por serem a categoria de maior contato direto com o paciente."
+        },
+        {
+          "letter": "E",
+          "text": "um unico profissional, sem necessidade de comissao formal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A Portaria 2.616/1998 preve CCIH com membros consultores e executores, representacao multiprofissional, e o SCIH como estrutura operacional executora.",
+      "references": [
+        "Ministerio da Saude, Portaria MS/GM no 2.616/1998."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0c721b97e3e71dfc9d55899073b9a8d1a79be6b75edbaa6c5fc933b348ac80e1"
+    },
+    {
+      "statement": "A classificacao de Spaulding, utilizada para definir o nivel de processamento exigido para produtos para saude conforme o risco de infeccao associado ao seu uso, categoriza os materiais em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "criticos, semicriticos e nao criticos, conforme o contato com tecidos esteris, mucosas ou pele integra."
+        },
+        {
+          "letter": "B",
+          "text": "apenas descartaveis e reutilizaveis, sem relacao com risco de infeccao."
+        },
+        {
+          "letter": "C",
+          "text": "apenas cirurgicos e nao cirurgicos."
+        },
+        {
+          "letter": "D",
+          "text": "leves, medios e pesados, conforme o peso do material."
+        },
+        {
+          "letter": "E",
+          "text": "apenas metalicos e nao metalicos, conforme o material de fabricacao."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "reprocessamento-de-produtos-para-saude",
+      "explanation": "A classificacao de Spaulding categoriza materiais em criticos (contato com tecido esteril/corrente sanguinea), semicriticos (contato com mucosas) e nao criticos (contato com pele integra), definindo o nivel de processamento exigido.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1014b227d2095e517e2ee35023738c6cb591e24df3f417da744b10e1e8bda579"
+    },
+    {
+      "statement": "O modelo dos '5 momentos para a higienizacao das maos' tem como objetivo principal:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir integralmente o uso de luvas em qualquer procedimento."
+        },
+        {
+          "letter": "B",
+          "text": "orientar, de forma padronizada, os momentos criticos em que a higienizacao das maos deve ocorrer durante o cuidado ao paciente, reduzindo o risco de transmissao cruzada de microrganismos."
+        },
+        {
+          "letter": "C",
+          "text": "reduzir a frequencia de higienizacao das maos, tornando-a opcional fora desses momentos."
+        },
+        {
+          "letter": "D",
+          "text": "aplicar-se exclusivamente a procedimentos cirurgicos."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a necessidade de precaucoes especificas por tipo de transmissao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "O modelo padroniza os momentos criticos de higienizacao das maos, reduzindo transmissao cruzada - nao substitui luvas nem precaucoes especificas.",
+      "references": [
+        "ANVISA/OMS, Manual 'Higienizacao das Maos em Servicos de Saude'."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1122627ddd520cb14255e3c13feda0e2467419ec712d173b6bb8588ba0a266cf"
+    },
+    {
+      "statement": "Entre as medidas de prevencao de Infeccao do Trato Urinario Associada a Cateter (ITU-AC), destaca-se:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a manutencao do sistema de drenagem urinaria fechado e esteril, evitando desconexoes desnecessarias entre o cateter e o coletor."
+        },
+        {
+          "letter": "B",
+          "text": "a troca rotineira do cateter vesical a cada 48 horas, independentemente de indicacao clinica."
+        },
+        {
+          "letter": "C",
+          "text": "a irrigacao vesical de rotina com solucao antisseptica, como medida preventiva padrao."
+        },
+        {
+          "letter": "D",
+          "text": "a manutencao do coletor de urina acima do nivel da bexiga do paciente."
+        },
+        {
+          "letter": "E",
+          "text": "a dispensa de indicacao clinica para manutencao do cateter, desde que o paciente nao reclame de desconforto."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A manutencao do sistema fechado, evitando desconexoes, e medida central de prevencao de ITU-AC; troca rotineira sem indicacao, irrigacao de rotina e coletor acima do nivel vesical sao condutas inadequadas.",
+      "references": [
+        "ANVISA, Medidas de Prevencao de Infeccao Relacionada a Assistencia a Saude - ITU."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "158aaa004dd3335b5eee99c44cd1a33bada9feb5f9092e1e244a836903381e6c"
+    },
+    {
+      "statement": "Para o uso adequado do respirador com filtro de particulas (N95/PFF2) na precaucao para aerossois, e recomendada a realizacao de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "teste de vedacao (fit test/teste de vedacao) periodico, para garantir o ajuste adequado a face do profissional."
+        },
+        {
+          "letter": "B",
+          "text": "substituicao do respirador apenas uma vez por ano, independentemente do uso."
+        },
+        {
+          "letter": "C",
+          "text": "uso do mesmo respirador por multiplos profissionais, para economia de insumos."
+        },
+        {
+          "letter": "D",
+          "text": "dispensa de qualquer teste, bastando a impressao visual de que o respirador esta bem ajustado."
+        },
+        {
+          "letter": "E",
+          "text": "uso do respirador apenas por baixo da mascara cirurgica, nunca isoladamente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "O teste de vedacao (fit test) periodico garante o ajuste adequado do respirador N95/PFF2 a face do profissional, essencial para sua eficacia.",
+      "references": [
+        "ANVISA, uso de equipamentos de protecao respiratoria."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1835d87cab1625d2121f08a52cde6bb9ebb2c51289af28ba02d90dc723bd5c87"
+    },
+    {
+      "statement": "Um dos principais indicadores epidemiologicos utilizados na vigilancia de Infeccoes Relacionadas a Assistencia a Saude (IRAS) e a densidade de incidencia, calculada, tipicamente, como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o numero absoluto de infeccoes ocorridas no mes, sem relacao com o tempo de exposicao."
+        },
+        {
+          "letter": "B",
+          "text": "o numero de infeccoes relacionadas a um dispositivo (ex.: cateter venoso central) dividido pelo numero de pacientes-dia (ou dispositivo-dia) de exposicao, multiplicado por um fator constante."
+        },
+        {
+          "letter": "C",
+          "text": "apenas o numero de obitos atribuidos a infeccao."
+        },
+        {
+          "letter": "D",
+          "text": "o numero de leitos ocupados no periodo, sem relacao com infeccao."
+        },
+        {
+          "letter": "E",
+          "text": "a proporcao de profissionais vacinados na unidade."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A densidade de incidencia relaciona o numero de infeccoes ao tempo de exposicao ao dispositivo/procedimento, permitindo comparacao entre unidades com diferentes volumes de pacientes.",
+      "references": [
+        "ANVISA, indicadores epidemiologicos de IRAS."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1ecea68337c94d84e268ea46b56bff5b3940bf1aa428424305d375e43e781ade"
+    },
+    {
+      "statement": "A rastreabilidade de materiais reprocessados, exigida pela RDC ANVISA no 15/2012, tem como principal finalidade, do ponto de vista da vigilancia epidemiologica:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "permitir apenas o controle de estoque de materiais, sem relacao com infeccao."
+        },
+        {
+          "letter": "B",
+          "text": "permitir identificar, em caso de suspeita de falha no processo de esterilizacao, quais pacientes foram expostos ao lote/material envolvido, possibilitando investigacao epidemiologica e intervencao oportuna."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de indicadores biologicos de esterilizacao."
+        },
+        {
+          "letter": "D",
+          "text": "aplicar-se exclusivamente a materiais descartaveis de uso unico."
+        },
+        {
+          "letter": "E",
+          "text": "ser de responsabilidade exclusiva do fabricante do material, sem participacao da instituicao de saude."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "reprocessamento-de-produtos-para-saude",
+      "explanation": "A rastreabilidade permite identificar pacientes expostos a um lote/material com suspeita de falha, possibilitando investigacao epidemiologica - finalidade central da exigencia da RDC 15/2012 do ponto de vista de vigilancia.",
+      "references": [
+        "ANVISA, RDC no 15/2012."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "254a03b8c501f8fed0ddd19f3b77b23aafbc0ca4a709be1ead70542c6c56ed0a"
+    },
+    {
+      "statement": "Um paciente internado e identificado, por meio de cultura de vigilancia, como colonizado por Enterococcus resistente a vancomicina (VRE). A conduta de enfermagem, alem de comunicar a CCIH, inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "instituir precaucao de contato, com uso de avental e luvas para todo contato com o paciente ou seu ambiente proximo, mantendo, quando possivel, quarto privativo ou coorte de pacientes colonizados pelo mesmo microrganismo."
+        },
+        {
+          "letter": "B",
+          "text": "dispensar qualquer precaucao adicional, ja que colonizacao nao e o mesmo que infeccao ativa."
+        },
+        {
+          "letter": "C",
+          "text": "instituir apenas precaucao para aerossois, sem necessidade de precaucao de contato."
+        },
+        {
+          "letter": "D",
+          "text": "transferir o paciente imediatamente para outra instituicao."
+        },
+        {
+          "letter": "E",
+          "text": "suspender toda visita e todo procedimento assistencial ate resultado de nova cultura."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "Colonizacao por VRE exige precaucao de contato (nao apenas infeccao ativa), com avental/luvas e, quando possivel, quarto privativo ou coorte.",
+      "references": [
+        "ANVISA, bacterias multirresistentes em servicos de saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2b3417723431cd3e6ea0f144f97f602b65062a8adfd0d1d741c28c11d5c8ae5e"
+    },
+    {
+      "statement": "A varicela (catapora), doenca transmitida por via aerea, exige precaucao para aerossois, alem de precaucao de contato (pelas lesoes cutaneas). Um profissional de saude sem historico comprovado de varicela ou vacinacao previa, diante da necessidade de assistencia a um paciente com varicela, deve, preferencialmente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "prestar o atendimento normalmente, sem qualquer restricao, ja que a varicela e considerada doenca 'benigna' na maioria dos casos."
+        },
+        {
+          "letter": "B",
+          "text": "evitar, quando possivel, prestar assistencia direta a esse paciente, priorizando profissionais com imunidade comprovada (vacinacao ou infeccao previa), dada sua suscetibilidade."
+        },
+        {
+          "letter": "C",
+          "text": "receber a vacina apos o contato, sem qualquer outra medida."
+        },
+        {
+          "letter": "D",
+          "text": "usar apenas luvas, dispensando qualquer protecao respiratoria."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha qualquer recomendacao especial para profissionais suscetiveis."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "Profissionais suscetiveis (sem imunidade comprovada) devem, preferencialmente, ser afastados do atendimento direto a pacientes com varicela.",
+      "references": [
+        "ANVISA, precaucoes por via de transmissao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2d46172882f3a2e02bc07bdf78a5ccaab49ded2dc8cabfb90542e1cff81f26ce"
+    },
+    {
+      "statement": "Em relacao a limpeza e desinfeccao de superficies hospitalares como medida de prevencao de IRAS, e correto afirmar que superficies frequentemente tocadas (ex.: grades de leito, macanetas, mesa de cabeceira) devem:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser limpas apenas uma vez por semana, independentemente do fluxo de contato."
+        },
+        {
+          "letter": "B",
+          "text": "receber limpeza e desinfeccao com frequencia aumentada, por serem pontos de maior risco de contaminacao cruzada entre pacientes e profissionais."
+        },
+        {
+          "letter": "C",
+          "text": "ser limpas apenas quando visivelmente sujas, nunca de forma programada."
+        },
+        {
+          "letter": "D",
+          "text": "dispensar desinfeccao, bastando a limpeza com agua e sabao."
+        },
+        {
+          "letter": "E",
+          "text": "ser limpas exclusivamente pela equipe de enfermagem, nunca pela equipe de higienizacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "Superficies de alto toque exigem limpeza/desinfeccao com frequencia aumentada, por serem pontos de maior risco de contaminacao cruzada.",
+      "references": [
+        "ANVISA, limpeza e desinfeccao de superficies em servicos de saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3b41d5278f415713aa143da507992485d40662881591ab951e04504536ee00b5"
+    },
+    {
+      "statement": "O uso racional de antimicrobianos ('antimicrobial stewardship'), estrategia que interage diretamente com a CCIH na prevencao de multirresistencia bacteriana, tem como um de seus principios centrais:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o uso de antibioticoterapia de amplo espectro como primeira escolha em toda situacao clinica, independentemente do agente suspeito."
+        },
+        {
+          "letter": "B",
+          "text": "a prescricao de antimicrobianos baseada em indicacao clinica adequada, escolha racional do espectro e reavaliacao/ajuste ou suspensao conforme resposta clinica e resultados de cultura."
+        },
+        {
+          "letter": "C",
+          "text": "a automedicacao orientada pela equipe de enfermagem, sem necessidade de prescricao medica."
+        },
+        {
+          "letter": "D",
+          "text": "a manutencao do mesmo esquema antimicrobiano por tempo indefinido, independentemente de melhora clinica."
+        },
+        {
+          "letter": "E",
+          "text": "a dispensa de qualquer criterio tecnico, priorizando exclusivamente o custo do medicamento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "O uso racional de antimicrobianos pressupoe indicacao clinica adequada, escolha racional de espectro e reavaliacao continua conforme resposta e cultura.",
+      "references": [
+        "ANVISA/OMS, programas de antimicrobial stewardship."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3b7d661d249245903b0f379fa31ec87537d39f62bb2139040497a43c3d9c7544"
+    },
+    {
+      "statement": "Entre as medidas reconhecidas para prevencao de Infeccao de Corrente Sanguinea associada a Cateter Venoso Central (ICS-CVC), destaca-se:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a manutencao do cateter pelo maior tempo possivel, independentemente da indicacao clinica."
+        },
+        {
+          "letter": "B",
+          "text": "a insercao com tecnica assepitca maxima (paramentacao completa, antissepsia da pele com clorexidina alcoolica) e a avaliacao diaria da necessidade de manutencao do cateter, retirando-o assim que nao for mais indicado."
+        },
+        {
+          "letter": "C",
+          "text": "a troca do cateter a cada 24 horas, independentemente de sinais de complicacao."
+        },
+        {
+          "letter": "D",
+          "text": "a dispensa de antissepsia da pele quando o procedimento e considerado de urgencia."
+        },
+        {
+          "letter": "E",
+          "text": "o uso de curativo oclusivo trocado apenas uma vez por mes."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "Tecnica asseptica maxima na insercao e avaliacao diaria da necessidade de manutencao (retirada precoce) sao medidas centrais de prevencao de ICS-CVC.",
+      "references": [
+        "ANVISA, Medidas de Prevencao de Infeccao Relacionada a Assistencia a Saude - ICS."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3c1326f351f7cf1b9eb917dc342f4fa9c117109febb8c31724e7404aaa3fc94a"
+    },
+    {
+      "statement": "Um paciente em neutropenia grave, decorrente de quimioterapia, encontra-se em risco aumentado de adquirir infeccoes a partir do ambiente e de outras pessoas. A medida de precaucao indicada nesse contexto, distinta das precaucoes padrao de isolamento (que protegem terceiros do paciente), e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "precaucao de contato, ja que protege terceiros da transmissao a partir do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "precaucao protetora (ou reversa), que visa proteger o paciente imunossuprimido de microrganismos do ambiente e de outras pessoas."
+        },
+        {
+          "letter": "C",
+          "text": "precaucao para aerossois, aplicavel independentemente da causa da neutropenia."
+        },
+        {
+          "letter": "D",
+          "text": "ausencia de qualquer precaucao, ja que a neutropenia nao e doenca transmissivel."
+        },
+        {
+          "letter": "E",
+          "text": "precaucao de goticulas, exclusivamente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "A precaucao protetora/reversa inverte a logica das demais precaucoes: protege o paciente imunossuprimido do ambiente, nao terceiros do paciente.",
+      "references": [
+        "Literatura de epidemiologia hospitalar",
+        "oncologia/hematologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4abf115bb507bfe5bcf5e6f69aa8937cc590e66b47be3c57cb06d488d743adf8"
+    },
+    {
+      "statement": "O indicador biologico de esterilizacao, que utiliza esporos bacterianos resistentes para validar a eficacia do processo, e considerado, do ponto de vista da vigilancia de qualidade em controle de infeccao, o indicador:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "menos confiavel entre os disponiveis, sendo dispensavel."
+        },
+        {
+          "letter": "B",
+          "text": "de maior confiabilidade para confirmar a eficacia da esterilizacao, complementando os indicadores quimicos e fisicos, que indicam apenas exposicao ao processo, nao necessariamente sua eficacia microbiologica."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivo para materiais de uso unico."
+        },
+        {
+          "letter": "D",
+          "text": "desnecessario quando o indicador quimico esta adequado."
+        },
+        {
+          "letter": "E",
+          "text": "utilizado apenas em auditorias externas, nunca na rotina interna da instituicao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "reprocessamento-de-produtos-para-saude",
+      "explanation": "O indicador biologico e o de maior confiabilidade para confirmar eficacia microbiologica da esterilizacao, complementando (nao substituindo) indicadores quimicos e fisicos.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "525f13419cec50bed1fbf193660cc94aa065fd5e31cd07aed50eb4420cc53215"
+    },
+    {
+      "statement": "Um paciente em precaucao de contato, por colonizacao previa por bacteria multirresistente, apresenta duas culturas de vigilancia consecutivas negativas, coletadas em momentos apropriados. A conduta da CCIH, nesse contexto, tipicamente envolve:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manter a precaucao de contato indefinidamente, independentemente do resultado de qualquer cultura."
+        },
+        {
+          "letter": "B",
+          "text": "avaliar, conforme protocolo institucional, a possibilidade de suspensao da precaucao de contato, com base nos criterios definidos (ex.: culturas de vigilancia negativas em momentos apropriados)."
+        },
+        {
+          "letter": "C",
+          "text": "suspender automaticamente qualquer precaucao assim que o paciente afirmar estar assintomatico, sem necessidade de criterio laboratorial."
+        },
+        {
+          "letter": "D",
+          "text": "transferir o paciente para alta hospitalar imediata, independentemente do quadro clinico."
+        },
+        {
+          "letter": "E",
+          "text": "instituir precaucao para aerossois no lugar da precaucao de contato."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "A suspensao de precaucao de contato por colonizacao segue criterio laboratorial definido em protocolo institucional (culturas de vigilancia negativas), nao afirmacao subjetiva de melhora.",
+      "references": [
+        "ANVISA, precaucoes e criterios de suspensao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "55bc425efc4f06aa6523ba778fca2e6b85477174fd24b70bb42de2d0048160e1"
+    },
+    {
+      "statement": "Entre as medidas do bundle de prevencao de Pneumonia Associada a Ventilacao Mecanica (PAV), recomendadas pela ANVISA, destaca-se:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manter a cabeceira do leito elevada entre 30 e 45 graus, salvo contraindicacao clinica."
+        },
+        {
+          "letter": "B",
+          "text": "manter a cabeceira do leito completamente plana, para facilitar a ventilacao."
+        },
+        {
+          "letter": "C",
+          "text": "realizar aspiracao traqueal apenas uma vez por turno, independentemente da necessidade clinica."
+        },
+        {
+          "letter": "D",
+          "text": "suspender a higiene oral durante a ventilacao mecanica, para nao estimular o reflexo de tosse."
+        },
+        {
+          "letter": "E",
+          "text": "manter sedacao profunda continua como medida obrigatoria de prevencao de PAV."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A elevacao da cabeceira entre 30-45 graus e medida classica do bundle de prevencao de PAV, reduzindo risco de aspiracao.",
+      "references": [
+        "ANVISA, Medidas de Prevencao de Infeccao Relacionada a Assistencia a Saude - PAV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5ce606272ffbef546b0a948a85289c842aa8670ebfd8168a6cd2778d5fa2bc8d"
+    },
+    {
+      "statement": "Um paciente internado apresenta pneumonia por microrganismo multirresistente transmitido por contato, associada a tosse produtiva intensa com suspeita de transmissao tambem por goticulas. A conduta correta de enfermagem, nesse cenario, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aplicar apenas uma das duas precaucoes, escolhendo a que a equipe considerar mais pratica."
+        },
+        {
+          "letter": "B",
+          "text": "instituir as duas precaucoes simultaneamente (contato e goticulas), conforme as vias de transmissao envolvidas, sem que uma substitua a outra."
+        },
+        {
+          "letter": "C",
+          "text": "aguardar confirmacao laboratorial completa antes de instituir qualquer precaucao."
+        },
+        {
+          "letter": "D",
+          "text": "instituir apenas precaucao padrao, por ser suficiente em qualquer cenario."
+        },
+        {
+          "letter": "E",
+          "text": "instituir precaucao para aerossois no lugar das duas, por ser 'mais segura'."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "Quando mais de uma via de transmissao esta envolvida, as precaucoes correspondentes sao combinadas, sem que uma substitua a outra, e sem aguardar confirmacao laboratorial para instituir a precaucao empirica.",
+      "references": [
+        "ANVISA, precaucoes combinadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "618bffc2e4f08bdd84538e259d7d973665146086a512bc341a72d52ea121aaff"
+    },
+    {
+      "statement": "Segundo o modelo dos '5 momentos para a higienizacao das maos', preconizado pela OMS e adotado pela ANVISA, o primeiro momento recomendado e a higienizacao das maos:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apos tocar o paciente."
+        },
+        {
+          "letter": "B",
+          "text": "antes de tocar o paciente."
+        },
+        {
+          "letter": "C",
+          "text": "apos contato com superficies proximas ao paciente, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "apenas apos procedimentos invasivos."
+        },
+        {
+          "letter": "E",
+          "text": "apenas ao final do turno de trabalho."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "O primeiro dos 5 momentos da OMS e 'antes de tocar o paciente'.",
+      "references": [
+        "ANVISA/OMS, Manual 'Higienizacao das Maos em Servicos de Saude'."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "77144dd2446469b1a9414d94d63e762cb568645578385bdb6a4c72f61cfc637f"
+    },
+    {
+      "statement": "Entre os principais microrganismos multirresistentes de relevancia epidemiologica hospitalar, monitorados pela CCIH, estao as enterobacterias produtoras de carbapenemase (como a Klebsiella pneumoniae produtora de KPC) e o Acinetobacter baumannii multirresistente, cuja disseminacao esta associada, entre outros fatores, a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "uso inadequado/excessivo de antimicrobianos e falhas nas medidas de precaucao de contato e higienizacao das maos."
+        },
+        {
+          "letter": "B",
+          "text": "exposicao solar prolongada dos pacientes internados."
+        },
+        {
+          "letter": "C",
+          "text": "uso exclusivo de antisseticos naturais sem base cientifica."
+        },
+        {
+          "letter": "D",
+          "text": "ausencia de qualquer relacao com praticas assistenciais, sendo fenomeno estritamente ambiental externo ao hospital."
+        },
+        {
+          "letter": "E",
+          "text": "vacinacao de rotina da equipe de enfermagem."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "O uso inadequado de antimicrobianos e falhas em precaucao de contato/higienizacao das maos sao fatores centrais na disseminacao de multirresistencia hospitalar.",
+      "references": [
+        "ANVISA, bacterias multirresistentes em servicos de saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "884eb6ef7204eff4dbc108c0fbf735f3fe0cf163e69b4801f4fa26a2e11c8268"
+    },
+    {
+      "statement": "A precaucao de goticulas e indicada para agentes transmitidos por goticulas respiratorias de maior tamanho, que nao permanecem suspensas no ar por longos periodos e se depositam a curtas distancias. Conforme as recomendacoes tecnicas vigentes, a medida de distanciamento associada a essa precaucao e, tipicamente, a manutencao de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "distancia minima de 1 metro entre o leito do paciente e outras pessoas, quando nao for possivel o uso de quarto privativo, alem do uso de mascara cirurgica pelo profissional ao se aproximar do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "distancia minima de 10 metros, semelhante a precaucao para aerossois."
+        },
+        {
+          "letter": "C",
+          "text": "nenhuma distancia minima recomendada, sendo suficiente o uso de luvas."
+        },
+        {
+          "letter": "D",
+          "text": "isolamento em pressao negativa obrigatorio, identico ao exigido para aerossois."
+        },
+        {
+          "letter": "E",
+          "text": "distanciamento aplicavel apenas fora do ambiente hospitalar."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "A precaucao de goticulas recomenda distancia minima de cerca de 1 metro (quando nao ha quarto privativo) e mascara cirurgica ao se aproximar do paciente - diferente da precaucao para aerossois, que exige respirador e maior controle de ventilacao.",
+      "references": [
+        "ANVISA, precaucoes por via de transmissao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "995dc7466368ee06609edfef3c084a59393bdb2f888b82cca6cc5e93b56dd0db"
+    },
+    {
+      "statement": "Diante de um surto de um mesmo microrganismo multirresistente em uma unidade de internacao, com numero de pacientes colonizados/infectados superior a disponibilidade de quartos privativos, a CCIH pode recomendar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a suspensao de qualquer precaucao, por inviabilidade pratica."
+        },
+        {
+          "letter": "B",
+          "text": "o isolamento em coorte, agrupando os pacientes colonizados/infectados pelo mesmo microrganismo em uma mesma area, com equipe idealmente dedicada."
+        },
+        {
+          "letter": "C",
+          "text": "a alta hospitalar imediata de todos os pacientes envolvidos, independentemente do quadro clinico."
+        },
+        {
+          "letter": "D",
+          "text": "a transferencia de todos os pacientes para outra instituicao, como unica alternativa possivel."
+        },
+        {
+          "letter": "E",
+          "text": "a dispensa de qualquer registro do surto, para evitar exposicao institucional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "O isolamento em coorte agrupa pacientes colonizados/infectados pelo mesmo agente quando nao ha quartos privativos suficientes, medida reconhecida de contencao de surto.",
+      "references": [
+        "ANVISA, controle de surtos hospitalares."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9ccf4e8d2fe09993a8f737075fd9f3a573e1d4017c02c358816ef0bb7f161913"
+    },
+    {
+      "statement": "Uma falha nao identificada no processo de esterilizacao de materiais cirurgicos pode configurar-se como fonte de um surto de Infeccao de Sitio Cirurgico. Diante da suspeita desse cenario, cabe a CCIH, em conjunto com a Central de Material e Esterilizacao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "investigar a possivel relacao epidemiologica entre os casos e o lote/processo de esterilizacao envolvido, revisando os indicadores de esterilizacao registrados."
+        },
+        {
+          "letter": "B",
+          "text": "desconsiderar a hipotese, ja que falhas de esterilizacao nunca causam infeccao."
+        },
+        {
+          "letter": "C",
+          "text": "atribuir automaticamente a responsabilidade exclusivamente ao paciente."
+        },
+        {
+          "letter": "D",
+          "text": "suspender toda e qualquer cirurgia da instituicao indefinidamente, sem investigacao previa."
+        },
+        {
+          "letter": "E",
+          "text": "nao notificar o achado, por nao ser atribuicao da CCIH."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "reprocessamento-de-produtos-para-saude",
+      "explanation": "A investigacao epidemiologica da relacao entre casos de ISC e possivel falha de esterilizacao e atribuicao conjunta da CCIH e da CME.",
+      "references": [
+        "ANVISA, investigacao de surtos relacionados a produtos para saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9fa1959b91b2ac1554aad4f945ad808d4304244f8bae291a7f2d15b402971a25"
+    },
+    {
+      "statement": "Um paciente apresenta diarreia associada a Clostridioides difficile, confirmada por exame laboratorial. Em relacao as medidas de precaucao, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "deve-se instituir precaucao de contato, com atencao especial a higienizacao das maos com agua e sabao (o alcool em gel isoladamente tem eficacia reduzida contra os esporos de C. difficile)."
+        },
+        {
+          "letter": "B",
+          "text": "basta a precaucao padrao, sem necessidade de precaucao de contato."
+        },
+        {
+          "letter": "C",
+          "text": "deve-se instituir precaucao para aerossois, ja que a transmissao ocorre exclusivamente pelo ar."
+        },
+        {
+          "letter": "D",
+          "text": "o alcool em gel e suficiente e mais eficaz que a lavagem com agua e sabao para este agente."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha necessidade de qualquer precaucao adicional apos o inicio de antibioticoterapia."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "C. difficile forma esporos resistentes ao alcool; a higienizacao com agua e sabao e preferida, associada a precaucao de contato.",
+      "references": [
+        "ANVISA, precaucoes especificas por agente."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "aa9b28ab9be7c21e62de563711fd4262bd70cae9efc0d6f7d9be07e0d746cfb3"
+    },
+    {
+      "statement": "Em relacao a estrutura organizacional do controle de infeccao hospitalar, a diferenca central entre a Comissao de Controle de Infeccao Hospitalar (CCIH) e o Servico de Controle de Infeccao Hospitalar (SCIH) e que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "sao exatamente a mesma estrutura, apenas com nomes diferentes."
+        },
+        {
+          "letter": "B",
+          "text": "a CCIH tem carater deliberativo/consultivo (membros consultores e executores), enquanto o SCIH e a estrutura operacional que executa as acoes de vigilancia e controle no dia a dia."
+        },
+        {
+          "letter": "C",
+          "text": "o SCIH substitui integralmente a CCIH desde 1998."
+        },
+        {
+          "letter": "D",
+          "text": "a CCIH atua apenas em situacoes de surto, e o SCIH nas demais situacoes."
+        },
+        {
+          "letter": "E",
+          "text": "o SCIH e exclusivo de hospitais privados, e a CCIH de hospitais publicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A CCIH tem carater deliberativo/consultivo; o SCIH e a estrutura operacional que executa a vigilancia no cotidiano.",
+      "references": [
+        "Ministerio da Saude, Portaria MS/GM no 2.616/1998."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b48159702476747462c489f8dcfcf83c67a9eb5595e38aa0944643fd14434506"
+    },
+    {
+      "statement": "No Brasil, a notificacao de indicadores de Infeccao Relacionada a Assistencia a Saude (IRAS) as autoridades sanitarias, incluindo a ANVISA, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "facultativa, a criterio exclusivo de cada instituicao."
+        },
+        {
+          "letter": "B",
+          "text": "uma exigencia da vigilancia epidemiologica nacional, com envio periodico de dados pelos servicos de saude conforme normativas vigentes."
+        },
+        {
+          "letter": "C",
+          "text": "realizada apenas quando ocorre obito do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "de responsabilidade exclusiva do Ministerio Publico."
+        },
+        {
+          "letter": "E",
+          "text": "dispensada em hospitais privados."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A notificacao de indicadores de IRAS e exigencia da vigilancia epidemiologica nacional, obrigatoria para os servicos de saude conforme normativas vigentes.",
+      "references": [
+        "ANVISA, sistema de vigilancia de IRAS."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b82417ac9b1420466d030fb9221f7e93d2d16bdd15705df3738541c4abd3eb8e"
+    },
+    {
+      "statement": "A tuberculose pulmonar bacilifera e uma doenca transmitida por via aerea, exigindo precaucao para aerossois. Entre as medidas especificas dessa precaucao, esta:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "uso de mascara cirurgica comum pelos profissionais, sem necessidade de respirador especial."
+        },
+        {
+          "letter": "B",
+          "text": "uso de respirador com filtro de particulas (tipo N95/PFF2) pelos profissionais ao entrar no quarto, alem de quarto privativo com pressao negativa, quando disponivel."
+        },
+        {
+          "letter": "C",
+          "text": "dispensa de qualquer protecao respiratoria, sendo suficiente a precaucao de contato."
+        },
+        {
+          "letter": "D",
+          "text": "uso de avental impermeavel como unica medida especifica necessaria."
+        },
+        {
+          "letter": "E",
+          "text": "manutencao da porta do quarto sempre aberta, para melhorar a ventilacao natural."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "A precaucao para aerossois exige respirador N95/PFF2 e, quando disponivel, quarto privativo com pressao negativa.",
+      "references": [
+        "ANVISA, precaucoes por via de transmissao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b87ca28974281b182235e458c7b0991b38c1cc2de6217ea8be9a3522c5637f77"
+    },
+    {
+      "statement": "Durante uma auditoria da CCIH, verifica-se que, em uma unidade de internacao, a cabeceira do leito de pacientes em ventilacao mecanica esta sistematicamente abaixo de 30 graus, embora as demais medidas do bundle de prevencao de PAV estejam sendo cumpridas. A interpretacao tecnicamente correta desse achado e que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o bundle permanece plenamente eficaz, ja que a maioria das medidas esta sendo cumprida."
+        },
+        {
+          "letter": "B",
+          "text": "a nao adesao a um item do bundle compromete sua eficacia como conjunto, exigindo intervencao educativa/corretiva da CCIH junto a equipe, ja que a eficacia do bundle depende da adesao a todos os itens."
+        },
+        {
+          "letter": "C",
+          "text": "a elevacao da cabeceira e a medida menos relevante do bundle e pode ser dispensada sem prejuizo."
+        },
+        {
+          "letter": "D",
+          "text": "a CCIH nao tem atribuicao para intervir em praticas assistenciais de unidades de internacao."
+        },
+        {
+          "letter": "E",
+          "text": "o achado nao deve ser registrado, por nao configurar infeccao confirmada."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A adesao parcial compromete a eficacia do bundle como conjunto; cabe a CCIH intervir educativa/corretivamente junto a equipe assistencial.",
+      "references": [
+        "ANVISA, Medidas de Prevencao de IRAS - bundles."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e3516a4d9fdde4d7cceafec9c9a46f06fad4f29d1c4b6a005f17517a7bbc9711"
+    },
+    {
+      "statement": "Em relacao as precaucoes em servicos de saude, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "as precaucoes padrao devem ser aplicadas a todos os pacientes, independentemente de diagnostico confirmado ou suspeita de doenca transmissivel, enquanto as precaucoes especificas (contato, goticulas, aerossois) sao adicionadas conforme a via de transmissao do agente suspeito ou confirmado."
+        },
+        {
+          "letter": "B",
+          "text": "as precaucoes especificas substituem integralmente as precaucoes padrao, quando indicadas."
+        },
+        {
+          "letter": "C",
+          "text": "as precaucoes padrao so se aplicam a pacientes com diagnostico confirmado de doenca infecciosa."
+        },
+        {
+          "letter": "D",
+          "text": "nao ha distincao entre precaucao padrao e precaucao especifica na pratica hospitalar brasileira."
+        },
+        {
+          "letter": "E",
+          "text": "as precaucoes especificas dispensam a higienizacao das maos, sendo o uso de luvas suficiente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "Precaucoes padrao aplicam-se a todos os pacientes; precaucoes especificas sao adicionadas conforme a via de transmissao do agente, sem substituir as padrao.",
+      "references": [
+        "ANVISA, precaucoes padrao e especificas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e8935f1db83f8ece11146ea3681da037f1b3576322d59243d37fb168d2b08e7d"
+    },
+    {
+      "statement": "A CCIH identifica um aumento inesperado de casos de infeccao em pacientes submetidos a um mesmo tipo de procedimento endoscopico, em curto intervalo de tempo. Entre as hipoteses a serem investigadas pela vigilancia epidemiologica, deve constar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente fatores individuais de cada paciente, descartando qualquer relacao com o processo de reprocessamento do equipamento."
+        },
+        {
+          "letter": "B",
+          "text": "possivel falha no processo de reprocessamento do endoscopio (limpeza, desinfeccao de alto nivel ou esterilizacao), a ser investigada em conjunto com a equipe responsavel pelo reprocessamento."
+        },
+        {
+          "letter": "C",
+          "text": "causas exclusivamente alimentares, sem relacao com procedimento invasivo."
+        },
+        {
+          "letter": "D",
+          "text": "descarte automatico do equipamento, sem investigacao da causa raiz."
+        },
+        {
+          "letter": "E",
+          "text": "encerramento do caso sem investigacao, por se tratar de procedimento ambulatorial."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "reprocessamento-de-produtos-para-saude",
+      "explanation": "Diante de agregacao temporal de casos associados a um mesmo tipo de procedimento, a hipotese de falha no reprocessamento do equipamento deve ser investigada pela vigilancia epidemiologica em conjunto com a equipe responsavel.",
+      "references": [
+        "ANVISA, investigacao de surtos relacionados a produtos para saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f4220ca393df2e8cf84be050a1c8be92470f26f4e62e728a40ec914eaf444c51"
+    },
+    {
+      "statement": "O 'bundle' de prevencao de Infeccao de Corrente Sanguinea associada a Cateter Venoso Central reune um conjunto de medidas que, aplicadas de forma combinada, reduzem significativamente o risco de infeccao. O conceito de 'bundle' pressupoe que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a aplicacao de apenas uma das medidas isoladamente ja garante o mesmo efeito do conjunto completo."
+        },
+        {
+          "letter": "B",
+          "text": "as medidas devem ser aplicadas em conjunto e de forma consistente, ja que a eficacia do bundle depende da adesao a todos os itens combinados, nao a itens isolados."
+        },
+        {
+          "letter": "C",
+          "text": "o bundle e opcional, aplicavel apenas quando a equipe considerar conveniente."
+        },
+        {
+          "letter": "D",
+          "text": "o bundle substitui a necessidade de indicacao clinica do cateter."
+        },
+        {
+          "letter": "E",
+          "text": "o bundle e exclusivo de pacientes oncologicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A eficacia do bundle depende da aplicacao consistente do conjunto de medidas, nao de itens isolados.",
+      "references": [
+        "ANVISA, Medidas de Prevencao de IRAS - bundles."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fa08eb5a29d6eb86175224b76f91c3e4d1812c1ee7fe07af0bb61f22fb5f061b"
+    },
+    {
+      "statement": "Do ponto de vista epidemiologico, a diferenca entre surto e endemia de uma Infeccao Relacionada a Assistencia a Saude e que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "surto e endemia sao sinonimos, sem distincao tecnica."
+        },
+        {
+          "letter": "B",
+          "text": "surto e a ocorrencia de um numero de casos acima do esperado, concentrado em tempo e espaco, enquanto endemia e a manutencao de um numero relativamente constante de casos ao longo do tempo, dentro do esperado para aquele contexto."
+        },
+        {
+          "letter": "C",
+          "text": "endemia e sempre mais grave que surto, por definicao."
+        },
+        {
+          "letter": "D",
+          "text": "surto se refere exclusivamente a infeccoes virais, e endemia a infeccoes bacterianas."
+        },
+        {
+          "letter": "E",
+          "text": "apenas a CCIH pode declarar endemia, nunca surto."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "controle-de-infeccao-hospitalar",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "Surto e a ocorrencia de casos acima do esperado, concentrada em tempo/espaco; endemia e a manutencao de um numero relativamente constante e esperado de casos ao longo do tempo.",
+      "references": [
+        "Epidemiologia hospitalar, conceitos de vigilancia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fb6669b17bc8fcad4a14d7829811894b382a7502fa8fafb6d39fa05d6f11b5cf"
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Em relacao a aplicabilidade da Lei Geral de Protecao de Dados Pessoais (Lei no 13.709/2018) a EBSERH, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "por se tratar de empresa publica federal, a EBSERH esta dispensada da observancia da LGPD."
+        },
+        {
+          "letter": "B",
+          "text": "a EBSERH esta sujeita a LGPD, inclusive quanto ao tratamento de dados pessoais sensiveis de pacientes (dados de saude), observando as bases legais especificas do regime aplicavel ao tratamento de dados pelo Poder Publico para execucao de politicas publicas."
+        },
+        {
+          "letter": "C",
+          "text": "a LGPD aplica-se apenas a empresas privadas de tecnologia."
+        },
+        {
+          "letter": "D",
+          "text": "dados de saude nao sao considerados dados pessoais sensiveis pela LGPD."
+        },
+        {
+          "letter": "E",
+          "text": "a aplicacao da LGPD a EBSERH depende de regulamentacao estadual especifica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "lgpd-aplicada-a-ebserh",
+      "explanation": "A LGPD aplica-se a pessoas juridicas de direito publico, incluindo empresas publicas prestadoras de servicos publicos como a EBSERH; o tratamento de dados de saude (dado pessoal sensivel) por entes publicos observa as bases legais do regime especifico previsto no Capitulo IV da LGPD, voltado a execucao de politicas publicas.",
+      "references": [
+        "Lei no 13.709/2018 (LGPD), arts. 5o, 11 e 23."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0bbeffc4f806b0c276b8bfb14ba038f85f41008dc88f14b92dfd4ba1cd9de80e"
+    },
+    {
+      "statement": "Entre as competencias do Conselho de Administracao da EBSERH, previstas no Estatuto Social aprovado pelo Decreto no 7.661/2011, incluem-se:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aprovar o orcamento e o plano de acao anual da empresa, eleger e destituir os membros da Diretoria Executiva, e fiscalizar a gestao dos diretores, examinando os livros e documentos da empresa a qualquer tempo."
+        },
+        {
+          "letter": "B",
+          "text": "exclusivamente a representacao judicial da empresa, sem qualquer atribuicao orcamentaria."
+        },
+        {
+          "letter": "C",
+          "text": "apenas a nomeacao do Ouvidor-Geral, sem qualquer atribuicao sobre a Diretoria Executiva."
+        },
+        {
+          "letter": "D",
+          "text": "a execucao direta dos servicos assistenciais nos hospitais universitarios federais."
+        },
+        {
+          "letter": "E",
+          "text": "a auditoria interna das contas da empresa, em substituicao ao Conselho Fiscal."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "estatuto-da-ebserh",
+      "explanation": "O Conselho de Administracao, como orgao de administracao superior da EBSERH, detem competencias de natureza estrategica e fiscalizatoria sobre a Diretoria Executiva, incluindo aprovacao orcamentaria, eleicao/destituicao de diretores e fiscalizacao da gestao.",
+      "references": [
+        "Estatuto Social da EBSERH (Decreto no 7.661/2011)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1671ecd66052cee67258765f4cd0a464d5f4e2a6d249916278122a0029a839e6"
+    },
+    {
+      "statement": "De acordo com a Lei Geral de Protecao de Dados Pessoais (Lei no 13.709/2018), entidades da administracao publica que tratam dados pessoais, como a EBSERH, devem indicar um agente responsavel pelo tratamento de dados pessoais perante os titulares e a Autoridade Nacional de Protecao de Dados, cuja identidade e informacoes de contato devem ser divulgadas publicamente. Esse agente e denominado:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Diretor de Compliance."
+        },
+        {
+          "letter": "B",
+          "text": "Ouvidor-Geral."
+        },
+        {
+          "letter": "C",
+          "text": "Encarregado pelo Tratamento de Dados Pessoais (Data Protection Officer/DPO)."
+        },
+        {
+          "letter": "D",
+          "text": "Auditor-Geral."
+        },
+        {
+          "letter": "E",
+          "text": "Presidente do Conselho Fiscal."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "lgpd-aplicada-a-ebserh",
+      "explanation": "A LGPD exige que o controlador - incluindo orgaos e entidades publicas - indique um Encarregado pelo Tratamento de Dados Pessoais (Encarregado/DPO), cuja identidade e informacoes de contato devem ser divulgadas publicamente, sendo esse o canal de comunicacao entre titulares, controlador e Autoridade Nacional de Protecao de Dados (ANPD).",
+      "references": [
+        "Lei no 13.709/2018 (LGPD), art. 41."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "42756d1bc92dd15c63a8f86faed1cc2f705cb3cb761934c735fb62d06ed3b4ff"
+    },
+    {
+      "statement": "De acordo com o Regimento Interno da EBSERH, alem do dever de dar ciencia ao empregado denunciado, compete a Ouvidoria-Geral:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "instaurar e julgar processos administrativos disciplinares."
+        },
+        {
+          "letter": "B",
+          "text": "receber, examinar e encaminhar aos setores competentes reclamacoes, denuncias, elogios e sugestoes relacionados a atuacao da empresa, propondo medidas de aperfeicoamento da gestao."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a Auditoria Interna na fiscalizacao financeira."
+        },
+        {
+          "letter": "D",
+          "text": "representar judicialmente a EBSERH."
+        },
+        {
+          "letter": "E",
+          "text": "aprovar o orcamento anual da empresa."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "regimento-interno-da-administracao-central",
+      "explanation": "A Ouvidoria-Geral atua como canal de comunicacao entre a sociedade/empregados e a empresa, recebendo, examinando e encaminhando manifestacoes (reclamacoes, denuncias, elogios, sugestoes) aos setores competentes e propondo aperfeicoamentos de gestao - competencia distinta e mais ampla do que o dever pontual de dar ciencia ao denunciado, ja testado no acervo real.",
+      "references": [
+        "Regimento Interno da Administracao Central da EBSERH."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "46cd4934fcfb8df331a00c9c89d8b3f3edf770e93f6c7471e6c088f51e963367"
+    },
+    {
+      "statement": "No ambito da gestao de pessoas da EBSERH, a humanizacao institucional aplicada aos hospitais universitarios federais sob sua gestao esta diretamente relacionada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente a protocolos clinicos assistenciais, sem qualquer relacao com a gestao de pessoas."
+        },
+        {
+          "letter": "B",
+          "text": "a valorizacao do trabalhador da saude e a promocao de ambientes de trabalho saudaveis como condicao para a qualidade do cuidado prestado, integrando a politica de gestao de pessoas da empresa."
+        },
+        {
+          "letter": "C",
+          "text": "unicamente a Ouvidoria-Geral, responsavel isolada pela humanizacao institucional."
+        },
+        {
+          "letter": "D",
+          "text": "a uma exigencia aplicavel apenas aos cargos da Diretoria Executiva."
+        },
+        {
+          "letter": "E",
+          "text": "a substituicao integral das normas disciplinares de pessoal por diretrizes de humanizacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "humanizacao-e-gestao-de-pessoas-na-ebserh",
+      "explanation": "A humanizacao institucional na EBSERH, sob o angulo da gestao de pessoas, articula a valorizacao do trabalhador e a promocao de ambientes de trabalho saudaveis como condicao para a qualidade do cuidado - dimensao distinta da Politica Nacional de Humanizacao (PNH) do SUS, que trata do metodo assistencial em sentido amplo aplicavel a toda a rede de saude.",
+      "references": [
+        "Diretrizes institucionais de gestao de pessoas da EBSERH."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4b5c0113b92a9bb3a159d121a302f765f2e58e11aa0d2ec95c5eebca9b9ce3da"
+    },
+    {
+      "statement": "Na EBSERH, a funcao de compliance corresponde a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "um conjunto de mecanismos e procedimentos internos destinados a assegurar a conformidade das atividades da empresa as normas legais e regulamentares aplicaveis, aos atos normativos internos e aos principios de integridade institucional, com atuacao preventiva."
+        },
+        {
+          "letter": "B",
+          "text": "exclusivamente a auditoria interna a posteriori, sem qualquer carater preventivo."
+        },
+        {
+          "letter": "C",
+          "text": "a mesma funcao da Ouvidoria-Geral, sendo termos sinonimos."
+        },
+        {
+          "letter": "D",
+          "text": "uma exigencia aplicavel apenas as empresas privadas, nao as publicas federais."
+        },
+        {
+          "letter": "E",
+          "text": "restrita a conformidade financeiro-contabil, excluindo normas eticas e de integridade."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "governanca-corporativa-e-integridade-da-ebserh",
+      "explanation": "Compliance, na acepcao adotada pela governanca publica federal, e essencialmente preventivo, voltado a assegurar conformidade e integridade antes da ocorrencia de irregularidades - distinto da auditoria (avaliacao a posteriori) e da Ouvidoria (canal de manifestacao), aplicavel tambem a empresas publicas federais como a EBSERH.",
+      "references": [
+        "Decreto no 9.203/2017, arts. 19-22 (integridade e conformidade)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5a5911233465c9a9f109dd158e3906e840608436df526e681bec69202015e722"
+    },
+    {
+      "statement": "A politica de gestao de pessoas da EBSERH, distinta do regime disciplinar previsto no Regulamento de Pessoal, contempla como eixo proprio:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente a aplicacao de penalidades disciplinares."
+        },
+        {
+          "letter": "B",
+          "text": "o desenvolvimento e a capacitacao continuada dos empregados, com vistas a valorizacao profissional e a qualidade da assistencia prestada nos hospitais universitarios federais."
+        },
+        {
+          "letter": "C",
+          "text": "apenas criterios de dimensionamento de quadro de pessoal, sem qualquer componente de desenvolvimento profissional."
+        },
+        {
+          "letter": "D",
+          "text": "a delegacao integral da gestao de pessoas aos hospitais universitarios, sem diretriz institucional central."
+        },
+        {
+          "letter": "E",
+          "text": "restricao de capacitacao exclusivamente aos cargos de gestao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "humanizacao-e-gestao-de-pessoas-na-ebserh",
+      "explanation": "A politica de gestao de pessoas da EBSERH contempla o desenvolvimento e a capacitacao continuada dos empregados como eixo de valorizacao profissional - dimensao distinta e complementar ao regime disciplinar (penalidades, responsabilidades), ja tratado pelo Regulamento de Pessoal.",
+      "references": [
+        "Diretrizes institucionais de gestao de pessoas e educacao permanente da EBSERH."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5b5567c4018c4e2f7cc3fad7c919d013dc4b11b1f265fc1fc40796a562ee5f93"
+    },
+    {
+      "statement": "O Programa de Integridade de uma empresa publica federal como a EBSERH tem como finalidade principal:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir integralmente as funcoes da Ouvidoria e da Comissao de Etica."
+        },
+        {
+          "letter": "B",
+          "text": "prevenir, detectar, punir e remediar fraudes, irregularidades e desvios de conduta, por meio de mecanismos e procedimentos internos de integridade, auditoria, incentivo a denuncia e aplicacao efetiva de codigos de etica."
+        },
+        {
+          "letter": "C",
+          "text": "atuar exclusivamente apos a instauracao de processo administrativo disciplinar."
+        },
+        {
+          "letter": "D",
+          "text": "restringir-se ao controle financeiro-orcamentario da empresa."
+        },
+        {
+          "letter": "E",
+          "text": "ser aplicado apenas aos cargos de direcao, excluindo os demais empregados."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "governanca-corporativa-e-integridade-da-ebserh",
+      "explanation": "O Programa de Integridade caracteriza-se pelo conjunto de mecanismos e procedimentos internos de integridade, auditoria, incentivo a denuncia de irregularidades e aplicacao efetiva de codigos de etica, com atuacao que abrange prevencao, deteccao e remediacao - nao e restrito a uma unica area nem atua apenas repressivamente.",
+      "references": [
+        "Decreto no 9.203/2017, art. 19",
+        "principios gerais de programas de integridade na administracao publica federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8ad30d4e909d5e80ed0fcf4ab54d569fa18631a7078a77283cfb5646d9add63f"
+    },
+    {
+      "statement": "A Politica de Governanca da Administracao Publica Federal, disciplinada pelo Decreto no 9.203/2017 e aplicavel a empresas publicas federais como a EBSERH, estabelece principios que devem orientar a atuacao institucional. Um desses principios, relacionado a obrigacao de prestar contas de forma clara e tempestiva a sociedade sobre a gestao dos recursos e resultados alcancados, e denominado:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "capacidade de resposta."
+        },
+        {
+          "letter": "B",
+          "text": "accountability (prestacao de contas e responsabilidade)."
+        },
+        {
+          "letter": "C",
+          "text": "melhoria regulatoria."
+        },
+        {
+          "letter": "D",
+          "text": "confiabilidade."
+        },
+        {
+          "letter": "E",
+          "text": "subsidiariedade."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "governanca-corporativa-e-integridade-da-ebserh",
+      "explanation": "O Decreto no 9.203/2017 lista, entre os principios da governanca publica federal, a responsabilidade (accountability) - a obrigacao dos agentes de governanca de prestar contas de sua atuacao, assumindo integralmente as consequencias de seus atos e omissoes.",
+      "references": [
+        "Decreto no 9.203/2017, art. 3o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b829e86ab1e0e15cfa7a4a8c5a1d8305246d76fccd8561b661727665bf306bf6"
+    },
+    {
+      "statement": "Em relacao a transparencia institucional da EBSERH, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a divulgacao de informacoes institucionais e discricionaria, podendo a empresa optar livremente por nao publicar dados de gestao."
+        },
+        {
+          "letter": "B",
+          "text": "a transparencia ativa consiste na disponibilizacao espontanea de informacoes de interesse publico (como relatorios de gestao e dados institucionais), independentemente de requerimento, em complemento ao direito de acesso a informacao mediante solicitacao."
+        },
+        {
+          "letter": "C",
+          "text": "a EBSERH esta dispensada da Lei de Acesso a Informacao por se tratar de empresa publica."
+        },
+        {
+          "letter": "D",
+          "text": "a transparencia se aplica apenas as informacoes financeiras, excluindo dados de governanca e gestao de pessoas."
+        },
+        {
+          "letter": "E",
+          "text": "apenas o Conselho Fiscal tem acesso as informacoes de gestao, sendo estas sigilosas para os demais publicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "governanca-corporativa-e-integridade-da-ebserh",
+      "explanation": "A transparencia ativa consiste na divulgacao espontanea de informacoes de interesse coletivo, complementando o direito de acesso a informacao mediante requerimento; empresas publicas federais, como a EBSERH, estao sujeitas a Lei de Acesso a Informacao.",
+      "references": [
+        "Lei no 12.527/2011 (Lei de Acesso a Informacao)",
+        "Decreto no 9.203/2017 (principio da transparencia)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c7aba924bee21e146a6e00b551f5a55d887883bff6a2b2ff7ccefb190f916950"
+    },
+    {
+      "statement": "O modelo de linhas de defesa, adotado pela gestao de riscos na administracao publica federal e aplicavel a estrutura de governanca da EBSERH, organiza as responsabilidades de controle em camadas. Nesse modelo, a responsabilidade primaria pela gestao do risco no dia a dia das atividades cabe:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente a auditoria interna."
+        },
+        {
+          "letter": "B",
+          "text": "exclusivamente ao orgao de controle externo (TCU)."
+        },
+        {
+          "letter": "C",
+          "text": "as proprias unidades gestoras/finalisticas, na execucao de suas atividades cotidianas - a chamada primeira linha de defesa."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente a alta administracao, sem participacao das areas tecnicas."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente ao Ministerio da Transparencia."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "legislacao-aplicada-a-ebserh",
+      "topic": "governanca-corporativa-e-integridade-da-ebserh",
+      "explanation": "No modelo de linhas de defesa, a primeira linha e composta pelas proprias unidades gestoras/operacionais, responsaveis por identificar e gerenciar riscos no exercicio cotidiano de suas atividades; a segunda linha (risco/compliance/controles internos) supervisiona, e a terceira (auditoria interna) avalia de forma independente.",
+      "references": [
+        "Instrucao Normativa Conjunta MP/CGU no 1/2016",
+        "Decreto no 9.203/2017."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c9bf506071a40f8e2d6440eee9030b56c1903a0950a3de4bc7f0ecb9351c82bc"
+    }
+  ]
+}

@@ -1,0 +1,1924 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Sobre o historico da Estrategia Saude da Familia (ESF) no Brasil, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a iniciativa foi criada em 1994 como Programa Saude da Familia (PSF), sendo posteriormente compreendida nao mais como um programa paralelo, mas como uma estrategia estruturante de reorientacao do modelo assistencial da Atencao Basica."
+        },
+        {
+          "letter": "B",
+          "text": "a ESF nunca teve qualquer denominacao anterior, tendo sido criada com esse nome definitivo desde sua origem, na decada de 1970."
+        },
+        {
+          "letter": "C",
+          "text": "o PSF e a ESF sao iniciativas distintas e simultaneas, implementadas por ministerios diferentes, sem qualquer relacao historica entre si."
+        },
+        {
+          "letter": "D",
+          "text": "a ESF substituiu o PSF em 2017, com a publicacao da primeira Politica Nacional de Atencao Basica."
+        },
+        {
+          "letter": "E",
+          "text": "a criacao do PSF antecede a criacao do proprio SUS, tendo sido incorporada a ele posteriormente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "estrategia-saude-da-familia-esf",
+      "explanation": "O PSF, criado em 1994, deixou de ser tratado como programa pontual e passou a ser compreendido como estrategia estruturante de reorganizacao da Atencao Basica. B, C, D, E contem erros cronologicos ou de relacao historica.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB) - historico da Estrategia Saude da Familia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "09a90d9d1fcb5536e6e89eede65294f2d9b4bebb4a6cb5864f882d74fb40b362"
+    },
+    {
+      "statement": "O Instituto Nacional de Assistencia Medica da Previdencia Social (INAMPS), criado em 1978, representou",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a unificacao, sob um unico orgao federal, da assistencia medica antes fragmentada entre os diferentes Institutos de Aposentadoria e Pensoes (IAPs), mantendo, porem, a vinculacao do acesso a condicao de contribuinte da Previdencia Social."
+        },
+        {
+          "letter": "B",
+          "text": "a universalizacao imediata do direito a saude no Brasil, sem qualquer exigencia de vinculo previdenciario para o acesso."
+        },
+        {
+          "letter": "C",
+          "text": "a extincao definitiva de qualquer modelo previdenciario de saude, substituido por um sistema exclusivamente municipal."
+        },
+        {
+          "letter": "D",
+          "text": "a criacao do Sistema Unico de Saude, posteriormente renomeado para INAMPS em 1990."
+        },
+        {
+          "letter": "E",
+          "text": "um orgao exclusivamente responsavel pela vigilancia sanitaria de alimentos e medicamentos, sem relacao com a assistencia medica previdenciaria."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "historico-da-previdencia-social-no-brasil",
+      "explanation": "O INAMPS unificou a assistencia medica previdenciaria, antes pulverizada entre os IAPs, mas manteve o criterio de vinculacao previdenciaria ate a criacao do SUS. B antecipa indevidamente a universalizacao; C, D, E contem erros factuais.",
+      "references": [
+        "Literatura consolidada de historia das politicas de saude no Brasil (criacao do INAMPS, 1978)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0f667d66e79e6494a26f1b220bbfd7e539fc7761f0990da436678eb9272b578a"
+    },
+    {
+      "statement": "A Rede de Atencao Psicossocial (RAPS), instituida pela Portaria no 3.088/2011 e consolidada na Portaria de Consolidacao GM/MS no 3/2017, organiza-se em componentes articulados. Avalie as afirmativas a seguir. I. A Atencao Basica em Saude integra a RAPS, incluindo as equipes de Atencao Basica, os Consultorios na Rua e os Centros de Convivencia. II. A Atencao Psicossocial Especializada e realizada, entre outros pontos, pelos Centros de Atencao Psicossocial (CAPS), em suas diferentes modalidades. III. As Estrategias de Desinstitucionalizacao, como os Servicos Residenciais Terapeuticos e o Programa de Volta para Casa, integram a RAPS. IV. A RAPS restringe-se exclusivamente a servicos de nivel hospitalar, nao incluindo nenhum ponto de atencao da Atencao Basica. Esta correto o que se afirma em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I, II e III, apenas."
+        },
+        {
+          "letter": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "letter": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "letter": "D",
+          "text": "I, II, III e IV."
+        },
+        {
+          "letter": "E",
+          "text": "IV, apenas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-de-atencao-psicossocial-raps",
+      "explanation": "Os itens I-III descrevem corretamente 3 dos 7 componentes da RAPS; o item IV contraria diretamente a estrutura multicomponente da rede, que inclui a Atencao Basica.",
+      "references": [
+        "Portaria no 3.088/2011, consolidada na Portaria de Consolidacao GM/MS no 3/2017, Anexo III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "117023fb5352f96f05385f9e302b1be5c3221ce271ca3ac823ad56f90949ae92"
+    },
+    {
+      "statement": "O conceito de \"envelhecimento ativo\", adotado como referencial pelas politicas publicas de saude da pessoa idosa no Brasil, e definido como",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o processo de otimizacao das oportunidades de saude, participacao e seguranca, com o objetivo de melhorar a qualidade de vida a medida que as pessoas envelhecem, independentemente de estarem ou nao inseridas no mercado de trabalho."
+        },
+        {
+          "letter": "B",
+          "text": "a manutencao obrigatoria da atividade laboral remunerada por toda pessoa idosa, sob pena de exclusao de beneficios previdenciarios."
+        },
+        {
+          "letter": "C",
+          "text": "um conceito restrito a pratica de atividades fisicas, sem relacao com participacao social ou seguranca."
+        },
+        {
+          "letter": "D",
+          "text": "a ausencia total de qualquer limitacao funcional, sendo inaplicavel a idosos com doencas cronicas."
+        },
+        {
+          "letter": "E",
+          "text": "uma diretriz exclusiva de politica economica, sem relacao com politica de saude."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-saude-da-pessoa-idosa",
+      "explanation": "Envelhecimento ativo e definido como a otimizacao de oportunidades de saude, participacao e seguranca para melhorar a qualidade de vida - nao exige atividade laboral (B), nao se restringe a atividade fisica (C), nao exige ausencia de limitacao funcional (D) e nao e conceito estritamente economico (E).",
+      "references": [
+        "Politica Nacional de Saude da Pessoa Idosa - referencial de \"envelhecimento ativo\" (OMS, incorporado as politicas publicas brasileiras)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "11d2cc183faf9be37bd814686495f7f1cdc74599aa1889da4110611a34e81d43"
+    },
+    {
+      "statement": "A Estrategia Saude da Familia (ESF) operacionaliza os principios da Atencao Primaria por meio da adscricao de um territorio definido a cada equipe. Essa adscricao territorial tem como principal finalidade",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "restringir o acesso da populacao residente fora da area adscrita a qualquer atendimento de urgencia, independentemente da gravidade do caso."
+        },
+        {
+          "letter": "B",
+          "text": "favorecer o vinculo longitudinal entre a equipe e a populacao, permitindo o conhecimento das condicoes de vida, saude e das dinamicas sociais e familiares do territorio ao longo do tempo."
+        },
+        {
+          "letter": "C",
+          "text": "determinar exclusivamente criterios de rateio financeiro entre municipios vizinhos, sem qualquer finalidade assistencial."
+        },
+        {
+          "letter": "D",
+          "text": "impedir que qualquer usuario troque de equipe de referencia, mesmo em caso de mudanca de endereco."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a necessidade de cadastro individual das familias, ja que a adscricao territorial supre essa exigencia."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "estrategia-saude-da-familia-esf",
+      "explanation": "A adscricao territorial viabiliza o vinculo longitudinal, atributo central da APS operacionalizado pela ESF. A restringe indevidamente o acesso a urgencias; C reduz a finalidade a criterio financeiro; D nega a atualizacao cadastral; E nega a necessidade real de cadastro.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "125f37c58efd2bc2fd93b57c6b24d394d0067622df5d61d0c179947745a0c13e"
+    },
+    {
+      "statement": "A implementacao da Politica Nacional de Promocao da Saude (PNPS) organiza-se, entre outros eixos, pela articulacao intersetorial das acoes de saude com outros setores de governo. Essa articulacao intersetorial se justifica porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a promocao da saude depende exclusivamente de acoes do setor saude, sem relacao com educacao, meio ambiente, trabalho ou assistencia social."
+        },
+        {
+          "letter": "B",
+          "text": "os determinantes sociais da saude ultrapassam a governabilidade exclusiva do setor saude, exigindo articulacao com outras politicas publicas para produzir impacto real sobre os modos de vida da populacao."
+        },
+        {
+          "letter": "C",
+          "text": "a intersetorialidade e apenas uma diretriz teorica, sem qualquer aplicacao pratica prevista na PNPS."
+        },
+        {
+          "letter": "D",
+          "text": "a articulacao intersetorial substitui integralmente a necessidade de financiamento especifico para acoes de promocao da saude."
+        },
+        {
+          "letter": "E",
+          "text": "a PNPS veda expressamente qualquer parceria com os setores de educacao e meio ambiente, por conflito de competencias."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-promocao-da-saude-pnaps",
+      "explanation": "A intersetorialidade e central a PNPS justamente porque os determinantes sociais da saude extrapolam o setor saude isoladamente. As demais alternativas negam ou distorcem essa logica.",
+      "references": [
+        "Politica Nacional de Promocao da Saude (PNPS), Anexo I da Portaria de Consolidacao GM/MS no 2/2017."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "14822d2ca8bbf6f3cc02f953e74637ce711186615428cfc64601a86ee7a8783a"
+    },
+    {
+      "statement": "A Politica Nacional de Praticas Integrativas e Complementares (PNPIC) reconhece, entre outras, a pratica denominada ______, que utiliza recursos artisticos e expressivos (como pintura, musica, teatro e escrita) como instrumento terapeutico de promocao da saude mental e do autoconhecimento. Assinale a alternativa que preencha corretamente a lacuna.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Arteterapia"
+        },
+        {
+          "letter": "B",
+          "text": "Quiropraxia"
+        },
+        {
+          "letter": "C",
+          "text": "Osteopatia"
+        },
+        {
+          "letter": "D",
+          "text": "Termalismo/Crenoterapia"
+        },
+        {
+          "letter": "E",
+          "text": "Ozonioterapia"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-praticas-integrativas-e-complementares-pnpic",
+      "explanation": "Arteterapia e a pratica integrativa reconhecida pela PNPIC que utiliza recursos artisticos e expressivos como instrumento terapeutico. As demais sao praticas reais reconhecidas pela PNPIC, mas com finalidades distintas.",
+      "references": [
+        "Portaria no 971/2006 GM/MS e atualizacoes posteriores (PNPIC)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1a7c75ebcc5faa79999e2ed9c63b156f013d0b652c738f0117d82e3d1cf93b00"
+    },
+    {
+      "statement": "Entre os principios que orientam a Politica Nacional de Educacao Popular em Saude no SUS (PNEPS-SUS), o principio da \"amorosidade\" refere-se",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a exigencia de que os profissionais de saude mantenham distanciamento afetivo total dos usuarios, para preservar a objetividade tecnica do cuidado."
+        },
+        {
+          "letter": "B",
+          "text": "ao reconhecimento da dimensao afetiva e do acolhimento como elementos constitutivos das relacoes de cuidado e das praticas educativas em saude, e nao como fragilidade ou falta de rigor tecnico."
+        },
+        {
+          "letter": "C",
+          "text": "a substituicao de todo protocolo clinico por decisoes baseadas exclusivamente em vinculo afetivo, sem fundamentacao tecnica."
+        },
+        {
+          "letter": "D",
+          "text": "a uma diretriz exclusivamente aplicavel ao cuidado de criancas, sem relacao com a populacao adulta."
+        },
+        {
+          "letter": "E",
+          "text": "a obrigatoriedade de vinculo familiar entre profissional e usuario como pre-requisito para o atendimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-educacao-popular-em-saude-pneps-sus",
+      "explanation": "A amorosidade, na PNEPS-SUS, reconhece a dimensao afetiva como parte legitima e constitutiva do cuidado - nunca em oposicao ao rigor tecnico (A, C), nem restrita a publico especifico (D) ou como pre-requisito de vinculo familiar (E).",
+      "references": [
+        "Portaria no 2.761/2013 GM/MS (PNEPS-SUS)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1dde4f814e4826411322d0aab3819c8c0e60a77bd98590035ffb3e8841f1dc6f"
+    },
+    {
+      "statement": "A 8a Conferencia Nacional de Saude, realizada em 1986, e reconhecida como um marco historico fundamental para a criacao do Sistema Unico de Saude. Sobre esse evento, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "foi uma reuniao restrita a autoridades do Ministerio da Saude, sem participacao de movimentos sociais ou da populacao."
+        },
+        {
+          "letter": "B",
+          "text": "seu relatorio final consolidou as bases doutrinarias posteriormente incorporadas ao capitulo \"Da Saude\" da Constituicao Federal de 1988, incluindo a concepcao de saude como direito de cidadania e dever do Estado."
+        },
+        {
+          "letter": "C",
+          "text": "resultou na criacao imediata do SUS por decreto presidencial, dispensando posterior deliberacao constituinte."
+        },
+        {
+          "letter": "D",
+          "text": "rejeitou formalmente a proposta de um sistema publico universal de saude, defendendo a manutencao do modelo previdenciario-assistencialista anterior."
+        },
+        {
+          "letter": "E",
+          "text": "ocorreu apos a promulgacao da Constituicao Federal de 1988, como evento de regulamentacao do texto constitucional ja vigente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "reforma-sanitaria-e-8a-conferencia-nacional-de-saude",
+      "explanation": "O relatorio final da 8a CNS (1986) e a base doutrinaria direta do capitulo constitucional sobre saude (1988). A nega a ampla participacao social; C, D, E contem erros factuais/cronologicos.",
+      "references": [
+        "Relatorio Final da 8a Conferencia Nacional de Saude (1986)",
+        "Constituicao Federal de 1988, arts. 196-200."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2795c0cf33e365ca25dbfe16130cf3262aa5f6711eb7234d1d1057d26fd6d685"
+    },
+    {
+      "statement": "A instituicao das Redes de Atencao a Saude (RAS) no ambito do SUS teve como principal justificativa",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir definitivamente o modelo de atencao hospitalar por um modelo exclusivamente ambulatorial."
+        },
+        {
+          "letter": "B",
+          "text": "superar a fragmentacao da atencao e da gestao nas Regioes de Saude, qualificando o cuidado por meio da integracao e articulacao continua entre os diferentes pontos de atencao."
+        },
+        {
+          "letter": "C",
+          "text": "transferir a totalidade da gestao do cuidado em saude para o setor privado, mantendo o SUS apenas como fonte de financiamento."
+        },
+        {
+          "letter": "D",
+          "text": "eliminar a hierarquizacao dos niveis de atencao, tornando todos os pontos de atencao equivalentes entre si."
+        },
+        {
+          "letter": "E",
+          "text": "restringir o acesso da populacao a um unico ponto de atencao fixo, sem possibilidade de referencia a outros niveis."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "redes-de-atencao-a-saude-ras",
+      "explanation": "A RAS busca superar a fragmentacao historica do cuidado e da gestao, qualificando a atencao por meio da integracao entre pontos de atencao. As demais alternativas distorcem ou invertem esse objetivo.",
+      "references": [
+        "Portaria de Consolidacao GM/MS no 3/2017, Anexo III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "28fd1359fe553c5ded30abd5e13b5e55a92eacd072a67fc0facac91acff35a31"
+    },
+    {
+      "statement": "Apos a fase das Caixas de Aposentadorias e Pensoes (CAPs), instituidas pela Lei Eloy Chaves em 1923, o modelo previdenciario brasileiro evoluiu, nas decadas de 1930-40, para os Institutos de Aposentadoria e Pensoes (IAPs). Sobre essa transicao, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "os IAPs universalizaram o acesso a assistencia a saude para toda a populacao brasileira, independentemente de vinculo empregaticio."
+        },
+        {
+          "letter": "B",
+          "text": "os IAPs organizavam-se por categoria profissional (por exemplo, bancarios, comerciarios, industriarios), mantendo o vinculo entre acesso a assistencia e vinculo formal de emprego, excluindo trabalhadores rurais e informais."
+        },
+        {
+          "letter": "C",
+          "text": "os IAPs extinguiram qualquer forma de vinculo entre emprego e acesso a saude, antecipando os principios de universalidade que seriam adotados decadas depois pelo SUS."
+        },
+        {
+          "letter": "D",
+          "text": "os IAPs foram criados exclusivamente para atender a populacao idosa, sem qualquer relacao com o mundo do trabalho."
+        },
+        {
+          "letter": "E",
+          "text": "os IAPs substituiram integralmente o modelo previdenciario por um sistema de saude privado, sem qualquer participacao do Estado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "historico-da-previdencia-social-no-brasil",
+      "explanation": "Os IAPs organizavam-se por categoria profissional, mantendo o vinculo entre emprego formal e acesso a assistencia. A e C invertem essa logica; D e E distorcem a natureza da instituicao.",
+      "references": [
+        "Literatura consolidada de historia das politicas de saude no Brasil (transicao CAPs para IAPs)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2b1004a50c207c9afb1212c92cb6400a00b7b9dc01c85839115fcca0b74ebee8"
+    },
+    {
+      "statement": "As Redes de Atencao a Saude (RAS), conforme o marco conceitual consolidado na Portaria de Consolidacao GM/MS no 3/2017, Anexo III, estruturam-se a partir de tres elementos constitutivos fundamentais. Avalie as afirmativas a seguir. I. A populacao e a regiao de saude, definidas a partir de criterios geograficos e epidemiologicos, constituem elemento constitutivo da RAS. II. A estrutura operacional, formada pelos diferentes pontos de atencao e pelos sistemas de apoio, logistico e de governanca, constitui elemento constitutivo da RAS. III. O modelo de atencao a saude, que organiza o funcionamento da rede, constitui elemento constitutivo da RAS. Esta correto o que se afirma em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I, apenas."
+        },
+        {
+          "letter": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "letter": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "letter": "D",
+          "text": "I, II e III."
+        },
+        {
+          "letter": "E",
+          "text": "Nenhuma das afirmativas esta correta."
+        }
+      ],
+      "correctAnswer": "D",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "redes-de-atencao-a-saude-ras",
+      "explanation": "Os tres itens descrevem corretamente os elementos constitutivos classicos da RAS: populacao/regiao de saude, estrutura operacional e modelo de atencao.",
+      "references": [
+        "Portaria de Consolidacao GM/MS no 3/2017, Anexo III (consolidou a Portaria no 4.279/2010)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "46bf1a4cd4031b2872773fd9636182bae1fe20093d732255cc75f07bcf773e1b"
+    },
+    {
+      "statement": "Em maio de 2023, o Ministerio da Saude publicou norma que redefiniu o modelo de equipes multiprofissionais de apoio a Atencao Basica, anteriormente denominadas Nucleo Ampliado de Saude da Familia (NASF). Sobre essa mudanca, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o NASF foi extinto sem substituicao, deixando de existir qualquer modalidade de equipe multiprofissional de apoio a Atencao Basica no SUS."
+        },
+        {
+          "letter": "B",
+          "text": "a Portaria GM/MS no 635/2023 instituiu as Equipes Multiprofissionais na Atencao Primaria (eMulti), redefinindo a nomenclatura e o financiamento federal, que havia deixado de ser repassado especificamente para essa finalidade desde 2019."
+        },
+        {
+          "letter": "C",
+          "text": "o NASF e a eMulti sao denominacoes distintas para politicas totalmente independentes, sem qualquer relacao historica ou normativa entre si."
+        },
+        {
+          "letter": "D",
+          "text": "a transicao do NASF para a eMulti ocorreu em 2017, simultaneamente a publicacao da Politica Nacional de Atencao Basica vigente."
+        },
+        {
+          "letter": "E",
+          "text": "a eMulti e uma modalidade restrita a area de saude mental, sem relacao com o apoio multiprofissional geral a Atencao Basica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "emulti-equipes-multiprofissionais-na-atencao-primaria",
+      "explanation": "A Portaria no 635/2023 instituiu a eMulti, redefinindo nomenclatura e retomando financiamento federal especifico, interrompido desde 2019. A nega a substituicao; C nega a relacao historica; D confunde com a data da PNAB; E restringe indevidamente o escopo.",
+      "references": [
+        "Portaria GM/MS no 635/2023."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4f2bdf5c8cfcefe5902b066743d15f702d2ea8640c7c10eb38a478bcfdc04e71"
+    },
+    {
+      "statement": "A Politica Nacional de Saude Integral da Populacao Negra (PNSIPN) tem como objetivo geral",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "promover a saude integral da populacao negra, priorizando a reducao das desigualdades etnico-raciais, o combate ao racismo institucional e a promocao da equidade em saude."
+        },
+        {
+          "letter": "B",
+          "text": "restringir o acesso a servicos de saude exclusivamente a populacao autodeclarada negra, excluindo as demais etnias do atendimento no SUS."
+        },
+        {
+          "letter": "C",
+          "text": "criar um sistema de saude paralelo ao SUS, destinado exclusivamente a populacao negra."
+        },
+        {
+          "letter": "D",
+          "text": "substituir o quesito raca/cor por criterios exclusivamente socioeconomicos na coleta de dados em saude."
+        },
+        {
+          "letter": "E",
+          "text": "descentralizar integralmente a politica para a iniciativa privada, sem qualquer coordenacao federal."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-saude-integral-da-populacao-negra-pnsipn",
+      "explanation": "O objetivo geral da PNSIPN e reduzir desigualdades etnico-raciais e combater o racismo institucional, promovendo equidade - nunca restringir ou segregar o acesso ao SUS (B, C), nem eliminar o quesito raca/cor (D), nem abrir mao da coordenacao federal (E).",
+      "references": [
+        "Portaria no 992/2009 GM/MS."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "53bae2431f456830f43a0aa1fe2f95f03398f51db4d1d489c903584041815f8e"
+    },
+    {
+      "statement": "A Portaria GM/MS no 635/2023, que instituiu as Equipes Multiprofissionais na Atencao Primaria (eMulti), estabelece que essas equipes",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "sao organizadas em modalidades diferenciadas, conforme criterios como carga horaria, vinculo e composicao profissional, permitindo adequacao a realidade de cada territorio."
+        },
+        {
+          "letter": "B",
+          "text": "devem obrigatoriamente ter composicao profissional identica em todos os municipios brasileiros, sem qualquer flexibilidade local."
+        },
+        {
+          "letter": "C",
+          "text": "substituem integralmente as equipes de Saude da Familia, absorvendo todas as suas atribuicoes assistenciais."
+        },
+        {
+          "letter": "D",
+          "text": "sao financiadas exclusivamente por recursos proprios do municipio, sem qualquer incentivo financeiro federal."
+        },
+        {
+          "letter": "E",
+          "text": "so podem ser implantadas em municipios com mais de 500 mil habitantes, sendo vedada sua implantacao em municipios menores."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "emulti-equipes-multiprofissionais-na-atencao-primaria",
+      "explanation": "A eMulti organiza-se em modalidades diferenciadas, permitindo adequacao territorial. B nega essa flexibilidade; C confunde eMulti com eSF; D nega o incentivo federal reinstituido; E inventa restricao populacional inexistente.",
+      "references": [
+        "Portaria GM/MS no 635/2023."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "642781c17514e148be7002a53b1a737df1cb1d6a20cf80937d81f05fecc118f1"
+    },
+    {
+      "statement": "Assinale a alternativa que descreve corretamente os componentes atuais do modelo de financiamento federal da Atencao Primaria a Saude, instituido pelo Previne Brasil (Portaria no 2.979/2019).",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "O financiamento considera exclusivamente a capitacao ponderada, sem qualquer componente de pagamento por desempenho ou incentivo adicional."
+        },
+        {
+          "letter": "B",
+          "text": "O financiamento e composto por capitacao ponderada, pagamento por desempenho, incentivo financeiro com base em criterio populacional e incentivos para acoes estrategicas."
+        },
+        {
+          "letter": "C",
+          "text": "O financiamento manteve integralmente o modelo do antigo Piso de Atencao Basica (PAB), sem qualquer alteracao de criterios desde 2019."
+        },
+        {
+          "letter": "D",
+          "text": "O financiamento e definido exclusivamente pelo numero de procedimentos realizados, em modelo de pagamento por producao, sem qualquer criterio populacional."
+        },
+        {
+          "letter": "E",
+          "text": "O financiamento considera apenas o pagamento por desempenho, eliminando qualquer forma de repasse per capita."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "programa-previne-brasil",
+      "explanation": "O modelo vigente e composto por 4 componentes (capitacao ponderada, pagamento por desempenho, incentivo por criterio populacional, incentivos para acoes estrategicas). A, D, E reduzem indevidamente o modelo; C nega a mudanca em relacao ao PAB.",
+      "references": [
+        "Portaria no 2.979/2019 GM/MS (Previne Brasil)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6641ccc22fd9df11164c815ba24c321b5bd4799df4315b4ac41401e79a3de45e"
+    },
+    {
+      "statement": "Segundo a Portaria n.o 2.436, de 21 de setembro de 2017 (PNAB), sao atribuicoes comuns a todos os profissionais que compoem as equipes de Atencao Basica, independentemente de sua categoria profissional:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Participar do processo de territorializacao e mapeamento da area de atuacao da equipe, identificando grupos, familias e individuos expostos a riscos e vulnerabilidades."
+        },
+        {
+          "letter": "B",
+          "text": "Prescrever medicamentos de uso continuo para toda a populacao adscrita, independentemente da categoria profissional do executante."
+        },
+        {
+          "letter": "C",
+          "text": "Realizar exclusivamente atividades administrativas de gestao da unidade, delegando toda atividade assistencial a outros niveis de atencao."
+        },
+        {
+          "letter": "D",
+          "text": "Definir, isoladamente, o modelo de financiamento tripartite aplicavel ao municipio."
+        },
+        {
+          "letter": "E",
+          "text": "Substituir as atribuicoes especificas de cada categoria profissional por uma escala unica de atendimento indiferenciado."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "coseac",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-basica-pnab",
+      "explanation": "Territorializacao, mapeamento e identificacao de vulnerabilidades sao atribuicoes comuns previstas na PNAB para toda a equipe. B extrapola competencia; C, D, E distorcem o papel das equipes de AB.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "679cdbddecbdb16dc2b7f5f1a387f706e104c2a1cfa183ff2bbf234a48d57b9f"
+    },
+    {
+      "statement": "Os Servicos Residenciais Terapeuticos (SRT), previstos como estrategia de desinstitucionalizacao na Rede de Atencao Psicossocial, destinam-se a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "internar temporariamente pacientes em crise aguda por periodo superior a seis meses, substituindo a internacao hospitalar tradicional."
+        },
+        {
+          "letter": "B",
+          "text": "oferecer moradia a pessoas egressas de internacoes psiquiatricas de longa permanencia, especialmente aquelas sem suporte familiar ou social, favorecendo a reinsercao comunitaria."
+        },
+        {
+          "letter": "C",
+          "text": "substituir integralmente as equipes de Atencao Basica no acompanhamento de pessoas com transtorno mental, concentrando todo o cuidado no ambiente residencial."
+        },
+        {
+          "letter": "D",
+          "text": "funcionar exclusivamente como centros de triagem para posterior encaminhamento a hospitais psiquiatricos."
+        },
+        {
+          "letter": "E",
+          "text": "atender exclusivamente criancas e adolescentes em conflito com a lei, sem relacao com a Rede de Atencao Psicossocial."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-de-atencao-psicossocial-raps",
+      "explanation": "Os SRT oferecem moradia a egressos de longas internacoes psiquiatricas sem suporte social, favorecendo a desinstitucionalizacao e a reinsercao comunitaria. A inverte a logica; C, D, E distorcem a finalidade do servico.",
+      "references": [
+        "Portaria no 3.088/2011, consolidada na Portaria de Consolidacao GM/MS no 3/2017, Anexo III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6d60b42d75ea5d61c20b1e6597675fbf50b882f8193c147cd9c7051aee1371b0"
+    },
+    {
+      "statement": "Assinale a alternativa correta quanto ao instrumento normativo que formalizou a criacao da Rede Alyne.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "A Rede Alyne foi instituida por uma lei ordinaria aprovada pelo Congresso Nacional, e nao por portaria ministerial."
+        },
+        {
+          "letter": "B",
+          "text": "A Rede Alyne foi instituida por portaria que altera a Portaria de Consolidacao GM/MS no 3/2017, a mesma consolidacao que reune as normas sobre redes de atencao a saude no SUS."
+        },
+        {
+          "letter": "C",
+          "text": "A Rede Alyne foi instituida por resolucao do Conselho Nacional de Saude, sem qualquer ato do Poder Executivo federal."
+        },
+        {
+          "letter": "D",
+          "text": "A Rede Alyne foi instituida por decreto presidencial autonomo, sem relacao com portarias anteriores do Ministerio da Saude."
+        },
+        {
+          "letter": "E",
+          "text": "A Rede Alyne nao possui instrumento normativo proprio, sendo apenas uma campanha de comunicacao institucional sem efeito regulatorio."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-alyne-ex-rede-cegonha",
+      "explanation": "A Rede Alyne foi instituida por portaria (GM/MS no 5.350/2024) que altera a Portaria de Consolidacao GM/MS no 3/2017. A, C, D, E atribuem instrumentos normativos incorretos.",
+      "references": [
+        "Portaria GM/MS no 5.350/2024",
+        "Portaria de Consolidacao GM/MS no 3/2017."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "707749eca8defed7bdac01b3fd240be8ec8a240b2b88d13fe719ade28e73636d"
+    },
+    {
+      "statement": "Assinale a alternativa correta quanto ao instrumento normativo hoje vigente para a Rede de Atencao as Urgencias e Emergencias (RUE).",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "A RUE permanece regida exclusivamente pela Portaria no 1.600, de 2011, em sua redacao original, sem qualquer ato normativo posterior."
+        },
+        {
+          "letter": "B",
+          "text": "A RUE esta atualmente disciplinada pela Portaria de Consolidacao GM/MS no 3/2017, Anexo III, que consolidou a Portaria no 1.600/2011 e demais normas correlatas sobre redes de atencao a saude."
+        },
+        {
+          "letter": "C",
+          "text": "A RUE deixou de ter qualquer base normativa federal, sendo regulamentada exclusivamente por normas estaduais."
+        },
+        {
+          "letter": "D",
+          "text": "A RUE foi revogada em definitivo, nao havendo mais politica publica federal especifica para urgencia e emergencia."
+        },
+        {
+          "letter": "E",
+          "text": "A RUE foi incorporada ao SAMU 192, deixando de existir como rede autonoma."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-de-atencao-as-urgencias-e-emergencias-rue",
+      "explanation": "A citacao correta hoje e a Portaria de Consolidacao no 3/2017, Anexo III - citar apenas a Portaria no 1.600/2011 isolada ignora a consolidacao; C, D, E sao distorcoes sem base normativa.",
+      "references": [
+        "Portaria de Consolidacao GM/MS no 3/2017, Anexo III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "724fff8f32bba5f8e7f78b4d260c36940f34595d064d9014af76921980333031"
+    },
+    {
+      "statement": "A Politica Nacional de Saude Integral da Populacao Negra (PNSIPN) foi instituida pela",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Portaria no 992, de 13 de maio de 2009."
+        },
+        {
+          "letter": "B",
+          "text": "Portaria no 996, de 13 de marco de 2019."
+        },
+        {
+          "letter": "C",
+          "text": "Lei no 12.288, de 20 de julho de 2010 (Estatuto da Igualdade Racial)."
+        },
+        {
+          "letter": "D",
+          "text": "Portaria no 2.436, de 21 de setembro de 2017."
+        },
+        {
+          "letter": "E",
+          "text": "Resolucao no 453, de 10 de maio de 2012, do Conselho Nacional de Saude."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-saude-integral-da-populacao-negra-pnsipn",
+      "explanation": "A PNSIPN foi instituida pela Portaria no 992/2009. B e um numero/data ja usado como distrator falso em questao real; C, D, E sao normas reais, mas de outras politicas.",
+      "references": [
+        "Portaria no 992/2009 GM/MS."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "741dde4eba77392772da0bc090c9a320452dee7e51b8bfe05ff525d64e4721b2"
+    },
+    {
+      "statement": "De acordo com a Politica Nacional de Atencao Basica, a carga horaria de trabalho dos profissionais que compoem a equipe de Saude da Familia (eSF) deve ser de, no minimo, ______ horas semanais, com dedicacao exclusiva por equipe. Assinale a alternativa que preencha corretamente a lacuna.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "20"
+        },
+        {
+          "letter": "B",
+          "text": "30"
+        },
+        {
+          "letter": "C",
+          "text": "40"
+        },
+        {
+          "letter": "D",
+          "text": "44"
+        },
+        {
+          "letter": "E",
+          "text": "60"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-basica-pnab",
+      "explanation": "A PNAB estabelece 40 horas semanais com dedicacao exclusiva como regra geral de referencia para a eSF.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7ae3c8a95fb3f719c27bd5f137493c14f658396899890e20f6ede5e36df1486a"
+    },
+    {
+      "statement": "A Rede de Atencao as Urgencias e Emergencias (RUE), organizada como uma das redes tematicas da Rede de Atencao a Saude, e constituida por componentes articulados. Avalie as afirmativas a seguir. I. Promocao, Prevencao e Vigilancia a Saude constituem um dos componentes da RUE. II. O Servico de Atendimento Movel de Urgencia (SAMU 192) e um dos componentes de atencao pre-hospitalar movel da RUE. III. As Unidades de Pronto Atendimento (UPA) e outros servicos de urgencia 24 horas compoem o componente de atencao pre-hospitalar fixa. IV. A Atencao Domiciliar nao integra a RUE em nenhuma hipotese, sendo de competencia exclusiva da Atencao Basica. Esta correto o que se afirma em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I, II e III, apenas."
+        },
+        {
+          "letter": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "letter": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "letter": "D",
+          "text": "I, II, III e IV."
+        },
+        {
+          "letter": "E",
+          "text": "IV, apenas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-de-atencao-as-urgencias-e-emergencias-rue",
+      "explanation": "I, II e III descrevem componentes reais da RUE; IV nega indevidamente a Atencao Domiciliar como componente da RUE, quando na verdade ela integra a rede.",
+      "references": [
+        "Portaria de Consolidacao GM/MS no 3/2017, Anexo III (consolidou a Portaria no 1.600/2011)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7cd1956b38499af99cdbe9e46fb5fb2605e1a049acb626ac77d62f170decaf11"
+    },
+    {
+      "statement": "A Politica Nacional de Alimentacao e Nutricao (PNAN) tem como proposito",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "garantir a qualidade dos alimentos disponibilizados no pais e promover praticas alimentares adequadas e saudaveis, contribuindo para a garantia da seguranca alimentar e nutricional da populacao."
+        },
+        {
+          "letter": "B",
+          "text": "restringir a atuacao do SUS ao tratamento de doencas ja instaladas relacionadas a alimentacao, sem qualquer acao preventiva ou de promocao."
+        },
+        {
+          "letter": "C",
+          "text": "regular exclusivamente a rotulagem de produtos industrializados, sem qualquer relacao com praticas alimentares ou seguranca alimentar."
+        },
+        {
+          "letter": "D",
+          "text": "transferir a responsabilidade pela alimentacao da populacao exclusivamente ao setor privado de alimentos, sem acao do Estado."
+        },
+        {
+          "letter": "E",
+          "text": "vincular-se exclusivamente a vigilancia sanitaria de estabelecimentos comerciais de alimentos, sem qualquer acao educativa junto a populacao."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-alimentacao-e-nutricao-pnan",
+      "explanation": "A PNAN busca garantir qualidade alimentar e promover praticas alimentares saudaveis, contribuindo a seguranca alimentar e nutricional - nao se restringe ao tratamento (B), a rotulagem (C), nem transfere a responsabilidade ao setor privado (D) ou se limita a vigilancia sanitaria comercial (E).",
+      "references": [
+        "Politica Nacional de Alimentacao e Nutricao (PNAN), consolidada no ambito das politicas nacionais de saude do SUS."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8b24f702d9db2b6cc051142e446247c52228787165b8c0e785432d4de7b28b67"
+    },
+    {
+      "statement": "Assinale a alternativa correta sobre as equipes de Consultorio na Rua (eCR), modalidade prevista na Politica Nacional de Atencao Basica.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "As eCR destinam-se exclusivamente ao atendimento de populacoes rurais em areas de dificil acesso geografico."
+        },
+        {
+          "letter": "B",
+          "text": "As eCR sao modalidade de equipe da Atencao Basica destinada ao atendimento da populacao em situacao de rua, podendo atuar de forma itinerante conforme a dinamica de ocupacao territorial desse grupo."
+        },
+        {
+          "letter": "C",
+          "text": "As eCR substituem integralmente a eSF nos territorios onde estao implantadas, absorvendo toda a populacao adscrita da area."
+        },
+        {
+          "letter": "D",
+          "text": "A implantacao de eCR e vedada em municipios que ja possuam Unidades Basicas de Saude tradicionais."
+        },
+        {
+          "letter": "E",
+          "text": "As eCR atuam exclusivamente dentro das dependencias fisicas das UBS, sem deslocamento territorial."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-basica-pnab",
+      "explanation": "eCR atende a populacao em situacao de rua, com atuacao itinerante. A troca o publico-alvo (rural em vez de situacao de rua); C, D, E sao distorcoes sem base normativa.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9f707864aa3afaecbca40b70f341b942aa38fd3a5526dbc2280458c336ac97cb"
+    },
+    {
+      "statement": "Sobre as modalidades de equipes de Atencao Basica previstas para populacoes ribeirinhas na Politica Nacional de Atencao Basica, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a PNAB nao preve nenhuma adaptacao de modelo de equipe para populacoes ribeirinhas ou fluviais, aplicando-se a todas as regioes do pais o mesmo modelo de eSF urbana."
+        },
+        {
+          "letter": "B",
+          "text": "a PNAB preve modalidades diferenciadas de equipes (como as Equipes de Saude da Familia Ribeirinhas e Fluviais) para adequar a oferta de Atencao Basica as especificidades geograficas e populacionais de regioes como a Amazonia Legal e o Pantanal Sul-Mato-Grossense."
+        },
+        {
+          "letter": "C",
+          "text": "as equipes ribeirinhas substituem definitivamente o modelo de eSF em todo o territorio nacional a partir de 2017."
+        },
+        {
+          "letter": "D",
+          "text": "a existencia de equipes diferenciadas para populacoes ribeirinhas depende exclusivamente de financiamento privado, sem previsao de incentivo federal especifico."
+        },
+        {
+          "letter": "E",
+          "text": "as equipes ribeirinhas e fluviais atuam apenas em carater emergencial, sem vinculo longitudinal com a populacao adscrita."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ufpr-nc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-basica-pnab",
+      "explanation": "A PNAB reconhece a diversidade territorial brasileira e preve equipes diferenciadas para regioes como Amazonia Legal e Pantanal. A nega essa previsao; C generaliza indevidamente; D nega o financiamento federal; E contraria o principio da longitudinalidade.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9f9908adea3dac7ebf8d332971a27627bc5693aa5d38306aa44bf1a5c4c77e77"
+    },
+    {
+      "statement": "Quanto aos criterios de dimensionamento populacional das equipes de Saude da Familia previstos na Politica Nacional de Atencao Basica, assinale a alternativa correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "O numero de pessoas por equipe de Saude da Familia e sempre fixo e identico em todo o territorio nacional, independentemente do grau de vulnerabilidade social da populacao adscrita."
+        },
+        {
+          "letter": "B",
+          "text": "A Politica Nacional de Atencao Basica preve a possibilidade de ajuste no dimensionamento populacional por equipe, considerando o grau de vulnerabilidade social do territorio, entre outros criterios definidos pela gestao local."
+        },
+        {
+          "letter": "C",
+          "text": "O dimensionamento populacional das equipes e definido exclusivamente pelo governo federal, sem qualquer margem de decisao para a gestao municipal."
+        },
+        {
+          "letter": "D",
+          "text": "Territorios de maior vulnerabilidade social devem obrigatoriamente ter populacao adscrita por equipe maior do que territorios de baixa vulnerabilidade, para otimizar recursos."
+        },
+        {
+          "letter": "E",
+          "text": "A Politica Nacional de Atencao Basica nao estabelece nenhum parametro de referencia populacional, deixando o tema inteiramente a criterio de cada equipe."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "estrategia-saude-da-familia-esf",
+      "explanation": "A PNAB permite ajustar o parametro populacional considerando vulnerabilidade social e outros criterios locais. A nega a flexibilidade; C nega a autonomia local; D inverte a logica (maior vulnerabilidade tende a exigir populacao adscrita menor); E nega a existencia de parametro de referencia.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a9fd93730d65583ee242daeca7c7ec81076bc0620e2cc4c0834ac9892e06372b"
+    },
+    {
+      "statement": "Em setembro de 2024, o Ministerio da Saude instituiu, por meio de portaria que altera a Portaria de Consolidacao GM/MS no 3/2017, uma reestruturacao da politica de atencao materno-infantil do SUS, anteriormente conhecida como Rede Cegonha. Sobre essa reestruturacao, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a nova politica manteve o nome \"Rede Cegonha\", apenas atualizando seus componentes assistenciais, sem qualquer mudanca de nomenclatura."
+        },
+        {
+          "letter": "B",
+          "text": "a politica passou a se chamar Rede Alyne, em homenagem a uma mulher negra que morreu gravida por falta de atendimento adequado, e busca reorganizar e qualificar a rede de cuidado materno-infantil."
+        },
+        {
+          "letter": "C",
+          "text": "a reestruturacao extinguiu qualquer politica nacional voltada a saude materno-infantil, transferindo a responsabilidade exclusivamente aos estados."
+        },
+        {
+          "letter": "D",
+          "text": "a nova denominacao e de uso exclusivamente academico, nao tendo sido formalizada por nenhum ato normativo do Ministerio da Saude."
+        },
+        {
+          "letter": "E",
+          "text": "a reestruturacao vinculou a politica exclusivamente ao financiamento privado, extinguindo o cofinanciamento tripartite do SUS."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-alyne-ex-rede-cegonha",
+      "explanation": "A Rede Cegonha foi reestruturada e renomeada como Rede Alyne (Portaria GM/MS no 5.350/2024), em homenagem a Alyne Pimentel. A nega a mudanca de nome; C, D, E sao distorcoes sem base normativa.",
+      "references": [
+        "Portaria GM/MS no 5.350, de 12 de setembro de 2024 (institui a Rede Alyne, alterando a Portaria de Consolidacao GM/MS no 3/2017)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ad63162e13d028b1b9bd940e12d10c7f1b6d157b69170153fa10c4f358395a9a"
+    },
+    {
+      "statement": "O Programa Saude na Escola (PSE), instituido pelo Decreto no 6.286/2007, e uma politica",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusiva do Ministerio da Saude, sem qualquer articulacao com o Ministerio da Educacao ou com as redes publicas de ensino."
+        },
+        {
+          "letter": "B",
+          "text": "intersetorial, resultante da articulacao entre os Ministerios da Saude e da Educacao, voltada a formacao integral dos estudantes da rede publica de educacao basica por meio de acoes de prevencao, promocao e atencao a saude."
+        },
+        {
+          "letter": "C",
+          "text": "restrita ao atendimento odontologico dos estudantes, sem outras acoes de saude previstas."
+        },
+        {
+          "letter": "D",
+          "text": "aplicavel exclusivamente a instituicoes de ensino superior, nao alcancando a educacao basica."
+        },
+        {
+          "letter": "E",
+          "text": "de adesao obrigatoria e automatica para todos os municipios brasileiros, sem necessidade de qualquer pactuacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "programa-saude-na-escola-pse",
+      "explanation": "O PSE e politica intersetorial Saude-Educacao, voltada a educacao basica publica. A nega a intersetorialidade central; C restringe indevidamente ao odontologico; D erra o publico-alvo; E nega a necessidade de adesao/pactuacao municipal.",
+      "references": [
+        "Decreto no 6.286/2007",
+        "Portaria Interministerial no 1.055/2017."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ad80dee79bf633f64b4f0d8372f4c43dc025d1e22787469807685a7d453aec7a"
+    },
+    {
+      "statement": "A Politica Nacional do Idoso (Lei no 8.842/1994), marco legal da politica publica voltada a populacao idosa no Brasil, tem entre suas diretrizes",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a institucionalizacao compulsoria de todo idoso a partir dos 60 anos, independentemente de sua capacidade funcional."
+        },
+        {
+          "letter": "B",
+          "text": "a priorizacao do atendimento ao idoso por meio de suas proprias familias, em detrimento do atendimento asilar, sempre que houver condicoes para tanto."
+        },
+        {
+          "letter": "C",
+          "text": "a exclusao do idoso de qualquer politica intersetorial, restringindo sua atencao exclusivamente ao setor saude."
+        },
+        {
+          "letter": "D",
+          "text": "a vedacao legal a participacao de idosos em conselhos e instancias de controle social."
+        },
+        {
+          "letter": "E",
+          "text": "a definicao de que toda pessoa com 60 anos ou mais deve obrigatoriamente se aposentar, independentemente de sua vontade."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-saude-da-pessoa-idosa",
+      "explanation": "A Politica Nacional do Idoso prioriza o cuidado familiar e comunitario sobre a institucionalizacao, sempre que viavel. As demais alternativas contrariam esse principio central.",
+      "references": [
+        "Lei no 8.842/1994 (Politica Nacional do Idoso)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b1a535dddf63407b12809de1bce50c4502c63ce24a59f1b937971fd8b07326a0"
+    },
+    {
+      "statement": "O metodo da Politica Nacional de Humanizacao (PNH) e conhecido como \"metodo da triplice inclusao\". Avalie as afirmativas a seguir sobre esse metodo. I. Inclusao dos movimentos sociais organizados, ampliando o dialogo entre gestao e sociedade civil. II. Inclusao dos coletivos de gestores, trabalhadores e usuarios na analise e no redesenho dos processos de trabalho. III. Inclusao dos sujeitos, considerando seus desejos, necessidades e interesses na producao de saude. IV. Inclusao restrita aos trabalhadores de saude de nivel superior, excluindo os demais membros da equipe do processo decisorio. Esta correto o que se afirma apenas em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I, II e III."
+        },
+        {
+          "letter": "B",
+          "text": "I e II."
+        },
+        {
+          "letter": "C",
+          "text": "II e III."
+        },
+        {
+          "letter": "D",
+          "text": "I, II, III e IV."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-humanizacao-pnh",
+      "explanation": "Os itens I-III descrevem corretamente a triplice inclusao (movimentos sociais, coletivos, sujeitos); IV contraria o principio da PNH, que busca ampliar, nao restringir, a participacao de toda a equipe.",
+      "references": [
+        "HumanizaSUS - Politica Nacional de Humanizacao (Ministerio da Saude, 2003)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b70af103359387b02a8416f6c11eb4e875734e2439d2fc3cb1d549e9d28a1c72"
+    },
+    {
+      "statement": "Conforme a Politica Nacional de Atencao Basica (Portaria no 2.436/2017), assinale a alternativa que descreve corretamente a composicao minima obrigatoria da equipe de Saude da Familia (eSF).",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Medico, enfermeiro, cirurgiao-dentista e agente comunitario de saude, sendo facultativa a presenca de auxiliar ou tecnico de enfermagem."
+        },
+        {
+          "letter": "B",
+          "text": "Medico, enfermeiro, auxiliar ou tecnico de enfermagem e agentes comunitarios de saude, sendo facultativa a inclusao de profissionais de saude bucal."
+        },
+        {
+          "letter": "C",
+          "text": "Medico, enfermeiro e agente comunitario de saude exclusivamente, vedada a presenca de qualquer tecnico ou auxiliar de enfermagem na composicao minima."
+        },
+        {
+          "letter": "D",
+          "text": "Enfermeiro, auxiliar ou tecnico de enfermagem e agentes comunitarios de saude, sendo a presenca do medico facultativa conforme disponibilidade municipal."
+        },
+        {
+          "letter": "E",
+          "text": "Medico, enfermeiro, auxiliar ou tecnico de enfermagem, agentes comunitarios de saude e, obrigatoriamente, cirurgiao-dentista e auxiliar de saude bucal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-basica-pnab",
+      "explanation": "A composicao minima da eSF e medico, enfermeiro, auxiliar/tecnico de enfermagem e ACS; a equipe de saude bucal (eSB) e uma adicao facultativa. A inverte o que e obrigatorio/facultativo; C exclui indevidamente o aux./tec. de enfermagem; D torna o medico facultativo; E torna a eSB obrigatoria.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b9816b8a16d5bfb2b378cdab8c02c7728801dbc4bd479835a5dd7fa25de2c8e3"
+    },
+    {
+      "statement": "Um dos principais legados conceituais da 8a Conferencia Nacional de Saude (1986) foi a defesa de uma concepcao ampliada de saude. Segundo essa concepcao, a saude e resultante",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente da ausencia de doenca, sendo um estado estritamente biologico e individual."
+        },
+        {
+          "letter": "B",
+          "text": "das condicoes de alimentacao, habitacao, educacao, renda, meio ambiente, trabalho, transporte, emprego, lazer, liberdade, acesso a servicos de saude, entre outros determinantes sociais, e nao apenas da ausencia de agravos."
+        },
+        {
+          "letter": "C",
+          "text": "unicamente do acesso a medicamentos e a tecnologias de diagnostico e tratamento."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente de fatores geneticos e hereditarios, nao sofrendo influencia do ambiente social."
+        },
+        {
+          "letter": "E",
+          "text": "da disponibilidade de leitos hospitalares por habitante, sendo esse o unico indicador relevante de saude de uma populacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "reforma-sanitaria-e-8a-conferencia-nacional-de-saude",
+      "explanation": "A concepcao ampliada de saude, consolidada na 8a CNS, reconhece a saude como resultante de multiplos determinantes sociais, nao apenas biologicos. As demais alternativas reduzem indevidamente esse conceito.",
+      "references": [
+        "Relatorio Final da 8a Conferencia Nacional de Saude (1986)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ba6545ecfcee6f8f67c33f15e909335bb5fd33190a9c853df3266005a143a6cc"
+    },
+    {
+      "statement": "O Programa Nacional de Melhoria do Acesso e da Qualidade da Atencao Basica (PMAQ-AB), instituido em 2011 com o objetivo de avaliar e qualificar o desempenho das equipes de Atencao Basica, teve seu modelo de financiamento especifico descontinuado a partir de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "2019, com a instituicao do Previne Brasil como novo modelo de financiamento da Atencao Primaria a Saude, que substituiu os repasses vinculados aos ciclos de avaliacao do PMAQ."
+        },
+        {
+          "letter": "B",
+          "text": "1990, com a promulgacao da Lei no 8.080, que ja previa desde entao um modelo de financiamento por desempenho equivalente ao Previne Brasil."
+        },
+        {
+          "letter": "C",
+          "text": "o PMAQ nunca foi descontinuado e continua sendo, ate hoje, o unico modelo de financiamento por desempenho da Atencao Basica no SUS."
+        },
+        {
+          "letter": "D",
+          "text": "2006, com a publicacao da primeira Politica Nacional de Atencao Basica, anterior a propria criacao do PMAQ."
+        },
+        {
+          "letter": "E",
+          "text": "2024, com a instituicao da Rede Alyne, que absorveu integralmente as atribuicoes do PMAQ."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fundatec",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "programa-nacional-de-melhoria-do-acesso-e-da-qualidade-pmaq",
+      "explanation": "O PMAQ foi descontinuado como modelo de financiamento especifico a partir do Previne Brasil (2019). B e anacronico; C nega a descontinuacao real; D e anacronico; E confunde politicas distintas.",
+      "references": [
+        "Portaria no 2.979/2019 (Previne Brasil)",
+        "Manual Instrutivo do PMAQ (2012), tratado exclusivamente como conteudo historico."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bec20b5b408dd91d961cb7c2334ef5fed82ac8dc9909e8cdcfaa301388f3cce2"
+    },
+    {
+      "statement": "A estrategia federal lancada em 2024 para reorganizar o cuidado materno-infantil no SUS, hoje denominada Rede Alyne, estabeleceu como uma de suas metas principais",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a reducao da mortalidade materna em 25% ate o ano de 2027."
+        },
+        {
+          "letter": "B",
+          "text": "a erradicacao total da mortalidade materna em territorio nacional ate 2025."
+        },
+        {
+          "letter": "C",
+          "text": "a reducao da mortalidade materna restrita as capitais dos estados, sem meta para os demais municipios."
+        },
+        {
+          "letter": "D",
+          "text": "o aumento do numero de partos cirurgicos como estrategia prioritaria de seguranca materna."
+        },
+        {
+          "letter": "E",
+          "text": "a meta e exclusivamente qualitativa, sem nenhum indicador numerico de referencia estabelecido."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-alyne-ex-rede-cegonha",
+      "explanation": "O Ministerio da Saude estabeleceu a meta de reducao de 25% da mortalidade materna ate 2027. B exagera; C restringe indevidamente; D contraria diretrizes de boas praticas obstetricas; E nega a existencia de meta numerica.",
+      "references": [
+        "Ministerio da Saude - lancamento da Rede Alyne (setembro de 2024), Portaria GM/MS no 5.350/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c37c10e8cb1eba79a76b1955ffb702ce4b80bac159a5d931af88dcc02b044de2"
+    },
+    {
+      "statement": "Na Politica Nacional de Humanizacao (PNH), a diretriz denominada \"Ambiencia\" refere-se",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente aos aspectos esteticos e decorativos dos espacos de saude, sem relacao com o processo de trabalho das equipes."
+        },
+        {
+          "letter": "B",
+          "text": "ao tratamento dado ao espaco fisico entendido como espaco social, profissional e de relacoes interpessoais, que deve propiciar atencao acolhedora, resolutiva e humana, favorecendo a producao de saude e de subjetividades."
+        },
+        {
+          "letter": "C",
+          "text": "unicamente as normas de biosseguranca e controle de infeccao hospitalar aplicaveis as unidades de saude."
+        },
+        {
+          "letter": "D",
+          "text": "ao dimensionamento de recursos humanos por metro quadrado de unidade de saude, conforme parametro nacional unico."
+        },
+        {
+          "letter": "E",
+          "text": "a substituicao de equipes multiprofissionais por sistemas informatizados de atendimento, reduzindo o contato humano no cuidado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-humanizacao-pnh",
+      "explanation": "Ambiencia, na PNH, trata o espaco fisico como espaco social/relacional que favorece o cuidado humanizado, nao apenas a estetica. A reduz o conceito ao decorativo; C confunde com biosseguranca; D e E sao distorcoes sem base na diretriz.",
+      "references": [
+        "HumanizaSUS - Politica Nacional de Humanizacao (Ministerio da Saude, 2003)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c4d007fe5a2e2e97ab675a12d1b39a551459a7ddfb042b33b57eb9eddd38e85b"
+    },
+    {
+      "statement": "A Politica Nacional de Atencao Basica reconhece atributos essenciais e derivados da Atencao Primaria a Saude. Avalie as afirmativas a seguir. I. Acesso de primeiro contato, longitudinalidade, integralidade e coordenacao do cuidado sao atributos essenciais da Atencao Primaria. II. Orientacao familiar, orientacao comunitaria e competencia cultural sao atributos derivados, que qualificam a atuacao dos atributos essenciais. III. A coordenacao do cuidado depende do reconhecimento de problemas abordados em outros pontos de atencao, garantindo a continuidade da assistencia ao usuario na rede. Esta correto o que se afirma em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I, apenas."
+        },
+        {
+          "letter": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "letter": "C",
+          "text": "I e III, apenas."
+        },
+        {
+          "letter": "D",
+          "text": "II e III, apenas."
+        },
+        {
+          "letter": "E",
+          "text": "I, II e III."
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-basica-pnab",
+      "explanation": "Os tres itens descrevem corretamente a distincao classica entre atributos essenciais e derivados da APS, incorporada pela PNAB.",
+      "references": [
+        "Portaria no 2.436/2017 GM/MS (PNAB)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c56f2a3eebf66b03de52e36475b5845ab4b5e670210480cea824a85ceddd8aa0"
+    },
+    {
+      "statement": "O principal objetivo da Rede de Atencao as Urgencias e Emergencias (RUE), enquanto politica publica organizadora do cuidado no SUS, e",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "concentrar todo o atendimento de urgencia exclusivamente em hospitais de grande porte, eliminando os demais pontos de atencao."
+        },
+        {
+          "letter": "B",
+          "text": "articular e integrar os diferentes pontos de atencao, ampliando e qualificando o acesso humanizado e integral aos usuarios em situacao de urgencia e emergencia, de forma agil e oportuna."
+        },
+        {
+          "letter": "C",
+          "text": "restringir o acesso ao atendimento de urgencia a casos previamente agendados, eliminando a demanda espontanea."
+        },
+        {
+          "letter": "D",
+          "text": "transferir a responsabilidade pelo atendimento de urgencia exclusivamente para a iniciativa privada, com repasse posterior ao SUS."
+        },
+        {
+          "letter": "E",
+          "text": "padronizar um unico protocolo clinico nacional, sem permitir adaptacao regional as diferentes realidades epidemiologicas."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-de-atencao-as-urgencias-e-emergencias-rue",
+      "explanation": "A RUE busca justamente articular pontos de atencao em rede, ampliando o acesso agil e humanizado. A concentra indevidamente em um so nivel; C nega a natureza da urgencia; D e E distorcem a logica publica e regionalizada da rede.",
+      "references": [
+        "Portaria de Consolidacao GM/MS no 3/2017, Anexo III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cc2caf6ae4f9a2f2082d201878d61f711ba272b3c02c449c6fd4f08852c14fee"
+    },
+    {
+      "statement": "A Clinica Ampliada e Compartilhada, diretriz da Politica Nacional de Humanizacao (PNH), e uma ferramenta teorica e pratica que busca, entre outros objetivos,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "restringir a abordagem clinica exclusivamente aos aspectos biologicos da doenca, evitando a interferencia de fatores sociais e subjetivos no plano terapeutico."
+        },
+        {
+          "letter": "B",
+          "text": "compreender e atuar sobre os processos de saude e adoecimento em sua complexidade, considerando a singularidade do sujeito e a corresponsabilizacao entre equipe, paciente e rede de cuidado no projeto terapeutico."
+        },
+        {
+          "letter": "C",
+          "text": "transferir integralmente a decisao clinica ao paciente, eliminando a responsabilidade tecnica da equipe de saude sobre o plano terapeutico."
+        },
+        {
+          "letter": "D",
+          "text": "padronizar rigidamente o plano terapeutico de todos os pacientes com o mesmo diagnostico, independentemente de suas condicoes sociais e subjetivas."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a avaliacao clinica individual por protocolos exclusivamente epidemiologicos e populacionais."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundatec",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-humanizacao-pnh",
+      "explanation": "A Clinica Ampliada busca ampliar o objeto de trabalho para alem da doenca, com compreensao diagnostica e terapeutica compartilhada, mantendo a responsabilidade tecnica da equipe. A nega a ampliacao; C exagera; D contraria a singularizacao; E nega a dimensao individual da clinica.",
+      "references": [
+        "HumanizaSUS - Politica Nacional de Humanizacao (Ministerio da Saude, 2003)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ceb0d2c9b96546fc715c1276f53ddfdec14c9062e3093250410b299d43351273"
+    },
+    {
+      "statement": "A Politica Nacional de Promocao da Saude (PNPS) tem como objetivo geral",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "promover a equidade e a melhoria das condicoes e dos modos de vida, ampliando a autonomia e a corresponsabilidade dos sujeitos e coletividades sobre a propria saude, com enfase na Atencao Basica."
+        },
+        {
+          "letter": "B",
+          "text": "substituir integralmente os servicos de atencao especializada e hospitalar por acoes exclusivamente educativas."
+        },
+        {
+          "letter": "C",
+          "text": "transferir a responsabilidade pela saude da populacao unicamente para o setor privado de planos de saude."
+        },
+        {
+          "letter": "D",
+          "text": "restringir as acoes de promocao da saude ao ambiente escolar, excluindo os demais espacos comunitarios."
+        },
+        {
+          "letter": "E",
+          "text": "padronizar um unico conjunto de praticas de promocao da saude, sem considerar as especificidades regionais do pais."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-promocao-da-saude-pnaps",
+      "explanation": "A PNPS busca ampliar autonomia e corresponsabilidade dos sujeitos, com enfase na Atencao Basica - nunca substituir niveis de atencao (B), transferir ao setor privado (C), restringir espacos (D) ou padronizar rigidamente (E).",
+      "references": [
+        "Politica Nacional de Promocao da Saude (PNPS), Anexo I da Portaria de Consolidacao GM/MS no 2/2017."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "da00eea52e6179f8a59e37c00d408386e06ebc62d110d7ec42043137c00a2906"
+    },
+    {
+      "statement": "Sobre o historico da Politica Nacional de Humanizacao (PNH) do SUS, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a PNH foi a primeira iniciativa de humanizacao do Ministerio da Saude, sem qualquer programa antecessor."
+        },
+        {
+          "letter": "B",
+          "text": "o Programa Nacional de Humanizacao da Assistencia Hospitalar (PNHAH), lancado em 2000 e restrito ao ambiente hospitalar, foi o antecessor direto da PNH, lancada em 2003 com escopo ampliado para toda a rede do SUS."
+        },
+        {
+          "letter": "C",
+          "text": "a PNH substituiu integralmente o PNHAH em 1998, dois anos antes da criacao deste ultimo."
+        },
+        {
+          "letter": "D",
+          "text": "o PNHAH permanece vigente e independente da PNH ate os dias atuais, sem nenhuma relacao historica entre as duas iniciativas."
+        },
+        {
+          "letter": "E",
+          "text": "a PNH foi criada exclusivamente para reorganizar a atencao hospitalar, sem alcance sobre a Atencao Basica ou a gestao do SUS."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-humanizacao-pnh",
+      "explanation": "O PNHAH (2000, hospitalar) antecede e e absorvido pela PNH (2003, transversal a toda a rede). As demais alternativas contem inversoes cronologicas ou reducoes indevidas do escopo da PNH.",
+      "references": [
+        "HumanizaSUS - Politica Nacional de Humanizacao (Ministerio da Saude, 2003)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ddbc4680d82dd5ed83e13e12ea1422a25d9800d47d06e219b8adbef001f4d9a7"
+    },
+    {
+      "statement": "Segundo a Lei no 11.350/2006, que regulamenta a atividade dos Agentes Comunitarios de Saude (ACS) e dos Agentes de Combate as Endemias (ACE), e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o exercicio da atividade de ACS nao exige processo seletivo publico, podendo ser realizado por indicacao direta e discricionaria do gestor municipal."
+        },
+        {
+          "letter": "B",
+          "text": "o ACS deve residir na area da comunidade em que atua, como um dos requisitos para o exercicio da atividade, favorecendo o vinculo territorial com a populacao adscrita."
+        },
+        {
+          "letter": "C",
+          "text": "a Lei no 11.350/2006 veda expressamente a realizacao de visitas domiciliares pelo ACS, atividade reservada exclusivamente a equipe de enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "o ACS e obrigatoriamente um profissional de nivel superior, com formacao especifica em Enfermagem ou Medicina."
+        },
+        {
+          "letter": "E",
+          "text": "a Lei no 11.350/2006 extinguiu a figura do Agente Comunitario de Saude, substituindo-a integralmente pela categoria de Tecnico em Saude Comunitaria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "agente-comunitario-de-saude-acs",
+      "explanation": "Residir na comunidade e requisito estabelecido pela lei, reforcando o vinculo territorial. A nega a exigencia de processo seletivo publico; C nega a visita domiciliar; D exige nivel superior indevidamente; E e inventado.",
+      "references": [
+        "Lei no 11.350/2006."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e0ff15b3af88843924fcfd28c2e07af8a3db61b56c772dc4feed19983c77e177"
+    },
+    {
+      "statement": "A Politica Nacional de Atencao Integral a Saude do Homem (PNAISH) foi formulada a partir da constatacao de que os homens brasileiros, historicamente, apresentavam menor procura pelos servicos de atencao primaria a saude em comparacao as mulheres. Seu principal objetivo e",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "facilitar e qualificar o acesso da populacao masculina aos servicos de saude, com foco na atencao integral, incluindo acoes de prevencao e promocao, e nao apenas no tratamento de agravos ja instalados."
+        },
+        {
+          "letter": "B",
+          "text": "restringir o atendimento em unidades de saude exclusivamente a populacao masculina, excluindo mulheres do atendimento nesses servicos."
+        },
+        {
+          "letter": "C",
+          "text": "criar uma rede de unidades de saude paralela ao SUS, destinada exclusivamente ao publico masculino."
+        },
+        {
+          "letter": "D",
+          "text": "vincular o acesso aos servicos de saude exclusivamente a exames urologicos, sem outras acoes de atencao integral."
+        },
+        {
+          "letter": "E",
+          "text": "restringir a politica a acoes educativas em ambiente de trabalho, sem qualquer relacao com unidades de saude."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-atencao-integral-a-saude-do-homem-pnaish",
+      "explanation": "A PNAISH busca ampliar e qualificar o acesso da populacao masculina a atencao integral, corrigindo uma lacuna historica de procura - nao restringe unidades a homens (B), nao cria rede paralela (C), nao se limita a exames urologicos (D) nem a ambientes de trabalho (E).",
+      "references": [
+        "Politica Nacional de Atencao Integral a Saude do Homem (PNAISH) - conteudo conceitual."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e41e224e36f3cec3e812732aa7a4fa8708ddde2b8cd292ead32c6758370b821a"
+    },
+    {
+      "statement": "A Politica Nacional de Educacao Popular em Saude no SUS (PNEPS-SUS) tem como um de seus principais objetivos",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "promover o dialogo entre os saberes populares e o conhecimento tecnico-cientifico, fortalecendo a participacao social e a construcao compartilhada do cuidado em saude."
+        },
+        {
+          "letter": "B",
+          "text": "substituir integralmente o conhecimento tecnico-cientifico dos profissionais de saude pelos saberes populares, invertendo a hierarquia de decisao clinica."
+        },
+        {
+          "letter": "C",
+          "text": "restringir a participacao social exclusivamente aos processos de fiscalizacao financeira do SUS, sem relacao com o cuidado em saude."
+        },
+        {
+          "letter": "D",
+          "text": "padronizar nacionalmente um unico saber popular obrigatorio, desconsiderando as diferencas culturais regionais."
+        },
+        {
+          "letter": "E",
+          "text": "desvincular a educacao popular em saude de qualquer articulacao com os Conselhos e Conferencias de Saude."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-educacao-popular-em-saude-pneps-sus",
+      "explanation": "A PNEPS-SUS busca o dialogo entre saberes populares e tecnico-cientificos, nao a substituicao de um pelo outro (B), nem a restricao a fiscalizacao financeira (C), nem a padronizacao rigida (D) ou o isolamento do controle social (E).",
+      "references": [
+        "Portaria no 2.761/2013 GM/MS (PNEPS-SUS)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e8812c4579a65a19f24070ab67b03de9619ba2c7c781d06133bd570297828cc8"
+    },
+    {
+      "statement": "A Politica Nacional de Praticas Integrativas e Complementares (PNPIC) tem como objetivo geral",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "incorporar e implementar, no ambito do SUS, praticas de cuidado reconhecidas pela Organizacao Mundial da Saude como Medicinas Tradicionais, Complementares e Integrativas, ampliando as opcoes terapeuticas ofertadas a populacao."
+        },
+        {
+          "letter": "B",
+          "text": "substituir integralmente a medicina baseada em evidencias cientificas por praticas exclusivamente empiricas, sem qualquer criterio tecnico de incorporacao."
+        },
+        {
+          "letter": "C",
+          "text": "restringir o acesso as praticas integrativas exclusivamente a rede privada de saude, excluindo o SUS."
+        },
+        {
+          "letter": "D",
+          "text": "padronizar uma unica pratica integrativa obrigatoria em todas as unidades basicas de saude do pais."
+        },
+        {
+          "letter": "E",
+          "text": "vincular as praticas integrativas exclusivamente ao tratamento de transtornos mentais, sem aplicacao a outros agravos."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-praticas-integrativas-e-complementares-pnpic",
+      "explanation": "A PNPIC busca ampliar as opcoes terapeuticas do SUS por meio de praticas reconhecidas pela OMS, sem substituir a medicina convencional (B), sem restringir ao setor privado (C), sem padronizacao rigida (D) e sem restricao a um unico tipo de agravo (E).",
+      "references": [
+        "Portaria no 971/2006 GM/MS (PNPIC)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "eaa6f083e5bbebcfd93809dc3d7d1ad28b436a0bd0a04c2948da7a812cde26b6"
+    },
+    {
+      "statement": "Assinale a alternativa correta sobre os atores envolvidos no Movimento da Reforma Sanitaria Brasileira, nas decadas de 1970 e 1980.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "O movimento foi conduzido exclusivamente por medicos sanitaristas vinculados ao governo federal da epoca, sem qualquer participacao de entidades da sociedade civil."
+        },
+        {
+          "letter": "B",
+          "text": "O movimento reuniu um conjunto amplo e heterogeneo de atores - profissionais de saude, entidades academicas, movimentos sociais e populares, sindicatos e parlamentares - articulados em torno da proposta de universalizacao do direito a saude."
+        },
+        {
+          "letter": "C",
+          "text": "O movimento foi liderado por organismos internacionais de saude, sem qualquer protagonismo de atores brasileiros."
+        },
+        {
+          "letter": "D",
+          "text": "O movimento surgiu exclusivamente no ambiente hospitalar privado, com o objetivo de ampliar a oferta de planos de saude suplementares."
+        },
+        {
+          "letter": "E",
+          "text": "O movimento nao teve qualquer relacao com a academia ou com universidades, sendo restrito a pratica assistencial cotidiana."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "reforma-sanitaria-e-8a-conferencia-nacional-de-saude",
+      "explanation": "O Movimento da Reforma Sanitaria foi plural, reunindo diferentes setores da sociedade em torno da universalizacao da saude. As demais alternativas restringem indevidamente sua composicao.",
+      "references": [
+        "Literatura consolidada sobre a Reforma Sanitaria Brasileira",
+        "Relatorio Final da 8a Conferencia Nacional de Saude (1986)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ec2d66bf14e7fff32c7280d79ef3c63cc7bbecddd9e6f97dee427797875e63e9"
+    },
+    {
+      "statement": "As acoes desenvolvidas no ambito do Programa Saude na Escola (PSE) organizam-se, entre outros eixos, em torno da avaliacao das condicoes de saude dos estudantes. Avalie as afirmativas a seguir sobre esse eixo. I. Inclui acoes como avaliacao antropometrica, avaliacao da saude bucal e verificacao da situacao vacinal dos estudantes. II. E executado exclusivamente por profissionais medicos, sendo vedada a participacao de enfermeiros ou outros profissionais da equipe de Atencao Basica. III. Articula-se com a Atencao Basica, aproximando as equipes de saude do territorio escolar. Esta correto o que se afirma em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I e III, apenas."
+        },
+        {
+          "letter": "B",
+          "text": "I, apenas."
+        },
+        {
+          "letter": "C",
+          "text": "II e III, apenas."
+        },
+        {
+          "letter": "D",
+          "text": "I, II e III."
+        },
+        {
+          "letter": "E",
+          "text": "III, apenas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "programa-saude-na-escola-pse",
+      "explanation": "I e III descrevem corretamente o eixo de avaliacao de condicoes de saude e sua articulacao com a Atencao Basica; II restringe indevidamente a execucao a medicos, quando na pratica e atividade multiprofissional.",
+      "references": [
+        "Decreto no 6.286/2007",
+        "Portaria Interministerial no 1.055/2017."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f1ff9d1488b080992c09e70bd5a5233b1bc79ef404a12a78786bee5e9589ef45"
+    },
+    {
+      "statement": "Na Politica Nacional de Humanizacao (PNH), a diretriz de \"Cogestao\" propoe",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a centralizacao das decisoes de gestao exclusivamente na equipe dirigente da instituicao, reduzindo a participacao de trabalhadores e usuarios a um papel consultivo nao vinculante."
+        },
+        {
+          "letter": "B",
+          "text": "a inclusao de trabalhadores, gestores e usuarios nos processos de analise, decisao e avaliacao da gestao em saude, ampliando a corresponsabilidade e o compartilhamento do poder decisorio."
+        },
+        {
+          "letter": "C",
+          "text": "a substituicao dos colegiados gestores por decisoes tecnicas individuais tomadas por especialistas, para evitar a morosidade de processos coletivos."
+        },
+        {
+          "letter": "D",
+          "text": "a delegacao total da gestao de cada unidade de saude aos usuarios, retirando dos trabalhadores qualquer responsabilidade sobre o processo decisorio."
+        },
+        {
+          "letter": "E",
+          "text": "a padronizacao nacional de um unico modelo de gestao hospitalar, sem espaco para arranjos locais de colegiado gestor."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "politica-nacional-de-humanizacao-pnh",
+      "explanation": "Cogestao amplia o compartilhamento do poder decisorio entre trabalhadores, gestores e usuarios - nao centraliza (A), nao elimina processos coletivos (C), nao transfere tudo aos usuarios (D) e nao impoe um modelo unico e rigido (E).",
+      "references": [
+        "HumanizaSUS - Politica Nacional de Humanizacao (Ministerio da Saude, 2003)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fa12fd73f57204c79c4618e9486f29ff74f26c9438f5df61a4f05a7c49fb353c"
+    },
+    {
+      "statement": "Sobre as modalidades de Centros de Atencao Psicossocial (CAPS) que compoem a Rede de Atencao Psicossocial, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a modalidade CAPS AD e destinada exclusivamente ao atendimento de criancas e adolescentes com transtornos mentais, sem relacao com uso de alcool e outras drogas."
+        },
+        {
+          "letter": "B",
+          "text": "o CAPS III se diferencia dos CAPS I e II, entre outros aspectos, por oferecer acolhimento noturno e funcionamento vinte e quatro horas, incluindo finais de semana e feriados."
+        },
+        {
+          "letter": "C",
+          "text": "todas as modalidades de CAPS tem exatamente o mesmo porte populacional de referencia, nao havendo distincao por tamanho do municipio."
+        },
+        {
+          "letter": "D",
+          "text": "o CAPS i e destinado ao atendimento de idosos com transtornos mentais graves e persistentes, sendo a sigla \"i\" referente a \"idoso\"."
+        },
+        {
+          "letter": "E",
+          "text": "a existencia de CAPS em um municipio dispensa a necessidade de articulacao com a Atencao Basica ou com servicos hospitalares."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "politicas-publicas-de-saude",
+      "topic": "rede-de-atencao-psicossocial-raps",
+      "explanation": "O CAPS III e a modalidade com funcionamento 24h, incluindo acolhimento noturno. A troca o publico do CAPS AD; C nega a diferenciacao por porte populacional; D erra o significado de \"i\" (infantojuvenil, nao idoso); E contraria a logica de rede articulada.",
+      "references": [
+        "Portaria no 3.088/2011, consolidada na Portaria de Consolidacao GM/MS no 3/2017, Anexo III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fd502cf0abbb36a8aac08d69319e1428647f383e4f1b43417d31e258d0c42e55"
+    }
+  ]
+}

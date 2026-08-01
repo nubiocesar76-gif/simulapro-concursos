@@ -1,0 +1,401 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "A cadeia de sobrevivencia intra-hospitalar, segundo a atualizacao vigente das diretrizes de suporte de vida, descreve uma sequencia de elos que aumenta a probabilidade de sobrevida do paciente em parada cardiorrespiratoria. Assinale a alternativa que apresenta a sequencia correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Reconhecimento precoce da deterioracao clinica e acionamento do time de resposta rapida, reanimacao cardiopulmonar de alta qualidade, desfibrilacao precoce, suporte avancado de vida e cuidados pos-parada, recuperacao."
+        },
+        {
+          "letter": "B",
+          "text": "Desfibrilacao precoce, reconhecimento e acionamento do time de resposta rapida, reanimacao cardiopulmonar de alta qualidade, suporte avancado de vida, recuperacao."
+        },
+        {
+          "letter": "C",
+          "text": "Reanimacao cardiopulmonar de alta qualidade, reconhecimento e acionamento do time de resposta rapida, desfibrilacao precoce, suporte avancado de vida, recuperacao."
+        },
+        {
+          "letter": "D",
+          "text": "Suporte avancado de vida, reconhecimento e acionamento do time de resposta rapida, reanimacao cardiopulmonar de alta qualidade, desfibrilacao precoce, recuperacao."
+        },
+        {
+          "letter": "E",
+          "text": "Reconhecimento precoce, reanimacao cardiopulmonar de alta qualidade, recuperacao, desfibrilacao precoce, suporte avancado de vida."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "urgencia-e-emergencia",
+      "topic": "parada-cardiorrespiratoria-e-rcp",
+      "explanation": "Correta (A): reconhecimento e acionamento abrem a cadeia, seguidos de RCP, desfibrilacao precoce, suporte avancado e cuidados pos-parada, culminando na recuperacao. Incorretas B, C, D invertem elos; E trata recuperacao como etapa intermediaria.",
+      "references": [
+        "AHA Guidelines 2025 - Cadeia de Sobrevivencia Intra-Hospitalar"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "01bfa320c43e87f11484c1510810eaca7f05745f9127821bb9d8f21d2edddcc9"
+    },
+    {
+      "statement": "Um enfermeiro presencia a parada cardiorrespiratoria de um paciente adulto, internado em enfermaria e monitorizado por telemetria, que apresenta ritmo desfibrilavel no monitor. A equipe de resposta rapida e acionada e o carro de emergencia e trazido ao leito. Considerando os parametros de reanimacao cardiopulmonar de alta qualidade recomendados na atualizacao vigente das diretrizes de suporte de vida, assinale a conduta correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Iniciar as compressoes toracicas somente apos a obtencao de acesso venoso periferico, garantindo via para administracao de farmacos antes de qualquer manobra mecanica."
+        },
+        {
+          "letter": "B",
+          "text": "Realizar compressoes toracicas com profundidade de 5 a 6 cm, permitindo o retorno total do torax entre uma compressao e outra, sem apoiar-se sobre o gradil costal do paciente."
+        },
+        {
+          "letter": "C",
+          "text": "Interromper as compressoes toracicas por ate 30 segundos a cada checagem de pulso, garantindo maior precisao na avaliacao do ritmo cardiaco."
+        },
+        {
+          "letter": "D",
+          "text": "Priorizar a ventilacao com bolsa-valvula-mascara antes de iniciar as compressoes toracicas, assegurando a oxigenacao previa do paciente."
+        },
+        {
+          "letter": "E",
+          "text": "Reduzir a frequencia das compressoes toracicas para 80 por minuto em pacientes idosos, adaptando o parametro a fragilidade musculo-esqueletica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "urgencia-e-emergencia",
+      "topic": "parada-cardiorrespiratoria-e-rcp",
+      "explanation": "Correta (B): profundidade de 5-6cm com retorno total do torax entre compressoes, evitando o apoio continuo sobre o gradil costal. Incorretas: (A) inverte a prioridade, compressoes iniciam imediatamente; (C) interrupcoes devem ser <10s; (D) inverte a sequencia C-A-B; (E) frequencia de 100-120/min nao e reduzida por faixa etaria.",
+      "references": [
+        "AHA Guidelines 2025 - RCP de alta qualidade em adultos"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0c94e7e3bd7738e81a9520c89482194afc74964588cd3bdfe63fd7aa470675ed"
+    },
+    {
+      "statement": "Um paciente da entrada no servico de emergencia com dispneia intensa, ortopneia, estertores crepitantes bilaterais a ausculta pulmonar e taquicardia, com historico de insuficiencia cardiaca. O quadro e compativel com edema agudo de pulmao. Assinale a conduta de enfermagem inicial correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Posicionar o paciente em decubito dorsal horizontal, com os membros inferiores elevados, para favorecer o retorno venoso."
+        },
+        {
+          "letter": "B",
+          "text": "Posicionar o paciente em posicao de Fowler alta, administrar oxigenio suplementar conforme prescricao e saturacao periferica, e restringir a infusao de liquidos intravenosos, comunicando o quadro a equipe medica."
+        },
+        {
+          "letter": "C",
+          "text": "Priorizar a infusao rapida de solucao cristaloide para restabelecer o volume circulante efetivo antes de qualquer outra medida."
+        },
+        {
+          "letter": "D",
+          "text": "Aguardar a prescricao de diuretico antes de iniciar qualquer medida de suporte, incluindo o posicionamento do paciente."
+        },
+        {
+          "letter": "E",
+          "text": "Restringir a administracao de oxigenio suplementar ate a confirmacao diagnostica por radiografia de torax, para evitar mascarar sinais clinicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "urgencia-e-emergencia",
+      "topic": "emergencias-cardiovasculares",
+      "explanation": "Correta (B): Fowler alta reduz retorno venoso e trabalho respiratorio; O2 e restricao hidrica sao medidas imediatas. Incorretas: (A) eleva pre-carga, agrava congestao; (C) piora sobrecarga volemica; (D) posicionamento/O2 nao dependem de diuretico; (E) O2 nao deve ser postergado por exame de imagem.",
+      "references": [
+        "Diretrizes da Sociedade Brasileira de Cardiologia - insuficiencia cardiaca aguda"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2e204d613325f0b646e79c36610554a187396d75b72cd04e658b7b46fad8f340"
+    },
+    {
+      "statement": "Durante a avaliacao neurologica de um paciente vitima de traumatismo cranioencefalico, observa-se: abertura ocular somente a dor; resposta verbal confusa; resposta motora localiza o estimulo doloroso. Assinale o escore correto na Escala de Coma de Glasgow.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "9"
+        },
+        {
+          "letter": "B",
+          "text": "11"
+        },
+        {
+          "letter": "C",
+          "text": "13"
+        },
+        {
+          "letter": "D",
+          "text": "O escore nao pode ser calculado sem a avaliacao da resposta pupilar, item obrigatorio da escala."
+        },
+        {
+          "letter": "E",
+          "text": "7"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "urgencia-e-emergencia",
+      "topic": "atendimento-ao-politraumatizado",
+      "explanation": "Correta (B): abertura ocular a dor=2, resposta verbal confusa=4, resposta motora localiza a dor=5, soma=11. Incorretas A, C, E resultam de somas incorretas; D e pegadinha - a escala nao possui dominio de resposta pupilar.",
+      "references": [
+        "Escala de Coma de Glasgow (Teasdale and Jennett), adotada nos protocolos AHA/ATLS"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5a5d4e14545625d3bae22519c84f58808326d71c95338a8ea8425028a7651daf"
+    },
+    {
+      "statement": "Um paciente com doenca renal cronica apresenta potassio serico de 6,8 mEq/L e o eletrocardiograma evidencia onda T apiculada e alargamento do complexo QRS. Assinale a conduta de enfermagem correta, conforme prescricao medica.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Restringir a ingestao dietetica de potassio, sem necessidade de intervencao medicamentosa imediata, por nao haver risco cardiaco associado a esse valor."
+        },
+        {
+          "letter": "B",
+          "text": "Administrar gluconato de calcio por via intravenosa para estabilizacao da membrana miocardica, seguido de insulina regular associada a glicose para deslocamento intracelular do potassio, conforme prescricao medica."
+        },
+        {
+          "letter": "C",
+          "text": "Administrar diuretico de alca isoladamente como primeira medida, aguardando seu efeito antes de qualquer outra intervencao."
+        },
+        {
+          "letter": "D",
+          "text": "Aguardar a repeticao do exame laboratorial em 6 horas antes de comunicar a alteracao eletrocardiografica a equipe medica."
+        },
+        {
+          "letter": "E",
+          "text": "Reduzir a velocidade de infusao de solucoes intravenosas em curso, sem qualquer outra intervencao medicamentosa, por se tratar de medida suficiente diante do quadro."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "urgencia-e-emergencia",
+      "topic": "disturbios-hidroeletroliticos-e-acido-basicos",
+      "explanation": "Correta (B): gluconato de calcio estabiliza a membrana miocardica, seguido de insulina+glicose para deslocamento intracelular do potassio. Incorretas: (A) nega a gravidade ja evidenciada no ECG; (C) diuretico isolado tem acao mais lenta; (D) postergar comunicacao de alteracao de risco e inseguro; (E) nao trata a causa.",
+      "references": [
+        "AHA Guidelines 2025 - manejo de hipercalemia com risco de parada cardiaca"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9bdfcb804316b376adac803baee93ec81feac91fb70c301566113ad265e5a225"
+    },
+    {
+      "statement": "Um paciente de 58 anos, hipertenso, da entrada na emergencia com dor toracica opressiva de inicio ha 40 minutos, irradiada para o membro superior esquerdo, associada a sudorese fria e saturacao periferica de oxigenio de 97% em ar ambiente. Considerando o protocolo de dor toracica e as diretrizes vigentes de manejo inicial da sindrome coronariana aguda, assinale a conduta de enfermagem correta.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Priorizar a coleta de exames laboratoriais de marcadores de necrose miocardica antes da realizacao do eletrocardiograma de 12 derivacoes."
+        },
+        {
+          "letter": "B",
+          "text": "Realizar eletrocardiograma de 12 derivacoes em ate 10 minutos da chegada, associado a monitorizacao cardiaca continua e obtencao de acesso venoso periferico, comunicando o resultado a equipe medica."
+        },
+        {
+          "letter": "C",
+          "text": "Administrar oxigenio suplementar de rotina, independentemente da saturacao periferica de oxigenio apresentada pelo paciente."
+        },
+        {
+          "letter": "D",
+          "text": "Administrar acido acetilsalicilico mastigavel imediatamente, independentemente de historico de alergia ou sangramento ativo."
+        },
+        {
+          "letter": "E",
+          "text": "Manter o paciente exclusivamente em decubito dorsal horizontal ate a avaliacao medica, independentemente do grau de desconforto referido."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "urgencia-e-emergencia",
+      "topic": "emergencias-cardiovasculares",
+      "explanation": "Correta (B): ECG de 12 derivacoes em ate 10 minutos e a meta do protocolo de dor toracica. Incorretas: (A) inverte prioridade diagnostica; (C) O2 de rotina nao indicado com saturacao adequada; (D) AAS exige avaliacao previa de contraindicacoes; (E) posicionamento deve considerar conforto respiratorio.",
+      "references": [
+        "Diretrizes da Sociedade Brasileira de Cardiologia - sindrome coronariana aguda"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bbd61ba19602cea06ba727716ba56ae03afd24b0c1c1592024acf5f0f07c3be1"
+    },
+    {
+      "statement": "Uma vitima de acidente motociclistico chega ao servico de emergencia consciente, respirando espontaneamente, com via aerea pervia, e apresenta hemorragia exsanguinante em membro inferior, com sangramento pulsatil visivel a olho nu. Considerando a atualizacao vigente do protocolo de atendimento inicial ao politraumatizado, assinale a conduta prioritaria.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Avaliar e assegurar a via aerea com protecao da coluna cervical antes de qualquer intervencao sobre o sangramento, seguindo estritamente a sequencia tradicional de avaliacao A-B-C-D-E."
+        },
+        {
+          "letter": "B",
+          "text": "Iniciar o atendimento pelo controle imediato da hemorragia exsanguinante externa (compressao direta ou torniquete), antes da sequencia tradicional de avaliacao da via aerea, conforme a atualizacao vigente do protocolo de atendimento ao trauma."
+        },
+        {
+          "letter": "C",
+          "text": "Postergar o controle da hemorragia ate a estabilizacao completa da via aerea, por considerar que o risco de obstrucao respiratoria e sempre superior ao risco de exsanguinacao."
+        },
+        {
+          "letter": "D",
+          "text": "Priorizar a avaliacao neurologica pela Escala de Coma de Glasgow antes de qualquer intervencao sobre a via aerea ou a hemorragia."
+        },
+        {
+          "letter": "E",
+          "text": "Classificar a hemorragia exsanguinante externa como prioridade equivalente a avaliacao circulatoria (C), sem justificar alteracao na ordem tradicional da avaliacao primaria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "urgencia-e-emergencia",
+      "topic": "atendimento-ao-politraumatizado",
+      "explanation": "Correta (B): a edicao vigente introduziu o xABCDE, elevando o controle de hemorragia exsanguinante externa para antes da via aerea. Incorretas: (A) e (E) reproduzem o protocolo pre-atualizacao; (C) nega o fundamento da atualizacao; (D) inverte a ordem da avaliacao primaria.",
+      "references": [
+        "ATLS, 11a edicao (American College of Surgeons, 2025) - introducao do xABCDE"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c9584e724dfcec8e42d4eb2ac423f83c20a8a496378dc982aecef912f7ee359e"
+    },
+    {
+      "statement": "Um paciente vitima de traumatismo cranioencefalico apresenta escore de 10 na Escala de Coma de Glasgow. Assinale a alternativa correta quanto a classificacao de gravidade e a conduta indicada.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Traumatismo cranioencefalico leve, compativel com escore de Glasgow entre 13 e 15; indicar alta hospitalar apos periodo de observacao de 2 horas."
+        },
+        {
+          "letter": "B",
+          "text": "Traumatismo cranioencefalico moderado, compativel com escore de Glasgow entre 9 e 12; indicar monitorizacao neurologica rigorosa, reavaliacoes frequentes do escore e investigacao por imagem, conforme avaliacao medica."
+        },
+        {
+          "letter": "C",
+          "text": "Traumatismo cranioencefalico grave, compativel com escore de Glasgow igual ou inferior a 8; indicar via aerea definitiva imediata, independentemente de outros achados clinicos."
+        },
+        {
+          "letter": "D",
+          "text": "A classificacao de gravidade nao pode ser determinada apenas pelo escore de Glasgow, sendo obrigatoria a tomografia de cranio antes de qualquer classificacao."
+        },
+        {
+          "letter": "E",
+          "text": "Traumatismo cranioencefalico moderado, compativel com escore de Glasgow entre 9 e 12; sem necessidade de reavaliacoes adicionais, visto que o escore inicial ja define definitivamente a conduta."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "urgencia-e-emergencia",
+      "topic": "atendimento-ao-politraumatizado",
+      "explanation": "Correta (B): escore 10 = TCE moderado (9-12), exige monitorizacao e reavaliacoes seriadas. Incorretas A, C atribuem faixas incompativeis; D nega validade clinica da escala; E acerta a classificacao mas erra a conduta ao dispensar reavaliacoes.",
+      "references": [
+        "Escala de Coma de Glasgow (Teasdale and Jennett), adotada nos protocolos AHA/ATLS"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cb4ce509987f934ec9cf3f1cd8cea62e2c1cc431458082a70127230e4de7fe44"
+    },
+    {
+      "statement": "Apos a conclusao da avaliacao primaria de um paciente politraumatizado, ja estabilizado hemodinamicamente, a equipe de enfermagem inicia a proxima etapa do atendimento. Assinale a alternativa correta sobre a avaliacao secundaria.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Coleta do historico AMPLA e exame cefalo-podalico completo, realizados simultaneamente a avaliacao primaria, para nao retardar o atendimento."
+        },
+        {
+          "letter": "B",
+          "text": "Exame fisico completo da cabeca aos pes e coleta do historico AMPLA (Alergias, Medicamentos em uso, Passado medico, Liquidos/alimentos ingeridos recentemente, Ambiente/eventos relacionados ao trauma), realizados somente apos a conclusao e estabilizacao da avaliacao primaria."
+        },
+        {
+          "letter": "C",
+          "text": "Dispensa da coleta do historico AMPLA quando o paciente encontra-se consciente e orientado, por ja ser capaz de relatar espontaneamente as informacoes relevantes."
+        },
+        {
+          "letter": "D",
+          "text": "Exame fisico limitado a regiao correspondente ao mecanismo de trauma relatado, dispensando a avaliacao das demais regioes corporais."
+        },
+        {
+          "letter": "E",
+          "text": "Priorizacao do historico AMPLA sobre o exame fisico, por fornecer informacoes mais relevantes para a conduta clinica imediata."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "urgencia-e-emergencia",
+      "topic": "atendimento-ao-politraumatizado",
+      "explanation": "Correta (B): a avaliacao secundaria so e iniciada apos a conclusao e estabilizacao da primaria. Incorretas: (A) inverte a sequencia; (C) AMPLA e coletado independentemente do nivel de consciencia; (D) exame deve ser completo; (E) nao ha hierarquia estabelecida entre historico e exame fisico.",
+      "references": [
+        "ATLS, 11a edicao (American College of Surgeons, 2025) - avaliacao secundaria e historico AMPLA"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f40041c362391ea3b2850f2f844962a456980c6541064a39ab4ceb1ed59b09ff"
+    },
+    {
+      "statement": "Um paciente com diagnostico de cetoacidose diabetica apresenta a seguinte gasometria arterial: pH 7,28; HCO3- 14 mEq/L; PaCO2 28 mmHg. Assinale a interpretacao correta do disturbio acido-basico.",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Alcalose respiratoria descompensada, decorrente de hiperventilacao isolada, sem participacao metabolica."
+        },
+        {
+          "letter": "B",
+          "text": "Acidose metabolica com compensacao respiratoria parcial, compativel com respiracao de Kussmaul."
+        },
+        {
+          "letter": "C",
+          "text": "Acidose respiratoria descompensada, decorrente de hipoventilacao alveolar."
+        },
+        {
+          "letter": "D",
+          "text": "Alcalose metabolica com compensacao respiratoria, decorrente de perda de acidos pelo trato gastrointestinal."
+        },
+        {
+          "letter": "E",
+          "text": "Disturbio misto, com acidose metabolica e acidose respiratoria concomitantes, sem relacao de compensacao entre elas."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "urgencia-e-emergencia",
+      "topic": "disturbios-hidroeletroliticos-e-acido-basicos",
+      "explanation": "Correta (B): pH baixo confirma acidose; HCO3- reduzido indica origem metabolica; PaCO2 reduzido indica compensacao respiratoria (Kussmaul), parcial pois o pH permanece alterado. Incorretas A, C, D contradizem os valores de pH/PaCO2/HCO3; E trata a compensacao esperada como segundo disturbio.",
+      "references": [
+        "Diretrizes da Sociedade Brasileira de Diabetes - cetoacidose diabetica"
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fb20fdcbe8624d18f86153e3cc689750360614fb7fe525e7c1316a1ff1490cbc"
+    }
+  ]
+}

@@ -63,6 +63,7 @@ export type Database = {
           created_at: string
           id: string
           name: string
+          style_summary: string | null
           updated_at: string
         }
         Insert: {
@@ -70,6 +71,7 @@ export type Database = {
           created_at?: string
           id?: string
           name: string
+          style_summary?: string | null
           updated_at?: string
         }
         Update: {
@@ -77,6 +79,7 @@ export type Database = {
           created_at?: string
           id?: string
           name?: string
+          style_summary?: string | null
           updated_at?: string
         }
         Relationships: []
@@ -157,6 +160,404 @@ export type Database = {
           updated_at?: string
         }
         Relationships: []
+      }
+      editorial_ai_annotations: {
+        Row: {
+          created_at: string
+          criterion: string
+          cycle_id: string
+          description: string
+          id: string
+          source_ref: string | null
+        }
+        Insert: {
+          created_at?: string
+          criterion: string
+          cycle_id: string
+          description: string
+          id?: string
+          source_ref?: string | null
+        }
+        Update: {
+          created_at?: string
+          criterion?: string
+          cycle_id?: string
+          description?: string
+          id?: string
+          source_ref?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_annotations_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_batches: {
+        Row: {
+          architecture_id: string | null
+          created_at: string
+          created_by: string
+          description: string | null
+          id: string
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          architecture_id?: string | null
+          created_at?: string
+          created_by: string
+          description?: string | null
+          id?: string
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          architecture_id?: string | null
+          created_at?: string
+          created_by?: string
+          description?: string | null
+          id?: string
+          name?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_batches_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_contents: {
+        Row: {
+          alternatives: Json
+          bibliographic_reference: string | null
+          cognitive_objective: string | null
+          concept_reference: string | null
+          context: string | null
+          correct_answer: string | null
+          created_at: string
+          cycle_id: string
+          editorial_metadata: Json | null
+          explanation: string | null
+          id: string
+          statement: string | null
+          version: number
+        }
+        Insert: {
+          alternatives?: Json
+          bibliographic_reference?: string | null
+          cognitive_objective?: string | null
+          concept_reference?: string | null
+          context?: string | null
+          correct_answer?: string | null
+          created_at?: string
+          cycle_id: string
+          editorial_metadata?: Json | null
+          explanation?: string | null
+          id?: string
+          statement?: string | null
+          version: number
+        }
+        Update: {
+          alternatives?: Json
+          bibliographic_reference?: string | null
+          cognitive_objective?: string | null
+          concept_reference?: string | null
+          context?: string | null
+          correct_answer?: string | null
+          created_at?: string
+          cycle_id?: string
+          editorial_metadata?: Json | null
+          explanation?: string | null
+          id?: string
+          statement?: string | null
+          version?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_contents_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_cycles: {
+        Row: {
+          architecture_id: string | null
+          batch_id: string | null
+          created_at: string
+          id: string
+          status: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+          updated_at: string
+        }
+        Insert: {
+          architecture_id?: string | null
+          batch_id?: string | null
+          created_at?: string
+          id?: string
+          status?: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+          updated_at?: string
+        }
+        Update: {
+          architecture_id?: string | null
+          batch_id?: string | null
+          created_at?: string
+          id?: string
+          status?: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_cycles_architecture_id_fkey"
+            columns: ["architecture_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_architectures"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_cycles_batch_id_fkey"
+            columns: ["batch_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_ai_batches"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_decisions: {
+        Row: {
+          actor_user_id: string
+          created_at: string
+          cycle_id: string
+          decision_type: string
+          id: string
+          justification: string | null
+          new_status: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+          previous_status: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+        }
+        Insert: {
+          actor_user_id: string
+          created_at?: string
+          cycle_id: string
+          decision_type: string
+          id?: string
+          justification?: string | null
+          new_status: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+          previous_status: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+        }
+        Update: {
+          actor_user_id?: string
+          created_at?: string
+          cycle_id?: string
+          decision_type?: string
+          id?: string
+          justification?: string | null
+          new_status?: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+          previous_status?: Database["public"]["Enums"]["editorial_ai_cycle_status"]
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_decisions_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_inputs: {
+        Row: {
+          board_id: string | null
+          concept_subtopic_id: string | null
+          concept_topic_id: string | null
+          course_id: string | null
+          created_at: string
+          cycle_id: string
+          id: string
+          position_id: string | null
+          remaining_inputs: Json
+        }
+        Insert: {
+          board_id?: string | null
+          concept_subtopic_id?: string | null
+          concept_topic_id?: string | null
+          course_id?: string | null
+          created_at?: string
+          cycle_id: string
+          id?: string
+          position_id?: string | null
+          remaining_inputs: Json
+        }
+        Update: {
+          board_id?: string | null
+          concept_subtopic_id?: string | null
+          concept_topic_id?: string | null
+          course_id?: string | null
+          created_at?: string
+          cycle_id?: string
+          id?: string
+          position_id?: string | null
+          remaining_inputs?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_inputs_board_id_fkey"
+            columns: ["board_id"]
+            isOneToOne: false
+            referencedRelation: "boards"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_inputs_concept_subtopic_id_fkey"
+            columns: ["concept_subtopic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_subtopics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_inputs_concept_topic_id_fkey"
+            columns: ["concept_topic_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_topics"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_inputs_course_id_fkey"
+            columns: ["course_id"]
+            isOneToOne: false
+            referencedRelation: "courses"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_inputs_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: true
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_inputs_position_id_fkey"
+            columns: ["position_id"]
+            isOneToOne: false
+            referencedRelation: "positions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_publications: {
+        Row: {
+          created_at: string
+          cycle_id: string
+          decision_id: string | null
+          id: string
+          outcome: string
+          question_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          cycle_id: string
+          decision_id?: string | null
+          id?: string
+          outcome: string
+          question_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          cycle_id?: string
+          decision_id?: string | null
+          id?: string
+          outcome?: string
+          question_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_publications_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_publications_decision_id_fkey"
+            columns: ["decision_id"]
+            isOneToOne: false
+            referencedRelation: "editorial_ai_decisions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "editorial_ai_publications_question_id_fkey"
+            columns: ["question_id"]
+            isOneToOne: false
+            referencedRelation: "questions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_requests: {
+        Row: {
+          composed_instruction: string
+          created_at: string
+          cycle_id: string
+          id: string
+        }
+        Insert: {
+          composed_instruction: string
+          created_at?: string
+          cycle_id: string
+          id?: string
+        }
+        Update: {
+          composed_instruction?: string
+          created_at?: string
+          cycle_id?: string
+          id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_requests_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: true
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      editorial_ai_responses: {
+        Row: {
+          created_at: string
+          cycle_id: string
+          id: string
+          raw_response: string
+        }
+        Insert: {
+          created_at?: string
+          cycle_id: string
+          id?: string
+          raw_response: string
+        }
+        Update: {
+          created_at?: string
+          cycle_id?: string
+          id?: string
+          raw_response?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "editorial_ai_responses_cycle_id_fkey"
+            columns: ["cycle_id"]
+            isOneToOne: true
+            referencedRelation: "editorial_ai_cycles"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       editorial_architectures: {
         Row: {
@@ -1601,6 +2002,11 @@ export type Database = {
     Enums: {
       app_role: "admin" | "student"
       distribution_status: "ACTIVE" | "INACTIVE" | "SCHEDULED" | "EXPIRED"
+      editorial_ai_cycle_status:
+        | "RASCUNHO_IA"
+        | "EM_REVISAO"
+        | "APROVADO_EDITORIAL"
+        | "REPROVADO"
       editorial_architecture_status:
         | "PROPOSTO"
         | "EM_REVISAO"
@@ -1782,6 +2188,12 @@ export const Constants = {
     Enums: {
       app_role: ["admin", "student"],
       distribution_status: ["ACTIVE", "INACTIVE", "SCHEDULED", "EXPIRED"],
+      editorial_ai_cycle_status: [
+        "RASCUNHO_IA",
+        "EM_REVISAO",
+        "APROVADO_EDITORIAL",
+        "REPROVADO",
+      ],
       editorial_architecture_status: [
         "PROPOSTO",
         "EM_REVISAO",

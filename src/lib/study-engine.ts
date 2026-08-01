@@ -4,12 +4,7 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
-import {
-  parseAlternativesFromDb,
-  parseMetadataFields,
-  type QuestionAlternative,
-  type QuestionMetadataFields,
-} from "@/lib/questions";
+import { parseAlternativesFromDb, type QuestionAlternative } from "@/lib/questions";
 import {
   StudySessionError,
   getFilteredQuestionIdsForDistribution,
@@ -18,6 +13,7 @@ import {
   type StudySessionSettings,
   type StudySessionStatus,
 } from "@/lib/study-session";
+import { getQuestionForStudy, type QuestionSiaData } from "@/lib/study-question-detail.functions";
 
 export type StudySessionDetail = {
   id: string;
@@ -98,6 +94,8 @@ export type QuestionFeedback = {
   explanation: string | null;
   bibliography: string | null;
   legalReference: string | null;
+  /** SIA V1 — sempre presente quando `feedback` existe (nunca null aqui). */
+  sia: QuestionSiaData;
 };
 
 export type QuestionContext = {
@@ -122,6 +120,13 @@ export type LoadedQuestion = {
   reviewLater: boolean;
   feedback: QuestionFeedback | null;
   context: QuestionContext;
+  /**
+   * SIA V1 — catálogo de tags (só ícones), seguro para mostrar antes de
+   * responder ("As tags aparecem antes da resposta", regra explícita do
+   * plano SIA V1). Nunca contém texto explicativo, só as chaves do
+   * catálogo fixo (`src/lib/sia.ts`).
+   */
+  siaTags: string[];
 };
 
 export type StartedStudySession = {
@@ -137,7 +142,10 @@ function isSubscriptionActive(startsAt: string, expiresAt: string | null): boole
   return true;
 }
 
-function isDistributionAvailable(availableFrom: string | null, availableUntil: string | null): boolean {
+function isDistributionAvailable(
+  availableFrom: string | null,
+  availableUntil: string | null,
+): boolean {
   const now = Date.now();
   if (availableFrom && new Date(availableFrom).getTime() > now) return false;
   if (availableUntil && new Date(availableUntil).getTime() < now) return false;
@@ -224,9 +232,7 @@ function summarizeStatement(text: string, maxLength = 140): string {
   return `${trimmed.slice(0, maxLength)}…`;
 }
 
-async function fetchQuestionDetailsForResults(
-  questionIds: string[],
-): Promise<
+async function fetchQuestionDetailsForResults(questionIds: string[]): Promise<
   Map<
     string,
     {
@@ -255,14 +261,16 @@ async function fetchQuestionDetailsForResults(
     const chunk = questionIds.slice(i, i + chunkSize);
     const { data, error } = await supabase
       .from("questions")
-      .select(`
+      .select(
+        `
         id,
         statement,
         explanation,
         boards(name, acronym),
         subjects(name),
         topics(name)
-      `)
+      `,
+      )
       .in("id", chunk);
 
     if (error) throw error;
@@ -309,10 +317,8 @@ function buildSessionResults(
   );
   const totalTimeSeconds =
     totalTimeFromRows > 0 ? totalTimeFromRows : (session.duration_seconds ?? 0);
-  const averageTimeSeconds =
-    answeredCount > 0 ? Math.round(totalTimeFromRows / answeredCount) : 0;
-  const percentage =
-    answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+  const averageTimeSeconds = answeredCount > 0 ? Math.round(totalTimeFromRows / answeredCount) : 0;
+  const percentage = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
 
   const items: SessionResultItem[] = rows.map((row, index) => {
     const question = questionMap.get(row.question_id);
@@ -361,46 +367,6 @@ async function loadSessionResults(
   return buildSessionResults(session, rows, questionMap);
 }
 
-function mapQuestionContext(question: {
-  year: number | null;
-  difficulty: string | null;
-  metadata: unknown;
-  boards: { name: string; acronym: string | null } | null;
-  subjects: { name: string } | null;
-  topics: { name: string } | null;
-}): QuestionContext {
-  const metadata = parseMetadataFields(question.metadata);
-  const board = question.boards;
-  return {
-    boardName: board?.acronym?.trim() || board?.name?.trim() || null,
-    year: question.year,
-    subjectName: question.subjects?.name?.trim() || null,
-    topicName: question.topics?.name?.trim() || null,
-    difficulty: question.difficulty?.trim() || null,
-    imageUrl: metadata.image_url || null,
-  };
-}
-
-function buildQuestionFeedback(
-  session: StudySessionDetail,
-  row: StudySessionQuestionRow,
-  explanation: string | null,
-  metadata: QuestionMetadataFields,
-): QuestionFeedback | null {
-  if (session.mode !== "STUDY" && !isFilterStudyMode(session.mode)) return null;
-  if (!row.answered_at || row.is_correct === null || !row.correct_answer) {
-    return null;
-  }
-
-  return {
-    isCorrect: row.is_correct,
-    correctAnswer: row.correct_answer,
-    explanation: explanation?.trim() || null,
-    bibliography: metadata.bibliography || null,
-    legalReference: metadata.legal_reference || null,
-  };
-}
-
 export function formatStudyEngineError(error: unknown): string {
   if (error instanceof StudySessionError) return error.message;
   if (error instanceof Error) {
@@ -416,12 +382,15 @@ export function formatStudyEngineError(error: unknown): string {
 }
 
 export async function getStudySession(sessionId: string): Promise<StudySessionDetail> {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new StudySessionError("Usuário não autenticado.");
 
   const { data, error } = await supabase
     .from("study_sessions")
-    .select(`
+    .select(
+      `
       id,
       user_id,
       distribution_id,
@@ -443,7 +412,8 @@ export async function getStudySession(sessionId: string): Promise<StudySessionDe
           packages(name, courses(name))
         )
       )
-    `)
+    `,
+    )
     .eq("id", sessionId)
     .maybeSingle();
 
@@ -498,15 +468,28 @@ export async function getSessionQuestions(session: StudySessionDetail): Promise<
     );
     if (!questionIds.length) return [];
 
-    const { data, error } = await supabase
-      .from("questions")
-      .select("id, statement, created_at")
-      .eq("package_version_id", session.package_version_id)
-      .in("id", questionIds)
-      .order("created_at", { ascending: true });
+    const FILTER_PAGE_SIZE = 1000;
+    const filteredRows: SessionQuestion[] = [];
 
-    if (error) throw error;
-    return data ?? [];
+    let filteredFrom = 0;
+    for (;;) {
+      const { data, error } = await supabase
+        .from("questions")
+        .select("id, statement, created_at")
+        .eq("package_version_id", session.package_version_id)
+        .in("id", questionIds)
+        .order("created_at", { ascending: true })
+        .range(filteredFrom, filteredFrom + FILTER_PAGE_SIZE - 1);
+
+      if (error) throw error;
+
+      const page = data ?? [];
+      filteredRows.push(...page);
+      if (page.length < FILTER_PAGE_SIZE) break;
+      filteredFrom += FILTER_PAGE_SIZE;
+    }
+
+    return filteredRows;
   }
 
   const PAGE_SIZE = 1000;
@@ -568,8 +551,7 @@ export async function openStudySession(sessionId: string) {
   const session = await getStudySession(sessionId);
   const existingRows = await fetchOrderedSessionQuestions(sessionId);
 
-  const allAnswered =
-    existingRows.length > 0 && existingRows.every((row) => row.answered_at);
+  const allAnswered = existingRows.length > 0 && existingRows.every((row) => row.answered_at);
 
   let sequence: SessionQuestion[];
   if (session.status === "FINISHED" && existingRows.length > 0) {
@@ -658,51 +640,49 @@ export async function loadQuestion(sessionId: string, index: number): Promise<Lo
   }
 
   const row = rows[index];
-  const { data: question, error } = await supabase
-    .from("questions")
-    .select(`
-      id,
-      statement,
-      alternatives,
-      correct_answer,
-      explanation,
-      year,
-      difficulty,
-      metadata,
-      boards(name, acronym),
-      subjects(name),
-      topics(name)
-    `)
-    .eq("id", row.question_id)
-    .single();
 
-  if (error) throw error;
+  // Feedback por questão só é permitido em modo STUDY ou nos modos de
+  // filtro (REVIEW/FAVORITES/WRONG_ONLY) — em EXAM, o aluno só vê a
+  // correção depois de finalizar a prova inteira (tela de resultados,
+  // `loadSessionResults`). Decidido aqui e repassado ao servidor: o
+  // payload seguro é retornado mesmo se a questão já estiver respondida,
+  // quando o modo não permite feedback ainda.
+  const feedbackAllowed = session.mode === "STUDY" || isFilterStudyMode(session.mode);
 
-  const metadata = parseMetadataFields(question.metadata);
-  const boards = question.boards as { name: string; acronym: string | null } | null;
-  const subjects = question.subjects as { name: string } | null;
-  const topics = question.topics as { name: string } | null;
+  const detail = await getQuestionForStudy({
+    data: { sessionId, sessionQuestionId: row.id, feedbackAllowed },
+  });
 
   return {
     sessionQuestionId: row.id,
-    questionId: question.id,
+    questionId: row.question_id,
     index,
     total: rows.length,
-    statement: question.statement,
-    alternatives: parseAlternativesFromDb(question.alternatives),
+    statement: detail.statement,
+    alternatives: parseAlternativesFromDb(detail.alternatives),
     savedAnswer: row.selected_answer,
     isAnswered: !!row.answered_at,
     favorite: row.favorite,
     reviewLater: row.review_later,
-    feedback: buildQuestionFeedback(session, row, question.explanation, metadata),
-    context: mapQuestionContext({
-      year: question.year,
-      difficulty: question.difficulty,
-      metadata: question.metadata,
-      boards,
-      subjects,
-      topics,
-    }),
+    feedback: detail.answered
+      ? {
+          isCorrect: detail.isCorrect,
+          correctAnswer: detail.correctAnswer,
+          explanation: detail.explanation,
+          bibliography: detail.bibliography,
+          legalReference: detail.legalReference,
+          sia: detail.sia,
+        }
+      : null,
+    context: {
+      boardName: detail.boardName,
+      year: detail.year,
+      subjectName: detail.subjectName,
+      topicName: detail.topicName,
+      difficulty: detail.difficulty,
+      imageUrl: detail.imageUrl,
+    },
+    siaTags: detail.siaTags,
   };
 }
 
@@ -810,9 +790,12 @@ export async function saveAnswer(input: {
     response_time_seconds: responseTime,
   });
 
-  return loadQuestion(input.sessionId, (await fetchOrderedSessionQuestions(input.sessionId)).findIndex(
-    (item) => item.id === input.sessionQuestionId,
-  ));
+  return loadQuestion(
+    input.sessionId,
+    (await fetchOrderedSessionQuestions(input.sessionId)).findIndex(
+      (item) => item.id === input.sessionQuestionId,
+    ),
+  );
 }
 
 export async function goToNextQuestion(sessionId: string, currentIndex: number): Promise<number> {
@@ -830,7 +813,10 @@ export async function goToNextQuestion(sessionId: string, currentIndex: number):
   return currentIndex + 1;
 }
 
-export async function goToPreviousQuestion(sessionId: string, currentIndex: number): Promise<number> {
+export async function goToPreviousQuestion(
+  sessionId: string,
+  currentIndex: number,
+): Promise<number> {
   const rows = await fetchOrderedSessionQuestions(sessionId);
   if (!rows.length) throw new StudySessionError("Sessão não iniciada.");
   if (currentIndex <= 0) throw new StudySessionError("Você está na primeira questão.");

@@ -18,7 +18,7 @@
   "nivel_dificuldade":"MEDIO_ALTO"
 },
 {
-  "id":"B03","nome":"Consulplan / Consulpam (Instituto Consulplan)",
+  "id":"B03","nome":"Instituto Consulplan",
   "formato_prova":"MULTIPLA_ESCOLHA_5",
   "caracteristicas":["Mistura definição direta com pequenos casos clínicos objetivos","Farmacologia cobrada superficialmente"],
   "disciplinas_predominantes":["D17","D14","D08"],
@@ -36,7 +36,7 @@
   "nivel_dificuldade":"MEDIO_ALTO"
 },
 {
-  "id":"B05","nome":"VUNESP",
+  "id":"B05","nome":"Fundação VUNESP",
   "formato_prova":"MULTIPLA_ESCOLHA_5",
   "caracteristicas":["Cita literalmente trechos de manuais/portarias do MS","Forte presença em concursos estaduais/municipais de SP"],
   "disciplinas_predominantes":["D13","D17","D10"],
@@ -46,7 +46,7 @@
   "nivel_dificuldade":"MEDIO"
 },
 {
-  "id":"B06","nome":"Cebraspe (CESPE)",
+  "id":"B06","nome":"CEBRASPE",
   "formato_prova":"CERTO_ERRADO",
   "caracteristicas":["Afirmações normativas quase literais","Pegadinha em um único termo técnico trocado","Forte em concursos de Forças Armadas"],
   "disciplinas_predominantes":["D08","D13","D26","D07"],
@@ -130,7 +130,7 @@
   "nivel_dificuldade":"MEDIO_ALTO"
 },
 {
-  "id":"B15","nome":"UFPR/NC",
+  "id":"B15","nome":"UFPR / NC",
   "formato_prova":"MULTIPLA_ESCOLHA_5",
   "caracteristicas":["Perfil acadêmico","Ênfase em ciência básica e literatura clássica"],
   "disciplinas_predominantes":["D09"],

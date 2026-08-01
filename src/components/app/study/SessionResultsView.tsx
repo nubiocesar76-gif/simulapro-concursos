@@ -157,7 +157,8 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
           <div className="min-w-0">
             <CardTitle>Questões da sessão</CardTitle>
             <CardDescription>
-              Exibindo {filterLabel(listFilter)} ({filteredItems.length} de {summary.totalQuestions})
+              Exibindo {filterLabel(listFilter)} ({filteredItems.length} de {summary.totalQuestions}
+              )
             </CardDescription>
           </div>
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar questões">
@@ -263,7 +264,10 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                         {expandedId === item.sessionQuestionId && (
                           <TableRow>
                             <TableCell colSpan={7} className="bg-muted/30 p-0">
-                              <Collapsible open onOpenChange={(open) => !open && setExpandedId(null)}>
+                              <Collapsible
+                                open
+                                onOpenChange={(open) => !open && setExpandedId(null)}
+                              >
                                 <CollapsibleContent className="space-y-0">
                                   <div className="space-y-4 p-4">
                                     <QuestionCard statement={item.statement} />
@@ -275,6 +279,24 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
                                           explanation: item.explanation,
                                           bibliography: null,
                                           legalReference: null,
+                                          // Tela de revisão de sessão finalizada não busca metadados SIA
+                                          // (fora do escopo do piloto) — Blocos 3-8 ficam ausentes aqui,
+                                          // só o fallback genérico do Bloco 2 é exibido.
+                                          sia: {
+                                            reasonSentence: null,
+                                            pegadinha: null,
+                                            longText: null,
+                                            interpretation: null,
+                                            calculation: null,
+                                            boardStyleSummary: null,
+                                            time: {
+                                              studentSeconds: 0,
+                                              averageSeconds: null,
+                                              sampleSize: 0,
+                                              note: "",
+                                            },
+                                            lessonsLearned: [],
+                                          },
                                         }}
                                       />
                                     )}

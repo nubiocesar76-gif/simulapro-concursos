@@ -1,7 +1,7 @@
 import {
   ALTERNATIVE_COLUMNS,
   ALTERNATIVE_LETTERS,
-  REQUIRED_ALTERNATIVE_LETTERS,
+  MINIMUM_ALTERNATIVE_LETTERS,
 } from "./columns.ts";
 import type { RawRow } from "./parse.ts";
 import { hasContest, hasTopic, type TaxonomySets } from "./taxonomy.ts";
@@ -91,7 +91,11 @@ export function validateRows(
     if (!statement) {
       issues.push({ line, field: "statement", error: "Enunciado é obrigatório." });
     } else if (statement.length < 10) {
-      issues.push({ line, field: "statement", error: "Enunciado deve ter pelo menos 10 caracteres." });
+      issues.push({
+        line,
+        field: "statement",
+        error: "Enunciado deve ter pelo menos 10 caracteres.",
+      });
     }
 
     const alternatives: Array<{ letter: string; text: string }> = [];
@@ -100,10 +104,11 @@ export function validateRows(
       const letter = ALTERNATIVE_LETTERS[i];
       const text = row[field] ?? "";
       if (!text) {
-        if ((REQUIRED_ALTERNATIVE_LETTERS as readonly string[]).includes(letter)) {
+        if ((MINIMUM_ALTERNATIVE_LETTERS as readonly string[]).includes(letter)) {
           issues.push({ line, field, error: `Alternativa ${letter} é obrigatória.` });
         }
-        // Alternativa E ausente/vazia: questão de 4 alternativas (A–D), não é erro.
+        // C, D e E ausentes/vazias: questão de 2 ou 3 alternativas (ex.: Certo/Errado
+        // da CEBRASPE, A–B), não é erro — G7.6A.
       } else {
         alternatives.push({ letter, text });
       }
@@ -113,7 +118,11 @@ export function validateRows(
     if (!correctAnswer) {
       issues.push({ line, field: "correct_answer", error: "Gabarito é obrigatório." });
     } else if (!/^[A-E]$/.test(correctAnswer)) {
-      issues.push({ line, field: "correct_answer", error: "Gabarito deve ser uma letra de A a E." });
+      issues.push({
+        line,
+        field: "correct_answer",
+        error: "Gabarito deve ser uma letra de A a E.",
+      });
     } else if (!alternatives.some((alt) => alt.letter === correctAnswer)) {
       issues.push({
         line,
@@ -126,7 +135,11 @@ export function validateRows(
     if (!position) {
       issues.push({ line, field: "position", error: "Cargo é obrigatório." });
     } else if (!sets.positions.has(position)) {
-      issues.push({ line, field: "position", error: `Cargo "${position}" não existe na taxonomia.` });
+      issues.push({
+        line,
+        field: "position",
+        error: `Cargo "${position}" não existe na taxonomia.`,
+      });
     }
 
     const board = row.board ?? "";
@@ -136,9 +149,17 @@ export function validateRows(
       issues.push({ line, field: "board", error: `Banca "${board}" não existe na taxonomia.` });
     }
 
+    // Sprint 6.8: conteúdo editorial inédito (origin="inedito") não pertence a
+    // nenhum concurso real — mesmo tratamento que exam_id: null já recebe em
+    // convergence.server.ts. Qualquer outro valor mantém contest/year obrigatórios,
+    // exatamente como antes desta sprint (comportamento de prova real inalterado).
+    const isEditorialInedito = (row.origin ?? "").trim().toLowerCase() === "inedito";
+
     const contest = row.contest ?? "";
     if (!contest) {
-      issues.push({ line, field: "contest", error: "Concurso é obrigatório." });
+      if (!isEditorialInedito) {
+        issues.push({ line, field: "contest", error: "Concurso é obrigatório." });
+      }
     } else if (!board) {
       issues.push({ line, field: "contest", error: "Concurso informado sem banca válida." });
     } else if (!hasContest(sets, board, contest)) {
@@ -153,7 +174,11 @@ export function validateRows(
     if (!subject) {
       issues.push({ line, field: "subject", error: "Disciplina é obrigatória." });
     } else if (!sets.subjects.has(subject)) {
-      issues.push({ line, field: "subject", error: `Disciplina "${subject}" não existe na taxonomia.` });
+      issues.push({
+        line,
+        field: "subject",
+        error: `Disciplina "${subject}" não existe na taxonomia.`,
+      });
     }
 
     const topic = row.topic ?? "";
@@ -172,11 +197,17 @@ export function validateRows(
     const yearRaw = row.year ?? "";
     let year: number | null = null;
     if (!yearRaw) {
-      issues.push({ line, field: "year", error: "Ano é obrigatório." });
+      if (!isEditorialInedito) {
+        issues.push({ line, field: "year", error: "Ano é obrigatório." });
+      }
     } else {
       year = Number(yearRaw);
       if (!Number.isInteger(year) || year < 1900 || year > 2100) {
-        issues.push({ line, field: "year", error: "Ano deve ser um número inteiro entre 1900 e 2100." });
+        issues.push({
+          line,
+          field: "year",
+          error: "Ano deve ser um número inteiro entre 1900 e 2100.",
+        });
         year = null;
       }
     }
@@ -201,12 +232,30 @@ export function validateRows(
 
     const packageSlug = row.package ?? "";
     const packageVersion = row.package_version ? normalizePackageVersion(row.package_version) : "";
-    if (packageSlug && !packageVersion) {
-      issues.push({ line, field: "package_version", error: "package requer package_version." });
-    } else if (packageVersion && !packageSlug) {
-      issues.push({ line, field: "package", error: "package_version requer package." });
-    } else if (packageSlug && !SLUG_PATTERN.test(packageSlug)) {
-      issues.push({ line, field: "package", error: `package "${packageSlug}" não é um slug válido.` });
+    // Obrigatórios sem exceção — questão sem package/package_version entra no banco
+    // órfã (package_version_id NULL), sem erro em nenhuma etapa seguinte, e fica de
+    // fora de qualquer distribuição publicada (causa raiz do incidente SESACRE).
+    if (!packageSlug) {
+      issues.push({
+        line,
+        field: "package",
+        error: "package é obrigatório (toda questão precisa pertencer a uma versão de pacote).",
+      });
+    }
+    if (!packageVersion) {
+      issues.push({
+        line,
+        field: "package_version",
+        error:
+          "package_version é obrigatório (toda questão precisa pertencer a uma versão de pacote).",
+      });
+    }
+    if (packageSlug && !SLUG_PATTERN.test(packageSlug)) {
+      issues.push({
+        line,
+        field: "package",
+        error: `package "${packageSlug}" não é um slug válido.`,
+      });
     } else if (packageVersion && !PACKAGE_VERSION_PATTERN.test(packageVersion)) {
       issues.push({
         line,

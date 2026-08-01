@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Em relacao as causas de lesao renal aguda, classificadas em pre-renais, renais (intrinsecas) e pos-renais, a hipovolemia grave (por hemorragia ou desidratacao intensa) e classicamente uma causa:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "renal intrinseca, por lesao direta do parenquima."
+        },
+        {
+          "letter": "B",
+          "text": "pre-renal, por reducao da perfusao renal sem lesao estrutural inicial do parenquima."
+        },
+        {
+          "letter": "C",
+          "text": "pos-renal, por obstrucao do trato urinario."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente relacionada a nefrotoxicidade medicamentosa."
+        },
+        {
+          "letter": "E",
+          "text": "sem relacao com a funcao renal, afetando apenas o volume circulante."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "saude-do-adulto",
+      "topic": "insuficiencia-renal-aguda-e-disturbios-hidroeletroliticos",
+      "explanation": "A hipovolemia reduz a perfusao renal sem lesao estrutural inicial do parenquima, caracterizando causa pre-renal - potencialmente reversivel se a perfusao for restaurada precocemente, o que reforca a importancia da monitorizacao rigorosa do balanco hidrico pela enfermagem.",
+      "references": [
+        "KDIGO Clinical Practice Guideline for Acute Kidney Injury."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0ede1ee654895bb9ad41c24adda35da4830c168576aa38cf0fa5916dffd9a28b"
+    },
+    {
+      "statement": "Em um paciente adulto com hiponatremia cronica grave e assintomatica, um cuidado de enfermagem essencial relacionado a correcao do sodio serico e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "garantir que a correcao seja feita de forma extremamente rapida, para normalizar o sodio em poucas horas."
+        },
+        {
+          "letter": "B",
+          "text": "monitorar rigorosamente a velocidade de correcao do sodio, pois a correcao excessivamente rapida esta associada ao risco de sindrome de desmielinizacao osmotica (mielinolise pontina)."
+        },
+        {
+          "letter": "C",
+          "text": "suspender toda e qualquer reposicao de sodio, independentemente da gravidade."
+        },
+        {
+          "letter": "D",
+          "text": "administrar agua livre em grande volume, sem restricao, como unica conduta."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha necessidade de monitorizacao, pois a hiponatremia cronica nao oferece risco."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "saude-do-adulto",
+      "topic": "insuficiencia-renal-aguda-e-disturbios-hidroeletroliticos",
+      "explanation": "A correcao rapida demais da hiponatremia cronica esta associada ao risco de sindrome de desmielinizacao osmotica (mielinolise pontina), grave complicacao neurologica; a monitorizacao rigorosa da velocidade de correcao e cuidado de enfermagem essencial.",
+      "references": [
+        "Diretrizes de manejo de disturbios hidroeletroliticos graves em adultos."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5496ff52c02d4a2843450ac40a77aae5d445576bd5d949dba5880f135d001de2"
+    },
+    {
+      "statement": "Em pacientes adultos com multiplas doencas cronicas (multimorbidade), como diabetes, hipertensao e doenca renal cronica concomitantes, o enfermeiro deve estar particularmente atento ao risco de polifarmacia. Um cuidado de enfermagem essencial nesse contexto e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "considerar que quanto maior o numero de medicamentos, melhor o controle das doencas, sem necessidade de revisao."
+        },
+        {
+          "letter": "B",
+          "text": "realizar a conciliacao medicamentosa periodica, identificando duplicidades terapeuticas, interacoes medicamentosas e a real necessidade de cada farmaco em uso."
+        },
+        {
+          "letter": "C",
+          "text": "delegar exclusivamente ao paciente a decisao de quais medicamentos manter ou suspender, sem orientacao profissional."
+        },
+        {
+          "letter": "D",
+          "text": "evitar qualquer contato com a lista de medicamentos em uso, por nao ser atribuicao da enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "presumir que medicamentos prescritos ha muito tempo nunca precisam de reavaliacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "saude-do-adulto",
+      "topic": "seguranca-medicamentosa-no-adulto-com-doenca-cronica",
+      "explanation": "A conciliacao medicamentosa periodica - identificando duplicidades, interacoes e a real necessidade de cada farmaco - e cuidado essencial de enfermagem para reduzir os riscos da polifarmacia em pacientes com multimorbidade, contribuindo para a seguranca medicamentosa.",
+      "references": [
+        "Protocolo de Seguranca na Prescricao, Uso e Administracao de Medicamentos (Ministerio da Saude/ANVISA), aplicado a polifarmacia em doenca cronica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5ee629bdf5c7f02281b0360ed4eb8668727a7bb84db8e290beef2b93cf68424b"
+    },
+    {
+      "statement": "Em relacao aos 'certos' da administracao segura de medicamentos, aplicaveis ao cuidado do adulto com doenca cronica em uso de multiplos farmacos, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "restringem-se a paciente certo e medicamento certo, sendo os demais itens dispensaveis."
+        },
+        {
+          "letter": "B",
+          "text": "incluem, entre outros, paciente certo, medicamento certo, dose certa, via certa, horario certo, registro certo e orientacao certa ao paciente sobre o medicamento administrado."
+        },
+        {
+          "letter": "C",
+          "text": "aplicam-se exclusivamente ao ambiente hospitalar, nao sendo relevantes na atencao primaria ou domiciliar."
+        },
+        {
+          "letter": "D",
+          "text": "dispensam a checagem em pacientes com multiplas comorbidades, por ja estarem habituados a rotina medicamentosa."
+        },
+        {
+          "letter": "E",
+          "text": "sao de responsabilidade exclusiva do farmaceutico, sem participacao da enfermagem."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "saude-do-adulto",
+      "topic": "seguranca-medicamentosa-no-adulto-com-doenca-cronica",
+      "explanation": "Os 'certos' da administracao segura de medicamentos (paciente, medicamento, dose, via, horario, registro, orientacao, entre outros, conforme a diretriz adotada) constituem barreira de seguranca essencial, aplicavel a qualquer contexto assistencial, sendo ainda mais relevante em pacientes com multimorbidade e polifarmacia.",
+      "references": [
+        "Protocolo de Seguranca na Prescricao, Uso e Administracao de Medicamentos (Ministerio da Saude/ANVISA)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "73b5b8b15da105b1a7c877996fec61659c38c91c8cf1eefde1313eb03233394a"
+    },
+    {
+      "statement": "Um paciente adulto apresenta pressao arterial de 190/125 mmHg, associada a sinais de lesao aguda de orgao-alvo (dispneia, dor toracica e alteracao do nivel de consciencia). Esse quadro caracteriza:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "urgencia hipertensiva, sem necessidade de reducao imediata da pressao arterial."
+        },
+        {
+          "letter": "B",
+          "text": "emergencia hipertensiva, situacao que exige reducao rapida e controlada da pressao arterial, geralmente com anti-hipertensivos endovenosos e monitorizacao intensiva, dado o risco iminente de lesao de orgao-alvo."
+        },
+        {
+          "letter": "C",
+          "text": "pressao arterial normal para a faixa etaria, sem necessidade de intervencao."
+        },
+        {
+          "letter": "D",
+          "text": "hipertensao do jaleco branco, sem significado clinico."
+        },
+        {
+          "letter": "E",
+          "text": "hipotensao ortostatica, exigindo reposicao volemica isolada."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "saude-do-adulto",
+      "topic": "hipertensao-arterial-sistemica",
+      "explanation": "A presenca de sinais de lesao aguda de orgao-alvo (nao apenas a cifra pressorica isolada) caracteriza emergencia hipertensiva, que exige reducao rapida e controlada da pressao arterial, geralmente com anti-hipertensivos endovenosos e monitorizacao intensiva - distinta da urgencia hipertensiva, em que a elevacao pressorica ocorre sem lesao aguda de orgao-alvo e a reducao pode ser mais gradual.",
+      "references": [
+        "Diretrizes Brasileiras de Hipertensao Arterial."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "82e49c27afcba7d6d94cbe223b593035808d1af7fd17ba7e5fc1de1fd89748a4"
+    },
+    {
+      "statement": "Um paciente adulto relata dor em queimacao, com sensacao de choque eletrico, associada a formigamento e hipersensibilidade ao toque leve em um territorio correspondente a uma raiz nervosa. Essa descricao e mais compativel com dor de caracteristica:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "nociceptiva somatica, tipica de lesao tecidual direta (como fraturas)."
+        },
+        {
+          "letter": "B",
+          "text": "nociceptiva visceral, tipica de distensao de orgaos ocos."
+        },
+        {
+          "letter": "C",
+          "text": "neuropatica, decorrente de lesao ou disfuncao do sistema nervoso, com necessidade de abordagem farmacologica especifica (como anticonvulsivantes ou antidepressivos adjuvantes), distinta do manejo padrao da dor nociceptiva."
+        },
+        {
+          "letter": "D",
+          "text": "psicogenica, sem qualquer substrato organico identificavel."
+        },
+        {
+          "letter": "E",
+          "text": "identica, em fisiopatologia e tratamento, a dor nociceptiva somatica."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "saude-do-adulto",
+      "topic": "dor-cronica-no-adulto",
+      "explanation": "Dor em queimacao, choque eletrico, formigamento e hipersensibilidade em territorio de distribuicao nervosa sao caracteristicas classicas de dor neuropatica, que exige abordagem farmacologica distinta (adjuvantes como anticonvulsivantes/antidepressivos), diferente do manejo padrao da dor nociceptiva.",
+      "references": [
+        "Diretrizes de avaliacao e manejo da dor cronica no adulto."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9e68330842b14b390717970b1bbb2c5c0e6910be9c5740b9ca30b68842b1099e"
+    },
+    {
+      "statement": "De acordo com os criterios KDIGO para lesao renal aguda (LRA), amplamente utilizados na pratica clinica, um dos criterios diagnosticos e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "elevacao da creatinina serica em pelo menos 0,3 mg/dL dentro de 48 horas, ou debito urinario menor que 0,5 mL/kg/h por 6 horas."
+        },
+        {
+          "letter": "B",
+          "text": "queda da creatinina serica em qualquer valor, associada a poliuria."
+        },
+        {
+          "letter": "C",
+          "text": "debito urinario maior que 2 mL/kg/h de forma sustentada."
+        },
+        {
+          "letter": "D",
+          "text": "elevacao da creatinina exclusivamente apos 30 dias de evolucao."
+        },
+        {
+          "letter": "E",
+          "text": "ausencia de qualquer alteracao laboratorial, sendo diagnostico exclusivamente clinico."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "saude-do-adulto",
+      "topic": "insuficiencia-renal-aguda-e-disturbios-hidroeletroliticos",
+      "explanation": "Os criterios KDIGO definem LRA por elevacao da creatinina serica >=0,3 mg/dL em 48 horas (ou >=1,5x o valor basal em 7 dias) e/ou debito urinario <0,5 mL/kg/h por pelo menos 6 horas - parametros centrais para o diagnostico precoce e a monitorizacao de enfermagem.",
+      "references": [
+        "KDIGO Clinical Practice Guideline for Acute Kidney Injury."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b02ff2f2a76d2fdad52ae20ccf7c949d95460be6104d2750a5e6edceafc69072"
+    },
+    {
+      "statement": "Uma complicacao comum em pacientes com Doenca Renal Cronica (DRC) progressiva e a anemia. Essa anemia esta classicamente relacionada, entre outros fatores, a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "producao excessiva de eritropoietina pelos rins doentes."
+        },
+        {
+          "letter": "B",
+          "text": "deficiencia na producao de eritropoietina pelos rins, hormonio essencial para a estimulacao da eritropoiese na medula ossea."
+        },
+        {
+          "letter": "C",
+          "text": "hemolise macica, sendo a unica causa relevante de anemia na DRC."
+        },
+        {
+          "letter": "D",
+          "text": "ausencia completa de relacao entre funcao renal e producao de hemacias."
+        },
+        {
+          "letter": "E",
+          "text": "policitemia secundaria, com aumento da massa eritrocitaria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "saude-do-adulto",
+      "topic": "doenca-renal-cronica-drc",
+      "explanation": "A anemia na DRC esta classicamente relacionada a deficiencia de producao de eritropoietina pelos rins doentes, hormonio essencial para estimular a eritropoiese na medula ossea - complicacao distinta do angulo ja testado no acervo real (estagio avancado sem indicacao de terapia renal substitutiva).",
+      "references": [
+        "Diretrizes KDIGO para Doenca Renal Cronica",
+        "protocolos de manejo da anemia na DRC."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c389cf8475c9849fc7714623d3aa57af591b212627f6ff12fa7c0acdfd4423fa"
+    },
+    {
+      "statement": "Um paciente adulto apresenta hipercalemia grave (potassio serico de 7,2 mEq/L) com alteracoes eletrocardiograficas (ondas T apiculadas, alargamento do QRS). A conduta de enfermagem imediata, em conjunto com a equipe medica, prioriza a administracao de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas diureticos de alca, isoladamente, como primeira medida."
+        },
+        {
+          "letter": "B",
+          "text": "gluconato de calcio endovenoso, para estabilizacao da membrana cardiaca, seguido de medidas para deslocar o potassio para o intracelular (insulina com glicose) e para sua eliminacao."
+        },
+        {
+          "letter": "C",
+          "text": "suplementacao oral de potassio, para correcao gradual."
+        },
+        {
+          "letter": "D",
+          "text": "solucao salina hipertonica isolada, sem qualquer outra medida."
+        },
+        {
+          "letter": "E",
+          "text": "apenas restricao hidrica, sem qualquer intervencao farmacologica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "saude-do-adulto",
+      "topic": "insuficiencia-renal-aguda-e-disturbios-hidroeletroliticos",
+      "explanation": "Na hipercalemia grave com alteracoes eletrocardiograficas, a prioridade e a estabilizacao da membrana cardiaca com gluconato de calcio, seguida de medidas que desloquem o potassio para o meio intracelular (insulina + glicose, beta-agonistas) e, em seguida, medidas de eliminacao (diureticos, resinas de troca, dialise se refrataria).",
+      "references": [
+        "Diretrizes de manejo de disturbios hidroeletroliticos graves em adultos."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "df65fff3647f26ec651042fbbc0acdecf9c6fc8b28021f1a1b61a584641e246c"
+    },
+    {
+      "statement": "De acordo com a escada analgesica da Organizacao Mundial da Saude (OMS), utilizada como referencia para o manejo da dor cronica nao-oncologica e oncologica, o primeiro degrau (dor leve) indica o uso de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "opioides fortes, isoladamente."
+        },
+        {
+          "letter": "B",
+          "text": "analgesicos nao-opioides (como paracetamol e anti-inflamatorios nao esteroidais), com ou sem adjuvantes."
+        },
+        {
+          "letter": "C",
+          "text": "opioides fracos associados a opioides fortes, simultaneamente."
+        },
+        {
+          "letter": "D",
+          "text": "apenas medidas nao-farmacologicas, com proibicao de qualquer farmaco."
+        },
+        {
+          "letter": "E",
+          "text": "bloqueio anestesico como primeira linha, sem uso de analgesicos sistemicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "saude-do-adulto",
+      "topic": "dor-cronica-no-adulto",
+      "explanation": "O primeiro degrau da escada analgesica da OMS indica analgesicos nao-opioides (paracetamol, AINEs), com ou sem adjuvantes, para dor leve; opioides fracos e fortes sao reservados para os degraus seguintes conforme a intensidade da dor.",
+      "references": [
+        "Organizacao Mundial da Saude, escada analgesica para o manejo da dor."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e9bb118c5cb49eb467f4e7a66193a7dad251986e285bbee877c319a77e363eca"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "workId": "pref-goiania-2022",
+  "createdAt": "2026-07-24T00:00:00.000Z",
+  "createdBy": "SimulaPro Producao Continua V1",
+  "sourcePdf": "https://centrodeselecao.ufg.br/2022/concurso-goiania/sistema/provas_gabaritos/provas/enfermeiro_geral.pdf",
+  "gabaritoPreliminarPdf": "https://centrodeselecao.ufg.br/2022/concurso-goiania/sistema/provas_gabaritos/gabarito_preliminar/ESPECIALISTA-SAUDE-ENFERMEIRO-GERAL-GABARITO.pdf",
+  "gabaritoFinalPdf": "https://centrodeselecao.ufg.br/2022/concurso-goiania/sistema/provas_gabaritos/gabarito_final/ESPECIALISTA-SAUDE-ENFERMEIRO-GERAL-GABARITO.pdf",
+  "organization": "Prefeitura Municipal de Goiânia",
+  "contest": "concurso-publico-prefeitura-municipal-de-goiania-edital-001-2020",
+  "board": "centro-de-selecao-da-universidade-federal-de-goias",
+  "position": "enfermeiro",
+  "year": 2022,
+  "description": "Concurso Público Edital 001/2020 — Prefeitura Municipal de Goiânia, Cronograma E (prova aplicada em 26/06/2022), cargo Especialista em Saúde — Enfermeiro Geral. Nível de Validação A (Gabarito Preliminar E Definitivo obtidos integralmente na fonte oficial; 2 questões anuladas confirmadas: Q08 e Q26)."
+}

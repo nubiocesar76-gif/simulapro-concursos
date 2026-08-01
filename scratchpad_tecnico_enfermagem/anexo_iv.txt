@@ -1,0 +1,1225 @@
+ CONCURSO PÚBLICO DO HOSPITAL
+METROPOLITANO ODILON BEHRENS
+
+              EDITAL Nº 01/2026
+
+ANEXO IV – CONTEÚDOS PROGRAMÁTICOS
+
+ENSINO MÉDIO/TÉCNICO
+
+                                                                                              PORTUGUÊS
+Compreensão e interpretação de textos. Gêneros e tipos de texto. Significação das palavras. Figuras de Sintaxe. Figuras de Linguagem. Articulação textual: operadores
+sequenciais, expressões referenciais. Coesão e coerência textual. Identificação, definição, classificação, flexão e emprego das classes de palavras; formação de
+palavras. Verbos: flexão, conjugação, vozes, correlação entre tempos e modos verbais. Concordância verbal e nominal. Regência verbal e nominal. Crase. Colocação
+pronominal. Estrutura da oração e do período: aspectos sintáticos e semânticos. Acentuação gráfica. Ortografia. Pontuação. Variação linguística.
+
+                                                                                   POLÍTICAS DE SAÚDE PÚBLICA
+
+Constituição da República Federativa do Brasil (com as Emendas Constitucionais): Art. 196 a 200. Sistema Único de Saúde: Hist ória do sistema de saúde no Brasil.
+Reforma Sanitária Brasileira. Concepção do Sistema Único de Saúde (SUS). Princípios e diretrizes do SUS. Lei Orgânica da Saúde (Lei nº 8.080/1990). Lei nº 8.142/1990
+– participação da comunidade e transferências intergovernamentais. Financiamento do SUS (Lei Complementar nº 141/2012). Pacto pela Saúde. Decreto nº 7.508/2011
+– regulamentação da Lei nº 8.080/1990. Redes de Atenção à Saúde: conceito, componentes, níveis de atenção. Política Nacional de Atenção às Urgências e
+Emergências. Política Nacional de Atenção Hospitalar. Política Nacional de Humanização (PNH). Segurança do Paciente. Controle social: Conselhos e Conferências de
+Saúde. Modelos de atenção à saúde. Epidemiologia: conceitos básicos, objetivos, indicadores de saúde. Medidas da ocorrência d e doenças: incidência, prevalência,
+mortalidade. Tipos de estudos epidemiológicos. Vigilância em Saúde: epidemiológica, sanitária, ambiental e saúde do trabalhador. Sistemas de Informaçã o em Saúde
+(SIM, SINAN, SI-PNI, CNES). Avaliação de serviços de saúde. Doenças e agravos de notificação compulsória. Determinantes sociais da saúde.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+
+                                                              401 - TÉCNICO DE NÍVEL MÉDIO - TÉCNICO EM ADMINISTRAÇÃO
+
+Escolas da administração: administração geral e teorias das organizações. Processo organizacional (planejamento, organização, liderança, execução e controle).
+Planejamento estratégico governamental. Processo decisório: fatores do processo de tomada de decisões, os elementos do processo decisório, modelos do processo
+decisório. Gestão da qualidade: ferramentas da qualidade, qualidade no atendimento ao público: comunicabilidade, apresentação, atenção, cortesia, interesse,
+presteza, eficiência, tolerância, discrição, conduta e objetividade. Comportamento Organizacional: motivação, comunicação, tr abalho em equipe, relacionamento
+interpessoal, poder e autoridade. Gestão de materiais e patrimônio: almoxarifados, dimensionamento e controle de estoques, compras, atribuições dos órgã os de
+patrimônio (planejamento, organização, layout, controle, sistemas), denominações e classificação de bens e patrimônio, classi ficação de materiais (de consumo e
+permanentes), principais atividades da área de patrimônio. Compras, licitações e contratos administrativos: conceitos, tipos, fases da licitação (Lei Federal nº
+14.133/2021, Art. 17), modalidades (Lei Federal nº 14.133/2021, Art. 28), principais diferenças entre a Lei Federal nº 8.666/1993 e a Lei Federal nº 14.133/2021),
+valores financeiros, tipos e prazos, Termos de referência, fiscalização de contrato. Administração Pública: princípios consti tucionais, atos administrativos (finalidade,
+competência, forma, objeto e motivo), administração direta e indireta, escolas, histórico da administração pública. Serviços públicos: princípios (da eficiência, da
+continuidade, da segurança, da regularidade, da atualidade, da generalidade/universalidade, da modicidade tarifária, da cortesia), características dos serviços, como
+são prestados (Permissão, Concessão, Parceria público-privada). Servidores públicos: funções, obrigações, deveres, empregado público, agentes temporários, servidor
+público. Orçamento público: conceito, componentes, Lei de Diretrizes Orçamentárias, Plano Plurianual, Lei Orçamentária Anual, contabilidade pública.
+
+                                                                                   CONHECIMENTO ESPECÍFICOS
+
+                                                                 402 - TÉCNICO DE NÍVEL MÉDIO - TÉCNICO EM ELETRÔNICA
+
+Eletricidade – Eletrostática: eletrização, força elétrica, campo elétrico, potencial elétrico, trabalho de força elétrica. Eletrodinâmica: corrente elétrica, resistência
+elétrica, lei de Ohm, potência elétrica, resistores, associação de resistores, voltímetro e amperímetro, leis de Kirchhoff. Eletromagnetismo: campo magnético, força
+magnética, indução magnética.
+Eletrônica Digital – Sistemas de numeração. Introdução aos circuitos lógicos. Introdução ao laboratório de eletrônica digital. Análise de circuitos lógicos. Álgebra
+booleana. Síntese de circuitos lógicos. Simplificação usando álgebra booleana. Minimização usando mapa V-K. Circuitos combinacionais. Circuitos somadores.
+Higiene e Segurança do Trabalho – Instalações e serviços em eletricidade – NR-10. Medidas de proteção individual e coletiva – NR-06. Comissão interna de prevenção
+de acidentes – CIPA – NR-05.
+Análise de Circuito CC/CA – Corrente e tensão. Resistores. Análise de malhas. Capacitores em CC. Indutor em CC. Onda senoidal e cossenoidal. Fasores. Circuitos em
+corrente alternada. Análise de malhas. Teoremas de análises de circuitos. Potência em CA. Circuitos polifásicos.
+Instrumentação Eletrônica – Princípio de funcionamento: galvanômetro, ohmímetro (analógico/digital), voltímetro (analógico/digital), amperímetro
+(analógico/digital), tipos de erros e aplicações, geradores de funções, osciloscópios, freqüencímetros, capacímetros, megômetros, terrômetros.
+Eletrônica Analógica I – Diodos Semicondutores. Aplicações do diodo. Transistor TJB. Transistor de efeito de campo. Transistor MOSFET. Projetos eletrônicos
+com diodos e transistores TJB. Amplificadores de Potência.
+Desenho Técnico – Simbologia de componentes. Diagramas elétricos. Circuito impresso. Projeto de circuitos eletroeletrônicos.
+Eletrônica de Potência – Dispositivos semicondutores de quatro camadas. Tiristores. Chaves eletrônicas de potência. Controladores de Potência. Retificadores de
+Potência. Princípios do choppers DC básicos. Inversores básicos.
+Máquinas Elétricas – Circuitos Magnéticos. Transformadores. Máquinas de CC. Máquinas Assíncronas. Máquinas Síncronas.
+Instalações Elétricas – Projetos de Instalações Elétricas Residencial, Dispositivos de seccionamento proteção e aterramento. Correção do fator de pot ência e instalação
+de capacitores. Proteção contra descargas atmosféricas. Projeto e instalações para força motriz. Norma Técnica NBR ABNT 5410.
+Eletrônica Analógica II – Amplificadores Operacionais. Filtros Elétricos. Realimentação e Circuitos Osciladores.
+Acionamento de Máquinas – Dimensionamento das chaves de partidas de motores de indução. Princípios gerais e aplicações das chaves de partida eletrônica:
+soft starter e inversores de frequência.
+Automação Industrial – Conceitos básicas de controle automático. Características de processos industriais. Controladores Programáveis Industriais. Sistemas de
+supervisão em Automação.
+Sistemas de Energia – Sistema de energia elétrico brasileiro. Geração de energia. Tipos de usinas. Proteção nos sistemas elétricos. Subestações de energia. Transmissão
+de energia. Conservação e redução das perdas. Normas técnicas. Distribuição de energia.
+Projetos Eletroeletrônicos – Projetos de Circuitos à Base de Semicondutores: diodos, transistores TJB, TEC e MOSFET. Projetos de Circuitos Acionados por Tiristores:
+SCR, Triac, Diac, etc. Outros dispositivos de automação: UJT, TPC e NTC, LDR, relés etc. Análise de Desempenho de Circuitos Eletrônicos. Simulação de Circuitos em
+Softwares de Desenvolvimento. Circuitos acoplamento óptico. Chaves temporizadas, dimmer. Timer, sensor fotoelétrico, temporizadores, sensores de presença.
+Criação de Placas de Circuitos. Projetos de Circuitos Eletrônicos.
+
+                        CONHECIMENTO ESPECÍFICOS
+403 - TÉCNICO DE SERVIÇOS DE SAÚDE - TÉCNICO EM ENFERMAGEM
+
+                                                            Página 1 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+Fundamentos de enfermagem. Lei do Exercício Profissional. Código de Ética e Deontologia de Enfermagem. Sistematização da Assistência de Enfermagem. Prontuário
+do paciente. Registro de Enfermagem. Humanização no Cuidado. Central de Material e Esterilização: princípios e m étodos de assepsia, antissepsia, desinfecção e
+esterilização. Tratamentos diversos e exames diagnósticos de baixa, média e alta complexidade. Técnicas básicas de enfermagem para execução de cuidados à saúde
+na baixa, média e alta complexidade Procedimentos técnicos de enfermagem. Noções de medicamentos, de preparo e administração. Cálculos de medicamentos e
+gotejamento de soro. Segurança do paciente. Prevenção e controle das infecções hospitalares. Necessidades básicas do paciente. Atendimento ao paciente com
+Trauma Crânio Encefálico, Politraumatizado e em Parada Cardiorrespiratória, nas diversas unidades hospitalares e ambulatoriai s quer seja em situações de urgência
+ou em terapias intensivas. Sistema Único de Saúde (SUS): evolução histórica da organização do sistema de saúde no Brasil e a construção do Sistema Único de Saúde
+(SUS) – princípios, diretrizes, estrutura, organização e arcabouço legal. Cenário epidemiológico do Brasil: transição demográfica e e pidemiológica das DCNT e Agravos
+da Saúde. Ciência e tecnologia em saúde. Estrutura e funcionamento das instituições e suas relações com os serviços de saúde. Níveis progressivos de assistência à
+saúde. Políticas públicas do SUS para gestão de recursos físicos, financeiros, materiais e humanos. Sistema de planejamento do SUS: Planejamento estratégico e
+normativo. Direitos dos usuários do SUS. Participação e controle social. Ações e programas do SUS. Estudos e avaliação de in dicadores de saúde: sistemas nacionais
+de informação para doenças transmissíveis e não transmissíveis. Vigilância em saúde.
+
+                                                                                   CONHECIMENTO ESPECÍFICOS
+                                                              404 - TÉCNICO DE SERVIÇOS DE SAÚDE - TÉCNICO EM NUTRIÇÃO
+Técnicas e métodos de pré-preparo e preparo de alimentos. Cocção e Métodos de conservação. Recebimento, armazenamento, conservação e estocagem de
+alimentos. Aquisição de alimentos: Mensuração; Seleção; Armazenamento; Fator de correção. Indicador de conversão. Planejament o de refeições: Cardápios, tipos de
+cardápios, fichas de preparo, previsão quantitativa de gêneros alimentícios e custos. Sistema de distribuição de refeições. Características sensoriais dos diversos grupos
+de alimentos. Microbiologia de alimentos e doenças transmitidas por alimentos. Procedimentos de higienização. Sistemas e prát icas de controle da qualidade sanitária
+dos alimentos. Boas Práticas, Procedimentos Operacionais Padronizados e APPCC. Macronutrientes, micronutrientes e fibras alimen tares: conceitos, funções no
+organismo, metabolismo e fontes alimentares. Legislação e ética profissional dos Técnicos em Nutrição e Dietética.
+
+                                                                                   CONHECIMENTO ESPECÍFICOS
+                                                        405 - TÉCNICO DE SERVIÇOS DE SAÚDE - TÉCNICO EM PATOLOGIA CLÍNICA
+Causas de variação nas determinações laboratoriais: a preparação do paciente. Variações e erros devidos à amostra biológica; Fotometria em Bioquímica Clínica:
+conceito, tipos, leis de fotometria, aplicação nas análises clínicas; Técnicas, fundamentos químicos e interpretação clínica de exames de: glicemia, função renal, função
+hepática, colesterol, triglicérides. Urinálise: fundamentos químicos, interpr etação das análises; Hematologia Clínica: Interpretação clínica do hemograma: valores de
+referência. Índices hematimétricos. Hematoscopia normal e patológica. Alterações qualitativas e quantitativas; Anemias; Imuno-hematologia: exames laboratoriais
+para classificação sanguínea; Coagulação e hemostasia: técnicas usadas, interpretações; métodos de coloração para exames hematológicos. Parasitologia Clínica:
+Patogenia, sintomatologia, epidemiologia, profilaxia e diagnóstico das parasitoses humanas. Fundamento das técnicas utilizadas no diagnóstico das parasitoses
+humanas. Microbiologia Clínica: Diagnóstico laboratorial de Tuberculose, Hanseníase. Métodos de coloração GRAM, BAAR. Imunologia: técnicas sorológicas, fixação
+do complemento, aglutinação, inibição da aglutinação, precipitação, imunofluorescência. Biotecnologia: Introdução à biotecnologia, a biotecnologia no Brasil: Gargalos
+e Desafios. Lei de desenvolvimento da biotecnologia. Acesso ao Patrimônio genético de microrganismos e patentes de microrgani smos. - Biotecnologia molecular:
+Engenharia genética, Escolha dos microrganismos hospedeiros para expressão heteróloga; - Expressão 56 heteróloga em bactérias: Escherichia coli como modelo. -
+Expressão heteróloga em bactérias e leveduras: tipos de proteínas expressas. Vacinas de DNA: métodos associados, definição, aplicação clínica.
+
+                                                                                   CONHECIMENTO ESPECÍFICOS
+                                                            406 - TÉCNICO DE SERVIÇOS DE SAÚDE - TÉCNICO EM RADIOLOGIA
+Conhecimentos básicos de anatomia e fisiologia - ossos do crânio, face, coluna, tórax, membros superiores e inferiores, órgãos do tórax e abdômen. Técnicas
+radiográficas dos membros superiores e inferiores, crânio, face, coluna vertebral, sistema esquelético suas articulações, do aparelho urinário, das vias biliares, do
+aparelho respiratório. Incidências especiais. Conhecimentos básicos de equipamentos radiológicos e seu funcionamento - Produção de Raios X, estrutura básica da
+aparelhagem fixa e portátil, câmara escura. Documentação da imagem radiográfica por processamento químico e digital. Conhecimentos de técnicas de revelação e
+fixação e de elementos dos componentes químicos do revelador e fixador. Qualidade da imagem radiográfica. Conhecimento básico sobre organização de um Serviço
+de Raios X. Meios de tipos e utilização específica), indicações e contraindicações, em exames de imagens. Conhecimentos de técnicas de utilização do Raios X.
+Conhecimento em aquisição de imagens tomográficas e gerenciamento dessas imagens em sistemas computadorizados. Conhecimento s obre mamografia, noções de
+anatomia das mamas e regras gerais para o estudo radiográfico. Princípios da radioscopia e metodologia aplicada. Legislação concernente ao operador de Raios X.
+Efeitos biológicos das radiações ionizantes e meios de proteção. Riscos e precauções - Equipamentos de proteção individual e coletiva. Resolução nº 611 de 09 de
+março de 2022, e atualizações. Portaria nº 485, de 11 de novembro de 2005, e atualizações, (NR 32). Norma CNEN NN 3.01. Vigil ância Sanitária. Código de Ética
+Profissional.
+
+                                                               ENSINO SUPERIOR E ENSINO SUPERIOR COM ESPECIALIZAÇÃO
+
+                                                                                              PORTUGUÊS
+Compreensão e interpretação de textos. Gêneros e tipos de textos. Variação linguística: diversidade de usos da língua. Discur sos direto, indireto e indireto livre.
+Coerência e coesão textuais. Estratégias argumentativas. Processos de formação de palavras. Classes de palavras: identificação, flexão e emprego de substantivos,
+adjetivos, pronomes, verbos, advérbios, preposições e conjunções. Verbo: flexão, conjugação, correlação dos modos e tempos verbais, vozes. Estrutura da oração e
+do período: aspectos sintáticos e semânticos. Concordância verbal e nominal. Regência verbal e nominal. Uso dos pronomes relativos. Colocação dos pronomes
+pessoais oblíquos átonos. Emprego do sinal indicativo da crase. Usos da pontuação. Ortografia oficial. Acentuação gráfica.
+
+                                                                                   POLÍTICAS DE SAÚDE PÚBLICA
+Constituição da República Federativa do Brasil (com as Emendas Constitucionais): Art. 196 a 200. Sistema Único de Saúde: Hist ória do sistema de saúde no Brasil.
+Reforma Sanitária Brasileira. Concepção do Sistema Único de Saúde (SUS). Princípios e diretrizes do SUS. Lei Orgânica da Saúde (Lei nº 8.080/1990). Lei nº 8.142/1990
+– participação da comunidade e transferências intergovernamentais. Financiamento do SUS (Lei Complementar nº 141/2012). Pacto pela Saúde. Decreto nº 7.508/2011
+– regulamentação da Lei nº 8.080/1990. Redes de Atenção à Saúde: conceito, componentes, níveis de atenção. Política Nacional de Atenção às Urgências e
+Emergências. Política Nacional de Atenção Hospitalar. Política Nacional de Humanização (PNH). Segurança do Paciente. Controle social: Conselhos e Conferências de
+Saúde. Modelos de atenção à saúde. Epidemiologia: conceitos básicos, objetivos, indicadores de saúde. Medidas da ocorrência d e doenças: incidência, prevalência,
+mortalidade. Tipos de estudos epidemiológicos. Vigilância em Saúde: epidemiológica, sanitária, ambiental e saúde do trabalhad or. Sistemas de Informação em Saúde
+(SIM, SINAN, SI-PNI, CNES). Avaliação de serviços de saúde. Doenças e agravos de notificação compulsória. Determinantes sociais da saúde.
+
+                                                                                                                                 Página 2 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                           501 - CIRURGIÃO DENTISTA CLÍNICO GERAL
+SB Brasil 2010. Epidemiologia das doenças bucais: cárie, doenças periodontais e câncer bucal: conceito, etiologia, evolução, medidas de controle, diagnóstico,
+tratamento, prognóstico e prevenção. Uso do flúor na prevenção e tratamento da cárie dentária; Métodos de Uso Coletivo do Flúor; Fluorose Dentária - Aspectos
+clínicos e Epidemiológicos. Prática odontológica baseada na promoção de saúde. Educação em Saúde: ações coletivas voltadas à promoção da saúde e à prevenção de
+doenças bucais. Biossegurança, ergonomia e controle de infecção em odontologia. Procedimentos cirúrgicos de pequeno e médio p orte, extração simples, sem
+odontosecção e com odontosecção, extração com alveoloplastia, biópsias, suturas, drenagem de manifestações agudas e crônicas. Dentística: preparo de cavidades,
+materiais de proteção do complexo pulpodentário, materiais restauradores. Estomatologia: patologias intra e extraósseas da cavidade bucal – características clínicas,
+diagnóstico e tratamento. Manifestações bucais de doenças sistêmicas. Farmacologia e terapêutica: bases farmacológicas da ter apêutica medicamentosa em
+odontologia; prevenção e controle da dor; uso clínico de medicamentos; mecanismos de ação e efeitos tóxicos dos fármacos, receituário. Lei Federal nº 8.080/1990.
+Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Profissional.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                502 - ENFERMEIRO 24 HORAS / 503 - ENFERMEIRO 30 HORAS
+Cuidados de Enfermagem: Teorias de Enfermagem, Sinais vitais. Semiologia e Semiotécnica de Enfermagem, Preparo, administração e cálculos de medicamentos.
+Classificação de risco, Assistência de enfermagem em Urgência e Emergência, Assistência de enfermagem nas fases do desenvolvimento humano, Biossegurança,
+Segurança do Paciente, Cuidados Paliativos. Guia de Vigilância Epidemiológica - Covid-19. Sistema Único de Saúde (SUS): evolução histórica da organização do sistema
+de saúde no Brasil e a construção do Sistema Único de Saúde (SUS) – princípios, diretrizes, estrutura, organização e arcabouço legal. Cenário epidemiológico do Brasil:
+transição demográfica e epidemiológica das DCNT e Agravos da Saúde. Ciência e tecnologia em saúde. Estrutura e funcionamento das instituições e suas relações com
+os serviços de saúde. Níveis progressivos de assistência à saúde. Políticas públicas do SUS para gestão de recursos físicos, financeiros, materiais e humanos. Sistema
+de planejamento do SUS: Planejamento estratégico e normativo. Direitos dos usuários do SUS. Participação e controle social. Ações e programas do SUS.  Estudos e
+avaliação de indicadores de saúde: sistemas nacionais de informação para doenças transmissíveis e não transmissíveis. Vi gilância em saúde. Programa Nacional de
+Humanização. Redes de Atenção, Política Nacional de Atenção Hospitalar, Política Nacional de Atenção às Urgências. Legislação profissional: Lei Federal nº 7.498/1986
+(lei do exercício profissional), regulamentada pelo Decreto Federal nº 94.406/1987. Código de Ética e Deontologia da Enfermagem – análise crítica. Bioética.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                  504 - TÉCNICO SUPERIOR DE SAÚDE - ASSISTENTE SOCIAL
+Atuação do Assistente Social na Política de Saúde. Serviço Social e atuação em instituições hospitalares. Processos de trabal ho no Serviço Social e seus fundamentos
+teórico-metodológicos, técnico-operativos e ético-políticos. Processos de trabalho e instrumentalidade no Serviço Social. Níveis, áreas e limites de atuação do
+profissional de Serviço Social. Abordagens grupais e individuais. Estratégias, instrumentos e técnicas de intervenção. Ética profissional. Políticas Sociais e Legislação
+que regulamentam a profissão de Assistente Social: Relação Estado/Sociedade. Políticas da Assistência Social Brasileira, Lei Orgânica de Assistência Social (LOAS),
+Políticas de Saúde Brasileira, Sistema Único de Saúde (SUS) e agências reguladoras. Estatuto da Criança e do Adolescente - ECA (Lei Federal nº 8.069/1990, e
+atualizações). Política Nacional de Saúde da Pessoa com Deficiência. Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei Federal nº 13.146/2015, e
+atualizações). Estatuto da Pessoa Idosa (Lei Federal nº 10.741/2003, e atualizações). Política Nacional para a População em Situação de Rua. Lei Maria da Penha. Norma
+Operacional Básica do SUAS NOB/SUAS. Orientações Serviço de Proteção e Atendimento Integral à Família e Serviço de Convivência e Fortalecimento de
+Vínculos. Orientações Técnicas: Centro de Referência Especializado de Assistência Social. Capacita SUAS. A Prevenção e o Trabalho Social com Famílias na Proteção
+Social Básica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                    505 - TÉCNICO SUPERIOR DE SAÚDE - FARMACÊUTICO
+Vias de administração de medicamentos. Farmacotécnica: formas farmacêuticas e cálculos. Psicoativos e retinoides: legislação vigente. Centra l de abastecimento
+farmacêutico: armazenamento e distribuição. Estrutura física e organizacional da farmácia hospitalar. Aquisição de medicamentos e correlatos em instituição pública:
+legislação vigente. Comissão de Farmácia e terapêutica: padronização de medicamentos e farmacovigilância. Boas práticas de distribuição de produtos farmacêuticos:
+legislação vigente. Boas práticas de manipulação em farmácia. Mecanismos gerais de ação e efeitos de fármacos. Farmacocinética. Bioequivalência e biodisponibilidade
+de fármacos. Antiácidos. Antiespasmódicos. Broncodilatadores. Anti-hipertensivos. Diuréticos. Interação medicamentosa. Antimicrobianos. Farmacologia clínica:
+conceito de solução, solvente e soluto, molaridade e normalidade. Amostras biológicas, destinadas à análise: procedimentos de coleta, conservação, transporte,
+processamento e descarte. Funcionamento e manutenção de centrífugas, balanças, estufas e microscópios de luz. Política Nacional de Medicamentos: Relação Nacional
+de medicamentos (RENAME), uso racional de medicamentos. Assistência Farmacêutica: Política Nacional de Assistência Farmacêuti ca, Gestão da assistência
+farmacêutica e farmacovigilância. Avaliação de Tecnologias em Saúde e farmacoeconomia; Farmacoepidemiologia. Legislações do Sistema Único de Saúde - SUS,
+deontologia farmacêutica; Regulamento Técnico sobre substâncias e medicamentos sujeitos a controle especial. Redes de Atenção em Saúde. Ciclo da Assistência
+Farmacêutica. Organização da Assistência Farmacêutica no SUS e Programa de Medicamentos Especiais. Bioética. Código de Ética da Profissão Farmacêutica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                            506 - TÉCNICO SUPERIOR DE SAÚDE - FARMACÊUTICO BIOQUÍMICO
+Bioquímica Clínica: Preparo e Variações nas Determinações Laboratoriais. Fotometria: Conceitos básicos, tipos e leis da fotometria aplicadas à bioquímica clínica.
+Principais Exames Bioquímicos: técnicas, fundamentos e interpretação de exames para glicemia, colesterol e triglicerídeos. Coleta de sangue para exames laboratoriais,
+incluindo técnicas de punção venosa e capilar e conhecimento dos diferentes tipos de tubos de coleta, sua finalidade, aditivos e impacto nos resultados laboratoriais.
+Exames de Marcadores cardíacos; hepáticos; renais; tumorais, hormonais e inflamatórios. Hemograma e Índices Hematimétricos: interpretação clínica dos resultados,
+com ênfase nas anemias e nas alterações hematológicas; Imuno-Hematologia: Testes para classificação sanguínea e compatibilidade transfusional. Coagulação e
+Hemostasia: Princípios dos testes de coagulação, métodos de coloração e interpretação de exames para avaliação de hemostasia. Eletroforese: fundamentos da técnica
+e aplicação para análise de proteínas, hemoglobinas e outras macromoléculas, com interpretação de padrões eletroforéticos em diagnósticos clínicos. Diagnóstico
+Parasitológico: métodos de diagnóstico das principais parasitoses humanas. Diagnóstico Microbiológico: Técnicas de coloração, cultura e identificação de patógenos,
+com foco em doenças relevantes. Biologia Molecular: Fundamentos para o diagnóstico molecular de doenças infecciosas e genéticas. Citopatologia: Técnicas de coleta,
+preparo e interpretação de amostras celulares, com ênfase na patologia celular. Fundamentos e Técnicas Sorológicas em Imunologia Clínica: aplicação de técnicas
+sorológicas (ELISA, imunofluorescência, fixação do complemento) para diagnóstico de doenças infecciosas e autoimunes. Exame de Urina: Avaliação física, química e
+microscópica da urina, com interpretação clínica dos achados. Marcadores em Urinálise: Pesquisa de proteínas, cetonas, glicos e, e outros marcadores urinários que
+possam indicar desordens metabólicas ou renais. Ética e Legislação: Conhecimento do Código de Ética Farmacêutica e responsabilidades técnicas do farmacêutico
+bioquímico; Normas de segurança em laboratórios de análises clínicas, incluindo descarte de resíduos e boas práticas laboratoriais. Legislação vigente aplicada a
+serviços de saúde e laboratórios, visando à conformidade com normas de segurança e qualidade.
+
+                                                                                                                                 Página 3 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                    507 - TÉCNICO SUPERIOR DE SAÚDE - FISIOTERAPEUTA
+Função e disfunção dos tecidos, órgãos, sistemas e aparelhos. Anatomia funcional e palpatória. Semiologia. Fisiologia e Fisiopatologia: respiratória, cardiovascular,
+neurofisiologia, fisiologia articular e do envelhecimento. Cinesiologia e cinesioterapia. Epidemiologia, bioética e processo saúde-doença. Ciências sociais e humanas.
+Princípios epidêmicos da saúde pública e saúde coletiva. Recursos terapêuticos, no âmbito ambulatorial. Suporte básico de vida. Ava liação e conduta fisioterapêutica
+nas diversas patologias (métodos e técnicas): pulmonares, cardiovasculares, reumatológicas, geriátricas, traumato-ortopédicas, neurológicas, pediátricas,
+dermatológicas, ginecológica e obstetrícia. Fisioterapia preventiva. Oxigenoterapia. Prótese, órtese e tecnologia assistiva. Indicação e tipos de auxílio à locomoção.
+Atenção do pé diabético. Código de Ética e deontologia profissional.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                    508 - TÉCNICO SUPERIOR DE SAÚDE - NUTRICIONISTA
+Código de Ética da profissão e atividades privativas. Triagem e avaliação nutricional. Indicadores antropométricos, dietéticos e laboratoriais nas diferentes faixas
+etárias. Ingestão, digestão, absorção, excreção, metabolismo e fontes alimentares dos nutrientes. Necessidades e recomendações de nutrientes e energia nas
+diferentes faixas etárias. Terapia nutricional na Unidade de Terapia Intensiva. Terapia nutricional enteral e parenteral. Aspectos fisiopatológicos e terapia nutricional
+nas doenças gastrointestinais, pulmonares, neurológicas, cardiovasculares, renais, hepatopatas, HIV e queimados. Aspectos fis iopatológicos e terapia nutricional no
+diabetes mellitus, obesidade, câncer e paciente crítico. Nutrição no pré e pós-operatório. Política Nacional de Alimentação e Nutrição. Inquéritos Populacionais e
+chamadas nutricionais. Política Nacional de Promoção da Saúde.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                       509 - TÉCNICO SUPERIOR DE SAÚDE - PSICÓLOGO
+O conceito de saúde como fenômeno multideterminado. Influências sociais e ambientais sobre a saúde. O processo de avaliação psicológica como base para a
+intervenção profissional do Psicólogo. Avaliação psicológica aplicada ao Hospital Geral. Diagnóstico e terapêutica em psicologia hospitalar. Psicopatologia Geral:
+avaliação do paciente e funções psíquicas. Natureza e psicodinâmica dos transtornos mentais e comportamentais. A perda e o lu to. Urgências psicológicas. A violência
+na criança, adolescência, idoso e na família. Psicologia e Teorias da Personalidade. Principais teorias e perspectivas atuais da psicologia. Psicoterapia de grupo: teoria
+e técnica. O papel do psicólogo em equipe multidisciplinar. Psicologia do envelhecimento. Políticas públicas de saúde mental. Código de Ética do Psicólogo.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                             510 - TÉCNICO SUPERIOR DE SAÚDE - TERAPEUTA OCUPACIONAL
+Código de Ética e Deontologia Profissional da Terapia Ocupacional. Sistema Único de Saúde (SUS). Classificação Internacional de Funcionalidade, Incapacidade e Saúde
+(CIF). Terapia Ocupacional na Atenção à Saúde da Criança. Terapia Ocupacional na Atenção à Saúde do Adulto. Terapia Ocupacional na Atenção à Saúde do Idoso.
+Terapia Ocupacional em Programas de Saúde Mental. Terapia Ocupacional em Programas de Saúde Coletiva. Terapia Ocupacional em Programas de Saúde Pública.
+Terapia Ocupacional em Programas de Contextos Hospitalares. Terapia Ocupacional em Programas de Assistência Social. Ocupação e Saúde. Processo Terapêutico
+Ocupacional. Comunicação em Terapia Ocupacional. Modelos, Métodos e Práticas da Terapia Ocupacional. Prática da Terapia Ocupa cional em Cuidado Individual.
+Prática da Terapia Ocupacional em Cuidado Coletivo. Prática da Terapia Ocupacional em Cuidado ao Usuário SUS. Prática da Tera pia Ocupacional em Cuidado dos
+Familiares e Cuidadores. Prática da Terapia Ocupacional em Diferentes Equipamentos de Saúde. Prática da Terapia Ocupacional em Cuidado em Domicílios. Prática da
+Terapia Ocupacional em Diferentes Modalidades, Cenários e Contextos. Avaliação e Tratamento em Terapia Ocupacional com Diferentes Condições de Saúde. Avaliação
+e Tratamento em Terapia Ocupacional das Funções e Estruturas do Corpo. Avaliação e Tratamento em Terapia Ocupacional dos Fatores Ambientais. Avaliação e
+Tratamento em Terapia Ocupacional dos Fatores Pessoais. Avaliação e Tratamento em Terapia Ocupacional das Atividades e da Participação no Autocuidado, Trabalho
+e Lazer. Órteses, Adaptações e Tecnologia Assistiva. Prática Baseada em Evidência em Terapia Ocupacional. Raciocínio Clínico ou Profissional em Terapia Ocupacional.
+História da terapia ocupacional no Brasil e na saúde mental. Reforma psiquiátrica. Políticas Públicas de Saúde Mental. Reabilitação psicossocial. Atenção aos usuários
+de álcool e outras drogas. Ações em saúde mental. Psicopatologia. Projeto Terapêutico Singular. Desempenho Ocupacional e Saúd e Mental.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                601 - CIRURGIÃO DENTISTA B DISFUNÇÃO TEMPOROMANDIBULAR E DOR OROFACIAL
+Anatomia, fisiologia e biomecânica do sistema estomatognático: articulação temporomandibular (ATM); músculos da mastigação; oclusão; neurofisiologia da dor;
+biomecânica mandibular. Disfunções temporomandibulares (DTM): classificação das DTMs; etiologia e fatores predisponentes; sinai s e sintomas; diagnóstico
+diferencial; avaliação funcional da ATM; limitação de abertura bucal; ruídos articulares; luxações e subl uxações. Dor orofacial: classificação das dores orofaciais; dor
+neuropática; dor miofascial; neuralgias craniofaciais; cefaleias relacionadas à DTM; dor odontogênica e não odontogênica; dor persistente pós-operatória; síndrome
+da ardência bucal. Semiologia e diagnóstico em DTM e dor orofacial: anamnese especializada; exame clínico funcional; palpação muscular e articular; exames
+complementares; protocolos diagnósticos; diagnóstico diferencial. Exames de imagem aplicados à DTM: radiografia convencional; tomografia computadorizada;
+ressonância magnética da ATM; ultrassonografia; interpretação de exames de imagem. Oclusão e sua relação com DTM: princípios de oclusão; interferências oclusais;
+bruxismo; apertamento dentário; hábitos parafuncionais; ajuste oclusal. Tratamento das disfunções temporomandibulares: terapias conservadoras; placas oclusais;
+farmacoterapia; fisioterapia; acupuntura; terapias comportamentais; infiltrações; viscossuplementação; toxina botulínica; tratamento cirúrgico da ATM. Farmacologia
+aplicada à dor orofacial: analgésicos; anti-inflamatórios; relaxantes musculares; antidepressivos; anticonvulsivantes; opioides; protocolos terapêuticos. DTM em
+populações especiais: pacientes pediátricos; idosos; gestantes; pacientes oncológicos; pacientes com doenças sistêmicas e reumatológicas. Interdisciplinaridade no
+tratamento da dor orofacial: atuação multiprofissional; odontologia; fisioterapia; psicologia; neurologia; otorrinolaringolog ia; fonoaudiologia; medicina do sono.
+Medicina do sono relacionada à odontologia: bruxismo do sono; apneia obstrutiva do sono; distúrbios respiratórios do sono; dispositivos intraorais. Bios segurança e
+controle de infecção em odontologia: normas de biossegurança; esterilização; gerenciamento de resíduos odontológicos; prevenção de infecções cruzadas. Urgências
+e emergências em odontologia: manejo da dor aguda; urgências relacionadas à ATM; reações adversas medicamentosas; suporte bás ico de vida. Ética e legislação
+odontológica: Código de Ética Odontológica; responsabilidade civil, penal e ética do cirurgião-dentista; documentação odontológica; sigilo profissional; consentimento
+informado. Políticas públicas de saúde: Sistema Único de Saúde (SUS); princípios e diretrizes do SUS; Política Nacional de Saúde Bucal; atenção especializada em saúde
+bucal; Centros de Especialidades Odontológicas (CEO). Legislação aplicada: Lei Federal nº 8.080/1990; Lei Federal nº 8.142/19 90; normas e resoluções do Conselho
+Federal de Odontologia relacionadas à DTM e Dor Orofacial; protocolos clínicos e diretrizes terapêuticas. Pesquisa científica e prática baseada em evidências:
+interpretação de literatura científica; metodologia científica; atualização técnico-científica; protocolos clínicos. Atualidades e temas contemporâneos: tecnologias
+digitais aplicadas ao diagnóstico e tratamento; teleodontologia; terapias minimamente invasivas; inteligência artificial aplica da à odontologia; humanização da
+assistência em dor crônica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                      602 - CIRURGIÃO DENTISTA B ESPECIALISTA EM ODONTOLOGIA HOSPITALAR
+Fundamentos da Odontologia Hospitalar: conceitos e princípios da odontologia hospitalar; atuação do cirurgião-dentista em ambiente hospitalar; assistência
+odontológica integrada à equipe multiprofissional; humanização da assistência; segurança do paciente. Anatomia, fisiologia e patologia aplicada: anatomia de cabeça
+
+                                                                                                                                 Página 4 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+e pescoço; fisiologia oral; microbiologia oral; alterações sistêmicas com repercussão bucal; fisiopatologia das doenças sistêmicas relacionadas à saúde bucal. Avaliação
+odontológica hospitalar: anamnese e exame clínico; avaliação de risco odontológico; diagnóstico bucal em pacientes hospitaliza dos; exames complementares;
+elaboração de pareceres e relatórios. Atendimento odontológico em pacientes sistemicamente comprometidos: pacientes cardiopatas; diabéticos; nefropatas;
+hepatopatas; imunossuprimidos; transplantados; pacientes críticos; pacientes em UTI; pacientes geriátricos; pacientes pediátr icos hospitalizados. Odontologia em
+terapia intensiva: atuação em UTI adulto, pediátrica e neonatal; prevenção de pneumonia associada à ventilação mecânica (PAV); higiene oral em pacientes críticos;
+manejo odontológico do paciente intubado e traqueostomizado; protocolos hospitalares. Controle de infecção hospitalar e bioss egurança: infecções relacionadas à
+assistência à saúde (IRAS); microbiota oral hospitalar; precauções padrões; esterilização e desinfecção; gerenciamento de resíduos de serviços de saúde; segurança
+ocupacional. Cirurgia oral em ambiente hospitalar: exodontias complexas; cirurgias odontológicas em centro cirúrgico; controle de hemorragias; manejo de pacientes
+anticoagulados; complicações cirúrgicas; suturas e técnicas cirúrgicas. Sedação, anestesia e emergências médicas: anestésicos locais; sedação consciente;
+monitorização do paciente; suporte básico de vida; urgências e emergências médicas em odontologia hospitalar; reações adversas medicame ntosas. Odontologia
+aplicada ao paciente oncológico: manifestações bucais da quimioterapia e radioterapia; mucosite oral; xerostomia; osteorradionecrose; cuidados odontológicos pré,
+trans e pós-tratamento oncológico. Odontologia aplicada a pacientes com necessidades especiais: atendimento odontológico hospitalar especializado; pacientes com
+deficiência; distúrbios neurológicos; doenças raras; manejo comportamental. Dor, infecção e farmacologia: farmacologia aplicada à odontologia hospitalar;
+antibioticoterapia; analgesia; anti-inflamatórios; interações medicamentosas; controle da dor em pacientes hospitalizados. Estomatologia hospitalar: lesões bucais;
+infecções oportunistas; manifestações bucais de doenças sistêmicas; diagnóstico diferencial; biópsias; patologias potencialme nte malignas. Odontologia preventiva e
+promoção da saúde: prevenção de infecções bucais; protocolos de higiene oral hospitalar; educação em saúde; prevenção de complicações sistêmicas relacionadas à
+saúde bucal. Ética e legislação odontológica: Código de Ética Odontológica; responsabilidade civil, penal e ética do cirurgiã o-dentista; documentação odontológica;
+prontuário hospitalar; consentimento informado; sigilo profissional. Políticas públicas de saúde: Sistema Único de Saúde (SUS); pri ncípios e diretrizes do SUS; Política
+Nacional de Saúde Bucal; Política Nacional de Humanização; atenção hospitalar no SUS; segurança do paciente. Legislação aplicada: Lei Federal nº 8.080/1990; Lei
+Federal nº 8.142/1990; normas da ANVISA relacionadas ao ambiente hospitalar; protocolos de segurança do paciente; resoluções do Conselho Federal de Odontologia
+sobre Odontologia Hospitalar. Gestão e trabalho multiprofissional: atuação interdisciplinar; protocolos assistenciais; indicadores de qualidade; auditori a em saúde;
+educação permanente em saúde. Atualidades e temas contemporâneos: odontologia digital; teleodontologia; laserterapia; tecnologias aplicadas à odontologia
+hospitalar; medicina e odontologia baseada em evidências; humanização e cuidados paliativos.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                  603 - ENFERMEIRO B OBSTETRA
+Fundamentos do exercício de Enfermagem: normas, rotinas e protocolos. Concepções teórico práticas da assistência de Enfermagem. Sistematização da assistência:
+semiologia e semiotécnica em Enfermagem. Acolhimento em Ginecologia e Obstetrícia. Segurança do Paciente. Avaliação Clínica em Enfermagem Obstétrica. Rede de
+assistência obstétrica. Assistência em enfermagens relativas às patologias nos sistemas nervoso, respiratório, cardiovascular, urinário, digestório, musculoesquelético
+e endócrino com repercussão no sistema reprodutivo. Atuação nas doenças sexualmente transmissíveis/infecção pelo HIV. Direitos sexuais e reprodutivos, gravidez
+na adolescência e anticoncepção de emergência. Planejamento familiar e aborto legal. Assistência de enfermagem à mulher: prev enção e detecção precoce do câncer
+de útero e mama, acompanhamento à gestante, pré-natal; acompanhamento à mulher no abortamento. Atenção à mulher vítima de violência doméstica e sexista.
+Assistência de enfermagem na atenção à criança e recém-nascido (RN): conceito e tipo de imunidade; programa de Imunização, puericultura, abordagem do RN pré-
+termo, termo e pós-termo, aleitamento materno; doenças prevalentes na infância. Assistência de enfermagem no pré, trans e pós-parto (normal ou patológico),
+manobras de parto normal. Parto humanizado. Assistência de enfermagem em urgência e emergência em centro obstétrico e casas de parto. Assepsia, antissepsia,
+métodos e técnicas. Biossegurança e controle de infecção hospitalar. Técnicas de limpeza, esterilização e desinfecção de materiais e equipamentos. Investigação de
+óbitos maternos e neonatais. Lei Federal nº 7.498/1986 (lei do exercício profissional), regulamentada pelo Decreto Federal nº 9 4.406/1987. Código de Ética e
+Deontologia da Enfermagem – análise crítica. Bioética.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                604 - ENFERMEIRO B DO TRABALHO
+Fundamentos da Enfermagem do Trabalho: princípios, diretrizes e organização dos serviços de saúde ocupacional; atribuições do Enfermeiro do Trabalho; assistência
+integral à saúde do trabalhador; promoção, prevenção e vigilância em saúde do trabalhador. Legislação aplicada à Saúde do Trabalhador: Constituição Federal de 1988
+- direitos sociais e saúde do trabalhador. Consolidação das Leis do Trabalho (CLT). Política Nacional de Saúde do Trabalhador e da Trabalhadora. Lei Orgânica da Saúde
+- Lei Federal nº 8.080/1990. Normas Regulamentadoras do Ministério do Trabalho e Emprego, especialmente: NR -01 - Disposições Gerais e Gerenciamento de Riscos
+Ocupacionais; NR-04 - SESMT; NR-05 - CIPA; NR-06 - Equipamentos de Proteção Individual (EPI); NR-07 - Programa de Controle Médico de Saúde Ocupacional (PCMSO);
+NR-09 - Avaliação e Controle das Exposições Ocupacionais; NR-15 - Atividades e Operações Insalubres; NR-16 - Atividades e Operações Perigosas; NR-17 - Ergonomia;
+NR-24 - Condições Sanitárias e de Conforto; NR-32 - Segurança e Saúde no Trabalho em Serviços de Saúde. Previdência Social aplicada aos acidentes de trabalho e
+doenças ocupacionais. Comunicação de Acidente de Trabalho (CAT). Saúde ocupacional em ambiente hospitalar: riscos físicos, químicos, biológicos, ergonômicos e
+psicossociais; mapa de riscos; prevenção de acidentes; biossegurança; gerenciamento de resíduos dos serviços de saúde; controle de infecção hospitalar; imunização
+ocupacional. Vigilância em Saúde do Trabalhador: investigação de acidentes de trabalho; notificação compulsória; vigilância epidemiológica; monitoramento de
+agravos relacionados ao trabalho; indicadores de saúde ocupacional; análise de absenteísmo e adoecimento ocupacional. Programas de saúde ocupacional:
+elaboração, implantação, execução e avaliação de programas de promoção à saúde; campanhas educativas; qualidade de vida no trabalho; prevenção de doenças
+ocupacionais e acidentes; ergonomia aplicada ao ambiente hospitalar. Enfermagem assistencial aplicada ao trabalhador: co nsulta de enfermagem ocupacional;
+anamnese ocupacional; exames admissionais, periódicos, de retorno ao trabalho, mudança de função e demissionais; atendimento de urgência e emergência no
+ambiente de trabalho; primeiros socorros; suporte básico de vida; acompanhamento de trabalhadores afastados. Doenças ocupacionais e acidentes de trabalho:
+LER/DORT; transtornos mentais relacionados ao trabalho; burnout; doenças infectocontagiosas; exposição a material biológico; acidentes perfurocortantes;
+intoxicações ocupacionais; nexo causal. Saúde mental do trabalhador: prevenção do adoecimento psíquico; assédio moral e sexual; violência no t rabalho; apoio
+psicossocial; estratégias de promoção da saúde mental no ambiente hospitalar. Gestão em enfermagem do trabalho: plan ejamento, supervisão e avaliação das ações
+de enfermagem; gestão de equipes; liderança; educação permanente; elaboração de protocolos e fluxos assistenciais; indicadores de desempenho. Ética e bioética
+em enfermagem: Código de Ética dos Profissionais de Enfermagem. Sigilo profissional. Responsabilidade civil, penal e ética do enfermeiro. Humanização da assistência.
+Processo de enfermagem e sistematização da assistência de enfermagem (SAE): etapas do processo de enfermagem; registros e doc umentação; classificação de
+diagnósticos, intervenções e resultados. Farmacologia aplicada: administração segura de medicamentos; cálculo de medicação; i munobiológicos; reações adversas;
+medicamentos utilizados em urgência e emergência ocupacional. Epidemiologia e estatística aplicada à saúde do trabalhador: conceitos básicos; indicadores
+epidemiológicos; análise de dados; interpretação de estudos epidemiológicos. Informática aplicada à saúde: prontuário eletrônico; sistemas de informação em saúde;
+registro e monitoramento de dados ocupacionais. Atualidades e temas contemporâneos: Saúde e segurança do trabalhador em serviços de saúde. Pandemias e
+impactos ocupacionais. Sustentabilidade e gestão ambiental hospitalar. Inovações tecnológicas em saúde ocupacional. Humanização e qualidade assistencial no
+ambiente hospitalar. Lei Federal nº 7.498/1986 (lei do exercício profissional), regulamentada pelo Decreto Federal nº 94.406/1987. Código de Ética e Deontologia da
+Enfermagem – análise crítica. Bioética.
+
+                                                                                                                                 Página 5 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                605 - MÉDICO B ANESTESIOLOGISTA
+Avaliação e Preparo Pré-Anestésico: Consultório de avaliação pré-anestésica. Risco anestésico-cirúrgico. O paciente. Os fármacos. A anestesia. A cirurgia. Exames
+complementares. Jejum. Medicação pré-anestésica. Planejamento anestésico. Vias Aéreas: Anatomia. Avaliação. Algoritmos. Anestesia da via aérea. Técnicas para
+abordagem da via aérea. Posicionamento. Intubação traqueal: oral e nasal. Intubação retrograda. Intubação às cegas. Fibroscopia. Acesso
+cirúrgico. Equipamentos: Laringoscópios e lâminas. Cânulas e sondas trocadoras. Dispositivos supra-glóticos. Estiletes luminosos. Particularidades da via aérea:
+pediatria, gestante e trauma. Fisiologia e Farmacologia do Sistema Cardiocirculatório: Bioeletrogênese cardíaca Cronotropismo, batmotropismo, dromotropismo e
+inotropismo. Fases do ciclo cardíaco. Débito cardíaco. Controle do sistema cardiovascular. Circulação coronariana. Consumo de oxigênio pelo miocárdio. Fármacos
+inotrópicos e vasopressores. Fármacos anti-hipertensivos. Vasodilatadores. Inibidores do sistema renina-angiotensina-aldosterona. Alfa e betabloqueadores.
+Antiarrítmicos. Outros agentes com ação terapêutica sobre o sistema cardiovascular. Fisiologia e Farmacologia do Sistema Respiratório: Funções respiratórias e não-
+respiratórias do pulmão. Mecânica respiratória. Curvas de pressão/volumes intratorácicos. Complacência pulmonar estática e di nâmica. Fluxos e resistência nas vias
+aéreas. Ventilação pulmonar. Volumes e capacidades pulmonares. Trocas gasosas. Trabalho respiratório. Difusão pulmonar. Circulação pulmonar. Hemodinâmica
+pulmonar: pressões, fluxo e resistência. Regulação da circulação pulmonar. Relação ventilação-perfusão. Zonas respiratórias. "Shunt" e espaço morto fisiológico.
+Transporte de gases: O2 e CO2. Controle central e reflexo da respiração. Farmacocinética, farmacodinâmica, indicações, contraindicações, toxicidade e interação com
+a anestesia. Broncodilatadores. Oxigênio. Óxido Nítrico. Prostaglandinas. Outros agentes com ação terapêutica sobre o sis tema respiratório. Farmacologia
+Geral: Princípios Gerais de Farmacocinética. Princípios Gerais de farmacodinâmica. Interações Medicamentosas. Farmacologia dos Anestésicos Venosos: Classificação
+dos agentes venosos. Mecanismos de ação, farmacocinética e farmacodinâmica. Agentes opioides. Agentes não opioides. Farmacologia dos Anestésicos Inalatórios:
+Agentes inalatórios: gases e líquidos voláteis. Farmacocinética e farmacodinâmica dos anestésicos inalatórios. Solubilidade. Coeficiente de partição. Concentração
+alveolar mínima (CAM): conceito e fatores que interferem. DA 50 e DA 90. Biotransformação. Toxicidade. Importância da ventilação, da circulação e das alterações da
+relação ventilação/perfusão na absorção e eliminação dos anestésicos inalatórios. Efeitos da concentração e efeito segundo gás. Influência do sistema de inalação.
+Distribuição dos anestésicos inalatórios: influência do fluxo sanguíneo tecidual e dos coeficientes de solubilidade sangue/gás e tecido/sangue. Fatores que interferem
+na eliminação dos anestésicos inalatórios pelos pulmões. Farmacologia dos Anestésicos Locais: Conceito e estrutura química. Classificação. Propriedades físicas e
+químicas. Mecanismo de ação. Estabilidade. Fatores que alteram a concentração anestésica mínima. Anátomo-fisiologia da fibra nervosa. Bloqueio nervoso diferencial.
+Absorção, distribuição e ligação proteica. Biotransformação. Eliminação. Efeitos sistêmicos. Interação com outras drogas. Passagem placentária. Toxicidade dos
+anestésicos locais. Prevenção e tratamento. Uso de adjuvantes. Transmissão e Bloqueio neuromuscular: Fibra muscular. Anátomo-fisiologia e patologia. Junção mio-
+neural. Anátomo-fisiologia e patologia. Fasciculação, fadiga, facilitação pós-tetânica, contração e contratura. Tipos de bloqueios: conceito, mecanismos e
+características. Fatores que alteram a duração ou o grau de bloqueio neuromuscular. Monitorização da função neuromuscular. Bl oqueadores neuromusculares. Tipos,
+estrutura química, propriedades físico-químicas, ação farmacológica, absorção, distribuição e eliminação. Metabolismo. Uso clínico. Interação com outras drogas.
+Reversão do bloqueio neuromuscular. Doenças e problemas que afetam a transmissão neuromuscular. Parada Cardíaca e Reanimação: Conceito de parada
+cardiorrespiratória. Causas e diagnóstico diferencial. Suporte básico à vida. Suporte avançado à vida: equipamentos, fármacos, massagem cardíaca, desfibril ação,
+marca-passos artificiais. Organização pré-hospitalar e hospitalar (comunicação, sistema de prevenção, treinamento de pessoal, material de reanimação). Transporte e
+cuidados pós-reanimação. Conceito e diagnóstico de morte clínica e cerebral. Aspectos médico-legais. Reanimação do recém-nascido e da criança. Reanimação em
+situações especiais: obstetrícia, afogamento e eletrocussão. Reanimação do paciente anestesiado. Bloqueios Subaracnoideo e Peridural: Anatomia da coluna
+vertebral, medula espinhal, meninges, raízes nervosas e cadeia ganglionar simpática. Líquido cefalorraquidiano: formação, circulação, absorção, composição,
+densidade, função, volume e pressão. Alterações da fisiologia decorrentes dos bloqueios no neuroeixo. Assepsia da pele, cuidados com material e indumentária.
+Anestesia subaracnóidea. Anestésicos locais utilizados: seleção, dose, volume, concentração, densidade da solução e baricidade. Drogas adjuvantes. Técnicas de
+punção lombar. Tipos de agulha. Distribuição da solução anestésica e mecanismo de anestesia. Indicações, contraindicações e c omplicações (prevenção e tratamento).
+Anestesia peridural. Anestésicos locais: seleção, dose, concentração e volume. Drogas adjuvantes. Técnicas de acesso e identificação do espaço peridural torácico,
+lombar e sacral. Uso do cateter. Difusão do agente anestésico local e mecanismo de ação. Indicações, contraindicações e compl icações (prevenção e tratamento).
+Anestesia combinada raqui-peridural. Indicações e complicações. Complicações da Anestesia: Cardiovasculares. Respiratórias. Renais. Digestivas. Neurológicas.
+Relacionadas a equipamentos. Reações do tipo alérgico. Hipertermia maligna. Outras complicações. Recuperação Pós-Anestésica: Organização da unidade de
+recuperação pós-anestésica. Regressão da anestesia: parâmetros de avaliação e monitorização dos sinais vitais. Condições e critérios para a r emoção do paciente da
+sala de cirurgia para a sala de recuperação. Complicações no período pós-anestésico imediato. Critérios de alta da sala de recuperação. Monitorização: Uso clínico da
+monitorização: cardiovascular, respiratória, da temperatura, corporal, do Sistema Nervoso Central e Periférico. Anestesia Inalatória: Mecanismos de ação da anestesia
+Inalatória: teorias.  Avaliação clínica dos níveis de anestesia.  Técnicas de administração. Indicações e contraindicações. C omplicações: diagnóstico, prevenção e
+tratamento. Anestesia Venosa: Indicações e contraindicações. Técnicas de administração. Anestesia venosa balanceada. Anestesia venosa total. Anestesia alvo-
+controlada. Complicações. Bloqueios Periféricos: Anatomia, técnicas, indicações, contraindicações e complicações dos bloqueios somáticos: Cabeça. Pescoço. Tronco.
+Membros inferiores. Membros superiores. Anestesia venosa regional (Bloqueio de Bier). Técnicas para localização de nervos per iféricos. Reposição Volêmica e
+Transfusão: Hemoterapia. Reposição de sangue total e frações, indicações, cuidados e complicações. Grupos e compatibilidade sanguínea. Doenças transmissíveis pelo
+sangue. Sangue estocado: tipos e alterações. Expansores plasmáticos e carreadores de oxigênio. Soluções cristaloides. Alternativas à transfusão
+heteróloga. Hemostasia e Anticoagulação: Mecanismo de coagulação sanguínea. Provas laboratoriais e sua interpretação. Hemostáticos, anticoagulantes e seus
+antagonistas. Farmacologia. Complicações do uso. Interações com outros fármacos. Anemias. Hemofilia. Hipoprotrombinemia.
+Trombocitopenia. Coagulopatias dilucionais. Fibrinólise e coagulação intravascular disseminada. Conduta terapêutica e implicações na anestesia. Anestesia em
+Urologia: Ação de agentes e técnicas anestésicas sobre o rim. Anestesia para o paciente com Insuficiência renal crônica. Anestesia para procedimentos cirúrgicos
+urológicos. Anestesia para procedimentos endoscópicos, laparoscópicos e robóticos.  Anestesia para litotripsia extracorpórea e nefrolitotripsia percutânea. Anestesia
+em Obstetrícia: Adaptações fisiológicas da gravidez e implicações na anestesia. Circulação uteroplacentária: fluxo sanguíneo uterino, função placentária, troca de
+gases, transferência placentária dos agentes anestésicos e efeitos dos agentes anestésicos no fluxo sanguíneo uterino. Fisiologia da dor do trabalho de parto. Analgesia
+para o parto normal.  Técnicas, indicações, contraindicações e complicações. Efeitos de técnicas e agentes anestésicos sobre a evolução do trabalho de parto. Anestesia
+para cesariana. Técnicas, cuidados e complicações. Anestesia na gestação de alto risco. Doenças específicas da gestação. Doenças associadas. Anestesia nas urgências
+obstétricas. Anestesia para intercorrências não obstétricas durante a gravidez. Uterotônicos e vasopressores. Anestesia para cirurgias fetais. Anestesia em
+Ortopedia: Técnicas, cuidados, indicações e complicações. Cirurgia de quadril, joelho e ombro: fraturas, artroplastias e artroscopias. Cirurgia de coluna. Outras cirurgias
+de membros Grandes próteses. Anestesia para Cirurgia Abdominal: Técnicas e agentes anestésicos: ação sobre o funcionamento do sistema digestivo. Anestesia para
+correção dos defeitos da parede abdominal. Anestesia em pacientes com malformações digestivas congênitas ou adquiridas. Anest esia em pacientes portadores de
+doenças sistêmicas com repercussões digestivas ou abdominais, com distúrbios da absorção e/ou metabolismo. Anestesias para ci rurgias abdominais complexas.
+Cirurgia bariátrica. Fisiopatologia da obesidade. Técnicas, indicações, contraindicações e complicações. Anestesia para procedimentos videolaparoscópicos. Anestesia
+para Otorrinolaringologia: Cirurgia do nariz e da faringe. Cirurgia do ouvido. Cirurgia da laringe. Trauma de laringe. Laringectomia total. Cirurgia com laser. Anestesia
+para Oftalmologia: Anatomia e fisiologia do olho. Fatores que modificam a Pressão intraocular (PIO). Reflexo oculocardíaco: fisiopatologia, fatores predisponentes,
+complicações, prevenção e tratamento. Técnicas anestésicas. Indicações, contraindicações e complicações. Anestesia no paciente com lesão penetrante do globo
+ocular. Anestesia Ambulatorial: Conceito e organização da unidade ambulatorial. Normas legais.  Critérios de seleção. Técnicas anestésicas. Causas de retardo de alta
+e reinternação. Critérios de alta. Anestesia e Sistema endócrino: Estresse anestésico-cirúrgico na função do eixo hipotálamo-hipofisário e hipofiso-córtico-adrenal.
+Anestesia e farmacoterapia esteroide prolongada: mecanismos de ação, complicações e contraindicações. Anestesia em portador de feocromocitoma e outras doenças
+
+                                                                                                                                 Página 6 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+da suprarrenal. Anestesia no hiper e hipotireoidismo. Complicações da tireoidectomia. Crise tireotóxica. Anestesia no hiper e hipoparatireoidismo. Anestesia no
+diabético e no portador de insulinoma. Insulina: indicações, contraindicações e complicações. Anestesia em Urgências e no Trauma: Avaliação e preparo do paciente
+para cirurgia de urgência. Prevenção de regurgitação e aspiração do conteúdo gástrico. Vias aéreas. Fisiopatologia do politraumatizado. Agentes e técnicas anestésicas.
+Indicações, complicações. Anestesia de urgência no paciente com doenças associadas. Anestesia de urgência no paciente crítico. Anestesia de urgência no dependente
+químico. Interação com agentes anestésicos. Anestesia para Cirurgia Torácica: Preparo do paciente: gasometria, espirometria, relação V/Q. Posicionamento:
+alterações hemodinâmicas e ventilatórias. Fisiologia do tórax aberto. Anestesia monopulmonar. Tubos endobrônquicos e bloqueio brônquico. Anestesia para
+procedimentos cirúrgicos sobre os pulmões, brônquios e traqueia. Complicações pós-operatórias. Prevenção e tratamento. Anestesia para mediastinoscopia e
+toracoscopia. Anestesia e Sistema cardiovascular: Anestesia no cardiopata para cirurgia não-cardíaca. Anestesia para cirurgia cardíaca. Cardiopatias congênitas.
+Revascularização do miocárdio. Cirurgias valvares. Aneurismectomia. Traumatismo cardíaco. Circulação extracorpórea. Suporte mecânico à circulação. Marcapasso
+e cardioversão. Anestesia no laboratório de hemodinâmica. Anestesia para cirurgia vascular.  Proteção miocárdica. Anestesia para Neurocirurgia: Fisiologia
+intracraniana.  Edema cerebral. Controle da pressão intracraniana. Farmacologia dos principais fármacos utilizados em anestes ia sobre o SNC. Monitorização,
+posicionamento, técnicas anestésicas e complicações. Anestesia para procedimentos supra e infratentoriais. Anestesia para cirurgia estereotáxica. Anestesia para
+neurocirurgia pediátrica. Anestesia para procedimentos no laboratório de Hemodinâmica. Anestesia para cirurgi a da Hipófise. Anestesia para
+procedimentos neurofuncionais. Proteção cerebral. Choque: Conceito. Classificação. Fisiopatologia. Monitorização. Tratamento. Síndrome da resposta inflamatória
+sistêmica. Síndrome da falência de múltiplos órgãos. Mecanismos. Tratamento. Anestesia em Pediatria: Peculiaridades anatômicas e fisiológicas do recém-nascido e
+da criança. Fisiopatologia fetal e neonatal. Equilíbrio acidobásico e hidroeletrolítico fetal e neonatal. Reanimação Neonatal .  Avaliação e preparo pré-anestésico.
+Monitorização e ventilação. Anestesia geral e regional. Técnicas e farmacologia. Hidratação e reposição. Anestesia para as pr incipais malformações e doenças da
+criança e do neonato. Analgesia pós-operatória. Anestesia para Procedimentos fora do Centro Cirúrgico: Avaliação. Recuperação. Equipamentos. Monitorização.
+Segurança profissional. Transporte. Meios de contraste. Dor Aguda e Inflamação: Fisiopatologia. Avaliação. Métodos de tratamento. Drogas. Técnicas. Analgesia
+multimodal. Serviço de tratamento da dor aguda. Dor Crônica: Fisiopatologia. Classificação das síndromes dolorosas. Avaliação. Métodos de Tratamento. Analgésicos
+sistêmicos. Drogas adjuvantes. Bloqueios anestésicos. Bloqueios neurolíticos. A Clínica de Dor. Suporte ventilatório: Técnicas. Indicações, repercussões e
+complicações. Ventiladores. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de
+Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                606 - MÉDICO B CIRURGIÃO GERAL
+Atendimento inicial ao politraumatizado. Pré, per e pós-operatório. Abdômen agudo inflamatório, perfurativo, isquémico e hemorrágico. Megaesôfago. Tumores de
+esôfago. Câncer gástrico e úlcera cloridropética gastroduodenal. Hemorragias digestivas. Cirurgia no paciente idoso. Cirurgia na criança. Doença inflamatório
+intestinal. Bases e distúrbios da cicatrização. Transplante de órgão. Noções básicas da anestesia. Dor pós-operatória. Utilização de fluídos e equilíbrio eletrolítico e
+ácido básico. Trauma cranioencefálico. Trauma musculoesquelético. Trauma na criança. Doença diverticular do cólon. Neoplasia colorretal. Cirurgias orificiais. Vesícula
+e vias biliares. Pancreatite e neoplasia de pâncreas. Hipertensão porta esquistossomótica. Princípios básicos oncológicos. Hérnias da parede
+abdominal. Obesidade. Nódulos tireoidianos. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº
+8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                             607 - MÉDICO B CIRURGIÃO PEDIÁTRICO
+Atendimento ambulatorial, pareceres hospitalares, interconsultas e acompanhamento pós-operatório em cirurgia pediátrica. Princípios de cuidados pré e pós-
+operatórios em recém-nascidos, lactentes, crianças e adolescentes. Resposta metabólica e endócrina ao trauma cirúrgico na infância. Equilíbrio hidroeletrolítico, ácido -
+básico e suporte nutricional (enteral e parenteral) no paciente cirúrgico pediátrico. Biossegurança, infecção em cirurgia pediátrica, antibioticoprofilaxia e
+antibioticoterapia terapêutica. Técnicas anestésicas e analgesia pós-operatória na infância. Cirurgia Pediátrica Neonatal e Malformações Congênitas: Defeitos da
+parede abdominal (onfalocele, gastrosquise). Atresia de esôfago e fístula traqueoesofágica. Hérnia diafragmática congênita. Obstruções duodenais e intestinais
+neonatais (atresia intestinal, estenose duodenal, volvo por má rotação intestinal). Íleo meconial e plug meconial. Doença de Hirschsprung (megacólon congênito) no
+neonato e na infância. Anomalias anorretais (imperfuração anal, fístulas perineais e urinárias). Urgências e Emergências Cirúrgicas (Abdom e Agudo): Abdome agudo
+inflamatório (apendicite aguda e suas complicações), obstrutivo (intussuscepção intestinal, bridas), perfurativo (perfuração por corpo estranho, enterocolite
+necrosante) e hemorrágico. Estenose hipertrófica do piloro. Divertículo de Meckel. Urgências Urológicas e Genitais: Escroto a gudo (torção de testículo, torção de
+apêndice testicular, orquiepididimite). Trauma renal, vesical e uretral. Retenção urinária aguda. Fimose, parafimose e priapismo. Traumatologia Pediátrica:
+Atendimento ao paciente pediátrico politraumatizado (Diretrizes ATLS). Trauma abdominal aberto e fechado (lesões esplênicas, hepáticas, pancreáticas e intestinais).
+Trauma torácico (pneumotórax, hemotórax, contusão pulmonar). Queimaduras na infância: classificação, reposição volêmica e man ejo cirúrgico (desbridamento e
+enxertia). Afecções Cirúrgicas do Tórax e Vias Aéreas: Malformações pulmonares congênitas (malformação adenomatóide cística, sequestro pulmonar). Empiema
+pleural e derrames parapneumônicos (manejo cirúrgico, drenagem torácica e videotoracoscopia). Corpos estranhos em via aérea e esôfago. Cistos e fístulas cervicais
+(cisto do ducto tireoglosso, fistos branquiais). Afecções Cirúrgicas da Parede Abdominal e Região Inguinal: Hérnia inguinal, hidrocele, criptor quidia e hérnia umbilical.
+Urologia Pediátrica Cirúrgica: Hidronefrose antenatal e pós-natal. Estenose de junção ureteropélvica (JUP) e ureterovesical (JUV). Refluxo vesicoureteral. Válvula de
+uretra posterior. Hipospádia e epispádia. Oncologia Cirúrgica Pediátrica: Diagnóstico, estadiamento e princípios de ressecção de tumores sólidos na infância (Tumor
+de Wilms, Neuroblastoma, Hepatoblastoma, Teratomas e Tumores de Células Germinativas). Procedimentos Invasivos e Técnicas em Cirurgia Pediátrica: Acessos
+vasculares centrais (dissecção venosa, cateteres de longa permanência e totalmente implantáveis). Traqueostomia, gastrostomia , jejunostomia e colostomias na
+infância. Princípios de cirurgia minimamente invasiva (videolaparoscopia e videotoracoscopia pediátrica). Ética e Bioética em Cirurgia Pediátrica: Termo de
+consentimento, cuidados paliativos e terminalidade. Legislações Federais de Saúde Pública e Normas: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei
+Federal nº 8.142/1990. Estatuto da Criança e do Adolescente (ECA - Lei Federal nº 8.069/1990). Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                              608 - MÉDICO B CIRURGIÃO PLÁSTICO
+Introdução à Cirurgia Plástica: Princípios Básicos; Biologia da Cicatrização dos Tecidos, Aspectos da Patologia da Cicatrizar ão, Enxertos de Pele, Enxertos Compostos,
+Fisiologia dos Retalhos Cutâneos, Tipos de Retalhos Cutâneos e seus desenhos, Retalhos de Pedículo Subcutâneo, Radioterapia e Cirurgia Plástica, Reconstrução
+palpebral, Reconstrução de Nariz, Reconstrução de Lábio, Comissura Labial e Bochecha, Reconstrução de Orelha, Paralisia facia l e reanimação da face Paralisada, Nariz
+de fissurado. Tronco: Patologias da mama, tumores benignos e malignos e câncer mínimo de mama, Reconstrução de mama, Ginecomastia, Reconstrução de parede
+abdominal, Lipoaspiração, Modelagem corporal total: abdômen, mama, nádegas, coxas e região trocantérica, Úlceras de pressão, Hipospádias, Extrofia Vesical
+e Epispádia, Anomalias congênita da vagina; intersexo; Microcirurgia e Membros: Princípios básicos de microcirurgia, Retalhos l ivres cutâneos, Retalhos livres
+musculares e musculocutâneos. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código
+de Ética Médica.
+
+                                                                                                                                 Página 7 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                              609 - MÉDICO B CIRURGIÃO TORÁCICO
+Princípios da cirurgia da cirurgia torácica. Complicações em cirurgia torácica. Anatomia cirúrgica do tórax e órgãos torácicos. Avaliação pré-operatória da função
+pulmonar. Manuseio pré, per e pós-operatório em cirurgia torácica. Métodos de diagnóstico em cirurgia torácica. Métodos de drenagem em cirurgia torácica. Afecções
+do diafragma, do estreito superior e da parede do tórax. Doenças bronco pulmonares supurativas. Tratamento cirúrgico do enfisema pulmonar. Patologia cirúrgica da
+pleura. Patologia cirúrgica do esôfago. Traumatismo torácico. ATLS. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017.
+Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                              610 - MÉDICO B CIRURGIÃO VASCULAR
+Noções básicas de anatomia cirúrgica vascular. Fisiologia da coagulação e da fibrinólise. Fisiopatologia da aterosclerose. Fisiopatologia da Isquemia e reperfusão. O
+exame clínico do paciente vascular. Métodos não invasivos no diagnóstico das doenças vasculares. Angiografias. Insuficiência arterial crônica de extremidades.
+Vasculites. Trombofilias. Arteriopatias vasomotoras. Aneurismas. Síndromes do desfiladeiro cervical. Insuficiência vascular visceral. Pé Diabético. Hipertensão
+renovascular. Doença tromboembólica venosa. Varizes e Insuficiência venosa crônica. Linfangites e erisipela. Linfedemas. Úlceras de perna. Oclusões arteriais agudas.
+Traumatismos vasculares. Bases da Cirurgia endovascular. Terapêutica anticoagulante e fibrinolítica. Terapêutica vasodilatadora e hemorreológica.
+Terapêutica venotônica e linfocinética. Amputações. Angiodisplasias. Insuficiência vascular cerebral de origem extra-craniana. Regulação. Legislações Federais de
+Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                  611 - MÉDICO B CLÍNICO GERAL
+Manejo da via aérea (anatomia da via aérea, via aérea difícil, intubação por sequência rápida, técnica, indicações, contraindicações e complicações da
+entubação nasotraqueal, entubação endotraqueal, via aérea cirúrgica e ventilação bolsa-máscara). Agentes farmacológicos utilizados em anestesia (dosagens,
+indicações e contraindicações dos agentes anestésicos, analgésicos e bloqueadores neuromusculares), sedação para procedimentos, técnicas de monitoração padrão,
+aspectos relevantes de história clínica pré-operatória e exame físico, manejo da dor (anestésicos locais, conhecimento das doses, agentes, efeitos colaterais e técnicas
+de monitorização da dor). Anestesia regional e técnicas de bloqueio (metacarpal, digital, radial, mediano, ulnar, tibial e sural, supraorbital, infraorbital, mental e
+auricular). Manejo do paciente em ventilação mecânica. Manejo do paciente com instabilidade ou risco de instabilidade cardiov ascular. Parada cardiorrespiratória,
+avaliação dos pacientes com dor torácica, interpretação de exames diagnósticos cardiológicos (ECG, radiografia de tórax e ecocardiografia), agentes farmacológicos
+cardíacos. Indicações, complicações e técnica de procedimentos cardiológicos de emergência (cateterização venosa central e monitorização da PVC, marcapasso
+transcutâneo e transvenoso, pericardiocentese, desfibrilação e cardioversão, e ultrassonografia cardíaca). Infarto agudo do miocárdio, angina estável e instável
+(diagnóstico, estabilização e tratamento). Arritmias (taquicardia ventricular, flutter e fibrilação atrial, ectopia unconal, pré-excitação, taquicardias supraventriculares,
+bradicardias, síndrome do nodo doente, bloqueios fasciculares, bloqueios atrioventriculares de primeiro, segundo e terceiro graus). Quadros de choque cardiogênico,
+obstrutivo, hipovolêmico ou distributivo (diagnostico diferencial e tratamento). Doença pericárdica e seu tratamento. Diagnóstico e tratamento da insuficiência
+cardíaca aguda. Doenças valvulares do coração (achados clínicos e manejo do prolapso de válvula mitral, estenose aórtica, regurgitação aórtica, estenose tricúspide,
+regurgitação tricúspide, estenose pulmonar); complicações das válvulas protéticas e manejo na emergência. Embolia pulmonar: patofisiologia, fatores predisponentes,
+sensibilidade/especificidade dos testes diagnósticos, tratamento. Diferenciação entre urgências e emergências hipertensivas, hipertensão não controlada, indicações
+de tratamento anti-hipertensivo na emergência. Doenças da Aorta e seus ramos: dissecção aórtica aguda (etiologia, patofisiologia e manejo); diferença entre
+aneurisma em expansão, aneurisma rompido e dissecção de Aorta e seus tratamentos. Isquemia mesentérica. Isquemia aguda periférica: patofisiologia, apresentação
+clínica e manejo na emergência. Trombose venosa superficial e profunda: diagnóstico e tratamento. Diagnóstico e tratamento de Endocardite, pericardite e miocardite.
+Identificação, avaliação inicial e estabilização de pacientes críticos. Critérios de admissão em unidad e de terapia intensiva; princípios patofisiológicos do trauma,
+insuficiência renal, choque, insuficiência cardíaca e respiratória que afetam o paciente criticamente doente; princípios de m onitoração hemodinâmica do paciente
+crítico; manejo pós reanimação do paciente crítico; princípios de farmacoterapia, dosagens e drogas utilizados no manejo hemodinâmico do paciente crítico (dosagens,
+indicações e contraindicações das principais drogas vasoativas utilizadas no manejo do paciente crítico, como noradrenalina , dopamina, dobutamina,
+nitroglicerina, nitroprussiato). Princípios de ventilação mecânica. Diagnóstico e tratamento de choque, sepse, anormalidades eletrolíticas, i nsuficiência cardíaca,
+insuficiência renal, insuficiência hepática e emergências toxicológicas. Princípios éticos e legais nos cuidados do paciente crítico, recomendações de não reanimação e
+critérios de morte cerebral. Anafilaxia. Atendimento inicial e estabilização vital do paciente com condições neurológicas. Atendimento ao paciente neurocrítico.
+Diagnóstico e tratamento de desordens cerebrovasculares, convulsões, cefaleia, compressões medulares, infecções do sistema nervoso central, desordens dos nervos
+cranianos, doenças desmielinizantes, pseudotumor cerebral, hidrocefalia com pressão normal e neuropatia periférica. Avaliação inicial e manejo do trauma de crânio
+fechado e penetrante. Manejo inicial de fraturas, sub-luxações e deslocamentos da coluna e trauma raquimedular. Indicações e contraindicações para os
+procedimentos de neuroimagem e sua interpretação no escopo da emergência. Técnica, indicações, contraindicações e complicações de punção lombar e
+interpretação do exame de líquor. Correta avaliação e manejo de compressões medulares de causas não traumáticas. Indicações e técnicas para controle da pressão
+intracraniana. Manejo agudo do acidente cerebral vascular isquêmico e hemorrágico. Diagnóstico, tratamento e encaminhamento adequado de patologias da pele:
+dermatite e eczema, infecções de tecidos moles, lesões maculopapulares, lesões papulares e nodulares na pele, eritema, lesões vesicobolhosas, cânceres de pele.
+Doenças ligadas ao meio ambiente: patofisiologia, avaliação e manejo do paciente com queimadura térmica e química, com choque elétrico (incluindo injúria por
+raios), com acidente com material radioativo, com hipotermia e lesão por frio, com internação, com alterações devido a altitude e com barotrauma. Avaliação e manejo
+do paciente com quase afogamento. Patofisiologia, diagnóstico e tratamento da agudização de doenças crônicas e apresentação aguda de doenças relacionadas ao
+trato digestivo (doenças do esôfago, hepatites, cirrose, doenças do sistema biliar e pâncreas, lesões obstrutivas do trato digestivo, diarreia, doença inflamatória do
+trato digestivo e sangramento digestivo); patofisiologia, apresentação e manejo de doenças hematológicas comuns (anemia falciforme, desordens da hemostasia,
+anemia); uso de hemocomponentes e suas complicações. Apresentação aguda de doenças do sistema imunológico e as desordens da hiper e hipofunção do mesmo;
+avaliação, patofisiologia e tratamento agudo das afecções do trato urinário (doença glomerular, infecção do sistema urinário, insuficiência renal aguda e crônica, litíase
+renal); interpretação e manejo dos distúrbios do equilíbrio ácido/básico; principais infecções sistêmicas, seus diagnósticos e tratamento; etiologia, manifestação e
+tratamento das desordens endócrinas e metabólicas comuns na emergência (cetoacidose, coma hiperosmolar, como mixedematoso, tempestade tireoideana);
+patologias agudas do sistema respiratório (infecção de vias aéreas, pneumonia, doença broncopulmonar obstrutiva, asma); avaliação e tratamento das agudizações
+de desordens reumatológicas e autoimunes, e seu correto encaminhamento; manejo e encaminhamento das complicações do paciente transplantado; diagnóstico e
+tratamento inicial das infecções de interesse epidemiológico (especialmente gonorreia, sífilis, tuberculose, tétano e raiva). Avaliação inicial e estabilização de
+emergências do aparelho urinário. Patofisiologia, diagnóstico diferencial e manejo da insuficiência renal aguda pré-renal, renal e pós-renal. Diagnóstico e manejo das
+complicações da insuficiência renal crônica e diálise, indicações para diálise de emergência. Interpretação de ultrassonografia urogenital, tomografia computadorizada
+e cistografia. Desordens testiculares (torções, epididimites e orquites); desordens penianas (priapismo, fratura de pênis, fimose, gangrena de Fournier e balanite).
+Diagnóstico e tratamento retenção urinária. Avaliação inicial e estabilização de emergências ginecológicas e na gestante. Diagnóstico e manejo de complicações da
+gestação, trabalho de parto simples e complicado, manejo da vítima de abuso sexual, diagnóstico e manejo da dor abdominal em mulheres e manejo do sangramento
+vaginal em gestantes e não gestantes. Diagnóstico e tratamento de pacientes com infecções geniturinárias, incluindo doença infla matória pélvica, infecções do trato
+
+                                                                                                                                 Página 8 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+urinário, DST’s e vaginites. Reanimação perinatal e neonatal, complicações dos principais métodos contraceptivos (contraceptivos orais, diafragmas, dispositivos
+intrauterinos e hormônios injetáveis). Gestação ectópica. Sinais, sintomas e tratamento agudo com correto encaminhamento de placenta prévia, descolamento de
+placenta, pré-eclâmpsia e eclampsia e hiperêmese gravídica. Técnica e indicações de cesárea peri-mortem. Diagnóstico e manejo de complicações pós-parto, incluindo
+endometrite e mastite. Incompatibilidade RH. Avaliação inicial e estabilização de emergências em ortopedia. Diagnóstico, tratamento agudo e encaminhamento de
+desordens infecciosas e inflamatórias; manejo da dor nos pacientes com desordens musculoesqueléticas. Interpretação exames radiológicos na emergência (RX e
+tomografia). Dosagens, efeitos adversos, contraindicações dos analgésicos orais. Dor lombar, infecções de tecidos moles envolvendo músculo, fáscia e tendões. Lesões
+articulares, avaliação e graduação dessas e seu correto encaminhamento. Avaliação inicial e estabilização de emergências em otorrinolaringologia. Exames diagnósticos
+para avaliação de alterações da cabeça e pescoço; diagnóstico e tratamento de infecções (rinite, otite, labirintite, sinusite, mastoidite, faringite, epiglotite: trombose
+do seio cavernoso, angina de ludwig e otite maligna.), epistaxe, abcesso faríngeo. Emergências odontológicas, desordens da mandíbula, incluindo fraturas, luxações e
+infecções. Corpos estranhos do ouvido, nariz e faringe. Atendimento inicial e estabilização vital em emergências no paciente pediátrico. Ressuscitação pediátrica;
+manejo da via aérea pediátrica; parada cardiorrespiratória na criança. Etiologias, significância e tratamento de febre em criança. Etiologias e tratamento de
+emergências neurológicas, queixas abdominais, alterações respiratórias. Desordens dermatológicas comuns na criança. Acesso venoso incluindo punção venosa,
+punção intraóssea. Diagnóstico e tratamento de doenças infecciosas comuns da criança incluindo sepse, meningite, pneumonia, i nfecção do trato urinário e
+bacteremia. Diagnóstico de desordens do trato gastrointestinal incluindo gastroenterite, intuscepção, volvo, divertículo de Meckel e apendicite. Manejo de crise
+convulsiva. Cálculo de fluidos e eletrólitos na criança. Avaliação manejo da criança vítima de abuso. Arritmias pediátricas c omuns e seu tratamento. Doença cardíaca
+congênita cianótica e não cianótica, e suas complicações, com correto tratamento e encaminhamento. Interpretação de radiografia de tórax pediátrica. Profilaxia para
+febre reumática e endocardite bacteriana, congestão pulmonar em criança e seu tratamento, epiglotite. Diagnóstico e manejo da criança com infecções das vias aéreas
+incluindo asma, bronquiolite, fibrose cística e pneumonia. Diagnóstico e manejo da criança com corpos estranhos na via aérea, cetoacidose, anemias, icterícia,
+desordens da hemostasia, disúria ou infecção do trato urinário, suspeita de torção de testículo. Interpretação de radiografias de fraturas comuns em crianças.
+Diagnóstico de exantemas pediátricos comuns incluindo varicela, rubéola, sarampo, infestações como pediculose pitiríase e escabiose. Avaliação e tratamento da
+criança com diarreia, petéquias, envenenamentos comuns, quase afogamento, ingestão de corpo estranho, insuficiência renal, sí ncope, sangramento vaginal e hérnia
+inguinal. Princípios éticos na medicina de emergência, documentação médica sob o aspecto médico-legal. Legislações Federais de Saúde Pública: Lei Federal nº
+8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                   612 - MÉDICO B DO TRABALHO
+Legislação básica de Saúde do Trabalhador (normas regulamentadoras, acidentária, previdenciária, resoluções da categoria de c lasse). Ética médica e questões
+bioéticas em saúde do trabalhador. Agravos a saúde relacionados ao trabalho (doenças ocupacionais, doenças do trabalho e acidentes). Acidentes do trabalho
+(documentos médico-legais e atuação do médico do trabalho). Promoção da Saúde no Trabalho. Toxicologia ocupacional; Higiene do Trabalho. Ergonomia. Reabilitação
+e Retorno ao Trabalho. Gestão em Saúde, Segurança e Meio Ambiente. Controle de saúde dos trabalhadores da saúde. Vigilância em Saúde do Trabalhador. Segurança
+no Trabalho. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                              613 - MÉDICO B ECOCARDIOGRAFISTA
+Fundamentos da ecocardiografia: princípios físicos do ultrassom; formação e interpretação da imagem ecocardiográfica; modos de imagem (M, bidimensional,
+tridimensional); Doppler pulsado, contínuo e colorido; Doppler tecidual; strain e speckle tracking; segurança e bioefeitos do ultrassom. Anatomia e fisiologia
+cardiovascular: anatomia cardíaca; fisiologia da circulação sistêmica e pulmonar; hemodinâmica cardíaca; fisiologia valvar e miocárdica. Ecocardiografia transtorácica:
+técnica do exame; janelas ecocardiográficas; medidas e cálculos ecocardiográficos; avaliação da função ventricular sistólica e diastólica; análise de câmaras cardíacas;
+avaliação do débito cardíaco. Ecocardiografia transesofágica: indicações e contraindicações; preparo do paciente; técnica do exame; complicaç ões; avaliação
+intraoperatória e em terapia intensiva. Ecocardiografia sob estresse: farmacológica e física; indicações; interpretação; diagnóstico de isquemia miocárdica; viabilidade
+miocárdica. Valvopatias: estenoses e insuficiências valvares; avaliação quantitativa e qualitativa; próteses valvares; endocardite infecciosa; critérios ecocardiográficos
+de gravidade. Cardiopatias isquêmicas: alterações segmentares da contratilidade; complicações mecânicas do infarto; aneurismas; trombos intracardíacos; avali ação
+da função ventricular. Cardiomiopatias: cardiomiopatia dilatada; hipertrófica; restritiva; arritmogênica; miocardites; doenças infiltrativas. Doenças do pericárdio:
+derrame pericárdico; tamponamento cardíaco; pericardite constritiva; avaliação ecocardiográfica do pericárdio. Cardiopatias congênitas: avaliação ecocardiográfica
+das cardiopatias congênitas mais prevalentes; comunicação interatrial; comunicação interventricular; persistência do canal arterial; tetralogia de Fallot; avaliação
+pediátrica e adulta. Hipertensão pulmonar e doenças da circulação pulmonar: avaliação ecocardiográfica da pressão pulmonar; r epercussões cardíacas; diagnóstico
+diferencial. Ecocardiografia em situações especiais: terapia intensiva; choque; sepse; embolia pulmonar; pacientes oncológicos; avaliação pré-operatória;
+monitorização hemodinâmica. Ecocardiografia fetal: anatomia cardíaca fetal; técnica do exame fetal; rastreamento de cardiopatias congênitas; alterações
+hemodinâmicas fetais. Métodos complementares em imagem cardiovascular: ressonância magnética cardíaca; tomografia cardíaca; m edicina nuclear; integração
+diagnóstica. Elaboração de laudos: terminologia técnica; padronização; interpretação clínica; correlação clínico-ecocardiográfica. Biossegurança e controle de infecção:
+desinfecção de transdutores; biossegurança em exames invasivos; segurança do paciente. Urgências e emergências cardiovascular es: insuficiência cardíaca aguda;
+síndrome coronariana aguda; tamponamento cardíaco; dissecção de aorta; choque cardiogênico. Ética médica e bioética: Código d e Ética Médica; sigilo profissional;
+consentimento informado; responsabilidade civil, penal e ética do médico. Políticas públicas de saúde: Sistema Único de Saúde (SUS); princípios e diretrizes do SUS;
+Política Nacional de Atenção Cardiovascular; protocolos clínicos e linhas de cuidado cardiovasculares. Atualidades e temas contemporâneos: inteligência artificial
+aplicada à ecocardiografia; ecocardiografia tridimensional; telemedicina; medicina baseada em evidências; inovação tecnológica em imagem cardiovascular.
+Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990; Portaria Federal nº 2.436/2017; Lei Federal nº 8.142/1990; normas da ANVISA aplicáveis aos serviços
+de diagnóstico; diretrizes da Sociedade Brasileira de Cardiologia e do Departamento de Imagem Cardiovascular. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                  614 - MÉDICO B EMERGENCISTA
+Manejo da via aérea (anatomia da via aérea, via aérea difícil, intubação por sequência rápida, técnica, indicações, contraindicações e complicações da
+entubação nasotraqueal, entubação endotraqueal, via aérea cirúrgica e ventilação bolsa-máscara). Agentes farmacológicos utilizados em anestesia (dosagens,
+indicações e contraindicações dos agentes anestésicos, analgésicos e bloqueadores neuromusculares), sedação para procedimentos, técnicas de monitoração padrão,
+aspectos relevantes de história clínica pré-operatória e exame físico, manejo da dor (anestésicos locais, conhecimento das doses, agentes, efeitos colaterais e técnicas
+de monitorização da dor). Anestesia regional e técnicas de bloqueio (metacarpal, digital, radial, mediano, ulnar, tibial e sural, supraorbital, infraorbital, mental e
+auricular). Manejo do paciente em ventilação mecânica. Manejo do paciente com instabilidade ou risco de instabilidade cardiov ascular. Parada cardiorrespiratória,
+avaliação dos pacientes com dor torácica, interpretação de exames diagnósticos cardiológicos (ECG, radiografia de tórax e ecocardiografia), agentes farmacológicos
+cardíacos. Indicações, complicações e técnica de procedimentos cardiológicos de emergência (cateterização venosa central e monitorização da PVC, marcapasso
+transcutâneo e transvenoso, pericardiocentese, desfibrilação e cardioversão, e ultrassonografia cardíaca). Infarto agudo do miocárdio, angina estável e instável
+(diagnóstico, estabilização e tratamento). Arritmias (taquicardia ventricular, flutter e fibrilação atrial, ectopia unconal, pré-excitação, taquicardias supraventriculares,
+bradicardias, síndrome do nodo doente, bloqueios fasciculares, bloqueios atrioventriculares de primeiro, segundo e terceiro g raus). Quadros de choque cardiogênico,
+
+                                                                                                                                 Página 9 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+obstrutivo, hipovolêmico ou distributivo (diagnostico diferencial e tratamento). Doença pericárdica e seu tratamento. Diagnóstico e tratamento da insuficiência
+cardíaca aguda. Doenças valvulares do coração (achados clínicos e manejo do prolapso de válvula mitral, estenose aórtica, regurgitação aórtica, estenose tricúspide,
+regurgitação tricúspide, estenose pulmonar); complicações das válvulas protéticas e manejo na emergência. Embolia pulmonar: patofisiologia, fatores predisponentes,
+sensibilidade/especificidade dos testes diagnósticos, tratamento. Diferenciação entre urgências e emergências hipertensivas, hipertensão não controlada, indicações
+de tratamento anti-hipertensivo na emergência. Doenças da Aorta e seus ramos: dissecção aórtica aguda (etiologia, patofisiologia e manejo); diferença entre
+aneurisma em expansão, aneurisma rompido e dissecção de Aorta e seus tratamentos. Isquemia mesentérica. Isquemia aguda periférica: patofisiologia, apresentação
+clínica e manejo na emergência. Trombose venosa superficial e profunda: diagnóstico e tratamento. Diagnóstico e tratamento de Endocardite, pericardite e miocardite.
+Identificação, avaliação inicial e estabilização de pacientes críticos. Critérios de admissão em unidade de terapia intensiva ; princípios patofisiológicos do trauma,
+insuficiência renal, choque, insuficiência cardíaca e respiratória que afetam o paciente criticamente doente; princípios de m onitoração hemodinâmica do paciente
+crítico; manejo pós reanimação do paciente crítico; princípios de farmacoterapia, dosagens e drogas utilizados no manejo hemodinâmico do paciente crítico (dosagens,
+indicações e contraindicações das principais drogas vasoativas utilizadas no manejo do paciente crítico, como noradrenalina, dopamina, dobutamina,
+nitroglicerina, nitroprussiato). Princípios de ventilação mecânica. Diagnóstico e tratamento de choque, sepse, anormalidades eletrolíticas, insufi ciência cardíaca,
+insuficiência renal, insuficiência hepática e emergências toxicológicas. Princípios éticos e legais nos cuidados do paciente crítico, recomendações de não reanimação e
+critérios de morte cerebral. Anafilaxia. Atendimento inicial e estabilização vital do paciente com condições neurológicas. Atendimento ao paciente neurocrítico.
+Diagnóstico e tratamento de desordens cerebrovasculares, convulsões, cefaleia, compressões medulares, infecções do sistema nervoso central, desordens dos nervos
+cranianos, doenças desmielinizantes, pseudotumor cerebral, hidrocefalia com pressão normal e neuropatia periférica. Avaliação inicial e manejo do trauma de crânio
+fechado e penetrante. Manejo inicial de fraturas, sub-luxações e deslocamentos da coluna e trauma raquimedular. Indicações e contraindicações para os
+procedimentos de neuroimagem e sua interpretação no escopo da emergência. Técnica, indicações, contraindicações e complicações de punção lombar e interpretação
+do exame de líquor. Correta avaliação e manejo de compressões medulares de causas não traumáticas. Indicações e técnicas para controle da pressão intracraniana.
+Manejo agudo do acidente cerebral vascular isquêmico e hemorrágico. Diagnóstico, tratamento e encaminhamento adequado de patologias da pel e: dermatite e
+eczema, infecções de tecidos moles, lesões maculopapulares, lesões papulares e nodulares na pele, eritema, lesões vesicobolhosas, cânceres de pele. Doenças ligadas
+ao meio ambiente: patofisiologia, avaliação e manejo do paciente com queimadura térmica e química, com choque elétrico (incluindo injúria por r aios), com acidente
+com material radioativo, com hipotermia e lesão por frio, com internação, com alterações devido a altitude e com barotrauma. Avaliação e manejo do paciente com
+quase afogamento. Patofisiologia, diagnóstico e tratamento da agudização de doenças crônicas e apresentação aguda de doenças relacionadas ao trato digestivo
+(doenças do esôfago, hepatites, cirrose, doenças do sistema biliar e pâncreas, lesões obstrutivas do trato digestivo, diarrei a, doença inflamatória do trato digestivo e
+sangramento digestivo); patofisiologia, apresentação e manejo de doenças hematológicas comuns (anemia falciforme, desordens da hemostasia, anemia); uso de
+hemocomponentes e suas complicações. Apresentação aguda de doenças do sistema imunológico e as desordens da hiper e hipofunção do mesmo;
+avaliação, patofisiologia e tratamento agudo das afecções do trato urinário (doença glomerular, infecção do sistema urinário, insuficiência renal aguda e crônica, litíase
+renal); interpretação e manejo dos distúrbios do equilíbrio ácido/básico; principais infecções sistêmicas, seus diagnósticos e tratamento; etiologia, manifestação e
+tratamento das desordens endócrinas e metabólicas comuns na emergência (cetoacidose, coma hiperosmolar, como mixedematoso, tempestade tireoideana);
+patologias agudas do sistema respiratório (infecção de vias aéreas, pneumonia, doença broncopulmonar obstrutiva, asma); avaliação e tratamento das agudizações
+de desordens reumatológicas e autoimunes, e seu correto encaminhamento; manejo e encaminhamento das complicações do paciente transplantado; diagnóstico e
+tratamento inicial das infecções de interesse epidemiológico (especialmente gonorreia, sífilis, tuberculose, tétano e raiva). Avali ação inicial e estabilização de
+emergências do aparelho urinário. Patofisiologia, diagnóstico diferencial e manejo da insuficiência renal aguda pré-renal, renal e pós-renal. Diagnóstico e manejo das
+complicações da insuficiência renal crônica e diálise, indicações para diálise de emergência. Interpretação de ultrassonografia urogenital, tomografia computadorizada
+e cistografia. Desordens testiculares (torções, epididimites e orquites); desordens penianas (priapismo, fratura de pênis, fimose, gangrena de Fournier e balanite).
+Diagnóstico e tratamento retenção urinária. Avaliação inicial e estabilização de emergências ginecológicas e na gestante. Diagnóstico e manejo de complicações da
+gestação, trabalho de parto simples e complicado, manejo da vítima de abuso sexual, diagnóstico e manejo da dor abdominal em mulheres e manejo do sangramento
+vaginal em gestantes e não gestantes. Diagnóstico e tratamento de pacientes com infecções geniturinárias, incluindo doença inflamatória pélvica, infecções do trato
+urinário, DST’s e vaginites. Reanimação perinatal e neonatal, complicações dos principais métodos contraceptivos (contraceptivos orais, diafragmas, dispositivos
+intrauterinos e hormônios injetáveis). Gestação ectópica. Sinais, sintomas e tratamento agudo com correto encaminhamento de placenta prévia, descolamento de
+placenta, pré-eclâmpsia e eclampsia e hiperêmese gravídica. Técnica e indicações de cesárea peri-mortem. Diagnóstico e manejo de complicações pós-parto, incluindo
+endometrite e mastite. Incompatibilidade RH. Avaliação inicial e estabilização de emergências em ortopedia. Diagnóstico, tratamento agudo e encaminhamento de
+desordens infecciosas e inflamatórias; manejo da dor nos pacientes com desordens musculoesqueléticas. Interpretação exames radiológicos na emergência (RX e
+tomografia). Dosagens, efeitos adversos, contraindicações dos analgésicos orais. Dor lombar, infecções de tecidos moles envolvendo músculo, fáscia e tendões. Lesões
+articulares, avaliação e graduação dessas e seu correto encaminhamento. Avaliação inicial e estabilização de emergências em otorrinolaringologia. Exames diagnósticos
+para avaliação de alterações da cabeça e pescoço; diagnóstico e tratamento de infecções (rinite, otite, labirintite, sinusite, mastoidite, faringite, epiglotite: tr ombose
+do seio cavernoso, angina de ludwig e otite maligna.), epistaxe, abcesso faríngeo. Emergências odontológicas, desordens da mandíbula, incluindo fraturas, luxações e
+infecções. Corpos estranhos do ouvido, nariz e faringe. Atendimento inicial e estabilização vital em emergências no paciente pediátrico. Ressuscitação pediátrica;
+manejo da via aérea pediátrica; parada cardiorrespiratória na criança. Etiologias, significância e tratamento de febre em criança. Etiologias e tratamento de
+emergências neurológicas, queixas abdominais, alterações respiratórias. Desordens dermatológicas comuns na criança. Acesso venoso incluindo punção venosa,
+punção intraóssea. Diagnóstico e tratamento de doenças infecciosas comuns da criança incluindo sepse, meningite, pneumonia, i nfecção do trato urinário e
+bacteremia. Diagnóstico de desordens do trato gastrointestinal incluindo gastroenterite, intuscepção, volvo, divertículo de Meckel e apendicite. Manejo de crise
+convulsiva. Cálculo de fluidos e eletrólitos na criança. Avaliação manejo da criança vítima de abuso. Arritmias pediátricas c omuns e seu tratamento. Doença cardíaca
+congênita cianótica e não cianótica, e suas complicações, com correto tratamento e encaminhamento. Interpretação de radiografia de tórax pediátrica. Profilaxia para
+febre reumática e endocardite bacteriana, congestão pulmonar em criança e seu tratamento, epiglotite. Diagnóstico e manejo da criança com infecções das vias aéreas
+incluindo asma, bronquiolite, fibrose cística e pneumonia. Diagnóstico e manejo da criança com corpos estranhos na via aérea, cetoacidose, anemias, icterícia,
+desordens da hemostasia, disúria ou infecção do trato urinário, suspeita de torção de testículo. Interpretação de radiografias de fraturas comuns em crianças.
+Diagnóstico de exantemas pediátricos comuns incluindo varicela, rubéola, sarampo, infestações como pediculose pitiríase e escabiose. Avaliação e tratamento da
+criança com diarreia, petéquias, envenenamentos comuns, quase afogamento, ingestão de corpo estranho, insuficiência renal, sí ncope, sangramento vaginal e hérnia
+inguinal. Princípios éticos na medicina de emergência, documentação médica sob o aspecto médico-legal. Legislações Federais de Saúde Pública: Lei Federal nº
+8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                          615 - MÉDICO B EMERGENCISTA PEDIÁTRICO
+Fundamentos da emergência pediátrica: atendimento inicial à criança e ao adolescente em situação de urgência e emergência; abordagem sistema tizada do paciente
+pediátrico grave; avaliação primária e secundária; classificação de risco em pediatria; estabilização clínica. S uporte de vida em pediatria: suporte básico e avançado de
+vida pediátrico; reanimação cardiopulmonar neonatal e pediátrica; manejo de vias aéreas; ventilação mecânica; acesso vascular ; monitorização hemodinâmica.
+Emergências respiratórias: insuficiência respiratória aguda; crise asmática; bronquiolite; pneumonia; laringotraqueobronquite; obstrução de vias aéreas; síndrome do
+desconforto respiratório; oxigenoterapia. Emergências cardiovasculares: choque séptico, hipovolêmico, cardiogênico e anafilático; arritmias; insuficiência cardíaca;
+cardiopatias congênitas críticas; hipertensão arterial na infância. Emergências neurológicas: convulsões e estado de mal epil éptico; meningite e encefalite; hipertensão
+
+                                                                                                                                Página 10 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+intracraniana; traumatismo cranioencefálico; alterações do nível de consciência; coma. Emergências infecciosas: sepse e choque séptico; infecções respiratórias
+agudas; doenças exantemáticas; arboviroses; infecções bacterianas graves; infecções hospitalares; antibioticoterapia em pediatria. Emergências gastrointestinais:
+desidratação aguda; diarreia aguda; vômitos; abdome agudo; apendicite; hemorragia digestiva; intoxicações alimentares. Emergências endocrinometabólicas:
+cetoacidose diabética; hipoglicemia; distúrbios hidroeletrolíticos; distúrbios ácido-base; insuficiência adrenal. Emergências nefrológicas e urológicas: insuficiência renal
+aguda; síndrome nefrótica; infecção urinária; retenção urinária; distúrbios miccionais. Trauma pediátrico: politraumatismo; trauma torácico; trauma abdominal;
+trauma musculoesquelético; queimaduras; afogamento; acidentes domésticos; violência contra a criança e o adolescente. Toxicologia pediátrica: intoxicações
+exógenas; acidentes com medicamentos; envenenamentos; acidentes com animais peçonhentos; medidas de descontaminação. Emergências neonatais: reanimação
+neonatal; prematuridade; icterícia neonatal; sepse neonatal; distúrbios respiratórios neonatais. Procedimentos em emergência pediátrica: intubação orotraqueal;
+punção lombar; toracocentese; acesso intraósseo; drenagem torácica; sedação e analgesia. Farmacologia em emergência pediátrica: cálculo de doses pediátricas;
+drogas vasoativas; sedativos; analgésicos; antimicrobianos; medicamentos de urgência e emergência. Atendimento humanizado e s egurança do paciente: comunicação
+com familiares; acolhimento; protocolos de segurança; prevenção de eventos adversos; ética no atendimento pediátrico. Ética médica e bioética: Código de Ética
+Médica; sigilo profissional; responsabilidade civil, penal e ética; consentimento e assentimento; direitos da criança e do adolescente. Políticas públicas de saúde:
+Sistema Único de Saúde (SUS); princípios e diretrizes do SUS; Política Nacional de Atenção Integral à Saúde da Criança; Estatuto da Criança e do Adolescente (ECA);
+protocolos do Ministério da Saúde. Vigilância epidemiológica e imunização: calendário vacinal; imunobiológicos especiais; notificação compulsória; vigi lância de
+agravos em pediatria. Biossegurança e controle de infecção: precauções padrões; isolamento; higienização das mãos; prevenção de infecção relacionada à assistência
+à saúde. Atualidades e temas contemporâneos: emergências pediátricas relacionadas a epidemias e pandemias; telemedicina; medi cina baseada em evidências;
+inovação tecnológica em emergência pediátrica; saúde mental na infância e adolescência. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990.
+Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                  616 - MÉDICO B ENDOSCOPISTA
+Aspectos gerais: preparo da sala de exames; preparo do paciente; anestesia, sedação e monitorização; equipamentos e material acessório; biossegurança; limpeza e
+desinfecção dos endoscópicos. Anatomia do sistema digestivo. Estômago e duodeno: gastrites; duodenites, úlcera péptica; Pesquisa de H. pylori. Procedimentos
+endoscópicos: esofagogastroduodenoscopia; colonoscopia; retossigmoidoscopia; biópsia e citologia; técnicas de hemostasia; dilatação; gastrostomia e passagem de
+cateter enteral; complicações de procedimentos endoscópicos. Hemorragia digestiva alta e baixa. Esôfago: esofagites, corpo estranho; esôfago de Barrett; estenoses
+benignas; varizes esofagogástricas; hérnia hiatal e doença do refluxo gastresofágico: abordagens diagnósticas e terapêuticas endoscópicas. Legislações Federais de
+Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                           617 - MÉDICO B GINECOLOGISTA OBSTETRA
+Realizar exame Gineco-obstétrico completo com a utilização, se necessário, de instrumentos especiais (colposcópio, lupas etc.), a fim de auxiliar na definição do
+diagnóstico. Solicitar exames complementares e ainda, encaminhá-la a outros especialistas quando houver necessidade. Analisar e interpretar resultados de exames
+de raio X, ultrassonografia, ressonância magnética, bioquímicos, hematológicos e outros com o objetivo de confirmar as hipóteses diagnósticas. Participar de programas
+de saúde pública tais como, vacinações, planejamento familiar, prevenção de doenças infecto contagiosa, principalmente as sexualmente transmissíveis. Anatomia da
+genitália interna e externa. Anatomia e fisiologia das mamas: Alterações do desenvolvimento mamário. Malformações: mastites, lactação e ginecomastias. Doenças
+benignas e malignas das mamas: diagnóstico e tratamento. Câncer de mama em homens: diagnóstico e tratamento. Câncer e gravidez: diagnóstico e
+tratamento. Situações especiais: Câncer na gravidez; Câncer na adolescente. Fisiologia da reprodução. Fisiologia do ciclo menstrual: Ciclo menstrual normal. Doenças
+benignas do aparelho genital feminino: Corrimentos vaginais: diagnóstico e tratamento. Doenças sexualmente transmissíveis (DST): diagnóstico e
+tratamento. Puberdade: Desenvolvimento puberal normal; Distúrbios do desenvolvimento puberal; Puberdade assincrônica; Puberdade precoce; Puberdade precoce
+verdadeira. Amenorreia primária: Conceito, diagnóstico e tratamento. Amenorreia secundária: Conceito, diagnóstico e tratamento. Endometriose: Etiologia, fatores
+genéticos e imunológicos, classificação, diagnóstico e tratamento. Infertilidade: conceito, diagnóstico e tratamento. Amniorrexe prematura: Conceito, incidência,
+diagnóstico, fatores predisponentes e determinantes. Diagnóstico diferencial, propedêutica laboratorial e fetal. Conduta Obst étrica. Distocias do Trajeto: trajeto duro;
+diâmetros reduzidos, vícios pélvicos e doenças sistêmicas. Trajeto mole: colo, vagina, vulva e tumores prévios. Gravidez Ectópica: Definição. Incidência. Etiologia.
+Quadro clínico e diagnóstico. Tratamento. Climatério: Definição, alterações hormonais. Tratamento: esquemas de tratamento, riscos e vantagens. Tumores Benignos
+e Malignos da Mama: Revisão da anatomia, embriologia, fisiologia. Classificação. Fibroadenoma, adenoma, papiloma intracanalicular e lipoma. Definição, diagnóstico
+diferencial e tratamento. Alterações funcionais benignas das mamas: Definição. Sinonímia. Frequência. Relação com o câncer de mama. Etiopatogenia. Anatomia
+patológica e diagnóstico. Tratamento clínico e cirúrgico. Fisiologia da Micção: Continência e incontinência urinárias; Conceito, sinonímia e aspectos
+anatômicos. Diagnóstico da incontinência urinária: Diagnóstico diferencial. Classificação. Tratamento: cirúrgico e farmacológico. Etiopatogenia. Diagnóstico: clínico
+e complementar. Diagnóstico diferencial. Classificação. Tratamento: cirúrgico e farmacológico. Distopias Genitais: Prolapso vaginal: anterior e posterior. Prolapso
+uterino: estática uterina e classificação. Retroversão uterina; inversão crônica do útero. Prolapso de cúpula vaginal após histerectomias. Alongamento hipertrófico de
+colo. Etiopatogenia. Fatores predisponentes: constitucional (genético), traumáticos, hormonal, neurológico e pressão intra-abdominal aumentada. Diagnóstico clínico.
+Diagnóstico diferencial. Conduta cirúrgica. Tumores malignos do colo, vulva, vagina, útero, endométrio e ovários: Diagnóstico, classificação e tratamento. Fístulas:
+Conceito. Classificação. Etiologia. Diagnóstico: Tratamento cirúrgico. Neoplasia Trofoblástica Gestacional: Conceito. Epidemiologia. Etiopatogenia. Formas Clínicas.
+Diagnóstico. Estadiamento de Lews. Diagnóstico Diferencial. Fatores Prognósticos ou de Risco. Conduta e seguimento. Endocrinologia da gravidez: Líquido
+amniótico. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                618 – MÉDICO B HEMATOLOGISTA
+Abordagem geral do paciente: anamnese, exame físico, investigação e testes diagnósticos. Semiologia médica. Genética médica. Farmacologia clínica. Princípios de
+imunologia e inflamação. Doenças alérgicas e imunologia clínica. Doenças hematológicas. Oncologia clínica. Câncer: etiologia, diagnóstico, estadiamento, tratamento
+e síndromes paraneoplásicas. Doenças reumáticas. Colagenoses, vasculites, gota, osteoartrite, espondiloartropatias soronegativas. Doenças neurológicas. Comas,
+cefaleias, doenças cerebrovasculares, polineuropatias e síndromes medulares. Doenças metabólicas. Doenças nutricionais. Doenças endócrinas. Doenças do
+metabolismo ósseo e mineral. Diabetes mellitus; distúrbios funcionais: (hipotálamo-hipofisário, tireoide, adrenal, paratireoide e gônadas) dislipidemias e distúrbios
+hidroeletrolíticos. Doenças gastrointestinais. Doenças do esôfago, doença péptica, pancreatite, hepatites, cirrose hepática, diarréia, desnutrição, alcoolismo,
+hemorragia digestiva, doença inflamatória intestinal. Doenças do fígado e das vias biliares. Doenças infecciosas. Doenças por bactérias, vírus, protozoários, tuberculose,
+esquistossomose, septicemia, SIDA e DST. Doenças renais e genitourinárias. Infecção urinária, insuficiência renal, síndrome nefrítica e nefrótica, doenças da bexiga e
+da próstata. Doenças cardiovasculares e respiratórias. Infecções pulmonares, asma, DPOC, doença intersticial pulmonar, embolia pulmonar, hipertensão pulmonar e
+doenças da pleura. Insuficiência cardíaca, hipertensão arterial, doença coronariana, febre reumática, endocardite infecciosa, miocardites, cardi opatias, trombose
+venosa profunda e doenças do pericárdio. Medicina intensiva. Emergências e urgências clínicas. Doenças cutâneas. Manifestações cutâneas das doenças sistêmicas.
+Hematopoiese e fisiologia das células sanguíneas. Análise e interpretação de hemograma completo e mielograma. Anemia e policitemia. Linfadenopatia e
+esplenomegalia. Desordens hereditárias da estrutura e síntese da hemoglobina. Anemias: megaloblástica, hemolíticas, causadas por perda de sangue, de doença
+
+                                                                                                                                Página 11 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+crônica, carenciais, microangiopática, na insuficiência renal crônica. Síndromes de insuficiência medular incluindo mielodisplasia e anemia aplástica.
+Hemoglobinopatias. Metahemoglobinemia. Leucocitose e leucopenia. Linfocitose e linfopenia. Diagnóstico e tratamento das: leucemias agudas,
+doenças mieloproliferativas crônicas, doenças linfoproliferativas crônicas, leucemia mieloide crônica e gamopatias monoclonais. Classificação, estadiamento e
+tratamento na Doença de Hodgkin e nos Linfomas não Hodgkin. Distúrbios dos plasmócitos. Distúrbios das plaquetas. Coagulopatias hereditárias e adquiridas.
+Distúrbios hemorrágicos. Biologia e Terapia transfusional: Identificação e tratamento dos eventos adversos à transfusão. Indicações e complicações do transplante de
+células tronco halogênico e autólogo. Febre no paciente neutropênico. Manifestações hematológicas na AIDS. Princípios e Farmacologia da quimioterapia.
+Complicações agudas e tardias dos quimioterápicos. Agentes antiplaquetários, anticoagulantes e fibrinolíticos. Manifestações hematológicas de doenças
+sistêmicas. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                   619 - MÉDICO B INTENSIVISTA
+Cuidados gerais com o paciente em medicina intensiva. Hipertensão arterial, cardiopatia isquêmica, insuficiência cardíaca, miocardiopatias e valvulopatias, arritmias
+cardíacas. Asma brônquica e doença pulmonar obstrutiva crônica; embolia pulmonar; pneumonias e abscessos pulmonares; doença pulmonar intersticial; hipertensão
+pulmonar. Úlcera péptica, doenças intestinais inflamatórias e parasitárias, diarreia, colelitíase e colecistite, pancreatite, hepatites virais e hepatopatias tóxicas,
+insuficiência hepática crônica. Insuficiência renal aguda e crônica, glomerulonefrites, síndrome nefrótica, litíase renal. Diabetes mellitus, hipotireoidismo e
+hipertireoidismo, tireoidite, distúrbios das glândulas suprarrenais, distúrbios das glândulas paratireoides. Infecções e Sepse: profilaxia, diagnóstico e trata mento.
+Síndrome da resposta Inflamatória sistêmica. Antibioticoterapia em Medicina Intensiva. Distúrbios hidroeletrolíticos e acidobásicos. 9. Coagulação intravascular
+disseminada e fibrinólise. Coagulopatia de consumo. Trombólise e anticoagulação. Uso de hemoderivados e hemocomponentes. Politraumatismo. TCE. Trauma
+raquimedular. Grande queimado. Procedimentos Invasivos de Diagnóstico e Tratamento. Indicações e Complicações. Intubação traq ueal,
+traqueostomia, cricotireoidostomia, Cateterização arterial. Dissecção venosa. Marcapasso. Cateterização venosa central e de artéria pulmonar. Pericardiocentese e
+drenagem pleural. Raquicentese. Iatrogenia em medicina intensiva. Emergências clínicas. Cuidados pré e pós-operatórios em medicina intensiva. ATLS. ACLS. Morte
+Encefálica. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                           620 - MÉDICO B INTENSIVISTA PEDIÁTRICO
+Admissão, triagem e critérios de internação e alta na Unidade de Terapia Intensiva Pediátrica (UTIP). Índices prognósticos em UTI pediátrica. Abordag em do paciente
+pediátrico em estado crítico e monitorização hemodinâmica invasiva e não invasiva: pressão venosa central, linha art erial invasiva, ecocardiografia funcional à beira-
+leito (POCUS) e monitorização de débito cardíaco. Insuficiência Respiratória Grave e Síndrome do Desconforto Respiratório Agu do em pediatria. Ventilação Mecânica
+Invasiva e Não Invasiva (VNI): modos ventilatórios, assincronias, estratégias de proteção pulmonar, ventilação de alta frequência oscilatória (VAFO) e desmame
+ventilatório. Oxigenação por Membrana Extracorpórea (ECMO) respiratória e cardiovascular. Estado de Mal Asmático refratário e Bronquiolite Viral Aguda grave na
+UTIP. Choque e Disfunção Cardiovascular: Choque séptico, hipovolêmico, obstrutivo, cardiogênico. Uso de drogas vasoativas em pediatria. Miocardite aguda,
+pericardite, endocardite, arritmias cardíacas graves e insuficiência cardíaca descompensada. Parada Cardiorrespiratória (PCR) e Cuidados Pós-Parada na UTIP (Diretrizes
+PALS). Neurointensivismo: Hipertensão intracraniana, monitorização da pressão intracraniana (PIC) e da pressão de perfusão cerebral (PPC), manejo do Traumatismo
+Cranioencefálico (TCE) grave, Estado de Mal Epiléptico, Acidente Vascular Cerebral (AVC) na infância, edema cerebral e encefalopatias a gudas. Critérios diagnósticos
+e protocolo de Morte Encefálica em pediatria; manejo do potencial doador de órgãos. Disfunção Renal e Terapias de Substituição Renal em UTIP: Insuficiência renal
+aguda (IRA) no paciente crítico, indicação e manejo de diálise peritoneal, hemodiálise contínua e plasmaférese. Distúrbios hi droeletrolíticos e ácido-básicos. Disfunção
+Gastrointestinal e Hepática: Insuficiência hepática aguda grave, hemorragia digestiva alta e baixa, síndrome de compartimento abdominal e nutrição enteral e
+parenteral no paciente crítico. Emergências Hematológicas e Oncológicas na UTIP: Síndrome de lise tumoral, neutropenia febril, coagulação intravascular disseminada
+(CIVD), púrpura fulminante e crises graves de falcemia. Sepse, Síndrome da Resposta Inflamatória Sistêmica e Síndrome de Disfunção de Múltiplos Órgãos. Infecções
+relacionadas à assistência à saúde na UTIP e manejo de antimicrobianos de amplo espectro. Emergências Endócrinas: Cetoacidose diabética grave e edema cerebral,
+crise tireotóxica, insuficiência adrenal aguda e diabetes insipidus. Sedação, Analgesia e Bloqueio Neuromuscular em UTIP: Esc alas de sedação, manejo da dor, delirium
+e síndrome de abstinência. Procedimentos invasivos em UTIP: Acesso venoso central guiado por ultrassom, dissecção venosa, acesso intraósseo, punção e cateterização
+arterial, intubação orotraqueal e sequência rápida de intubação (SRI), cricotireoidostomia, toracocentese e drenagem pleural. Grandes queimados, afogamento e
+intoxicações exógenas agudas graves com necessidade de suporte de vida. Cuidados Paliativos, terminalidade, recusa e limitaçã o de suporte terapêutico em UTI
+pediátrica. Bioética e humanização na UTIP. Legislações Federais de Saúde Pública e Normas: Lei Federal nº 8.080/1990. Portaria Federal nº 2.43 6/2017. Lei Federal
+nº 8.142/1990. Estatuto da Criança e do Adolescente (ECA - Lei Federal nº 8.069/1990). Código de Ética Médica. Resoluções do CFM aplicadas à Terapia Intensiva.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                621 - MÉDICO B NEONATOLOGISTA
+Assistência ao recém-nascido sadio: sala de parto, rotinas em alojamento conjunto. Cuidados iniciais ao recém-nascido de baixo peso (pré-termo e pequeno para a
+idade gestacional). Cuidados iniciais ao recém-nascido. Distúrbios metabólicos. Distúrbios respiratórios. Icterícia neonatal. Infecções neonatal. Lesões ao nascimento:
+asfixia neonatal, hemorragia intracraniana, traumatismo. Malformações congênitas. Triagem neonatal: erros inatos do metabolismo. Ventilação não invasiva no recém-
+nascido pré-termo. Uso de antibióticos no recém-nascido pré-termo. Nutrição parenteral precoce para o recém-nascido pré-termo. Cardiopatias congênitas.
+Humanização na assistência ao recém-nascido. Transfusões sanguíneas. Distúrbios metabólicos (glicose, cálcio, magnésio, doença metabólica óssea, erros inatos do
+metabolismo). Distúrbios do equilíbrio ácido básico e hidroeletrolítico. Sistema respiratório (síndrome do desconforto respiratório, síndrome do pulmão úmido,
+síndrome de aspiração meconial, hipertensão pulmonar persistente neonatal, apneia da prematuridade, displasia broncopulmonar, reposição de surfactante,
+ventilação não invasiva, ventilação mecânica, uso de oxido nítrico). Sistema cardiovascular (cardiopatias congênitas, persistência do canal arterial, arritmia cardíaca,
+choque, monitorização hemodinâmica, suporte vasopressor); Hiperbilirrubinemia (fototerapia, exsanguineotransfusão). Problemas renais (insuficiência renal aguda,
+hipertensão arterial, nefro/uropatias congênitas, terapias dialíticas). Problemas do trato gastrointestinal (distúrbios da sucção e deglutição, refluxo gastresofág ico,
+enterocolite necrosante, malformações do trato gastrointestinal, pré e pós-operatório de cirurgia abdominal). Infecções de origem materna e ambiental (infecção
+neonatal precoce e tardia, sepse, insuficiência de múltiplos órgãos e sistemas, meningites, pneumonia, diarreia, conjuntivite, onfalite, osteomielite, artrite, infecção
+do trato urinário, infecções fúngicas e virais, infecções congênitas, antibioticoterapia). Distúrbios neurológicos (asfixia n eonatal, encefalopatia, hipóxico-isquêmica,
+hemorragia intra-periventricular, convulsão, hidrocefalia, pré e pós-operatório de neurocirurgia). Anemia da prematuridade (policitemia, doenças hemolíticas,
+hemoglobinopatias, doenças hemorrágicas, coagulação intravascular disseminada, uso de hemoderivados). Humanização na assistên cia ao recém-nascido. Legislações
+Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                622 - MÉDICO B NEUROCIRURGIÃO
+Bioética. Bases embriológicas, anatômicas e fisiológicas em neurocirurgia; Métodos diagnósticos em neurocirurgia; Princípios gerais das técnicas neurocirúrgicas;
+Cuidados pré e pós-operatórios em neurocirurgia; Traumatismo Cranioencefálico: fisiopatologia, diagnóstico, tratamento e reabilitação; Trauma rquimedular:
+
+                                                                                                                                Página 12 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+fisiopatologia, diagnóstico, tratamento e reabilitação; Hipertensão intracraniana: fisiopatologia, quadro clínico, diagnóstico e tratamento; Tumores intracranianos em
+adultos e na infância; Tumores ósseos e orbitários; Tumores selares e parasselares; Tumores raquimedulares em adultos e na infância; Hidrocefalia da infância e do
+adulto; Acidente vascular cerebral isquêmico e hemorrágico: fisiopatologia, diagnóstico e tratamento. Aneurismas e malformaçõ es vasculares no Sistema Nervoso
+Central; Malformações congênitas do Sistema Nervoso Central; Discopatias e espondilopatias; Infecções e infestações do Sistema Nervoso Central; Dor: fisiopatologia
+e tratamento; Neurocirurgia funcional; Lesões traumáticas de nervos periféricos; Neoplasias do sistema nervoso periférico. Protocolos clínicos e diretrizes terapêuticas
+do Ministério da Saúde. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de
+Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                  623 - MÉDICO B NEUROLOGISTA
+Semiologia Neurológica. Síndromes Neurológicas e Topografia Lesional. Neurofisiologia. Neuroimagem. Liquor. Neuroinfecção. Doença Vascular encefálica e medular.
+Tumores. Anomalias do Desenvolvimento Neuronal. Desordens Neurocutâneas. Neuropatias Periféricas. Miopatias. Mielopatias. Ataxias. Distúrbios do Movimento.
+Doenças da Junção Neuromuscular. Esclerose Múltipla e outras doenças desmielinizantes. Epilepsia. Acidente Vascular Cerebral. Esclerose Múltipla. Transtorno de
+Déficit de Atenção e hiperatividade. Toxina botulínica. Cefaleias. Distúrbios do Sono. Tonteira e Vertigem. Manifestações Neurológicas das Doenças Sistêmicas.
+Demências e Delírios. Desordens do Sistema Autonômico. Desordens Psiquiátricas. Epilepsias. Indicações e interpretações de: eletroencefalograma,
+eletroneuromiografia, líquido cefalorraqueano, neuroimagem, potências evocadas. Neurologia do Trauma. Urgência em neurologia. Protocolos clínicos e diretri zes
+terapêuticas do Ministério da Saúde. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº
+8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                 624 - MÉDICO B NEUROPEDIATRA
+Consultas em neurologia infantil para recém-nascidos, lactentes, crianças e adolescentes. Acompanhamento Ambulatorial e Interconsulta Hospitalar.
+Acompanhamento multidisciplinar do Desenvolvimento Infantil. Avaliação do Desenvolvimento Neuropsicomotor (DNPM), Comportamento e Aprendizagem.
+Semiologia Neurológica Infantil – Exame neurológico evolutivo (ENE): marcos do desenvolvimento, reflexos primitivos e sinais de alarme. Exames complementares em
+neuropediatria: Eletroencefalograma (EEG), Polissonografia, Neuroimagem (Ultrassonografia transfontanelar, Tomografia Computadorizada e Ressonância Magnética
+estrutural e funcional), Líquido Cefalorraquidiano (LCR) e Triagem Neonatal Ampliada (erros inatos do metabolismo). Transtornos do Neurodesenvolvimento:
+Transtorno do Espectro Autista (TEA), Transtorno do Déficit de Atenção com Hiperatividade (TDAH), Deficiência Intelectual (Transtorno do Desenvolvimento
+Intelectual) e Transtornos Específicos da Aprendizagem (Dislexia, Discalculia, Disgrafia). Transtornos da Comunicação e Trans torno do Desenvolvimento da
+Coordenação (TDC). Paralisia Cerebral e Síndromes Motoras Crônicas da Infância. Crises Epilépticas e Epilepsias na Infância e Adolescência: crises febris, síndromes
+epilépticas da infância (Síndrome de West, Síndrome de Lennox-Gastaut, Síndrome de Dravet, Epilepsia Mioclônica Juvenil, Epilepsias Focais Benignas). Estado de Mal
+Epiléptico. Cefaleias na Infância: Enxaqueca pediátrica, cefaleia tensional e variantes da enxaqueca (síndromes episódicas associadas). Infecções do Sistema Nervoso
+Central: Meningites bacterianas e virais, encefalites, neuroparasitoses e abscessos cerebrais. Encefalopatias agudas e crônicas. Doenças Neuromusculares: Atrofia
+Muscular Espinhal (AME), Distrofias Musculares (Duchenne e Becker), Miastenia Gravis juvenil e Neuropatias Periféricas (Síndr ome de Guillain-Barré). Erros Inatos do
+Metabolismo e Doenças Lisossômicas de depósito. Neurofibromatose, Esclerose Tuberosa e outras Facomatoses (Síndromes Neurocutâneas). Síndromes genéticas e
+cromossomopatias com repercussão neurológica. Malformações congênitas do Sistema Nervoso Central: defeitos do tubo neural (mielomeningocele), hidrocefalia,
+craniossinostoses e microcefalia. Distúrbios do Sono na infância: terror noturno, sonambulismo e apneia obstrutiva do sono. T ranstornos do Movimento: Tiques,
+Síndrome de Tourette, Coreias e Distonias. Traumatismo Cranioencefálico (TCE) e Injúria Cerebral Hipóxico-Isquêmica perinatal. Acidente Vascular Cerebral (AVC) na
+infância. Emergências Neuropediátricas: hipertensão intracraniana, coma e morte encefálica em pediatria. Tratamento: Farmac ologia neurológica infantil, terapias
+avançadas e modificadoras de doença (terapia gênica). Reabilitação neurofuncional. Ética em Neuropediatria: Diagnóstico pré-natal, cuidados paliativos e
+terminalidade. Saúde e Inclusão Escolar: Legislação sobre direitos da pessoa com deficiência e acessibilidade educacional. Impacto do uso de telas no desenvolvimento
+infantil. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                    625 - MÉDICO B NUTRÓLOGO
+Conceitos gerais: interação entre doença e estado nutricional. Avaliação do estado nutricional: composição corporal. Composiç ão corporal: avaliação e alterações
+fisiológicas e patológicas. Antropometria: avaliação bioquímica; calorimetria indireta; bioimpedância. Terapia nutrológica parenteral e enteral: conceitos gerais;
+indicações e prescrição; nutrição enteral; nutrição parenteral; casos especiais (nefropatas, enterectomizados, hepatopatas etc). Distúrbios da Conduta Alimentar:
+conceitos gerais; anorexia nervosa: bulimia, vigorexia, ortorexia e TCC; fisiopatologia: clínica e tratamento nutroterápico e medicamentoso. Obesidade e Síndrome
+Metabólica: conceitos gerais; diagnóstico; etiopatogenia; nutroterapia; atividade física: mudanças cognitivas e comportamentais; farmacoterapia; tratamento
+cirúrgico; avaliação nutrológica pré e pós cirurgia bariátrica. Hipovitaminoses: conceitos gerais; vitaminas hidro e lipossolúveis; principais carências a nível hospitalar;
+uso terapêutico de vitaminas. Protocolos clínicos e diretrizes terapêuticas do Ministério da Saúde. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990.
+Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                   626 - MÉDICO B ORTOPEDISTA
+Semiologia e sintomatologia clínicas das doenças do locomotor. Alterações congênitas dos membros superiores, membros inferiores e coluna. Exames complementares
+básicos em ortopedia. Fisiopatologia e tratamento da osteoartrose dos membros e coluna. Osteomielite e artrite séptica dos membros e coluna. Tumores ósseos e de
+partes moles. Doenças osteometabólicas. Lesões tendinosas agudas e crônicas e lesões musculares. Fraturas e luxações dos membros inferiores e superiores e coluna
+na criança e adulto. Fraturas expostas. Lesões ligamentares dos membros superiores e inferiores. Lesões nervosas centrais e periféricas. Legislações Federais de Saúde
+Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                           627 - MÉDICO B OTORRINOLARINGOLOGISTA - OUVIDO E MASTÓIDE
+Anatomia, fisiologia e embriologia do ouvido externo, médio e interno; anatomia do osso temporal e mastoide; fisiologia da audição e do equilíbrio. Semiologia
+otorrinolaringológica: anamnese especializada; exame físico otológico; otoscopia; microscopia otológica; avaliação vestibular ; propedêutica clínica e cirúrgica.
+Audiologia: audiometria tonal e vocal; imitanciometria; emissões otoacústicas; potencial evocado auditivo; processamento auditivo; avaliação audiológica infa ntil;
+interpretação de exames audiológicos. Otites: otite externa; otite média aguda; otite média secretora; otite média crônica; colesteatoma; otomastoidites;
+complicações intracranianas e extracranianas das infecções otológicas. Doenças do ouvido interno: doença de Ménière; labirintopatias; vertigem posicional paroxística
+benigna; neurite vestibular; fístulas perilinfáticas; presbiacusia; zumbido; surdez súbita. Perda auditiva: hipoacusias condutivas, neurossensoriais e mistas; deficiência
+auditiva congênita e adquirida; triagem auditiva neonatal; reabilitação auditiva; próteses auditivas e implante coclear. Patologias do nervo facial e do osso temporal:
+paralisia facial periférica; síndrome de Ramsay Hunt; tumores do osso temporal; fraturas do osso temporal; lesões traumáticas do ouvido. Mastoide e cirurgia otológica:
+
+                                                                                                                                Página 13 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+mastoidites; mastoidectomias; timpanoplastias; estapedectomia; cirurgia do colesteatoma; cirurgia do implante coclear; princípios de microcirurgia otológica.
+Otoneurologia: fisiologia vestibular; síndromes vestibulares periféricas e centrais; nistagmo; exames vestibulares; reabilitação vestibular. Urgências e emergências em
+otorrinolaringologia: vertigem aguda; trauma auricular; hemotímpano; corpo estranho em ouvido; barotrauma; complicações infec ciosas agudas. Diagnóstico por
+imagem em otologia: radiologia do osso temporal; tomografia computadorizada; ressonância magnética; interpretação de exames de imagem aplicados às doenças
+do ouvido e mastoide. Infecções, tumores e doenças sistêmicas com repercussão otológica: neoplasias benignas e malignas do ouvido; doenças autoimunes;
+manifestações otológicas de doenças infecciosas; ototoxicidade medicamentosa. Biossegurança, controle de infecção e segurança do paciente em ambiente cirúrgico
+e ambulatorial. Ética médica e bioética: Código de Ética Médica; sigilo profissional; responsabilidade civil, penal e ética do médico; consentimento informado; relação
+médico-paciente. Políticas públicas de saúde: Sistema Único de Saúde (SUS); princípios e diretrizes do SUS; Política Nacional de Ate nção Especializada; regulação do
+acesso; linhas de cuidado em saúde auditiva; Rede de Cuidados à Pessoa com Deficiência. Epidemiologia, prevenção e promoção da saúde auditiva. Atualidades e
+temas contemporâneos em otorrinolaringologia: avanços diagnósticos e terapêuticos; tecnologias em cirurgia otológica; telemedicina; inovação em reabilitação
+auditiva; medicina baseada em evidências. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990; Portaria Federal nº 2.436/2017; Lei Federal nº
+8.142/1990; Política Nacional de Saúde Auditiva; normas do Ministério da Saúde relacionadas à atenção otorrinolaringológica; protocolos clínicos e diretrizes
+terapêuticas aplicáveis. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                      628 - MÉDICO B PEDIATRA
+
+Consultas em pediatria para recém-nascidos, lactentes, crianças e adolescentes. Acompanhamento Ambulatorial, de Puericultura e de Internação Hospitalar.
+Atendimento de urgência e emergência pediátrica (porta e sala de emergência). Reanimação e assistência ao recém-nascido na sala de parto (diretrizes atualizadas da
+Sociedade Brasileira de Pediatria). Manejo do recém-nascido a termo e pré-termo: icterícia neonatal, prematuridade, síndrome do desconforto respiratório, distúrbios
+metabólicos neonatais e sepse neonatal precoce e tardia. Triagem Neonatal Universal: teste do pezinho (Triagem Neonatal Ampliada), teste do coraçãozinho, t este da
+orelhinha, teste do olhinho. Crescimento e Desenvolvimento Neuropsicomotor (DNPM): vigilância do desenvolvimento, marcos motores, cognitivos e de linguagem,
+identificação de sinais de alerta e triagem inicial de Transtornos do Neurodesenvolvimento (Transtorno do Espectro Autista - TEA, TDAH e deficiências de
+aprendizagem). Puericultura e Imunização: Calendário Nacional de Vacinação da SBIm e do PNI, indicações dos CRIE (Centros de Referência para Imunobiológicos
+Especiais) e eventos adversos pós-vacinais. Distúrbios Nutricionais: Aleitamento materno, alimentação complementar, desnutrição energético-proteica, obesidade
+infantil, dislipidemias e deficiências de micronutrientes (anemia ferropriva e hipovitaminoses). Doenças Respiratórias na infância: Inf ecções de Vias Aéreas Superiores
+(IVAS), otite média aguda, sinusite, amigdalite, laringite, bronquiolite viral aguda grave, asma brônquica crônica e estado de mal asmático, sibilância no lactente,
+pneumonias comunitárias e suas complicações (derrame pleural e empiema) e aspiração de corpo estranho. Doenças Endocrinológic as: Diabetes Mellitus infantil,
+cetoacidose diabética (CAD), hipotireoidismo congênito, distúrbios do crescimento e da puberdade. Distúrbios do Trato Geniturinário e Nefrologia: Enurese noturna,
+infecção do trato urinário (ITU), síndrome nefrótica, síndrome nefrítica (GNDA), insuficiência renal aguda (IRA), Síndrome H emolítico-Urêmica (SHU) e crise
+hipertensiva. Gastroenterologia Pediátrica: Doença diarreica aguda, constipação intestinal crônica, refluxo gastroesofágico e alergia à proteína do leite de vaca (APLV).
+Doenças Infectocontagiosas e Exantemáticas: Dengue, Zika, Chikungunya, varicela, sarampo, escarlatina, exantema súbito, mononucleose, sepse e choque séptico em
+pediatria, infecções de tecidos moles (fascite necrosante, celulite orbitária), osteomielite e artrite séptica. Emergências N eurológicas: Crise convulsiva febril, crise
+convulsiva aguda, Estado de Mal Epiléptico, abordagem do coma, hipertensão intracraniana e traumatismo cranioencefálico (TCE) leve, moderado a grave. Infecções
+Graves do Sistema Nervoso Central: Meningites bacterianas e virais, encefalites e abscessos. Emergências Cardiovasculares: Arritmias pediátricas (taquicardia
+supraventricular), miocardite e insuficiência cardíaca congestiva descompensada. Emergências Hematológicas e Oncológicas: Crise de falcemia (crise álgica, sequestro
+esplênico e síndrome torácica aguda), neutropenia febril e síndrome de lise tumoral. Toxicologia Clínica e Acidentes: Intoxicações exóg enas agudas, acidentes por
+animais peçonhentos, queimaduras graves e afogamento. Clínica Cirúrgica Pediátrica na urgência: Diagnóstico diferencial do abdome agudo (apendicite,
+intussuscepção intestinal, volvo) e escroto agudo. Práticas da Pediatria Internista (Enfermaria): Critérios de internação e alta hospitalar. Prescrição hospitalar, cálculo
+de hidratação venosa de manutenção e reposição eletrolítica. Manejo de infecções hospitalares e uso racional de antimicrobianos. Cuidados Paliativos e manejo da
+dor. Saúde Mental na Infância: Identificação de ansiedade, depressão, transtornos alimentares e distúrbios comuns do sono. Notificação compulsória de maus-tratos,
+negligência e violência doméstica contra crianças e adolescentes. Legislações Federais de Saúde Pública e Normas: Lei Federal nº 8.080/1990. Portaria Federal nº
+2.436/2017. Lei Federal nº 8.142/1990. Estatuto da Criança e do Adolescente (ECA - Lei Federal nº 8.069/1990) focado em maus-tratos e direitos da criança internada.
+Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                               629 - MÉDICO B PSIQUIATRA ADULTO
+Semiologia Psiquiátrica - Exame psiquiátrico: psicopatologia, diagnóstico e classificação em psiquiatria. Transtornos mentais: Transtornos relacionados ao uso de álcool
+e substancias psicoativas. Esquizofrenia. Outros transtornos psicóticos: esquizoafetivo, esquizofreniforme, psicótico breve, delirante persistente, delirante induzido.
+Síndromes psiquiátricas do puerpério. Transtornos do humor. Transtorno obsessivo-compulsivo e transtornos de hábitos e impulsos. Transtornos fóbicos-ansiosos:
+fobia especifica, social e agorafobia. Transtorno de pânico, transtorno de ansiedade generalizada. Transtornos somatoformes. Transtornos alimentares.  Transtornos
+do sono. Transtornos de adaptação e transtorno de estresse pós-traumático. Transtornos dissociativos. Transtornos da sexualidade. Transtornos da personalidade.
+Transtornos factícios, simulação, não adesão ao tratamento. Retardo mental. Transtornos do desenvolvimento psicológico e Transtornos comp ortamentais e
+emocionais que aparecem habitualmente durante a infância ou adolescência. Transtornos de Déficit de Atenção e Hiperatividade (TDAH). Transtornos psiquiátricos
+relacionados ao envelhecimento. Inter consulta psiquiátrica. Transtornos Mentais devidos a uma outra condição medica geral. N europsiquiatria. Emergências
+psiquiátricas. Tratamento: Psicoterapias. Psicofarmacologia e Psicofarmacoterapia. Eletroconvulsoterapia e outras terapias biológicas. Psiquiatria Forense:
+Documentos Médico-Legais. Responsabilidade Penal e Capacidade Civil. Simulação e pericia psiquiatria. Psiquiatria Forense. Saúde Mental: Legisl ação em saúde mental.
+As relações entre transtornos mentais, cidadania e direito. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017.
+Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                              630 - MÉDICO B PSIQUIATRA INFANTIL
+Classificação e epidemiologia dos distúrbios psiquiátricos na infância e adolescência. Princípios gerais do desenvolvimento e avaliação psiquiátrica de crianças e
+adolescentes. Transtornos do desenvolvimento. Transtornos de comportamento e de linguagem. Transtorno de ansiedade da separação. Mutismo seletivo. Transtorno
+de Tique. Transtorno de excreção. Transtorno da alimentação da primeira infância. Transtornos de humor e suicídio. Transtornos de ansiedade. Transtornos do sono.
+Esquizofrenia de início precoce. Abuso de substância na adolescência. Psicofarmacologia na criança e no adolescente. Psicoterapia e psicologia médica. Escalas de
+Avaliação para altruísmo, depressão e ansiedade em crianças. Políticas públicas de saúde mental infanto-juvenil. Legislações Federais de Saúde Pública: Lei Federal nº
+8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                  631 - MÉDICO B RADIOLOGISTA
+Conhecimentos básicos sobre física das radiações e formação da imagem radiológica. Efeitos da radiação e meios de proteção. Equipamentos radiológicos e acessórios.
+
+                                                                                                                                Página 14 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+Meios de contrastes (tipos e utilização específica). Técnicas radiográficas e demais Métodos de exploração por imagem nas principais doenças e síndromes nos
+sistemas: musculoesquelético, respiratório, digestivo, cardiovascular, genitourinário, endócrino, sistema nervoso central, fígado e vias biliares, mediastino, pelve
+feminina e masculina, mama e em Ginecologia-Obstetrícia. Conhecimentos gerais de anatomia radiográfica e nos demais Métodos de exploração por imagem. Técnicas
+radiográficas e demais métodos de exploração por imagem no diagnóstico das principais doenças e síndromes em pediatria. Trauma e Radiologia de Emergência.
+Doenças tumorais benignas e malignas, inflamatórias/infecciosas e vasculares em Cabeça e Pescoço, Sistema Nervoso Central, Medicina Interna, Sistema
+Musculoesquelético, Tórax, Abdome, Pelve Masculina e Feminina e pediatria, Ginecologia/Obstetrícia em Radiologia, US, TC e RM e seus diagnósticos diferenciais.
+Bases físicas da ultrassonografia. Ultrassonografia do abdome total, do tórax, do pescoço, obstétrica e de partes moles. Noçõ es básicas de Doppler. Ultrassonografia
+intervencionista. Conhecimentos sobre a organização de um serviço de Radiologia e Diagnóstico por Imagem, Radioproteção. Legislações Federais de Saúde
+Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                             632 - MÉDICO B ULTRASSONOGRAFISTA
+Avaliação e aplicação das técnicas de ultrassonografia, principais indicações, sensibilidade e especificidade do ultrassom. D oppler de carótidas e vertebrais. Biópsias e
+drenagens do pescoço, abdome e pelve guiados por ultrassonografia. Ultrassonografia abdominal, pélvica e torácica. Ultrassonografia de pequenas partes – cervical,
+bolsa escrotal e músculo esquelético. Ultrassonografia em obstetrícia e fetal. Avaliação Doppler na gravidez. Ultrassonografi a em Ginecologia. Ultrassonografia
+transvaginal. Ultrassonografia das Mamas. Classificação BIRADS. Doppler Carótidas, vertebrais e artérias periféricas. Ultrass onografia em Pediatria. Ultrassonografia
+em Emergências Clínico Cirúrgicas. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº
+8.142/1990. Código de Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                        633 - MÉDICO B ULTRASSONOGRAFISTA EM GINECOLOGIA E OBSTETRÍCIA
+Princípios físicos da ultrassonografia: formação da imagem ultrassonográfica; modos de imagem; Doppler colorido, pulsado e contínuo; bioefeitos e segurança em
+ultrassonografia; artefatos ultrassonográficos; otimização e padronização de exames. Anatomia ultrassonográfica do aparelho r eprodutor feminino: útero;
+endométrio; colo uterino; ovários; tubas uterinas; pelve feminina; anatomia fetal normal. Ultrassonografia ginecológica: técnica do exame transabdominal e
+transvaginal; avaliação do útero e anexos; ciclo menstrual e alterações fisiológicas; miomatose uterina; adenomiose; pólipos endometriais; hiperplasia endometrial;
+malformações uterinas; endometriose; doença inflamatória pélvica; massas anexiais; cistos ovarianos; tumores ovarianos benignos e malignos; síndrome dos ovários
+policísticos; avaliação ultrassonográfica da infertilidade; monitorização folicular. Ultrassonografia obstétrica: diagnóstico de gestação; avaliação do primeiro trimestre;
+viabilidade embrionária; idade gestacional; biometria fetal; avaliação do crescimento fetal; líquido amniótico; placenta; cordão umbilical; perfil biofísico fetal; vitalidade
+fetal; apresentação fetal; avaliação do colo uterino; gestação gemelar; gestação ectópica; abortamento; doença trofoblástica gestacional. Medicina fetal: rastreamento
+de aneuploidias; translucência nucal; marcadores ultrassonográficos; malformações fetais; avaliação morfológica fetal; dopplervelocimetria materno-fetal;
+insuficiência placentária; restrição de crescimento intrauterino; macrossomia fetal; sofrimento fetal; malformações cardíacas fetais; alterações do sistema nervoso
+central fetal; avaliação fetal em gestações de alto risco. Doppler em ginecologia e obstetrícia: Doppler uterino; Doppler fetal; Doppler das artérias umbilicais; artéria
+cerebral média; ducto venoso; avaliação vascular de massas pélvicas; Doppler em infertilidade. Intercorrências obstétricas e ginecológicas diagnosticadas por
+ultrassonografia: placenta prévia; descolamento prematuro de placenta; acretismo placentário; pré-eclâmpsia; oligoâmnio e polidrâmnio; torção anexial; hemorragias
+uterinas; infecções ginecológicas e obstétricas. Procedimentos guiados por ultrassonografia: biópsias; punções; drenagens; amniocentese; ordocentese;
+procedimentos minimamente invasivos. Protocolos, laudos e documentação em ultrassonografia: elaboração de laudos; padronização de exames; terminologia
+técnica; interpretação e correlação clínico-radiológica; armazenamento e arquivamento de imagens. Controle de qualidade e biossegurança: manutenção e calibração
+de equipamentos; segurança do paciente; controle de infecção; biossegurança em serviços de diagnóstico por imagem. Ética médica e bioética: Código de Ética Médica;
+sigilo profissional; consentimento informado; responsabilidade civil, penal e ética do médico; relação médico-paciente. Políticas públicas de saúde: Sistema Único de
+Saúde (SUS); princípios e diretrizes do SUS; Política Nacional de Atenção Integral à Saúde da Mulher; Rede Cegonha; pré-natal de baixo e alto risco; protocolos do
+Ministério da Saúde relacionados à saúde da mulher e da gestante. Legislação aplicada: Lei Federal nº 8.080/1990; Lei Federal nº 8.142/1990; protocolos clínicos e
+diretrizes terapêuticas do Ministério da Saúde; normas da ANVISA relacionadas aos serviços de diagnóstico por imagem. Atualidades e temas contemporâneos: avanços
+tecnológicos em ultrassonografia; inteligência artificial aplicada ao diagnóstico por imagem; telemedicina; medicina baseada em evidências; segurança fetal e materna
+em exames de imagem.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                                                    634 - MÉDICO B UROLOGISTA
+Anatomia cirúrgica urológica. Semiologia urológica. Imaginologia do trato urinário. Traumatismo urogenital. Tumores renais. Tumores da próstata. Tumores de
+bexiga. Tumores da suprarrenal. Tumores do uroepitélio alto. Tumores do testículo. Tumores do pênis. Litíase urinária. Infecções urinárias. Tuberculose
+urogenital. Transplante renal. Uropediatria. Infertilidade masculina. Disfunções sexuais masculinas. Urologia feminina. Uroneurologia. Endourologia. Cirurgia
+videolaparoscópica. Doenças sexualmente transmissíveis. Hipertensão renovascular. Cirurgia da reconstrução urogenital. Embriologia do trato geniturinário. Urologia
+baseada em evidências. Legislações Federais de Saúde Pública: Lei Federal nº 8.080/1990. Portaria Federal nº 2.436/2017. Lei Federal nº 8.142/1990. Código de
+Ética Médica.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                 635 - TÉCNICO SUPERIOR DE SAÚDE B - FISIOTERAPEUTA RESPIRATÓRIO 24 HORAS /
+                                                  636 - TÉCNICO SUPERIOR DE SAÚDE B - FISIOTERAPEUTA RESPIRATÓRIO 30 HORAS
+Histologia do sistema respiratório. Embriologia: crescimento e desenvolvimento pulmonar. Anatomia: ossos, músculos, inervação, vascularização da caixa torácica.
+Vias aéreas superiores. Vias aéreas inferiores. Mediastino. Diferenças anatômicas da criança. Cinesiologia da caixa torácica. Diafragma. Fisiologia do sistema
+respiratório (adultos e criança): Ventilação. Difusão, perfusão, circulação pulmonar, relação ventilação/perfusão. Controle da respiração. Transporte do O2 e do CO2.
+Mecânica pulmonar. Funções não respiratórias dos pulmões. Diferenças fisiológicas da criança. Semiologia adulta neonatal e pediátrica. Manifestações clí nicas
+(primárias e secundárias). Inspeção. Palpação. Percussão. Ausculta. Espirometria. Fisiopatologia das doenças obstrutivas, restritivas, vasculares do pulmão.
+Procedimentos fisioterapêuticos em fisioterapia respiratória adulto e criança. Padrões respiratórios terapêuticos. Manobras desobstrutivas e ventilatórias. Postura de
+drenagem. Tosse/Huffing. Aspiração. Cinesioterapia. Espirômetro de incentivo. Treinador muscular. Flutter. RPPI. EPAP/CPAP/BIPAP. Noções de radiologia em adultos
+e criança (tórax/pulmões). Oxigênio-terapia e técnicas inalatórias. Hood e cateter nasal. Utilização de óxido nitroso inalatório. Gasometria. Patologi as. DPOC. Asma
+(adultos e criança). Bronquiectasia. Pneumonias (adultos e criança). Abscesso pulmonar. Tuberculose. Neoplasias. Doenças da pleura: derrame pleural. Pneumotórax.
+Atelectasia. Doenças ocupacionais. Fibrose pulmonar. Tromboembolismo pulmonar. Congestão pulmonar. Edema agudo de pulmão. Síndrome do desconforto
+respiratório agudo (doença da membrana hialina). Doenças neuromusculares. Cardiopatias. Refluxo gastroesofágico. Insuficiência respiratória aguda. Síndrome de
+aspiração do mecônio. Hipertensão pulmonar. Apneia da prematuridade. Taquipneia transitória do recém-nascido. Displasia bronco pulmonar. Via aérea artificial -
+Indicação, tipos, cuidados com a via aérea artificial, extubação, complicações (adultos e criança). Ventilação mecânica. Fase inspiratória, fase expiratória, modos
+ventilatórios, ciclagem, parâmetros para iniciar a ventilação. Ventilação mecânica em neonatologia (IMV, CMV, SIMV). Monitori zação respiratória durante a ventilação
+
+                                                                                                                                Página 15 de 16
+                                      CONCURSO PÚBLICO DO HOSPITAL
+                                    METROPOLITANO ODILON BEHRENS
+
+                                                   EDITAL Nº 01/2026
+
+mecânica - Índice de oxigenação, mecânica do sistema respiratório (resistência, complacência, Peep intrínseca). Desmame da ventilação mecânica - Formas de
+desmame, monitorização. Ventilação não invasiva. Insuficiência respiratória. Fisioterapia respiratória no pré e pós-operatório de cirurgias
+cardiovasculares. Toracotomias. Láparotomias. Cirurgias neurológicas. Efeitos hemodinâmicos da ventilação mecânica. Estimulação sensório-motora. Código de Ética
+e deontologia profissional.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                      637 - TÉCNICO SUPERIOR DE SAÚDE B - FISIOTERAPEUTA SAÚDE DA MULHER
+Humanização, Ética e bioética.  Instrumentos de avaliação física e cinesiofuncional em oncologia. Promoção, Prevenção e tratamento das complicações da terapêutica
+oncológica.  Recursos fisioterapêuticos utilizados em oncologia. Cuidados paliativos em oncologia. Uroginecologia. Avaliação fisioterapêutica na mulher com
+incontinência urinária. Avaliação Funcional do assoalho pélvico.  Mastologia: CA de Mama. Aspectos gerais do tratamento cirúr gico, radioterápico e quimioterápico.
+Avaliação Fisioterapêutica na paciente em cuidados mastológicos. Obstetrícia: Avaliação fisioterapêutica global da gestante. Avaliação funci onal do assoalho
+pélvico. Preparo fisioterapêutico perineal para o parto vaginal: fortalecimento e alongamento perineal (massagem e dilatadores vaginais). Exercícios físicos na
+gestação. Avaliação fisioterapêutica da parturiente. Aleitamento materno. Sexualidade: Ciclo da resposta sexual humana. Disfu nções sexuais femininas. Aspectos do
+tratamento medicamentoso para as disfunções sexuais femininas. Avaliação e tratamento fisioterapêutico para as disfunções sexuais femininas. Adaptação e
+monitoramento de órteses e próteses.
+
+                                                                                   CONHECIMENTOS ESPECÍFICOS
+                                                         638 - TÉCNICO SUPERIOR DE SAÚDE B - FONOAUDIÓLOGO HOSPITALAR
+Fundamentos da Fonoaudiologia Hospitalar: atuação do fonoaudiólogo no ambiente hospitalar; assistência interdisciplinar; níve is de atenção à saúde; humanização
+da assistência; segurança do paciente. Anatomia e fisiologia da comunicação humana: anatomia e fisiologia da fala, linguagem, voz, audição e motricidade orofacial;
+neuroanatomia aplicada à fonoaudiologia; fisiologia da deglutição. Disfagia: disfagia orofaríngea; disfagia neurogênica e mec ânica; avaliação clínica e instrumental da
+deglutição; videofluoroscopia; videoendoscopia da deglutição; manejo clínico da disfagia; reabilitação da deglutição; vias alternativas de alimen tação; consistências
+alimentares e espessamento; risco de broncoaspiração. Motricidade orofacial: funções estomatognáticas; avaliação e terapia miofuncional; alterações estruturais e
+funcionais; atuação em pacientes críticos e pós-cirúrgicos. Voz: fisiologia vocal; avaliação vocal; disfonias; voz profissional; reabilitação vocal; atuação em pacientes
+traqueostomizados e laringectomizados. Linguagem: desenvolvimento da linguagem; alterações de linguagem oral e escrita; afasias; distúrbios neurológicos da
+comunicação; reabilitação cognitivo-linguística. Audiologia: avaliação audiológica; triagem auditiva neonatal; emissões otoacústicas; potenciais evocados auditivos;
+deficiência auditiva; reabilitação auditiva; próteses auditivas e implante coclear. Fonoaudiologia em neonatologia e pediatria: sucção, respiração e deglutição do recém-
+nascido; prematuridade; aleitamento materno; desenvolvimento neuropsicomotor; intervenção precoce; atuação em UTI neonatal e pediátrica. Fonoaudiologia em
+terapia intensiva: atuação em UTI adulto, pediátrica e neonatal; pacientes críticos;
+ventilação mecânica; traqueostomia; extubação; decanulação; protocolos hospitalares. Fonoaudiologia em neurologia: AVC; traumatismo cranioencefálico; doenças
+neurodegenerativas; paralisia cerebral; distúrbios motores da fala; reabilitação neurofuncional. Fonoaudiologia oncológica: c âncer de cabeça e pescoço; reabilitação
+pós-cirúrgica; alterações de fala, voz e deglutição decorrentes do tratamento oncológico. Avaliação e diagnóstico fonoaudiológico: anamnese; protocolos clínicos;
+exames complementares; elaboração de pareceres, relatórios e laudos. Biossegurança e controle de infecção hospitalar: precauções padrão; higienização das mãos;
+equipamentos de proteção individual; segurança no ambiente hospitalar. Ética e legislação profissional: Código de Ética da Fonoaudiologia; sigilo profissional;
+responsabilidade ética, civil e penal; resoluções do Conselho Federal de Fonoaudiologia; documentação fonoaudiológica. Políticas públicas de saúde: Sistema Único de
+Saúde (SUS); princípios e diretrizes do SUS; Política Nacional de Humanização; Rede de Atenção à Saúde; atenção hospitalar; saúde da criança, da pessoa com
+deficiência e do idoso. Gestão e trabalho multiprofissional: atuação interdisciplinar; protocolos assistenciais; indicadores de qualidade; segurança do paciente;
+comunicação em equipe; educação permanente em saúde. Pesquisa e prática baseada em evidências: interpretação de artigos científicos; protocolos clínicos;
+atualização técnico-científica; inovação tecnológica em fonoaudiologia hospitalar. Atualidades e temas contemporâneos: teleatendimento em fonoaudiologia;
+cuidados paliativos; humanização da assistência; tecnologias assistivas; impacto das doenças respiratórias e neurológicas na comunicação e deglutição.
+
+                                                                                                                                Página 16 de 16
+

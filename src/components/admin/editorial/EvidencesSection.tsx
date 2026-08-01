@@ -50,7 +50,7 @@ export function EvidencesSection() {
   const qc = useQueryClient();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editing, setEditing] = useState<EditorialEvidence | null>(null);
-  const [entityType, setEntityType] = useState<"DISCIPLINE" | "TOPIC" | "KEYWORD" | "RULE">("RULE");
+  const [entityType, setEntityType] = useState<EditorialEvidence["entity_type"]>("RULE");
   const [entityId, setEntityId] = useState("");
   const [evidenceType, setEvidenceType] = useState<"CONFIRMACAO" | "CONTRADICAO" | "REVISAO_HUMANA" | "SUGESTAO_IA">("REVISAO_HUMANA");
   const [sourceRef, setSourceRef] = useState("");

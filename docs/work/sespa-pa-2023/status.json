@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "workId": "sespa-pa-2023",
+  "stage": "CONCLUIDA",
+  "history": [
+    {
+      "stage": "SEEDED",
+      "at": "2026-07-10T09:19:46.730Z",
+      "by": "Sessao anterior (nao documentada)",
+      "note": "47 questoes validas do SESPA-PA 2023 (Enfermeiro) foram seedadas diretamente no banco de producao nesta data. Nenhum docs/work/sespa-pa-2023/README.md, status.json ou metadata.json foi criado na epoca; nenhuma linha correspondente foi adicionada a docs/imports/questions.csv; nenhum commit git registra este seed. Descoberto retroativamente em 2026-07-24 (ver stage RECONCILED abaixo)."
+    },
+    {
+      "stage": "RECONCILED",
+      "at": "2026-07-24T13:50:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — FASE 4",
+      "note": "Durante a producao desta prova (proximo item da fila apos INTO 2025 ser marcada INVALIDA), foi localizado um CSV de 46 questoes ja transcrito e auditado (docs/work/sespa-pa-2023/questions.csv, ver BUG-004 em docs/BUGS.md), aparentemente aguardando seed. Ao rodar convert:questions + seed:questions, apenas 37 de 46 foram criadas (9 ignoradas por hash identico), revelando que ja existiam 47 questoes da SESPA-PA 2023 no banco, sem nenhum rastro em git ou docs/work/. Investigacao item a item contra o prova.txt oficial (correspondencia por alternativas, nao por metadata solta) confirmou: as 47 pre-existentes (seedadas em 2026-07-10) cobrem os 47 itens validos oficiais (50 - 3 anuladas: 22, 23, 24) de forma completa e correta — SEM corrupcao de encoding (a corrupcao aparente em investigacoes anteriores desta sessao foi um artefato de codepage do console Windows nos scripts Python de diagnostico, nao um problema real do banco). As 37 novas linhas criadas por este seed eram, portanto, duplicatas parafraseadas dos mesmos itens. Removidas (DELETE por id, com dupla checagem de exam_id e contagem antes de excluir). Acervo restaurado a 1266 (o valor original, que ja incluia as 47 questoes da SESPA)."
+    },
+    {
+      "stage": "TAXONOMY_EXTENDED",
+      "at": "2026-07-24T13:55:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — FASE 4",
+      "note": "Durante a reconciliacao, identificados 2 assuntos (saude-do-adulto, imunizacao) que ja existiam em taxonomy.json mas estavam com status INACTIVE e 0 assuntos filhos cadastrados, embora ja fossem usados pelas 47 questoes reais no banco (confirmando que a sessao de 07-10 tambem criou taxonomia diretamente no banco sem atualizar o arquivo fonte). Adicionados os 4 topicos faltantes (pe-diabetico-e-doencas-cronicas, oncologia-assistencia-de-enfermagem, assistencia-de-enfermagem-ao-paciente-com-hiv-aids em saude-do-adulto; calendario-nacional-de-vacinacao em imunizacao) e ambos os assuntos promovidos para ACTIVE. seed:taxonomy executado (0 criados — ja existiam no banco, apenas o arquivo fonte estava desatualizado)."
+    },
+    {
+      "stage": "DOCUMENTED",
+      "at": "2026-07-24T14:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — FASE 4",
+      "note": "docs/work/sespa-pa-2023/questions.csv substituido pela exportacao autoritativa das 47 questoes reais do banco (o CSV de 46 itens do BUG-004 era uma transcricao paralela redundante, mantida apenas como historico em BUGS.md). As 47 linhas autoritativas foram anexadas a docs/imports/questions.csv (fonte cumulativa). ATENCAO (nao resolvido): reconverter este CSV especifico via `convert:questions` + `seed:questions` volta a criar 47 duplicatas — o hash de conteudo calculado a partir do CSV reconvertido nao bate com o hash das linhas ja existentes no banco (causa raiz nao identificada; suspeita de diferenca de normalizacao de aspas/whitespace no round-trip). docs/seeds/questions.json foi gerado via `export:questions` (fonte: banco), nao via `convert:questions` (fonte: CSV), e deve ser preservado assim. Nao rodar `convert:questions` novamente sem antes investigar essa divergencia de hash."
+    }
+  ],
+  "sourcePdf": "prova.pdf (SESPA-PA, mirror oficial)",
+  "workDir": "docs/work/sespa-pa-2023"
+}

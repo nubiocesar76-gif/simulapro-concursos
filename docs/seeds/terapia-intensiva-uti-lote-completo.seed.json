@@ -1,0 +1,2199 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "O Nursing Activities Score (NAS), instrumento de mensuracao da carga de trabalho de enfermagem em UTI, expressa seu resultado",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "em uma escala de 0 a 10, semelhante a Escala Visual Analogica de dor."
+        },
+        {
+          "letter": "B",
+          "text": "em percentual, representando o tempo estimado da equipe de enfermagem dedicado aos cuidados diretos e indiretos ao paciente em um periodo de 24 horas."
+        },
+        {
+          "letter": "C",
+          "text": "em uma classificacao binaria (alta ou baixa carga), sem gradacao numerica."
+        },
+        {
+          "letter": "D",
+          "text": "em numero absoluto de profissionais necessarios, sem relacao com tempo de cuidado."
+        },
+        {
+          "letter": "E",
+          "text": "em escala identica a do APACHE II, permitindo substituicao direta entre os dois instrumentos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "O NAS expressa resultado percentual, estimando o tempo da equipe dedicado ao paciente nas 24h.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "04034fa7d1bdf5ed9e774236a280772ec8cb07e17fe7c417fb9a17b46d48155a"
+    },
+    {
+      "statement": "Uma consequencia pratica direta da revogacao da Resolucao COFEN no 543/2017 pela Resolucao COFEN no 743/2024, no que se refere ao dimensionamento de pessoal de enfermagem em UTI, e que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o dimensionamento de pessoal passou a ser uma decisao exclusivamente discricionaria de cada instituicao, sem qualquer referencia normativa do sistema de enfermagem."
+        },
+        {
+          "letter": "B",
+          "text": "o parametro numerico especifico anteriormente estabelecido pela norma revogada deixou de ser a referencia normativa direta do COFEN, exigindo atencao redobrada de gestores e enfermeiros quanto a norma atualmente aplicavel."
+        },
+        {
+          "letter": "C",
+          "text": "todas as UTIs do pais foram automaticamente fechadas ate a publicacao de nova norma."
+        },
+        {
+          "letter": "D",
+          "text": "o COFEN perdeu completamente a competencia para normatizar o exercicio profissional de enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "a revogacao nao tem nenhum efeito pratico, sendo apenas uma formalidade sem consequencia real."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A revogacao de uma norma especifica de dimensionamento exige atencao a norma atualmente aplicavel.",
+      "references": [
+        "Resolucao COFEN no 743/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0b3f76a4a0c7cf4e3bef6554d5dd740d6df853a925e8e0acc4d5a93cde4da6f9"
+    },
+    {
+      "statement": "O escore APACHE II, amplamente utilizado em Unidades de Terapia Intensiva, tem como principal finalidade",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "medir exclusivamente a carga de trabalho da equipe de enfermagem."
+        },
+        {
+          "letter": "B",
+          "text": "estimar a gravidade clinica e o risco de mortalidade do paciente critico, com base em variaveis fisiologicas coletadas nas primeiras 24 horas de internacao."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de avaliacao neurologica pela Escala de Coma de Glasgow."
+        },
+        {
+          "letter": "D",
+          "text": "calcular exclusivamente o tempo estimado de permanencia hospitalar, sem relacao com mortalidade."
+        },
+        {
+          "letter": "E",
+          "text": "avaliar unicamente a funcao renal do paciente critico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "O APACHE II estima gravidade/mortalidade a partir de variaveis fisiologicas das primeiras 24h - nao mede carga de trabalho (isso e o NAS).",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "17bd4d725a8311ae04e9b740abb6673e92920f0243863727ca7c2d53d9711d37"
+    },
+    {
+      "statement": "O registro sistematico, em prontuario, dos escores de gravidade, das escalas de sedacao/delirium e da evolucao clinica do paciente critico tem como principal finalidade",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "cumprir uma exigencia meramente burocratica, sem qualquer utilidade para a continuidade do cuidado."
+        },
+        {
+          "letter": "B",
+          "text": "assegurar a continuidade e a rastreabilidade do cuidado entre os turnos e profissionais, subsidiando a tomada de decisao clinica e a comunicacao efetiva da equipe multiprofissional."
+        },
+        {
+          "letter": "C",
+          "text": "substituir integralmente a comunicacao verbal entre os profissionais durante a passagem de plantao."
+        },
+        {
+          "letter": "D",
+          "text": "ser utilizado exclusivamente para fins de auditoria financeira da instituicao, sem relacao com o cuidado clinico."
+        },
+        {
+          "letter": "E",
+          "text": "ser de responsabilidade exclusiva do profissional medico, sem participacao da equipe de enfermagem no registro."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "O registro sistematico assegura continuidade e rastreabilidade do cuidado entre turnos/profissionais.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "18374c53984dadb45f24ded00b84890ddb86219295cf98aa4fcfb66c4644d2ef"
+    },
+    {
+      "statement": "Segundo a RDC ANVISA no 7/2010, entre os requisitos minimos de funcionamento de uma UTI esta",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a dispensa de monitorizacao continua de sinais vitais, por ser considerada opcional."
+        },
+        {
+          "letter": "B",
+          "text": "a disponibilidade de equipamentos e materiais especificos para suporte a vida, monitorizacao continua e atendimento a emergencias, compativeis com o perfil de pacientes assistidos."
+        },
+        {
+          "letter": "C",
+          "text": "a permissao de funcionamento sem qualquer medico ou enfermeiro presente fisicamente na unidade."
+        },
+        {
+          "letter": "D",
+          "text": "a dispensa de qualquer protocolo de higienizacao das maos, por nao ser considerada prioridade estrutural."
+        },
+        {
+          "letter": "E",
+          "text": "a exigencia de que a unidade funcione exclusivamente em horario comercial, sem cobertura noturna."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "fundamentos-da-terapia-intensiva",
+      "explanation": "A RDC exige disponibilidade de equipamentos/materiais para suporte a vida e monitorizacao continua.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1918127bccaf9f66fba84789e15421c97bcf3d5e36c6fc3af722d3836d4ffda3"
+    },
+    {
+      "statement": "O escore SAPS 3 (Simplified Acute Physiology Score 3), utilizado para avaliacao prognostica de pacientes criticos, caracteriza-se por",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser calculado exclusivamente apos a alta da UTI, nunca na admissao."
+        },
+        {
+          "letter": "B",
+          "text": "incluir, entre suas variaveis, dados coletados antes da internacao na UTI (comorbidades e caracteristicas previas do paciente), alem de variaveis fisiologicas da admissao."
+        },
+        {
+          "letter": "C",
+          "text": "nao considerar nenhuma variavel relacionada a comorbidades previas do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "ser aplicavel exclusivamente a pacientes pediatricos."
+        },
+        {
+          "letter": "E",
+          "text": "medir exclusivamente a carga de trabalho de enfermagem, substituindo o NAS."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "O SAPS 3 incorpora variaveis pre-admissao (comorbidades, procedencia) alem das fisiologicas da admissao.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1d1ca7e51bbe8cf244d3706f6720bc2f86312c8f37e18d99aae763029a074100"
+    },
+    {
+      "statement": "A Pressao Expiratoria Final Positiva (PEEP), parametro ajustavel na ventilacao mecanica invasiva, tem como principal finalidade",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aumentar a frequencia respiratoria mandatoria independentemente da mecanica pulmonar."
+        },
+        {
+          "letter": "B",
+          "text": "manter os alveolos abertos ao final da expiracao, prevenindo o colapso alveolar e melhorando a oxigenacao."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de FiO2 suplementar em qualquer situacao clinica."
+        },
+        {
+          "letter": "D",
+          "text": "reduzir exclusivamente o trabalho cardiaco, sem relacao com a mecanica pulmonar."
+        },
+        {
+          "letter": "E",
+          "text": "eliminar a necessidade de monitorizacao da complacencia pulmonar."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "PEEP mantem recrutamento alveolar ao final da expiracao, prevenindo atelectasia; as demais alternativas distorcem sua funcao real.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "260356e2ff54e06ee3022991e6016272b05d94aed135a15728cc01b8182c11f4"
+    },
+    {
+      "statement": "Diante da ausencia de um parametro numerico nacional especifico de dimensionamento (apos a revogacao da Res. COFEN 543/2017), a responsabilidade tecnica do enfermeiro responsavel por uma UTI, quanto a seguranca do cuidado prestado, e",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "eliminada, ja que sem parametro numerico nao ha nenhuma responsabilidade tecnica atribuivel ao enfermeiro."
+        },
+        {
+          "letter": "B",
+          "text": "mantida integralmente, cabendo ao enfermeiro, com base no Codigo de Etica dos Profissionais de Enfermagem e na Lei do Exercicio Profissional, avaliar e reivindicar formalmente o dimensionamento adequado a complexidade dos pacientes assistidos."
+        },
+        {
+          "letter": "C",
+          "text": "transferida integralmente a direcao administrativa da instituicao, sem qualquer papel do enfermeiro."
+        },
+        {
+          "letter": "D",
+          "text": "aplicavel apenas em caso de evento adverso ja ocorrido, nunca de forma preventiva."
+        },
+        {
+          "letter": "E",
+          "text": "dispensada em UTIs de pequeno porte, independentemente da complexidade dos pacientes internados."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A ausencia de parametro numerico especifico nao elimina a responsabilidade tecnica do enfermeiro.",
+      "references": [
+        "Lei no 7.498/1986",
+        "Codigo de Etica dos Profissionais de Enfermagem",
+        "Resolucao COFEN no 743/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2a1d900b9a7170bfcba95cba109a2d5007a7af55f7508a57c0b2df62f381c21f"
+    },
+    {
+      "statement": "Em ambiente de terapia intensiva, sao competencias privativas do Enfermeiro, entre outras,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente atividades de limpeza e organizacao da unidade, sem qualquer competencia clinica privativa."
+        },
+        {
+          "letter": "B",
+          "text": "o planejamento, a execucao e a avaliacao da assistencia de enfermagem a pacientes graves e de maior complexidade tecnica, incluindo a tomada de decisao clinica de enfermagem baseada em avaliacao criteriosa do estado do paciente."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a realizacao de exames de imagem, atividade nao vinculada a pratica de enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "nenhuma competencia privativa especifica, sendo todas as acoes de enfermagem em UTI plenamente delegaveis a qualquer categoria da equipe."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente a prescricao medica de medicamentos vasoativos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "Cabe privativamente ao Enfermeiro o planejamento/execucao/avaliacao da assistencia a pacientes graves.",
+      "references": [
+        "Lei no 7.498/1986."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2eb303c3e942bc498aa6bf75175d35f0f59726a6cd6cd5cf5713eee238212b84"
+    },
+    {
+      "statement": "A interrupcao diaria da sedacao (despertar espontaneo), associada ao teste de respiracao espontanea, no contexto do bundle de prevencao de PAV, justifica-se porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aumenta deliberadamente o desconforto do paciente, sem qualquer beneficio clinico."
+        },
+        {
+          "letter": "B",
+          "text": "reduz o tempo total de exposicao a ventilacao mecanica, ao permitir identificar precocemente pacientes aptos ao desmame, o que diminui o risco cumulativo de PAV."
+        },
+        {
+          "letter": "C",
+          "text": "substitui integralmente a necessidade de analgesia durante a ventilacao mecanica."
+        },
+        {
+          "letter": "D",
+          "text": "e contraindicada em todo paciente critico, independentemente da estabilidade clinica."
+        },
+        {
+          "letter": "E",
+          "text": "tem como unico objetivo reduzir o custo de sedativos, sem relacao com desfechos clinicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "A interrupcao diaria de sedacao, associada ao TRE, permite identificar precocemente candidatos ao desmame, reduzindo o tempo de VM e o risco de PAV.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2eee9fa300248f81c6658d91ec2c54c7ef11baa7b5862a1e9f3d3e407b68d7b3"
+    },
+    {
+      "statement": "Diante da revogacao da Resolucao COFEN no 543/2017 pela Resolucao COFEN no 743/2024, a atuacao do enfermeiro em Unidade de Terapia Intensiva continua fundamentada, entre outras normas, na",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ausencia total de qualquer base legal, tornando a atuacao do enfermeiro em UTI juridicamente indefinida."
+        },
+        {
+          "letter": "B",
+          "text": "Lei no 7.498/1986 (Lei do Exercicio Profissional de Enfermagem) e no Codigo de Etica dos Profissionais de Enfermagem (CEPE), que permanecem vigentes independentemente da revogacao especifica sobre dimensionamento."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente em normas de vigilancia sanitaria estadual, sem qualquer base federal."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente em portarias do Ministerio da Educacao, sem relacao com o exercicio profissional."
+        },
+        {
+          "letter": "E",
+          "text": "na propria Resolucao COFEN no 543/2017, que continuaria vigente apesar da revogacao formal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A revogacao de uma resolucao especifica sobre dimensionamento nao elimina a base legal geral do exercicio profissional (Lei 7.498/1986) nem o CEPE.",
+      "references": [
+        "Lei no 7.498/1986",
+        "Codigo de Etica dos Profissionais de Enfermagem",
+        "Resolucao COFEN no 743/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "34cc7fd07cb9b389ce98d0fc2cf12241c322f7d88051ce9ebe19d7d6cce8b947"
+    },
+    {
+      "statement": "A atuacao do Tecnico de Enfermagem em Unidade de Terapia Intensiva, quanto as atividades de maior complexidade tecnica, deve ocorrer",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "de forma totalmente independente, sem qualquer supervisao do Enfermeiro, mesmo em procedimentos de alta complexidade."
+        },
+        {
+          "letter": "B",
+          "text": "sob supervisao do Enfermeiro, cabendo a este a avaliacao, o planejamento e a decisao clinica quanto aos cuidados de maior complexidade tecnica exigidos pelo paciente critico."
+        },
+        {
+          "letter": "C",
+          "text": "apenas mediante autorizacao medica direta, sem qualquer relacao hierarquica ou de supervisao com a equipe de enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "de forma identica a do Enfermeiro, sem qualquer distincao de atribuicoes entre as duas categorias profissionais."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente em atividades administrativas, sendo vedada qualquer participacao em cuidados assistenciais diretos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A atuacao do Tecnico de Enfermagem em cuidados de maior complexidade ocorre sob supervisao do Enfermeiro.",
+      "references": [
+        "Lei no 7.498/1986."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3cdbe8e2b3200f386c13c48859e68da8c5df984538336f05ffb13d3bd8bbb27f"
+    },
+    {
+      "statement": "A promocao de uma cultura de seguranca do paciente em Unidades de Terapia Intensiva, ambiente de alto risco, pressupoe, entre outras praticas,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a atribuicao de culpa individual como principal estrategia de resposta a eventos adversos, para desestimular novas falhas."
+        },
+        {
+          "letter": "B",
+          "text": "a notificacao sistematica de eventos adversos e near miss, com analise das causas-raiz voltada a melhoria de processos, e nao a punicao individual isolada."
+        },
+        {
+          "letter": "C",
+          "text": "a ausencia de qualquer registro formal de eventos adversos, para nao gerar constrangimento a equipe."
+        },
+        {
+          "letter": "D",
+          "text": "a centralizacao exclusiva da responsabilidade pela seguranca do paciente na figura do enfermeiro, excluindo os demais membros da equipe multiprofissional."
+        },
+        {
+          "letter": "E",
+          "text": "a padronizacao de processos como medida dispensavel, dada a natureza individualizada de cada caso critico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "Cultura de seguranca madura prioriza notificacao e analise sistemica de causas, nao punicao individual.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "40b909b2f9d59f74c4ce8cd3bf40ce9480d2e6c7c3731093fb89ce5a4691c54b"
+    },
+    {
+      "statement": "A RDC ANVISA no 7/2010, que dispoe sobre requisitos minimos para funcionamento de Unidades de Terapia Intensiva, recebeu atualizacoes posteriores, entre elas normas que tratam de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "materias completamente alheias a terapia intensiva, sem qualquer relacao regulatoria com a RDC original."
+        },
+        {
+          "letter": "B",
+          "text": "ajustes e complementacoes regulatorias supervenientes a publicacao original de 2010, evidenciando que a materia e objeto de revisao normativa continua pela ANVISA."
+        },
+        {
+          "letter": "C",
+          "text": "a revogacao total e definitiva da RDC 7/2010, sem qualquer norma substituta em vigor."
+        },
+        {
+          "letter": "D",
+          "text": "a transferencia da competencia regulatoria da ANVISA para os Conselhos Regionais de Enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "a extincao do proprio conceito regulatorio de Unidade de Terapia Intensiva no Brasil."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "fundamentos-da-terapia-intensiva",
+      "explanation": "A RDC 7/2010 foi objeto de atualizacoes/complementacoes regulatorias posteriores pela ANVISA.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "48f7bb7d6336b2a98671b3714cc0d9a18d9eb7b02965a2cec095ed0601128659"
+    },
+    {
+      "statement": "Como medida de cuidado de enfermagem ao paciente em ventilacao mecanica invasiva, a cabeceira do leito deve ser mantida elevada, salvo contraindicacao, em angulo de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "0 a 10 graus."
+        },
+        {
+          "letter": "B",
+          "text": "30 a 45 graus."
+        },
+        {
+          "letter": "C",
+          "text": "90 graus, em posicao sentada permanente."
+        },
+        {
+          "letter": "D",
+          "text": "60 a 90 graus, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "decubito lateral exclusivo, sem elevacao de cabeceira."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "A elevacao de 30-45 graus reduz o risco de aspiracao e de pneumonia associada a ventilacao mecanica (PAV).",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4ff833d9b66455347deb849bd81e62ee8288e2ba505c70d86947267443d49bc1"
+    },
+    {
+      "statement": "Na tecnica de aspiracao de secrecoes da via aerea artificial, e uma boa pratica de enfermagem",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manter a pressao negativa de aspiracao ativada durante toda a introducao do cateter, sem limite de tempo."
+        },
+        {
+          "letter": "B",
+          "text": "pre-oxigenar o paciente antes do procedimento e limitar o tempo de aspiracao a poucos segundos, aplicando pressao negativa apenas durante a retirada do cateter."
+        },
+        {
+          "letter": "C",
+          "text": "introduzir o cateter de aspiracao o mais profundamente possivel, sem qualquer limite tecnico, em todos os pacientes."
+        },
+        {
+          "letter": "D",
+          "text": "realizar a aspiracao de rotina em intervalos fixos, independentemente da necessidade clinica avaliada."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar a pre-oxigenacao em qualquer paciente, independentemente da estabilidade respiratoria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "A tecnica correta preve pre-oxigenacao e aspiracao breve, com pressao negativa aplicada na retirada do cateter.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5cb36e7baba060d3338fa7c0f2f734efc98bf8f01f1ec61b27c9191977e15d36"
+    },
+    {
+      "statement": "Na ventilacao mecanica invasiva de pacientes com sindrome do desconforto respiratorio agudo, a estrategia ventilatoria protetora recomenda a utilizacao de volume corrente calculado com base no peso predito do paciente, na faixa de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "15 a 18 mL/kg."
+        },
+        {
+          "letter": "B",
+          "text": "6 a 8 mL/kg."
+        },
+        {
+          "letter": "C",
+          "text": "1 a 3 mL/kg."
+        },
+        {
+          "letter": "D",
+          "text": "20 a 25 mL/kg."
+        },
+        {
+          "letter": "E",
+          "text": "10 a 12 mL/kg, sem relacao com o peso predito."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "A ventilacao protetora usa 6-8 mL/kg de peso predito, reduzindo lesao pulmonar induzida pelo ventilador; as demais faixas sao incompativeis com a evidencia atual.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "691a48dcf45c08e54c36a3ee40a22d08c008da64eac1135b26c52e05832622d1"
+    },
+    {
+      "statement": "Nos cuidados de fim de vida em Unidade de Terapia Intensiva, diante de uma decisao medica de limitacao de esforco terapeutico ja formalizada, a atuacao da equipe de enfermagem deve priorizar",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a suspensao de qualquer cuidado ao paciente, incluindo medidas de conforto, higiene e analgesia."
+        },
+        {
+          "letter": "B",
+          "text": "a manutencao e o reforco das medidas de conforto, controle de sintomas (como dor e dispneia) e comunicacao acolhedora com o paciente e a familia, mesmo com a limitacao de medidas terapeuticas invasivas adicionais."
+        },
+        {
+          "letter": "C",
+          "text": "a manutencao obrigatoria de todas as medidas invasivas ja em curso, independentemente da decisao medica formalizada de limitacao terapeutica."
+        },
+        {
+          "letter": "D",
+          "text": "a exclusao da familia de qualquer informacao sobre o quadro clinico, para evitar sofrimento adicional."
+        },
+        {
+          "letter": "E",
+          "text": "a transferencia integral da responsabilidade pelo cuidado para a equipe medica, sem qualquer atuacao de enfermagem nesse momento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "A limitacao de esforco terapeutico nao significa abandono do cuidado - medidas de conforto e comunicacao continuam.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6a0483fe11a905bcc1ed6d33e98693c5c9caa3eb61b9dba4e80750f38006eaa3"
+    },
+    {
+      "statement": "Na administracao de drogas vasoativas (como noradrenalina) em pacientes criticos, a titulacao da dose deve ser guiada",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente pelo horario de administracao previamente prescrito, independentemente da resposta hemodinamica do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "pela resposta hemodinamica do paciente (como pressao arterial media e perfusao tecidual), com ajustes graduais e monitorizacao continua durante todo o processo."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente pelo peso corporal do paciente, sem qualquer reavaliacao clinica durante a infusao."
+        },
+        {
+          "letter": "D",
+          "text": "por incrementos fixos e nao reavaliaveis, independentemente da resposta pressorica observada."
+        },
+        {
+          "letter": "E",
+          "text": "pela vontade do paciente ou da familia quanto a velocidade de infusao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-hemodinamico-e-farmacologico",
+      "explanation": "A titulacao de drogas vasoativas e guiada pela resposta hemodinamica real, com ajustes graduais e monitorizacao continua.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6a85ca0f73584b590e089d0ca671e31a34d778caa17a2e4f7afe98c73d5f5d58"
+    },
+    {
+      "statement": "O metodo CAM-ICU (Confusion Assessment Method for the ICU), utilizado para rastreio de delirium em pacientes criticos, considera positivo para delirium quando estao presentes",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas alteracao do nivel de consciencia, isoladamente."
+        },
+        {
+          "letter": "B",
+          "text": "mudanca aguda do estado mental ou curso flutuante, associada a desatencao, e pelo menos um entre pensamento desorganizado ou alteracao do nivel de consciencia."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente pensamento desorganizado, sem necessidade de avaliar atencao."
+        },
+        {
+          "letter": "D",
+          "text": "apenas a presenca de agitacao psicomotora, independentemente de outros achados."
+        },
+        {
+          "letter": "E",
+          "text": "unicamente escore RASS igual a zero, sem avaliacao cognitiva adicional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "O CAM-ICU exige mudanca aguda/flutuante + desatencao + (pensamento desorganizado OU alteracao de consciencia).",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "797a05858da635b69f961d86c212bcc721c5c2423930ef61d66cf0d4580b4b76"
+    },
+    {
+      "statement": "Avalie as afirmativas sobre o bundle de prevencao de pneumonia associada a ventilacao mecanica (PAV). I. Manutencao da cabeceira elevada a 30-45 graus. II. Higiene oral com solucao de clorexidina. III. Interrupcao diaria da sedacao, com avaliacao da possibilidade de extubacao. IV. Manutencao de sedacao profunda continua, sem interrupcao, como medida preventiva de PAV. Esta correto o que se afirma em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "I, II e III, apenas."
+        },
+        {
+          "letter": "B",
+          "text": "I e II, apenas."
+        },
+        {
+          "letter": "C",
+          "text": "II, III e IV."
+        },
+        {
+          "letter": "D",
+          "text": "I, II, III e IV."
+        },
+        {
+          "letter": "E",
+          "text": "IV, apenas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "I-III sao componentes reais do bundle; IV contraria diretamente a diretriz (sedacao profunda continua aumenta o tempo de VM e o risco de PAV).",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "803722fa71256d7e8a58f48955331092c74153dfa6a0f2c9ff29a6502c3f0d6a"
+    },
+    {
+      "statement": "Entre os principais riscos de seguranca do paciente convergentes no ambiente de terapia intensiva, destacam-se, entre outros,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente riscos administrativos, sem relacao com procedimentos assistenciais diretos."
+        },
+        {
+          "letter": "B",
+          "text": "extubacao acidental, erro de titulacao de drogas vasoativas, pneumonia associada a ventilacao mecanica, lesao por pressao e delirium - riscos concentrados pela alta complexidade e pelo uso intensivo de dispositivos invasivos."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente riscos financeiros relacionados ao custo de insumos hospitalares."
+        },
+        {
+          "letter": "D",
+          "text": "riscos que nao guardam relacao alguma com o uso de ventilacao mecanica ou drogas vasoativas."
+        },
+        {
+          "letter": "E",
+          "text": "riscos exclusivos da equipe medica, sem qualquer participacao da equipe de enfermagem na sua prevencao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A UTI concentra riscos reais e documentados decorrentes da complexidade e do uso intensivo de dispositivos.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "83ec28186f32686ec648625a3416e57c9e63129511d17c59d372024fab1f6b38"
+    },
+    {
+      "statement": "Na monitorizacao da mecanica ventilatoria de um paciente em ventilacao mecanica invasiva, um aumento isolado da pressao de pico, com pressao de plato inalterada, sugere primariamente",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "reducao da complacencia pulmonar (pulmao mais rigido)."
+        },
+        {
+          "letter": "B",
+          "text": "aumento da resistencia de vias aereas (ex.: obstrucao por secrecao, broncoespasmo)."
+        },
+        {
+          "letter": "C",
+          "text": "extubacao acidental do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "desconexao total do circuito ventilatorio."
+        },
+        {
+          "letter": "E",
+          "text": "falencia exclusiva da bomba cardiaca, sem relacao com a mecanica respiratoria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "Pressao de pico elevada com plato normal indica problema de resistencia de via aerea (fluxo), nao de complacencia.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8639288e531be22e990a281ff02929c04d16d925f03984fff43c3fd07200c12b"
+    },
+    {
+      "statement": "O Teste de Respiracao Espontanea (TRE), realizado no processo de desmame ventilatorio, consiste em",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manter o paciente sedado profundamente durante todo o periodo de observacao do teste."
+        },
+        {
+          "letter": "B",
+          "text": "submeter o paciente a um curto periodo de respiracao com minimo suporte ventilatorio (ou peca T/CPAP baixo), observando sinais de tolerancia antes da extubacao."
+        },
+        {
+          "letter": "C",
+          "text": "aumentar progressivamente os parametros ventilatorios durante o teste, como forma de avaliacao."
+        },
+        {
+          "letter": "D",
+          "text": "extubar o paciente antes de qualquer teste, avaliando a tolerancia apenas apos a retirada do tubo."
+        },
+        {
+          "letter": "E",
+          "text": "ser aplicavel exclusivamente a pacientes em ventilacao mecanica ha menos de 24 horas."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "O TRE avalia a tolerancia do paciente a respirar com minimo suporte antes da extubacao.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8a3fd30d7e8530080100f427e853f594b05db18607990441f5cc7193b618ca1e"
+    },
+    {
+      "statement": "O Nursing Activities Score (NAS), diferentemente de escores de gravidade calculados uma unica vez nas primeiras 24 horas de internacao, deve ser",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "calculado uma unica vez, na admissao do paciente, permanecendo valido durante toda a internacao."
+        },
+        {
+          "letter": "B",
+          "text": "recalculado diariamente, refletindo a variacao real da carga de trabalho de enfermagem ao longo da evolucao clinica do paciente."
+        },
+        {
+          "letter": "C",
+          "text": "calculado exclusivamente no momento da alta da UTI, sem relacao com o periodo de internacao."
+        },
+        {
+          "letter": "D",
+          "text": "dispensavel em pacientes estaveis, sendo aplicavel apenas a pacientes em franca instabilidade."
+        },
+        {
+          "letter": "E",
+          "text": "calculado pela equipe medica, sem participacao da equipe de enfermagem em sua afericao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "O NAS e recalculado diariamente, pois a carga de trabalho de enfermagem varia com a evolucao clinica.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8c447be1608d46b254655f504b2094e9e1937c080a894bebb7dd0926c4fc67cd"
+    },
+    {
+      "statement": "Diferentemente dos escores de gravidade (como APACHE II e SAPS 3), o Nursing Activities Score (NAS) tem como objetivo",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "estimar exclusivamente o risco de mortalidade do paciente critico."
+        },
+        {
+          "letter": "B",
+          "text": "mensurar a carga de trabalho de enfermagem demandada pelo cuidado ao paciente critico, para fins de dimensionamento de pessoal."
+        },
+        {
+          "letter": "C",
+          "text": "substituir integralmente os escores de gravidade na tomada de decisao terapeutica."
+        },
+        {
+          "letter": "D",
+          "text": "medir exclusivamente parametros hemodinamicos do paciente."
+        },
+        {
+          "letter": "E",
+          "text": "ser sinonimo funcional do APACHE II, sem qualquer diferenca metodologica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "O NAS mede carga de trabalho de enfermagem, enquanto APACHE/SAPS medem gravidade/mortalidade - instrumentos com propositos distintos.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "930bf0beabc6c0284a2fd3034533a04f58e964da9c7cba2cb8381082e0151ed2"
+    },
+    {
+      "statement": "A Escala de Agitacao-Sedacao de Richmond (RASS), utilizada para monitorizacao do nivel de sedacao em terapia intensiva, varia",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "de 0 a 10, sendo 10 o nivel de sedacao mais profunda."
+        },
+        {
+          "letter": "B",
+          "text": "em uma escala que vai de valores positivos (agitacao) a valores negativos (sedacao), com o zero representando o paciente alerta e calmo."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente em valores positivos, nao havendo representacao numerica para sedacao."
+        },
+        {
+          "letter": "D",
+          "text": "em uma escala qualitativa sem qualquer valor numerico associado."
+        },
+        {
+          "letter": "E",
+          "text": "de forma identica a Escala de Coma de Glasgow, sendo instrumentos intercambiaveis."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-hemodinamico-e-farmacologico",
+      "explanation": "A RASS varia de valores positivos (agitacao) a negativos (sedacao profunda), com zero representando alerta/calmo.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9c98afc0c471d8c38e2316f038c8cf16f649e20c3389db34d675dc39507bc428"
+    },
+    {
+      "statement": "Drogas vasoativas como a noradrenalina, pelo risco de lesao tecidual grave em caso de extravasamento, devem preferencialmente ser administradas por",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "via oral, evitando qualquer acesso venoso."
+        },
+        {
+          "letter": "B",
+          "text": "acesso venoso central, minimizando o risco de extravasamento e de lesao tecidual associada a infusao periferica prolongada de vasoconstritores."
+        },
+        {
+          "letter": "C",
+          "text": "via intramuscular, como alternativa padrao a via venosa."
+        },
+        {
+          "letter": "D",
+          "text": "via subcutanea, independentemente da urgencia da estabilizacao hemodinamica."
+        },
+        {
+          "letter": "E",
+          "text": "qualquer acesso periferico disponivel, sem preferencia por acesso central, independentemente do tempo de infusao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-hemodinamico-e-farmacologico",
+      "explanation": "O acesso venoso central e preferencial para infusao de vasoativas, minimizando risco de extravasamento/lesao tecidual.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a022aba41308ea3b9383196f1293550b3eb6cf2860387a9857d32c754ac0d023"
+    },
+    {
+      "statement": "A RDC ANVISA no 7/2010 preve, para o funcionamento de uma UTI, uma equipe multiprofissional que inclua, alem de medicos e enfermeiros,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente tecnicos administrativos, sem qualquer outro profissional de saude."
+        },
+        {
+          "letter": "B",
+          "text": "fisioterapeutas, entre outros profissionais, compondo uma equipe multiprofissional voltada ao cuidado integral do paciente critico."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente nutricionistas, sem relacao com outras categorias profissionais."
+        },
+        {
+          "letter": "D",
+          "text": "nenhum profissional alem de medicos e enfermeiros, sendo vedada a presenca de outras categorias na unidade."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente profissionais terceirizados, sem vinculo direto com a instituicao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "fundamentos-da-terapia-intensiva",
+      "explanation": "A RDC preve equipe multiprofissional incluindo fisioterapeutas, reconhecendo a complexidade do cuidado.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a326a98293396926a316af1a821a9ae45bae74cc29bd86b92d1d8ad0c2eea4f0"
+    },
+    {
+      "statement": "A humanizacao do cuidado em Unidades de Terapia Intensiva, no que se refere a relacao com a familia do paciente critico, e favorecida por",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "restricao total de visitas e de informacoes a familia, como medida padrao de protecao do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "comunicacao clara, acolhedora e regular sobre o estado do paciente, associada a flexibilizacao, sempre que possivel, dos horarios e condicoes de visita."
+        },
+        {
+          "letter": "C",
+          "text": "transferencia exclusiva da comunicacao com a familia para a equipe administrativa, sem participacao da equipe assistencial."
+        },
+        {
+          "letter": "D",
+          "text": "padronizacao rigida de um unico horario de visita anual, independentemente do quadro clinico do paciente."
+        },
+        {
+          "letter": "E",
+          "text": "ausencia de qualquer politica de visitas, deixando o tema inteiramente a criterio informal de cada plantao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "A humanizacao em UTI favorece comunicacao clara/regular e flexibilizacao de visitas.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a78065b5436148581c9b6418a6102c9ceedce57384d7fc85e3b749eaa96f4cc7"
+    },
+    {
+      "statement": "A Unidade de Terapia Intensiva (UTI), conforme definicao da RDC ANVISA no 7/2010, e a area critica destinada a internacao de pacientes",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente em fase terminal, sem qualquer possibilidade de reversao do quadro clinico."
+        },
+        {
+          "letter": "B",
+          "text": "graves ou de risco, que necessitam de atencao profissional especializada de forma continua, materiais especificos e tecnologias necessarias ao diagnostico, monitorizacao e terapia."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente pediatricos, nao sendo aplicavel a pacientes adultos ou idosos."
+        },
+        {
+          "letter": "D",
+          "text": "com quadro clinico estavel, sem necessidade de monitorizacao continua."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente cirurgicos, no periodo pos-operatorio imediato de qualquer procedimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "fundamentos-da-terapia-intensiva",
+      "explanation": "A definicao regulatoria da UTI e ampla (pacientes graves/de risco, monitorizacao continua, tecnologia especifica).",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "aa5f06911f94c99e902c20442bcc88966b323c00176a5cdd8298c1f4013afc21"
+    },
+    {
+      "statement": "A Pressao Venosa Central (PVC), obtida por meio de cateter venoso central posicionado proximo ao atrio direito, e um parametro utilizado, entre outras finalidades, para",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir integralmente a necessidade de avaliacao clinica do estado volemico do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "auxiliar na avaliacao do estado volemico e da funcao cardiaca direita, sempre interpretada em conjunto com outros dados clinicos, dada sua limitacao como parametro isolado."
+        },
+        {
+          "letter": "C",
+          "text": "medir diretamente o debito cardiaco, sem necessidade de outros metodos de monitorizacao."
+        },
+        {
+          "letter": "D",
+          "text": "ser o unico parametro necessario para guiar a reposicao volemica em qualquer paciente critico."
+        },
+        {
+          "letter": "E",
+          "text": "avaliar exclusivamente a funcao pulmonar, sem relacao com o sistema cardiovascular."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "A PVC auxilia na avaliacao volemica/funcao cardiaca direita, mas tem limitacoes reconhecidas como parametro isolado.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b216beadadb71647195f367902c07764883689d307e514cd36d8969e6cd18cec"
+    },
+    {
+      "statement": "A checagem periodica da fixacao e do posicionamento do tubo orotraqueal em pacientes sob ventilacao mecanica invasiva e uma medida de cuidado de enfermagem que visa, principalmente,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "reduzir exclusivamente o desconforto estetico do paciente, sem relacao com seguranca clinica."
+        },
+        {
+          "letter": "B",
+          "text": "prevenir a extubacao acidental e o deslocamento do tubo para um bronquio principal (intubacao seletiva), garantindo ventilacao adequada de ambos os pulmoes."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de monitorizacao da pressao do balonete (cuff)."
+        },
+        {
+          "letter": "D",
+          "text": "eliminar totalmente o risco de pneumonia associada a ventilacao mecanica, isoladamente."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar a necessidade de confirmacao radiologica do posicionamento do tubo."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "A checagem de fixacao/posicionamento previne extubacao acidental e intubacao seletiva.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c079ec848ca884670e6702432cee8525df036109f0321f4dee107ebb87d9b311"
+    },
+    {
+      "statement": "A higiene oral com solucao de clorexidina, componente do bundle de prevencao de PAV, tem como principal rationale",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "reduzir a colonizacao bacteriana da cavidade oral, diminuindo o risco de microaspiracao de patogenos para a via aerea inferior."
+        },
+        {
+          "letter": "B",
+          "text": "substituir integralmente a necessidade de aspiracao de secrecoes traqueais."
+        },
+        {
+          "letter": "C",
+          "text": "eliminar totalmente o risco de PAV, tornando desnecessarias as demais medidas do bundle."
+        },
+        {
+          "letter": "D",
+          "text": "ser indicada exclusivamente para pacientes nao intubados."
+        },
+        {
+          "letter": "E",
+          "text": "nao ter qualquer relacao com a prevencao de pneumonia, servindo apenas ao conforto do paciente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "A clorexidina reduz a carga bacteriana oral, minimizando a microaspiracao para a via aerea.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c6fc307b346cc691d55b07580c586df2651ff478d130671c86c173300d9a8a09"
+    },
+    {
+      "statement": "A mobilizacao precoce do paciente critico, pratica recomendada para reduzir os efeitos deleterios do imobilismo prolongado, deve ter seu inicio condicionado",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente ao tempo de internacao, independentemente da estabilidade clinica do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "a avaliacao de criterios de seguranca (estabilidade hemodinamica e respiratoria, ausencia de instabilidade que contraindique o procedimento), realizada antes de cada sessao."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a idade do paciente, sendo contraindicada de forma automatica em idosos."
+        },
+        {
+          "letter": "D",
+          "text": "a ausencia total de qualquer dispositivo invasivo, sendo vedada em pacientes com via aerea artificial."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente a disponibilidade de horario da equipe de fisioterapia, sem relacao com criterios clinicos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "A mobilizacao precoce exige avaliacao sistematica de criterios de seguranca clinica antes de cada sessao.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c783a162e937cefc79fae4590fac8f56b2b2a0b1576989875cbf812fdac0c8ab"
+    },
+    {
+      "statement": "A pressao do balonete (cuff) do tubo orotraqueal, em paciente sob ventilacao mecanica invasiva, deve ser monitorizada e mantida, como parametro de referencia geral, na faixa de",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "5 a 10 cmH2O, para minimizar qualquer risco de lesao traqueal, independentemente do risco de broncoaspiracao."
+        },
+        {
+          "letter": "B",
+          "text": "20 a 30 cmH2O, faixa que busca equilibrio entre a prevencao de broncoaspiracao (pressao insuficiente) e a prevencao de lesao isquemica da mucosa traqueal (pressao excessiva)."
+        },
+        {
+          "letter": "C",
+          "text": "acima de 60 cmH2O, para garantir vedacao total da via aerea, independentemente do risco de lesao."
+        },
+        {
+          "letter": "D",
+          "text": "a pressao do cuff nao necessita de monitorizacao periodica, uma vez insuflado corretamente na intubacao."
+        },
+        {
+          "letter": "E",
+          "text": "0 cmH2O, mantendo o balonete desinsuflado durante toda a ventilacao mecanica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "A faixa de referencia (20-30 cmH2O) busca equilibrio entre vedacao adequada e prevencao de lesao isquemica.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c8db226049ca604a1056cc0b39d6b39adfb324e21a8eb377bb68878fef5f0b75"
+    },
+    {
+      "statement": "Antes de iniciar o teste de respiracao espontanea (TRE), etapa central do processo de desmame ventilatorio, espera-se que o paciente apresente, entre outros criterios,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "instabilidade hemodinamica significativa, exigindo doses crescentes de droga vasoativa."
+        },
+        {
+          "letter": "B",
+          "text": "estabilidade hemodinamica, resolucao ou melhora significativa da causa que motivou a ventilacao mecanica, e adequada oxigenacao com parametros ventilatorios reduzidos."
+        },
+        {
+          "letter": "C",
+          "text": "nivel de consciencia profundamente rebaixado, sem qualquer capacidade de resposta a estimulos."
+        },
+        {
+          "letter": "D",
+          "text": "febre alta e sinais evidentes de infeccao nao controlada, como pre-requisito para o teste."
+        },
+        {
+          "letter": "E",
+          "text": "necessidade de FiO2 elevada (proxima de 100%) e PEEP elevada, como condicao ideal para o teste."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "Estabilidade hemodinamica, melhora da causa de base e boa oxigenacao com parametros reduzidos sao pre-requisitos reais para o TRE.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cb606489e1fe0867235e869202b69df5f9a3cdf9403059a5d6c1d38d8a6ddb96"
+    },
+    {
+      "statement": "Diante do disparo do alarme de pressao alta no ventilador mecanico de um paciente em VMI, a primeira conduta de enfermagem deve ser",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "desligar o alarme sonoro e aguardar 30 minutos antes de qualquer avaliacao."
+        },
+        {
+          "letter": "B",
+          "text": "avaliar imediatamente o paciente e o circuito, verificando causas comuns como acumulo de secrecoes, tosse, mordedura do tubo ou assincronia paciente-ventilador."
+        },
+        {
+          "letter": "C",
+          "text": "aumentar isoladamente o volume corrente programado, sem avaliacao previa do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "trocar o ventilador mecanico por outro equipamento, independentemente da causa do alarme."
+        },
+        {
+          "letter": "E",
+          "text": "reduzir a PEEP a zero, como conduta padrao diante de qualquer alarme de pressao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "Alarmes exigem avaliacao clinica imediata do binomio paciente-circuito antes de qualquer ajuste.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cbd330b7298c6fbe91de696e4036afabbf7ac5a6fa0925187d515e835053bcda"
+    },
+    {
+      "statement": "Na monitorizacao do paciente critico, a Escala de Agitacao-Sedacao de Richmond (RASS) e o metodo CAM-ICU (Confusion Assessment Method for the ICU) tem finalidades distintas: a RASS avalia",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente a presenca de delirium, sendo sinonimo funcional do CAM-ICU."
+        },
+        {
+          "letter": "B",
+          "text": "o nivel de sedacao/agitacao do paciente, sendo, inclusive, pre-requisito metodologico para a aplicacao valida do CAM-ICU (que avalia especificamente delirium)."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente parametros hemodinamicos, sem relacao com o estado de consciencia."
+        },
+        {
+          "letter": "D",
+          "text": "a gravidade clinica geral do paciente, substituindo escores como APACHE II."
+        },
+        {
+          "letter": "E",
+          "text": "a forca muscular do paciente critico, sem relacao com sedacao ou delirium."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "A RASS mede nivel de sedacao/agitacao e e pre-requisito para aplicacao valida do CAM-ICU.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cdcd2e5bce580809ba7c91d03bf9f097f20b4988def8649884d159105da6e9d6"
+    },
+    {
+      "statement": "Diante de recursos limitados de leitos de UTI, a priorizacao de admissao de pacientes criticos deve considerar, entre outros criterios,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente a ordem de chegada a unidade, independentemente da gravidade clinica."
+        },
+        {
+          "letter": "B",
+          "text": "o potencial de reversibilidade do quadro clinico e o beneficio esperado da admissao em terapia intensiva, avaliados por criterios clinicos objetivos, nao por ordem de chegada isolada."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a capacidade financeira do paciente ou de seu convenio de saude."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente a idade cronologica do paciente, independentemente do quadro clinico."
+        },
+        {
+          "letter": "E",
+          "text": "a ausencia de qualquer criterio objetivo, cabendo a decisao exclusivamente ao desejo da familia."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "fundamentos-da-terapia-intensiva",
+      "explanation": "A priorizacao de leitos criticos deve se basear em criterios clinicos objetivos (reversibilidade, beneficio esperado).",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cf384432e79c2c53e083563fa06fa5909627f46c7aa831aa345e0521851c1124"
+    },
+    {
+      "statement": "A extubacao nao planejada, evento de seguranca do paciente em Unidades de Terapia Intensiva, refere-se",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a extubacao realizada de forma programada pela equipe medica, apos teste de respiracao espontanea bem-sucedido."
+        },
+        {
+          "letter": "B",
+          "text": "a retirada do tubo orotraqueal de forma acidental ou pela propria acao do paciente, sem indicacao clinica e sem preparo previo da equipe."
+        },
+        {
+          "letter": "C",
+          "text": "a um procedimento sempre beneficio, associado a melhores desfechos clinicos em qualquer contexto."
+        },
+        {
+          "letter": "D",
+          "text": "a um evento que nunca esta relacionado a sedacao inadequada ou contencao fisica insuficiente."
+        },
+        {
+          "letter": "E",
+          "text": "a um procedimento realizado exclusivamente por indicacao medica formal registrada em prontuario."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "Extubacao nao planejada e evento adverso de seguranca (acidental ou autoextubacao), associado a risco de reintubacao.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cfd010614c46b4831dffec4562c54bb6b3827352aa87093e0ad79ab941095fe2"
+    },
+    {
+      "statement": "A aplicacao seriada da Escala de Coma de Glasgow em pacientes criticos internados em UTI, especialmente aqueles com afeccao neurologica, tem como principal objetivo",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir integralmente a necessidade de exames de imagem em qualquer situacao neurologica."
+        },
+        {
+          "letter": "B",
+          "text": "detectar precocemente alteracoes no nivel de consciencia, permitindo identificar deterioracao neurologica de forma objetiva e comparavel ao longo do tempo."
+        },
+        {
+          "letter": "C",
+          "text": "avaliar exclusivamente a funcao motora do paciente, sem relacao com o nivel de consciencia."
+        },
+        {
+          "letter": "D",
+          "text": "ser aplicavel apenas uma unica vez, na admissao do paciente a UTI."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a necessidade de avaliacao pupilar em pacientes neurocriticos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "A aplicacao seriada do Glasgow permite comparacao objetiva ao longo do tempo, detectando deterioracao precoce.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d15dbbeaddc7a8e183f47451204a1d0d514d60c8e7bccacb0b0043aa28ce746f"
+    },
+    {
+      "statement": "A administracao de bloqueador neuromuscular sem sedacao e analgesia adequadas e concomitantes representa risco grave de seguranca do paciente porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "nao representa nenhum risco adicional, sendo o bloqueio neuromuscular seguro de forma isolada."
+        },
+        {
+          "letter": "B",
+          "text": "o paciente pode permanecer consciente e sentindo dor ou desconforto, porem incapaz de se mover ou comunicar essa condicao a equipe, situacao de sofrimento nao identificavel externamente."
+        },
+        {
+          "letter": "C",
+          "text": "o bloqueio neuromuscular isolado causa sedacao profunda automatica, dispensando qualquer outro farmaco."
+        },
+        {
+          "letter": "D",
+          "text": "o risco se limita a alteracoes laboratoriais sem qualquer repercussao clinica para o paciente."
+        },
+        {
+          "letter": "E",
+          "text": "o bloqueio neuromuscular nao tem qualquer efeito sobre a musculatura respiratoria, nao interferindo na ventilacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-hemodinamico-e-farmacologico",
+      "explanation": "Bloqueador neuromuscular sem sedacao/analgesia adequadas expoe o paciente ao risco real de consciencia com dor/desconforto sem comunicacao.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d2c160eea1ec3b8e7b086c0cb01d61f54d0fd70820b564b0b3edaa016ffcf8c8"
+    },
+    {
+      "statement": "A Terapia Renal Substitutiva Continua (TRSC), modalidade de suporte renal utilizada em pacientes criticos hemodinamicamente instaveis, diferencia-se da hemodialise intermitente convencional principalmente por",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser realizada em sessoes curtas de poucas horas, de forma identica a hemodialise intermitente."
+        },
+        {
+          "letter": "B",
+          "text": "promover remocao de fluidos e solutos de forma lenta e continua ao longo de 24 horas, sendo mais bem tolerada hemodinamicamente por pacientes instaveis do que a hemodialise intermitente."
+        },
+        {
+          "letter": "C",
+          "text": "nao exigir qualquer monitorizacao do circuito extracorporeo durante sua realizacao."
+        },
+        {
+          "letter": "D",
+          "text": "ser contraindicada em qualquer paciente com instabilidade hemodinamica, cenario em que a hemodialise intermitente seria a unica opcao segura."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar completamente a necessidade de acesso vascular especifico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "A TRSC realiza remocao lenta e continua (24h), sendo mais tolerada hemodinamicamente que a hemodialise intermitente.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d578a6638b35d07a17468c708c2d7b85d5b112f3ff39f497def70bc9ae26d244"
+    },
+    {
+      "statement": "Entre os fatores de risco reconhecidos para o desenvolvimento de delirium em pacientes criticos internados em UTI, incluem-se, entre outros,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente fatores geneticos nao modificaveis, sem qualquer fator de risco relacionado ao ambiente ou ao cuidado."
+        },
+        {
+          "letter": "B",
+          "text": "uso de sedativos (especialmente benzodiazepinicos), privacao de sono, imobilizacao prolongada, e fatores relacionados ao ambiente da UTI (ruido, iluminacao inadequada, desorientacao)."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a idade jovem do paciente, sendo delirium infrequente em pacientes idosos."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente fatores nutricionais, sem relacao com sedacao, imobilizacao ou ambiente."
+        },
+        {
+          "letter": "E",
+          "text": "ausencia completa de qualquer fator de risco identificavel, sendo o delirium um evento sempre imprevisivel."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "cuidados-especificos-do-paciente-critico",
+      "explanation": "Fatores de risco reais e documentados para delirium em UTI incluem sedacao, privacao de sono, imobilizacao e fatores ambientais.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "dc19b0ab395bea7810c4a5f4cbe4ea2b458286342e584a1c298f16d526c68fb7"
+    },
+    {
+      "statement": "Em pacientes sob ventilacao mecanica invasiva, a umidificacao e o aquecimento dos gases inspirados sao necessarios porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a via aerea artificial contorna os mecanismos naturais de umidificacao e aquecimento das vias aereas superiores, exigindo substituicao artificial dessa funcao."
+        },
+        {
+          "letter": "B",
+          "text": "reduzem exclusivamente o custo do circuito ventilatorio, sem funcao clinica."
+        },
+        {
+          "letter": "C",
+          "text": "substituem integralmente a necessidade de aspiracao de secrecoes."
+        },
+        {
+          "letter": "D",
+          "text": "eliminam o risco de pneumonia associada a ventilacao, isoladamente."
+        },
+        {
+          "letter": "E",
+          "text": "nao tem nenhuma relacao com a prevencao de obstrucao do tubo por secrecoes espessadas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "O tubo orotraqueal contorna a via aerea superior, exigindo dispositivo artificial para evitar ressecamento de secrecoes e lesao de mucosa.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e388005852f99b401f75aba4baad30ef9ac81e8abf202f1a477ab7883fee5674"
+    },
+    {
+      "statement": "A Ventilacao Nao Invasiva (VNI) e uma indicacao terapeutica reconhecida, entre outras situacoes, para",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "parada cardiorrespiratoria em curso, como primeira medida de suporte ventilatorio."
+        },
+        {
+          "letter": "B",
+          "text": "exacerbacao aguda de Doenca Pulmonar Obstrutiva Cronica (DPOC) e edema agudo de pulmao cardiogenico, quando nao ha contraindicacao."
+        },
+        {
+          "letter": "C",
+          "text": "rebaixamento importante do nivel de consciencia, como medida de escolha para protecao de via aerea."
+        },
+        {
+          "letter": "D",
+          "text": "vomitos incoerciveis, como forma de evitar a intubacao orotraqueal."
+        },
+        {
+          "letter": "E",
+          "text": "instabilidade hemodinamica grave, como alternativa a ventilacao invasiva."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "DPOC exacerbada e EAP cardiogenico sao indicacoes classicas e bem estabelecidas de VNI; as demais alternativas descrevem contraindicacoes.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e4a4416fc739410033e9591a84fa007b5151b8da8ba63b50b0857b22d1a4db04"
+    },
+    {
+      "statement": "A estrategia de sedacao leve guiada por protocolo e por metas (em vez de sedacao profunda continua e nao guiada), atualmente preconizada em terapia intensiva, associa-se a",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "maior tempo de ventilacao mecanica e maior incidencia de delirium, quando comparada a sedacao profunda continua."
+        },
+        {
+          "letter": "B",
+          "text": "menor tempo de ventilacao mecanica, menor incidencia de delirium e melhores desfechos clinicos, quando comparada a pratica de sedacao profunda nao guiada por protocolo."
+        },
+        {
+          "letter": "C",
+          "text": "nenhuma diferenca clinica relevante em relacao a sedacao profunda continua, sendo as duas estrategias equivalentes."
+        },
+        {
+          "letter": "D",
+          "text": "maior necessidade de bloqueio neuromuscular associado, como consequencia direta da sedacao leve."
+        },
+        {
+          "letter": "E",
+          "text": "impossibilidade de associacao com analgesia, sendo estrategias mutuamente excludentes."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-hemodinamico-e-farmacologico",
+      "explanation": "A sedacao leve guiada por metas associa-se a desfechos favoraveis em comparacao a sedacao profunda nao guiada.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e998115839a943f44799d716ad92d99af4864f90922369724730bae797fed468"
+    },
+    {
+      "statement": "A Lei no 7.498/1986, que dispoe sobre a regulamentacao do exercicio da Enfermagem, estabelece que sao privativos do Enfermeiro, entre outros,",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente atividades administrativas, sem qualquer ato assistencial privativo."
+        },
+        {
+          "letter": "B",
+          "text": "cuidados diretos de enfermagem a pacientes graves com risco de vida e cuidados de maior complexidade tecnica, que exijam conhecimentos cientificos adequados e capacidade de tomar decisoes imediatas."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a prescricao de medicamentos, sem qualquer outra atividade privativa."
+        },
+        {
+          "letter": "D",
+          "text": "nenhuma atividade privativa especifica, sendo todas as acoes de enfermagem plenamente intercambiaveis entre as categorias."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente atividades de ensino, sem relacao com assistencia direta ao paciente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A Lei 7.498/1986 estabelece como privativo do enfermeiro o cuidado a pacientes graves/de maior complexidade tecnica.",
+      "references": [
+        "Lei no 7.498/1986."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "eb0b5fc7b190957fb0274594f9a6dabece0b627c52f8804c0ba1485cfb8e7ee7"
+    },
+    {
+      "statement": "O uso de bloqueadores neuromusculares em pacientes criticos sob ventilacao mecanica e reservado a indicacoes restritas e especificas, como",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "uso rotineiro em todo paciente intubado, como medida padrao de conforto."
+        },
+        {
+          "letter": "B",
+          "text": "situacoes especificas de assincronia grave paciente-ventilador refrataria a outras medidas, ou condicoes clinicas selecionadas (como sindrome do desconforto respiratorio agudo grave), sempre com sedacao e analgesia adequadas associadas."
+        },
+        {
+          "letter": "C",
+          "text": "substituicao da sedacao e da analgesia, dispensando o uso concomitante desses farmacos."
+        },
+        {
+          "letter": "D",
+          "text": "uso prolongado e indiscriminado, independentemente de reavaliacao diaria da necessidade."
+        },
+        {
+          "letter": "E",
+          "text": "uso exclusivo em pacientes conscientes e nao sedados, como alternativa a sedacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-hemodinamico-e-farmacologico",
+      "explanation": "O bloqueio neuromuscular tem indicacoes restritas e especificas, sempre associado a sedacao/analgesia adequadas.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "efe3c0a4878dcc7f44fb11daaaee57351dbca5a690fae12b60ec7188337608a7"
+    },
+    {
+      "statement": "A falha do Teste de Respiracao Espontanea (TRE), sinalizada por sinais como taquipneia importante, uso de musculatura acessoria, instabilidade hemodinamica ou queda da saturacao, indica que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o paciente deve ser imediatamente extubado, independentemente dos sinais apresentados."
+        },
+        {
+          "letter": "B",
+          "text": "o paciente deve retornar ao suporte ventilatorio pleno, sendo reavaliado posteriormente quanto a causa da falha antes de nova tentativa de desmame."
+        },
+        {
+          "letter": "C",
+          "text": "a falha do teste nao tem nenhuma implicacao clinica relevante, podendo ser ignorada."
+        },
+        {
+          "letter": "D",
+          "text": "o paciente deve permanecer no teste, independentemente da gravidade dos sinais, ate completar 2 horas."
+        },
+        {
+          "letter": "E",
+          "text": "a falha indica obrigatoriamente necessidade de traqueostomia imediata, sem outra alternativa."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "Sinais de falha exigem retorno ao suporte pleno e investigacao da causa, nao extubacao imediata.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f28b3cc1a1745b36c7bb7addb6d63e0d106a0644b9225890fe19f74b4d0ebe12"
+    },
+    {
+      "statement": "A Pressao Arterial Media (PAM), parametro frequentemente monitorizado no paciente critico, e clinicamente relevante porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "reflete exclusivamente a pressao sistolica, sem relacao com a perfusao tecidual."
+        },
+        {
+          "letter": "B",
+          "text": "reflete a pressao de perfusao dos orgaos ao longo do ciclo cardiaco, sendo parametro-alvo comum na titulacao de drogas vasoativas."
+        },
+        {
+          "letter": "C",
+          "text": "nao tem nenhuma relevancia clinica no paciente em uso de drogas vasoativas."
+        },
+        {
+          "letter": "D",
+          "text": "e sempre numericamente igual a pressao arterial sistolica, tornando-a redundante."
+        },
+        {
+          "letter": "E",
+          "text": "so pode ser mensurada por metodo invasivo, nunca estimada de forma nao invasiva."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "A PAM reflete a pressao de perfusao organica e e frequentemente usada como alvo terapeutico na titulacao de vasopressores.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f5b696fa8d4fa54b35710cc490e82fa1dc8e9c3b47bd8a40bd1f1708e9f33582"
+    },
+    {
+      "statement": "A avaliacao pupilar (tamanho, simetria e reatividade a luz) em pacientes criticos, especialmente neurocriticos, e relevante porque",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "alteracoes pupilares nao tem nenhuma relacao com alteracoes neurologicas agudas."
+        },
+        {
+          "letter": "B",
+          "text": "assimetrias pupilares ou perda de reatividade podem sinalizar hipertensao intracraniana ou lesao neurologica aguda, exigindo comunicacao imediata a equipe medica."
+        },
+        {
+          "letter": "C",
+          "text": "a avaliacao pupilar substitui integralmente a Escala de Coma de Glasgow, tornando-a desnecessaria."
+        },
+        {
+          "letter": "D",
+          "text": "deve ser realizada uma unica vez, na admissao, sem necessidade de reavaliacao."
+        },
+        {
+          "letter": "E",
+          "text": "so e relevante em pacientes conscientes e orientados, sem aplicacao em pacientes sedados."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "monitorizacao-do-paciente-critico",
+      "explanation": "Alteracoes pupilares agudas sao sinais de alerta neurologico que exigem comunicacao imediata.",
+      "references": [
+        "Literatura consolidada de terapia intensiva."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f8642c418e611bfa782f0646d259c1d256a28e35c1ea586b7749bf5d226e29d4"
+    },
+    {
+      "statement": "Na aspiracao de secrecoes de pacientes em ventilacao mecanica invasiva, a comparacao entre sistema aberto e sistema fechado de aspiracao permite afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o sistema fechado dispensa completamente qualquer tecnica assepticadurante o procedimento."
+        },
+        {
+          "letter": "B",
+          "text": "o sistema fechado permite a aspiracao sem desconexao do circuito ventilatorio, reduzindo a perda de PEEP e o risco de exposicao a aerossois durante o procedimento."
+        },
+        {
+          "letter": "C",
+          "text": "o sistema aberto e sempre superior ao sistema fechado, independentemente do contexto clinico."
+        },
+        {
+          "letter": "D",
+          "text": "nao existe diferenca clinica relevante entre os dois sistemas em nenhuma situacao."
+        },
+        {
+          "letter": "E",
+          "text": "o sistema fechado e indicado exclusivamente para pacientes fora de ventilacao mecanica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "O sistema fechado mantem a conexao ao circuito durante a aspiracao, preservando PEEP e reduzindo exposicao a aerossois.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "faae3e29ba806d36eb8ee53d044a67af9f10ca98b6bb833e8454c08833de2056"
+    },
+    {
+      "statement": "Constitui contraindicacao ao uso da Ventilacao Nao Invasiva (VNI)",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exacerbacao leve a moderada de DPOC, sem outras comorbidades."
+        },
+        {
+          "letter": "B",
+          "text": "edema agudo de pulmao cardiogenico em paciente colaborativo."
+        },
+        {
+          "letter": "C",
+          "text": "rebaixamento importante do nivel de consciencia, com incapacidade de proteger a propria via aerea."
+        },
+        {
+          "letter": "D",
+          "text": "insuficiencia respiratoria hipoxemica leve, com boa resposta inicial a oxigenoterapia."
+        },
+        {
+          "letter": "E",
+          "text": "pos-operatorio de cirurgia abdominal nao complicada, sem outras alteracoes respiratorias."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "suporte-ventilatorio",
+      "explanation": "Rebaixamento do nivel de consciencia com incapacidade de protecao de via aerea e contraindicacao classica a VNI.",
+      "references": [
+        "RDC ANVISA no 7/2010."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fbc70dd3655bf198be8acd1e9c91de7761ed057cdfc6b674ba36cc99ff5d748c"
+    },
+    {
+      "statement": "Sobre o parametro numerico de dimensionamento de pessoal de enfermagem em Unidades de Terapia Intensiva, e correto afirmar que",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a Resolucao COFEN no 543/2017, que estabelecia parametros minimos de dimensionamento, permanece integralmente vigente e sem qualquer alteracao posterior."
+        },
+        {
+          "letter": "B",
+          "text": "a Resolucao COFEN no 543/2017 foi revogada pela Resolucao COFEN no 743/2024, alterando o cenario normativo de referencia para o dimensionamento de pessoal de enfermagem."
+        },
+        {
+          "letter": "C",
+          "text": "o dimensionamento de pessoal de enfermagem nunca teve qualquer normatizacao por resolucao do COFEN."
+        },
+        {
+          "letter": "D",
+          "text": "a revogacao da Resolucao 543/2017 eliminou qualquer base legal para a atuacao do enfermeiro em UTI."
+        },
+        {
+          "letter": "E",
+          "text": "a Resolucao COFEN no 743/2024 mantem, sem qualquer alteracao, os mesmos parametros numericos da Resolucao 543/2017."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "terapia-intensiva-uti",
+      "topic": "estrutura-legislacao-e-seguranca-em-uti",
+      "explanation": "A Resolucao COFEN no 543/2017 foi efetivamente revogada pela Resolucao COFEN no 743/2024.",
+      "references": [
+        "Resolucao COFEN no 743/2024 (revoga a Resolucao COFEN no 543/2017)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fda418f4422e426b145ac0cffc5cace8563cda974ae5d60cbf7dc04b3f60da7f"
+    }
+  ]
+}

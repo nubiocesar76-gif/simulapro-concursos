@@ -1,0 +1,1227 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Em relacao ao processo de esterilizacao por oxido de etileno (ETO), gas toxico e inflamavel, a RDC ANVISA no 15/2012 e as boas praticas de processamento exigem, apos o ciclo de esterilizacao, um periodo de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "liberacao imediata do material, sem qualquer etapa adicional."
+        },
+        {
+          "letter": "B",
+          "text": "aeracao do material, para eliminacao de residuos toxicos do gas antes do uso, conforme o tempo determinado pelo fabricante do equipamento/processo."
+        },
+        {
+          "letter": "C",
+          "text": "reesterilizacao imediata por autoclave a vapor, como etapa complementar obrigatoria."
+        },
+        {
+          "letter": "D",
+          "text": "armazenamento do material em agua corrente, por 24 horas."
+        },
+        {
+          "letter": "E",
+          "text": "descarte automatico do material, independentemente do resultado dos indicadores."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "A aeracao pos-ETO e etapa obrigatoria para eliminacao de residuos toxicos do gas, com tempo conforme especificacao do fabricante/processo.",
+      "references": [
+        "ANVISA, RDC no 15/2012."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "042ffe501fd7706b61790c47820d2579920a5449071739b5ea71514b9fa3330a"
+    },
+    {
+      "statement": "Entre os instrumentais cirurgicos basicos, aqueles destinados a promover hemostasia (interrupcao do sangramento) por compressao de vasos sanguineos sao classificados como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "pincas hemostaticas (ex.: Kelly, Halstead/mosquito)."
+        },
+        {
+          "letter": "B",
+          "text": "afastadores."
+        },
+        {
+          "letter": "C",
+          "text": "porta-agulhas."
+        },
+        {
+          "letter": "D",
+          "text": "pincas de disseccao."
+        },
+        {
+          "letter": "E",
+          "text": "bisturis."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "Pincas hemostaticas (Kelly, Halstead/mosquito) promovem hemostasia por compressao vascular.",
+      "references": [
+        "SOBECC, instrumentacao cirurgica basica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0fb30f9358157ec6575fb56a3feb8b08c3198f516c00f4bf6bec5022af210153"
+    },
+    {
+      "statement": "O Centro Cirurgico e organizado em zonas com diferentes niveis de restricao de acesso e circulacao, conforme normas de infraestrutura de estabelecimentos de saude. A zona de maior restricao, onde se localizam as salas de cirurgia propriamente ditas, exigindo paramentacao completa, e denominada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "area nao restrita"
+        },
+        {
+          "letter": "B",
+          "text": "area semirrestrita"
+        },
+        {
+          "letter": "C",
+          "text": "area restrita"
+        },
+        {
+          "letter": "D",
+          "text": "area de recepcao de pacientes, exclusivamente"
+        },
+        {
+          "letter": "E",
+          "text": "area administrativa"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A area restrita e a de maior nivel de controle, onde ficam as salas de cirurgia, exigindo paramentacao completa.",
+      "references": [
+        "ANVISA, RDC no 50/2002 (zoneamento de estabelecimentos de saude)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1a621e31ff42d6b7d0cc1c1c2e9a5d6310f52ff8160a541eb6f997a9b8933139"
+    },
+    {
+      "statement": "Na CME, a area de expurgo (ou recepcao/limpeza), onde os materiais contaminados chegam para o inicio do processamento, deve ser fisicamente separada da area de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "armazenamento/distribuicao de materiais ja esterilizados, para evitar contaminacao cruzada entre material sujo e material processado."
+        },
+        {
+          "letter": "B",
+          "text": "recepcao inicial, ja que sao a mesma area."
+        },
+        {
+          "letter": "C",
+          "text": "qualquer outra area da CME, sendo desnecessaria qualquer separacao fisica."
+        },
+        {
+          "letter": "D",
+          "text": "apenas da area administrativa, sem relacao com fluxo de materiais."
+        },
+        {
+          "letter": "E",
+          "text": "apenas do vestiario da equipe."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "A separacao fisica entre expurgo e armazenamento/distribuicao de material esteril previne contaminacao cruzada.",
+      "references": [
+        "ANVISA, RDC no 15/2012."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1ae60c660d0e676bb79a085026d437e05ccb93aba733115fd01cee8f911db9ac"
+    },
+    {
+      "statement": "A esterilizacao por plasma de peroxido de hidrogenio, metodo de baixa temperatura, apresenta como vantagem em relacao ao oxido de etileno (ETO):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser um processo mais toxico e de maior risco ocupacional."
+        },
+        {
+          "letter": "B",
+          "text": "nao deixar residuos toxicos significativos e ter ciclo de processamento mais curto, sem necessidade de aeracao prolongada."
+        },
+        {
+          "letter": "C",
+          "text": "ser indicado exclusivamente para materiais termorresistentes, os mesmos indicados para autoclave a vapor."
+        },
+        {
+          "letter": "D",
+          "text": "exigir tempo de processamento muito maior que o ETO."
+        },
+        {
+          "letter": "E",
+          "text": "ser inadequado para qualquer material termossensivel."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "A esterilizacao por plasma de peroxido de hidrogenio nao deixa residuos toxicos significativos e tem ciclo mais curto, sem exigir aeracao prolongada como o ETO.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1d2336a4faaa94f3e4af1404e04a7ea2c0905a1d0b81de5e7841678516383fd4"
+    },
+    {
+      "statement": "A Sala de Recuperacao Pos-Anestesica (SRPA), destinada aos cuidados imediatos apos a cirurgia e a anestesia, tem como principal objetivo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir a necessidade de monitorizacao continua do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "monitorizar de forma continua o paciente ate a estabilizacao das funcoes vitais e a recuperacao dos efeitos anestesicos, antes de sua transferencia para a unidade de internacao ou alta."
+        },
+        {
+          "letter": "C",
+          "text": "realizar exclusivamente procedimentos cirurgicos de menor porte."
+        },
+        {
+          "letter": "D",
+          "text": "ser utilizada apenas para pacientes pediatricos."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar a presenca de profissional de enfermagem, sendo monitorada apenas por equipamento automatizado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A SRPA monitoriza continuamente o paciente ate estabilizacao e recuperacao anestesica, antes da transferencia/alta.",
+      "references": [
+        "SOBECC, recuperacao pos-anestesica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2577a4b2a514ebf335fef7b0bcb0ed1fe4ba17fa691e29cdcef690764213862d"
+    },
+    {
+      "statement": "A escovacao cirurgica das maos (degermacao), etapa da paramentacao que antecede a colocacao do avental e das luvas esteris, tem como finalidade principal:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas a limpeza estetica das maos, sem relacao com prevencao de infeccao."
+        },
+        {
+          "letter": "B",
+          "text": "reduzir a microbiota transitoria e residente das maos e antebracos, diminuindo o risco de contaminacao do campo cirurgico."
+        },
+        {
+          "letter": "C",
+          "text": "substituir integralmente a necessidade de luvas esteris."
+        },
+        {
+          "letter": "D",
+          "text": "ser realizada apenas pelo cirurgiao principal, nao pelos demais membros da equipe esteril."
+        },
+        {
+          "letter": "E",
+          "text": "eliminar completamente todos os microrganismos das maos, tornando-as absolutamente esteris."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A degermacao reduz a microbiota transitoria e residente, diminuindo o risco de contaminacao, sem eliminar completamente todos os microrganismos.",
+      "references": [
+        "SOBECC, Manual de Praticas Recomendadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2a56b0b661f314e49ff30ee8075da76020ae6db8c72632e0aec4bbf5897863b4"
+    },
+    {
+      "statement": "Durante um procedimento cirurgico, o instrumentador percebe que a manga de seu avental esteril tocou acidentalmente uma superficie nao esteril fora do campo cirurgico. A conduta correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "continuar o procedimento normalmente, ja que apenas as luvas precisam permanecer esteris."
+        },
+        {
+          "letter": "B",
+          "text": "considerar a area do avental contaminada, comunicar a equipe e trocar o avental (e luvas, se necessario) antes de retornar ao campo esteril."
+        },
+        {
+          "letter": "C",
+          "text": "higienizar a manga com alcool em gel e continuar sem trocar o avental."
+        },
+        {
+          "letter": "D",
+          "text": "apenas cobrir a area tocada com um campo adicional, sem trocar o avental."
+        },
+        {
+          "letter": "E",
+          "text": "aguardar o final do procedimento para relatar o ocorrido."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "Contato com superficie nao esteril contamina a area do avental; a conduta correta e comunicar e trocar avental/luvas antes de retornar ao campo.",
+      "references": [
+        "SOBECC, Manual de Praticas Recomendadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3286bcda3f79ef330208ad0e658c228694ea53ce5e5e6a1b974738c7278fb3d8"
+    },
+    {
+      "statement": "Em relacao a validade da esterilidade de materiais processados na CME, o criterio tecnicamente mais adequado, atualmente recomendado pelas boas praticas, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "prazo de validade fixo em calendario (ex.: sempre 30 dias), independentemente das condicoes de armazenamento."
+        },
+        {
+          "letter": "B",
+          "text": "prazo relacionado a eventos (integridade da embalagem, condicoes de armazenamento - ex.: umidade, temperatura, manuseio), e nao apenas ao tempo decorrido desde a esterilizacao ('validade relacionada a evento')."
+        },
+        {
+          "letter": "C",
+          "text": "validade indefinida, uma vez esterilizado o material."
+        },
+        {
+          "letter": "D",
+          "text": "validade determinada exclusivamente pelo fabricante do papel de embalagem, sem relacao com armazenamento."
+        },
+        {
+          "letter": "E",
+          "text": "dispensa de qualquer controle de prazo, bastando a data de esterilizacao impressa no pacote."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "O criterio de 'validade relacionada a evento' (condicoes de armazenamento e integridade da embalagem) e o tecnicamente mais adequado, em vez de prazo fixo em calendario.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "544deefd9a8b0e7a43ea0012cfde6cdfef89135f95254631ca717caf1873ee6e"
+    },
+    {
+      "statement": "Conforme as boas praticas de processamento de produtos para saude (RDC ANVISA no 15/2012 e literatura tecnica - ANVISA/SOBECC), o armazenamento de materiais esterilizados deve ocorrer em ambiente que garanta, entre outras condicoes:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exposicao direta a luz solar e alta umidade, para 'renovar' a esterilidade periodicamente."
+        },
+        {
+          "letter": "B",
+          "text": "controle de temperatura e umidade, prateleiras adequadas (evitando contato direto com o chao e proximidade excessiva com o teto/paredes) e fluxo controlado de pessoas, preservando a integridade da embalagem esteril."
+        },
+        {
+          "letter": "C",
+          "text": "armazenamento junto a materiais contaminados, para otimizar o espaco fisico."
+        },
+        {
+          "letter": "D",
+          "text": "ausencia de qualquer controle ambiental, sendo suficiente o empacotamento."
+        },
+        {
+          "letter": "E",
+          "text": "armazenamento exclusivamente em caixas de papelao comum, sem prateleiras."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "O armazenamento exige controle de temperatura/umidade, prateleiras adequadas e fluxo controlado de pessoas, preservando a integridade da embalagem esteril.",
+      "references": [
+        "ANVISA, RDC no 15/2012",
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5cc5f3025b7bfdc2fd28c20451942bc58fb16a706ebe4c85d4bff783796bbba4"
+    },
+    {
+      "statement": "Ao abrir um pacote esterilizado para uso em um procedimento, o profissional observa que o indicador quimico interno da embalagem nao apresentou a mudanca de cor esperada, embora o indicador externo (fita) tenha mudado normalmente. A conduta correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "utilizar o material normalmente, ja que o indicador externo ja confirma a esterilizacao."
+        },
+        {
+          "letter": "B",
+          "text": "considerar o processo de esterilizacao desse item como nao confirmado, nao utilizar o material e comunicar a CME para investigacao, ja que o indicador interno e o que efetivamente atesta a exposicao adequada no interior do pacote."
+        },
+        {
+          "letter": "C",
+          "text": "reesterilizar o material na propria sala cirurgica, sem notificacao."
+        },
+        {
+          "letter": "D",
+          "text": "descartar o material sem qualquer registro ou investigacao."
+        },
+        {
+          "letter": "E",
+          "text": "considerar o achado irrelevante, prosseguindo normalmente com o procedimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "O indicador externo apenas confirma exposicao ao processo; o indicador interno atesta a penetracao adequada no interior do pacote. Discordancia exige nao utilizar o material e investigar.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5f1c0465df3841b851855bb2b82031fcad108b125bb96adb4ed75b31be6a4a0c"
+    },
+    {
+      "statement": "O oxido de etileno (ETO), metodo de esterilizacao por baixa temperatura, e indicado principalmente para materiais:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "termorresistentes, que suportam altas temperaturas sem qualquer restricao."
+        },
+        {
+          "letter": "B",
+          "text": "termossensiveis (sensiveis ao calor) e sensiveis a umidade, que nao podem ser esterilizados por autoclave a vapor."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente metalicos."
+        },
+        {
+          "letter": "D",
+          "text": "descartaveis de uso unico, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "que dispensam qualquer processo de esterilizacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "O ETO e indicado para materiais termossensiveis/sensiveis a umidade, que nao suportam autoclave a vapor.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "634b3c62df043981b20950b1f84e43b08972565bef9c6497f3edde2b02f9f138"
+    },
+    {
+      "statement": "A contagem de compressas, gazes e instrumentais cirurgicos, realizada antes do inicio e ao final do procedimento (e antes do fechamento de cavidades), tem como principal finalidade:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas o controle de estoque do material utilizado."
+        },
+        {
+          "letter": "B",
+          "text": "prevenir a retencao inadvertida de corpo estranho (compressa, gaze ou instrumental) no interior do paciente."
+        },
+        {
+          "letter": "C",
+          "text": "calcular o tempo total do procedimento cirurgico."
+        },
+        {
+          "letter": "D",
+          "text": "determinar o valor a ser cobrado pelo procedimento."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a necessidade de registro de enfermagem do procedimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A contagem previne a retencao inadvertida de corpo estranho no paciente - evento adverso grave e evitavel.",
+      "references": [
+        "SOBECC",
+        "Protocolo de Cirurgia Segura."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "68d55fcde2cbf92d58fd20dc433f6da006e1140a02229b21030398c572003d78"
+    },
+    {
+      "statement": "A posicao cirurgica de Trendelenburg, na qual o paciente e posicionado com a cabeca mais baixa que os pes (decubito dorsal inclinado), e frequentemente utilizada em cirurgias:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "oftalmologicas, exclusivamente."
+        },
+        {
+          "letter": "B",
+          "text": "pelvicas e abdominais baixas, para deslocar as alcas intestinais para fora da pelve e melhorar a exposicao do campo cirurgico."
+        },
+        {
+          "letter": "C",
+          "text": "de coluna cervical, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "que exigem o paciente sentado."
+        },
+        {
+          "letter": "E",
+          "text": "otorrinolaringologicas, exclusivamente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A posicao de Trendelenburg e usada em cirurgias pelvicas/abdominais baixas, deslocando as alcas intestinais para fora da pelve.",
+      "references": [
+        "SOBECC, posicionamento cirurgico."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7bafdbb14368b118b9f1f5988e670dd502bee5ac9e5dfdcc4e80603baf8f6294"
+    },
+    {
+      "statement": "Na equipe cirurgica, a funcao do enfermeiro circulante, distinta da funcao do enfermeiro instrumentador, caracteriza-se por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "permanecer paramentado de forma esteril durante todo o procedimento, manuseando diretamente o instrumental cirurgico."
+        },
+        {
+          "letter": "B",
+          "text": "atuar fora do campo esteril, sendo responsavel por prover materiais adicionais, documentar o procedimento, e apoiar a equipe esteril sem contato direto com o campo cirurgico."
+        },
+        {
+          "letter": "C",
+          "text": "ser responsavel exclusivamente pela anestesia do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "substituir o cirurgiao em caso de ausencia."
+        },
+        {
+          "letter": "E",
+          "text": "nao ter qualquer atribuicao definida, atuando de forma generica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "O enfermeiro circulante atua fora do campo esteril, provendo suporte, materiais e documentacao; o instrumentador permanece paramentado de forma esteril, manuseando o instrumental.",
+      "references": [
+        "Literatura de enfermagem perioperatoria",
+        "SOBECC."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "82eacc703187bfdd5d78b01727e7ba31c9d8656ed63867ed7d5ac0e7aa8c0337"
+    },
+    {
+      "statement": "Durante a paramentacao para um procedimento cirurgico, um profissional percebe, apos vestir o avental esteril e calcar as luvas esteris, que a mascara cirurgica esta mal ajustada, com folga nas laterais. A conduta correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ignorar o ajuste da mascara, ja que as luvas e o avental ja estao esteris."
+        },
+        {
+          "letter": "B",
+          "text": "interromper e reajustar a mascara antes de prosseguir, mesmo que isso implique repetir etapas da paramentacao, pois a mascara mal ajustada compromete a barreira de protecao do campo esteril."
+        },
+        {
+          "letter": "C",
+          "text": "concluir o procedimento normalmente, ajustando a mascara apenas ao final."
+        },
+        {
+          "letter": "D",
+          "text": "remover apenas a mascara, sem qualquer outra acao."
+        },
+        {
+          "letter": "E",
+          "text": "solicitar que outro profissional ajuste a mascara sem interromper o procedimento em andamento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "Uma mascara mal ajustada compromete a barreira de protecao; o ajuste deve ser corrigido antes de prosseguir, mesmo que exija repetir etapas.",
+      "references": [
+        "SOBECC, Manual de Praticas Recomendadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "85bc285208c8d4286c6bc518d2a9f1070771f7875139249b7daf6ae9f99dc6fc"
+    },
+    {
+      "statement": "Em relacao a manutencao do campo esteril durante um procedimento cirurgico, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas a superficie superior de uma mesa coberta com campo esteril e considerada esteril; as bordas e a parte que cai abaixo da borda da mesa sao consideradas contaminadas."
+        },
+        {
+          "letter": "B",
+          "text": "toda a extensao do campo, incluindo as partes que tocam o chao, permanece esteril."
+        },
+        {
+          "letter": "C",
+          "text": "um campo esteril pode ser tocado livremente por profissionais nao paramentados, desde que rapidamente."
+        },
+        {
+          "letter": "D",
+          "text": "a umidade nao compromete a esterilidade de um campo, independentemente do material molhado abaixo dele."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha distincao entre areas esteris e nao esteris dentro do campo cirurgico."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "Apenas a superficie superior de uma mesa coberta e considerada esteril; bordas e partes abaixo do nivel da mesa sao consideradas contaminadas - principio classico de tecnica asseptica.",
+      "references": [
+        "SOBECC, Manual de Praticas Recomendadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "908f68991a3286f51cf120d10248b65e4f0d280e51cbfee674137c1f08ecf646"
+    },
+    {
+      "statement": "Em relacao aos niveis de desinfeccao de produtos para saude, a desinfeccao de alto nivel, indicada para materiais semicriticos (classificacao de Spaulding), e capaz de eliminar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas microrganismos vegetativos, sem qualquer acao sobre esporos."
+        },
+        {
+          "letter": "B",
+          "text": "a maioria dos microrganismos, incluindo micobacterias e virus, mas nao necessariamente grande quantidade de esporos bacterianos (diferentemente da esterilizacao)."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente virus, sem acao sobre bacterias."
+        },
+        {
+          "letter": "D",
+          "text": "apenas fungos."
+        },
+        {
+          "letter": "E",
+          "text": "nenhum microrganismo, sendo equivalente a limpeza simples."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "A desinfeccao de alto nivel elimina a maioria dos microrganismos, incluindo micobacterias e virus, mas nao necessariamente grandes quantidades de esporos - diferenca central em relacao a esterilizacao.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9d5e2cc8bef16ec39cebdda37f2497b8c538a2820d19e117d7996b279a910ffd"
+    },
+    {
+      "statement": "A Escala de Aldrete e Kroulik, utilizada para avaliar a recuperacao pos-anestesica e definir criterios de alta da SRPA, avalia parametros como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente a dor referida pelo paciente."
+        },
+        {
+          "letter": "B",
+          "text": "atividade motora, respiracao, circulacao, consciencia e saturacao de oxigenio (coloracao/oximetria)."
+        },
+        {
+          "letter": "C",
+          "text": "apenas o tempo decorrido desde o termino da cirurgia."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente o tipo de anestesia utilizada."
+        },
+        {
+          "letter": "E",
+          "text": "apenas o peso do paciente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A Escala de Aldrete e Kroulik avalia atividade motora, respiracao, circulacao, consciencia e saturacao de oxigenio.",
+      "references": [
+        "Literatura de anestesiologia/enfermagem perioperatoria."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a73f3619bdd428b7d0bcd3c97faa1f14e9255f7b3c237ed901338c89913eb724"
+    },
+    {
+      "statement": "Um paciente em recuperacao pos-anestesica apresenta, subitamente, tremores intensos, rigidez muscular e elevacao importante da temperatura corporal, quadro compativel com hipertermia maligna, complicacao anestesica rara e potencialmente fatal. A conduta imediata de enfermagem, alem de comunicar a equipe medica com urgencia, inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aquecer ativamente o paciente, para 'compensar' a perda de calor."
+        },
+        {
+          "letter": "B",
+          "text": "auxiliar no resfriamento ativo do paciente e na preparacao do tratamento especifico (dantrolene sodico), conforme protocolo institucional de emergencia anestesica."
+        },
+        {
+          "letter": "C",
+          "text": "aguardar a resolucao espontanea do quadro, sem qualquer intervencao."
+        },
+        {
+          "letter": "D",
+          "text": "administrar succinilcolina adicional, para 'relaxar' a musculatura."
+        },
+        {
+          "letter": "E",
+          "text": "transferir o paciente para casa, por ser complicacao de resolucao ambulatorial."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A hipertermia maligna exige resfriamento ativo e tratamento especifico (dantrolene), conforme protocolo de emergencia anestesica.",
+      "references": [
+        "Literatura de anestesiologia",
+        "protocolos institucionais de emergencia anestesica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ae1592e693296bd47e395cbd3abaa9ce3253a00aa7bf1a2f67f926766f56ba28"
+    },
+    {
+      "statement": "Um material semicritico (que entra em contato com mucosas integras) foi submetido, por engano, apenas a desinfeccao de nivel intermediario/baixo, quando o protocolo institucional exigia desinfeccao de alto nivel. A conduta correta diante desse achado e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "liberar o material para uso, ja que qualquer nivel de desinfeccao e equivalente."
+        },
+        {
+          "letter": "B",
+          "text": "nao liberar o material para uso ate que seja reprocessado conforme o nivel de desinfeccao exigido pela classificacao de risco do material (desinfeccao de alto nivel)."
+        },
+        {
+          "letter": "C",
+          "text": "liberar o material apenas para uso em pacientes ja colonizados por multirresistentes."
+        },
+        {
+          "letter": "D",
+          "text": "considerar o erro irrelevante, desde que o material pareca limpo visualmente."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a desinfeccao por limpeza com agua e sabao, considerando-a equivalente."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "O material deve ser reprocessado conforme o nivel de desinfeccao exigido pela sua classificacao de risco antes de ser liberado para uso.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c098dd3e97569108b1d8b8595092175c5ed23324eabefdc3cc3df19136132127"
+    },
+    {
+      "statement": "Na area semirrestrita do Centro Cirurgico, tipicamente sao exigidos, no minimo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "nenhuma vestimenta especial, sendo permitido o uso de roupas civis."
+        },
+        {
+          "letter": "B",
+          "text": "uso de gorro e propes, com circulacao de pessoal devidamente paramentado com uniforme privativo da unidade."
+        },
+        {
+          "letter": "C",
+          "text": "paramentacao cirurgica completa (avental esteril, luvas esteris), identica a exigida na sala de cirurgia."
+        },
+        {
+          "letter": "D",
+          "text": "uso exclusivo de calcados fechados, sem qualquer outra exigencia."
+        },
+        {
+          "letter": "E",
+          "text": "acesso irrestrito ao publico em geral, sem qualquer controle."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A area semirrestrita exige uniforme privativo, gorro e propes, sem exigir a paramentacao esteril completa reservada a sala de cirurgia.",
+      "references": [
+        "ANVISA, RDC no 50/2002",
+        "literatura de enfermagem perioperatoria."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c19a9c168d95117cf1926233661d6f18931f7421af52cd7bd7abc4885703cc28"
+    },
+    {
+      "statement": "Um paciente na SRPA e avaliado pela Escala de Aldrete e Kroulik e obtem pontuacao maxima em todos os parametros avaliados, sem sinais de intercorrencia. Essa pontuacao, de forma geral, e compativel com:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "necessidade de permanencia prolongada e indefinida na SRPA, independentemente da pontuacao."
+        },
+        {
+          "letter": "B",
+          "text": "criterio de alta da SRPA (para a unidade de internacao ou, conforme protocolo institucional, para casa em procedimentos ambulatoriais), sujeito a avaliacao medica responsavel."
+        },
+        {
+          "letter": "C",
+          "text": "necessidade obrigatoria de transferencia para UTI, independentemente do quadro."
+        },
+        {
+          "letter": "D",
+          "text": "indicacao de complicacao anestesica grave."
+        },
+        {
+          "letter": "E",
+          "text": "necessidade de nova inducao anestesica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "Pontuacao maxima na Escala de Aldrete e Kroulik e compativel com criterio de alta da SRPA, sujeito a avaliacao medica responsavel.",
+      "references": [
+        "Literatura de anestesiologia/enfermagem perioperatoria."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c70d8f3a89b35fc966a5cafc437cc2e47cc0311eabfa736ea18eb1fe87b7aaac"
+    },
+    {
+      "statement": "Um paciente posicionado em decubito ventral (posicao prona) para uma cirurgia de coluna permanece nessa posicao por tempo prolongado. Um cuidado de enfermagem essencial para prevencao de complicacoes relacionadas a essa posicao e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "dispensar qualquer protecao de pontos de pressao, ja que a posicao prona nao oferece risco."
+        },
+        {
+          "letter": "B",
+          "text": "posicionar adequadamente coxins/apoios para proteger pontos de pressao (face, torax, joelhos, genitalia) e assegurar a livre expansibilidade toracica e abdominal, evitando compressao."
+        },
+        {
+          "letter": "C",
+          "text": "manter os bracos do paciente em hiperextensao forcada, sem qualquer limite articular."
+        },
+        {
+          "letter": "D",
+          "text": "posicionar a cabeca do paciente sem qualquer suporte, deixando-a livremente apoiada na mesa."
+        },
+        {
+          "letter": "E",
+          "text": "evitar qualquer reavaliacao da posicao durante o procedimento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "Coxins/apoios adequados protegem pontos de pressao e garantem expansibilidade toracica/abdominal na posicao prona prolongada.",
+      "references": [
+        "SOBECC, posicionamento cirurgico."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ca4f346b498b20a74483d0b60edb8c41b4264c82801c55a32db224d74a229731"
+    },
+    {
+      "statement": "O fluxo do material processado na Central de Material e Esterilizacao (CME) segue, tipicamente, a sequencia:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "esterilizacao -> limpeza -> recepcao -> distribuicao -> preparo."
+        },
+        {
+          "letter": "B",
+          "text": "recepcao -> limpeza -> preparo/inspecao -> esterilizacao (ou desinfeccao) -> armazenamento/distribuicao."
+        },
+        {
+          "letter": "C",
+          "text": "distribuicao -> recepcao -> esterilizacao -> limpeza."
+        },
+        {
+          "letter": "D",
+          "text": "preparo -> distribuicao -> recepcao -> limpeza -> esterilizacao."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha sequencia padronizada, ficando a criterio de cada instituicao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "O fluxo padrao da CME e: recepcao, limpeza, preparo/inspecao, esterilizacao (ou desinfeccao), armazenamento/distribuicao.",
+      "references": [
+        "ANVISA, RDC no 15/2012",
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d49a8c9751fd6a1c07c5e9de3c8d9c492c240b3db7d67652c4ef05fff449d95a"
+    },
+    {
+      "statement": "A paramentacao cirurgica, sequencia de vestimenta que antecede a participacao esteril em um procedimento cirurgico, inclui, entre outros itens:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "touca/gorro, mascara cirurgica, escovacao/antissepsia das maos, avental esteril e luvas esteris, nessa ordem logica de contaminacao decrescente para crescente nivel de esterilidade."
+        },
+        {
+          "letter": "B",
+          "text": "apenas luvas esteris, sendo os demais itens opcionais."
+        },
+        {
+          "letter": "C",
+          "text": "avental esteril vestido antes da touca e da mascara."
+        },
+        {
+          "letter": "D",
+          "text": "uso de relogios e aneis, desde que higienizados previamente."
+        },
+        {
+          "letter": "E",
+          "text": "dispensa de mascara quando o procedimento e considerado de curta duracao."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A sequencia logica da paramentacao segue do menos ao mais esteril: gorro, mascara, escovacao, avental, luvas.",
+      "references": [
+        "SOBECC, Manual de Praticas Recomendadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d739283493517a0257d29c34cd39886c0cc6bcf03a535a5a21d468ecb3808799"
+    },
+    {
+      "statement": "O porta-agulhas, instrumental cirurgico basico, tem como finalidade especifica:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "cortar tecidos durante a disseccao."
+        },
+        {
+          "letter": "B",
+          "text": "segurar e manipular a agulha cirurgica durante a sutura dos tecidos."
+        },
+        {
+          "letter": "C",
+          "text": "afastar tecidos para melhor exposicao do campo operatorio."
+        },
+        {
+          "letter": "D",
+          "text": "promover hemostasia por compressao vascular."
+        },
+        {
+          "letter": "E",
+          "text": "realizar a antissepsia da pele antes da incisao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "O porta-agulhas segura e manipula a agulha cirurgica durante a sutura.",
+      "references": [
+        "SOBECC, instrumentacao cirurgica basica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "daeebbeeae6b0c72279239385c7e0b68f6895fcefde9ef9886310ae70d14ab56"
+    },
+    {
+      "statement": "O fluxo de materiais e pessoas no Centro Cirurgico deve ser planejado de forma a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "permitir o cruzamento livre entre material limpo/esteril e material contaminado, sem qualquer barreira fisica."
+        },
+        {
+          "letter": "B",
+          "text": "separar, tanto quanto possivel, os fluxos de material limpo/esteril e material contaminado/sujo, reduzindo o risco de contaminacao cruzada."
+        },
+        {
+          "letter": "C",
+          "text": "priorizar exclusivamente a rapidez de deslocamento, independentemente do risco de contaminacao."
+        },
+        {
+          "letter": "D",
+          "text": "ser identico ao fluxo de uma unidade de internacao comum, sem adaptacoes especificas."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar qualquer planejamento formal, ficando a criterio de cada profissional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A separacao dos fluxos limpo/esteril e contaminado/sujo e principio central do planejamento fisico do Centro Cirurgico.",
+      "references": [
+        "ANVISA, RDC no 50/2002."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "dfea3af74a430746bfe83ad8dac29e40070d339171065429135eb90bc8e330ef"
+    },
+    {
+      "statement": "A contagem de compressas, gazes e instrumentais, como medida de seguranca do paciente no ambiente cirurgico, integra o conjunto de praticas recomendadas alinhadas ao Protocolo de Cirurgia Segura (OMS/Ministerio da Saude/ANVISA), sendo tipicamente conferida:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas uma vez, ao final do procedimento."
+        },
+        {
+          "letter": "B",
+          "text": "em pelo menos dois momentos - antes do inicio do procedimento e antes do fechamento de cavidades/da ferida cirurgica - com dupla conferencia (por dois profissionais)."
+        },
+        {
+          "letter": "C",
+          "text": "apenas pelo cirurgiao, sem participacao da equipe de enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "apenas quando o procedimento dura mais de 4 horas."
+        },
+        {
+          "letter": "E",
+          "text": "de forma dispensavel, a criterio exclusivo da instituicao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "A contagem e conferida em pelo menos dois momentos, com dupla checagem, alinhada as praticas do Protocolo de Cirurgia Segura.",
+      "references": [
+        "OMS/MS/ANVISA, Protocolo de Cirurgia Segura",
+        "SOBECC."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e1357d0c6cf0d6631023fd3a7f3380d837cf51bdd7b4296daa9dad463df47439"
+    },
+    {
+      "statement": "Durante a escovacao cirurgica das maos, a tecnica correta orienta que as maos sejam mantidas:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "abaixo do nivel dos cotovelos durante todo o procedimento."
+        },
+        {
+          "letter": "B",
+          "text": "acima do nivel dos cotovelos, permitindo que a agua escorra dos dedos em direcao aos cotovelos, e nao o inverso."
+        },
+        {
+          "letter": "C",
+          "text": "na mesma altura do rosto do profissional."
+        },
+        {
+          "letter": "D",
+          "text": "apoiadas sobre a pia durante toda a escovacao."
+        },
+        {
+          "letter": "E",
+          "text": "sem qualquer orientacao especifica de posicionamento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "assistencia-de-enfermagem-perioperatoria",
+      "explanation": "As maos devem permanecer acima do nivel dos cotovelos, com a agua escorrendo dos dedos para os cotovelos, preservando a area de maior esterilidade (maos).",
+      "references": [
+        "SOBECC, Manual de Praticas Recomendadas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f4c6ae889ec28915be66783ef9e56c1f5918846c37f1644a0c6dc07564c635dd"
+    },
+    {
+      "statement": "Os indicadores quimicos de esterilizacao, classificados em diferentes classes conforme sua complexidade e especificidade (de acordo com normas tecnicas internacionais), tem como funcao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir integralmente a necessidade de indicador biologico em qualquer situacao."
+        },
+        {
+          "letter": "B",
+          "text": "indicar que o material foi exposto ao processo de esterilizacao, variando sua complexidade desde indicadores de processo simples (ex.: fita indicadora, que muda de cor com a exposicao) ate indicadores integradores mais complexos que simulam multiplas variaveis criticas do ciclo."
+        },
+        {
+          "letter": "C",
+          "text": "medir exclusivamente a temperatura do autoclave, sem qualquer outra informacao."
+        },
+        {
+          "letter": "D",
+          "text": "ser utilizados apenas em auditorias externas."
+        },
+        {
+          "letter": "E",
+          "text": "substituir a necessidade de registro do ciclo de esterilizacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "centro-cirurgico-e-cme",
+      "topic": "central-de-material-esterilizado",
+      "explanation": "Indicadores quimicos variam em complexidade, do processo simples ao integrador, indicando exposicao ao processo de esterilizacao, sem substituir o indicador biologico.",
+      "references": [
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fd077e9c489ccc0e27c43cf81bbf48b398b33db4e4ad437bef71034f5dd986eb"
+    }
+  ]
+}

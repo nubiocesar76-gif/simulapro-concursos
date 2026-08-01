@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "O Programa Nacional de Triagem Neonatal (PNTN), por meio do teste do pezinho, realiza a triagem, entre outras condicoes, para:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas doencas infecciosas agudas, como sifilis congenita."
+        },
+        {
+          "letter": "B",
+          "text": "fenilcetonuria e hipotireoidismo congenito, entre outras doencas metabolicas/geneticas incluidas no programa."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente cardiopatias congenitas."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente doencas oftalmologicas."
+        },
+        {
+          "letter": "E",
+          "text": "apenas triagem auditiva."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "triagem-neonatal-teste-do-pezinho",
+      "explanation": "O teste do pezinho rastreia doencas metabolicas/geneticas como fenilcetonuria e hipotireoidismo congenito, entre outras incluidas no programa nacional.",
+      "references": [
+        "Ministerio da Saude, Programa Nacional de Triagem Neonatal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "029659826d5d3b3eb66c98f6d1684344e24b3cd7a07330dac5f4c83921c48c57"
+    },
+    {
+      "statement": "O contato pele a pele imediato entre a mae e o recem-nascido a termo, saudavel e vigoroso, logo apos o parto, e uma pratica recomendada por favorecer, entre outros beneficios:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas o conforto materno, sem qualquer beneficio comprovado ao RN."
+        },
+        {
+          "letter": "B",
+          "text": "a estabilizacao termica do RN, o inicio precoce do aleitamento materno e o vinculo mae-bebe."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a prevencao de ictericia neonatal."
+        },
+        {
+          "letter": "D",
+          "text": "a dispensa da avaliacao do Boletim de Apgar."
+        },
+        {
+          "letter": "E",
+          "text": "a substituicao da identificacao do RN (pulseira), sendo dispensavel nesse contexto."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "cuidados-imediatos-ao-recem-nascido",
+      "explanation": "O contato pele a pele imediato favorece estabilizacao termica, inicio precoce do aleitamento e vinculo mae-bebe - nao substitui avaliacao de Apgar nem identificacao do RN.",
+      "references": [
+        "Ministerio da Saude, diretrizes de atencao ao recem-nascido."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "183792a523fb50447e50109a534765a3bc95f5ced8f6bd7b2b44869d36706645"
+    },
+    {
+      "statement": "A fototerapia, tratamento utilizado no manejo da ictericia neonatal significativa, atua reduzindo os niveis de bilirrubina por meio de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "estimulo a producao hepatica de bilirrubina."
+        },
+        {
+          "letter": "B",
+          "text": "conversao da bilirrubina nao conjugada, na pele, em compostos mais hidrossoluveis, passiveis de eliminacao sem necessidade de conjugacao hepatica completa."
+        },
+        {
+          "letter": "C",
+          "text": "bloqueio da circulacao entero-hepatica, exclusivamente por via medicamentosa."
+        },
+        {
+          "letter": "D",
+          "text": "aumento direto da producao de hemacias."
+        },
+        {
+          "letter": "E",
+          "text": "substituicao da necessidade de acompanhamento clinico do RN."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "ictericia-neonatal",
+      "explanation": "A fototerapia converte a bilirrubina nao conjugada na pele em compostos mais hidrossoluveis, facilitando sua eliminacao sem depender da conjugacao hepatica completa.",
+      "references": [
+        "Ministerio da Saude",
+        "literatura de neonatologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1900820c311d34f240c3aa84d8ae0fda4d23f7fa247797c76aca95482e2e9e64"
+    },
+    {
+      "statement": "O diabetes mellitus tipo 1, forma mais comum de diabetes na infancia, caracteriza-se, do ponto de vista fisiopatologico, por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "resistencia periferica a insulina, com producao pancreatica preservada."
+        },
+        {
+          "letter": "B",
+          "text": "destruicao autoimune das celulas beta pancreaticas, levando a deficiencia absoluta de insulina, exigindo insulinoterapia."
+        },
+        {
+          "letter": "C",
+          "text": "ausencia total de relacao com producao de insulina."
+        },
+        {
+          "letter": "D",
+          "text": "ser causado exclusivamente por habitos alimentares inadequados."
+        },
+        {
+          "letter": "E",
+          "text": "nao exigir monitorizacao glicemica regular."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "diabetes-na-infancia",
+      "explanation": "O DM tipo 1 resulta de destruicao autoimune das celulas beta pancreaticas, causando deficiencia absoluta de insulina e exigindo insulinoterapia.",
+      "references": [
+        "Sociedade Brasileira de Diabetes",
+        "literatura de pediatria."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3208f0bfd290db3819dda659c9a393d69ae8044e5be779e84f2b5a259b06878c"
+    },
+    {
+      "statement": "A paralisia cerebral e definida como um grupo de disturbios permanentes do desenvolvimento do movimento e da postura, atribuidos a disturbios nao progressivos ocorridos no encefalo em desenvolvimento (fetal ou infantil). O cuidado de enfermagem a crianca com paralisia cerebral deve priorizar, entre outros aspectos:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "abordagem multiprofissional voltada a funcionalidade, prevencao de complicacoes (ex.: contraturas, broncoaspiracao) e suporte a familia, ja que o quadro neurologico de base nao e progressivo, mas suas manifestacoes funcionais podem evoluir ao longo do desenvolvimento."
+        },
+        {
+          "letter": "B",
+          "text": "isolamento social da crianca, como medida de protecao."
+        },
+        {
+          "letter": "C",
+          "text": "restricao alimentar rigorosa, independentemente da avaliacao nutricional individual."
+        },
+        {
+          "letter": "D",
+          "text": "suspensao de estimulos de desenvolvimento, por serem considerados ineficazes."
+        },
+        {
+          "letter": "E",
+          "text": "abordagem exclusivamente medicamentosa, sem necessidade de suporte multiprofissional."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fundatec",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "encefalopatia-neonatal-e-paralisia-cerebral",
+      "explanation": "O cuidado a crianca com paralisia cerebral exige abordagem multiprofissional voltada a funcionalidade, prevencao de complicacoes e suporte a familia.",
+      "references": [
+        "Ministerio da Saude, Diretrizes de Atencao a Pessoa com Paralisia Cerebral (2013)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a23d1b680899ddc5a57bdc3d01d8617362b7c8551c7dedfcf6cb978f09ed4856"
+    },
+    {
+      "statement": "Em relacao ao clampeamento do cordao umbilical do recem-nascido a termo, sem indicacao de reanimacao imediata, a recomendacao atual do Ministerio da Saude e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "clampeamento imediato, antes de 15 segundos, independentemente das condicoes do RN."
+        },
+        {
+          "letter": "B",
+          "text": "clampeamento tardio (oportuno), entre 1 e 3 minutos apos o nascimento (ou ate a parada da pulsacao do cordao), para recem-nascidos a termo e vigorosos, salvo contraindicacao."
+        },
+        {
+          "letter": "C",
+          "text": "clampeamento apenas apos 10 minutos, em qualquer situacao."
+        },
+        {
+          "letter": "D",
+          "text": "o clampeamento do cordao nao influencia o volume sanguineo do RN."
+        },
+        {
+          "letter": "E",
+          "text": "clampeamento exclusivamente por indicacao medica, nunca pela equipe de enfermagem."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "cuidados-imediatos-ao-recem-nascido",
+      "explanation": "O clampeamento tardio (oportuno), entre 1 e 3 minutos ou ate a parada da pulsacao do cordao, e recomendado para RN a termo vigorosos, salvo contraindicacao, por seus beneficios hematologicos.",
+      "references": [
+        "Ministerio da Saude, diretrizes de atencao ao recem-nascido."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c996a497f2e17874a358f28a6a3ee2aafc1817e09603e70777643043c9157e6f"
+    },
+    {
+      "statement": "O Estatuto da Crianca e do Adolescente (Lei no 8.069/1990) estabelece a doutrina da protecao integral, reconhecendo criancas e adolescentes como sujeitos de direitos e conferindo-lhes:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "direitos identicos aos de qualquer adulto, sem qualquer prioridade especial."
+        },
+        {
+          "letter": "B",
+          "text": "absoluta prioridade no atendimento em servicos publicos, inclusive de saude, alem de protecao integral por parte da familia, da sociedade e do Estado."
+        },
+        {
+          "letter": "C",
+          "text": "apenas direitos assistenciais, sem qualquer protecao juridica especifica."
+        },
+        {
+          "letter": "D",
+          "text": "protecao restrita a criancas em situacao de rua, nao a todas as criancas e adolescentes."
+        },
+        {
+          "letter": "E",
+          "text": "prioridade apenas em situacoes de calamidade publica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "saude-da-crianca-e-do-adolescente",
+      "topic": "estatuto-da-crianca-e-do-adolescente-eca",
+      "explanation": "A doutrina da protecao integral do ECA confere a crianca e ao adolescente absoluta prioridade no atendimento em servicos publicos e protecao integral compartilhada entre familia, sociedade e Estado.",
+      "references": [
+        "Lei no 8.069/1990 (Estatuto da Crianca e do Adolescente), art. 4o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d059471305bfe8a187a0a965c75141f497c16120686025808b4b9b50c27bf7ea"
+    }
+  ]
+}

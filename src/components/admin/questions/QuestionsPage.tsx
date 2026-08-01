@@ -14,6 +14,7 @@ import {
   type QuestionAlternative,
   type QuestionMetadataFields,
 } from "@/lib/questions";
+import { SIA_TAG_CATALOG, SIA_ERROR_REASON_OPTIONS } from "@/lib/sia";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -129,7 +130,22 @@ function emptyForm(): FormState {
     boardId: "",
     examId: "",
     positionId: "",
-    metadata: { image_url: "", bibliography: "", legal_reference: "" },
+    metadata: {
+      image_url: "",
+      bibliography: "",
+      legal_reference: "",
+      sia_tags: [],
+      sia_error_reason_category: "",
+      sia_error_reason_detail: "",
+      sia_pegadinha_trigger: "",
+      sia_pegadinha_explanation: "",
+      sia_long_text_key_excerpts: "",
+      sia_long_text_note: "",
+      sia_interpretation_trigger: "",
+      sia_interpretation_explanation: "",
+      sia_calculation_steps: "",
+      sia_calculation_common_error: "",
+    },
   };
 }
 
@@ -152,8 +168,14 @@ function rowToForm(row: QuestionRow): FormState {
 
 async function fetchQuestionDeps(questionId: string): Promise<DeleteDep[]> {
   const [attempts, favorites] = await Promise.all([
-    supabase.from("question_attempts").select("*", { count: "exact", head: true }).eq("question_id", questionId),
-    supabase.from("favorites").select("*", { count: "exact", head: true }).eq("question_id", questionId),
+    supabase
+      .from("question_attempts")
+      .select("*", { count: "exact", head: true })
+      .eq("question_id", questionId),
+    supabase
+      .from("favorites")
+      .select("*", { count: "exact", head: true })
+      .eq("question_id", questionId),
   ]);
   return [
     { label: "tentativa(s) de aluno(s)", count: attempts.count ?? 0 },
@@ -232,7 +254,8 @@ export function QuestionsPage() {
 
   const { data: courses = [] } = useQuery({
     queryKey: ["courses", "options"],
-    queryFn: async () => (await supabase.from("courses").select("id,name").order("name")).data ?? [],
+    queryFn: async () =>
+      (await supabase.from("courses").select("id,name").order("name")).data ?? [],
   });
 
   const { data: positions = [] } = useQuery({
@@ -260,7 +283,8 @@ export function QuestionsPage() {
 
   const { data: subjects = [] } = useQuery({
     queryKey: ["subjects", "options"],
-    queryFn: async () => (await supabase.from("subjects").select("id,name").order("name")).data ?? [],
+    queryFn: async () =>
+      (await supabase.from("subjects").select("id,name").order("name")).data ?? [],
   });
 
   const { data: topics = [] } = useQuery({
@@ -274,7 +298,8 @@ export function QuestionsPage() {
 
   const { data: formPositions = [] } = useQuery({
     queryKey: ["positions", "form-options"],
-    queryFn: async () => (await supabase.from("positions").select("id,name,course_id").order("name")).data ?? [],
+    queryFn: async () =>
+      (await supabase.from("positions").select("id,name,course_id").order("name")).data ?? [],
   });
 
   const { data: formExams = [] } = useQuery({
@@ -345,9 +370,14 @@ export function QuestionsPage() {
       const payload = buildPayload(form);
 
       if (editing?.id) {
-        const { error: updateError } = await supabase.from("questions").update(payload).eq("id", editing.id);
+        const { error: updateError } = await supabase
+          .from("questions")
+          .update(payload)
+          .eq("id", editing.id);
         if (updateError) throw updateError;
-        await logEvent("question.update", "questions", editing.id, { statement: payload.statement.slice(0, 80) });
+        await logEvent("question.update", "questions", editing.id, {
+          statement: payload.statement.slice(0, 80),
+        });
         return editing.id;
       }
 
@@ -357,7 +387,9 @@ export function QuestionsPage() {
         .select("id")
         .single();
       if (insertError) throw insertError;
-      await logEvent("question.create", "questions", created.id, { statement: payload.statement.slice(0, 80) });
+      await logEvent("question.create", "questions", created.id, {
+        statement: payload.statement.slice(0, 80),
+      });
       return created.id;
     },
     onSuccess: () => {
@@ -374,7 +406,9 @@ export function QuestionsPage() {
     mutationFn: async (row: QuestionRow) => {
       const deps = await fetchQuestionDeps(row.id);
       if (hasDeleteDeps(deps)) {
-        throw new Error("Não é possível excluir: existem tentativas ou favoritos de alunos vinculados.");
+        throw new Error(
+          "Não é possível excluir: existem tentativas ou favoritos de alunos vinculados.",
+        );
       }
       const { error: deleteError } = await supabase.from("questions").delete().eq("id", row.id);
       if (deleteError) throw deleteError;
@@ -468,11 +502,15 @@ export function QuestionsPage() {
               <div key={f.key} className="space-y-2">
                 <Label>{f.label}</Label>
                 <Select value={filters[f.key]} onValueChange={(v) => updateFilter(f.key, v)}>
-                  <SelectTrigger><SelectValue placeholder="Todos" /></SelectTrigger>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Todos" />
+                  </SelectTrigger>
                   <SelectContent>
                     <SelectItem value={ALL}>Todos</SelectItem>
                     {f.options.map((o: { id: string; name: string }) => (
-                      <SelectItem key={o.id} value={o.id}>{o.name}</SelectItem>
+                      <SelectItem key={o.id} value={o.id}>
+                        {o.name}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -490,11 +528,20 @@ export function QuestionsPage() {
             </div>
             <div className="space-y-2">
               <Label>Dificuldade</Label>
-              <Select value={filters.difficulty} onValueChange={(v) => updateFilter("difficulty", v)}>
-                <SelectTrigger><SelectValue placeholder="Todas" /></SelectTrigger>
+              <Select
+                value={filters.difficulty}
+                onValueChange={(v) => updateFilter("difficulty", v)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Todas" />
+                </SelectTrigger>
                 <SelectContent>
                   <SelectItem value={ALL}>Todas</SelectItem>
-                  {DIFFICULTY_OPTIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+                  {DIFFICULTY_OPTIONS.map((d) => (
+                    <SelectItem key={d} value={d}>
+                      {d}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
@@ -578,27 +625,61 @@ export function QuestionsPage() {
 
       <TaxonomyPagination page={page} total={total} onPageChange={setPage} />
 
-      <Dialog open={dialogOpen} onOpenChange={(open) => { setDialogOpen(open); if (!open) { setEditing(null); setForm(emptyForm()); } }}>
+      <Dialog
+        open={dialogOpen}
+        onOpenChange={(open) => {
+          setDialogOpen(open);
+          if (!open) {
+            setEditing(null);
+            setForm(emptyForm());
+          }
+        }}
+      >
         <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{editing ? "Editar questão" : "Nova questão"}</DialogTitle>
-            <DialogDescription>Preencha enunciado, alternativas, gabarito e metadados.</DialogDescription>
+            <DialogDescription>
+              Preencha enunciado, alternativas, gabarito e metadados.
+            </DialogDescription>
           </DialogHeader>
-          <form onSubmit={(e) => { e.preventDefault(); save.mutate(); }} className="space-y-8">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              save.mutate();
+            }}
+            className="space-y-8"
+          >
             <section className="space-y-2">
               <Label htmlFor="q-statement">Enunciado *</Label>
-              <Textarea id="q-statement" value={form.statement} onChange={(e) => setForm((p) => ({ ...p, statement: e.target.value }))} rows={4} required />
+              <Textarea
+                id="q-statement"
+                value={form.statement}
+                onChange={(e) => setForm((p) => ({ ...p, statement: e.target.value }))}
+                rows={4}
+                required
+              />
             </section>
 
             <section className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label>Alternativas *</Label>
-                <Button type="button" variant="outline" size="sm" onClick={addAlternative}>Adicionar</Button>
+                <Button type="button" variant="outline" size="sm" onClick={addAlternative}>
+                  Adicionar
+                </Button>
               </div>
               {form.alternatives.map((alt, index) => (
                 <div key={`${alt.letter}-${index}`} className="flex gap-2">
-                  <Input className="w-14" value={alt.letter} readOnly aria-label={`Letra da alternativa ${alt.letter}`} />
-                  <Input value={alt.text} onChange={(e) => updateAlternative(index, e.target.value)} placeholder={`Alternativa ${alt.letter}`} />
+                  <Input
+                    className="w-14"
+                    value={alt.letter}
+                    readOnly
+                    aria-label={`Letra da alternativa ${alt.letter}`}
+                  />
+                  <Input
+                    value={alt.text}
+                    onChange={(e) => updateAlternative(index, e.target.value)}
+                    placeholder={`Alternativa ${alt.letter}`}
+                  />
                   <Button
                     type="button"
                     variant="ghost"
@@ -618,19 +699,45 @@ export function QuestionsPage() {
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="space-y-2">
                   <Label htmlFor="q-answer">Gabarito *</Label>
-                  <Input id="q-answer" value={form.correctAnswer} onChange={(e) => setForm((p) => ({ ...p, correctAnswer: e.target.value.toUpperCase() }))} maxLength={1} required />
+                  <Input
+                    id="q-answer"
+                    value={form.correctAnswer}
+                    onChange={(e) =>
+                      setForm((p) => ({ ...p, correctAnswer: e.target.value.toUpperCase() }))
+                    }
+                    maxLength={1}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-year">Ano</Label>
-                  <Input id="q-year" type="number" value={form.year} onChange={(e) => setForm((p) => ({ ...p, year: e.target.value }))} min={1900} max={2100} />
+                  <Input
+                    id="q-year"
+                    type="number"
+                    value={form.year}
+                    onChange={(e) => setForm((p) => ({ ...p, year: e.target.value }))}
+                    min={1900}
+                    max={2100}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-difficulty">Dificuldade</Label>
-                  <Select value={form.difficulty || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, difficulty: v === "__none__" ? "" : v }))}>
-                    <SelectTrigger id="q-difficulty"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                  <Select
+                    value={form.difficulty || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({ ...p, difficulty: v === "__none__" ? "" : v }))
+                    }
+                  >
+                    <SelectTrigger id="q-difficulty">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="__none__">—</SelectItem>
-                      {DIFFICULTY_OPTIONS.map((d) => <SelectItem key={d} value={d}>{d}</SelectItem>)}
+                      {DIFFICULTY_OPTIONS.map((d) => (
+                        <SelectItem key={d} value={d}>
+                          {d}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
@@ -642,51 +749,106 @@ export function QuestionsPage() {
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-2 sm:col-span-2">
                   <Label htmlFor="q-position">Cargo</Label>
-                  <Select value={form.positionId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, positionId: v === "__none__" ? "" : v }))}>
-                    <SelectTrigger id="q-position"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                  <Select
+                    value={form.positionId || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({ ...p, positionId: v === "__none__" ? "" : v }))
+                    }
+                  >
+                    <SelectTrigger id="q-position">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="__none__">—</SelectItem>
-                      {formPositions.map((p) => <SelectItem key={p.id} value={p.id}>{p.name}</SelectItem>)}
+                      {formPositions.map((p) => (
+                        <SelectItem key={p.id} value={p.id}>
+                          {p.name}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-subject">Disciplina</Label>
-                  <Select value={form.subjectId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, subjectId: v === "__none__" ? "" : v, topicId: "" }))}>
-                    <SelectTrigger id="q-subject"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                  <Select
+                    value={form.subjectId || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({ ...p, subjectId: v === "__none__" ? "" : v, topicId: "" }))
+                    }
+                  >
+                    <SelectTrigger id="q-subject">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="__none__">—</SelectItem>
-                      {subjects.map((s) => <SelectItem key={s.id} value={s.id}>{s.name}</SelectItem>)}
+                      {subjects.map((s) => (
+                        <SelectItem key={s.id} value={s.id}>
+                          {s.name}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-topic">Assunto</Label>
-                  <Select value={form.topicId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, topicId: v === "__none__" ? "" : v }))}>
-                    <SelectTrigger id="q-topic"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                  <Select
+                    value={form.topicId || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({ ...p, topicId: v === "__none__" ? "" : v }))
+                    }
+                  >
+                    <SelectTrigger id="q-topic">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="__none__">—</SelectItem>
-                      {formTopics.map((t) => <SelectItem key={t.id} value={t.id}>{t.name}</SelectItem>)}
+                      {formTopics.map((t) => (
+                        <SelectItem key={t.id} value={t.id}>
+                          {t.name}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-board">Banca</Label>
-                  <Select value={form.boardId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, boardId: v === "__none__" ? "" : v, examId: "" }))}>
-                    <SelectTrigger id="q-board"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                  <Select
+                    value={form.boardId || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({ ...p, boardId: v === "__none__" ? "" : v, examId: "" }))
+                    }
+                  >
+                    <SelectTrigger id="q-board">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="__none__">—</SelectItem>
-                      {boards.map((b) => <SelectItem key={b.id} value={b.id}>{b.name}</SelectItem>)}
+                      {boards.map((b) => (
+                        <SelectItem key={b.id} value={b.id}>
+                          {b.name}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-exam">Concurso</Label>
-                  <Select value={form.examId || "__none__"} onValueChange={(v) => setForm((p) => ({ ...p, examId: v === "__none__" ? "" : v }))}>
-                    <SelectTrigger id="q-exam"><SelectValue placeholder="Selecione" /></SelectTrigger>
+                  <Select
+                    value={form.examId || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({ ...p, examId: v === "__none__" ? "" : v }))
+                    }
+                  >
+                    <SelectTrigger id="q-exam">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="__none__">—</SelectItem>
-                      {formExams.map((e) => <SelectItem key={e.id} value={e.id}>{e.name}</SelectItem>)}
+                      {formExams.map((e) => (
+                        <SelectItem key={e.id} value={e.id}>
+                          {e.name}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
@@ -695,7 +857,12 @@ export function QuestionsPage() {
 
             <section className="space-y-2">
               <Label htmlFor="q-explanation">Explicação</Label>
-              <Textarea id="q-explanation" value={form.explanation} onChange={(e) => setForm((p) => ({ ...p, explanation: e.target.value }))} rows={3} />
+              <Textarea
+                id="q-explanation"
+                value={form.explanation}
+                onChange={(e) => setForm((p) => ({ ...p, explanation: e.target.value }))}
+                rows={3}
+              />
             </section>
 
             <section className="space-y-4">
@@ -703,38 +870,292 @@ export function QuestionsPage() {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="q-legal">Referência legal</Label>
-                  <Input id="q-legal" value={form.metadata.legal_reference} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, legal_reference: e.target.value } }))} />
+                  <Input
+                    id="q-legal"
+                    value={form.metadata.legal_reference}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, legal_reference: e.target.value },
+                      }))
+                    }
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-biblio">Bibliografia</Label>
-                  <Textarea id="q-biblio" value={form.metadata.bibliography} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, bibliography: e.target.value } }))} rows={2} />
+                  <Textarea
+                    id="q-biblio"
+                    value={form.metadata.bibliography}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, bibliography: e.target.value },
+                      }))
+                    }
+                    rows={2}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="q-image">URL da imagem</Label>
-                  <Input id="q-image" type="url" value={form.metadata.image_url} onChange={(e) => setForm((p) => ({ ...p, metadata: { ...p.metadata, image_url: e.target.value } }))} placeholder="https://..." />
+                  <Input
+                    id="q-image"
+                    type="url"
+                    value={form.metadata.image_url}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, image_url: e.target.value },
+                      }))
+                    }
+                    placeholder="https://..."
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <Label>SIA (Sistema de Inteligência de Aprendizagem)</Label>
+              <p className="text-sm text-muted-foreground">
+                Todos os campos abaixo são opcionais — o bloco correspondente só aparece ao aluno
+                quando preenchido.
+              </p>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Label>Tags</Label>
+                  <div className="flex flex-wrap gap-2">
+                    {SIA_TAG_CATALOG.map((tag) => {
+                      const active = form.metadata.sia_tags.includes(tag.key);
+                      return (
+                        <Button
+                          key={tag.key}
+                          type="button"
+                          size="sm"
+                          variant={active ? "default" : "outline"}
+                          onClick={() =>
+                            setForm((p) => ({
+                              ...p,
+                              metadata: {
+                                ...p.metadata,
+                                sia_tags: active
+                                  ? p.metadata.sia_tags.filter((t) => t !== tag.key)
+                                  : [...p.metadata.sia_tags, tag.key],
+                              },
+                            }))
+                          }
+                        >
+                          {tag.icon} {tag.label}
+                        </Button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="q-sia-reason">Motivo do erro (categoria)</Label>
+                  <Select
+                    value={form.metadata.sia_error_reason_category || "__none__"}
+                    onValueChange={(v) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: {
+                          ...p.metadata,
+                          sia_error_reason_category: v === "__none__" ? "" : v,
+                        },
+                      }))
+                    }
+                  >
+                    <SelectTrigger id="q-sia-reason">
+                      <SelectValue placeholder="Selecione" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__none__">—</SelectItem>
+                      {SIA_ERROR_REASON_OPTIONS.map((o) => (
+                        <SelectItem key={o.key} value={o.key}>
+                          {o.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-sia-reason-detail">Motivo do erro (detalhe opcional)</Label>
+                  <Textarea
+                    id="q-sia-reason-detail"
+                    value={form.metadata.sia_error_reason_detail}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, sia_error_reason_detail: e.target.value },
+                      }))
+                    }
+                    rows={2}
+                  />
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="q-sia-pegadinha-trigger">Pegadinha — trecho exato</Label>
+                    <Input
+                      id="q-sia-pegadinha-trigger"
+                      value={form.metadata.sia_pegadinha_trigger}
+                      onChange={(e) =>
+                        setForm((p) => ({
+                          ...p,
+                          metadata: { ...p.metadata, sia_pegadinha_trigger: e.target.value },
+                        }))
+                      }
+                      placeholder='ex.: "permanente"'
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="q-sia-pegadinha-explanation">Pegadinha — explicação</Label>
+                    <Input
+                      id="q-sia-pegadinha-explanation"
+                      value={form.metadata.sia_pegadinha_explanation}
+                      onChange={(e) =>
+                        setForm((p) => ({
+                          ...p,
+                          metadata: { ...p.metadata, sia_pegadinha_explanation: e.target.value },
+                        }))
+                      }
+                    />
+                  </div>
+                </div>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="q-sia-interp-trigger">Interpretação — trecho exato</Label>
+                    <Input
+                      id="q-sia-interp-trigger"
+                      value={form.metadata.sia_interpretation_trigger}
+                      onChange={(e) =>
+                        setForm((p) => ({
+                          ...p,
+                          metadata: { ...p.metadata, sia_interpretation_trigger: e.target.value },
+                        }))
+                      }
+                      placeholder='ex.: "mais adequada"'
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="q-sia-interp-explanation">Interpretação — explicação</Label>
+                    <Input
+                      id="q-sia-interp-explanation"
+                      value={form.metadata.sia_interpretation_explanation}
+                      onChange={(e) =>
+                        setForm((p) => ({
+                          ...p,
+                          metadata: {
+                            ...p.metadata,
+                            sia_interpretation_explanation: e.target.value,
+                          },
+                        }))
+                      }
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="q-sia-longtext-excerpts">
+                    Texto longo — trechos-chave (um por linha)
+                  </Label>
+                  <Textarea
+                    id="q-sia-longtext-excerpts"
+                    value={form.metadata.sia_long_text_key_excerpts}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, sia_long_text_key_excerpts: e.target.value },
+                      }))
+                    }
+                    rows={3}
+                    placeholder={"Cite trechos exatos do enunciado, um por linha"}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-sia-longtext-note">Texto longo — observação</Label>
+                  <Input
+                    id="q-sia-longtext-note"
+                    value={form.metadata.sia_long_text_note}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, sia_long_text_note: e.target.value },
+                      }))
+                    }
+                    placeholder="ex.: as demais linhas serviam apenas para contextualizar"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="q-sia-calc-steps">Cálculo — resolução passo a passo</Label>
+                  <Textarea
+                    id="q-sia-calc-steps"
+                    value={form.metadata.sia_calculation_steps}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, sia_calculation_steps: e.target.value },
+                      }))
+                    }
+                    rows={3}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="q-sia-calc-error">Cálculo — erro mais comum</Label>
+                  <Input
+                    id="q-sia-calc-error"
+                    value={form.metadata.sia_calculation_common_error}
+                    onChange={(e) =>
+                      setForm((p) => ({
+                        ...p,
+                        metadata: { ...p.metadata, sia_calculation_common_error: e.target.value },
+                      }))
+                    }
+                  />
                 </div>
               </div>
             </section>
 
             <DialogFooter>
-              <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>Cancelar</Button>
-              <Button type="submit" disabled={save.isPending}>{save.isPending ? "Salvando..." : "Salvar"}</Button>
+              <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>
+                Cancelar
+              </Button>
+              <Button type="submit" disabled={save.isPending}>
+                {save.isPending ? "Salvando..." : "Salvar"}
+              </Button>
             </DialogFooter>
           </form>
         </DialogContent>
       </Dialog>
 
-      <AlertDialog open={!!deleteTarget} onOpenChange={(open) => { if (!open) { setDeleteTarget(null); setDeleteDeps(null); } }}>
+      <AlertDialog
+        open={!!deleteTarget}
+        onOpenChange={(open) => {
+          if (!open) {
+            setDeleteTarget(null);
+            setDeleteDeps(null);
+          }
+        }}
+      >
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{deleteBlocked ? "Exclusão bloqueada" : "Excluir questão?"}</AlertDialogTitle>
+            <AlertDialogTitle>
+              {deleteBlocked ? "Exclusão bloqueada" : "Excluir questão?"}
+            </AlertDialogTitle>
             <AlertDialogDescription asChild>
               <div className="space-y-2 text-sm text-muted-foreground">
                 {deleteBlocked ? (
                   <>
                     <p>Esta questão possui vínculos com dados de alunos e não pode ser excluída.</p>
                     <ul className="list-disc pl-5">
-                      {deleteDeps?.filter((d) => d.count > 0).map((d) => <li key={d.label}>{d.count} {d.label}.</li>)}
+                      {deleteDeps
+                        ?.filter((d) => d.count > 0)
+                        .map((d) => (
+                          <li key={d.label}>
+                            {d.count} {d.label}.
+                          </li>
+                        ))}
                     </ul>
                   </>
                 ) : (
@@ -749,7 +1170,14 @@ export function QuestionsPage() {
             ) : (
               <>
                 <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" disabled={remove.isPending} onClick={(e) => { e.preventDefault(); if (deleteTarget) remove.mutate(deleteTarget); }}>
+                <AlertDialogAction
+                  className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                  disabled={remove.isPending}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (deleteTarget) remove.mutate(deleteTarget);
+                  }}
+                >
                   {remove.isPending ? "Excluindo..." : "Excluir"}
                 </AlertDialogAction>
               </>

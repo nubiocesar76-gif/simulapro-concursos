@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "workId": "ebserh-2025",
-  "stage": "TEXT_EXTRACTED",
+  "stage": "PUBLISHED",
   "history": [
     {
       "stage": "REGISTERED",
@@ -20,6 +20,24 @@
       "at": "2026-07-08T10:45:00.000Z",
       "by": "SimulaPro Homologação",
       "note": "Estrutura raw.md criada — pronta para receber texto bruto da prova."
+    },
+    {
+      "stage": "AUDITED",
+      "at": "2026-07-21T00:00:00.000Z",
+      "by": "SimulaPro Produção Oficial — Prova 001",
+      "note": "Gabarito preliminar x definitivo auditado (4 divergências corrigidas: Q13, Q21, Q23, Q36 anulada). 60 questões extraídas, 59 válidas classificadas na taxonomia oficial FGV."
+    },
+    {
+      "stage": "SEEDED",
+      "at": "2026-07-21T00:00:00.000Z",
+      "by": "SimulaPro Produção Oficial — Prova 001",
+      "note": "59 questões convertidas (convert:questions) e importadas (seed:questions) para o pacote banco-de-questoes-enfermagem v1.0. Corrigido bug de truncamento de 1000 linhas no catálogo do construtor de sessão (src/lib/study-builder.ts), exposto pela primeira vez por este seed."
+    },
+    {
+      "stage": "PUBLISHED",
+      "at": "2026-07-21T00:00:00.000Z",
+      "by": "SimulaPro Produção Oficial — Prova 001",
+      "note": "Testado no Portal do Aluno com conta QA (qa.ebserh2025.simulapro@example.com): filtro Ano=2025 retorna as 59 questões, sessão criada, questão renderizada e respondida corretamente. Pacote/Versão PUBLISHED e Distribuição ACTIVE pré-existentes. Prova 001 oficialmente publicada."
     }
   ],
   "sourcePdf": "source.pdf",

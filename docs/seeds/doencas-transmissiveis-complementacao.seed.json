@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "A infeccao pelo virus Zika, transmitida principalmente pelo mosquito Aedes aegypti (mesmo vetor da dengue e da chikungunya), caracteriza-se, na maioria dos casos sintomaticos em adultos, por um quadro:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "geralmente mais grave que a dengue, com choque frequente."
+        },
+        {
+          "letter": "B",
+          "text": "geralmente leve/autolimitado, com exantema pruriginoso, febre baixa ou ausente, hiperemia conjuntival (conjuntivite nao purulenta) e artralgia leve."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente assintomatico, nunca causando qualquer manifestacao clinica no adulto."
+        },
+        {
+          "letter": "D",
+          "text": "restrito a manifestacoes neurologicas graves em todos os casos."
+        },
+        {
+          "letter": "E",
+          "text": "transmitido exclusivamente por transfusao sanguinea, nunca por vetor."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "No adulto, a infeccao por Zika e tipicamente leve e autolimitada, com exantema pruriginoso, febre baixa, conjuntivite nao purulenta e artralgia leve - a maior preocupacao clinica esta na sindrome congenita, nao na gravidade no adulto.",
+      "references": [
+        "Ministerio da Saude, Guia de Vigilancia em Saude - Zika."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3ba9242dfe566d8dab897e99fc3adfd19294712c2be5753e50fa38392a5b264a"
+    },
+    {
+      "statement": "Em relacao a transmissao vertical do HIV (transmissao da gestante para o filho), medidas reconhecidas para reducao do risco incluem, entre outras:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "uso de terapia antirretroviral pela gestante durante o pre-natal e o parto, profilaxia antirretroviral no recem-nascido e contraindicacao ao aleitamento materno."
+        },
+        {
+          "letter": "B",
+          "text": "suspensao de qualquer acompanhamento pre-natal especifico, por nao haver medida eficaz."
+        },
+        {
+          "letter": "C",
+          "text": "indicacao obrigatoria de parto vaginal em qualquer situacao, independentemente da carga viral."
+        },
+        {
+          "letter": "D",
+          "text": "amamentacao exclusiva como forma de transferir imunidade protetora ao recem-nascido."
+        },
+        {
+          "letter": "E",
+          "text": "dispensa de profilaxia no recem-nascido quando a gestante fez uso irregular da TARV."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "TARV na gestacao/parto, profilaxia no RN e contraindicacao ao aleitamento materno (substituido por formula infantil) sao medidas centrais de reducao da transmissao vertical do HIV no protocolo brasileiro.",
+      "references": [
+        "Ministerio da Saude, Protocolo Clinico e Diretrizes Terapeuticas para Prevencao da Transmissao Vertical de HIV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7f20069b83a557ea4f17d41a050923196f94ed04a7ee0022cf1f07d2ec7418d3"
+    },
+    {
+      "statement": "Um paciente com diagnostico confirmado de chikungunya ha mais de 3 meses relata persistencia de dor articular intensa, incapacitante, nas mesmas articulacoes inicialmente acometidas na fase aguda. Esse quadro e compativel com a fase:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aguda da chikungunya, ainda em curso."
+        },
+        {
+          "letter": "B",
+          "text": "cronica da chikungunya, caracterizada pela persistencia de artralgia/artrite por semanas a meses (ou anos) apos a infeccao aguda, podendo ser incapacitante."
+        },
+        {
+          "letter": "C",
+          "text": "de convalescenca, sem qualquer relacao com a chikungunya, indicando outra causa."
+        },
+        {
+          "letter": "D",
+          "text": "inexistente - a chikungunya nunca cursa com sintomas alem do periodo agudo de poucos dias."
+        },
+        {
+          "letter": "E",
+          "text": "de reinfeccao obrigatoria por novo sorotipo viral."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "A fase cronica da chikungunya, marca caracteristica da doenca, envolve persistencia de artralgia/artrite por semanas a meses ou anos, podendo ser incapacitante.",
+      "references": [
+        "Ministerio da Saude, Guia de Vigilancia em Saude - Chikungunya."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a39ead3bbbd37c9796d4ceebd797404e9706f5eddfc877d630f85a50c3004966"
+    },
+    {
+      "statement": "Em relacao ao diagnostico diferencial entre sarampo e rubeola, ambas doencas exantematicas virais, uma caracteristica que auxilia na diferenciacao e que a rubeola, em comparacao ao sarampo, tipicamente apresenta:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "quadro clinico geral mais grave, com maior taxa de complicacoes respiratorias graves."
+        },
+        {
+          "letter": "B",
+          "text": "sintomas mais brandos, com febre baixa ou ausente, e linfadenopatia (especialmente retroauricular/occipital) proeminente."
+        },
+        {
+          "letter": "C",
+          "text": "sinal de Koplik como achado caracteristico."
+        },
+        {
+          "letter": "D",
+          "text": "maior letalidade que o sarampo em qualquer faixa etaria."
+        },
+        {
+          "letter": "E",
+          "text": "ausencia completa de exantema cutaneo."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "A rubeola tipicamente apresenta quadro mais brando que o sarampo, com linfadenopatia proeminente (retroauricular/occipital); o sinal de Koplik e especifico do sarampo, nao da rubeola.",
+      "references": [
+        "Ministerio da Saude, Guia de Vigilancia em Saude - Rubeola."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c0c574c075ab3b4f74bcfe8e26a447ab9f2855daf374739a7016dd4b2a6a2e45"
+    },
+    {
+      "statement": "A janela imunologica, no contexto da infeccao pelo HIV, e definida como o periodo entre:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o inicio do tratamento antirretroviral e a supressao viral completa."
+        },
+        {
+          "letter": "B",
+          "text": "a exposicao/infeccao pelo virus e o momento em que os exames sorologicos sao capazes de detectar anticorpos anti-HIV em quantidade suficiente para um resultado positivo confiavel."
+        },
+        {
+          "letter": "C",
+          "text": "o diagnostico da infeccao e o inicio dos sintomas da sindrome de imunodeficiencia adquirida."
+        },
+        {
+          "letter": "D",
+          "text": "duas doses de vacina contra HIV, inexistente atualmente."
+        },
+        {
+          "letter": "E",
+          "text": "a alta hospitalar e o retorno ambulatorial."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "A janela imunologica e o intervalo entre a infeccao e a deteccao sorologica confiavel de anticorpos anti-HIV, periodo no qual um teste pode ser falso-negativo mesmo com infeccao presente.",
+      "references": [
+        "Ministerio da Saude, Protocolo Clinico e Diretrizes Terapeuticas para Manejo da Infeccao pelo HIV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c77a3857fc8c9def2b16a76e8cc2d610ac5475d73f1041d021fcb30dfc1158c8"
+    },
+    {
+      "statement": "A leptospirose, doenca bacteriana de importancia em saude publica no Brasil, tem como principal reservatorio e fonte de transmissao para humanos:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "mosquitos do genero Aedes."
+        },
+        {
+          "letter": "B",
+          "text": "roedores (especialmente o rato de esgoto), cuja urina contamina agua e solo, sendo a principal via de transmissao o contato com agua/lama contaminada, especialmente em periodos de enchente."
+        },
+        {
+          "letter": "C",
+          "text": "carrapatos."
+        },
+        {
+          "letter": "D",
+          "text": "aves migratorias."
+        },
+        {
+          "letter": "E",
+          "text": "transmissao exclusivamente interpessoal, sem participacao de reservatorio animal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "Roedores (especialmente o rato de esgoto) sao o principal reservatorio; a transmissao ocorre por contato com agua/solo contaminados pela urina do animal, especialmente em enchentes.",
+      "references": [
+        "Ministerio da Saude, Guia de Vigilancia em Saude - Leptospirose."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ce39a602f1fcba03c63174f57cefbdb280c3701be67052bef241235ead2f5f23"
+    },
+    {
+      "statement": "Um paciente com historico de exposicao a agua de enchente apresenta, apos periodo de incubacao, febre, mialgia intensa (especialmente em panturrilhas), ictericia rubinica (tonalidade avermelhada) e alteracao da funcao renal. Esse quadro e compativel com a forma grave da leptospirose, conhecida como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Sindrome de Weil."
+        },
+        {
+          "letter": "B",
+          "text": "Sindrome de Guillain-Barre."
+        },
+        {
+          "letter": "C",
+          "text": "Sindrome do Choque Toxico."
+        },
+        {
+          "letter": "D",
+          "text": "Sindrome Nefrotica primaria."
+        },
+        {
+          "letter": "E",
+          "text": "Sindrome Hemolitico-Uremica."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "A Sindrome de Weil e a forma grave classica da leptospirose, caracterizada por ictericia (rubinica), insuficiencia renal e manifestacoes hemorragicas.",
+      "references": [
+        "Ministerio da Saude, Guia de Vigilancia em Saude - Leptospirose."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e6d6c27627f964e28da97dfa7a25f54530ba07ac58bed896bf820b467c19ab58"
+    },
+    {
+      "statement": "Em relacao a situacao epidemiologica da COVID-19 no Brasil, apos o fim da Emergencia de Saude Publica de Importancia Nacional (ESPIN) declarada em razao da pandemia, a vigilancia da doenca:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "foi completamente interrompida, nao havendo mais qualquer acompanhamento."
+        },
+        {
+          "letter": "B",
+          "text": "passou a ser realizada de forma integrada a vigilancia de outras sindromes respiratorias, mantendo o monitoramento da circulacao viral e das medidas de controle recomendadas pelo Ministerio da Saude, ainda que fora do regime de emergencia."
+        },
+        {
+          "letter": "C",
+          "text": "tornou-se de responsabilidade exclusiva da Organizacao Mundial da Saude, sem participacao do Ministerio da Saude."
+        },
+        {
+          "letter": "D",
+          "text": "manteve-se identica, sem qualquer alteracao de protocolo desde o inicio da pandemia."
+        },
+        {
+          "letter": "E",
+          "text": "deixou de ser doenca de notificacao, por nao haver mais risco a saude publica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "Apos o fim da ESPIN, a vigilancia da COVID-19 passou a ser integrada a vigilancia de sindromes respiratorias em geral, permanecendo monitorada e notificavel, sem que isso represente interrupcao do acompanhamento.",
+      "references": [
+        "Ministerio da Saude, vigilancia epidemiologica pos-ESPIN."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f9a43279deb474cb0f6d64af50271ea38bdc211a5c01417f8d937f987b2fc5fe"
+    },
+    {
+      "statement": "O sarampo, doenca exantematica viral aguda, altamente transmissivel, caracteriza-se classicamente por um prodromo com febre alta, tosse, coriza e conjuntivite, seguido do aparecimento de exantema. Um sinal clinico caracteristico e especifico do sarampo, que pode preceder o exantema cutaneo, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o sinal de Koplik (pequenas manchas esbranquicadas na mucosa oral)."
+        },
+        {
+          "letter": "B",
+          "text": "a presenca de vesiculas com liquido claro por todo o corpo."
+        },
+        {
+          "letter": "C",
+          "text": "a descamacao em 'dedo de luva' nas extremidades."
+        },
+        {
+          "letter": "D",
+          "text": "a linfadenopatia retroauricular isolada, sem qualquer outro sintoma."
+        },
+        {
+          "letter": "E",
+          "text": "o sarampo nao apresenta nenhum sinal caracteristico alem do exantema."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-em-doencas-transmissiveis",
+      "topic": "prevencao-e-controle-de-doencas-transmissiveis",
+      "explanation": "O sinal de Koplik (manchas esbranquicadas na mucosa oral) e achado patognomonico do sarampo, frequentemente precedendo o exantema cutaneo.",
+      "references": [
+        "Ministerio da Saude, Guia de Vigilancia em Saude - Sarampo."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "faa04f371815b30b3d3a65e2cf0cf403e2b7474aaecaa8de6d2823d3409ba06b"
+    }
+  ]
+}

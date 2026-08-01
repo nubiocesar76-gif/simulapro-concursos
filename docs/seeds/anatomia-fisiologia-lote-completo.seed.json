@@ -1,0 +1,1980 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Ao interpretar a sequencia de conducao eletrica cardiaca, um enfermeiro identifica corretamente que, apos o estimulo originado no no sinoatrial, ocorre um breve retardo fisiologico antes de o impulso alcancar os ventriculos. A estrutura responsavel por esse retardo, que permite o esvaziamento atrial completo antes da contracao ventricular, e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "No sinoatrial"
+        },
+        {
+          "letter": "B",
+          "text": "No atrioventricular"
+        },
+        {
+          "letter": "C",
+          "text": "Feixe de His"
+        },
+        {
+          "letter": "D",
+          "text": "Ramo direito do feixe de His"
+        },
+        {
+          "letter": "E",
+          "text": "Fibras de Purkinje"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "anatomia-fisiologia",
+      "topic": "ciclo-cardiaco-e-sistema-de-conducao",
+      "explanation": "O no atrioventricular (AV) retarda a conducao do impulso entre atrios e ventriculos, garantindo que a contracao atrial se complete antes da contracao ventricular, otimizando o enchimento ventricular.",
+      "references": [
+        "Guyton & Hall",
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "09591574bb4e0f3ce93cfcb81924ff240925e0ed21f7ca4fa04fd87543513087"
+    },
+    {
+      "statement": "As articulacoes que permitem ampla amplitude de movimento, como o ombro e o joelho, e que apresentam cavidade articular preenchida por liquido sinovial, sao classificadas como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Sinartroses"
+        },
+        {
+          "letter": "B",
+          "text": "Anfiartroses"
+        },
+        {
+          "letter": "C",
+          "text": "Diartroses (sinoviais)"
+        },
+        {
+          "letter": "D",
+          "text": "Sinfises"
+        },
+        {
+          "letter": "E",
+          "text": "Suturas"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-musculoesqueletico",
+      "explanation": "As diartroses (articulacoes sinoviais) possuem cavidade articular com liquido sinovial e permitem ampla mobilidade; sinartroses (ex.: suturas cranianas) sao imoveis, e anfiartroses (ex.: sinfise pubica) tem mobilidade limitada.",
+      "references": [
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "11147982c247f8047e8dd3e9f4cc2051e0a9e900cdcb8017cbb25f7aa7c4292c"
+    },
+    {
+      "statement": "Os barorreceptores localizados no arco aortico e no seio carotideo atuam como mecanismo reflexo de curto prazo na regulacao da pressao arterial. Diante de uma queda aguda da pressao arterial, a resposta fisiologica esperada, mediada por esses receptores, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "reducao da frequencia cardiaca e vasodilatacao, agravando a hipotensao."
+        },
+        {
+          "letter": "B",
+          "text": "aumento da frequencia cardiaca e vasoconstricao periferica, elevando a pressao arterial."
+        },
+        {
+          "letter": "C",
+          "text": "inibicao completa do sistema nervoso autonomo simpatico."
+        },
+        {
+          "letter": "D",
+          "text": "resposta exclusivamente renal, sem participacao do sistema nervoso autonomo."
+        },
+        {
+          "letter": "E",
+          "text": "nenhuma resposta, pois os barorreceptores so atuam em hipertensao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-cardiovascular",
+      "explanation": "A queda de pressao reduz o estiramento dos barorreceptores, diminuindo sua atividade inibitoria sobre o centro vasomotor; o resultado e aumento do tonus simpatico, elevando frequencia cardiaca e resistencia vascular periferica para restaurar a pressao arterial.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "13f5db803cfdb8a64d2bd0fab78621ec9aa454f034698f1721b2c4aecc4e543c"
+    },
+    {
+      "statement": "Durante a ausculta cardiaca, o enfermeiro posiciona o estetoscopio no foco correspondente a valva que se fecha ao final da sistole ventricular, impedindo o retorno de sangue do ventriculo esquerdo para o atrio esquerdo. Essa valva e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Tricuspide"
+        },
+        {
+          "letter": "B",
+          "text": "Pulmonar"
+        },
+        {
+          "letter": "C",
+          "text": "Mitral"
+        },
+        {
+          "letter": "D",
+          "text": "Aortica"
+        },
+        {
+          "letter": "E",
+          "text": "Sigmoide pulmonar"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-do-coracao-e-grandes-vasos",
+      "explanation": "A valva mitral (bicuspide), entre atrio e ventriculo esquerdos, fecha-se ao inicio da sistole ventricular para impedir refluxo para o atrio. Tricuspide e a valva atrioventricular direita; pulmonar e aortica sao valvas semilunares que regulam a saida dos ventriculos, nao o refluxo atrioventricular esquerdo.",
+      "references": [
+        "Tortora, Principios de Anatomia e Fisiologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "17f372685afe42b6e134ef808a48e6f8cf9c33570b5cdc75227c19c6fa478ec6"
+    },
+    {
+      "statement": "O debito cardiaco, parametro fisiologico central na avaliacao hemodinamica do paciente, e definido como o produto entre:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "pressao arterial sistolica e pressao arterial diastolica."
+        },
+        {
+          "letter": "B",
+          "text": "frequencia cardiaca e volume sistolico."
+        },
+        {
+          "letter": "C",
+          "text": "frequencia respiratoria e volume corrente."
+        },
+        {
+          "letter": "D",
+          "text": "pressao venosa central e resistencia vascular periferica, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "frequencia cardiaca e pressao arterial media."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-fafipa",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-cardiovascular",
+      "explanation": "Debito cardiaco (DC) = frequencia cardiaca (FC) × volume sistolico (VS), representando o volume de sangue ejetado pelo ventriculo por minuto.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "19067c9a35ce9c1856659e1f57b675eae146ea7c5533b8917ac03de6f61c40c3"
+    },
+    {
+      "statement": "Os hormonios antidiuretico (ADH) e ocitocina, embora liberados pela neuro-hipofise (hipofise posterior), nao sao produzidos nessa estrutura. Sua real origem de sintese e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "A adeno-hipofise"
+        },
+        {
+          "letter": "B",
+          "text": "O hipotalamo"
+        },
+        {
+          "letter": "C",
+          "text": "O cortex adrenal"
+        },
+        {
+          "letter": "D",
+          "text": "A tireoide"
+        },
+        {
+          "letter": "E",
+          "text": "O pancreas endocrino"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-fafipa",
+      "subject": "anatomia-fisiologia",
+      "topic": "eixo-hipotalamo-hipofise",
+      "explanation": "ADH e ocitocina sao sintetizados por neuronios hipotalamicos e apenas transportados e armazenados/liberados pela neuro-hipofise — distincao classica entre sintese (hipotalamo) e liberacao (hipofise posterior).",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2351de0f0e7bda9ed395945816db95cea558930fe98fe9821767581ff5177b25"
+    },
+    {
+      "statement": "O tronco encefalico, formado por mesencefalo, ponte e bulbo, abriga centros vitais fundamentais. Entre as funcoes reguladas por essa regiao esta o(a):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Controle voluntario da linguagem articulada."
+        },
+        {
+          "letter": "B",
+          "text": "Controle automatico da respiracao e da frequencia cardiaca."
+        },
+        {
+          "letter": "C",
+          "text": "Memoria de longo prazo."
+        },
+        {
+          "letter": "D",
+          "text": "Processamento visual primario."
+        },
+        {
+          "letter": "E",
+          "text": "Coordenacao motora fina exclusiva dos membros superiores."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-central",
+      "explanation": "O tronco encefalico, especialmente o bulbo, contem centros vitais automaticos de controle respiratorio e cardiovascular, essenciais a manutencao da vida.",
+      "references": [
+        "Tortora",
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "31193531b4a1b8447246e80a3f08b76c13c8c409b18883f2f3d38b2855368cad"
+    },
+    {
+      "statement": "A pele e histologicamente organizada em camadas. A camada mais superficial, avascular, composta predominantemente por queratinocitos, e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Hipoderme"
+        },
+        {
+          "letter": "B",
+          "text": "Derme"
+        },
+        {
+          "letter": "C",
+          "text": "Epiderme"
+        },
+        {
+          "letter": "D",
+          "text": "Fascia muscular"
+        },
+        {
+          "letter": "E",
+          "text": "Tela subcutanea, exclusivamente"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-tegumentar",
+      "explanation": "A epiderme e a camada mais externa e avascular da pele, composta majoritariamente por queratinocitos; a derme, subjacente, e vascularizada e contem anexos cutaneos.",
+      "references": [
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "319011f6df3ec7d5edae132c33e31fa5d197a271a5b36606c2d3da66630c47e1"
+    },
+    {
+      "statement": "Durante a inspiracao normal em repouso, o principal musculo responsavel pela expansao da caixa toracica e geracao da pressao intrapleural negativa e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Intercostal externo, exclusivamente."
+        },
+        {
+          "letter": "B",
+          "text": "Diafragma."
+        },
+        {
+          "letter": "C",
+          "text": "Esternocleidomastoideo."
+        },
+        {
+          "letter": "D",
+          "text": "Reto abdominal."
+        },
+        {
+          "letter": "E",
+          "text": "Intercostal interno."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "anatomia-fisiologia",
+      "topic": "mecanica-ventilatoria-e-trocas-gasosas",
+      "explanation": "O diafragma e o principal musculo inspiratorio; sua contracao aumenta o volume da cavidade toracica, reduzindo a pressao intrapleural e permitindo a entrada de ar. Os intercostais externos participam, mas de forma secundaria no repouso.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "39cec9e3748b81397278f76e04708170e3c08c419dc3bdda91434c6786a574a7"
+    },
+    {
+      "statement": "Sobre a divisao lobar dos pulmoes, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o pulmao direito possui dois lobos e o esquerdo, tres."
+        },
+        {
+          "letter": "B",
+          "text": "ambos os pulmoes possuem tres lobos cada."
+        },
+        {
+          "letter": "C",
+          "text": "o pulmao direito possui tres lobos e o esquerdo, dois."
+        },
+        {
+          "letter": "D",
+          "text": "os pulmoes nao possuem divisao lobar, apenas segmentar."
+        },
+        {
+          "letter": "E",
+          "text": "o pulmao esquerdo possui um unico lobo, devido ao espaco ocupado pelo coracao."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-das-vias-aereas-e-pulmoes",
+      "explanation": "O pulmao direito e dividido em tres lobos (superior, medio, inferior); o esquerdo, em dois (superior e inferior), devido ao espaco ocupado pelo coracao (incisura cardiaca).",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3a487e07a3be7d59ed5cc52721c68d051ff28554409c0aa777b693dea009f103"
+    },
+    {
+      "statement": "O principal mecanismo hormonal envolvido na regulacao renal normal do sodio e, indiretamente, do volume extracelular, e o sistema:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Renina-angiotensina-aldosterona"
+        },
+        {
+          "letter": "B",
+          "text": "Insulina-glucagon"
+        },
+        {
+          "letter": "C",
+          "text": "Tireoidiano (T3/T4)"
+        },
+        {
+          "letter": "D",
+          "text": "Hipotalamo-neuro-hipofisario exclusivo"
+        },
+        {
+          "letter": "E",
+          "text": "Somatotrofico (GH)"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "equilibrio-hidroeletrolitico-e-acido-base",
+      "explanation": "O sistema renina-angiotensina-aldosterona regula a reabsorcao renal de sodio e agua, sendo o principal eixo hormonal de controle do volume extracelular em condicoes normais.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "442bbf2d20ff19ac02d3669f8af840e16c00f8d9100c0335ee96cabdb9e10263"
+    },
+    {
+      "statement": "A glandula endocrina localizada na regiao cervical anterior, responsavel pela producao dos hormonios T3 e T4, reguladores do metabolismo basal, e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Paratireoide"
+        },
+        {
+          "letter": "B",
+          "text": "Tireoide"
+        },
+        {
+          "letter": "C",
+          "text": "Adrenal"
+        },
+        {
+          "letter": "D",
+          "text": "Hipofise"
+        },
+        {
+          "letter": "E",
+          "text": "Timo"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "anatomia-fisiologia",
+      "topic": "glandulas-endocrinas-e-hormonios",
+      "explanation": "A tireoide produz T3 (triiodotironina) e T4 (tiroxina), hormonios centrais na regulacao do metabolismo basal.",
+      "references": [
+        "Guyton & Hall",
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4742e370cc863174eaa0edf6cb3297b2cae31f7909c278c95a1b7b8fd7d72948"
+    },
+    {
+      "statement": "A imunidade inata, primeira linha de defesa do organismo, diferencia-se da imunidade adaptativa principalmente por ser:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "especifica para um unico patogeno e dotada de memoria imunologica duradoura."
+        },
+        {
+          "letter": "B",
+          "text": "inespecifica e de resposta imediata, sem gerar memoria imunologica."
+        },
+        {
+          "letter": "C",
+          "text": "mediada exclusivamente por linfocitos B produtores de anticorpos."
+        },
+        {
+          "letter": "D",
+          "text": "ausente ao nascimento, desenvolvendo-se apenas apos vacinacao."
+        },
+        {
+          "letter": "E",
+          "text": "identica em mecanismo a imunidade adaptativa, diferindo apenas no orgao de origem."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-hematologico-e-imunologico",
+      "explanation": "A imunidade inata e inespecifica e de resposta imediata (barreiras fisicas, fagocitos), sem memoria imunologica; a imunidade adaptativa (linfocitos B/T) e especifica e gera memoria, respondendo mais lentamente na primeira exposicao.",
+      "references": [
+        "Guyton & Hall",
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4f48ae1486fbcac9059b58287e55aedff2759a320e23059de828245b1ad358bb"
+    },
+    {
+      "statement": "A vitamina B12 (cobalamina), diferentemente da maioria dos demais nutrientes absorvidos ao longo de todo o intestino delgado, tem sua absorcao concentrada em um segmento especifico. Esse segmento e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Duodeno"
+        },
+        {
+          "letter": "B",
+          "text": "Jejuno proximal"
+        },
+        {
+          "letter": "C",
+          "text": "Ileo terminal"
+        },
+        {
+          "letter": "D",
+          "text": "Ceco"
+        },
+        {
+          "letter": "E",
+          "text": "Colon sigmoide"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "anatomia-fisiologia",
+      "topic": "fisiologia-da-digestao-e-absorcao",
+      "explanation": "A absorcao da vitamina B12 ocorre predominantemente no ileo terminal, dependente do fator intrinseco produzido no estomago — ponto anatomico classicamente cobrado por sua especificidade topografica.",
+      "references": [
+        "Guyton & Hall",
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "521a72d495e78f95a9279adb20d9ba315393bc09dafb675b10e4743f02a2f6d7"
+    },
+    {
+      "statement": "As glandulas responsaveis pela producao de suor, participando da termorregulacao corporal normal, sao as glandulas:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Sebaceas"
+        },
+        {
+          "letter": "B",
+          "text": "Sudoriparas"
+        },
+        {
+          "letter": "C",
+          "text": "Tireoide"
+        },
+        {
+          "letter": "D",
+          "text": "Mamarias, exclusivamente"
+        },
+        {
+          "letter": "E",
+          "text": "Salivares"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-tegumentar",
+      "explanation": "As glandulas sudoriparas produzem suor, contribuindo para a termorregulacao por evaporacao; as sebaceas produzem sebo, com funcao lubrificante e protetora, nao termorreguladora.",
+      "references": [
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "52e5874f35add6ca7b08fe1cac29255b9de7781725127bcc5f5a34614d0c4ef8"
+    },
+    {
+      "statement": "A estrutura encefalica primariamente responsavel pela coordenacao motora, equilibrio e ajuste fino dos movimentos voluntarios e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Cerebelo"
+        },
+        {
+          "letter": "B",
+          "text": "Lobo frontal"
+        },
+        {
+          "letter": "C",
+          "text": "Lobo occipital"
+        },
+        {
+          "letter": "D",
+          "text": "Bulbo"
+        },
+        {
+          "letter": "E",
+          "text": "Talamo"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-central",
+      "explanation": "O cerebelo coordena a atividade motora, o equilibrio e o tonus muscular, ajustando movimentos iniciados pelo cortex motor. O lobo frontal esta associado ao planejamento motor voluntario e funcoes executivas, nao a coordenacao fina propriamente dita.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5520d241a04bc23b14841f7f6c9c6f8e19943280bc2c771d88717e794eef036b"
+    },
+    {
+      "statement": "Nas ilhotas pancreaticas (ilhotas de Langerhans), as celulas beta sao responsaveis pela producao de insulina, hormonio cuja acao fisiologica normal e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Elevar a glicemia, estimulando a glicogenolise hepatica."
+        },
+        {
+          "letter": "B",
+          "text": "Reduzir a glicemia, promovendo a captacao celular de glicose."
+        },
+        {
+          "letter": "C",
+          "text": "Estimular exclusivamente a digestao de proteinas no intestino."
+        },
+        {
+          "letter": "D",
+          "text": "Inibir a secrecao de todos os demais hormonios pancreaticos."
+        },
+        {
+          "letter": "E",
+          "text": "Elevar a pressao arterial por vasoconstricao direta."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "anatomia-fisiologia",
+      "topic": "pancreas-endocrino",
+      "explanation": "A insulina reduz a glicemia ao promover a captacao de glicose pelas celulas, principalmente musculares e adiposas, e estimular sua conversao em glicogenio no figado.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "590870be49bc1c060f860d0be1aa8eb91b4703c478329b307f0615f45656a4cb"
+    },
+    {
+      "statement": "O impulso eletrico que da origem a cada batimento cardiaco normal origina-se espontaneamente em uma estrutura localizada na parede do atrio direito, proxima a desembocadura da veia cava superior, conhecida como marca-passo natural do coracao. Essa estrutura e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "No atrioventricular"
+        },
+        {
+          "letter": "B",
+          "text": "No sinoatrial"
+        },
+        {
+          "letter": "C",
+          "text": "Feixe de His"
+        },
+        {
+          "letter": "D",
+          "text": "Fibras de Purkinje"
+        },
+        {
+          "letter": "E",
+          "text": "Septo interatrial"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "anatomia-fisiologia",
+      "topic": "ciclo-cardiaco-e-sistema-de-conducao",
+      "explanation": "O no sinoatrial (SA), localizado no atrio direito, gera o impulso eletrico espontaneo que inicia cada ciclo cardiaco, sendo por isso chamado marca-passo natural. O no AV apenas retransmite o estimulo aos ventriculos, com retardo fisiologico.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5bb3be49f158aca392b1db780428f3a38ad6cb5dc6a8711f075e85e700982fdc"
+    },
+    {
+      "statement": "Considerando a sequencia anatomica do trato gastrointestinal, a ordem correta dos segmentos do intestino delgado, do proximal ao distal, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Jejuno, duodeno, ileo."
+        },
+        {
+          "letter": "B",
+          "text": "Ileo, jejuno, duodeno."
+        },
+        {
+          "letter": "C",
+          "text": "Duodeno, jejuno, ileo."
+        },
+        {
+          "letter": "D",
+          "text": "Duodeno, ileo, jejuno."
+        },
+        {
+          "letter": "E",
+          "text": "Jejuno, ileo, duodeno."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fundacao-fafipa",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-do-trato-gastrointestinal",
+      "explanation": "O intestino delgado e dividido, do proximal ao distal, em duodeno (recebe secrecoes biliar e pancreatica), jejuno e ileo (que se conecta ao ceco, no intestino grosso).",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5bf2dd26b64413a7b4057d8dd24681262e3bd85a7c04391409e987dc45663ece"
+    },
+    {
+      "statement": "No ciclo cardiaco, os termos sistole e diastole descrevem, respectivamente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "relaxamento ventricular e contracao ventricular."
+        },
+        {
+          "letter": "B",
+          "text": "contracao ventricular e relaxamento ventricular."
+        },
+        {
+          "letter": "C",
+          "text": "contracao atrial e relaxamento atrial, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "abertura valvar e fechamento valvar, sem relacao com contracao muscular."
+        },
+        {
+          "letter": "E",
+          "text": "fase de enchimento rapido e fase de enchimento lento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "anatomia-fisiologia",
+      "topic": "ciclo-cardiaco-e-sistema-de-conducao",
+      "explanation": "Sistole e a fase de contracao (ejecao de sangue); diastole e a fase de relaxamento (enchimento das camaras). A nomenclatura consolidada na terminologia fisiologica e aplicada tanto a atrios quanto a ventriculos, sendo mais frequentemente referida ao ciclo ventricular.",
+      "references": [
+        "Tortora",
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5d8d88424b48a7986ee9bace88e8bfc546251b38d4e87a3ede1466eaed417f20"
+    },
+    {
+      "statement": "As glandulas adrenais (suprarrenais) apresentam duas regioes com funcoes distintas: o cortex, produtor de corticosteroides (como cortisol e aldosterona), e a medula, produtora de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Insulina e glucagon"
+        },
+        {
+          "letter": "B",
+          "text": "Adrenalina e noradrenalina"
+        },
+        {
+          "letter": "C",
+          "text": "Tiroxina e calcitonina"
+        },
+        {
+          "letter": "D",
+          "text": "Testosterona e estrogenio, exclusivamente"
+        },
+        {
+          "letter": "E",
+          "text": "Paratormonio"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "anatomia-fisiologia",
+      "topic": "glandulas-endocrinas-e-hormonios",
+      "explanation": "A medula adrenal produz adrenalina e noradrenalina, catecolaminas ligadas a resposta simpatica sistemica; o cortex produz corticosteroides distintos (glicocorticoides, mineralocorticoides).",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "657a8c2c78991d1f30ad2ee89dca0717a3f2b87a678a05b23d5ab306e5e68c07"
+    },
+    {
+      "statement": "Um enfermeiro observa que a estimulacao parassimpatica, mediada principalmente pelo nervo vago, reduz a frequencia cardiaca e estimula a motilidade gastrointestinal. Esse padrao de resposta fisiologica e compativel com a funcao do sistema nervoso parassimpatico de promover:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Resposta de luta ou fuga"
+        },
+        {
+          "letter": "B",
+          "text": "Resposta de repouso e digestao"
+        },
+        {
+          "letter": "C",
+          "text": "Vasoconstricao generalizada de emergencia"
+        },
+        {
+          "letter": "D",
+          "text": "Elevacao da glicemia para demanda energetica imediata"
+        },
+        {
+          "letter": "E",
+          "text": "Midriase para aumento da entrada de luz"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-autonomo",
+      "explanation": "O parassimpatico predomina em condicoes de repouso, promovendo bradicardia relativa e estimulo a digestao — padrao descrito como 'repouso e digestao', oposto funcional do simpatico.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "677bbc70e4eac2a7a5382518f587b18f4f15d46280bd6255f89c669a6f694471"
+    },
+    {
+      "statement": "O pancreas exocrino secreta, atraves do ducto pancreatico ate o duodeno, enzimas fundamentais para a digestao. Entre essas enzimas, a responsavel pela digestao de lipidios e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Amilase pancreatica."
+        },
+        {
+          "letter": "B",
+          "text": "Tripsina."
+        },
+        {
+          "letter": "C",
+          "text": "Lipase pancreatica."
+        },
+        {
+          "letter": "D",
+          "text": "Pepsina."
+        },
+        {
+          "letter": "E",
+          "text": "Insulina."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "anatomia-fisiologia",
+      "topic": "figado-vesicula-biliar-pancreas-exocrino",
+      "explanation": "A lipase pancreatica digere lipidios; a amilase digere carboidratos; a tripsina digere proteinas. A pepsina e enzima gastrica, e a insulina e hormonio da funcao endocrina do pancreas (nao exocrina).",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "67e3b4ce8ef8c0002a677e5f2f511ad95d133af7c27f7ba80c1c21dde4fe0aa9"
+    },
+    {
+      "statement": "No sistema reprodutor masculino, a glandula que circunda a porcao inicial da uretra e contribui com secrecoes para a composicao normal do semen e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Vesicula seminal, exclusivamente"
+        },
+        {
+          "letter": "B",
+          "text": "Prostata"
+        },
+        {
+          "letter": "C",
+          "text": "Testiculo"
+        },
+        {
+          "letter": "D",
+          "text": "Epididimo"
+        },
+        {
+          "letter": "E",
+          "text": "Ducto deferente"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-reprodutor",
+      "explanation": "A prostata circunda a uretra prostatica e contribui com secrecoes que compoem o semen, junto as vesiculas seminais e glandulas bulbouretrais.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "72c4f8887abbb66b80f860bd0104a19a35c291d07d2902bc1f88c588f62f3976"
+    },
+    {
+      "statement": "Em relacao a anatomia da uretra, e correto afirmar que, na mulher, em comparacao ao homem, ela e anatomicamente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Mais longa"
+        },
+        {
+          "letter": "B",
+          "text": "Mais curta"
+        },
+        {
+          "letter": "C",
+          "text": "De comprimento identico"
+        },
+        {
+          "letter": "D",
+          "text": "Ausente"
+        },
+        {
+          "letter": "E",
+          "text": "Localizada exclusivamente no interior do utero"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-do-rim-e-vias-urinarias",
+      "explanation": "A uretra feminina e anatomicamente mais curta que a masculina, que percorre todo o comprimento do penis.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "76e06034b808d9782878fc6d5fbdf185465d7c8acf9f22cba603869819ac6c77"
+    },
+    {
+      "statement": "O neurotransmissor liberado pelas fibras pos-ganglionares simpaticas na maioria dos orgaos-alvo e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Acetilcolina"
+        },
+        {
+          "letter": "B",
+          "text": "Noradrenalina"
+        },
+        {
+          "letter": "C",
+          "text": "Dopamina"
+        },
+        {
+          "letter": "D",
+          "text": "Serotonina"
+        },
+        {
+          "letter": "E",
+          "text": "GABA"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-autonomo",
+      "explanation": "A noradrenalina e o principal neurotransmissor das fibras pos-ganglionares simpaticas (excecao: glandulas sudoriparas, que usam acetilcolina). As fibras pre-ganglionares (simpaticas e parassimpaticas) e as pos-ganglionares parassimpaticas usam acetilcolina.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "807931a86466e1acfd0e46fe39124448571a22a1212282dceacf5e5d97232f38"
+    },
+    {
+      "statement": "Em contraposicao a insulina, o glucagon, produzido pelas celulas alfa das ilhotas pancreaticas, tem como principal efeito fisiologico normal:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Reduzir a glicemia por captacao celular de glicose."
+        },
+        {
+          "letter": "B",
+          "text": "Elevar a glicemia, estimulando a glicogenolise hepatica."
+        },
+        {
+          "letter": "C",
+          "text": "Estimular a producao de bile."
+        },
+        {
+          "letter": "D",
+          "text": "Inibir a secrecao de insulina de forma irreversivel."
+        },
+        {
+          "letter": "E",
+          "text": "Promover a absorcao intestinal de calcio."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "pancreas-endocrino",
+      "explanation": "O glucagon eleva a glicemia ao estimular a glicogenolise (quebra do glicogenio hepatico em glicose), atuando de forma antagonica e complementar a insulina.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8461610f8de966c45fe5dd12af13aaa2d49769c568223a3df6e168a9dc2534d2"
+    },
+    {
+      "statement": "Na grande circulacao (circulacao sistemica), o sangue oxigenado sai do ventriculo esquerdo, distribui-se aos tecidos do corpo e retorna ao coracao pelo atrio direito atraves de duas grandes veias. Essas veias sao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Veias pulmonares"
+        },
+        {
+          "letter": "B",
+          "text": "Veias cavas superior e inferior"
+        },
+        {
+          "letter": "C",
+          "text": "Veia porta e veia cava inferior"
+        },
+        {
+          "letter": "D",
+          "text": "Arterias carotidas"
+        },
+        {
+          "letter": "E",
+          "text": "Veia azigo e veia hemiazigo"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "anatomia-fisiologia",
+      "topic": "circulacao-sistemica-e-pulmonar",
+      "explanation": "O sangue venoso sistemico retorna ao atrio direito pelas veias cavas superior (drenando a porcao acima do diafragma) e inferior (drenando a porcao abaixo).",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "908100660c96b3410656461f947a7de8d53d5606022b2c9d9fd890c9c68b90c6"
+    },
+    {
+      "statement": "Ao avaliar a musculatura da mastigacao e a sensibilidade facial de um paciente, o enfermeiro esta, do ponto de vista anatomico, avaliando funcoes associadas principalmente ao nervo craniano:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Optico (II par)"
+        },
+        {
+          "letter": "B",
+          "text": "Trigemeo (V par)"
+        },
+        {
+          "letter": "C",
+          "text": "Vestibulococlear (VIII par)"
+        },
+        {
+          "letter": "D",
+          "text": "Glossofaringeo (IX par)"
+        },
+        {
+          "letter": "E",
+          "text": "Olfatorio (I par)"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-fafipa",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-periferico-e-nervos-cranianos",
+      "explanation": "O nervo trigemeo (V par craniano) e responsavel pela sensibilidade da face e pela inervacao motora dos musculos da mastigacao, sendo o nervo craniano misto associado a essas duas funcoes.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "919f9a6e370e2e2bbdd2dc660aac5b00d9cb657581a43888f059f2a8fd7c1949"
+    },
+    {
+      "statement": "Em relacao a anatomia da arvore bronquica, e correto afirmar que o bronquio principal direito e, em comparacao ao esquerdo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "mais longo, mais estreito e mais horizontal."
+        },
+        {
+          "letter": "B",
+          "text": "mais curto, mais largo e mais verticalizado."
+        },
+        {
+          "letter": "C",
+          "text": "identico em calibre e trajeto ao esquerdo."
+        },
+        {
+          "letter": "D",
+          "text": "ausente, pois o pulmao direito recebe ar apenas pelo bronquio esquerdo."
+        },
+        {
+          "letter": "E",
+          "text": "mais longo e mais verticalizado, porem mais estreito."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-das-vias-aereas-e-pulmoes",
+      "explanation": "O bronquio principal direito e mais curto, mais largo e mais verticalizado que o esquerdo, o que explica a maior frequencia de aspiracao de corpo estranho para o pulmao direito.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "92a294e623262e1a30309ffe0aa410767e8006d30198cfb18fa5a8555cd18091"
+    },
+    {
+      "statement": "No sistema reprodutor feminino, o orgao responsavel pela producao normal dos gametas (ovulos) e de hormonios como estrogenio e progesterona e o(a):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Utero"
+        },
+        {
+          "letter": "B",
+          "text": "Ovario"
+        },
+        {
+          "letter": "C",
+          "text": "Tuba uterina"
+        },
+        {
+          "letter": "D",
+          "text": "Vagina"
+        },
+        {
+          "letter": "E",
+          "text": "Colo do utero"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-reprodutor",
+      "explanation": "Os ovarios produzem os gametas femininos (ovulos) e os principais hormonios sexuais femininos (estrogenio e progesterona); o utero e o orgao de implantacao/gestacao, nao de producao gametica.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "97e3e58891c225344accc2b07aaf20316a79e3eff1694d0cda041d7e78f69ddb"
+    },
+    {
+      "statement": "Entre os componentes celulares do sangue, as responsaveis primariamente pela hemostasia (formacao do tampao plaquetario inicial em uma lesao vascular) sao as:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Hemacias"
+        },
+        {
+          "letter": "B",
+          "text": "Plaquetas"
+        },
+        {
+          "letter": "C",
+          "text": "Linfocitos"
+        },
+        {
+          "letter": "D",
+          "text": "Neutrofilos"
+        },
+        {
+          "letter": "E",
+          "text": "Monocitos"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-fafipa",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-hematologico-e-imunologico",
+      "explanation": "As plaquetas sao os elementos figurados responsaveis pela hemostasia primaria, aderindo ao local da lesao vascular e formando o tampao plaquetario inicial.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "aaf5df74c4d453bf635b4b4a27a4057cb9dd840a8a93ced62fb08c40073c141d"
+    },
+    {
+      "statement": "Um enfermeiro observa, em um esquema anatomico, que a arteria pulmonar transporta sangue venoso (pouco oxigenado), ao contrario da regra geral de que arterias carregam sangue arterial. A explicacao fisiologica correta para essa excecao e que a arteria pulmonar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "nasce do atrio direito e conduz sangue diretamente para a aorta."
+        },
+        {
+          "letter": "B",
+          "text": "conduz sangue do ventriculo direito ate os pulmoes, onde ocorrera a oxigenacao."
+        },
+        {
+          "letter": "C",
+          "text": "conduz sangue ja oxigenado do atrio esquerdo para os pulmoes."
+        },
+        {
+          "letter": "D",
+          "text": "e, na verdade, uma veia mal nomeada por convencao historica, sem base funcional."
+        },
+        {
+          "letter": "E",
+          "text": "transporta sangue arterial sistemico para os pulmoes para nutricao do tecido pulmonar."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-do-coracao-e-grandes-vasos",
+      "explanation": "'Arteria' designa o vaso que sai do coracao (independentemente do conteudo de oxigenio), nao necessariamente sangue oxigenado. A arteria pulmonar sai do ventriculo direito levando sangue pobre em O2 ate os pulmoes para hematose.",
+      "references": [
+        "Guyton & Hall, Tratado de Fisiologia Medica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "afcef44b06ae5b49ebb5988e376f68c0469c64d0c5f40fad007626b2093a6d04"
+    },
+    {
+      "statement": "A regulacao normal do pH sanguineo conta com dois mecanismos compensatorios complementares ao tamponamento quimico imediato: um de resposta rapida (minutos) e outro de resposta mais lenta (horas a dias). Esses mecanismos sao, respectivamente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Compensacao hepatica e compensacao intestinal."
+        },
+        {
+          "letter": "B",
+          "text": "Compensacao respiratoria (ajuste da ventilacao) e compensacao renal (excrecao/reabsorcao de bicarbonato e ions hidrogenio)."
+        },
+        {
+          "letter": "C",
+          "text": "Compensacao ossea e compensacao muscular."
+        },
+        {
+          "letter": "D",
+          "text": "Compensacao renal (rapida) e compensacao respiratoria (lenta)."
+        },
+        {
+          "letter": "E",
+          "text": "Compensacao exclusivamente por sudorese."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "anatomia-fisiologia",
+      "topic": "equilibrio-hidroeletrolitico-e-acido-base",
+      "explanation": "A compensacao respiratoria atua em minutos, ajustando a ventilacao para alterar a eliminacao de CO2; a compensacao renal, mais lenta (horas a dias), ajusta a reabsorcao/excrecao de bicarbonato e ions hidrogenio.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b4a4cd922647e250e6facb651855e200b7952d0f34f350d87846d59495491060"
+    },
+    {
+      "statement": "A primeira etapa da formacao da urina, na qual o plasma sanguineo e filtrado atraves da membrana glomerular para o interior da capsula de Bowman, e denominada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Secrecao tubular"
+        },
+        {
+          "letter": "B",
+          "text": "Reabsorcao tubular"
+        },
+        {
+          "letter": "C",
+          "text": "Filtracao glomerular"
+        },
+        {
+          "letter": "D",
+          "text": "Miccao"
+        },
+        {
+          "letter": "E",
+          "text": "Depuracao hepatica"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "anatomia-fisiologia",
+      "topic": "fisiologia-da-filtracao-glomerular",
+      "explanation": "A filtracao glomerular e o processo inicial e predominantemente passivo de formacao da urina, seguido por reabsorcao e secrecao tubulares.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b5d7d78eaac66f896c81360abbffec50859bfb8f7bb34521cab0f2a5d0a28db5"
+    },
+    {
+      "statement": "A hipofise anterior (adeno-hipofise) secreta, entre outros, o hormonio estimulador da tireoide (TSH) e o hormonio adrenocorticotrofico (ACTH), que atuam, respectivamente, estimulando:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a tireoide e o cortex adrenal."
+        },
+        {
+          "letter": "B",
+          "text": "o pancreas e os rins."
+        },
+        {
+          "letter": "C",
+          "text": "as gonadas e a medula adrenal."
+        },
+        {
+          "letter": "D",
+          "text": "o figado e o baco."
+        },
+        {
+          "letter": "E",
+          "text": "a tireoide e as gonadas, exclusivamente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "anatomia-fisiologia",
+      "topic": "eixo-hipotalamo-hipofise",
+      "explanation": "TSH estimula a tireoide a produzir T3/T4; ACTH estimula o cortex adrenal a produzir cortisol, dentro do eixo de retroalimentacao hipotalamo-hipofise-glandula-alvo.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bbd17309d492a90b9a32db02a10f8f0365a52c3c5e97943b9854832ac2ed5675"
+    },
+    {
+      "statement": "O decimo par de nervos cranianos, com ampla distribuicao autonomica parassimpatica para orgaos toracicos e abdominais, e denominado nervo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Trigemeo"
+        },
+        {
+          "letter": "B",
+          "text": "Facial"
+        },
+        {
+          "letter": "C",
+          "text": "Vago"
+        },
+        {
+          "letter": "D",
+          "text": "Hipoglosso"
+        },
+        {
+          "letter": "E",
+          "text": "Acessorio"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-periferico-e-nervos-cranianos",
+      "explanation": "O nervo vago (X par craniano) e o principal componente parassimpatico que inerva coracao, pulmoes e visceras abdominais, participando da regulacao autonomica desses orgaos.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bc47c22e136647aab2695eb0809be350f1f556d27d48ef951b5b5e651bfa9966"
+    },
+    {
+      "statement": "Os quimiorreceptores perifericos, localizados nos corpos carotideos e aorticos, sao particularmente sensiveis a reducoes na:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "pressao parcial de oxigenio (PaO2) no sangue arterial."
+        },
+        {
+          "letter": "B",
+          "text": "frequencia cardiaca."
+        },
+        {
+          "letter": "C",
+          "text": "temperatura corporal."
+        },
+        {
+          "letter": "D",
+          "text": "concentracao plasmatica de glicose."
+        },
+        {
+          "letter": "E",
+          "text": "pressao venosa central."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "anatomia-fisiologia",
+      "topic": "controle-da-respiracao",
+      "explanation": "Os quimiorreceptores perifericos (corpos carotideos e aorticos) respondem principalmente a queda da PaO2, tornando-se relevantes em hipoxemia significativa, diferentemente dos quimiorreceptores centrais (sensiveis a CO2/pH).",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c1ff4eaf3662da4c50e81681185694942e41d2b931bd73263ffd4c4bf87b6878"
+    },
+    {
+      "statement": "A bile, substancia essencial para a digestao de gorduras, e produzida pelo figado e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "digerida diretamente no proprio figado, sem armazenamento."
+        },
+        {
+          "letter": "B",
+          "text": "armazenada e concentrada na vesicula biliar antes de ser liberada no duodeno."
+        },
+        {
+          "letter": "C",
+          "text": "produzida e armazenada exclusivamente no pancreas."
+        },
+        {
+          "letter": "D",
+          "text": "eliminada diretamente pelos rins, sem participacao intestinal."
+        },
+        {
+          "letter": "E",
+          "text": "sintetizada pelo pancreas exocrino e apenas transportada pelo figado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "anatomia-fisiologia",
+      "topic": "figado-vesicula-biliar-pancreas-exocrino",
+      "explanation": "O figado produz a bile continuamente; a vesicula biliar armazena e concentra essa secrecao entre as refeicoes, liberando-a no duodeno por estimulo hormonal (colecistocinina) durante a digestao de gorduras.",
+      "references": [
+        "Guyton & Hall",
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c66b74adc270b3a1f4e1be00f7f7720aa21157bc1e7cbcbc6a37e386a98f8bfc"
+    },
+    {
+      "statement": "O principal sistema tampao quimico envolvido na regulacao normal do pH sanguineo e o sistema:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Fosfato intracelular, isoladamente"
+        },
+        {
+          "letter": "B",
+          "text": "Bicarbonato/acido carbonico"
+        },
+        {
+          "letter": "C",
+          "text": "Proteico plasmatico, isoladamente"
+        },
+        {
+          "letter": "D",
+          "text": "Hemoglobina, isoladamente"
+        },
+        {
+          "letter": "E",
+          "text": "Amonia urinaria, isoladamente"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "anatomia-fisiologia",
+      "topic": "equilibrio-hidroeletrolitico-e-acido-base",
+      "explanation": "O sistema bicarbonato/acido carbonico e o principal tampao extracelular, diretamente acoplado a compensacao respiratoria (eliminacao de CO2) e renal (regulacao de bicarbonato).",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c8782eda5d9d214cece471e15a7fb0137d7f579a1f47e860d150b747c0582add"
+    },
+    {
+      "statement": "A hematose, processo de troca gasosa entre o ar alveolar e o sangue capilar pulmonar, ocorre por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "transporte ativo de oxigenio, com gasto de energia celular."
+        },
+        {
+          "letter": "B",
+          "text": "difusao simples, a favor do gradiente de pressao parcial dos gases."
+        },
+        {
+          "letter": "C",
+          "text": "filtracao sob pressao hidrostatica, semelhante a filtracao glomerular."
+        },
+        {
+          "letter": "D",
+          "text": "osmose, a favor do gradiente de concentracao de agua."
+        },
+        {
+          "letter": "E",
+          "text": "transporte mediado por proteinas carreadoras especificas de membrana."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "anatomia-fisiologia",
+      "topic": "mecanica-ventilatoria-e-trocas-gasosas",
+      "explanation": "A hematose ocorre por difusao simples: O2 desloca-se do alveolo (maior pressao parcial) para o sangue capilar (menor pressao parcial), e o CO2 no sentido inverso, sem gasto energetico direto.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c8a1045c16711522b13a7e91dabb14f48038510fd8662a258965e2402e0fdc4c"
+    },
+    {
+      "statement": "A taxa de filtracao glomerular (TFG) e utilizada como principal indicador da funcao renal global porque reflete diretamente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o volume de urina eliminado na bexiga por dia."
+        },
+        {
+          "letter": "B",
+          "text": "o volume de plasma filtrado pelos glomerulos por unidade de tempo."
+        },
+        {
+          "letter": "C",
+          "text": "a concentracao de hemoglobina no sangue."
+        },
+        {
+          "letter": "D",
+          "text": "o volume de bile produzido pelo figado."
+        },
+        {
+          "letter": "E",
+          "text": "a frequencia de miccao espontanea."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-fafipa",
+      "subject": "anatomia-fisiologia",
+      "topic": "fisiologia-da-filtracao-glomerular",
+      "explanation": "A TFG mede o volume de plasma filtrado pelos glomerulos por minuto, refletindo diretamente a capacidade funcional renal, e nao deve ser confundida com o volume final de urina excretada (que ja sofreu reabsorcao/secrecao tubular).",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c8fef01269ac23eecc8961f25626bbdbe976abc3c875dec48ad1c99938934a08"
+    },
+    {
+      "statement": "Quanto ao tipo de tecido muscular, o musculo cardiaco caracteriza-se por ser estriado e, diferentemente do musculo esqueletico, e classificado funcionalmente como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Voluntario"
+        },
+        {
+          "letter": "B",
+          "text": "Involuntario"
+        },
+        {
+          "letter": "C",
+          "text": "Ausente de estriacoes"
+        },
+        {
+          "letter": "D",
+          "text": "Liso"
+        },
+        {
+          "letter": "E",
+          "text": "Exclusivo da parede dos vasos sanguineos"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-musculoesqueletico",
+      "explanation": "O musculo cardiaco e estriado (como o esqueletico), porem involuntario (como o liso) — combinacao caracteristica exclusiva do tecido cardiaco.",
+      "references": [
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cddbe6030c6712ac76b622b88a9337e51a5b56452871c1c139abf41d799726e8"
+    },
+    {
+      "statement": "O segmento do intestino grosso localizado imediatamente apos a valvula ileocecal, formando uma dilatacao em fundo cego, e denominado:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Reto"
+        },
+        {
+          "letter": "B",
+          "text": "Colon sigmoide"
+        },
+        {
+          "letter": "C",
+          "text": "Ceco"
+        },
+        {
+          "letter": "D",
+          "text": "Colon transverso"
+        },
+        {
+          "letter": "E",
+          "text": "Anus"
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-do-trato-gastrointestinal",
+      "explanation": "O ceco e a porcao inicial do intestino grosso, logo apos a valvula ileocecal, formando uma bolsa em fundo cego da qual se origina o apendice vermiforme.",
+      "references": [
+        "Tortora",
+        "Moore."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cf0d3d32add65496a808e70a1a6e5299547518fe9e578a917bd8a4806d4a3687"
+    },
+    {
+      "statement": "Diferentemente da filtracao glomerular, que e um processo predominantemente passivo, a reabsorcao da maior parte da agua e de solutos filtrados ocorre principalmente no(a):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Capsula de Bowman"
+        },
+        {
+          "letter": "B",
+          "text": "Tubulo contorcido proximal"
+        },
+        {
+          "letter": "C",
+          "text": "Ureter"
+        },
+        {
+          "letter": "D",
+          "text": "Bexiga"
+        },
+        {
+          "letter": "E",
+          "text": "Uretra"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "anatomia-fisiologia",
+      "topic": "fisiologia-da-filtracao-glomerular",
+      "explanation": "O tubulo contorcido proximal e o principal sitio de reabsorcao tubular, responsavel pela maior parte da recuperacao de agua, glicose, aminoacidos e eletrolitos filtrados.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e0c0baefeb78454bd84bc586f6d2a1976034032eeeb1f7981fe24e0d8ae8f9ce"
+    },
+    {
+      "statement": "Durante uma situacao de estresse agudo, a ativacao do sistema nervoso simpatico provoca, entre outros efeitos fisiologicos normais, aumento da frequencia cardiaca e midriase (dilatacao pupilar). Esse conjunto de respostas e classicamente descrito como resposta de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Luta ou fuga"
+        },
+        {
+          "letter": "B",
+          "text": "Repouso e digestao"
+        },
+        {
+          "letter": "C",
+          "text": "Homeostase negativa"
+        },
+        {
+          "letter": "D",
+          "text": "Retroalimentacao positiva pura"
+        },
+        {
+          "letter": "E",
+          "text": "Inibicao vagal isolada"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "anatomia-fisiologia",
+      "topic": "sistema-nervoso-autonomo",
+      "explanation": "A ativacao simpatica prepara o organismo para acao imediata ('luta ou fuga'), com efeitos como taquicardia, midriase e redistribuicao do fluxo sanguineo para musculos esqueleticos.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e19a6ef3855bed97e2a18f9fd078bbebbb97572d8e46332db80d58648d848aed"
+    },
+    {
+      "statement": "Um enfermeiro, ao explicar a um paciente o trajeto da pequena circulacao (circulacao pulmonar), descreve corretamente a sequencia:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ventriculo esquerdo → aorta → pulmoes → atrio direito."
+        },
+        {
+          "letter": "B",
+          "text": "ventriculo direito → arterias pulmonares → pulmoes → veias pulmonares → atrio esquerdo."
+        },
+        {
+          "letter": "C",
+          "text": "atrio direito → ventriculo direito → aorta → pulmoes."
+        },
+        {
+          "letter": "D",
+          "text": "ventriculo direito → veias pulmonares → pulmoes → arterias pulmonares → atrio esquerdo."
+        },
+        {
+          "letter": "E",
+          "text": "atrio esquerdo → ventriculo esquerdo → arterias pulmonares → pulmoes."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "anatomia-fisiologia",
+      "topic": "circulacao-sistemica-e-pulmonar",
+      "explanation": "A pequena circulacao parte do ventriculo direito, segue pelas arterias pulmonares ate os pulmoes (onde ocorre a hematose) e retorna pelas veias pulmonares ao atrio esquerdo.",
+      "references": [
+        "Tortora."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f3ed072b2b3b3178d37f4eb39f79f51774639b6b6bb0fefc3b1c7198b078959f"
+    },
+    {
+      "statement": "A unidade funcional basica do rim, responsavel pela formacao da urina, e denominada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Capsula de Bowman, isoladamente"
+        },
+        {
+          "letter": "B",
+          "text": "Nefron"
+        },
+        {
+          "letter": "C",
+          "text": "Pelve renal"
+        },
+        {
+          "letter": "D",
+          "text": "Ureter"
+        },
+        {
+          "letter": "E",
+          "text": "Cortex renal, isoladamente"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "anatomia-fisiologia",
+      "topic": "anatomia-do-rim-e-vias-urinarias",
+      "explanation": "O nefron, composto por corpusculo renal e sistema tubular, e a unidade funcional do rim onde ocorrem filtracao, reabsorcao e secrecao.",
+      "references": [
+        "Tortora",
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fa4a5a5c63fd1227b8a04ecef3f62295edb59a64387625b4e8c68e3e1a124393"
+    },
+    {
+      "statement": "A absorcao da maior parte dos nutrientes provenientes da digestao ocorre predominantemente no(a):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Estomago, por sua extensa superficie glandular."
+        },
+        {
+          "letter": "B",
+          "text": "Intestino delgado, devido as vilosidades e microvilosidades intestinais."
+        },
+        {
+          "letter": "C",
+          "text": "Intestino grosso, principal responsavel pela absorcao de macronutrientes."
+        },
+        {
+          "letter": "D",
+          "text": "Esofago, durante o transito do bolo alimentar."
+        },
+        {
+          "letter": "E",
+          "text": "Boca, por absorcao sublingual da maioria dos nutrientes."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "anatomia-fisiologia",
+      "topic": "fisiologia-da-digestao-e-absorcao",
+      "explanation": "O intestino delgado e o principal local de absorcao de nutrientes, gracas a grande superficie proporcionada pelas vilosidades e microvilosidades; o intestino grosso absorve principalmente agua e eletrolitos.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fb47980e222912175a808bf64d7593e1168f09b9696029781cee54cceeac4829"
+    },
+    {
+      "statement": "O principal estimulo fisiologico que regula o ritmo respiratorio em condicoes normais e a variacao da:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "concentracao de oxigenio no sangue arterial, detectada por quimiorreceptores centrais."
+        },
+        {
+          "letter": "B",
+          "text": "concentracao de dioxido de carbono e do pH do liquido cefalorraquidiano, detectada por quimiorreceptores centrais."
+        },
+        {
+          "letter": "C",
+          "text": "temperatura corporal central, detectada pelo hipotalamo."
+        },
+        {
+          "letter": "D",
+          "text": "pressao arterial sistemica, detectada por barorreceptores."
+        },
+        {
+          "letter": "E",
+          "text": "volume pulmonar, detectado exclusivamente por receptores de estiramento bronquico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "anatomia-fisiologia",
+      "topic": "controle-da-respiracao",
+      "explanation": "Os quimiorreceptores centrais, sensiveis ao CO2/pH do liquor, constituem o principal mecanismo regulador do ritmo respiratorio em condicoes normais; a hipoxia (via quimiorreceptores perifericos) e estimulo secundario, mais relevante em condicoes extremas.",
+      "references": [
+        "Guyton & Hall."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fd103df51efd51c0c8aa5fd527650f9bf60d0b023ccc72c0dc8eaa5537125291"
+    }
+  ]
+}

@@ -86,12 +86,12 @@ export function detectMissingColumns(rawRows: RawRow[], isJson: boolean): string
   if (!rawRows.length) return REQUIRED_COLUMNS.map((c) => c.label);
 
   const keys = new Set(
-    Object.keys(isJson ? (rawRows[0] ?? {}) : rawRows[0] ?? {}).map(normalizeKey),
+    Object.keys(isJson ? (rawRows[0] ?? {}) : (rawRows[0] ?? {})).map(normalizeKey),
   );
 
-  return REQUIRED_COLUMNS
-    .filter((col) => !col.keys.some((k) => keys.has(normalizeKey(k))))
-    .map((col) => col.label);
+  return REQUIRED_COLUMNS.filter((col) => !col.keys.some((k) => keys.has(normalizeKey(k)))).map(
+    (col) => col.label,
+  );
 }
 
 export async function readImportFile(file: File): Promise<{ rows: RawRow[]; isJson: boolean }> {
@@ -152,7 +152,8 @@ export function mapImportRow(raw: RawRow): ImportRow {
     explanation: normalizeText(get("explanation", "explicacao", "explicação")) || null,
     image_url: normalizeText(get("image_url", "imagem")) || null,
     bibliography: normalizeText(get("bibliography", "bibliografia")) || null,
-    legal_reference: normalizeText(get("legal_reference", "referencia_legal", "referência_legal")) || null,
+    legal_reference:
+      normalizeText(get("legal_reference", "referencia_legal", "referência_legal")) || null,
   };
 }
 
@@ -173,13 +174,22 @@ function validateImportRow(
   const errors: ImportFieldIssue[] = [];
   const warnings: string[] = [];
 
-  if (!row.statement) errors.push({ field: "statement", message: "Enunciado obrigatório.", severity: "error" });
+  if (!row.statement)
+    errors.push({ field: "statement", message: "Enunciado obrigatório.", severity: "error" });
   else if (row.statement.length < 10) {
-    errors.push({ field: "statement", message: "Enunciado deve ter pelo menos 10 caracteres.", severity: "error" });
+    errors.push({
+      field: "statement",
+      message: "Enunciado deve ter pelo menos 10 caracteres.",
+      severity: "error",
+    });
   }
 
   if (!row.alternatives?.length) {
-    errors.push({ field: "alternatives", message: "Não foi possível ler as alternativas.", severity: "error" });
+    errors.push({
+      field: "alternatives",
+      message: "Não foi possível ler as alternativas.",
+      severity: "error",
+    });
   } else if (row.alternatives.length < 2) {
     errors.push({ field: "alternatives", message: "Mínimo de 2 alternativas.", severity: "error" });
   }
@@ -189,7 +199,11 @@ function validateImportRow(
   if (!row.correct_answer) {
     errors.push({ field: "correct_answer", message: "Gabarito obrigatório.", severity: "error" });
   } else if (!/^[A-Z]$/i.test(row.correct_answer)) {
-    errors.push({ field: "correct_answer", message: "Gabarito deve ser uma letra (A, B, C...).", severity: "error" });
+    errors.push({
+      field: "correct_answer",
+      message: "Gabarito deve ser uma letra (A, B, C...).",
+      severity: "error",
+    });
   } else if (letters.length && !letters.includes(row.correct_answer.toUpperCase())) {
     errors.push({
       field: "correct_answer",
@@ -205,7 +219,11 @@ function validateImportRow(
   }
 
   if (row.topic && !row.subject) {
-    errors.push({ field: "topic", message: "Assunto informado sem disciplina.", severity: "error" });
+    errors.push({
+      field: "topic",
+      message: "Assunto informado sem disciplina.",
+      severity: "error",
+    });
   } else if (row.topic) {
     warnings.push(`Assunto "${row.topic}" será criado ou vinculado na aplicação.`);
   }
@@ -231,8 +249,13 @@ function validateImportRow(
     }
   }
 
-  if (row.difficulty && !DIFFICULTY_OPTIONS.includes(row.difficulty as (typeof DIFFICULTY_OPTIONS)[number])) {
-    warnings.push(`Dificuldade "${row.difficulty}" não está na lista padrão (Fácil, Média, Difícil).`);
+  if (
+    row.difficulty &&
+    !DIFFICULTY_OPTIONS.includes(row.difficulty as (typeof DIFFICULTY_OPTIONS)[number])
+  ) {
+    warnings.push(
+      `Dificuldade "${row.difficulty}" não está na lista padrão (Fácil, Média, Difícil).`,
+    );
   }
 
   return { errors, warnings };
@@ -285,13 +308,19 @@ export async function validateImportFile(file: File): Promise<ImportReport> {
     const { errors, warnings } = validateImportRow(row, taxonomy);
 
     warnings.forEach((msg) => {
-      const field = msg.includes("Disciplina") ? "subject"
-        : msg.includes("Assunto") ? "topic"
-        : msg.includes("Banca") ? "board"
-        : msg.includes("Concurso") ? "exam"
-        : msg.includes("Cargo") ? "position"
-        : msg.includes("Dificuldade") ? "difficulty"
-        : "taxonomy";
+      const field = msg.includes("Disciplina")
+        ? "subject"
+        : msg.includes("Assunto")
+          ? "topic"
+          : msg.includes("Banca")
+            ? "board"
+            : msg.includes("Concurso")
+              ? "exam"
+              : msg.includes("Cargo")
+                ? "position"
+                : msg.includes("Dificuldade")
+                  ? "difficulty"
+                  : "taxonomy";
       allWarnings.push({ line, field, message: msg });
     });
 
@@ -340,7 +369,10 @@ async function resolveByName(
 ): Promise<string | null> {
   if (!name) return null;
 
-  let q = supabase.from(table as "subjects").select("id").ilike("name", name);
+  let q = supabase
+    .from(table as "subjects")
+    .select("id")
+    .ilike("name", name);
   for (const [k, v] of Object.entries(extra)) {
     if (v != null) q = q.eq(k, v);
   }
@@ -356,7 +388,9 @@ async function resolveByName(
   return created.id;
 }
 
-export async function applyImportBatch(batchId: string): Promise<{ count: number; questionIds: string[] }> {
+export async function applyImportBatch(
+  batchId: string,
+): Promise<{ count: number; questionIds: string[] }> {
   const { data: batch, error } = await supabase
     .from("import_batches")
     .select("*, packages(course_id)")
@@ -370,23 +404,26 @@ export async function applyImportBatch(batchId: string): Promise<{ count: number
   const rows = (report.rows ?? []) as ImportValidRow[];
   if (!rows.length) throw new Error("Sem linhas válidas para aplicar.");
 
-  const courseIdOfPkg = (batch.packages as { course_id?: string } | null)?.course_id
-    ?? (report.course_id as string | null)
-    ?? null;
+  const courseIdOfPkg =
+    (batch.packages as { course_id?: string } | null)?.course_id ??
+    (report.course_id as string | null) ??
+    null;
 
   const insertedIds: string[] = [];
 
   try {
     for (const r of rows) {
       const subject_id = await resolveByName("subjects", r.subject);
-      const topic_id = r.topic ? await resolveByName("topics", r.topic, { subject_id: subject_id! }) : null;
+      const topic_id = r.topic
+        ? await resolveByName("topics", r.topic, { subject_id: subject_id! })
+        : null;
       const board_id = r.board ? await resolveByName("boards", r.board) : null;
-      const exam_id = r.exam && board_id
-        ? await resolveByName("exams", r.exam, { board_id })
-        : null;
-      const position_id = r.position && courseIdOfPkg
-        ? await resolveByName("positions", r.position, { course_id: courseIdOfPkg })
-        : null;
+      const exam_id =
+        r.exam && board_id ? await resolveByName("exams", r.exam, { board_id }) : null;
+      const position_id =
+        r.position && courseIdOfPkg
+          ? await resolveByName("positions", r.position, { course_id: courseIdOfPkg })
+          : null;
 
       const payload = {
         package_id: batch.package_id,
@@ -406,6 +443,19 @@ export async function applyImportBatch(batchId: string): Promise<{ count: number
           image_url: r.image_url ?? "",
           bibliography: r.bibliography ?? "",
           legal_reference: r.legal_reference ?? "",
+          // Importação em massa (CSV/JSON) não traz conteúdo SIA — autoria
+          // acontece depois, via admin de Questões (QuestionsPage.tsx).
+          sia_tags: [],
+          sia_error_reason_category: "",
+          sia_error_reason_detail: "",
+          sia_pegadinha_trigger: "",
+          sia_pegadinha_explanation: "",
+          sia_long_text_key_excerpts: "",
+          sia_long_text_note: "",
+          sia_interpretation_trigger: "",
+          sia_interpretation_explanation: "",
+          sia_calculation_steps: "",
+          sia_calculation_common_error: "",
         }),
       };
 

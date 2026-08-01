@@ -253,9 +253,18 @@ export async function resolveQuestionTaxonomyIds(
   return { position_id, subject_id, topic_id, board_id, exam_id, package_version_id };
 }
 
+/**
+ * Sprint 6.10: contrato único de referência bibliográfica é `metadata.bibliography`
+ * (string) — o mesmo já usado por toda a aplicação (admin, SIA, importação em massa,
+ * Motor Editorial de IA; ver `src/lib/questions.ts::buildQuestionMetadata`). O arquivo
+ * de seed (`QuestionSeedItem.references`) continua um array, pois a coluna CSV
+ * `references` aceita múltiplas citações separadas por `|`/`;` — aqui, na fronteira
+ * com o banco, elas são unidas em uma única string. `readSeedMetadata` faz o caminho
+ * inverso (1 string → array de 1 item) só para manter o formato do arquivo de seed.
+ */
 export function buildSeedMetadata(item: QuestionSeedItem, contentHash: string) {
   const metadata: Record<string, unknown> = { contentHash };
-  if (item.references.length) metadata.references = item.references;
+  if (item.references.length) metadata.bibliography = item.references.join("; ");
   if (item.source && Object.keys(item.source).length) metadata.source = item.source;
   if (item.metadata && Object.keys(item.metadata).length) Object.assign(metadata, item.metadata);
   return metadata;
@@ -263,10 +272,9 @@ export function buildSeedMetadata(item: QuestionSeedItem, contentHash: string) {
 
 export function readSeedMetadata(metadata: unknown) {
   const m = (metadata && typeof metadata === "object" ? metadata : {}) as Record<string, unknown>;
+  const bibliography = typeof m.bibliography === "string" ? m.bibliography.trim() : "";
   return {
-    references: Array.isArray(m.references)
-      ? m.references.filter((r): r is string => typeof r === "string")
-      : [],
+    references: bibliography ? [bibliography] : [],
     source:
       m.source && typeof m.source === "object"
         ? (m.source as { organization?: string; exam?: string; page?: number; question?: number })

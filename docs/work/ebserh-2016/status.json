@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "workId": "ebserh-2016",
+  "stage": "CONCLUIDA",
+  "history": [
+    {
+      "stage": "REGISTERED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SPRINT P-001",
+      "note": "Localização e validação documental (edital, prova, gabarito preliminar) via estudegratis.com.br, após fonte primária institutoaocp.org.br confirmada fora do ar."
+    },
+    {
+      "stage": "AUDITED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SPRINT P-002 + Checklist de auditoria",
+      "note": "Confirmada oficialmente a existência de Gabarito Definitivo (Edital nº 30 – EBSERH – Área Assistencial, 04/03/2016, Art. 2º), sem acesso ao conteúdo específico (Nível de Validação B). Auditoria técnica das 50 questões: alternativa correta, fundamentação técnica, legislação vigente, imagens (Q06/Q07/Q08) e questões anuladas — nenhum erro encontrado; 0 questões descartadas."
+    },
+    {
+      "stage": "TEXT_EXTRACTED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "50 questoes transcritas integralmente com alternativas, gabarito e justificativa tecnica; classificadas na taxonomia oficial (Portugues, Raciocinio Logico, Legislacao Aplicada a EBSERH, Legislacao do SUS, Saude Mental)."
+    },
+    {
+      "stage": "TAXONOMY_EXTENDED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "taxonomy.json atualizado: 1 novo concurso (Instituto AOCP, EBSERH Nacional 2016 Edital 03) e 5 novos assuntos em Saude Mental (Principios da Enfermagem Psiquiatrica e Comunicacao Terapeutica, Intervencao em Crise e Emergencias Psiquiatricas, Reforma Psiquiatrica, Farmacologia Psiquiatrica, Etica Profissional em Enfermagem Psiquiatrica). seed:taxonomy executado sem erros (5 assuntos + 1 concurso criados)."
+    },
+    {
+      "stage": "SEEDED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "50 questoes convertidas (convert:questions, 0 erros de validacao) e importadas (seed:questions) para o pacote banco-de-questoes-enfermagem v1.0. Acervo de producao passou de 1168 para 1218 questoes."
+    },
+    {
+      "stage": "AUDIT_APPROVED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — Auditoria de Importacao",
+      "note": "Auditoria completa de importacao (18 pontos) aprovada: 50/50 inseridas corretamente, 0 orfas, 0 erros de integridade, 0 campos obrigatorios nulos, 0 duplicidades novas introduzidas (20 grupos de contentHash e 21 de statement pre-existentes no banco, nenhum envolvendo as 50 questoes desta importacao). Pendencia nao bloqueante: Q06/Q07/Q08 dependem de imagem sem campo estruturado no schema para vinculo do arquivo."
+    },
+    {
+      "stage": "PUBLISHED",
+      "at": "2026-07-23T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "Package/Version banco-de-questoes-enfermagem v1.0 ja PUBLISHED/ACTIVE (herdado do pacote existente). Prova EBSERH 2016 Enfermeiro-Saude Mental homologada e considerada CONCLUIDA pelo usuario. Catalogo (docs/catalog/enfermagem.csv) e indicadores (docs/work/INDICADORES.md) atualizados."
+    }
+  ],
+  "sourcePdf": "prova.pdf (estudegratis.com.br)",
+  "workDir": "docs/work/ebserh-2016"
+}

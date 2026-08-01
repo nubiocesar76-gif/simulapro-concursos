@@ -1,0 +1,1661 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Na etapa de Planejamento de Enfermagem, conforme a Resolucao COFEN no 736/2024, o enfermeiro determina:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas o diagnostico medico do paciente."
+        },
+        {
+          "letter": "B",
+          "text": "os resultados esperados e as acoes/intervencoes de enfermagem, com base nos diagnosticos de enfermagem ja formulados."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente o horario de alta hospitalar."
+        },
+        {
+          "letter": "D",
+          "text": "apenas a escala de trabalho da equipe de enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "o valor a ser cobrado pelo procedimento realizado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "O Planejamento de Enfermagem determina resultados esperados e intervencoes, a partir dos diagnosticos de enfermagem estabelecidos na etapa anterior.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 4o, inciso III."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "05820ac24208e9eebb8ed2d3ec5b7e626678183d1e21733dc1e317e00797d25d"
+    },
+    {
+      "statement": "Na Classificacao dos Resultados de Enfermagem (NOC), cada resultado e mensurado por meio de um conjunto de indicadores, tipicamente avaliados em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "escalas do tipo Likert de 5 pontos."
+        },
+        {
+          "letter": "B",
+          "text": "valores binarios (sim/nao), exclusivamente."
+        },
+        {
+          "letter": "C",
+          "text": "codigos alfanumericos sem gradacao."
+        },
+        {
+          "letter": "D",
+          "text": "unidades monetarias."
+        },
+        {
+          "letter": "E",
+          "text": "datas de reavaliacao, sem escala de intensidade."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "taxonomias-e-sistemas-de-classificacao",
+      "explanation": "Os indicadores NOC sao tipicamente avaliados em escalas Likert de 5 pontos, permitindo mensurar a evolucao do paciente entre estados.",
+      "references": [
+        "MOORHEAD, S. et al. NOC: Classificacao dos Resultados de Enfermagem."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "05dc56a89f90546f5385fbc6799c1488275ddbfca6aa917377f2c21e3d0521d8"
+    },
+    {
+      "statement": "A lei federal que dispoe sobre a regulamentacao do exercicio da Enfermagem no Brasil, definindo as categorias profissionais (Enfermeiro, Tecnico de Enfermagem, Auxiliar de Enfermagem, Obstetriz), e a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Lei no 8.080/1990"
+        },
+        {
+          "letter": "B",
+          "text": "Lei no 7.498/1986"
+        },
+        {
+          "letter": "C",
+          "text": "Lei no 14.434/2022"
+        },
+        {
+          "letter": "D",
+          "text": "Lei no 8.142/1990"
+        },
+        {
+          "letter": "E",
+          "text": "Lei no 13.146/2015"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "legislacao-e-marco-regulatorio",
+      "explanation": "A Lei no 7.498/1986 regulamenta o exercicio da Enfermagem e define as categorias profissionais da area.",
+      "references": [
+        "Lei no 7.498, de 25 de junho de 1986."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "14d0de836dd05e45fbbc3e99b2dc3645a9e239789c534c68643f565f6294c466"
+    },
+    {
+      "statement": "Durante a Avaliacao de Enfermagem, um dado relatado pelo proprio paciente, como a queixa de dor, e classificado tecnicamente como dado:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Objetivo"
+        },
+        {
+          "letter": "B",
+          "text": "Subjetivo"
+        },
+        {
+          "letter": "C",
+          "text": "Laboratorial exclusivo"
+        },
+        {
+          "letter": "D",
+          "text": "Normativo"
+        },
+        {
+          "letter": "E",
+          "text": "Secundario, sem valor clinico"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "Dados subjetivos sao os relatados pelo paciente/familia (queixas, sintomas); dados objetivos sao observados/mensurados pelo profissional.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1a09136b46d1fcb50299ba7c78cdddd5d9456afadcbc2d6b3908fdbfb7585fcd"
+    },
+    {
+      "statement": "Em relacao ao suporte do registro de enfermagem, a Resolucao COFEN no 754/2024 reconhece expressamente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas o registro em papel, vedando qualquer meio eletronico."
+        },
+        {
+          "letter": "B",
+          "text": "tanto o prontuario tradicional quanto o eletronico, com exigencias tecnicas especificas para sistemas digitais."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente o registro verbal, sem necessidade de documentacao escrita."
+        },
+        {
+          "letter": "D",
+          "text": "o registro apenas por telefone a central de regulacao."
+        },
+        {
+          "letter": "E",
+          "text": "a dispensa de registro em situacoes de urgencia."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "registro-e-documentacao",
+      "explanation": "A norma vigente reconhece tanto o suporte tradicional quanto o eletronico, detalhando exigencias tecnicas especificas para os sistemas digitais (S-RES).",
+      "references": [
+        "COFEN, Resolucao no 754/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "27f2553ee1ffd8126516b9ae29fea5e1a7d0ae39032df2015d0c87b5463a8164"
+    },
+    {
+      "statement": "Um enfermeiro em preparacao para concurso encontra, em material de estudo desatualizado, a afirmacao de que a primeira etapa do Processo de Enfermagem se chama 'Coleta de Dados de Enfermagem' ou 'Historico de Enfermagem'. Segundo a norma vigente (Resolucao COFEN no 736/2024), essa nomenclatura:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "permanece correta e e a unica aceita atualmente."
+        },
+        {
+          "letter": "B",
+          "text": "foi substituida pelo nome oficial vigente 'Avaliacao de Enfermagem', ainda que o conteudo funcional da etapa seja essencialmente o mesmo."
+        },
+        {
+          "letter": "C",
+          "text": "refere-se hoje a quinta etapa do Processo de Enfermagem, nao a primeira."
+        },
+        {
+          "letter": "D",
+          "text": "nunca existiu na historia normativa da disciplina."
+        },
+        {
+          "letter": "E",
+          "text": "e sinonimo atual de 'Evolucao de Enfermagem'."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "'Coleta de Dados'/'Historico de Enfermagem' era o nome da 1a etapa na Resolucao 358/2009 (revogada); a norma vigente renomeou essa etapa para 'Avaliacao de Enfermagem', mantendo o conteudo funcional.",
+      "references": [
+        "COFEN, Resolucao no 736/2024 (vigente)",
+        "Resolucao no 358/2009 (revogada)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "30778673556433c4cca8984fca05f3823982e34dc8fe84f0d91cc37ef4f71f48"
+    },
+    {
+      "statement": "De acordo com a Resolucao COFEN no 736/2024, a etapa do Processo de Enfermagem em que sao coletados dados subjetivos e objetivos, por meio de entrevista e exame fisico, e denominada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Diagnostico de Enfermagem"
+        },
+        {
+          "letter": "B",
+          "text": "Avaliacao de Enfermagem"
+        },
+        {
+          "letter": "C",
+          "text": "Planejamento de Enfermagem"
+        },
+        {
+          "letter": "D",
+          "text": "Implementacao de Enfermagem"
+        },
+        {
+          "letter": "E",
+          "text": "Evolucao de Enfermagem"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "A Avaliacao de Enfermagem e, na norma vigente, a 1a etapa, dedicada a coleta de dados subjetivos e objetivos.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 4o, inciso I."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "37a82f835543dea950aa5e26d64ad28ba41f009fcb7c1f82d50c20010a033a7f"
+    },
+    {
+      "statement": "Em relacao a terminologia normativa vigente da Enfermagem brasileira, e correto afirmar que a Resolucao COFEN no 736/2024:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manteve a sigla SAE como termo oficial do conjunto organizacional do cuidado."
+        },
+        {
+          "letter": "B",
+          "text": "nao utiliza mais o termo 'Sistematizacao da Assistencia de Enfermagem (SAE)', tratando o Processo de Enfermagem como objeto central da norma."
+        },
+        {
+          "letter": "C",
+          "text": "ampliou o uso da sigla SAE para todas as categorias da equipe de enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "revogou o Processo de Enfermagem como metodo de trabalho do Enfermeiro."
+        },
+        {
+          "letter": "E",
+          "text": "tornou SAE e Processo de Enfermagem sinonimos legais criados pela propria resolucao de 2024."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "A norma vigente elimina o termo 'SAE' como nomenclatura normativa, tratando o Processo de Enfermagem como objeto central e unico da regulamentacao; 'SAE' permanece apenas como nome historico/de catalogo.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "387e41fa5394ca7e391e3761ad2554b45cc27fc73c234b6c0f3f7959bfda72d6"
+    },
+    {
+      "statement": "A etapa do Processo de Enfermagem em que sao realizadas as acoes/intervencoes determinadas na etapa de Planejamento e denominada, conforme a Resolucao COFEN no 736/2024:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Avaliacao de Enfermagem"
+        },
+        {
+          "letter": "B",
+          "text": "Diagnostico de Enfermagem"
+        },
+        {
+          "letter": "C",
+          "text": "Planejamento de Enfermagem"
+        },
+        {
+          "letter": "D",
+          "text": "Implementacao de Enfermagem"
+        },
+        {
+          "letter": "E",
+          "text": "Evolucao de Enfermagem"
+        }
+      ],
+      "correctAnswer": "D",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "A Implementacao de Enfermagem e a 4a etapa, na qual se realizam as acoes/intervencoes definidas no Planejamento.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 4o, inciso IV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3f22828f2dda9c0ca871176aefe5919d69b5c6f0ea57297e5bb2e44f0a83707e"
+    },
+    {
+      "statement": "Quanto ao escopo de aplicacao, a Resolucao COFEN no 736/2024, em comparacao com a norma que revogou, apresenta redacao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "mais restrita, limitando o Processo de Enfermagem a hospitais."
+        },
+        {
+          "letter": "B",
+          "text": "ainda mais ampla, estendendo a exigencia a 'todo contexto socioambiental em que ocorre o cuidado de enfermagem'."
+        },
+        {
+          "letter": "C",
+          "text": "identica, sem qualquer alteracao de escopo."
+        },
+        {
+          "letter": "D",
+          "text": "restrita a atencao primaria a saude, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "aplicavel apenas a instituicoes de ensino de enfermagem."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "transicao-normativa",
+      "explanation": "A norma vigente amplia ainda mais o escopo em relacao a ja ampla Resolucao 358/2009, estendendo-o a 'todo contexto socioambiental' de cuidado.",
+      "references": [
+        "COFEN, Resolucao no 736/2024",
+        "Resolucao no 358/2009 (revogada)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "404284109cd2ddb733ef107866756d766d63bc81347ef6e4fe891474f9bd6773"
+    },
+    {
+      "statement": "A sistematizacao do raciocinio de enfermagem como corpo teorico-metodologico no Brasil e historicamente associada a obra de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Florence Nightingale"
+        },
+        {
+          "letter": "B",
+          "text": "Wanda de Aguiar Horta"
+        },
+        {
+          "letter": "C",
+          "text": "Dorothea Orem"
+        },
+        {
+          "letter": "D",
+          "text": "Virginia Henderson"
+        },
+        {
+          "letter": "E",
+          "text": "Hildegard Peplau"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "Wanda de Aguiar Horta, com a obra 'Processo de Enfermagem' (1979) e a Teoria das Necessidades Humanas Basicas, e a referencia historico-teorica brasileira central da disciplina.",
+      "references": [
+        "HORTA, W. A. Processo de Enfermagem. Sao Paulo: EPU, 1979."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "45bbfd4472b608572516288a6cd0c3b1c914a58521cb91b114712f512faa6595"
+    },
+    {
+      "statement": "Conforme a Lei no 7.498/1986 e reafirmado pelo art. 6o da Resolucao COFEN no 736/2024, sao atividades privativas do Enfermeiro, entre outras:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas a administracao de medicamentos por via oral."
+        },
+        {
+          "letter": "B",
+          "text": "o diagnostico e a prescricao da assistencia de enfermagem."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a limpeza e organizacao da unidade de internacao."
+        },
+        {
+          "letter": "D",
+          "text": "apenas o transporte de pacientes entre setores."
+        },
+        {
+          "letter": "E",
+          "text": "apenas a verificacao de sinais vitais."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "responsabilidade-profissional",
+      "explanation": "O diagnostico e a prescricao da assistencia de enfermagem sao privativos do Enfermeiro, conforme a Lei no 7.498/1986 e reafirmado pela norma vigente.",
+      "references": [
+        "Lei no 7.498/1986, art. 11, I",
+        "COFEN, Resolucao no 736/2024, art. 6o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5037385dae02ff492313aec7d435641dda0026cbe8236168a7c3a7feabe8d226"
+    },
+    {
+      "statement": "O decreto que regulamenta a Lei no 7.498/1986, detalhando as atividades especificas de cada categoria profissional de enfermagem, e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Decreto no 94.406/1987"
+        },
+        {
+          "letter": "B",
+          "text": "Decreto no 7.508/2011"
+        },
+        {
+          "letter": "C",
+          "text": "Decreto no 9.795/2019"
+        },
+        {
+          "letter": "D",
+          "text": "Decreto no 8.077/2013"
+        },
+        {
+          "letter": "E",
+          "text": "Decreto no 6.286/2007"
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "legislacao-e-marco-regulatorio",
+      "explanation": "O Decreto no 94.406/1987 regulamenta a Lei no 7.498/1986, detalhando as atividades de cada categoria profissional.",
+      "references": [
+        "Decreto no 94.406, de 8 de junho de 1987."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "53ca6f3ae17f390f682ac08f63db328d45ba30653a3811865dca409a3686b40f"
+    },
+    {
+      "statement": "Conforme o art. 6o da Resolucao COFEN no 736/2024, a formulacao do Diagnostico de Enfermagem e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "atividade que pode ser realizada por qualquer membro da equipe de enfermagem, indistintamente."
+        },
+        {
+          "letter": "B",
+          "text": "atividade privativa do Enfermeiro."
+        },
+        {
+          "letter": "C",
+          "text": "atividade privativa do Tecnico de Enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "atividade que depende de autorizacao medica previa em todos os casos."
+        },
+        {
+          "letter": "E",
+          "text": "facultativa, podendo ser omitida quando a equipe estiver sobrecarregada."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "O art. 6o da Resolucao 736/2024 reforca textualmente a exclusividade do Enfermeiro na formulacao do Diagnostico de Enfermagem, ja prevista na Lei no 7.498/1986.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 6o",
+        "Lei no 7.498/1986, art. 11, I."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "614814d6e0934f0d0f44a1ca28bb66fdd938dcbb7006f0aeb2b330ce03bb866c"
+    },
+    {
+      "statement": "Um enfermeiro estuda um material didatico baseado na Resolucao COFEN no 358/2009 (revogada) e observa que, nessa norma antiga, a quinta etapa do Processo de Enfermagem era chamada 'Avaliacao de Enfermagem'. Segundo a Resolucao COFEN no 736/2024, atualmente vigente, esse mesmo nome ('Avaliacao de Enfermagem') passou a designar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a quinta etapa, sem alteracao."
+        },
+        {
+          "letter": "B",
+          "text": "a primeira etapa do Processo de Enfermagem, enquanto a antiga quinta etapa passou a se chamar 'Evolucao de Enfermagem'."
+        },
+        {
+          "letter": "C",
+          "text": "uma etapa que deixou de existir na norma vigente."
+        },
+        {
+          "letter": "D",
+          "text": "a segunda etapa (Diagnostico de Enfermagem)."
+        },
+        {
+          "letter": "E",
+          "text": "um sinonimo de 'Implementacao de Enfermagem'."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "Ponto de maior risco de confusao da disciplina: 'Avaliacao de Enfermagem' migrou de nome da 5a etapa (norma revogada) para nome da 1a etapa (norma vigente); a antiga 5a etapa passou a se chamar 'Evolucao de Enfermagem'.",
+      "references": [
+        "COFEN, Resolucao no 736/2024 (vigente)",
+        "Resolucao no 358/2009 (revogada)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6597a4de223f9a3c96a5c158629ff3f1eff18b2a1b45f31841fc64596f8ab740"
+    },
+    {
+      "statement": "Conforme a Resolucao COFEN no 736/2024, a quinta e ultima etapa do Processo de Enfermagem, na qual se verifica se os resultados esperados foram alcancados, e denominada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Avaliacao de Enfermagem"
+        },
+        {
+          "letter": "B",
+          "text": "Diagnostico de Enfermagem"
+        },
+        {
+          "letter": "C",
+          "text": "Planejamento de Enfermagem"
+        },
+        {
+          "letter": "D",
+          "text": "Implementacao de Enfermagem"
+        },
+        {
+          "letter": "E",
+          "text": "Evolucao de Enfermagem"
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "A Evolucao de Enfermagem e a 5a etapa vigente, dedicada a verificacao de resultados alcancados.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 4o, inciso V."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "767210a6f74d872eb4152994f8eb731c60e927267effcc54c76e9cc7bcce66e1"
+    },
+    {
+      "statement": "O modelo conhecido como NNN Linkage refere-se a interligacao entre:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Norma, Norma, Norma (as tres resolucoes do COFEN sobre a disciplina)."
+        },
+        {
+          "letter": "B",
+          "text": "NANDA-I (diagnostico), NIC (intervencao) e NOC (resultado)."
+        },
+        {
+          "letter": "C",
+          "text": "apenas NIC e NOC, sem participacao da NANDA-I."
+        },
+        {
+          "letter": "D",
+          "text": "Nefrologia, Neurologia e Nutricao, como especialidades clinicas."
+        },
+        {
+          "letter": "E",
+          "text": "Nivel 1, Nivel 2 e Nivel 3 do Gate Editorial."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "taxonomias-e-sistemas-de-classificacao",
+      "explanation": "NNN Linkage conecta NANDA-I (diagnostico), NIC (intervencao) e NOC (resultado) em um modelo integrado.",
+      "references": [
+        "NANDA INTERNATIONAL",
+        "BUTCHER, H. K. et al.",
+        "MOORHEAD, S. et al."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "83c014fb506d64c5a5bb3eac7dcd09a5b91df50dceaead38c7e81bd196e33d12"
+    },
+    {
+      "statement": "A CIPE (Classificacao Internacional para a Pratica de Enfermagem), mantida pelo Conselho Internacional de Enfermeiros (ICN), diferencia-se do modelo NANDA-NIC-NOC por adotar um modelo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "identico ao NNN Linkage, sem nenhuma diferenca estrutural."
+        },
+        {
+          "letter": "B",
+          "text": "composicional, com elementos combinaveis (como Foco, Julgamento, Acao) que permitem construir enunciados de diagnostico, intervencao e resultado numa unica estrutura."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente numerico, sem termos descritivos."
+        },
+        {
+          "letter": "D",
+          "text": "restrito a area de saude mental."
+        },
+        {
+          "letter": "E",
+          "text": "obrigatorio por lei federal brasileira."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "taxonomias-e-sistemas-de-classificacao",
+      "explanation": "A CIPE usa um modelo composicional (elementos combinaveis), diferente das tres classificacoes separadas do modelo NANDA-NIC-NOC.",
+      "references": [
+        "INTERNATIONAL COUNCIL OF NURSES. ICNP."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "88565c0f5e13804a59f9d9f38a5ebaafbc768f89665a4738a35aaab5a72a589f"
+    },
+    {
+      "statement": "A Resolucao COFEN no 736/2024 destaca que o plano assistencial de enfermagem pode ser:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "elaborado exclusivamente pelo Tecnico de Enfermagem, sem participacao do Enfermeiro."
+        },
+        {
+          "letter": "B",
+          "text": "compartilhado com a equipe de saude, sem que isso transfira a titularidade da decisao diagnostica/terapeutica de enfermagem, que permanece do Enfermeiro."
+        },
+        {
+          "letter": "C",
+          "text": "definido unicamente pelo medico responsavel pelo caso."
+        },
+        {
+          "letter": "D",
+          "text": "dispensado sempre que o paciente estiver em observacao por menos de 24 horas."
+        },
+        {
+          "letter": "E",
+          "text": "elaborado apenas em ambiente hospitalar, nunca em atencao primaria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "A norma vigente admite plano compartilhado com a equipe de saude, mantendo com o Enfermeiro a titularidade da decisao diagnostica/terapeutica de enfermagem.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8bbbe9c89f3a6ba34ea6b8845b16993a9a8d076abf4f82c129a1c632f0e749b4"
+    },
+    {
+      "statement": "Uma questao de concurso, ao citar a nomenclatura vigente das etapas do Processo de Enfermagem, apresenta a seguinte associacao: 1a etapa = Avaliacao de Enfermagem; 5a etapa = Evolucao de Enfermagem. Essa associacao esta:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "incorreta, pois a nomenclatura vigente inverte essa ordem."
+        },
+        {
+          "letter": "B",
+          "text": "correta, conforme a Resolucao COFEN no 736/2024, que renomeou as etapas em relacao a Resolucao COFEN no 358/2009 (revogada), na qual a 1a etapa era chamada 'Coleta de Dados'/'Historico de Enfermagem' e a 5a etapa era chamada 'Avaliacao de Enfermagem'."
+        },
+        {
+          "letter": "C",
+          "text": "incorreta, pois a norma vigente nao nomeia as etapas individualmente."
+        },
+        {
+          "letter": "D",
+          "text": "correta apenas para a 1a etapa, estando errada quanto a 5a."
+        },
+        {
+          "letter": "E",
+          "text": "incorreta, pois a 5a etapa vigente se chama 'Implementacao de Enfermagem'."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "transicao-normativa",
+      "explanation": "A associacao esta correta e reflete exatamente a renomeacao promovida pela Resolucao 736/2024 em relacao a nomenclatura da norma revogada.",
+      "references": [
+        "COFEN, Resolucao no 736/2024",
+        "Resolucao no 358/2009 (revogada)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8f759ce655438b4850d197c99be8cbe81b2ca86dcefdab43f3d810b57eb89c49"
+    },
+    {
+      "statement": "A trajetoria normativa da Sistematizacao da Assistencia de Enfermagem/Processo de Enfermagem no Brasil e corretamente descrita, da norma mais antiga a vigente, pela sequencia:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Resolucao COFEN no 358/2009 -> Resolucao COFEN no 272/2002 -> Resolucao COFEN no 736/2024."
+        },
+        {
+          "letter": "B",
+          "text": "Resolucao COFEN no 272/2002 -> Resolucao COFEN no 358/2009 -> Resolucao COFEN no 736/2024."
+        },
+        {
+          "letter": "C",
+          "text": "Resolucao COFEN no 736/2024 -> Resolucao COFEN no 358/2009 -> Resolucao COFEN no 272/2002."
+        },
+        {
+          "letter": "D",
+          "text": "Resolucao COFEN no 272/2002 -> Resolucao COFEN no 736/2024 -> Resolucao COFEN no 358/2009."
+        },
+        {
+          "letter": "E",
+          "text": "Apenas a Resolucao COFEN no 736/2024 existiu, sem normas anteriores."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "A trajetoria confirmada e: 272/2002 (1a instituicao, revogada) -> 358/2009 (ampliacao de escopo, revogada em 23/01/2024) -> 736/2024 (norma vigente).",
+      "references": [
+        "COFEN, Resolucoes no 272/2002, 358/2009 e 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9e9bc4578bae8c30af123bf0433e3f9a024feb2f29de36f5b0dd9c0bb950a8ba"
+    },
+    {
+      "statement": "Conforme o art. 7o da Resolucao COFEN no 736/2024, a participacao de Tecnicos e Auxiliares de Enfermagem no Processo de Enfermagem ocorre, entre outras formas, por meio de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "formulacao independente de diagnosticos de enfermagem."
+        },
+        {
+          "letter": "B",
+          "text": "anotacoes de enfermagem e execucao da Implementacao, sob supervisao do Enfermeiro."
+        },
+        {
+          "letter": "C",
+          "text": "definicao exclusiva do plano assistencial, sem participacao do Enfermeiro."
+        },
+        {
+          "letter": "D",
+          "text": "assinatura isolada de prontuario eletronico, substituindo a do Enfermeiro."
+        },
+        {
+          "letter": "E",
+          "text": "auditoria de enfermagem sem qualquer vinculacao hierarquica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "responsabilidade-profissional",
+      "explanation": "O art. 7o da Resolucao 736/2024 trata da participacao de Tecnicos/Auxiliares via anotacoes e Implementacao, sempre sob supervisao do Enfermeiro.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 7o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9f6991e8f26c4e30b79cd6ad0544836b09bfabb841f8dfd09e892fd1156f14ef"
+    },
+    {
+      "statement": "Em relacao a hierarquia normativa aplicavel a Enfermagem brasileira, e correto afirmar que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "resolucoes do COFEN tem hierarquia superior a leis federais."
+        },
+        {
+          "letter": "B",
+          "text": "leis e decretos tem hierarquia superior as resolucoes do COFEN, que sao normas infralegais de cumprimento obrigatorio pela categoria profissional."
+        },
+        {
+          "letter": "C",
+          "text": "resolucoes do COFEN e leis federais tem exatamente a mesma hierarquia, sendo intercambiaveis."
+        },
+        {
+          "letter": "D",
+          "text": "apenas portarias ministeriais tem forca normativa sobre o exercicio da Enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "o Processo de Enfermagem foi instituido por lei federal especifica, nao por resolucao do COFEN."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "legislacao-e-marco-regulatorio",
+      "explanation": "Leis e decretos tem hierarquia superior as resolucoes de conselho profissional; o Processo de Enfermagem, especificamente, foi instituido por resolucao do COFEN (infralegal), nao por lei.",
+      "references": [
+        "Lei no 7.498/1986",
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a4663c10db8e2099273a0b56d0bb332b16604f55e590ea5ab203d62fe490d6ab"
+    },
+    {
+      "statement": "O processo de interpretacao e agrupamento dos dados coletados na Avaliacao de Enfermagem, que culmina na formulacao de diagnosticos de enfermagem, corresponde, na Resolucao COFEN no 736/2024, a etapa de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Avaliacao de Enfermagem"
+        },
+        {
+          "letter": "B",
+          "text": "Diagnostico de Enfermagem"
+        },
+        {
+          "letter": "C",
+          "text": "Planejamento de Enfermagem"
+        },
+        {
+          "letter": "D",
+          "text": "Implementacao de Enfermagem"
+        },
+        {
+          "letter": "E",
+          "text": "Evolucao de Enfermagem"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "O Diagnostico de Enfermagem e a 2a etapa, na qual os dados coletados sao interpretados e agrupados para formular o(s) diagnostico(s).",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 4o, inciso II."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "aa0285f8227520aa5407786c3c506c7a7571bc9d96715e5e08e5dfecd65959e4"
+    },
+    {
+      "statement": "No sistema NIC, o rotulo padronizado 'Controle de Infeccao' e classificado como uma intervencao de enfermagem, enquanto a acao concreta 'higienizar as maos antes e depois do contato com o paciente' corresponde a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "outra intervencao NIC independente."
+        },
+        {
+          "letter": "B",
+          "text": "uma atividade especifica que operacionaliza a intervencao."
+        },
+        {
+          "letter": "C",
+          "text": "um diagnostico de enfermagem NANDA-I."
+        },
+        {
+          "letter": "D",
+          "text": "um resultado NOC mensuravel."
+        },
+        {
+          "letter": "E",
+          "text": "um item exclusivo do Codigo de Etica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "classificacao-de-intervencoes-de-enfermagem-nic",
+      "explanation": "No NIC, a intervencao e o rotulo padronizado; a atividade e a acao concreta que a operacionaliza - distincao estrutural do sistema.",
+      "references": [
+        "BUTCHER, H. K. et al. NIC: Classificacao das Intervencoes de Enfermagem."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ae412f07a0f4c6cd578152cc95ff2c3b6737692d1368380886f8d6f6798f9b64"
+    },
+    {
+      "statement": "De acordo com a Resolucao COFEN no 736/2024, o Processo de Enfermagem deve ser realizado, de forma deliberada e sistematica, em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas hospitais e unidades de urgencia e emergencia."
+        },
+        {
+          "letter": "B",
+          "text": "todo contexto socioambiental em que ocorre o cuidado de enfermagem."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente unidades de terapia intensiva."
+        },
+        {
+          "letter": "D",
+          "text": "apenas instituicoes privadas de saude."
+        },
+        {
+          "letter": "E",
+          "text": "somente unidades com internacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "A Resolucao COFEN no 736/2024 ampliou o escopo em relacao a norma revogada, exigindo a realizacao do Processo de Enfermagem em todo contexto socioambiental de cuidado, nao apenas em ambiente hospitalar ou institucional.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b464202e15dbdfc4469a68f5135c36ceb32f818e83efa3ab030180f01ad57b0d"
+    },
+    {
+      "statement": "Um diagnostico de enfermagem do tipo 'Problema Real', segundo a estrutura da NANDA-I, e tipicamente composto por titulo, definicao e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas fatores de risco."
+        },
+        {
+          "letter": "B",
+          "text": "caracteristicas definidoras e fatores relacionados."
+        },
+        {
+          "letter": "C",
+          "text": "apenas indicadores mensuraveis em escala Likert."
+        },
+        {
+          "letter": "D",
+          "text": "apenas a lista de atividades de intervencao."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente o codigo da CID."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "taxonomias-e-sistemas-de-classificacao",
+      "explanation": "O diagnostico tipo 'Problema Real' da NANDA-I e estruturado por titulo, definicao, caracteristicas definidoras e fatores relacionados; o tipo 'Risco' usa fatores de risco.",
+      "references": [
+        "NANDA INTERNATIONAL. Diagnosticos de Enfermagem da NANDA-I."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b7d49bf743d7fa3d46170f7dfd5ee0d1c355dfd1e46e9ccf3f49cb0e19330b07"
+    },
+    {
+      "statement": "Durante a Implementacao de Enfermagem, um Tecnico de Enfermagem realiza um curativo previamente planejado e prescrito pelo Enfermeiro. Ao identificar sinais de piora na ferida, a conduta tecnicamente correta do Tecnico de Enfermagem e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "alterar por conta propria o plano de cuidado e a tecnica de curativo definida."
+        },
+        {
+          "letter": "B",
+          "text": "comunicar a alteracao ao Enfermeiro responsavel, que reavaliara o plano, mantendo a Implementacao sob supervisao."
+        },
+        {
+          "letter": "C",
+          "text": "formular um novo diagnostico de enfermagem para justificar a mudanca."
+        },
+        {
+          "letter": "D",
+          "text": "prescrever um novo curativo sem consultar o Enfermeiro."
+        },
+        {
+          "letter": "E",
+          "text": "ignorar a alteracao, ja que nao faz parte de sua atribuicao observar mudancas no quadro."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "O art. 7o da Resolucao 736/2024 mantem a Implementacao sob supervisao do Enfermeiro; o Tecnico nao formula diagnostico nem altera o plano por conta propria.",
+      "references": [
+        "COFEN, Resolucao no 736/2024, art. 7o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b8d023ca20a3b01aa00bd7a09ff89a299a1bf57d0fa72bad358031472f033dee"
+    },
+    {
+      "statement": "Durante a etapa de Evolucao de Enfermagem, o enfermeiro identifica que o resultado esperado nao foi alcancado por um paciente. De acordo com a natureza ciclica do Processo de Enfermagem, a conduta tecnicamente coerente e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "encerrar o processo, ja que a etapa de Evolucao e a ultima e nao permite revisao."
+        },
+        {
+          "letter": "B",
+          "text": "retroalimentar etapas anteriores (como Diagnostico ou Planejamento de Enfermagem), revisando-as conforme necessario."
+        },
+        {
+          "letter": "C",
+          "text": "transferir a responsabilidade exclusivamente ao Tecnico de Enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "aguardar 30 dias antes de qualquer nova avaliacao, por exigencia normativa."
+        },
+        {
+          "letter": "E",
+          "text": "desconsiderar o resultado, pois a Evolucao nao influencia as demais etapas."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "A Evolucao de Enfermagem fecha e reabre o ciclo: um resultado insatisfatorio deve retroalimentar etapas anteriores, nunca ser ignorado.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c54d924db2655ebb83a51a8e87339627dd87f16ef12bb337e30c92c94182f9da"
+    },
+    {
+      "statement": "A base legal que estabelece as competencias privativas do Enfermeiro, hoje reafirmadas pela Resolucao COFEN no 736/2024, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a Constituicao Federal de 1988, exclusivamente."
+        },
+        {
+          "letter": "B",
+          "text": "a Lei no 7.498/1986, regulamentada pelo Decreto no 94.406/1987."
+        },
+        {
+          "letter": "C",
+          "text": "apenas o Codigo de Etica dos Profissionais de Enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "a Resolucao COFEN no 754/2024."
+        },
+        {
+          "letter": "E",
+          "text": "uma portaria do Ministerio da Saude especifica para cada estado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "responsabilidade-profissional",
+      "explanation": "A base legal das competencias privativas e a Lei no 7.498/1986, regulamentada pelo Decreto no 94.406/1987.",
+      "references": [
+        "Lei no 7.498/1986",
+        "Decreto no 94.406/1987."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cb14315f98ec60d9a8d08f96d2da15b719d684f7c160e6134614d26dfb451a8b"
+    },
+    {
+      "statement": "O Codigo de Etica dos Profissionais de Enfermagem (CEPE), aprovado pela Resolucao COFEN no 564/2017, estabelece como dever do Enfermeiro, entre outros, a realizacao e o registro adequado do Processo de Enfermagem, cuja omissao ou fraude pode configurar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "mera falha administrativa, sem consequencia etica."
+        },
+        {
+          "letter": "B",
+          "text": "infracao etica, sujeita a apuracao em Processo Etico-Disciplinar (PED) perante o COREN."
+        },
+        {
+          "letter": "C",
+          "text": "crime de responsabilidade, apurado exclusivamente pelo Ministerio Publico."
+        },
+        {
+          "letter": "D",
+          "text": "motivo automatico de cassacao do registro profissional, sem direito a defesa."
+        },
+        {
+          "letter": "E",
+          "text": "situacao irrelevante quando o paciente nao apresenta queixa formal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "aspectos-eticos",
+      "explanation": "A omissao ou fraude no registro/realizacao do Processo de Enfermagem pode configurar infracao etica, apurada em PED pelo COREN, com garantia de defesa.",
+      "references": [
+        "COFEN, Resolucao no 564/2017 (CEPE)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cff72e04d27ec7819c05226e62b6d74c1a052fa1396a2db31096d2dcbf6ed1f5"
+    },
+    {
+      "statement": "A Classificacao das Intervencoes de Enfermagem (NIC), desenvolvida pela equipe da Universidade de Iowa, organiza cada intervencao padronizada por meio de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas um codigo numerico, sem definicao nem lista de atividades."
+        },
+        {
+          "letter": "B",
+          "text": "titulo padronizado, definicao e lista de atividades especificas, organizados em Dominios e Classes."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente uma escala Likert de 5 pontos."
+        },
+        {
+          "letter": "D",
+          "text": "apenas uma descricao narrativa livre, sem estrutura padronizada."
+        },
+        {
+          "letter": "E",
+          "text": "uma lista de diagnosticos de enfermagem associados, sem intervencoes."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "classificacao-de-intervencoes-de-enfermagem-nic",
+      "explanation": "Cada intervencao NIC e composta por titulo padronizado, definicao e lista de atividades, organizadas em Dominios e Classes.",
+      "references": [
+        "BUTCHER, H. K. et al. NIC: Classificacao das Intervencoes de Enfermagem."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e310a3bbd9659e9b6ee6ab78289fe82876c455a7c190eac1c46546f3f1faaaa8"
+    },
+    {
+      "statement": "A escolha de um referencial teorico de enfermagem (por exemplo, a Teoria das Necessidades Humanas Basicas) para orientar o raciocinio dentro do Processo de Enfermagem e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "obrigatoria e unica, definida pela Resolucao COFEN no 736/2024."
+        },
+        {
+          "letter": "B",
+          "text": "uma decisao tecnico-profissional/institucional, nao imposta por uma taxonomia obrigatoria na norma vigente."
+        },
+        {
+          "letter": "C",
+          "text": "vedada pela norma vigente, que exige raciocinio exclusivamente empirico."
+        },
+        {
+          "letter": "D",
+          "text": "definida pelo Ministerio da Saude, nao pelo COFEN."
+        },
+        {
+          "letter": "E",
+          "text": "aplicavel apenas as etapas de Diagnostico e Planejamento, nao as demais."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "Nem a norma revogada nem a vigente impoem um referencial teorico unico; a escolha da teoria de enfermagem permanece tecnico-profissional/institucional, desde que cientificamente fundamentada.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e67e4b758defc36bf0780e02b1bbb3275c165e1f6620790cbe313f57fd659e08"
+    },
+    {
+      "statement": "O Processo de Enfermagem, conforme descrito pela norma vigente e pela literatura tecnica, caracteriza-se por ser um metodo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "linear e definitivo, sem possibilidade de retorno a etapas anteriores."
+        },
+        {
+          "letter": "B",
+          "text": "ciclico, dinamico e nao linear, no qual etapas posteriores podem retroalimentar etapas anteriores."
+        },
+        {
+          "letter": "C",
+          "text": "aplicavel uma unica vez por internacao do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "executado exclusivamente pelo Tecnico de Enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "restrito a etapa de Diagnostico, sem relacao com as demais."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "base-normativa-e-conceitual",
+      "explanation": "A natureza ciclica e nao linear do Processo de Enfermagem e principio mantido da norma revogada para a vigente: uma avaliacao insatisfatoria pode reabrir etapas anteriores.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e86deea365ac803192981af96a63ef7ccbc0522e8d74cbeba8ecdd99122deace"
+    },
+    {
+      "statement": "Os Sistemas de Registro Eletronico em Saude (S-RES), tratados pela Resolucao COFEN no 754/2024, podem operar em formato:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente hibrido, combinando papel e sistema eletronico obrigatoriamente."
+        },
+        {
+          "letter": "B",
+          "text": "totalmente digital ('paperless'), com exigencia de assinatura digital qualificada padrao ICP-Brasil."
+        },
+        {
+          "letter": "C",
+          "text": "apenas mediante autorizacao judicial previa."
+        },
+        {
+          "letter": "D",
+          "text": "apenas em unidades de terapia intensiva."
+        },
+        {
+          "letter": "E",
+          "text": "sem qualquer exigencia de seguranca da informacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "registro-e-documentacao",
+      "explanation": "A norma vigente admite S-RES totalmente digitais ('paperless'), exigindo assinatura digital qualificada padrao ICP-Brasil.",
+      "references": [
+        "COFEN, Resolucao no 754/2024, art. 2o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e9db29c9b3fa4bb9ffcc9860bd5bf8ac96642de5d83a0b17cb3e2f9127b1169e"
+    },
+    {
+      "statement": "Alem do diagnostico de enfermagem do tipo 'Problema Real', a taxonomia NANDA-I preve outros tipos, entre eles o diagnostico de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Risco, que descreve uma vulnerabilidade a um problema ainda nao instalado."
+        },
+        {
+          "letter": "B",
+          "text": "Cura, que descreve a resolucao definitiva de uma doenca."
+        },
+        {
+          "letter": "C",
+          "text": "Prescricao, que substitui a prescricao medica."
+        },
+        {
+          "letter": "D",
+          "text": "Alta, exclusivo do momento de saida hospitalar."
+        },
+        {
+          "letter": "E",
+          "text": "Intervencao, sinonimo direto de diagnostico Real."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "taxonomias-e-sistemas-de-classificacao",
+      "explanation": "A NANDA-I preve os tipos Real (Problema), Risco, Promocao da Saude e Sindrome; 'Risco' descreve vulnerabilidade a um problema ainda nao instalado.",
+      "references": [
+        "NANDA INTERNATIONAL. Diagnosticos de Enfermagem da NANDA-I."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f0f6c8a3bd1b5f046eaf4d24b8e7420fb0c8bb2d67f78f105aad828ee9caf4d6"
+    },
+    {
+      "statement": "O registro das acoes profissionais de enfermagem no prontuario do paciente, incluindo o uso de prontuario eletronico e plataformas digitais, e atualmente regido pela:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Resolucao COFEN no 429/2012, ainda vigente sem alteracoes."
+        },
+        {
+          "letter": "B",
+          "text": "Resolucao COFEN no 754/2024."
+        },
+        {
+          "letter": "C",
+          "text": "Resolucao COFEN no 358/2009."
+        },
+        {
+          "letter": "D",
+          "text": "Lei no 7.498/1986, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "Portaria do Ministerio da Saude no 2.436/2017."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "registro-e-documentacao",
+      "explanation": "A Resolucao COFEN no 754/2024 revogou expressamente a Resolucao no 429/2012 e e a norma vigente sobre registro e prontuario eletronico.",
+      "references": [
+        "COFEN, Resolucao no 754/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f3256872102a9b6c99d47811f8994048a23cddf380e968e4410062f84f4085e9"
+    },
+    {
+      "statement": "A Resolucao COFEN no 736/2024, ao substituir a Resolucao COFEN no 358/2009, trouxe como uma das mudancas terminologicas mais relevantes:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a manutencao integral do termo 'Sistematizacao da Assistencia de Enfermagem (SAE)' como nome oficial vigente do conjunto organizacional do cuidado."
+        },
+        {
+          "letter": "B",
+          "text": "a eliminacao do termo 'SAE' como nomenclatura normativa vigente, tratando o Processo de Enfermagem como objeto central e unico da norma."
+        },
+        {
+          "letter": "C",
+          "text": "a criacao de uma sexta etapa do Processo de Enfermagem."
+        },
+        {
+          "letter": "D",
+          "text": "a extincao da exigencia de diagnostico de enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "a transferencia da competencia normativa do COFEN para o Ministerio da Saude."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "transicao-normativa",
+      "explanation": "A mudanca terminologica mais relevante e a eliminacao do termo 'SAE' como nomenclatura normativa vigente; a norma passa a tratar apenas do Processo de Enfermagem.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f6f34f3faf1417c115b16dd64b4ac26a7e21b9524e20f1810f57a619b718085f"
+    },
+    {
+      "statement": "Quanto ao sigilo das informacoes registradas em plataformas digitais de enfermagem, a Resolucao COFEN no 754/2024 exige:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "que o sigilo seja garantido tanto em plataformas publicas quanto privadas."
+        },
+        {
+          "letter": "B",
+          "text": "sigilo apenas em plataformas privadas, sendo dispensado em plataformas publicas."
+        },
+        {
+          "letter": "C",
+          "text": "que as informacoes sejam de acesso publico irrestrito, por transparencia."
+        },
+        {
+          "letter": "D",
+          "text": "que apenas o paciente tenha acesso, vedando o acesso da propria equipe de enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "que o sigilo seja opcional, a criterio da instituicao."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "registro-e-documentacao",
+      "explanation": "A exigencia de sigilo se aplica tanto a plataformas publicas quanto privadas, sem distincao.",
+      "references": [
+        "COFEN, Resolucao no 754/2024, art. 5o."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f70a7e2cb6a9e4ad93ef14cb4be94a6a8230b94bfa7de6c23f3d5961442510a6"
+    },
+    {
+      "statement": "As classificacoes NANDA-I, NIC e NOC foram concebidas para operar de forma interligada (NNN Linkage), permitindo conectar diagnostico, intervencao e resultado dentro do Processo de Enfermagem. Nesse sentido, e correto afirmar que essas tres classificacoes:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "devem ser utilizadas exclusivamente de forma isolada, sem qualquer interligacao entre si."
+        },
+        {
+          "letter": "B",
+          "text": "foram planejadas para uso interligado, nao apenas individual, fortalecendo a continuidade do raciocinio clinico entre diagnostico, intervencao e resultado."
+        },
+        {
+          "letter": "C",
+          "text": "sao mutuamente excludentes, sendo vedado o uso simultaneo de mais de uma na mesma instituicao."
+        },
+        {
+          "letter": "D",
+          "text": "substituem integralmente a exigencia normativa de registro em prontuario."
+        },
+        {
+          "letter": "E",
+          "text": "sao impostas como obrigatorias por resolucao especifica do COFEN, sem alternativa tecnica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "taxonomias-e-sistemas-de-classificacao",
+      "explanation": "Contrario ao uso isolado, o NNN Linkage foi concebido para uso interligado, conectando diagnostico, intervencao e resultado.",
+      "references": [
+        "NANDA INTERNATIONAL",
+        "BUTCHER, H. K. et al.",
+        "MOORHEAD, S. et al."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f7ca9367645ca9adddb0a5297a448157ea6fd65a111384a93d753b7070a7c841"
+    },
+    {
+      "statement": "Um paciente encontra-se em pos-operatorio imediato, com diagnostico medico de 'apendicite aguda operada'. Ao formular um diagnostico de enfermagem para esse paciente, o enfermeiro deve elaborar um enunciado que descreva:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a mesma condicao clinica ja descrita no diagnostico medico, sem alteracao."
+        },
+        {
+          "letter": "B",
+          "text": "uma resposta humana do paciente ao processo saude-doenca ou a um risco associado (por exemplo, risco de infeccao do sitio cirurgico), nao a doenca em si."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a conduta cirurgica ja realizada."
+        },
+        {
+          "letter": "D",
+          "text": "o codigo da Classificacao Internacional de Doencas (CID) correspondente."
+        },
+        {
+          "letter": "E",
+          "text": "a prescricao medicamentosa determinada pelo medico responsavel."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "O diagnostico de enfermagem descreve uma resposta humana ao processo saude/doenca (real, de risco, de promocao da saude ou sindrome), nao a condicao medica em si.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f80434821a0ef8269e4e67b9fff72e11012d9999577fc45891a2bfc815b4dee2"
+    },
+    {
+      "statement": "A verificacao de mudancas nas respostas do paciente e a comparacao entre o resultado esperado (definido no Planejamento) e o resultado efetivamente alcancado ocorrem, conforme a norma vigente, na etapa de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Avaliacao de Enfermagem"
+        },
+        {
+          "letter": "B",
+          "text": "Diagnostico de Enfermagem"
+        },
+        {
+          "letter": "C",
+          "text": "Planejamento de Enfermagem"
+        },
+        {
+          "letter": "D",
+          "text": "Implementacao de Enfermagem"
+        },
+        {
+          "letter": "E",
+          "text": "Evolucao de Enfermagem"
+        }
+      ],
+      "correctAnswer": "E",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "sistematizacao-da-assistencia-de-enfermagem-sae",
+      "topic": "processo-de-enfermagem",
+      "explanation": "A Evolucao de Enfermagem mensura o resultado alcancado em comparacao ao esperado, fechando e reabrindo o ciclo do Processo de Enfermagem.",
+      "references": [
+        "COFEN, Resolucao no 736/2024."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fc920a8d70d6b0565cf3ddb25e1b96780f8e1178d1c91b79c152992ea0820921"
+    }
+  ]
+}

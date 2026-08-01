@@ -1,3 +1,9 @@
+> **Nota (2026-07-24):** esta pasta documenta a mesma prova de `docs/work/sespa-pa-2023/`
+> (pasta duplicada, criada em outra sessão). Consolidado em `sespa-pa-2023/` — ver
+> `docs/BUGS.md` BUG-006 para o histórico completo da reconciliação. As URLs de
+> fonte oficial abaixo (mirror qconcursos) são o dado novo que esta pasta tinha e
+> a outra não; preservadas aqui por referência.
+
 - Nome do concurso: Concurso Público SESPA Edital 01/2023
 - Órgão: Secretaria de Estado de Saúde Pública do Pará (SESPA) / SEPLAD
 - Banca: Instituto Consulplan

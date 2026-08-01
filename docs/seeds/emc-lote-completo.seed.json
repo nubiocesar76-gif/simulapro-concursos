@@ -1,0 +1,1391 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Um paciente em acompanhamento ambulatorial por arritmia cardiaca cronica relata episodios de palpitacao associados a tontura. Diante desse quadro, a conduta de enfermagem mais adequada e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "orientar o paciente a ignorar os sintomas, pois arritmias cronicas nunca requerem investigacao adicional."
+        },
+        {
+          "letter": "B",
+          "text": "registrar detalhadamente os sintomas e a frequencia dos episodios, orientando o paciente a buscar avaliacao medica para investigacao e ajuste terapeutico."
+        },
+        {
+          "letter": "C",
+          "text": "suspender por conta propria a medicacao antiarritmica prescrita."
+        },
+        {
+          "letter": "D",
+          "text": "orientar aumento da ingesta de cafeina para 'regularizar' o ritmo cardiaco."
+        },
+        {
+          "letter": "E",
+          "text": "indicar automedicacao com anti-hipertensivo de outro paciente da familia."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-cardiovasculares",
+      "explanation": "O enfermeiro registra e documenta os sintomas, orientando avaliacao medica para investigacao e ajuste terapeutico, sem alterar tratamento por conta propria.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0165c83b66f7c701d1a7c075e1dadc5e692b7223c3c9d14077f3b542b439cd23"
+    },
+    {
+      "statement": "A sindrome metabolica e caracterizada pela associacao de fatores de risco cardiovascular que tipicamente inclui, entre outros criterios, obesidade abdominal, alteracao da pressao arterial, alteracao da glicemia de jejum e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "alteracao do perfil lipidico (triglicerideos elevados e HDL-colesterol reduzido)."
+        },
+        {
+          "letter": "B",
+          "text": "presenca isolada de anemia ferropriva."
+        },
+        {
+          "letter": "C",
+          "text": "hipotireoidismo confirmado laboratorialmente, obrigatoriamente."
+        },
+        {
+          "letter": "D",
+          "text": "presenca de infeccao urinaria de repeticao."
+        },
+        {
+          "letter": "E",
+          "text": "diagnostico previo de artrite reumatoide."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-endocrino-metabolicas",
+      "explanation": "Os criterios classicos de sindrome metabolica incluem obesidade abdominal, alteracao pressorica, alteracao glicemica e dislipidemia (triglicerideos elevados, HDL reduzido).",
+      "references": [
+        "Sociedade Brasileira de Diabetes",
+        "Sociedade Brasileira de Cardiologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "069a45e5f2706904d3c8ea7bb4812bd6df8075e2c6fc57e092d935dd54edc5b3"
+    },
+    {
+      "statement": "A Linha de Cuidado das Doencas Cronicas Nao Transmissiveis (DCNT) organiza a atencao a saude de forma:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "fragmentada, restrita a atendimentos pontuais de urgencia."
+        },
+        {
+          "letter": "B",
+          "text": "continua e integrada, articulando os diferentes pontos de atencao da rede de saude (atencao primaria, especializada e hospitalar) ao longo do tempo."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente hospitalar, sem participacao da atencao primaria."
+        },
+        {
+          "letter": "D",
+          "text": "restrita a uma unica consulta anual, sem acompanhamento longitudinal."
+        },
+        {
+          "letter": "E",
+          "text": "baseada apenas em encaminhamentos, sem qualquer coordenacao do cuidado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "cuidado-cronico-e-linha-de-cuidado",
+      "explanation": "A Linha de Cuidado organiza a atencao de forma continua e integrada entre os pontos de atencao da rede, ao longo do tempo, nao de forma pontual ou fragmentada.",
+      "references": [
+        "Ministerio da Saude, Plano de Acoes Estrategicas para o Enfrentamento das DCNT."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0e469fbd90602ca2c8a43ead4dc638efa4a58e8ad3efc8dd0f4930641f4879c0"
+    },
+    {
+      "statement": "Na fase cronica de reabilitacao de um paciente pos-Acidente Vascular Cerebral (AVC), o cuidado de enfermagem voltado a prevencao de complicacoes relacionadas a imobilidade inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manter o paciente exclusivamente em decubito dorsal, sem mudanca de decubito."
+        },
+        {
+          "letter": "B",
+          "text": "realizar mudanca de decubito programada, estimular mobilizacao precoce e prevenir lesoes por pressao."
+        },
+        {
+          "letter": "C",
+          "text": "restringir toda mobilizacao ate alta hospitalar completa."
+        },
+        {
+          "letter": "D",
+          "text": "suspender fisioterapia motora apos a fase aguda."
+        },
+        {
+          "letter": "E",
+          "text": "manter restricao hidrica rigorosa independentemente da funcao renal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-renais-e-neurologicas-cronicas",
+      "explanation": "Mudanca de decubito programada, mobilizacao precoce e prevencao de lesao por pressao sao cuidados essenciais na reabilitacao pos-AVC.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0e9b47a87730d7c9a8c2912badcefdc4e8660c848e0250daaadd77e2f86411c2"
+    },
+    {
+      "statement": "Um paciente com Doenca Renal Cronica (DRC) em estagio avancado, ainda sem indicacao de terapia renal substitutiva, apresenta na avaliacao de enfermagem edema de membros inferiores, fadiga e resultados laboratoriais compativeis com progressao da doenca. A orientacao de enfermagem sobre controle hidrico e dietetico deve priorizar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "estimulo a ingestao irrestrita de liquidos, para 'lavar' os rins."
+        },
+        {
+          "letter": "B",
+          "text": "orientacao sobre restricao hidrica e de sodio conforme prescricao medica/nutricional, monitorizacao de peso e sinais de sobrecarga hidrica, e adesao ao acompanhamento multiprofissional."
+        },
+        {
+          "letter": "C",
+          "text": "suspensao total de acompanhamento nutricional, por nao ser atribuicao da equipe de saude."
+        },
+        {
+          "letter": "D",
+          "text": "estimulo ao consumo irrestrito de alimentos ricos em potassio, independentemente da funcao renal."
+        },
+        {
+          "letter": "E",
+          "text": "orientacao para abandono do acompanhamento nefrologico ate o inicio da dialise."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doenca-renal-cronica-drc",
+      "explanation": "Na DRC avancada, a orientacao de enfermagem prioriza restricao hidrica/sodica conforme prescricao, monitorizacao de peso e sinais de sobrecarga, e adesao ao acompanhamento multiprofissional - nunca estimulo a ingestao irrestrita de liquidos ou potassio.",
+      "references": [
+        "Sociedade Brasileira de Nefrologia",
+        "Brunner & Suddarth."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1204798d71a48b43ba119bf52ec996f0a8fa5c92338801296acd430661f6427d"
+    },
+    {
+      "statement": "A dermatite de contato irritativa, reacao cutanea comum em profissionais de saude relacionada ao uso frequente de luvas e produtos de higienizacao das maos, caracteriza-se por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser mediada exclusivamente por resposta imunologica de hipersensibilidade tardia, como a dermatite de contato alergica."
+        },
+        {
+          "letter": "B",
+          "text": "resultar de lesao direta a barreira cutanea por agentes irritantes (ex.: alcool, saboes, atrito das luvas), sem necessariamente envolver sensibilizacao imunologica previa."
+        },
+        {
+          "letter": "C",
+          "text": "ocorrer apenas em pessoas com historico previo de alergia alimentar."
+        },
+        {
+          "letter": "D",
+          "text": "ser sempre mais grave que a dermatite de contato alergica."
+        },
+        {
+          "letter": "E",
+          "text": "exigir, obrigatoriamente, biopsia de pele para o diagnostico em todos os casos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "dermatite-de-contato-e-reacoes-cutaneas",
+      "explanation": "A dermatite de contato irritativa resulta de lesao direta a barreira cutanea por agentes irritantes, sem necessariamente envolver sensibilizacao imunologica previa - diferente da dermatite de contato alergica, mediada por hipersensibilidade tardia.",
+      "references": [
+        "Sociedade Brasileira de Dermatologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1e49a33054483360dcc369957ef5853979916e5a071d977262a3e4b5461ff2a2"
+    },
+    {
+      "statement": "De acordo com o Manual do Pe Diabetico (Ministerio da Saude, 2016), a orientacao de enfermagem para prevencao de lesoes em pacientes com neuropatia diabetica inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "recomendar caminhar descalco em ambientes domesticos, para 'fortalecer' a sensibilidade plantar."
+        },
+        {
+          "letter": "B",
+          "text": "orientar inspecao diaria dos pes (inclusive plantas e espacos interdigitais), uso de calcados adequados e hidratacao da pele, evitando andar descalco."
+        },
+        {
+          "letter": "C",
+          "text": "recomendar cortar as unhas em formato arredondado rente a pele, sem qualquer outro cuidado."
+        },
+        {
+          "letter": "D",
+          "text": "orientar uso de agua muito quente para melhorar a circulacao periferica."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar a inspecao dos pes quando o paciente relata nao sentir dor."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "pe-diabetico-e-doencas-cronicas",
+      "explanation": "A prevencao de lesoes em pe diabetico inclui inspecao diaria, calcados adequados, hidratacao da pele e a orientacao de nunca andar descalco; a ausencia de dor (por neuropatia) nao dispensa a inspecao, ao contrario, a reforca.",
+      "references": [
+        "Ministerio da Saude, Manual do Pe Diabetico (2016)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "1e8e4bd70d67241a9efd858980377152132a63ea85e1c2f5edca37505b54f77a"
+    },
+    {
+      "statement": "Um paciente internado apresenta, de forma subita, dor toracica em aperto, sudorese fria e nauseas, com suspeita de sindrome coronariana aguda. A conduta de enfermagem mais adequada, alem de comunicar imediatamente a equipe medica, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aguardar a piora dos sintomas antes de qualquer acao, para confirmar o diagnostico."
+        },
+        {
+          "letter": "B",
+          "text": "manter o paciente em repouso, monitorizar sinais vitais e realizar eletrocardiograma conforme protocolo institucional, preparando-se para possivel intervencao de urgencia."
+        },
+        {
+          "letter": "C",
+          "text": "estimular a deambulacao imediata para avaliar tolerancia ao esforco."
+        },
+        {
+          "letter": "D",
+          "text": "oferecer alimentacao solida imediatamente para avaliar dor associada a digestao."
+        },
+        {
+          "letter": "E",
+          "text": "aguardar a visita medica de rotina do dia seguinte."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "emergencias-clinicas",
+      "explanation": "Diante de suspeita de sindrome coronariana aguda, o enfermeiro mantem o paciente em repouso, monitoriza sinais vitais, realiza ECG conforme protocolo e se prepara para possivel intervencao de urgencia, sem aguardar piora ou postergar a comunicacao.",
+      "references": [
+        "Sociedade Brasileira de Cardiologia",
+        "Brunner & Suddarth."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "20b1644a19f058c82f2660fcedce7d2a28de25cffa8ed18d9e2e10188fc5bc20"
+    },
+    {
+      "statement": "Um paciente em quimioterapia antineoplasica apresenta, durante a infusao, dor, edema e eritema no local de puncao venosa, com suspeita de extravasamento do quimioterapico. A conduta imediata de enfermagem e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aumentar a velocidade de infusao para 'concluir logo' a aplicacao."
+        },
+        {
+          "letter": "B",
+          "text": "interromper imediatamente a infusao, aspirar o maximo possivel do farmaco extravasado pelo acesso, sem remove-lo de imediato, e comunicar a equipe medica para conduta especifica conforme protocolo institucional."
+        },
+        {
+          "letter": "C",
+          "text": "remover imediatamente o acesso venoso e aplicar calor local, independentemente do agente extravasado."
+        },
+        {
+          "letter": "D",
+          "text": "continuar a infusao normalmente, pois e reacao esperada."
+        },
+        {
+          "letter": "E",
+          "text": "administrar analgesico oral e liberar o paciente para casa."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "oncologia-assistencia-de-enfermagem",
+      "explanation": "Diante de suspeita de extravasamento, a conduta e interromper a infusao, aspirar o farmaco extravasado pelo proprio acesso (sem remove-lo de imediato) e comunicar a equipe medica para conduta especifica conforme o agente envolvido.",
+      "references": [
+        "Protocolos de manuseio de antineoplasicos",
+        "Brunner & Suddarth."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "211fe4fe6d82cd7d1ba81d1dedcb3d27dcd01ca255cf688d19edb07ff78f326e"
+    },
+    {
+      "statement": "Entre as modalidades terapeuticas do tratamento oncologico previstas na Politica Nacional de Atencao Oncologica (Portaria MS/GM no 2.439/2005), a quimioterapia neoadjuvante (pre-operatoria) tem como principal finalidade:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "eliminar definitivamente a necessidade de cirurgia em todos os casos."
+        },
+        {
+          "letter": "B",
+          "text": "reduzir o volume tumoral antes da cirurgia, facilitando a ressecao e, quando possivel, tornando operavel um tumor inicialmente irressecavel."
+        },
+        {
+          "letter": "C",
+          "text": "substituir integralmente a radioterapia em qualquer protocolo."
+        },
+        {
+          "letter": "D",
+          "text": "ser administrada exclusivamente apos a alta hospitalar definitiva."
+        },
+        {
+          "letter": "E",
+          "text": "eliminar a necessidade de acompanhamento oncologico posterior."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "oncologia-modalidades-terapeuticas",
+      "explanation": "A quimioterapia neoadjuvante visa reduzir o volume tumoral antes da cirurgia, facilitando a ressecao e, em alguns casos, tornando operavel um tumor inicialmente irressecavel.",
+      "references": [
+        "Ministerio da Saude, Portaria MS/GM no 2.439/2005",
+        "Cartilha ABC do Cancer (MS, 2020)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2b02033913aaaac33cc76295f76bd84124462508e63f9e27d31b92b887ea3d13"
+    },
+    {
+      "statement": "Nos cuidados de enfermagem ao paciente oncologico em fase de cuidados paliativos, o foco principal da assistencia e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a busca pela cura da doenca a qualquer custo, mesmo com sofrimento associado."
+        },
+        {
+          "letter": "B",
+          "text": "o controle de sintomas, o conforto e a qualidade de vida do paciente e de sua familia."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a administracao de quimioterapia paliativa em altas doses."
+        },
+        {
+          "letter": "D",
+          "text": "a suspensao de todo e qualquer cuidado de enfermagem apos a indicacao paliativa."
+        },
+        {
+          "letter": "E",
+          "text": "a decisao unilateral do enfermeiro sobre a continuidade ou nao do tratamento."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "oncologia",
+      "explanation": "Cuidados paliativos priorizam controle de sintomas, conforto e qualidade de vida do paciente e da familia, nao a busca pela cura.",
+      "references": [
+        "Ministerio da Saude",
+        "Politica Nacional de Atencao Oncologica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "30fd35e0a8cb61849fab972e96d9692f2c387ee3fc885fb5a2ab43d171ae7a1f"
+    },
+    {
+      "statement": "Um paciente com diagnostico de epilepsia, em acompanhamento ambulatorial, relata ao enfermeiro que interrompeu por conta propria o uso do anticonvulsivante prescrito por estar 'sem crises ha meses'. A orientacao de enfermagem tecnicamente adequada e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "parabenizar a decisao, ja que a ausencia de crises indica cura definitiva."
+        },
+        {
+          "letter": "B",
+          "text": "orientar que a suspensao abrupta da medicacao anticonvulsivante, sem orientacao medica, pode desencadear novas crises, e que qualquer ajuste deve ser feito com acompanhamento medico."
+        },
+        {
+          "letter": "C",
+          "text": "orientar que a medicacao deve ser tomada apenas quando o paciente perceber sinais de aura."
+        },
+        {
+          "letter": "D",
+          "text": "orientar dobrar a dose seguinte para compensar."
+        },
+        {
+          "letter": "E",
+          "text": "informar que nao ha necessidade de acompanhamento medico continuo em epilepsia controlada."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-renais-e-neurologicas-cronicas",
+      "explanation": "A suspensao abrupta de anticonvulsivante sem orientacao medica e risco reconhecido de recorrencia de crises; qualquer ajuste terapeutico deve ser conduzido com acompanhamento medico.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "342100e8f702346ddb6938b547779eaad3ad71910450ca9afef3415fa8ccf9d2"
+    },
+    {
+      "statement": "A avaliacao de enfermagem para rastreamento do risco cardiovascular em consulta de atencao primaria inclui, rotineiramente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas a afericao de temperatura corporal."
+        },
+        {
+          "letter": "B",
+          "text": "afericao da pressao arterial, calculo do indice de massa corporal (IMC), medida da circunferencia abdominal e levantamento de habitos de vida (tabagismo, atividade fisica, alimentacao)."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a solicitacao de exames de imagem cardiaca."
+        },
+        {
+          "letter": "D",
+          "text": "apenas a verificacao da carteira de vacinacao."
+        },
+        {
+          "letter": "E",
+          "text": "apenas a afericao da frequencia respiratoria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "rastreamento-de-doencas-cardiovasculares",
+      "explanation": "O rastreamento de risco cardiovascular em atencao primaria inclui PA, IMC, circunferencia abdominal e levantamento de habitos de vida, dentro da competencia de enfermagem.",
+      "references": [
+        "Ministerio da Saude, Caderno de Atencao Basica no 37."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "419ed45ed8a80d448e697fc5a28336a7ac6760780b5ddc33ff5b7a4da2d5c5c8"
+    },
+    {
+      "statement": "No rastreamento de fatores de risco cardiovascular na populacao adulta, sao considerados fatores de risco modificaveis, passiveis de intervencao pela equipe de enfermagem:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "idade e sexo, exclusivamente."
+        },
+        {
+          "letter": "B",
+          "text": "tabagismo, sedentarismo, obesidade, dislipidemia e hipertensao arterial nao controlada."
+        },
+        {
+          "letter": "C",
+          "text": "historico familiar de doenca cardiovascular, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "etnia, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "nenhum fator cardiovascular e modificavel."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "rastreamento-de-doencas-cardiovasculares",
+      "explanation": "Tabagismo, sedentarismo, obesidade, dislipidemia e HAS nao controlada sao fatores de risco cardiovascular modificaveis, alvo de intervencao da equipe de enfermagem; idade, sexo, historico familiar e etnia sao fatores nao modificaveis.",
+      "references": [
+        "Sociedade Brasileira de Cardiologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "46ea6987e65fed80e803b58debc541c004ffa5eef6ca5c8bb6c87839cd9995d9"
+    },
+    {
+      "statement": "Um paciente em programa de dialise peritoneal ambulatorial continua apresenta, durante a troca de bolsa, liquido dialisado turvo e relata dor abdominal. Esse achado e sugestivo de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "funcionamento normal e esperado do metodo dialitico, sem necessidade de qualquer conduta adicional."
+        },
+        {
+          "letter": "B",
+          "text": "peritonite associada a dialise peritoneal, exigindo avaliacao medica e coleta do liquido dialisado para exame, conforme protocolo institucional."
+        },
+        {
+          "letter": "C",
+          "text": "sinal de que o paciente deve aumentar o volume infundido imediatamente, sem avaliacao medica."
+        },
+        {
+          "letter": "D",
+          "text": "reacao alergica ao cateter, tratavel apenas com anti-histaminico oral."
+        },
+        {
+          "letter": "E",
+          "text": "achado irrelevante, ja que a dialise peritoneal nunca cursa com infeccao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "metodos-dialiticos",
+      "explanation": "Liquido dialisado turvo associado a dor abdominal e achado classico de peritonite associada a dialise peritoneal, exigindo avaliacao medica e coleta do liquido para exame conforme protocolo.",
+      "references": [
+        "Sociedade Brasileira de Nefrologia",
+        "Brunner & Suddarth."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4759792906972f19c56ab2b5586db3deffa4fae8eb347804a5eca51eda38675a"
+    },
+    {
+      "statement": "Em relacao a terapia antirretroviral (TARV) no tratamento do HIV/Aids, um dos pontos centrais da orientacao de enfermagem ao paciente e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a adesao rigorosa ao esquema terapeutico prescrito, nos horarios corretos, para manter a supressao viral e reduzir o risco de resistencia."
+        },
+        {
+          "letter": "B",
+          "text": "a possibilidade de suspender a medicacao livremente sempre que os exames estiverem 'bons'."
+        },
+        {
+          "letter": "C",
+          "text": "a desnecessidade de acompanhamento laboratorial periodico apos inicio da TARV."
+        },
+        {
+          "letter": "D",
+          "text": "a substituicao da TARV por terapias alternativas sem base cientifica, a criterio do paciente."
+        },
+        {
+          "letter": "E",
+          "text": "a administracao da TARV apenas em periodos de sintomas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "assistencia-de-enfermagem-ao-paciente-com-hiv-aids",
+      "explanation": "A adesao rigorosa a TARV nos horarios corretos e central para manter a supressao viral e reduzir risco de resistencia viral.",
+      "references": [
+        "Ministerio da Saude, Protocolo Clinico e Diretrizes Terapeuticas para Manejo da Infeccao pelo HIV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "58917ea511e91c4f3a257fcd10d7d816798938ac03da2cbd9447a870fe56cab7"
+    },
+    {
+      "statement": "Na administracao de quimioterapia antineoplasica, um cuidado de enfermagem essencial para a seguranca do paciente e do profissional e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "administrar o quimioterapico sem verificacao previa de acesso venoso, para agilizar o atendimento."
+        },
+        {
+          "letter": "B",
+          "text": "verificar rigorosamente o acesso venoso antes e durante a infusao, monitorizando sinais de extravasamento, e utilizar equipamentos de protecao individual conforme protocolo de manuseio de antineoplasicos."
+        },
+        {
+          "letter": "C",
+          "text": "descartar as sobras de quimioterapico no lixo comum, sem separacao especial."
+        },
+        {
+          "letter": "D",
+          "text": "dispensar a checagem dupla de dose em qualquer situacao."
+        },
+        {
+          "letter": "E",
+          "text": "permitir que o paciente manipule livremente o equipo de infusao do quimioterapico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "oncologia-assistencia-de-enfermagem",
+      "explanation": "A seguranca na administracao de quimioterapicos exige verificacao rigorosa do acesso venoso, monitorizacao de extravasamento e uso de EPI conforme protocolo institucional.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica",
+        "protocolos de manuseio de antineoplasicos."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "6c0d6fbcdc04ab69bed2c61c81578b69c3928e01f797128a3dd550cb7503a72d"
+    },
+    {
+      "statement": "Uma medida de enfermagem recomendada para a prevencao de dermatite de contato relacionada ao uso de luvas e a higienizacao frequente das maos entre profissionais de saude e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "higienizacao das maos, secagem adequada e uso regular de hidratante/emoliente apos a jornada de contato com irritantes."
+        },
+        {
+          "letter": "B",
+          "text": "uso continuo de luvas por toda a jornada de trabalho, sem qualquer intervalo."
+        },
+        {
+          "letter": "C",
+          "text": "substituicao da higienizacao das maos por alcool em gel exclusivamente, sem qualquer outro cuidado com a pele."
+        },
+        {
+          "letter": "D",
+          "text": "uso de luvas de latex em profissionais ja sabidamente alergicos ao latex, sem alternativa."
+        },
+        {
+          "letter": "E",
+          "text": "evitar completamente a higienizacao das maos para preservar a barreira cutanea."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "dermatite-de-contato-e-reacoes-cutaneas",
+      "explanation": "Higienizacao adequada, secagem correta e uso regular de hidratante/emoliente sao medidas reconhecidas de prevencao de dermatite de contato ocupacional; a higienizacao das maos nunca deve ser evitada, por ser medida essencial de seguranca do paciente.",
+      "references": [
+        "Sociedade Brasileira de Dermatologia",
+        "ANVISA, protocolos de higienizacao das maos."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7a2286e253420425983633474e8aca70c70f3496366602a2d86244357e89c2a0"
+    },
+    {
+      "statement": "Na avaliacao de uma colostomia recem-confeccionada, a caracteristica de coloracao da mucosa do estoma que indica adequada perfusao sanguinea e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "coloracao palida e esbranquicada."
+        },
+        {
+          "letter": "B",
+          "text": "coloracao rosada a vermelho-vivo, semelhante a mucosa oral."
+        },
+        {
+          "letter": "C",
+          "text": "coloracao azulada/arroxeada (cianotica)."
+        },
+        {
+          "letter": "D",
+          "text": "coloracao enegrecida."
+        },
+        {
+          "letter": "E",
+          "text": "coloracao amarelada."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "estomas-e-feridas-complexas",
+      "explanation": "Um estoma saudavel apresenta coloracao rosada a vermelho-vivo, semelhante a mucosa oral; palidez, cianose ou enegrecimento indicam comprometimento de perfusao/isquemia/necrose.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7ceff0fd89ba2ac16bc182d49026945f002598b032d4054bb83e95cf87c90aac"
+    },
+    {
+      "statement": "Um paciente em pos-operatorio de cirurgia digestiva (ressecao intestinal) apresenta, no terceiro dia pos-operatorio, distensao abdominal, ausencia de eliminacao de flatos e ruidos hidroaereos diminuidos. Esses achados sao compativeis com:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "infeccao de sitio cirurgico superficial."
+        },
+        {
+          "letter": "B",
+          "text": "ileo paralitico pos-operatorio."
+        },
+        {
+          "letter": "C",
+          "text": "deiscencia de sutura, obrigatoriamente."
+        },
+        {
+          "letter": "D",
+          "text": "trombose venosa profunda."
+        },
+        {
+          "letter": "E",
+          "text": "reacao alergica a antibiotico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "enfermagem-em-especialidades-cirurgicas",
+      "explanation": "Distensao abdominal, ausencia de flatos e ruidos hidroaereos diminuidos no pos-operatorio de cirurgia digestiva sao achados classicos de ileo paralitico.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7e8393ad306d49763149a32ba6aed541c0dc15f0db0d2f3b90d865f1bd73339a"
+    },
+    {
+      "statement": "Em relacao ao sigilo e a confidencialidade das informacoes de saude do paciente vivendo com HIV/Aids, a conduta de enfermagem eticamente correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "compartilhar o diagnostico com familiares e colegas de trabalho do paciente, independentemente de autorizacao, por 'interesse coletivo'."
+        },
+        {
+          "letter": "B",
+          "text": "preservar o sigilo das informacoes de saude do paciente, compartilhando-as apenas com a equipe assistencial diretamente envolvida no cuidado ou mediante autorizacao do proprio paciente."
+        },
+        {
+          "letter": "C",
+          "text": "registrar o diagnostico de forma visivel na porta do quarto, para 'alertar' a equipe."
+        },
+        {
+          "letter": "D",
+          "text": "informar o diagnostico a qualquer pessoa que solicite, sem necessidade de autorizacao."
+        },
+        {
+          "letter": "E",
+          "text": "recusar atendimento ao paciente por medo de contaminacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "assistencia-de-enfermagem-ao-paciente-com-hiv-aids",
+      "explanation": "O sigilo das informacoes de saude deve ser preservado, restrito a equipe assistencial envolvida no cuidado ou mediante autorizacao do paciente, conforme principios eticos da profissao.",
+      "references": [
+        "COFEN, Codigo de Etica dos Profissionais de Enfermagem (Resolucao no 564/2017)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8e46fcdb328faeca5b5b0bf85e8dc15980a71c154c7b2f784c662ac75a77b05f"
+    },
+    {
+      "statement": "A Doenca Pulmonar Obstrutiva Cronica (DPOC) caracteriza-se por limitacao ao fluxo aereo, geralmente progressiva, associada principalmente a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exposicao a particulas ou gases nocivos, sendo o tabagismo o principal fator de risco."
+        },
+        {
+          "letter": "B",
+          "text": "infeccao viral aguda isolada, sem relacao com exposicao ambiental."
+        },
+        {
+          "letter": "C",
+          "text": "alergia alimentar."
+        },
+        {
+          "letter": "D",
+          "text": "uso cronico de anti-inflamatorios nao esteroidais."
+        },
+        {
+          "letter": "E",
+          "text": "hipertensao arterial nao controlada, exclusivamente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-respiratorias-cronicas",
+      "explanation": "A DPOC esta associada principalmente a exposicao a particulas/gases nocivos, sendo o tabagismo o principal fator de risco.",
+      "references": [
+        "Sociedade Brasileira de Pneumologia e Tisiologia",
+        "Ministerio da Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9ab72bf4bfda166300e992566b365284221a77aaa2524c3d40c5bfbdc30e6178"
+    },
+    {
+      "statement": "A Organizacao Mundial da Saude, por meio do Protocolo de Cirurgia Segura, adotado no Brasil pelo Ministerio da Saude e pela ANVISA, preconiza a utilizacao de uma lista de verificacao (checklist) dividida em tres momentos cirurgicos. Esses tres momentos sao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "admissao, alta e obito."
+        },
+        {
+          "letter": "B",
+          "text": "entrada (antes da inducao anestesica), pausa (antes da incisao cirurgica) e saida (antes de o paciente deixar a sala)."
+        },
+        {
+          "letter": "C",
+          "text": "pre-operatorio, intraoperatorio e pos-operatorio tardio, exclusivamente domiciliar."
+        },
+        {
+          "letter": "D",
+          "text": "triagem, classificacao de risco e alta."
+        },
+        {
+          "letter": "E",
+          "text": "anestesia, cirurgia e recuperacao pos-anestesica, sem etapa de verificacao previa."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "cuidado-perioperatorio",
+      "explanation": "O checklist de cirurgia segura da OMS e dividido em Sign In (entrada, antes da inducao anestesica), Time Out (pausa, antes da incisao) e Sign Out (saida, antes de o paciente deixar a sala).",
+      "references": [
+        "OMS/Ministerio da Saude/ANVISA, Protocolo de Cirurgia Segura."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a1cb6032cfe0a258fd8665c85891b1387045fc5d20f2f03dc43ffc67c70156f7"
+    },
+    {
+      "statement": "Na hipertensao arterial sistemica (HAS), o cuidado de enfermagem voltado ao controle nao medicamentoso inclui a orientacao sobre:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aumento da ingestao de sodio, para melhorar o paladar dos alimentos."
+        },
+        {
+          "letter": "B",
+          "text": "reducao da ingestao de sodio, controle do peso corporal, pratica regular de atividade fisica e reducao do consumo de alcool."
+        },
+        {
+          "letter": "C",
+          "text": "suspensao total de liquidos, independentemente da funcao renal."
+        },
+        {
+          "letter": "D",
+          "text": "uso irrestrito de anti-inflamatorios nao esteroidais para controle da dor."
+        },
+        {
+          "letter": "E",
+          "text": "sedentarismo como estrategia de controle pressorico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "hipertensao-arterial-sistemica",
+      "explanation": "O controle nao medicamentoso da HAS inclui reducao de sodio, controle de peso, atividade fisica regular e reducao do consumo de alcool.",
+      "references": [
+        "Ministerio da Saude, Caderno de Atencao Basica no 37",
+        "Sociedade Brasileira de Cardiologia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "afedfc939bbf8185be95dba3ea84e1a9dda9d8b153426843110bd6b245e0d2af"
+    },
+    {
+      "statement": "Um paciente hipertenso em acompanhamento ambulatorial relata, ao enfermeiro, cefaleia occipital pela manha e tontura ocasional, mas afirma ter suspendido a medicacao anti-hipertensiva por conta propria 'por estar se sentindo bem'. A conduta de enfermagem adequada e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "elogiar a decisao, ja que a ausencia de sintomas graves indica que a medicacao nao era mais necessaria."
+        },
+        {
+          "letter": "B",
+          "text": "orientar sobre os riscos da suspensao sem acompanhamento medico, reforcar a importancia da adesao continua ao tratamento (a HAS frequentemente e assintomatica mesmo com pressao elevada) e encaminhar para reavaliacao medica."
+        },
+        {
+          "letter": "C",
+          "text": "orientar aumento da dose por conta propria para compensar o tempo sem medicacao."
+        },
+        {
+          "letter": "D",
+          "text": "informar que a HAS nao requer tratamento continuo, apenas quando sintomatica."
+        },
+        {
+          "letter": "E",
+          "text": "recomendar substituicao da medicacao por chas caseiros, sem acompanhamento medico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "hipertensao-arterial-sistemica",
+      "explanation": "A HAS e frequentemente assintomatica mesmo com pressao elevada; a suspensao do tratamento sem acompanhamento medico e risco reconhecido, e a orientacao de enfermagem deve reforcar adesao e encaminhar para reavaliacao.",
+      "references": [
+        "Sociedade Brasileira de Cardiologia, Diretrizes Brasileiras de Hipertensao Arterial."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b023fdedfc1f3b5470c5b537542807d63efaf89f4c5af22b7bc1681632a2bf59"
+    },
+    {
+      "statement": "Em um paciente que apresenta rebaixamento do nivel de consciencia e hipoglicemia confirmada por glicemia capilar, a conduta imediata de enfermagem, conforme protocolo institucional e prescricao, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "administrar insulina rapida imediatamente."
+        },
+        {
+          "letter": "B",
+          "text": "administrar glicose (via oral, se o paciente estiver consciente e apto a deglutir, ou endovenosa, conforme prescricao/protocolo, se rebaixado), corrigindo a hipoglicemia."
+        },
+        {
+          "letter": "C",
+          "text": "aguardar a proxima glicemia capilar antes de qualquer conduta."
+        },
+        {
+          "letter": "D",
+          "text": "restringir todo tipo de aporte calorico ate avaliacao medica presencial."
+        },
+        {
+          "letter": "E",
+          "text": "administrar apenas agua, sem qualquer fonte de glicose."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "emergencias-clinicas",
+      "explanation": "A hipoglicemia deve ser corrigida imediatamente com glicose (oral, se consciente e apto a deglutir; endovenosa, se rebaixado), conforme prescricao/protocolo - administrar insulina agravaria o quadro.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b706f83aa09ab035c931f5f1e56b351b3de138c17fc2d8fdb989769fbceb0b81"
+    },
+    {
+      "statement": "A angina do peito, manifestacao clinica da doenca arterial coronariana, caracteriza-se tipicamente por dor ou desconforto toracico que:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "piora exclusivamente com o repouso e melhora com o esforco fisico."
+        },
+        {
+          "letter": "B",
+          "text": "esta relacionada a isquemia miocardica transitoria, geralmente desencadeada por esforco fisico ou estresse, e aliviada com repouso ou nitrato."
+        },
+        {
+          "letter": "C",
+          "text": "nunca se irradia para outras regioes do corpo."
+        },
+        {
+          "letter": "D",
+          "text": "e sempre acompanhada de febre alta."
+        },
+        {
+          "letter": "E",
+          "text": "nao tem qualquer relacao com esforco fisico."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-cardiovasculares",
+      "explanation": "A angina tipica decorre de isquemia miocardica transitoria, desencadeada por esforco/estresse e aliviada com repouso ou nitrato.",
+      "references": [
+        "Sociedade Brasileira de Cardiologia",
+        "Brunner & Suddarth."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c18864700a41a47dbeb7175cf61a9152894dc1f0cbdd7c155cd3be05ddfafdab"
+    },
+    {
+      "statement": "Na insuficiencia cardiaca, um dos principais parametros de monitorizacao de enfermagem para identificar sinais de congestao e retencao hidrica e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o peso corporal diario, no mesmo horario e condicoes."
+        },
+        {
+          "letter": "B",
+          "text": "exclusivamente a temperatura axilar."
+        },
+        {
+          "letter": "C",
+          "text": "a glicemia capilar, isoladamente."
+        },
+        {
+          "letter": "D",
+          "text": "apenas a frequencia respiratoria em repouso."
+        },
+        {
+          "letter": "E",
+          "text": "o tempo de enchimento capilar, isoladamente."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-cardiovasculares",
+      "explanation": "O peso corporal diario, aferido em condicoes padronizadas, e parametro classico de monitorizacao de retencao hidrica na insuficiencia cardiaca.",
+      "references": [
+        "Sociedade Brasileira de Cardiologia",
+        "Brunner & Suddarth."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c69770ebae0be41e9e89b0030bd84b1edafa1e31837314fb07b7415b6d7ea0c4"
+    },
+    {
+      "statement": "Para a afericao correta da pressao arterial, conforme tecnica preconizada, o paciente deve estar, entre outras orientacoes:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "com a bexiga cheia e apos a pratica recente de exercicio fisico."
+        },
+        {
+          "letter": "B",
+          "text": "em repouso de pelo menos 5 minutos, com a bexiga vazia, sem ter fumado, ingerido cafeina ou praticado exercicio fisico nos 30 minutos anteriores a medida."
+        },
+        {
+          "letter": "C",
+          "text": "em pe, sem apoio para o braco, imediatamente apos subir escadas."
+        },
+        {
+          "letter": "D",
+          "text": "com as pernas cruzadas, para maior conforto."
+        },
+        {
+          "letter": "E",
+          "text": "falando ao telefone durante a medida, para 'distrair' e evitar ansiedade."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "hipertensao-arterial-sistemica",
+      "explanation": "A tecnica correta de afericao pressorica exige repouso previo, bexiga vazia e ausencia de fumo/cafeina/exercicio nos 30 minutos anteriores, entre outras condicoes padronizadas.",
+      "references": [
+        "Sociedade Brasileira de Cardiologia, Diretrizes Brasileiras de Hipertensao Arterial."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c8469f5f5ecadf740c61e8dae86f22524c4b5b7686ecc605c1e711d7f77c47eb"
+    },
+    {
+      "statement": "Em relacao a comunicacao de mas noticias e ao suporte psicossocial ao paciente oncologico e a sua familia, e atribuicao da equipe de enfermagem:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "comunicar isoladamente o diagnostico e o prognostico ao paciente, sem envolvimento da equipe medica."
+        },
+        {
+          "letter": "B",
+          "text": "oferecer escuta ativa, acolhimento e suporte emocional, em articulacao com a equipe multiprofissional."
+        },
+        {
+          "letter": "C",
+          "text": "omitir informacoes sobre o estado clinico sempre que a familia solicitar, independentemente da vontade do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "restringir a visita de familiares como rotina padrao para pacientes oncologicos."
+        },
+        {
+          "letter": "E",
+          "text": "delegar toda comunicacao exclusivamente ao capelao/servico religioso da instituicao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-consulplan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "oncologia",
+      "explanation": "A enfermagem oferece escuta ativa, acolhimento e suporte emocional em articulacao com a equipe multiprofissional, sem assumir isoladamente comunicacoes que sao de responsabilidade medica nem omitir informacao contra a vontade do paciente.",
+      "references": [
+        "Ministerio da Saude",
+        "principios de cuidados paliativos oncologicos."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d4091dae986fd61aa964f9c20ab9c55cb20ec533751333a52d2bfd62ba16192c"
+    },
+    {
+      "statement": "Diante de um paciente internado em unidade de clinica medica que apresenta subitamente dispneia intensa, dor toracica pleuritica e taquicardia, com suspeita de tromboembolismo pulmonar (TEP), a conduta imediata de enfermagem inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "posicionar o paciente em decubito ventral e aguardar melhora espontanea."
+        },
+        {
+          "letter": "B",
+          "text": "elevar a cabeceira, ofertar oxigenio suplementar conforme prescricao/protocolo, monitorizar sinais vitais e comunicar imediatamente a equipe medica."
+        },
+        {
+          "letter": "C",
+          "text": "estimular deambulacao imediata para 'melhorar a circulacao'."
+        },
+        {
+          "letter": "D",
+          "text": "administrar anticoagulante por conta propria, sem prescricao medica."
+        },
+        {
+          "letter": "E",
+          "text": "aguardar a proxima visita medica de rotina, sem comunicacao imediata."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "emergencias-clinicas",
+      "explanation": "Diante de suspeita de TEP, a conduta imediata de enfermagem inclui elevar cabeceira, ofertar O2 conforme protocolo, monitorizar e comunicar a equipe medica com urgencia.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e24b5ec1314a0632088408352eed34894d5f444263c9761d90632fc21c2cc47a"
+    },
+    {
+      "statement": "Na asma, doenca respiratoria cronica caracterizada por inflamacao e hiper-responsividade das vias aereas, um cuidado de enfermagem essencial na orientacao do paciente e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "orientar o uso correto da tecnica inalatoria dos dispositivos (bombinhas/espacadores), fator determinante para a eficacia do tratamento."
+        },
+        {
+          "letter": "B",
+          "text": "orientar suspensao do uso de broncodilatador de resgate assim que os sintomas melhorarem, mesmo que temporariamente."
+        },
+        {
+          "letter": "C",
+          "text": "orientar que a asma nao exige acompanhamento continuo, apenas tratamento nas crises."
+        },
+        {
+          "letter": "D",
+          "text": "desestimular o uso de espacadores por serem desnecessarios."
+        },
+        {
+          "letter": "E",
+          "text": "orientar que corticoide inalatorio deve ser usado apenas durante crises agudas."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "idecan",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doencas-respiratorias-cronicas",
+      "explanation": "A orientacao correta da tecnica inalatoria e determinante para a eficacia do tratamento da asma; a asma exige acompanhamento continuo, incluindo uso regular de corticoide inalatorio de manutencao, nao apenas nas crises.",
+      "references": [
+        "Sociedade Brasileira de Pneumologia e Tisiologia",
+        "GINA (Global Initiative for Asthma)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e6deb1e08d68d91abb066217958c17e64f29592c7f5e95c93323eda477aa3247"
+    },
+    {
+      "statement": "Conforme a Resolucao COFEN no 710/2022, compete privativamente ao Enfermeiro, no processo de doacao, captacao e transplante de orgaos, tecidos e celulas:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas o transporte do material biologico, sem qualquer atribuicao assistencial."
+        },
+        {
+          "letter": "B",
+          "text": "planejar, coordenar, executar, supervisionar e avaliar as acoes da equipe de enfermagem prestadas ao doador (vivo ou falecido), aos familiares e ao receptor, bem como ao material biologico destinado a transplante."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a assinatura do termo de consentimento familiar, sem qualquer participacao assistencial."
+        },
+        {
+          "letter": "D",
+          "text": "a decisao medica sobre morte encefalica, atribuicao exclusiva de enfermagem."
+        },
+        {
+          "letter": "E",
+          "text": "nenhuma atribuicao especifica, sendo o processo de competencia exclusivamente medica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "doacao-e-transplante-de-orgaos",
+      "explanation": "A Resolucao COFEN no 710/2022 estabelece como competencia privativa do Enfermeiro planejar, coordenar, executar, supervisionar e avaliar as acoes de enfermagem no processo de doacao/captacao/transplante.",
+      "references": [
+        "COFEN, Resolucao no 710/2022."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f51e01b047c4358f0fed17dc13aee1919839a875d294ee5b4b5cc15b0513f2ec"
+    },
+    {
+      "statement": "No pos-operatorio de uma cirurgia ortopedica com colocacao de protese total de quadril, um cuidado de enfermagem fundamental para prevenir luxacao da protese e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "manter o membro operado em rotacao interna e aducao acentuada."
+        },
+        {
+          "letter": "B",
+          "text": "evitar a flexao do quadril alem de 90 graus e a aducao do membro operado, mantendo abducao com coxim entre as pernas."
+        },
+        {
+          "letter": "C",
+          "text": "estimular cruzamento das pernas para conforto do paciente."
+        },
+        {
+          "letter": "D",
+          "text": "manter decubito ventral nas primeiras 48 horas."
+        },
+        {
+          "letter": "E",
+          "text": "suspender a deambulacao por 30 dias, independentemente da orientacao da equipe cirurgica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "enfermagem-em-especialidades-cirurgicas",
+      "explanation": "As precaucoes classicas pos-artroplastia de quadril evitam flexao excessiva e aducao/rotacao interna do membro, usando coxim de abducao para prevenir luxacao da protese.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f585a68f863febe70896593cb28f017c1de88f93591fe66b8e2ea32b25216567"
+    },
+    {
+      "statement": "Durante a avaliacao de enfermagem de um estoma intestinal, o enfermeiro observa coloracao arroxeada/azulada da mucosa, associada a diminuicao da temperatura local. Essa alteracao sugere:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "processo cicatricial normal e esperado nas primeiras 24 horas."
+        },
+        {
+          "letter": "B",
+          "text": "possivel comprometimento da perfusao sanguinea/isquemia do estoma, exigindo comunicacao imediata a equipe cirurgica."
+        },
+        {
+          "letter": "C",
+          "text": "simples irritacao por adesivo da bolsa coletora, sem necessidade de conduta adicional."
+        },
+        {
+          "letter": "D",
+          "text": "sinal caracteristico de infeccao fungica periestomal, tratavel apenas com antifungico topico."
+        },
+        {
+          "letter": "E",
+          "text": "achado esperado em estomas de eliminacao urinaria, sem relacao com perfusao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "enfermagem-medico-cirurgica",
+      "topic": "estomas-e-feridas-complexas",
+      "explanation": "Coloracao arroxeada/azulada associada a queda de temperatura local e sinal de alarme de comprometimento vascular do estoma, exigindo comunicacao imediata a equipe cirurgica.",
+      "references": [
+        "Brunner & Suddarth, Enfermagem Medico-Cirurgica."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fc1580dc3fe8895721edbcd57cc028c74ccac053933ec8df5411c48a99482114"
+    }
+  ]
+}

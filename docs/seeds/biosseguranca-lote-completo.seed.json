@@ -1,0 +1,1114 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "Na precaucao para aerossois, o Equipamento de Protecao Individual respiratorio indicado para os profissionais e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "mascara cirurgica comum."
+        },
+        {
+          "letter": "B",
+          "text": "respirador com filtro de particulas (tipo N95/PFF2), com vedacao adequada a face do profissional."
+        },
+        {
+          "letter": "C",
+          "text": "nenhuma protecao respiratoria e necessaria, apenas luvas."
+        },
+        {
+          "letter": "D",
+          "text": "mascara de tecido reutilizavel sem certificacao."
+        },
+        {
+          "letter": "E",
+          "text": "protetor facial (face shield), isoladamente, sem qualquer mascara."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "A precaucao para aerossois exige respirador N95/PFF2 com vedacao adequada a face.",
+      "references": [
+        "ANVISA, precaucoes por via de transmissao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "11eb787032fec57918c83cce3f05ffb9fbc640396c2741b402317c3c45fb3f95"
+    },
+    {
+      "statement": "A profilaxia pos-exposicao (PEP) para HIV, quando indicada apos acidente ocupacional com material biologico, deve ser iniciada:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "a qualquer momento, sem relacao com o tempo decorrido desde a exposicao."
+        },
+        {
+          "letter": "B",
+          "text": "o mais precocemente possivel, idealmente dentro de poucas horas, respeitando o prazo maximo recomendado pelos protocolos vigentes do Ministerio da Saude."
+        },
+        {
+          "letter": "C",
+          "text": "apenas apos confirmacao laboratorial de soroconversao do profissional exposto."
+        },
+        {
+          "letter": "D",
+          "text": "somente se o paciente-fonte apresentar sintomas."
+        },
+        {
+          "letter": "E",
+          "text": "apenas em profissionais medicos, nao em profissionais de enfermagem."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A PEP deve ser iniciada o mais precocemente possivel, respeitando o prazo maximo recomendado pelos protocolos do Ministerio da Saude.",
+      "references": [
+        "Ministerio da Saude, protocolo de profilaxia pos-exposicao a HIV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2d5c947d1a5c20af647b5db42e85f4d2850a9973a04d2279507572f6c33f347f"
+    },
+    {
+      "statement": "A ordem tecnicamente recomendada para a retirada (desparamentacao) segura dos Equipamentos de Protecao Individual, ao final do atendimento a um paciente em precaucao, busca minimizar o risco de autocontaminacao, retirando primeiro os itens:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "considerados mais contaminados, geralmente as luvas, seguidas de outros itens ate a mascara/respirador, retirado por ultimo."
+        },
+        {
+          "letter": "B",
+          "text": "na mesma ordem em que foram colocados, sem qualquer alteracao."
+        },
+        {
+          "letter": "C",
+          "text": "todos simultaneamente, para agilizar o processo."
+        },
+        {
+          "letter": "D",
+          "text": "comecando pela mascara/respirador, antes de qualquer outro item."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha ordem recomendada, ficando a criterio do profissional."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "equipamentos-de-protecao-individual",
+      "explanation": "A desparamentacao segue ordem que minimiza autocontaminacao: itens mais contaminados (luvas) sao retirados primeiro, e a mascara/respirador, por ultimo.",
+      "references": [
+        "ANVISA/CDC, sequencia de paramentacao e desparamentacao de EPI."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2dc445bcbbd86389cf93795d88d44cc6b0152fb796b86921ecc7554fa1942821"
+    },
+    {
+      "statement": "No contexto da biosseguranca ocupacional, a articulacao entre a equipe de saude do trabalhador (ou servico equivalente) e a CCIH, diante de um acidente com material biologico envolvendo profissional de enfermagem, tem como finalidade principal:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "atribuir responsabilidade disciplinar ao profissional acidentado."
+        },
+        {
+          "letter": "B",
+          "text": "conduzir a avaliacao de risco do acidente, orientar profilaxia quando indicada e realizar o acompanhamento clinico/sorologico do profissional exposto."
+        },
+        {
+          "letter": "C",
+          "text": "substituir a necessidade de notificacao formal do acidente."
+        },
+        {
+          "letter": "D",
+          "text": "dispensar qualquer acompanhamento apos a primeira avaliacao."
+        },
+        {
+          "letter": "E",
+          "text": "restringir-se exclusivamente ao registro administrativo, sem qualquer orientacao clinica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A articulacao entre saude do trabalhador e CCIH conduz a avaliacao de risco, orientacao de profilaxia e acompanhamento clinico/sorologico do profissional exposto.",
+      "references": [
+        "NR-32",
+        "protocolos institucionais de biosseguranca ocupacional."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "49a5a1cff53fa8775c81be0e4305be2bedb1bc33d1b2fc6e9a52da8ee2a79728"
+    },
+    {
+      "statement": "A vacinacao do proprio profissional de saude (ex.: contra hepatite B), como medida preventiva de exposicao ocupacional, e reconhecida pela NR-32 como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "irrelevante para a biosseguranca ocupacional."
+        },
+        {
+          "letter": "B",
+          "text": "medida de protecao do trabalhador, complementar ao uso de EPI e as precaucoes padrao, reduzindo o risco de adoecimento em caso de exposicao a material biologico."
+        },
+        {
+          "letter": "C",
+          "text": "obrigatoria apenas para profissionais que atuam em centro cirurgico."
+        },
+        {
+          "letter": "D",
+          "text": "substituta do uso de EPI, dispensando-o quando o profissional esta vacinado."
+        },
+        {
+          "letter": "E",
+          "text": "de responsabilidade exclusiva do proprio profissional, sem qualquer participacao institucional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A vacinacao do trabalhador e medida de protecao complementar ao EPI e as precaucoes padrao, reduzindo risco de adoecimento em caso de exposicao - nao substitui o EPI.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "4a922dc05bd3a9216036c6d862fac4bfcdf117b6fbec0dbf34404f364978c11f"
+    },
+    {
+      "statement": "A mistura de produtos de limpeza a base de cloro (hipoclorito) com produtos a base de amonia e uma pratica que deve ser rigorosamente evitada, pois:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "nao produz qualquer reacao quimica relevante."
+        },
+        {
+          "letter": "B",
+          "text": "pode gerar gases toxicos (como cloraminas), representando risco respiratorio significativo ao profissional."
+        },
+        {
+          "letter": "C",
+          "text": "apenas reduz a eficacia da limpeza, sem qualquer risco a saude do trabalhador."
+        },
+        {
+          "letter": "D",
+          "text": "e recomendada como pratica padrao para potencializar a desinfeccao."
+        },
+        {
+          "letter": "E",
+          "text": "so e perigosa em ambientes externos, nunca em ambiente hospitalar fechado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "limpeza-e-desinfeccao-de-equipamentos",
+      "explanation": "A mistura de cloro com amonia pode gerar gases toxicos (cloraminas), representando risco respiratorio significativo.",
+      "references": [
+        "NR-32",
+        "seguranca quimica ocupacional."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "58cbfebc4716c245a5fb160542c5d84778171db7102503bdc4c75bc07603d075"
+    },
+    {
+      "statement": "Durante o descarte de uma agulha apos administracao de medicamento, o profissional de enfermagem deve utilizar recipiente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "de material flexivel, sem qualquer caracteristica especifica de resistencia."
+        },
+        {
+          "letter": "B",
+          "text": "rigido, resistente a perfuracao, identificado, proprio para perfurocortantes, sem reencapar a agulha antes do descarte."
+        },
+        {
+          "letter": "C",
+          "text": "de vidro comum, sem qualquer resistencia especial exigida."
+        },
+        {
+          "letter": "D",
+          "text": "compartilhado com residuos comuns do Grupo D."
+        },
+        {
+          "letter": "E",
+          "text": "reutilizavel apos esvaziamento manual pelo proprio profissional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "biosseguranca",
+      "topic": "gerenciamento-de-residuos-de-servicos-de-saude",
+      "explanation": "O descarte de perfurocortantes exige recipiente rigido, resistente a perfuracao, identificado, sem reencape previo da agulha.",
+      "references": [
+        "RDC ANVISA no 222/2018",
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "668b1637a76bee5cd512827be73ef390b1ca4a2ec4827412db39ae81d3149bf4"
+    },
+    {
+      "statement": "Um profissional de enfermagem sofre acidente com agulha apos puncao venosa em paciente com sorologia desconhecida para HIV. A conduta imediata, alem dos cuidados locais com o ferimento, inclui:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aguardar sintomas antes de qualquer avaliacao."
+        },
+        {
+          "letter": "B",
+          "text": "avaliacao medica em servico especializado o mais rapidamente possivel, para avaliacao de risco e, se indicado, inicio de profilaxia pos-exposicao (PEP) dentro da janela de tempo recomendada, alem de notificacao do acidente."
+        },
+        {
+          "letter": "C",
+          "text": "automedicacao com antirretroviral por conta propria, sem avaliacao medica."
+        },
+        {
+          "letter": "D",
+          "text": "isolamento domiciliar preventivo por 6 meses, independentemente de avaliacao."
+        },
+        {
+          "letter": "E",
+          "text": "dispensa de qualquer conduta, ja que a sorologia do paciente-fonte e desconhecida."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "Diante de sorologia desconhecida do paciente-fonte, a conduta e avaliacao medica especializada urgente, para avaliacao de risco e eventual PEP dentro da janela recomendada, alem de notificacao.",
+      "references": [
+        "Ministerio da Saude, protocolo de profilaxia pos-exposicao a HIV."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "69cff38fef14c920375cf860090baec4cd401343a7d61383278d2bd4b9a8df3a"
+    },
+    {
+      "statement": "Apos um acidente com material perfurocortante contaminado, a primeira conduta local recomendada, em relacao ao ferimento, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "espremer o local para 'forcar a saida' do sangue, seguida de aplicacao de substancias causticas."
+        },
+        {
+          "letter": "B",
+          "text": "lavar imediatamente o local com agua e sabao (nos casos de exposicao cutanea) ou solucao salina (mucosas), sem uso de substancias irritantes ou causticas."
+        },
+        {
+          "letter": "C",
+          "text": "aplicar alcool 70% diretamente sobre o ferimento aberto."
+        },
+        {
+          "letter": "D",
+          "text": "cobrir o ferimento sem qualquer lavagem previa."
+        },
+        {
+          "letter": "E",
+          "text": "aguardar avaliacao medica antes de qualquer cuidado local."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A lavagem imediata com agua e sabao (pele) ou solucao salina (mucosas) e a primeira conduta recomendada, sem uso de substancias causticas/irritantes.",
+      "references": [
+        "Ministerio da Saude, protocolo de exposicao a material biologico."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7be9be5ad5dcd28f67547b002ac6d2670ca524fbae40446ff4ccb85111226bf2"
+    },
+    {
+      "statement": "Um profissional que presta assistencia a um paciente em precaucao de contato por bacteria multirresistente, ao termino do atendimento, deve remover o avental e as luvas:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas ao final do turno de trabalho, mantendo os mesmos EPIs entre diferentes pacientes."
+        },
+        {
+          "letter": "B",
+          "text": "antes de deixar o ambiente do paciente, higienizando as maos em seguida, para evitar contaminacao de outras areas/pacientes."
+        },
+        {
+          "letter": "C",
+          "text": "apenas se visivelmente sujos, independentemente do contexto de contato."
+        },
+        {
+          "letter": "D",
+          "text": "sem necessidade de higienizacao das maos apos a remocao, ja que as luvas protegiam as maos."
+        },
+        {
+          "letter": "E",
+          "text": "mantendo-os para reutilizacao em outro paciente, para 'economizar insumos'."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "biosseguranca",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "O avental e as luvas devem ser removidos antes de deixar o ambiente do paciente, com higienizacao das maos em seguida, evitando contaminacao cruzada.",
+      "references": [
+        "ANVISA, precaucoes de contato",
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "7d2ec15cec89cc72e50bffff104ad1fa524a807944e4490dbe2979cd46c4593e"
+    },
+    {
+      "statement": "Um servico de saude identifica, em sua analise de indicadores, aumento no numero de acidentes com material perfurocortante em uma unidade especifica. Como medida de gestao de risco ocupacional, alinhada a NR-32, a instituicao deve:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "atribuir a responsabilidade exclusivamente aos profissionais envolvidos, sem investigacao adicional."
+        },
+        {
+          "letter": "B",
+          "text": "investigar as causas (ex.: adequacao de dispositivos com mecanismo de seguranca, disponibilidade de coletores, treinamento), implementar medidas corretivas e reforcar capacitacao da equipe."
+        },
+        {
+          "letter": "C",
+          "text": "reduzir o numero de profissionais na unidade, como medida de contencao."
+        },
+        {
+          "letter": "D",
+          "text": "suspender o atendimento na unidade indefinidamente."
+        },
+        {
+          "letter": "E",
+          "text": "ignorar o achado, por ser considerado risco inerente a profissao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A gestao de risco ocupacional exige investigacao de causas, medidas corretivas e reforco de capacitacao, nao atribuicao de culpa individual isolada nem inacao.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8055d5f840451c60af184c60a38c112d75d28486260ba874c5a759a4f5848d6d"
+    },
+    {
+      "statement": "O oculos de protecao (ou protetor facial), Equipamento de Protecao Individual indicado em procedimentos com risco de respingo de sangue ou fluidos corporais, tem como finalidade proteger:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente as vias respiratorias."
+        },
+        {
+          "letter": "B",
+          "text": "as mucosas oculares do profissional contra respingos."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente a pele das maos."
+        },
+        {
+          "letter": "D",
+          "text": "o paciente, nao o profissional."
+        },
+        {
+          "letter": "E",
+          "text": "apenas contra radiacao ionizante."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "centro-de-selecao-da-universidade-federal-de-goias",
+      "subject": "biosseguranca",
+      "topic": "equipamentos-de-protecao-individual",
+      "explanation": "O oculos de protecao/protetor facial protege as mucosas oculares do profissional contra respingos de sangue/fluidos corporais.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8e4d0d8bf180dde8128f40c3dce9b9e5b65b078d6b8288728462f917b44d172a"
+    },
+    {
+      "statement": "Em relacao a limpeza e desinfeccao de circuitos e equipamentos respiratorios reutilizaveis, uma medida de protecao ocupacional recomendada e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "realizar o processo sem qualquer EPI, por se tratar de equipamento 'limpo' apos o uso no paciente."
+        },
+        {
+          "letter": "B",
+          "text": "considerar o equipamento potencialmente contaminado ate a conclusao do processo de limpeza/desinfeccao, utilizando EPI adequado durante toda a manipulacao."
+        },
+        {
+          "letter": "C",
+          "text": "descartar o equipamento sem qualquer processo de limpeza."
+        },
+        {
+          "letter": "D",
+          "text": "devolver o equipamento diretamente ao paciente seguinte, sem qualquer reprocessamento."
+        },
+        {
+          "letter": "E",
+          "text": "utilizar apenas agua, sem qualquer produto de limpeza ou desinfeccao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "limpeza-e-desinfeccao-de-equipamentos",
+      "explanation": "O equipamento deve ser considerado potencialmente contaminado ate a conclusao do processo, exigindo EPI adequado durante toda a manipulacao.",
+      "references": [
+        "Manual de Biosseguranca para Servicos de Saude",
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "955c3a2d9e0d523f42645e7ce693cff1ad73ede62532e7be0cfe153a78da6744"
+    },
+    {
+      "statement": "Entre os Equipamentos de Protecao Individual (EPI) utilizados na rotina assistencial, a luva de procedimento (nao esteril) tem como principal indicacao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "substituir a higienizacao das maos em qualquer situacao."
+        },
+        {
+          "letter": "B",
+          "text": "proteger o profissional do contato com sangue, fluidos corporais, secrecoes e excrecoes, sendo trocada a cada paciente/procedimento."
+        },
+        {
+          "letter": "C",
+          "text": "ser reutilizada indefinidamente apos lavagem com agua e sabao."
+        },
+        {
+          "letter": "D",
+          "text": "ser usada apenas em procedimentos cirurgicos."
+        },
+        {
+          "letter": "E",
+          "text": "dispensar o uso de outros EPIs, como oculos de protecao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "equipamentos-de-protecao-individual",
+      "explanation": "A luva de procedimento protege o profissional do contato com material biologico e deve ser trocada a cada paciente/procedimento, nunca reutilizada nem substitui a higienizacao das maos.",
+      "references": [
+        "NR-32",
+        "ANVISA, precaucoes padrao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a3d8400a94b89606a969bf86c1df65613c0b913e59749c25278e7185cb7a58dc"
+    },
+    {
+      "statement": "Conforme a NR-32, a Comunicacao de Acidente de Trabalho (CAT), em caso de acidente ocupacional com material biologico, deve ser:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "dispensada quando o profissional nao apresenta sintomas imediatos."
+        },
+        {
+          "letter": "B",
+          "text": "emitida, formalizando o registro do acidente de trabalho, independentemente da gravidade aparente inicial, permitindo o acompanhamento adequado e a garantia de direitos previdenciarios."
+        },
+        {
+          "letter": "C",
+          "text": "emitida apenas em caso de obito do profissional."
+        },
+        {
+          "letter": "D",
+          "text": "de responsabilidade exclusiva do proprio acidentado, sem participacao institucional."
+        },
+        {
+          "letter": "E",
+          "text": "opcional, a criterio da instituicao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A CAT deve ser emitida independentemente da gravidade aparente, formalizando o acidente e garantindo direitos previdenciarios e acompanhamento adequado.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a48d3c18ae0d0b1528edf550487767359cd28a9afaf0b40b362b06d754da9e42"
+    },
+    {
+      "statement": "Em relacao ao risco ocupacional biologico na area da saude, a hierarquia de medidas de controle preconizada (do nivel mais eficaz ao menos eficaz) geralmente prioriza:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o uso de EPI como primeira e unica medida de controle."
+        },
+        {
+          "letter": "B",
+          "text": "medidas de eliminacao/substituicao do risco (ex.: dispositivos com mecanismo de seguranca) e controles administrativos/de engenharia, com o EPI como ultima barreira de protecao, nao a primeira nem unica medida."
+        },
+        {
+          "letter": "C",
+          "text": "apenas a notificacao do acidente, sem qualquer medida preventiva previa."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente o treinamento teorico, sem qualquer medida fisica de protecao."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha hierarquia reconhecida entre essas medidas."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A hierarquia de controle de risco ocupacional prioriza eliminacao/substituicao do risco e controles administrativos/de engenharia; o EPI e a ultima barreira, nao a medida primaria isolada.",
+      "references": [
+        "NR-32",
+        "literatura de saude e seguranca ocupacional."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b9539547d078a6533b748fb9b5382e74f5155d2e736f47767080987553b0e6bc"
+    },
+    {
+      "statement": "A distincao entre Equipamento de Protecao Individual (EPI) e Equipamento de Protecao Coletiva (EPC) e que o EPC:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "e de uso exclusivamente individual, como o EPI."
+        },
+        {
+          "letter": "B",
+          "text": "protege um grupo de pessoas/o ambiente de trabalho como um todo (ex.: cabine de seguranca biologica, sistema de exaustao), nao apenas o profissional que o utiliza diretamente."
+        },
+        {
+          "letter": "C",
+          "text": "e sinonimo de EPI, sem qualquer diferenca conceitual."
+        },
+        {
+          "letter": "D",
+          "text": "e obrigatorio apenas em ambientes hospitalares privados."
+        },
+        {
+          "letter": "E",
+          "text": "substitui integralmente a necessidade de EPI em qualquer situacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "equipamentos-de-protecao-individual",
+      "explanation": "O EPC protege coletivamente o ambiente/grupo de trabalho, diferente do EPI, de uso individual.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "bde8d7da285ecc69ae867b135ea3c4ca1ff13ca112c48f9433a2a67f89bb09d9"
+    },
+    {
+      "statement": "Conforme a NR-32, o empregador (instituicao de saude) tem, entre outras, a obrigacao de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "fornecer gratuitamente aos trabalhadores os equipamentos de protecao individual necessarios, em condicoes adequadas de higiene e funcionamento."
+        },
+        {
+          "letter": "B",
+          "text": "cobrar dos trabalhadores o custo dos EPIs utilizados."
+        },
+        {
+          "letter": "C",
+          "text": "dispensar o fornecimento de EPI quando o trabalhador se recusar a usa-lo, sem qualquer outra medida."
+        },
+        {
+          "letter": "D",
+          "text": "fornecer EPI apenas mediante solicitacao formal do trabalhador, sem disponibilizacao padrao."
+        },
+        {
+          "letter": "E",
+          "text": "fornecer EPI apenas para profissionais medicos."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "A NR-32 estabelece como obrigacao do empregador fornecer gratuitamente os EPIs necessarios, em condicoes adequadas de higiene e funcionamento.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c2e24e419a58864cb934106c0d57855a7c95eaa3554c6e0cabc90ad83d76932a"
+    },
+    {
+      "statement": "Na precaucao de contato, o Equipamento de Protecao Individual minimo indicado para profissionais que terao contato direto com o paciente ou seu ambiente proximo e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas mascara cirurgica, sem luvas ou avental."
+        },
+        {
+          "letter": "B",
+          "text": "luvas e avental (capote), a serem removidos antes de deixar o quarto/box do paciente."
+        },
+        {
+          "letter": "C",
+          "text": "respirador N95/PFF2, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "oculos de protecao, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "nenhum EPI adicional alem da precaucao padrao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "precaucoes-e-isolamento",
+      "explanation": "A precaucao de contato exige luvas e avental, removidos antes de deixar o ambiente do paciente.",
+      "references": [
+        "ANVISA, precaucoes por via de transmissao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ce8cd57c439b9f5da56192010317d3804bc6621a228651ca510f7e7671172f3a"
+    },
+    {
+      "statement": "Durante a etapa de limpeza manual de instrumentais cirurgicos contaminados, previamente a desinfeccao/esterilizacao na CME, a protecao do trabalhador exige, no minimo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "dispensa de qualquer EPI, por ja haver processo de esterilizacao posterior."
+        },
+        {
+          "letter": "B",
+          "text": "uso de luvas de protecao resistentes (grossas, tipo domestico/industrial, nao luva de procedimento fina), oculos de protecao e avental impermeavel, dado o risco de contato com material biologico e respingo durante a limpeza manual."
+        },
+        {
+          "letter": "C",
+          "text": "uso exclusivo de mascara cirurgica, sem qualquer outro EPI."
+        },
+        {
+          "letter": "D",
+          "text": "uso de luvas esteris de procedimento cirurgico, identicas as usadas em sala de cirurgia."
+        },
+        {
+          "letter": "E",
+          "text": "realizacao do procedimento sem qualquer protecao, por ocorrer em area 'suja' ja isolada."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "biosseguranca",
+      "topic": "reprocessamento-de-produtos-para-saude",
+      "explanation": "A limpeza manual de instrumentais contaminados exige luvas resistentes, oculos de protecao e avental impermeavel, dado o risco de contato/respingo.",
+      "references": [
+        "NR-32",
+        "ANVISA/SOBECC, Manual de Processamento de Produtos para a Saude."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d6a70a551220d9b10d7017c6c929b3e7895d9e40acc5c522f99ce7114a41a11e"
+    },
+    {
+      "statement": "O risco ocupacional na area da saude, do ponto de vista da NR-32, e classificado, entre outras categorias, em risco biologico, risco quimico, risco fisico e risco ergonomico/de acidentes. O contato com sangue e fluidos corporais contaminados e classificado como risco:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "fisico."
+        },
+        {
+          "letter": "B",
+          "text": "biologico."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente ergonomico."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivamente radioativo."
+        },
+        {
+          "letter": "E",
+          "text": "nao ha classificacao de risco prevista pela NR-32."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "O contato com sangue e fluidos corporais contaminados e classificado como risco biologico.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "d94669da55b96e79d63b1a3d64aeac5b4b346d1f0048b83e143cc206ad934542"
+    },
+    {
+      "statement": "Em relacao ao descarte de Equipamentos de Protecao Individual (EPI) descartaveis (ex.: luvas, mascaras) utilizados no atendimento a pacientes, a conduta correta e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "descarta-los em lixo comum, independentemente do contexto de uso."
+        },
+        {
+          "letter": "B",
+          "text": "descarta-los conforme a classificacao de residuos de servicos de saude aplicavel (ex.: residuo infectante, quando contaminado com material biologico), conforme o Plano de Gerenciamento de Residuos de Servicos de Saude da instituicao."
+        },
+        {
+          "letter": "C",
+          "text": "reutiliza-los apos lavagem, mesmo sendo descartaveis."
+        },
+        {
+          "letter": "D",
+          "text": "devolve-los ao fabricante para reprocessamento."
+        },
+        {
+          "letter": "E",
+          "text": "queima-los no proprio local de atendimento, sem qualquer protocolo."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fundacao-vunesp",
+      "subject": "biosseguranca",
+      "topic": "equipamentos-de-protecao-individual",
+      "explanation": "O descarte de EPI descartavel contaminado segue a classificacao de RSS aplicavel, conforme o PGRSS institucional.",
+      "references": [
+        "RDC ANVISA no 222/2018."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e1813302f1def8a137d28aa457477fbec112c1e50f1f9f7d30bd09a6bf427b31"
+    },
+    {
+      "statement": "Um dos principais fatores de risco para acidentes com material perfurocortante entre profissionais de enfermagem, amplamente reconhecido na literatura de saude ocupacional, e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "o uso de dispositivos com mecanismo de seguranca (agulhas retrateis)."
+        },
+        {
+          "letter": "B",
+          "text": "o reencape de agulhas apos o uso, pratica desaconselhada exatamente por elevar o risco de acidente."
+        },
+        {
+          "letter": "C",
+          "text": "o descarte imediato em coletor de perfurocortantes, sem reencape."
+        },
+        {
+          "letter": "D",
+          "text": "o uso de luvas de procedimento durante a puncao."
+        },
+        {
+          "letter": "E",
+          "text": "a notificacao sistematica dos acidentes ocorridos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "exposicao-ocupacional-e-acidentes-com-material-biologico",
+      "explanation": "O reencape de agulhas e pratica desaconselhada e reconhecida como fator de risco relevante para acidentes com perfurocortantes.",
+      "references": [
+        "NR-32",
+        "literatura de saude ocupacional em enfermagem."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e90a011d9dcdd84465c6de4c69743669dd4808789365677aafb60bafeeaf3360"
+    },
+    {
+      "statement": "Os residuos do Grupo D, na classificacao de Residuos de Servicos de Saude (RSS), correspondem a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "residuos com risco biologico, como sangue e hemoderivados."
+        },
+        {
+          "letter": "B",
+          "text": "residuos comuns, semelhantes aos residuos domiciliares, sem risco biologico, quimico ou radioativo adicional (ex.: papel, sobras de alimentos nao contaminadas)."
+        },
+        {
+          "letter": "C",
+          "text": "residuos radioativos."
+        },
+        {
+          "letter": "D",
+          "text": "residuos perfurocortantes, exclusivamente."
+        },
+        {
+          "letter": "E",
+          "text": "residuos quimicos perigosos."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "fgv",
+      "subject": "biosseguranca",
+      "topic": "gerenciamento-de-residuos-de-servicos-de-saude",
+      "explanation": "O Grupo D corresponde a residuos comuns, semelhantes aos domiciliares, sem risco adicional.",
+      "references": [
+        "RDC ANVISA no 222/2018."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e9541237dfadb10ed432bb65a6334c0d12d88817246ceec1cfbe3fc800c5fed6"
+    },
+    {
+      "statement": "Durante a limpeza e desinfeccao manual de equipamentos e superficies com produtos quimicos (ex.: desinfetantes a base de cloro ou compostos quaternarios de amonia), o profissional deve, como medida de protecao ocupacional:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "dispensar qualquer EPI, por serem produtos de uso domestico comum."
+        },
+        {
+          "letter": "B",
+          "text": "utilizar EPI adequado (luvas, oculos de protecao e, quando indicado, avental/mascara), conforme a ficha de informacao de seguranca do produto quimico utilizado, para reduzir o risco de exposicao cutanea/respiratoria/ocular ao produto."
+        },
+        {
+          "letter": "C",
+          "text": "manusear o produto sem qualquer ventilacao do ambiente."
+        },
+        {
+          "letter": "D",
+          "text": "misturar diferentes produtos quimicos de limpeza para 'potencializar' o efeito, sem qualquer restricao."
+        },
+        {
+          "letter": "E",
+          "text": "armazenar os produtos quimicos junto a alimentos, sem qualquer separacao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "biosseguranca",
+      "topic": "limpeza-e-desinfeccao-de-equipamentos",
+      "explanation": "O manuseio de produtos quimicos de limpeza/desinfeccao exige EPI adequado conforme a ficha de seguranca do produto, reduzindo risco de exposicao.",
+      "references": [
+        "NR-32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ed2574973e9418c72a0b70bf52de00c8d057f809d95e126bc5a0327c4e6ae727"
+    },
+    {
+      "statement": "Os residuos perfurocortantes (ex.: agulhas, laminas, ampolas de vidro quebradas) sao classificados, na classificacao de RSS, como Grupo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "A."
+        },
+        {
+          "letter": "B",
+          "text": "B."
+        },
+        {
+          "letter": "C",
+          "text": "D."
+        },
+        {
+          "letter": "D",
+          "text": "E."
+        },
+        {
+          "letter": "E",
+          "text": "Nao sao classificados em nenhum grupo especifico."
+        }
+      ],
+      "correctAnswer": "D",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "biosseguranca",
+      "topic": "gerenciamento-de-residuos-de-servicos-de-saude",
+      "explanation": "Os residuos perfurocortantes constituem o Grupo E na classificacao de RSS.",
+      "references": [
+        "RDC ANVISA no 222/2018."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f3982c866364f43f5b2ad7ac1c614e388542f577b6879f762929838108fa0e98"
+    },
+    {
+      "statement": "Uma instituicao de saude identifica que parte da equipe de enfermagem nao segue rotineiramente as precaucoes padrao (ex.: uso inconsistente de luvas ao manipular material biologico), aumentando o risco ocupacional de exposicao. Como medida de biosseguranca institucional, a conduta mais adequada e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "aplicar penalidade disciplinar imediata, sem qualquer acao educativa previa."
+        },
+        {
+          "letter": "B",
+          "text": "reforcar a capacitacao da equipe sobre precaucoes padrao e biosseguranca, monitorar a adesao e investigar barreiras praticas (ex.: disponibilidade de insumos), como parte de um processo continuo de melhoria da seguranca ocupacional."
+        },
+        {
+          "letter": "C",
+          "text": "ignorar o achado, por ser considerado comportamento individual sem relacao institucional."
+        },
+        {
+          "letter": "D",
+          "text": "reduzir o numero de profissionais na unidade."
+        },
+        {
+          "letter": "E",
+          "text": "eliminar a exigencia de uso de luvas, para 'simplificar' a rotina."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "biosseguranca",
+      "topic": "ccih-e-prevencao-de-infeccao-hospitalar",
+      "explanation": "A resposta institucional adequada e capacitacao, monitoramento de adesao e investigacao de barreiras praticas, nao punicao imediata nem inacao.",
+      "references": [
+        "NR-32",
+        "gestao de biosseguranca institucional."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f3cbf54f2f98b3fa0b73883fc9f9b09d1e4493e6f74dfa0bc83b335a45059b0a"
+    },
+    {
+      "statement": "Um profissional de enfermagem, ao realizar aspiracao de vias aereas em paciente com secrecao respiratoria abundante, deve selecionar, alem da luva de procedimento, quais EPIs adicionais para protecao contra respingo/aerossolizacao de secrecoes?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "nenhum EPI adicional e necessario alem da luva."
+        },
+        {
+          "letter": "B",
+          "text": "oculos de protecao (ou protetor facial) e mascara, dado o risco de respingo e aerossolizacao durante o procedimento."
+        },
+        {
+          "letter": "C",
+          "text": "apenas avental, sem qualquer protecao facial."
+        },
+        {
+          "letter": "D",
+          "text": "apenas gorro, sem qualquer outro EPI."
+        },
+        {
+          "letter": "E",
+          "text": "luvas de procedimento duplas, sem qualquer protecao facial ou respiratoria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "biosseguranca",
+      "topic": "equipamentos-de-protecao-individual",
+      "explanation": "A aspiracao de vias aereas com secrecao abundante exige protecao facial (oculos/protetor facial) e mascara, dado o risco de respingo/aerossolizacao.",
+      "references": [
+        "NR-32",
+        "ANVISA, precaucoes padrao."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "fc86406477ea6b82573201928df71578bf37ffff21c798f1630df5b36ba32697"
+    }
+  ]
+}

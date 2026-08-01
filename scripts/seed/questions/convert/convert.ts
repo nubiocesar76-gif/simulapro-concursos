@@ -59,14 +59,18 @@ function toSeedItem(row: ReturnType<typeof validateRows>["converted"][number]): 
     correctAnswer: row.correctAnswer,
     position: row.position,
     board: row.board,
-    contest: row.contest,
     subject: row.subject,
     topic: row.topic,
-    year: row.year,
     explanation: row.explanation,
     references: row.references,
     status: row.status,
     keywords: row.keywords,
+    // Sprint 6.8: contest/year ficam de fora do objeto (em vez de string vazia/null)
+    // quando ausentes, para bater com `.optional()` do schema — mesmo padrão já usado
+    // abaixo para source/package/packageVersion. Conteúdo editorial inédito (sem
+    // concurso real) não tem contest/year; prova real continua preenchendo os dois.
+    ...(row.contest ? { contest: row.contest } : {}),
+    ...(row.year != null ? { year: row.year } : {}),
     ...(row.source ? { source: row.source } : {}),
     ...(row.package ? { package: row.package } : {}),
     ...(row.packageVersion ? { packageVersion: row.packageVersion } : {}),

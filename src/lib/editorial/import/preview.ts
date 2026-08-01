@@ -146,7 +146,15 @@ export async function buildImportPreview(pkg: EditorialPackage): Promise<ImportP
       }
     : { total: 1, new: 1, updated: 0, removed: 0, unchanged: 0 };
 
-  const loadTable = async (table: string) => {
+  const loadTable = async (
+    table:
+      | "editorial_disciplines"
+      | "editorial_topics"
+      | "editorial_subtopics"
+      | "editorial_keywords"
+      | "editorial_rules"
+      | "editorial_evidence",
+  ) => {
     if (!architectureId) return [] as DbRow[];
     const { data, error } = await supabaseAdmin
       .from(table)

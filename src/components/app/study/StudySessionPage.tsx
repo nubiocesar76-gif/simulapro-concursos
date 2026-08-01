@@ -31,6 +31,10 @@ import { QuestionFeedbackPanel } from "@/components/app/study/QuestionFeedbackPa
 import { QuestionMetadataBadges } from "@/components/app/study/QuestionMetadataBadges";
 import { QuestionNavigation } from "@/components/app/study/QuestionNavigation";
 import { QuestionOptions } from "@/components/app/study/QuestionOptions";
+import { QuestionSiaTagChips } from "@/components/app/study/QuestionSiaTagChips";
+import { QuestionBoardStyleBlock } from "@/components/app/study/QuestionBoardStyleBlock";
+import { QuestionSiaTimeBlock } from "@/components/app/study/QuestionSiaTimeBlock";
+import { QuestionSiaSummary } from "@/components/app/study/QuestionSiaSummary";
 import { SessionResultsView } from "@/components/app/study/SessionResultsView";
 import { SessionProgress } from "@/components/app/study/SessionProgress";
 import { SessionSummaryPanel } from "@/components/app/study/SessionSummaryPanel";
@@ -402,6 +406,9 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
           <QuestionMetadataBadges context={question.context} />
 
+          {/* SIA V1 — chips de tag (só ícones), seguros antes de responder */}
+          <QuestionSiaTagChips tags={question.siaTags} />
+
           <QuestionCard statement={question.statement} imageUrl={question.context.imageUrl} />
 
           <QuestionOptions
@@ -418,6 +425,12 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
               style={{ borderColor: "var(--ds-color-border)" }}
             >
               <QuestionFeedbackPanel feedback={question.feedback} />
+              <QuestionBoardStyleBlock
+                boardName={question.context.boardName}
+                styleSummary={question.feedback.sia.boardStyleSummary}
+              />
+              <QuestionSiaTimeBlock time={question.feedback.sia.time} />
+              <QuestionSiaSummary lessonsLearned={question.feedback.sia.lessonsLearned} />
               <QuestionActions
                 favorite={question.favorite}
                 reviewLater={question.reviewLater}

@@ -152,6 +152,19 @@ async function distributionExists(distributionId: string): Promise<boolean> {
   return !!data;
 }
 
+// subscriptions.course_id é obrigatório (subscriptions_course_id_fkey) — resolvido
+// aqui a partir da mesma cadeia content_distributions → package_versions → packages
+// já usada em outros pontos do projeto (ex.: src/lib/import.ts), nunca inventado.
+async function resolveCourseIdForDistribution(distributionId: string): Promise<string | null> {
+  const { data, error } = await supabaseAdmin
+    .from("content_distributions")
+    .select("package_versions(packages(course_id))")
+    .eq("id", distributionId)
+    .maybeSingle();
+  if (error) throw error;
+  return data?.package_versions?.packages?.course_id ?? null;
+}
+
 async function findSubscription(userId: string, distributionId: string) {
   const { data, error } = await supabaseAdmin
     .from("subscriptions")
@@ -180,6 +193,15 @@ async function activateOrRenewSubscription(params: {
     return;
   }
 
+  const courseId = await resolveCourseIdForDistribution(distributionId);
+  if (!courseId) {
+    await recordAsaasLog("asaas.webhook.error", eventId, {
+      stage: "activate_or_renew",
+      message: "não foi possível resolver course_id para a distribuição",
+    });
+    return;
+  }
+
   const existing = await findSubscription(userId, distributionId);
   const wasActive = existing?.status === "ACTIVE";
 
@@ -195,6 +217,7 @@ async function activateOrRenewSubscription(params: {
     {
       user_id: userId,
       distribution_id: distributionId,
+      course_id: courseId,
       status: "ACTIVE",
       starts_at: existing?.starts_at ?? new Date().toISOString(),
       expires_at: expiresAt,
@@ -382,16 +405,7 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
         break;
       }
 
-      case "PAYMENT_REFUND_IN_PROGRESS":
-      case "PAYMENT_CHARGEBACK_REQUESTED":
-      case "PAYMENT_CHARGEBACK_DISPUTE":
-      case "PAYMENT_AWAITING_CHARGEBACK_REVERSAL": {
-        const paymentLogAction: Record<string, string> = {
-          PAYMENT_REFUND_IN_PROGRESS: "asaas.payment.refund_in_progress",
-          PAYMENT_CHARGEBACK_REQUESTED: "asaas.payment.chargeback_requested",
-          PAYMENT_CHARGEBACK_DISPUTE: "asaas.payment.chargeback_dispute",
-          PAYMENT_AWAITING_CHARGEBACK_REVERSAL: "asaas.payment.chargeback_reversal_pending",
-        };
+      case "PAYMENT_REFUND_IN_PROGRESS": {
         const ref = parseExternalReference(payload.payment?.externalReference);
         if (!ref) {
           await recordAsaasLog("asaas.webhook.error", eventId, {
@@ -408,9 +422,36 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
           });
           break;
         }
-        await recordAsaasLog(paymentLogAction[payload.event], eventId, {
+        await recordAsaasLog("asaas.payment.refund_in_progress", eventId, {
           user_id: ref.userId,
           distribution_id: ref.distributionId,
+        });
+        break;
+      }
+
+      // Chargeback: desativa o acesso automaticamente, mesmo padrão já usado
+      // para PAYMENT_REFUNDED — não fica só registrado em log.
+      case "PAYMENT_CHARGEBACK_REQUESTED":
+      case "PAYMENT_CHARGEBACK_DISPUTE":
+      case "PAYMENT_AWAITING_CHARGEBACK_REVERSAL": {
+        const chargebackReason: Record<string, string> = {
+          PAYMENT_CHARGEBACK_REQUESTED: "chargeback_requested",
+          PAYMENT_CHARGEBACK_DISPUTE: "chargeback_dispute",
+          PAYMENT_AWAITING_CHARGEBACK_REVERSAL: "chargeback_reversal_pending",
+        };
+        const ref = parseExternalReference(payload.payment?.externalReference);
+        if (!ref) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: payload.event.toLowerCase(),
+            message: "externalReference ausente ou inválida",
+          });
+          break;
+        }
+        await deactivateSubscription({
+          userId: ref.userId,
+          distributionId: ref.distributionId,
+          eventId,
+          reason: chargebackReason[payload.event],
         });
         break;
       }
@@ -440,6 +481,14 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
           });
           break;
         }
+        const createCourseId = await resolveCourseIdForDistribution(ref.distributionId);
+        if (!createCourseId) {
+          await recordAsaasLog("asaas.webhook.error", eventId, {
+            stage: "subscription_created",
+            message: "não foi possível resolver course_id para a distribuição",
+          });
+          break;
+        }
         // Cria o vínculo local sem liberar acesso — a ativação real só acontece em
         // PAYMENT_CONFIRMED/PAYMENT_RECEIVED. ON CONFLICT DO NOTHING (upsert +
         // ignoreDuplicates) no lugar do SELECT-então-INSERT anterior: se o vínculo já
@@ -449,6 +498,7 @@ export async function processAsaasWebhookEvent(payload: AsaasWebhookPayload): Pr
           {
             user_id: ref.userId,
             distribution_id: ref.distributionId,
+            course_id: createCourseId,
             status: "INACTIVE",
             starts_at: new Date().toISOString(),
             expires_at: null,

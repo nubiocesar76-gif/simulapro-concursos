@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "workId": "pref-goiania-2022",
+  "stage": "CONCLUIDA",
+  "history": [
+    {
+      "stage": "REGISTERED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — FASE 1",
+      "note": "Selecionada automaticamente como proxima prova prioritaria da fila apos EBSERH 2016 (INCA 2025 confirmado CANCELADO em pesquisa anterior, sem prova de Enfermeiro compativel). Identificado que o Cronograma E (26/06/2022) do Edital 001/2020 corresponde exatamente ao cargo 'Especialista em Saude - Enfermeiro Geral', distinto de 6 outras variantes de Enfermeiro no mesmo cronograma."
+    },
+    {
+      "stage": "VALIDATED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — FASE 1",
+      "note": "Edital, prova, gabarito preliminar E gabarito definitivo localizados e obtidos integralmente na fonte oficial (centrodeselecao.ufg.br). Nivel de Validacao A. Gabarito definitivo identifica exatamente 2 questoes anuladas (Q08 e Q26), sem nenhuma outra alteracao de resposta em relacao ao preliminar."
+    },
+    {
+      "stage": "TEXT_EXTRACTED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "48 questoes validas (50 - 2 anuladas) transcritas integralmente com alternativas, gabarito e justificativa tecnica; classificadas na taxonomia oficial (Portugues, Conhecimentos Gerais Regionais, Legislacao do SUS, Saude Coletiva, Biosseguranca, Fundamentos de Enfermagem, Enfermagem Medico-Cirurgica, Etica e Legislacao em Enfermagem, SAE, Seguranca do Paciente, Administracao em Enfermagem, Enfermagem em Doencas Transmissiveis)."
+    },
+    {
+      "stage": "TAXONOMY_EXTENDED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "Nova banca (Centro de Selecao da Universidade Federal de Goias) e novo concurso adicionados ao taxonomy.json; 3 novos assuntos em Saude Coletiva (Regulacao do Acesso a Assistencia em Saude, Multiprofissionalidade e Trabalho em Equipe, Integracao Ensino-Servico). seed:taxonomy executado sem erros."
+    },
+    {
+      "stage": "SEEDED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "48 questoes convertidas (convert:questions, 0 erros) e importadas (seed:questions) para o pacote banco-de-questoes-enfermagem v1.0. Corrigido bug de integracao durante a producao: o slug de banca usado na taxonomia (centro-selecao-ufg) nao correspondia ao slug derivado automaticamente do campo 'name' pelo script de seed (centro-de-selecao-da-universidade-federal-de-goias); corrigido em taxonomy.json e no CSV antes de reimportar com sucesso. Acervo de producao passou de 1218 para 1266 questoes."
+    },
+    {
+      "stage": "AUDIT_APPROVED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1 — Auditoria de Importacao",
+      "note": "Auditoria completa de importacao (18 pontos) aprovada com 0 problemas encontrados: 48/48 inseridas corretamente, 0 orfas, 0 erros de integridade, 0 campos obrigatorios nulos, 0 duplicidades (nem por contentHash nem por statement) envolvendo as questoes novas, 0 questoes com dependencia de imagem nesta prova."
+    },
+    {
+      "stage": "PUBLISHED",
+      "at": "2026-07-24T00:00:00.000Z",
+      "by": "SimulaPro Producao Continua V1",
+      "note": "Package/Version banco-de-questoes-enfermagem v1.0 ja PUBLISHED/ACTIVE (herdado). Prova Prefeitura de Goiania 2022 - Enfermeiro Geral homologada e considerada CONCLUIDA. Catalogo e indicadores atualizados."
+    }
+  ],
+  "sourcePdf": "enfermeiro_geral.pdf (centrodeselecao.ufg.br)",
+  "workDir": "docs/work/pref-goiania-2022"
+}

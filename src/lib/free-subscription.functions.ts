@@ -64,10 +64,26 @@ export const iniciarPlanoFree = createServerFn({ method: "POST" })
     // este módulo é *.functions.ts (embarca no bundle do cliente) — `supabaseAdmin`
     // só é seguro dentro de um handler de servidor, nunca em top-level aqui.
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+
+    // subscriptions.course_id é obrigatório (subscriptions_course_id_fkey) — resolvido
+    // pela mesma cadeia content_distributions → package_versions → packages usada em
+    // src/lib/asaas-webhook.server.ts, nunca inventado.
+    const { data: distribution, error: distributionError } = await supabaseAdmin
+      .from("content_distributions")
+      .select("package_versions(packages(course_id))")
+      .eq("id", FREE_PLAN_DISTRIBUTION_ID)
+      .maybeSingle();
+    if (distributionError) throw distributionError;
+    const courseId = distribution?.package_versions?.packages?.course_id;
+    if (!courseId) {
+      throw new Error("Não foi possível determinar o curso do Plano Free.");
+    }
+
     const { error: activateError } = await supabaseAdmin.from("subscriptions").upsert(
       {
         user_id: context.userId,
         distribution_id: FREE_PLAN_DISTRIBUTION_ID,
+        course_id: courseId,
         status: "ACTIVE",
         starts_at: new Date().toISOString(),
         expires_at: null,

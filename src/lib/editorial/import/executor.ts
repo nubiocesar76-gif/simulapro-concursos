@@ -1,9 +1,20 @@
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import type { Json } from "@/integrations/supabase/types";
 import type { EditorialPackage, ImportRecordCounts, ImportResult } from "./types";
 import { validateEditorialPackage } from "./validator";
 import { codeToSlug } from "./slug";
 
 type IdMap = Map<string, string>;
+
+// Conjunto fechado de tabelas versionadas por architecture_id que este importador
+// gerencia (mesmas 5 usadas em todo o pipeline de import editorial) — union literal
+// em vez de `string` para que `.from(table)` resolva ao tipo real de cada tabela.
+type EditorialImportTable =
+  | "editorial_disciplines"
+  | "editorial_topics"
+  | "editorial_subtopics"
+  | "editorial_keywords"
+  | "editorial_rules";
 
 async function resolveScope(courseSlug: string, positionSlug: string) {
   const { data: course, error: courseError } = await supabaseAdmin
@@ -138,7 +149,7 @@ async function deactivateOtherArchitectures(
   if (error) throw new Error(error.message);
 }
 
-async function loadByCode(table: string, architectureId: string) {
+async function loadByCode(table: EditorialImportTable, architectureId: string) {
   const { data, error } = await supabaseAdmin
     .from(table)
     .select("*")
@@ -152,7 +163,7 @@ async function loadByCode(table: string, architectureId: string) {
 }
 
 async function deprecateMissing(
-  table: string,
+  table: EditorialImportTable,
   architectureId: string,
   keepCodes: Set<string>,
   importLogId: string | null,
@@ -253,7 +264,7 @@ export async function executeEditorialImport(
           entity_code: discipline.id,
           entity_id: data.id,
           change_type: "UPDATED",
-          previous_snapshot: existing,
+          previous_snapshot: existing as unknown as Json,
           new_snapshot: payload,
         });
         changelogCount += 1;

@@ -1,0 +1,1226 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "",
+    "generatedBy": "SimulaPro Question Converter",
+    "description": "Banco Oficial de Questões",
+    "environment": "production"
+  },
+  "questions": [
+    {
+      "statement": "O Lago Paranoa, importante referencia geografica e paisagistica de Brasilia, e um lago:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "natural, formado por processo geologico independente da acao humana."
+        },
+        {
+          "letter": "B",
+          "text": "artificial, formado a partir do represamento do Rio Paranoa, como parte do planejamento urbano da capital."
+        },
+        {
+          "letter": "C",
+          "text": "localizado fora dos limites do Distrito Federal."
+        },
+        {
+          "letter": "D",
+          "text": "utilizado exclusivamente para fins industriais."
+        },
+        {
+          "letter": "E",
+          "text": "formado a partir de uma cratera vulcanica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "geografia-cultura-e-economia-do-df",
+      "explanation": "O Lago Paranoa e artificial, formado pelo represamento do Rio Paranoa, integrado ao planejamento urbanistico de Brasilia.",
+      "references": [
+        "CODEPLAN/GDF, geografia urbana de Brasilia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "02441b5e49f2f8751843506bc15560b8b12175aab39f31b06b2f4553ba0228d9"
+    },
+    {
+      "statement": "O projeto urbanistico de Brasilia, conhecido como Plano Piloto, com formato frequentemente associado a silhueta de um aviao (ou borboleta, conforme interpretacao), foi concebido por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Oscar Niemeyer."
+        },
+        {
+          "letter": "B",
+          "text": "Lucio Costa."
+        },
+        {
+          "letter": "C",
+          "text": "Roberto Burle Marx."
+        },
+        {
+          "letter": "D",
+          "text": "Juscelino Kubitschek."
+        },
+        {
+          "letter": "E",
+          "text": "Israel Pinheiro."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "historia-e-formacao-de-brasilia",
+      "explanation": "Lucio Costa concebeu o projeto urbanistico (Plano Piloto) de Brasilia; Oscar Niemeyer foi responsavel pela arquitetura dos edificios; Roberto Burle Marx, pelo paisagismo.",
+      "references": [
+        "Historia da fundacao de Brasilia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "0a1e8fcad64d150043cf8c561ce9144ca72837c19c60f0df52aa2f26f885b1fb"
+    },
+    {
+      "statement": "A Lei Organica do Distrito Federal, desde sua promulgacao, pode ser alterada por meio de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "decreto do Governador, sem qualquer participacao da Camara Legislativa."
+        },
+        {
+          "letter": "B",
+          "text": "emendas aprovadas pela Camara Legislativa do Distrito Federal, conforme quorum e procedimento nela estabelecidos, de forma analoga a emendas constitucionais estaduais."
+        },
+        {
+          "letter": "C",
+          "text": "plebiscito popular, exclusivamente, sem qualquer participacao do Poder Legislativo distrital."
+        },
+        {
+          "letter": "D",
+          "text": "decisao exclusiva do Supremo Tribunal Federal."
+        },
+        {
+          "letter": "E",
+          "text": "a Lei Organica do Distrito Federal e imutavel, sem possibilidade de emenda."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "A Lei Organica pode ser alterada por emendas aprovadas pela Camara Legislativa do DF, conforme procedimento nela estabelecido.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "178b82dc0d7f8c3f6597696aceaa15f06f6cef1588f498cc04a71dd8771f320f"
+    },
+    {
+      "statement": "A Regiao Administrativa de Ceilandia, uma das mais populosas do Distrito Federal, tem origem historica associada a(ao):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Campanha de Erradicacao de Invasoes (CEI), que remove e realoca populacao de invasoes/ocupacoes irregulares do Plano Piloto na decada de 1970."
+        },
+        {
+          "letter": "B",
+          "text": "construcao do Palacio da Alvorada."
+        },
+        {
+          "letter": "C",
+          "text": "tombamento de Brasilia pela UNESCO."
+        },
+        {
+          "letter": "D",
+          "text": "criacao da RIDE em 1998."
+        },
+        {
+          "letter": "E",
+          "text": "plano urbanistico original de Lucio Costa para o Plano Piloto."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "O nome e a origem de Ceilandia remontam a Campanha de Erradicacao de Invasoes (CEI), que removeu e realocou populacao de ocupacoes irregulares do Plano Piloto na decada de 1970.",
+      "references": [
+        "CODEPLAN/GDF, historia das Regioes Administrativas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "23baa106c9f3f3e36962292362ff01bc94a29ab21d8dd6ab12f0e3cb8fa7f9ac"
+    },
+    {
+      "statement": "Cada Regiao Administrativa do Distrito Federal e dirigida por um(a):",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Prefeito(a), eleito(a) por voto direto."
+        },
+        {
+          "letter": "B",
+          "text": "Administrador(a) Regional, nomeado(a) pelo Governador do Distrito Federal (ou por delegacao, conforme legislacao distrital)."
+        },
+        {
+          "letter": "C",
+          "text": "Vereador(a) mais votado(a) da regiao."
+        },
+        {
+          "letter": "D",
+          "text": "Ministro(a) de Estado."
+        },
+        {
+          "letter": "E",
+          "text": "Cargo inexistente - as RAs nao possuem administracao propria."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "Cada RA e dirigida por um(a) Administrador(a) Regional, nomeado(a) pelo Governador (ou por delegacao), nao eleito(a) por voto direto.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "29276a6323e394b39b851227ae23ea4b3f1f49a212c9bea4ef96a2ab7e32f876"
+    },
+    {
+      "statement": "Por nao ser dividido em municipios, o Distrito Federal, em materia de competencias legislativas e tributarias, acumula:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas competencias federais."
+        },
+        {
+          "letter": "B",
+          "text": "as competencias legislativas reservadas aos Estados e aos Municipios."
+        },
+        {
+          "letter": "C",
+          "text": "apenas competencias municipais, sem qualquer competencia estadual."
+        },
+        {
+          "letter": "D",
+          "text": "nenhuma competencia propria, dependendo integralmente da Uniao."
+        },
+        {
+          "letter": "E",
+          "text": "competencias exclusivamente internacionais."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "O DF acumula as competencias legislativas reservadas a Estados e Municipios, decorrencia direta de nao ser dividido em municipios.",
+      "references": [
+        "Constituicao Federal de 1988, art. 32",
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "2c8f5b911e68d82f28ace3560507af7c12e27cf065ffad1abf1259076b84c7ae"
+    },
+    {
+      "statement": "A Lei Organica do Distrito Federal, norma fundamental que rege a organizacao politico-administrativa do DF, foi promulgada em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "8 de junho de 1993."
+        },
+        {
+          "letter": "B",
+          "text": "5 de outubro de 1988."
+        },
+        {
+          "letter": "C",
+          "text": "21 de abril de 1960."
+        },
+        {
+          "letter": "D",
+          "text": "15 de novembro de 1889."
+        },
+        {
+          "letter": "E",
+          "text": "1o de janeiro de 2000."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "A Lei Organica do Distrito Federal foi promulgada em 8 de junho de 1993.",
+      "references": [
+        "Lei Organica do Distrito Federal (1993)."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "35d39388f0cd7a24798b86c05524906dcf89d07f03431eb923360b403f70403d"
+    },
+    {
+      "statement": "No Distrito Federal, a divisao administrativa em Regioes Administrativas (RAs) substitui a divisao em municipios, sendo cada Regiao Administrativa:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "um municipio autonomo, com prefeito e camara de vereadores proprios."
+        },
+        {
+          "letter": "B",
+          "text": "uma unidade administrativa descentralizada do governo distrital, sem autonomia politica/legislativa propria (nao possui prefeito nem camara de vereadores)."
+        },
+        {
+          "letter": "C",
+          "text": "um distrito federal autonomo dentro do proprio DF."
+        },
+        {
+          "letter": "D",
+          "text": "uma unidade exclusivamente militar."
+        },
+        {
+          "letter": "E",
+          "text": "sinonimo de bairro, sem qualquer diferenca conceitual ou juridica."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "As RAs sao unidades administrativas descentralizadas do governo distrital, sem autonomia politica/legislativa propria (nao elegem prefeito nem camara de vereadores).",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "3c2e2306b4b1f3bd572e00734a1054b656f9bcdf7688d869f13d7d3657ad6d07"
+    },
+    {
+      "statement": "No ambito da estrutura administrativa do Poder Executivo do Distrito Federal, as Secretarias de Estado sao orgaos:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "do Poder Legislativo distrital, sem relacao com o Executivo."
+        },
+        {
+          "letter": "B",
+          "text": "diretamente subordinados ao Governador, responsaveis por areas especificas da administracao publica distrital (ex.: saude, educacao, seguranca)."
+        },
+        {
+          "letter": "C",
+          "text": "autonomos, sem qualquer vinculo hierarquico com o Governador."
+        },
+        {
+          "letter": "D",
+          "text": "exclusivos do governo federal, sem existencia no ambito distrital."
+        },
+        {
+          "letter": "E",
+          "text": "equivalentes a Ministerios federais, com essa denominacao oficial no DF."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "organizacao-politico-administrativa-e-simbolos-oficiais-do-df",
+      "explanation": "As Secretarias de Estado sao diretamente subordinadas ao Governador, responsaveis por areas especificas da administracao publica distrital.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "444df973ba3840a25eadafcf0d8280660380d93ca13349e9ed207c2dfbebeff7"
+    },
+    {
+      "statement": "O clima predominante no Distrito Federal e classificado como:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Tropical de altitude, com estacoes seca e chuvosa bem definidas."
+        },
+        {
+          "letter": "B",
+          "text": "Equatorial umido, sem estacao seca."
+        },
+        {
+          "letter": "C",
+          "text": "Semiarido, com baixos indices pluviometricos o ano todo."
+        },
+        {
+          "letter": "D",
+          "text": "Subtropical, com ocorrencia regular de geadas intensas."
+        },
+        {
+          "letter": "E",
+          "text": "Desertico."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "geografia-cultura-e-economia-do-df",
+      "explanation": "O clima do DF e tropical de altitude, com estacao seca (inverno) e chuvosa (verao) bem definidas.",
+      "references": [
+        "IBGE, caracteristicas climaticas do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "5bd958dfe9ed5c98cb17305cddd5f3cac9f97ed431685901e9f8172fb0609951"
+    },
+    {
+      "statement": "O Distrito Federal esta localizado na regiao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Nordeste"
+        },
+        {
+          "letter": "B",
+          "text": "Centro-Oeste"
+        },
+        {
+          "letter": "C",
+          "text": "Sudeste"
+        },
+        {
+          "letter": "D",
+          "text": "Sul"
+        },
+        {
+          "letter": "E",
+          "text": "Norte"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "geografia-cultura-e-economia-do-df",
+      "explanation": "O Distrito Federal esta localizado na regiao Centro-Oeste do Brasil.",
+      "references": [
+        "IBGE, divisao regional do Brasil."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "769024a559d9e5a7f39465edaa618194330482922c738c8c582941d0ba3cd424"
+    },
+    {
+      "statement": "A RIDE do Distrito Federal e Entorno reune o Distrito Federal e municipios pertencentes a quais estados, alem do proprio DF?",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Sao Paulo e Rio de Janeiro."
+        },
+        {
+          "letter": "B",
+          "text": "Goias e Minas Gerais."
+        },
+        {
+          "letter": "C",
+          "text": "Bahia e Tocantins."
+        },
+        {
+          "letter": "D",
+          "text": "Mato Grosso e Mato Grosso do Sul."
+        },
+        {
+          "letter": "E",
+          "text": "Apenas Goias, sem participacao de outro estado."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "ride-do-distrito-federal-e-coaride",
+      "explanation": "A RIDE reune o Distrito Federal e municipios dos estados de Goias e Minas Gerais.",
+      "references": [
+        "Lei Complementar no 94/1998."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "8747874089ac5d61098cf3d346f139715a69e1332e2081f5ddff7cd7ef757c13"
+    },
+    {
+      "statement": "Sao considerados simbolos oficiais do Distrito Federal, reconhecidos por legislacao distrital, entre outros:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas o brasao nacional do Brasil, sem simbolo proprio distrital."
+        },
+        {
+          "letter": "B",
+          "text": "a bandeira, o brasao e o hino do Distrito Federal, proprios e distintos dos simbolos nacionais."
+        },
+        {
+          "letter": "C",
+          "text": "exclusivamente o hino nacional brasileiro, sem hino distrital proprio."
+        },
+        {
+          "letter": "D",
+          "text": "apenas o mapa do Plano Piloto."
+        },
+        {
+          "letter": "E",
+          "text": "o Distrito Federal nao possui simbolos oficiais proprios, por nao ser um ente federativo pleno."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "organizacao-politico-administrativa-e-simbolos-oficiais-do-df",
+      "explanation": "O DF possui bandeira, brasao e hino proprios, distintos dos simbolos nacionais, reconhecidos por legislacao distrital.",
+      "references": [
+        "Legislacao distrital sobre simbolos oficiais do DF."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "98be3d5f02ef0eb1932189e0fcf83594ccb822323d3b8cd86705761983fb7310"
+    },
+    {
+      "statement": "Brasilia, capital federal do Brasil, foi inaugurada em:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "21 de abril de 1960."
+        },
+        {
+          "letter": "B",
+          "text": "15 de novembro de 1889."
+        },
+        {
+          "letter": "C",
+          "text": "7 de setembro de 1822."
+        },
+        {
+          "letter": "D",
+          "text": "8 de junho de 1993."
+        },
+        {
+          "letter": "E",
+          "text": "1o de janeiro de 2000."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "historia-e-formacao-de-brasilia",
+      "explanation": "Brasilia foi inaugurada em 21 de abril de 1960.",
+      "references": [
+        "Historia da fundacao de Brasilia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9e4cd3bea9f2015eef0dc05b168adc6aa93611f75c35158a6f9526edbf49ad1a"
+    },
+    {
+      "statement": "O Poder Legislativo do Distrito Federal e exercido pela:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Camara Municipal do Distrito Federal."
+        },
+        {
+          "letter": "B",
+          "text": "Camara Legislativa do Distrito Federal (CLDF), composta por Deputados Distritais."
+        },
+        {
+          "letter": "C",
+          "text": "Assembleia Legislativa do Distrito Federal, composta por Deputados Estaduais."
+        },
+        {
+          "letter": "D",
+          "text": "Camara dos Deputados, orgao federal, sem legislativo distrital proprio."
+        },
+        {
+          "letter": "E",
+          "text": "Senado Federal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "O Poder Legislativo distrital e exercido pela Camara Legislativa do Distrito Federal (CLDF), composta por Deputados Distritais.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "9ff78b2efbd6ca8f5d9f5e402869c995c1bdf8aa2fb49c27590d69583106b9a3"
+    },
+    {
+      "statement": "A Regiao Administrativa I (RA I) do Distrito Federal corresponde a:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Ceilandia."
+        },
+        {
+          "letter": "B",
+          "text": "Taguatinga."
+        },
+        {
+          "letter": "C",
+          "text": "Brasilia (Plano Piloto)."
+        },
+        {
+          "letter": "D",
+          "text": "Gama."
+        },
+        {
+          "letter": "E",
+          "text": "Sobradinho."
+        }
+      ],
+      "correctAnswer": "C",
+      "position": "enfermeiro",
+      "board": "iades",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "A Regiao Administrativa I corresponde a Brasilia (Plano Piloto), a primeira e original Regiao Administrativa do DF.",
+      "references": [
+        "CODEPLAN/GDF, Regioes Administrativas do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a47cc6917d5ab5c4eed02552e5ff9ab6d27ee715b4b47641727bd968b8447260"
+    },
+    {
+      "statement": "A Regiao Integrada de Desenvolvimento do Distrito Federal e Entorno (RIDE) foi instituida por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Emenda Constitucional."
+        },
+        {
+          "letter": "B",
+          "text": "Lei Complementar no 94, de 19 de fevereiro de 1998."
+        },
+        {
+          "letter": "C",
+          "text": "Decreto Presidencial, exclusivamente, sem lei complementar."
+        },
+        {
+          "letter": "D",
+          "text": "Lei Organica do Distrito Federal."
+        },
+        {
+          "letter": "E",
+          "text": "Resolucao do Senado Federal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "ride-do-distrito-federal-e-coaride",
+      "explanation": "A RIDE foi instituida pela Lei Complementar no 94, de 19 de fevereiro de 1998.",
+      "references": [
+        "Lei Complementar no 94/1998."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "a9e15cbd887b794efde4ac6344334c37233eb3b9a52fb39280295f45339bff19"
+    },
+    {
+      "statement": "O bioma predominante no Distrito Federal e o:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Amazonia"
+        },
+        {
+          "letter": "B",
+          "text": "Cerrado"
+        },
+        {
+          "letter": "C",
+          "text": "Caatinga"
+        },
+        {
+          "letter": "D",
+          "text": "Mata Atlantica, exclusivamente"
+        },
+        {
+          "letter": "E",
+          "text": "Pantanal"
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "geografia-cultura-e-economia-do-df",
+      "explanation": "O Distrito Federal esta inserido predominantemente no bioma Cerrado.",
+      "references": [
+        "IBGE, biomas brasileiros."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "b7ec65c428a5e85dcfe23304245075b62eb54a96ff4676c21b303f6b83fc9376"
+    },
+    {
+      "statement": "Brasilia foi reconhecida pela UNESCO como Patrimonio Cultural da Humanidade, tornando-se a primeira cidade planejada no seculo XX a receber esse titulo, no ano de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "1960, no ano de sua inauguracao."
+        },
+        {
+          "letter": "B",
+          "text": "1987"
+        },
+        {
+          "letter": "C",
+          "text": "1993, no ano da promulgacao da Lei Organica do DF."
+        },
+        {
+          "letter": "D",
+          "text": "2000"
+        },
+        {
+          "letter": "E",
+          "text": "Brasilia nunca recebeu esse titulo."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "historia-e-formacao-de-brasilia",
+      "explanation": "Brasilia foi tombada pela UNESCO como Patrimonio Cultural da Humanidade em 1987.",
+      "references": [
+        "UNESCO, tombamento de Brasilia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c3c3806a8a1dcbb15c3f50e14df0fff310ce1898dd30e74b9cc69d72e191b7b2"
+    },
+    {
+      "statement": "Entre as Regioes Administrativas do Distrito Federal, Taguatinga e reconhecida por ser uma das cidades satelites mais antigas, fundada na decada de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "1950, antes mesmo da inauguracao de Brasilia."
+        },
+        {
+          "letter": "B",
+          "text": "1990"
+        },
+        {
+          "letter": "C",
+          "text": "2000"
+        },
+        {
+          "letter": "D",
+          "text": "2010"
+        },
+        {
+          "letter": "E",
+          "text": "Taguatinga nunca foi fundada oficialmente, sendo uma ocupacao irregular sem reconhecimento administrativo."
+        }
+      ],
+      "correctAnswer": "A",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "Taguatinga foi fundada em 1958, antes da inauguracao de Brasilia (1960), sendo uma das cidades satelites mais antigas do DF.",
+      "references": [
+        "CODEPLAN/GDF, historia das Regioes Administrativas."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "c6e247fd73e49c32cb3f1508e24b74b6cbfcca7daa991184a62a7da65f4f1665"
+    },
+    {
+      "statement": "O numero de Regioes Administrativas do Distrito Federal nao e fixo, podendo ser ampliado ao longo do tempo por meio de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "decisao exclusivamente popular via referendo internacional."
+        },
+        {
+          "letter": "B",
+          "text": "lei distrital que cria novas RAs, frequentemente por desmembramento territorial de RAs ja existentes."
+        },
+        {
+          "letter": "C",
+          "text": "nenhuma forma prevista, sendo o numero definitivamente fixado na Constituicao Federal de 1988."
+        },
+        {
+          "letter": "D",
+          "text": "decreto do governo federal, sem qualquer participacao do governo distrital."
+        },
+        {
+          "letter": "E",
+          "text": "tratado internacional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "O numero de RAs nao e fixo na Constituicao Federal; novas RAs sao criadas por lei distrital, frequentemente por desmembramento de RAs existentes.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ca9e06c92911cc60f2fb0ce63d757d5d651965c554b03f970cbf6dc13b414a6e"
+    },
+    {
+      "statement": "A construcao de Brasilia e a transferencia da capital federal do Rio de Janeiro para o Planalto Central ocorreram durante o governo do presidente:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Getulio Vargas."
+        },
+        {
+          "letter": "B",
+          "text": "Juscelino Kubitschek."
+        },
+        {
+          "letter": "C",
+          "text": "Joao Goulart."
+        },
+        {
+          "letter": "D",
+          "text": "Castelo Branco."
+        },
+        {
+          "letter": "E",
+          "text": "Fernando Henrique Cardoso."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "historia-e-formacao-de-brasilia",
+      "explanation": "A construcao de Brasilia e a transferencia da capital ocorreram durante o governo de Juscelino Kubitschek (1956-1961).",
+      "references": [
+        "Historia da fundacao de Brasilia."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "cd88061feb03f1ad7a9b2f6a436f2d2eb7aa195569f6809a75bcbadeb5cdbbd8"
+    },
+    {
+      "statement": "Em relacao a hierarquia normativa, a Lei Organica do Distrito Federal ocupa, na ordem juridica distrital, posicao analoga a ocupada, respectivamente, pelas Constituicoes Estaduais nos estados e pelas Leis Organicas Municipais nos municipios, devendo respeitar:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "apenas a legislacao municipal de Goias, por proximidade geografica."
+        },
+        {
+          "letter": "B",
+          "text": "a Constituicao Federal, a qual deve estrita observancia, dentro do principio da hierarquia das normas."
+        },
+        {
+          "letter": "C",
+          "text": "nenhuma norma superior, por ser o Distrito Federal um ente soberano independente."
+        },
+        {
+          "letter": "D",
+          "text": "apenas tratados internacionais, sem relacao com a Constituicao Federal."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente decretos presidenciais."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "A Lei Organica do DF deve estrita observancia a Constituicao Federal, dentro do principio da hierarquia das normas.",
+      "references": [
+        "Constituicao Federal de 1988",
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ce460a5357e25cffc18d9f07a4d3c20e85bf0752ea657d185b1958203a363556"
+    },
+    {
+      "statement": "O Poder Executivo do Distrito Federal e exercido pelo:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "Prefeito do Distrito Federal, eleito por voto direto."
+        },
+        {
+          "letter": "B",
+          "text": "Governador do Distrito Federal, eleito por voto direto, auxiliado pelo Vice-Governador e Secretarios de Estado."
+        },
+        {
+          "letter": "C",
+          "text": "Presidente da Republica, diretamente, sem chefe de executivo distrital proprio."
+        },
+        {
+          "letter": "D",
+          "text": "Ministro-Chefe da Casa Civil."
+        },
+        {
+          "letter": "E",
+          "text": "Conselho de Governadores."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "O Poder Executivo distrital e exercido pelo Governador, eleito por voto direto, auxiliado pelo Vice-Governador e Secretarios de Estado.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "ce6eca3bdd8cce4fdb98fb2105217bbfddc52c0a0b61ae6c7b206873f69e37af"
+    },
+    {
+      "statement": "A economia do Distrito Federal caracteriza-se por forte predominancia do setor:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "primario (agropecuaria), sendo o principal responsavel pelo PIB distrital."
+        },
+        {
+          "letter": "B",
+          "text": "terciario (comercio e servicos), impulsionado especialmente pela administracao publica."
+        },
+        {
+          "letter": "C",
+          "text": "secundario (industria pesada)."
+        },
+        {
+          "letter": "D",
+          "text": "extrativista mineral."
+        },
+        {
+          "letter": "E",
+          "text": "pesqueiro, dada a proximidade com o litoral."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "geografia-cultura-e-economia-do-df",
+      "explanation": "A economia do DF e fortemente concentrada no setor terciario, com peso relevante da administracao publica, dado o carater de capital federal.",
+      "references": [
+        "IBGE/CODEPLAN, perfil economico do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "dcbd625e80bdba261960b61879501045283418c567caa1d96ae3e918ed7f834b"
+    },
+    {
+      "statement": "O Conselho Administrativo da Regiao Integrada de Desenvolvimento do Distrito Federal e Entorno (COARIDE) tem como principal funcao:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "legislar sobre materia tributaria federal."
+        },
+        {
+          "letter": "B",
+          "text": "coordenar e articular acoes de interesse comum entre os entes que compoem a RIDE (DF, municipios de Goias e de Minas Gerais)."
+        },
+        {
+          "letter": "C",
+          "text": "substituir o governo do Distrito Federal em suas competencias."
+        },
+        {
+          "letter": "D",
+          "text": "julgar processos judiciais envolvendo a RIDE."
+        },
+        {
+          "letter": "E",
+          "text": "administrar exclusivamente o sistema de saude da regiao."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "ride-do-distrito-federal-e-coaride",
+      "explanation": "O COARIDE coordena e articula acoes de interesse comum entre os entes da RIDE, sem substituir competencias proprias de cada ente.",
+      "references": [
+        "Decreto regulamentador da RIDE",
+        "Lei Complementar no 94/1998."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e42f44227baa3e54d6d5a150aac46b6ac74c3da7a7460280f6029f710ade7c10"
+    },
+    {
+      "statement": "O Poder Judiciario que atua no ambito do Distrito Federal e organizado, atipicamente em relacao aos estados, pois o Tribunal de Justica do Distrito Federal e dos Territorios (TJDFT) e:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "orgao do Poder Judiciario estadual do DF, mantido e organizado exclusivamente pelo governo distrital."
+        },
+        {
+          "letter": "B",
+          "text": "orgao do Poder Judiciario da Uniao (Justica do Distrito Federal e Territorios), mantido pela Uniao, ainda que atue no territorio distrital."
+        },
+        {
+          "letter": "C",
+          "text": "inexistente, nao havendo Tribunal de Justica no Distrito Federal."
+        },
+        {
+          "letter": "D",
+          "text": "subordinado ao Tribunal de Justica de Goias."
+        },
+        {
+          "letter": "E",
+          "text": "parte do Poder Executivo distrital."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "organizacao-politico-administrativa-e-simbolos-oficiais-do-df",
+      "explanation": "Diferentemente dos estados, o TJDFT integra a Justica do Distrito Federal e Territorios, ramo do Poder Judiciario da Uniao, mantido pela Uniao.",
+      "references": [
+        "Constituicao Federal de 1988",
+        "organizacao judiciaria do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e702f9f61c0cebfbc740bb15ce8b559363bd33510f95ebda068caf09dc7ca0f1"
+    },
+    {
+      "statement": "O Distrito Federal, conforme disposto na Constituicao Federal e na Lei Organica do DF, e a sede:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "exclusivamente do Poder Judiciario estadual."
+        },
+        {
+          "letter": "B",
+          "text": "do governo federal, abrigando os orgaos superiores dos tres Poderes da Republica (Executivo, Legislativo e Judiciario federais), alem de sede do governo distrital."
+        },
+        {
+          "letter": "C",
+          "text": "apenas do Poder Legislativo distrital, sem relacao com o governo federal."
+        },
+        {
+          "letter": "D",
+          "text": "de nenhum orgao federal, apenas distrital."
+        },
+        {
+          "letter": "E",
+          "text": "exclusivamente das embaixadas estrangeiras, sem orgaos federais brasileiros."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "ibfc",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "O DF e sede do governo federal, abrigando os orgaos superiores dos tres Poderes federais, alem de sede do governo distrital.",
+      "references": [
+        "Constituicao Federal de 1988",
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "e90cb3c80dabc5f72b6e9628d2485707e4bd0d932640791d16f1a4dca8a1f3aa"
+    },
+    {
+      "statement": "O Distrito Federal, conforme a Constituicao Federal de 1988, art. 32, caracteriza-se por:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "ser dividido em municipios, como qualquer estado da federacao."
+        },
+        {
+          "letter": "B",
+          "text": "nao poder ser dividido em municipios, sendo regido por lei organica propria, que acumula competencias legislativas reservadas a estados e municipios."
+        },
+        {
+          "letter": "C",
+          "text": "ser subordinado administrativamente ao estado de Goias."
+        },
+        {
+          "letter": "D",
+          "text": "nao possuir autonomia politico-administrativa propria."
+        },
+        {
+          "letter": "E",
+          "text": "ser governado exclusivamente por autoridade nomeada pelo Presidente da Republica, em qualquer epoca."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "lei-organica-do-distrito-federal",
+      "explanation": "Conforme art. 32 da CF/1988, o DF nao pode ser dividido em municipios e e regido por lei organica propria, acumulando competencias legislativas de estados e municipios.",
+      "references": [
+        "Constituicao Federal de 1988, art. 32."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f16e6616e3e2778501bd07a814b06b1e33f16f389d806965705896b292c47b4c"
+    },
+    {
+      "statement": "A criacao de novas Regioes Administrativas no Distrito Federal, geralmente por desmembramento de uma RA ja existente, ocorre por meio de:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "decisao exclusiva do sindico do condominio local."
+        },
+        {
+          "letter": "B",
+          "text": "lei distrital, de iniciativa do Poder Executivo ou Legislativo distrital, conforme o processo legislativo local."
+        },
+        {
+          "letter": "C",
+          "text": "portaria do Ministerio das Cidades, exclusivamente."
+        },
+        {
+          "letter": "D",
+          "text": "decisao do Supremo Tribunal Federal."
+        },
+        {
+          "letter": "E",
+          "text": "tratado internacional."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "instituto-aocp",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "Novas RAs sao criadas por lei distrital, conforme processo legislativo local, frequentemente por desmembramento territorial.",
+      "references": [
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f47200632f001e45643279cb64e125f3b55ba45541956cfbd826a86f3623fd0b"
+    },
+    {
+      "statement": "Diferentemente de um municipio, uma Regiao Administrativa do Distrito Federal:",
+      "alternatives": [
+        {
+          "letter": "A",
+          "text": "possui personalidade juridica propria e autonomia politica plena, como um ente federativo."
+        },
+        {
+          "letter": "B",
+          "text": "nao possui personalidade juridica propria nem autonomia politica independente do governo distrital, sendo parte da estrutura administrativa unificada do DF."
+        },
+        {
+          "letter": "C",
+          "text": "pode ter sua propria bandeira e hino oficiais reconhecidos como simbolos de um ente federativo autonomo."
+        },
+        {
+          "letter": "D",
+          "text": "elege seu proprio Poder Legislativo."
+        },
+        {
+          "letter": "E",
+          "text": "possui um sistema tributario totalmente independente do restante do Distrito Federal."
+        }
+      ],
+      "correctAnswer": "B",
+      "position": "enfermeiro",
+      "board": "cebraspe",
+      "subject": "conhecimentos-gerais-sobre-o-distrito-federal",
+      "topic": "regioes-administrativas-do-df",
+      "explanation": "A RA nao possui personalidade juridica propria nem autonomia politica independente, sendo parte da estrutura administrativa unificada do DF.",
+      "references": [
+        "Constituicao Federal de 1988, art. 32",
+        "Lei Organica do Distrito Federal."
+      ],
+      "status": "ACTIVE",
+      "keywords": [],
+      "package": "banco-de-questoes-enfermagem",
+      "packageVersion": "1.0",
+      "contentHash": "f72f9b984a9d03aca27310e728575d2f2f5afd81306ca971f128efc282299c1b"
+    }
+  ]
+}
