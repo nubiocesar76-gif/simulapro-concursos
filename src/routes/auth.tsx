@@ -72,6 +72,7 @@ function AuthPage() {
       password: String(form.get("password")),
       options: {
         data: { full_name: String(form.get("full_name") ?? "") },
+        emailRedirectTo: `${window.location.origin}/email-confirmed`,
       },
     });
     setBusy(false);

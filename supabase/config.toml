@@ -1,1 +1,28 @@
 project_id = "ddgpkijytvagmabtttor"
+
+# ATENÇÃO — NÃO rodar `supabase config push` a partir deste arquivo sem antes
+# confirmar o estado completo do [auth] remoto. Um push anterior (03/08/2026)
+# aplicou este bloco parcial e, como campos não declarados aqui são
+# preenchidos pelo CLI com defaults de ambiente LOCAL (não com os valores reais
+# de produção), acabou revertendo sem querer enable_confirmations (true→false)
+# e mfa.totp enroll/verify (true→false) em produção — corrigido manualmente no
+# Dashboard. Não há comando de leitura do [auth] remoto na CLI hoje; por isso,
+# qualquer push futuro deve reconstruir o bloco inteiro a partir de uma
+# exportação/confirmação explícita do estado atual, nunca de memória.
+#
+# Site URL / Redirect URLs — correção do bug de confirmação de e-mail apontando
+# para localhost em produção (auditoria: signUp() não enviava emailRedirectTo,
+# então o Supabase caía no fallback da Site URL do dashboard, que estava presa
+# no domínio de desenvolvimento). site_url é o domínio canônico (produção);
+# additional_redirect_urls also allow-lista localhost para que o mesmo código
+# (emailRedirectTo = window.location.origin) funcione em dev sem outra branch.
+[auth]
+site_url = "https://simulaproconcursos.com.br"
+additional_redirect_urls = [
+  "https://simulaproconcursos.com.br/**",
+  "http://localhost:8080/**",
+]
+
+[auth.email.template.confirmation]
+subject = "Confirme seu e-mail — SimulaPro Concursos"
+content_path = "./templates/confirmation.html"
