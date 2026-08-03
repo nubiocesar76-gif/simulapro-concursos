@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const BENEFITS = [
-  "Acesso completo ao Acervo Enfermeiro",
+  "Acesso completo ao acervo de questões do cargo escolhido",
   "Sem cobrança automática — você decide se renova",
   "Garantia de 7 dias, sem burocracia",
 ];

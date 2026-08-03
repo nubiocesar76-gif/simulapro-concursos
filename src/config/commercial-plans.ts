@@ -16,6 +16,14 @@ export type CommercialPlan = {
   label: string;
   description: string;
   distributionId: string;
+  /**
+   * Slugs de `positions` (tabela `positions.slug`) elegíveis para este plano.
+   * Único ponto hoje que amarra plano comercial a cargo — não existe coluna de
+   * cargo em `subscriptions`/`packages`/`content_distributions`. Se uma
+   * distribuição futura precisar vender cargos por outro critério que não o
+   * plano, este modelo precisará ser revisto (ver DIAGNOSTICO_ISOLAMENTO_CARGO_FLUXO_ALUNO_V1.md).
+   */
+  positionSlugs: string[];
   /** Valor em reais (não centavos), no formato que a API do Asaas espera. */
   value: number;
   cycle: AsaasSubscriptionCycle;
@@ -41,6 +49,7 @@ export const COMMERCIAL_PLANS: CommercialPlan[] = [
     description:
       "Acesso completo ao Acervo Enfermeiro por um ciclo de 6 meses. Vagas limitadas da primeira leva, sem cobrança automática — você decide se renova ao final do ciclo.",
     distributionId: "1b527a9e-eb48-4ad5-b6b5-c480dd894eb3", // Distribuição RC1 - Enfermagem (ACTIVE)
+    positionSlugs: ["enfermeiro"],
     value: 149.9,
     cycle: "MONTHLY",
     billingType: "UNDEFINED",
@@ -51,6 +60,24 @@ export const COMMERCIAL_PLANS: CommercialPlan[] = [
     label: "Plano Mensal",
     description: "Acesso completo ao banco de questões durante 30 dias.",
     distributionId: "1b527a9e-eb48-4ad5-b6b5-c480dd894eb3", // Distribuição RC1 - Enfermagem (ACTIVE)
+    positionSlugs: ["enfermeiro"],
+    value: 39.9,
+    cycle: "MONTHLY",
+    billingType: "UNDEFINED",
+    accessDurationMonths: 1,
+  },
+  // Cargo Técnico de Enfermagem (jornada multiárea/multicargo — agosto/2026). Deliberadamente
+  // NÃO criamos uma "família" de planos por cargo (ex.: nomes/labels específicos por cargo) —
+  // o rótulo exibido ao aluno é o mesmo conceito genérico de recorrência ("Mensal") já usado
+  // para o Enfermeiro, porque a etapa de escolha de cargo (courses/positions reais, ver
+  // SubscriptionPage.tsx) já deu o contexto antes de chegar aqui. O cargo em si é resolvido
+  // só por `positionSlugs`/`distributionId`, exatamente como os planos de Enfermeiro acima.
+  {
+    id: "tecnico-mensal",
+    label: "Mensal",
+    description: "Acesso completo ao banco de questões do Técnico de Enfermagem durante 30 dias.",
+    distributionId: "3fbbfa90-2a67-4bdb-be6a-1a11ba0fec06", // Distribuição RC1 - Técnico em Enfermagem (ACTIVE)
+    positionSlugs: ["tecnico-em-enfermagem"],
     value: 39.9,
     cycle: "MONTHLY",
     billingType: "UNDEFINED",
@@ -66,4 +93,32 @@ export function findCommercialPlanByDistributionId(
   distributionId: string,
 ): CommercialPlan | undefined {
   return COMMERCIAL_PLANS.find((plan) => plan.distributionId === distributionId);
+}
+
+/**
+ * Planos comerciais elegíveis para um cargo (`positions.slug`). Usado pela tela de
+ * assinatura depois que o aluno já escolheu Área (courses) → Cargo (positions) via
+ * consulta real ao banco — este arquivo nunca é a fonte da lista de áreas/cargos,
+ * só decide quais planos existem para o cargo já escolhido (ver
+ * PLANO_TECNICO_MULTIAREA_MULTICARGO_V1.md, Ajuste 2).
+ */
+export function getPlansForPosition(positionSlug: string): CommercialPlan[] {
+  return COMMERCIAL_PLANS.filter((plan) => plan.positionSlugs.includes(positionSlug));
+}
+
+/**
+ * União dos `positionSlugs` de todos os planos comerciais que apontam para
+ * esta distribuição. Array vazio significa "nenhum plano comercial mapeado
+ * para esta distribuição" — quem consome este retorno decide como tratar
+ * esse caso (hoje: sem restrição adicional, ver `getAllowedPositionIdsForDistribution`
+ * em `src/lib/study-session.ts`).
+ */
+export function getAllowedPositionSlugsForDistribution(distributionId: string): string[] {
+  const slugs = new Set<string>();
+  for (const plan of COMMERCIAL_PLANS) {
+    if (plan.distributionId === distributionId) {
+      for (const slug of plan.positionSlugs) slugs.add(slug);
+    }
+  }
+  return [...slugs];
 }

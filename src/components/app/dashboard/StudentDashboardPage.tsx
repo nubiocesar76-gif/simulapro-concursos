@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
+import { useState } from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchStudentDashboard, type StudyFilterIndicators } from "@/lib/student-dashboard";
@@ -13,6 +14,7 @@ import {
 } from "@/lib/study-session";
 import { Page, Skeleton } from "@/components/design-system";
 import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
+import { ActiveCargoHeader } from "@/components/app/dashboard/ActiveCargoHeader";
 import { ContinueStudyCard } from "@/components/app/dashboard/ContinueStudyCard";
 import { DashboardStats } from "@/components/app/dashboard/DashboardStats";
 import { DistributionCard } from "@/components/app/dashboard/DistributionCard";
@@ -20,7 +22,7 @@ import { RecentSessions } from "@/components/app/dashboard/RecentSessions";
 import { StudyFilterIndicatorsBar } from "@/components/app/dashboard/StudyFilterIndicators";
 import { SubjectPerformanceTable } from "@/components/app/dashboard/SubjectPerformanceTable";
 import { PageErrorState } from "@/components/shared/PageErrorState";
-import { ActivatePlanCard } from "@/components/shared/ActivatePlanCard";
+import { SubscriptionOnboardingFlow } from "@/components/app/subscription/SubscriptionOnboardingFlow";
 import { toast } from "sonner";
 import { STUDENT_PAGE_SHELL } from "@/config/study";
 
@@ -140,6 +142,9 @@ function DashboardLoadingSkeleton() {
 export function StudentDashboardPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
+  // Cargo em foco no cabeçalho/seletor "Trocar Cargo" — só exibição (ver
+  // ActiveCargoHeader), não recorta as consultas agregadas abaixo.
+  const [activeDistributionId, setActiveDistributionId] = useState<string | null>(null);
 
   const { data: profile } = useQuery({
     queryKey: ["profile", user?.id],
@@ -210,11 +215,36 @@ export function StudentDashboardPage() {
     );
   }
 
+  // Primeiro acesso — sem nenhuma assinatura ativa: em vez de um dashboard vazio com um
+  // único card de "assine", a jornada completa Área → Cargo → Concursos → Plano
+  // (reaproveita a mesma estrutura já homologada em /app/subscription).
+  if (data.distributions.length === 0) {
+    return (
+      <div className={pageShellClass}>
+        <Page
+          title={`Olá, ${profile?.full_name ?? "estudante"}`}
+          description="Escolha sua área e cargo de preparação para começar a estudar."
+        />
+        <SubscriptionOnboardingFlow />
+      </div>
+    );
+  }
+
+  const activeDistribution =
+    data.distributions.find((d) => d.distribution_id === activeDistributionId) ??
+    data.distributions[0];
+
   return (
     <div className={pageShellClass}>
       <Page
         title={`Olá, ${profile?.full_name ?? "estudante"}`}
         description="Seu resumo de estudos e ponto de entrada para continuar aprendendo."
+      />
+
+      <ActiveCargoHeader
+        distributions={data.distributions}
+        activeDistributionId={activeDistribution.distribution_id}
+        onChangeActiveDistribution={setActiveDistributionId}
       />
 
       <section className="flex flex-col gap-[var(--ds-space-6)]" aria-label="O que fazer agora">
@@ -244,15 +274,11 @@ export function StudentDashboardPage() {
               O conteúdo disponível para você estudar.
             </p>
           </div>
-          {data.distributions.length === 0 ? (
-            <ActivatePlanCard />
-          ) : (
-            <div className="grid items-stretch gap-[var(--ds-space-4)] md:grid-cols-2 xl:grid-cols-3">
-              {data.distributions.map((distribution) => (
-                <DistributionCard key={distribution.distribution_id} distribution={distribution} />
-              ))}
-            </div>
-          )}
+          <div className="grid items-stretch gap-[var(--ds-space-4)] md:grid-cols-2 xl:grid-cols-3">
+            {data.distributions.map((distribution) => (
+              <DistributionCard key={distribution.distribution_id} distribution={distribution} />
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col gap-[var(--ds-space-4)]">

@@ -4,13 +4,18 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
-import {
-  hasActiveSessionFilters,
-  materializeFilteredSessionQuestions,
-} from "@/lib/study-builder";
+import { getAllowedPositionSlugsForDistribution } from "@/config/commercial-plans";
+import { FREE_PLAN_DISTRIBUTION_ID, FREE_PLAN_POSITION_SLUGS } from "@/config/free-plan";
+import { hasActiveSessionFilters, materializeFilteredSessionQuestions } from "@/lib/study-builder";
 
 export const STUDY_MODES_EDITABLE = ["STUDY", "EXAM"] as const;
-export const STUDY_MODES_SELECTABLE = ["STUDY", "EXAM", "REVIEW", "FAVORITES", "WRONG_ONLY"] as const;
+export const STUDY_MODES_SELECTABLE = [
+  "STUDY",
+  "EXAM",
+  "REVIEW",
+  "FAVORITES",
+  "WRONG_ONLY",
+] as const;
 export const STUDY_MODES_ALL = ["STUDY", "EXAM", "REVIEW", "FAVORITES", "WRONG_ONLY"] as const;
 export const FILTER_STUDY_MODES = ["REVIEW", "FAVORITES", "WRONG_ONLY"] as const;
 export const SESSION_STATUS_ALL = ["IN_PROGRESS", "PAUSED", "FINISHED"] as const;
@@ -94,17 +99,23 @@ function isSubscriptionActive(startsAt: string, expiresAt: string | null): boole
   return true;
 }
 
-function isDistributionAvailable(availableFrom: string | null, availableUntil: string | null): boolean {
+function isDistributionAvailable(
+  availableFrom: string | null,
+  availableUntil: string | null,
+): boolean {
   const now = Date.now();
   if (availableFrom && new Date(availableFrom).getTime() > now) return false;
   if (availableUntil && new Date(availableUntil).getTime() < now) return false;
   return true;
 }
 
-export async function fetchAvailableDistributions(userId: string): Promise<AvailableDistribution[]> {
+export async function fetchAvailableDistributions(
+  userId: string,
+): Promise<AvailableDistribution[]> {
   const { data, error } = await supabase
     .from("subscriptions")
-    .select(`
+    .select(
+      `
       id,
       starts_at,
       expires_at,
@@ -122,7 +133,8 @@ export async function fetchAvailableDistributions(userId: string): Promise<Avail
           packages(name, courses(name))
         )
       )
-    `)
+    `,
+    )
     .eq("user_id", userId)
     .eq("status", "ACTIVE")
     .not("distribution_id", "is", null);
@@ -174,6 +186,34 @@ export async function getDistributionPackageVersionId(distributionId: string): P
     throw new StudySessionError("Distribuição sem versão vinculada.");
   }
   return data.package_version_id;
+}
+
+/**
+ * Resolve os `position_id`s (tabela `positions`) elegíveis para esta
+ * distribuição, a partir do(s) plano(s) comercial(is) que a referenciam em
+ * `src/config/commercial-plans.ts`. `null` significa "sem restrição de
+ * cargo aplicável" (nenhum plano comercial mapeado para esta distribuição —
+ * comportamento anterior, preservado para não quebrar distribuições ainda
+ * não cadastradas em `commercial-plans.ts`). Isolamento entre cargos
+ * (ver `DIAGNOSTICO_ISOLAMENTO_CARGO_FLUXO_ALUNO_V1.md`).
+ */
+export async function getAllowedPositionIdsForDistribution(
+  distributionId: string,
+): Promise<string[] | null> {
+  // O Plano Free não está em `COMMERCIAL_PLANS` (não é vendável), então
+  // `getAllowedPositionSlugsForDistribution` sempre devolveria "sem restrição" para ele —
+  // resolvido explicitamente aqui para fechar essa lacuna (ver
+  // PLANO_TECNICO_MULTIAREA_MULTICARGO_V1.md). Qualquer outra distribuição continua com o
+  // comportamento anterior, byte a byte.
+  const slugs =
+    distributionId === FREE_PLAN_DISTRIBUTION_ID
+      ? FREE_PLAN_POSITION_SLUGS
+      : getAllowedPositionSlugsForDistribution(distributionId);
+  if (!slugs.length) return null;
+
+  const { data, error } = await supabase.from("positions").select("id").in("slug", slugs);
+  if (error) throw error;
+  return (data ?? []).map((row) => row.id);
 }
 
 export async function getFilteredQuestionIdsForDistribution(
@@ -247,7 +287,9 @@ export async function createStudySession(input: {
   mode: StudyModeSelectable;
   settings: StudySessionSettings;
 }) {
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
   if (!user) throw new StudySessionError("Usuário não autenticado.");
 
   await validateSessionAccess(user.id, input.distributionId);

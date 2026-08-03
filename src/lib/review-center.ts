@@ -3,7 +3,10 @@
  */
 
 import { supabase } from "@/integrations/supabase/client";
-import { fetchAvailableDistributions } from "@/lib/study-session";
+import {
+  fetchAvailableDistributions,
+  getAllowedPositionIdsForDistribution,
+} from "@/lib/study-session";
 import {
   ALL_FILTER,
   buildBoardOptions,
@@ -159,13 +162,57 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
 
   if (distributionError) throw distributionError;
 
-  const distributionByVersion = new Map<string, { id: string; name: string }>();
+  // Candidatos por DISTRIBUIÇÃO (nunca por versão — duas distribuições podem compartilhar
+  // `package_version_id` sendo de cargos diferentes, ver
+  // ACHADO_MISTURA_DASHBOARD_MULTICARGO_V1.md). Cada distribuição carrega seus próprios
+  // `position_id` elegíveis, sem união entre distribuições.
+  type DistributionCandidate = { id: string; name: string; allowedPositionIds: string[] | null };
+  const distributionsByVersion = new Map<string, DistributionCandidate[]>();
   for (const row of distributionRows ?? []) {
     if (!row.package_version_id) continue;
-    distributionByVersion.set(row.package_version_id, { id: row.id, name: row.name });
+    const allowed = await getAllowedPositionIdsForDistribution(row.id);
+    const list = distributionsByVersion.get(row.package_version_id) ?? [];
+    list.push({ id: row.id, name: row.name, allowedPositionIds: allowed });
+    distributionsByVersion.set(row.package_version_id, list);
   }
 
-  const versionIds = [...distributionByVersion.keys()];
+  const versionIds = [...distributionsByVersion.keys()];
+
+  // Escolhe, entre as distribuições candidatas de uma versão, a que realmente libera o
+  // `position_id` da questão — corrige a atribuição incorreta de nome/id de distribuição
+  // quando duas distribuições (cargos diferentes) compartilham a mesma versão.
+  function pickDistributionForVersion(
+    versionId: string,
+    positionId: string | null,
+  ): DistributionCandidate | undefined {
+    const candidates = distributionsByVersion.get(versionId) ?? [];
+    if (candidates.length <= 1) return candidates[0];
+    return (
+      candidates.find(
+        (c) => c.allowedPositionIds && positionId && c.allowedPositionIds.includes(positionId),
+      ) ??
+      candidates.find((c) => c.allowedPositionIds === null) ??
+      candidates[0]
+    );
+  }
+
+  // União só para fins de ELEGIBILIDADE (quais questões o usuário pode ver, entre as
+  // distribuições que ele mesmo possui) — isso continua correto mesmo com duas
+  // distribuições/cargos na mesma versão, pois `distributions` já vem escopado a
+  // `fetchAvailableDistributions(userId)`. O que a união NUNCA deve decidir é o rótulo
+  // (nome/id) da distribuição de uma questão — isso agora vem de `pickDistributionForVersion`.
+  const allowedPositionIdsByVersion = new Map<string, string[] | null>();
+  for (const [versionId, candidates] of distributionsByVersion) {
+    let union: string[] | null = [];
+    for (const candidate of candidates) {
+      if (union === null || candidate.allowedPositionIds === null) {
+        union = null;
+        break;
+      }
+      union = [...new Set([...union, ...candidate.allowedPositionIds])];
+    }
+    allowedPositionIdsByVersion.set(versionId, union);
+  }
 
   const { data: sessions, error: sessionsError } = await supabase
     .from("study_sessions")
@@ -199,6 +246,7 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
       subject_id: string | null;
       topic_id: string | null;
       package_version_id: string;
+      position_id: string | null;
       boards: { name: string; acronym: string | null } | null;
       subjects: { name: string } | null;
       topics: { name: string } | null;
@@ -230,6 +278,7 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
           subject_id,
           topic_id,
           package_version_id,
+          position_id,
           boards(name, acronym),
           subjects(name),
           topics(name)
@@ -250,16 +299,19 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
     const question = row.questions;
     if (!question) continue;
 
+    const fallbackDistribution = pickDistributionForVersion(
+      question.package_version_id,
+      question.position_id,
+    );
+
     const distributionId =
       row.study_sessions?.distribution_id ??
-      distributionByVersion.get(question.package_version_id)?.id ??
+      fallbackDistribution?.id ??
       distributions[0]?.distribution_id ??
       "";
 
     const distributionName =
-      distributionNameById.get(distributionId) ??
-      distributionByVersion.get(question.package_version_id)?.name ??
-      "—";
+      distributionNameById.get(distributionId) ?? fallbackDistribution?.name ?? "—";
 
     const board = question.boards as { name: string; acronym: string | null } | null;
     const subject = question.subjects as { name: string } | null;
@@ -332,6 +384,7 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
       subject_id: string | null;
       topic_id: string | null;
       package_version_id: string;
+      position_id: string | null;
       boards: { name: string; acronym: string | null } | null;
       subjects: { name: string } | null;
       topics: { name: string } | null;
@@ -350,6 +403,7 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
         subject_id,
         topic_id,
         package_version_id,
+        position_id,
         boards(name, acronym),
         subjects(name),
         topics(name)
@@ -366,12 +420,17 @@ export async function fetchReviewCenterSnapshot(userId: string): Promise<ReviewC
       from += PAGE_SIZE;
     }
 
-    catalogQuestions = acervoRows.map((row) => toBuilderQuestion(row));
+    const eligibleAcervoRows = acervoRows.filter((row) => {
+      const allowed = allowedPositionIdsByVersion.get(row.package_version_id);
+      return !allowed || (row.position_id != null && allowed.includes(row.position_id));
+    });
 
-    unansweredItems = acervoRows
+    catalogQuestions = eligibleAcervoRows.map((row) => toBuilderQuestion(row));
+
+    unansweredItems = eligibleAcervoRows
       .filter((row) => !answeredQuestionIds.has(row.id))
       .map((row) => {
-        const distribution = distributionByVersion.get(row.package_version_id);
+        const distribution = pickDistributionForVersion(row.package_version_id, row.position_id);
         const board = row.boards as { name: string; acronym: string | null } | null;
         const subject = row.subjects as { name: string } | null;
         const topic = row.topics as { name: string } | null;

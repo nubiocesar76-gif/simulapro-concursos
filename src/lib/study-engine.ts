@@ -7,6 +7,7 @@ import { logEvent } from "@/lib/log";
 import { parseAlternativesFromDb, type QuestionAlternative } from "@/lib/questions";
 import {
   StudySessionError,
+  getAllowedPositionIdsForDistribution,
   getFilteredQuestionIdsForDistribution,
   isFilterStudyMode,
   type StudyMode,
@@ -460,6 +461,8 @@ export async function getSessionQuestions(session: StudySessionDetail): Promise<
     throw new StudySessionError("Versão publicada não encontrada para esta distribuição.");
   }
 
+  const allowedPositionIds = await getAllowedPositionIdsForDistribution(session.distribution_id);
+
   if (isFilterStudyMode(session.mode)) {
     const questionIds = await getFilteredQuestionIdsForDistribution(
       session.user_id,
@@ -473,11 +476,13 @@ export async function getSessionQuestions(session: StudySessionDetail): Promise<
 
     let filteredFrom = 0;
     for (;;) {
-      const { data, error } = await supabase
+      let query = supabase
         .from("questions")
         .select("id, statement, created_at")
         .eq("package_version_id", session.package_version_id)
-        .in("id", questionIds)
+        .in("id", questionIds);
+      if (allowedPositionIds) query = query.in("position_id", allowedPositionIds);
+      const { data, error } = await query
         .order("created_at", { ascending: true })
         .range(filteredFrom, filteredFrom + FILTER_PAGE_SIZE - 1);
 
@@ -497,10 +502,12 @@ export async function getSessionQuestions(session: StudySessionDetail): Promise<
 
   let from = 0;
   for (;;) {
-    const { data, error } = await supabase
+    let query = supabase
       .from("questions")
       .select("id, statement, created_at")
-      .eq("package_version_id", session.package_version_id)
+      .eq("package_version_id", session.package_version_id);
+    if (allowedPositionIds) query = query.in("position_id", allowedPositionIds);
+    const { data, error } = await query
       .order("created_at", { ascending: true })
       .range(from, from + PAGE_SIZE - 1);
 

@@ -122,7 +122,7 @@ export function AppShell({ brand, requireRole, groups }: Props) {
           </SidebarFooter>
         </Sidebar>
 
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col min-w-0">
           <header className="h-14 flex items-center border-b bg-card px-4 gap-2.5">
             <SidebarTrigger />
             <Logo orientation="horizontal" theme="light" className="h-5 w-auto" />
@@ -132,7 +132,7 @@ export function AppShell({ brand, requireRole, groups }: Props) {
               </span>
             ) : null}
           </header>
-          <main className="flex-1 bg-background p-6 xl:p-8">
+          <main className="flex-1 min-w-0 bg-background p-6 xl:p-8">
             <Outlet />
           </main>
         </div>

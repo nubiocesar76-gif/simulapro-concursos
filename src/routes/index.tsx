@@ -539,6 +539,16 @@ function FaqAccordion({ items }: { items: typeof FAQ_ITEMS }) {
 /* Página                                                               */
 /* ------------------------------------------------------------------ */
 
+const PLAN_POSITION_LABELS: Record<string, string> = {
+  enfermeiro: "Enfermeiro",
+  "tecnico-em-enfermagem": "Técnico de Enfermagem",
+};
+
+function planAcervoLabel(positionSlugs: string[]): string {
+  const label = PLAN_POSITION_LABELS[positionSlugs[0]];
+  return `Acesso completo ao Acervo ${label ?? "Enfermagem"}`;
+}
+
 function Landing() {
   const plan = COMMERCIAL_PLANS.find((p) => p.id === "plano-fundador") ?? COMMERCIAL_PLANS[0];
   const otherPlans = COMMERCIAL_PLANS.filter((p) => p.id !== plan?.id);
@@ -971,7 +981,7 @@ function Landing() {
                   </p>
                   <div className="mt-6 mb-[26px] flex flex-col gap-2.5">
                     {[
-                      "Acesso completo ao Acervo Enfermeiro",
+                      planAcervoLabel(p.positionSlugs),
                       "Sem cobrança automática ao final do ciclo",
                       "Garantia incondicional de 7 dias",
                       "Suporte por e-mail",

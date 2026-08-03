@@ -6,9 +6,12 @@ import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
 import {
   fetchAvailableDistributions,
+  getAllowedPositionIdsForDistribution,
   type StudyMode,
   type StudySessionStatus,
 } from "@/lib/study-session";
+import { getAllowedPositionSlugsForDistribution } from "@/config/commercial-plans";
+import { FREE_PLAN_DISTRIBUTION_ID, FREE_PLAN_POSITION_SLUGS } from "@/config/free-plan";
 import { fetchRecentSessions, type RecentSession } from "@/lib/study-history";
 
 export type { RecentSession };
@@ -44,6 +47,7 @@ export type DashboardDistribution = {
   version_number: string;
   questionCount: number;
   lastActivityAt: string | null;
+  positionName: string | null;
 };
 
 export type SubjectPerformance = {
@@ -172,11 +176,13 @@ export async function fetchHistorySummaryStats(userId: string): Promise<HistoryS
 async function fetchContinueStudy(userId: string): Promise<ContinueStudy | null> {
   const { data: activeSession, error } = await supabase
     .from("study_sessions")
-    .select(`
+    .select(
+      `
       id,
       mode,
       content_distributions!inner(name)
-    `)
+    `,
+    )
     .eq("user_id", userId)
     .eq("status", "IN_PROGRESS")
     .order("updated_at", { ascending: false })
@@ -219,19 +225,29 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
   if (distributionError) throw distributionError;
 
   const versionIds = [...new Set((distributionRows ?? []).map((row) => row.package_version_id))];
-  const versionByDistribution = new Map(
-    (distributionRows ?? []).map((row) => [row.id, row.package_version_id]),
-  );
+
+  // `position_id` elegível por DISTRIBUIÇÃO (nunca por versão — duas distribuições podem
+  // compartilhar `package_version_id` sendo de cargos diferentes, ver
+  // ACHADO_MISTURA_DASHBOARD_MULTICARGO_V1.md). `null` == sem restrição de cargo para essa
+  // distribuição específica.
+  const allowedPositionIdsByDistribution = new Map<string, string[] | null>();
+  for (const row of distributionRows ?? []) {
+    if (!row.package_version_id) continue;
+    allowedPositionIdsByDistribution.set(
+      row.id,
+      await getAllowedPositionIdsForDistribution(row.id),
+    );
+  }
 
   const QUESTIONS_PAGE_SIZE = 1000;
-  const questionRows: Array<{ package_version_id: string | null }> = [];
+  const questionRows: Array<{ package_version_id: string | null; position_id: string | null }> = [];
 
   if (versionIds.length) {
     let from = 0;
     for (;;) {
       const { data, error: questionError } = await supabase
         .from("questions")
-        .select("package_version_id")
+        .select("package_version_id, position_id")
         .in("package_version_id", versionIds)
         .range(from, from + QUESTIONS_PAGE_SIZE - 1);
 
@@ -244,13 +260,20 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
     }
   }
 
-  const questionCountByVersion = new Map<string, number>();
-  for (const row of questionRows ?? []) {
+  // Contagem recalculada por distribuição (não por versão) — cada distribuição só conta as
+  // questões da sua própria versão, filtradas pelo seu próprio cargo permitido.
+  const questionCountByDistribution = new Map<string, number>();
+  for (const row of distributionRows ?? []) {
     if (!row.package_version_id) continue;
-    questionCountByVersion.set(
-      row.package_version_id,
-      (questionCountByVersion.get(row.package_version_id) ?? 0) + 1,
-    );
+    const allowed = allowedPositionIdsByDistribution.get(row.id) ?? null;
+    const count = questionRows.reduce((total, question) => {
+      if (question.package_version_id !== row.package_version_id) return total;
+      if (allowed && (!question.position_id || !allowed.includes(question.position_id))) {
+        return total;
+      }
+      return total + 1;
+    }, 0);
+    questionCountByDistribution.set(row.id, count);
   }
 
   const { data: activityRows, error: activityError } = await supabase
@@ -269,16 +292,45 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
     }
   }
 
+  // Nome do cargo por distribuição, para o cabeçalho "Área/Cargo ativos" e o seletor
+  // "Trocar Cargo" — reaproveita o mesmo mecanismo já homologado de resolução de cargo
+  // por distribution_id (commercial-plans.ts), nunca inventa uma dimensão nova.
+  const positionSlugByDistribution = new Map<string, string | null>();
+  for (const item of available) {
+    const slugs =
+      item.distribution_id === FREE_PLAN_DISTRIBUTION_ID
+        ? FREE_PLAN_POSITION_SLUGS
+        : getAllowedPositionSlugsForDistribution(item.distribution_id);
+    positionSlugByDistribution.set(item.distribution_id, slugs[0] ?? null);
+  }
+
+  const distinctPositionSlugs = [
+    ...new Set([...positionSlugByDistribution.values()].filter((slug): slug is string => !!slug)),
+  ];
+
+  const positionNameBySlug = new Map<string, string>();
+  if (distinctPositionSlugs.length) {
+    const { data: positionRows, error: positionsError } = await supabase
+      .from("positions")
+      .select("slug, name")
+      .in("slug", distinctPositionSlugs);
+    if (positionsError) throw positionsError;
+    for (const row of positionRows ?? []) {
+      positionNameBySlug.set(row.slug, row.name);
+    }
+  }
+
   return available.map((item) => {
-    const versionId = versionByDistribution.get(item.distribution_id);
+    const positionSlug = positionSlugByDistribution.get(item.distribution_id) ?? null;
     return {
       distribution_id: item.distribution_id,
       distribution_name: item.distribution_name,
       package_name: item.package_name,
       course_name: item.course_name,
       version_number: item.version_number,
-      questionCount: versionId ? (questionCountByVersion.get(versionId) ?? 0) : 0,
+      questionCount: questionCountByDistribution.get(item.distribution_id) ?? 0,
       lastActivityAt: lastActivityByDistribution.get(item.distribution_id) ?? null,
+      positionName: positionSlug ? (positionNameBySlug.get(positionSlug) ?? null) : null,
     };
   });
 }
@@ -296,10 +348,12 @@ async function fetchSubjectPerformance(userId: string): Promise<SubjectPerforman
 
   const { data: answers, error: answersError } = await supabase
     .from("study_session_questions")
-    .select(`
+    .select(
+      `
       is_correct,
       questions(subject_id, subjects(name))
-    `)
+    `,
+    )
     .in("study_session_id", sessionIds)
     .not("answered_at", "is", null);
 

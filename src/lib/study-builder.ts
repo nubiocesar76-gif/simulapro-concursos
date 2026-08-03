@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import type { SessionQuestion } from "@/lib/study-engine";
 import { buildQuestionSequence } from "@/lib/study-engine";
 import {
+  getAllowedPositionIdsForDistribution,
   getDistributionPackageVersionId,
   getFilteredQuestionIdsForDistribution,
   isFilterStudyMode,
@@ -59,12 +60,7 @@ function boardLabel(board: { name: string; acronym: string | null } | null): str
 
 export function hasActiveSessionFilters(filters?: StudySessionFilters | null): boolean {
   if (!filters) return false;
-  return (
-    !!filters.board_id ||
-    !!filters.subject_id ||
-    !!filters.topic_id ||
-    filters.year != null
-  );
+  return !!filters.board_id || !!filters.subject_id || !!filters.topic_id || filters.year != null;
 }
 
 export function toSessionFilters(filters: StudyBuilderFilters): StudySessionFilters | undefined {
@@ -127,9 +123,7 @@ export function buildBoardOptions(
 ): StudyBuilderOption[] {
   const pool = filterQuestions(questions, { ...filters, boardId: ALL_FILTER });
   return aggregateOptions(pool, (question) =>
-    question.boardId
-      ? { id: question.boardId, label: question.boardLabel }
-      : null,
+    question.boardId ? { id: question.boardId, label: question.boardLabel } : null,
   );
 }
 
@@ -137,11 +131,13 @@ export function buildSubjectOptions(
   questions: StudyBuilderQuestion[],
   filters: StudyBuilderFilters,
 ): StudyBuilderOption[] {
-  const pool = filterQuestions(questions, { ...filters, subjectId: ALL_FILTER, topicId: ALL_FILTER });
+  const pool = filterQuestions(questions, {
+    ...filters,
+    subjectId: ALL_FILTER,
+    topicId: ALL_FILTER,
+  });
   return aggregateOptions(pool, (question) =>
-    question.subjectId
-      ? { id: question.subjectId, label: question.subjectLabel }
-      : null,
+    question.subjectId ? { id: question.subjectId, label: question.subjectLabel } : null,
   );
 }
 
@@ -212,7 +208,10 @@ export function getFilterLabel(
  */
 const PAGE_SIZE = 1000;
 
-async function fetchAllQuestionsForPackageVersion(packageVersionId: string) {
+async function fetchAllQuestionsForPackageVersion(
+  packageVersionId: string,
+  allowedPositionIds: string[] | null,
+) {
   const rows: Array<{
     id: string;
     year: number | null;
@@ -226,7 +225,7 @@ async function fetchAllQuestionsForPackageVersion(packageVersionId: string) {
 
   let from = 0;
   for (;;) {
-    const { data, error } = await supabase
+    let query = supabase
       .from("questions")
       .select(
         `
@@ -240,8 +239,9 @@ async function fetchAllQuestionsForPackageVersion(packageVersionId: string) {
         topics(id, name, subject_id)
       `,
       )
-      .eq("package_version_id", packageVersionId)
-      .range(from, from + PAGE_SIZE - 1);
+      .eq("package_version_id", packageVersionId);
+    if (allowedPositionIds) query = query.in("position_id", allowedPositionIds);
+    const { data, error } = await query.range(from, from + PAGE_SIZE - 1);
 
     if (error) throw error;
 
@@ -260,6 +260,7 @@ export async function fetchStudyBuilderCatalog(
   mode: StudyModeSelectable,
 ): Promise<StudyBuilderCatalog> {
   const packageVersionId = await getDistributionPackageVersionId(distributionId);
+  const allowedPositionIds = await getAllowedPositionIdsForDistribution(distributionId);
 
   let allowedIds: Set<string> | null = null;
   if (isFilterStudyMode(mode)) {
@@ -267,7 +268,7 @@ export async function fetchStudyBuilderCatalog(
     allowedIds = new Set(ids);
   }
 
-  const data = await fetchAllQuestionsForPackageVersion(packageVersionId);
+  const data = await fetchAllQuestionsForPackageVersion(packageVersionId, allowedPositionIds);
 
   const questions: StudyBuilderQuestion[] = (data ?? [])
     .filter((row) => !allowedIds || allowedIds.has(row.id))
@@ -300,20 +301,13 @@ export async function materializeFilteredSessionQuestions(input: {
 }): Promise<void> {
   if (!hasActiveSessionFilters(input.settings.filters)) return;
 
-  const catalog = await fetchStudyBuilderCatalog(
-    input.distributionId,
-    input.userId,
-    input.mode,
-  );
+  const catalog = await fetchStudyBuilderCatalog(input.distributionId, input.userId, input.mode);
 
   const builderFilters: StudyBuilderFilters = {
     boardId: input.settings.filters?.board_id ?? ALL_FILTER,
     subjectId: input.settings.filters?.subject_id ?? ALL_FILTER,
     topicId: input.settings.filters?.topic_id ?? ALL_FILTER,
-    year:
-      input.settings.filters?.year != null
-        ? String(input.settings.filters.year)
-        : ALL_FILTER,
+    year: input.settings.filters?.year != null ? String(input.settings.filters.year) : ALL_FILTER,
   };
 
   const matching = filterQuestions(catalog.questions, builderFilters);
