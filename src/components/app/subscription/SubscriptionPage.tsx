@@ -1,41 +1,31 @@
-import { useState } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { CreditCard, ExternalLink, RefreshCw } from "lucide-react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import {
+  Award,
+  BadgeCheck,
+  BookOpen,
+  ExternalLink,
+  Headphones,
+  Lock,
+  RefreshCw,
+  ShieldCheck,
+} from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import {
   fetchMySubscriptions,
   resolveDisplayStatus,
-  displayStatusBadgeVariant,
   formatBillingType,
   formatDueDate,
   type MySubscriptionRow,
 } from "@/lib/student-subscription";
-import {
-  getAsaasLiveStatus,
-  iniciarCheckout,
-  type AsaasLiveStatus,
-} from "@/lib/student-subscription.functions";
-import { iniciarPlanoFree } from "@/lib/free-subscription.functions";
-import { COMMERCIAL_PLANS } from "@/config/commercial-plans";
+import { getAsaasLiveStatus, type AsaasLiveStatus } from "@/lib/student-subscription.functions";
 import { FREE_PLAN_DISTRIBUTION_ID } from "@/config/free-plan";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
-import { EmptyState } from "@/components/shared/EmptyState";
 import { PageErrorState } from "@/components/shared/PageErrorState";
-import { toast } from "sonner";
-import { STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
+import { STUDENT_PAGE_SHELL } from "@/config/study";
+import { SubscriptionOnboardingFlow } from "@/components/app/subscription/SubscriptionOnboardingFlow";
+import { ActivePlanIllustration } from "@/components/app/subscription/SubscriptionIllustrations";
 
 // Mesmo critério de vigência usado no backend (Bug G4/G4.1) — só decide o que
 // mostrar na tela, não decide acesso de verdade (isso continua sendo feito pelo
@@ -48,10 +38,26 @@ function isCurrentlyActive(subscription: MySubscriptionRow): boolean {
   return true;
 }
 
+// Painel de métricas do cabeçalho — números reais, os mesmos já auditados e usados
+// na Landing (`STATS` em src/routes/index.tsx), não valores de exemplo inventados.
+// "+60 Concursos disponíveis" foi removido daqui por não corresponder a nenhum dado
+// real (a tabela `exams` tem 22 registros) — substituído por "100% Oficiais", que é
+// um dos 4 valores da STATS original da Landing, não usado nesta tela até então.
+const HEADER_METRICS = [
+  { icon: BookOpen, value: "1.100+", label: "Questões atualizadas" },
+  { icon: BadgeCheck, value: "100%", label: "Questões oficiais" },
+  { icon: Award, value: "22", label: "Bancas organizadoras" },
+] as const;
+
+const FOOTER_BENEFITS = [
+  { icon: ShieldCheck, title: "Ambiente 100% seguro", description: "Seus dados protegidos" },
+  { icon: Lock, title: "Cancelamento fácil", description: "A qualquer momento" },
+  { icon: Headphones, title: "Suporte humanizado", description: "Estamos aqui para ajudar" },
+  { icon: Award, title: "Conteúdo de qualidade", description: "Questões atualizadas sempre" },
+] as const;
+
 export function SubscriptionPage() {
   const { user } = useAuth();
-  const [checkoutPlanId, setCheckoutPlanId] = useState<string | null>(null);
-  const [cpfCnpj, setCpfCnpj] = useState("");
 
   const {
     data: subscriptions,
@@ -65,47 +71,18 @@ export function SubscriptionPage() {
     queryFn: () => fetchMySubscriptions(user!.id),
   });
 
-  const checkout = useMutation({
-    mutationFn: (planId: string) => iniciarCheckout({ data: { planId, cpfCnpj } }),
-    onSuccess: (result) => {
-      window.location.href = result.redirectUrl;
-    },
-    onError: (e: unknown) =>
-      toast.error(e instanceof Error ? e.message : "Erro ao iniciar checkout."),
-  });
-
-  const freePlan = useMutation({
-    mutationFn: () => iniciarPlanoFree(),
-    onSuccess: () => {
-      toast.success("Plano Free ativado! Bem-vindo ao SimulaPro.");
-      refetch();
-    },
-    onError: (e: unknown) =>
-      toast.error(e instanceof Error ? e.message : "Erro ao ativar o Plano Free."),
-  });
-
-  function openCheckout(planId: string) {
-    setCpfCnpj("");
-    setCheckoutPlanId(planId);
-  }
-
-  function confirmCheckout() {
-    if (!checkoutPlanId) return;
-    checkout.mutate(checkoutPlanId);
-  }
-
   if (isLoading) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW} aria-busy="true" aria-label="Carregando assinatura">
-        <Skeleton className="h-8 w-56" />
-        <Skeleton className="h-40 rounded-xl" />
+      <div className={STUDENT_PAGE_SHELL} aria-busy="true" aria-label="Carregando assinatura">
+        <Skeleton className="h-40 rounded-[28px]" />
+        <Skeleton className="h-56 rounded-[28px]" />
       </div>
     );
   }
 
   if (isError || !subscriptions) {
     return (
-      <div className={STUDENT_PAGE_SHELL_NARROW}>
+      <div className={STUDENT_PAGE_SHELL}>
         <header>
           <h1 className="text-2xl font-bold tracking-tight">Minha assinatura</h1>
         </header>
@@ -121,13 +98,8 @@ export function SubscriptionPage() {
   }
 
   return (
-    <div className={STUDENT_PAGE_SHELL_NARROW}>
-      <header>
-        <h1 className="text-2xl font-bold tracking-tight">Minha assinatura</h1>
-        <p className="text-sm text-muted-foreground">
-          Acompanhe sua assinatura ou escolha um plano para começar a estudar.
-        </p>
-      </header>
+    <div className={STUDENT_PAGE_SHELL}>
+      <SubscriptionHero />
 
       {subscriptions.length > 0 && (
         <div className="space-y-4">
@@ -137,57 +109,75 @@ export function SubscriptionPage() {
         </div>
       )}
 
-      {/* O catálogo (Free + planos pagos) some quando já existe assinatura paga
-          vigente — não faz sentido oferecer upgrade ou o plano free para quem já tem
-          acesso completo. Continua visível para quem só tem (ou não tem nenhuma)
-          assinatura free, para permitir o upgrade descrito na validação da G6.0. */}
+      {/* O catálogo (Área → Cargo → Concursos → Free/planos pagos) some quando já existe
+          assinatura paga vigente — não faz sentido oferecer upgrade ou o plano free para
+          quem já tem acesso completo. Continua visível para quem só tem (ou não tem
+          nenhuma) assinatura free, para permitir o upgrade descrito na validação da G6.0. */}
       {!subscriptions.some(
         (s) => s.distribution_id !== FREE_PLAN_DISTRIBUTION_ID && isCurrentlyActive(s),
-      ) && (
-        <PlanCatalog
-          onSelectPlan={openCheckout}
-          onActivateFree={() => freePlan.mutate()}
-          freePending={freePlan.isPending}
-        />
-      )}
+      ) && <SubscriptionOnboardingFlow />}
 
-      <Dialog open={!!checkoutPlanId} onOpenChange={(open) => !open && setCheckoutPlanId(null)}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Confirmar assinatura</DialogTitle>
-            <DialogDescription>
-              Informe seu CPF para prosseguir. Você será redirecionado ao checkout seguro do Asaas
-              para concluir o pagamento.
-            </DialogDescription>
-          </DialogHeader>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              confirmCheckout();
-            }}
-            className="space-y-3"
-          >
-            <div>
-              <Label htmlFor="checkout-cpf">CPF *</Label>
-              <Input
-                id="checkout-cpf"
-                value={cpfCnpj}
-                onChange={(e) => setCpfCnpj(e.target.value)}
-                placeholder="000.000.000-00"
-                required
-              />
+      <SubscriptionFooterBenefits />
+    </div>
+  );
+}
+
+function SubscriptionHero() {
+  return (
+    <header
+      className="overflow-hidden rounded-[28px] px-6 py-8 sm:px-10 sm:py-10"
+      style={{
+        background: "linear-gradient(135deg, #0A1633 0%, #0F1E45 55%, #12245A 100%)",
+      }}
+    >
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <div className="max-w-xl">
+          <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Minha assinatura
+          </h1>
+          <p className="mt-3 text-[15px] leading-relaxed text-white/70">
+            Acompanhe seu plano, gerencie sua assinatura e escolha a melhor forma de acelerar sua
+            aprovação.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 lg:w-auto lg:min-w-[420px] lg:grid-cols-3">
+          {HEADER_METRICS.map((metric) => (
+            <div
+              key={metric.label}
+              className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 backdrop-blur-sm"
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#60A5FA]">
+                <metric.icon className="h-[18px] w-[18px]" aria-hidden="true" />
+              </span>
+              <div className="min-w-0">
+                <p className="text-base font-bold leading-tight text-white">{metric.value}</p>
+                <p className="truncate text-[11px] leading-tight text-white/60">{metric.label}</p>
+              </div>
             </div>
-            <DialogFooter>
-              <Button type="button" variant="outline" onClick={() => setCheckoutPlanId(null)}>
-                Cancelar
-              </Button>
-              <Button type="submit" disabled={checkout.isPending}>
-                {checkout.isPending ? "Redirecionando..." : "Ir para pagamento"}
-              </Button>
-            </DialogFooter>
-          </form>
-        </DialogContent>
-      </Dialog>
+          ))}
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function SubscriptionFooterBenefits() {
+  return (
+    <div className="grid grid-cols-2 gap-4 rounded-[24px] border border-[color:var(--ds-color-border)] bg-white p-6 sm:grid-cols-4">
+      {FOOTER_BENEFITS.map((benefit) => (
+        <div key={benefit.title} className="flex items-center gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#EFF6FF] text-[#2563EB]">
+            <benefit.icon className="h-[18px] w-[18px]" aria-hidden="true" />
+          </span>
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold" style={{ color: "#0A1633" }}>
+              {benefit.title}
+            </p>
+            <p className="truncate text-xs text-[#64748B]">{benefit.description}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -201,124 +191,82 @@ function SubscriptionCard({ subscription }: { subscription: MySubscriptionRow })
 
   const liveData: AsaasLiveStatus | undefined = live.data;
   const status = resolveDisplayStatus(subscription.status, subscription.expires_at, liveData);
+  const isActive = status === "Ativa";
 
   return (
-    <Card>
-      <CardHeader>
-        <div className="flex items-start justify-between gap-3">
-          <div className="space-y-1">
-            <CardTitle className="text-xl">{subscription.distribution_name}</CardTitle>
-            <CardDescription>
+    <div className="overflow-hidden rounded-[28px] border border-[color:var(--ds-color-border)] bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+      <div className="grid gap-8 p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-8">
+        <div className="space-y-5">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge className="rounded-full bg-[#DBEAFE] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#1D4ED8] hover:bg-[#DBEAFE]">
+              Plano atual
+            </Badge>
+            <span
+              className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide ${
+                isActive ? "bg-[#DCFCE7] text-[#15803D]" : "bg-[#F1F5F9] text-[#64748B]"
+              }`}
+            >
+              {status}
+            </span>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-extrabold tracking-tight" style={{ color: "#0A1633" }}>
+              {subscription.distribution_name}
+            </h2>
+            <p className="text-sm text-[#64748B]">
               {subscription.course_name} · {subscription.package_name}
-            </CardDescription>
+            </p>
           </div>
-          <Badge variant={displayStatusBadgeVariant(status)}>{status}</Badge>
-        </div>
-      </CardHeader>
-      <CardContent className="space-y-6">
-        <div className="grid gap-4 sm:grid-cols-2 text-sm">
-          <div>
-            <p className="text-muted-foreground">Próxima cobrança</p>
-            <p className="font-medium">{formatDueDate(liveData?.nextDueDate ?? null)}</p>
-          </div>
-          <div>
-            <p className="text-muted-foreground">Vencimento da assinatura</p>
-            <p className="font-medium">{formatDueDate(subscription.expires_at)}</p>
-          </div>
-          <div>
-            <p className="text-muted-foreground">Método de pagamento</p>
-            <p className="font-medium">{formatBillingType(liveData?.billingType ?? null)}</p>
-          </div>
-        </div>
 
-        <div className="flex flex-col gap-2 sm:flex-row">
-          {liveData?.invoiceUrl && (
-            <Button variant="outline" asChild>
-              <a href={liveData.invoiceUrl} target="_blank" rel="noreferrer">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Gerenciar pagamento
-              </a>
+          <div className="grid gap-4 sm:grid-cols-3 text-sm">
+            <div>
+              <p className="text-xs font-medium text-[#64748B]">Próxima cobrança</p>
+              <p className="mt-0.5 font-semibold" style={{ color: "#0A1633" }}>
+                {formatDueDate(liveData?.nextDueDate ?? null)}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-medium text-[#64748B]">Vencimento da assinatura</p>
+              <p className="mt-0.5 font-semibold" style={{ color: "#0A1633" }}>
+                {formatDueDate(subscription.expires_at)}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-medium text-[#64748B]">Método de pagamento</p>
+              <p className="mt-0.5 font-semibold" style={{ color: "#0A1633" }}>
+                {formatBillingType(liveData?.billingType ?? null)}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2 sm:flex-row">
+            {liveData?.invoiceUrl && (
+              <Button asChild className="rounded-xl">
+                <a href={liveData.invoiceUrl} target="_blank" rel="noreferrer">
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Gerenciar pagamento
+                </a>
+              </Button>
+            )}
+            <Button
+              variant="outline"
+              className="rounded-xl"
+              onClick={() =>
+                qc.invalidateQueries({
+                  queryKey: ["asaas-live-status", subscription.distribution_id],
+                })
+              }
+              disabled={live.isFetching}
+            >
+              <RefreshCw className={`h-4 w-4 mr-2 ${live.isFetching ? "animate-spin" : ""}`} />
+              {live.isFetching ? "Atualizando..." : "Atualizar assinatura"}
             </Button>
-          )}
-          <Button
-            variant="outline"
-            onClick={() =>
-              qc.invalidateQueries({
-                queryKey: ["asaas-live-status", subscription.distribution_id],
-              })
-            }
-            disabled={live.isFetching}
-          >
-            <RefreshCw className={`h-4 w-4 mr-2 ${live.isFetching ? "animate-spin" : ""}`} />
-            {live.isFetching ? "Atualizando..." : "Atualizar"}
-          </Button>
+          </div>
         </div>
-      </CardContent>
-    </Card>
-  );
-}
 
-function PlanCatalog({
-  onSelectPlan,
-  onActivateFree,
-  freePending,
-}: {
-  onSelectPlan: (planId: string) => void;
-  onActivateFree: () => void;
-  freePending: boolean;
-}) {
-  return (
-    <div className="space-y-4">
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">Plano Free</CardTitle>
-          <CardDescription>Comece a estudar agora, sem custo.</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-2xl font-semibold tracking-tight">R$ 0,00</p>
-          <ul className="text-sm text-muted-foreground space-y-1 list-disc pl-4">
-            <li>Acesso ao primeiro simulado</li>
-            <li>Acesso imediato</li>
-            <li>Sem cartão</li>
-            <li>Sem cobrança</li>
-          </ul>
-          <Button
-            className="w-full"
-            variant="outline"
-            onClick={onActivateFree}
-            disabled={freePending}
-          >
-            {freePending ? "Ativando..." : "Começar Grátis"}
-          </Button>
-        </CardContent>
-      </Card>
-
-      {COMMERCIAL_PLANS.length === 0 ? (
-        <EmptyState
-          title="Nenhum plano pago disponível no momento"
-          description="Fale com o administrador para saber mais sobre as opções de assinatura."
-          icon={CreditCard}
-        />
-      ) : (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {COMMERCIAL_PLANS.map((plan) => (
-            <Card key={plan.id}>
-              <CardHeader>
-                <CardTitle className="text-lg">{plan.label}</CardTitle>
-                <CardDescription>{plan.description}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-2xl font-semibold tracking-tight">
-                  R$ {plan.value.toFixed(2).replace(".", ",")}
-                </p>
-                <Button className="w-full" onClick={() => onSelectPlan(plan.id)}>
-                  Assinar
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      )}
+        <ActivePlanIllustration className="hidden h-36 w-36 sm:block" />
+      </div>
     </div>
   );
 }
