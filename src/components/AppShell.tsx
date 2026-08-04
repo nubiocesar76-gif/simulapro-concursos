@@ -57,6 +57,9 @@ export function AppShell({ brand, requireRole, groups }: Props) {
   async function handleLogout() {
     await qc.cancelQueries();
     qc.clear();
+    if (typeof window !== "undefined" && user) {
+      window.sessionStorage.removeItem(`simulapro:active-distribution:${user.id}`);
+    }
     await supabase.auth.signOut();
     navigate({ to: "/auth", replace: true });
   }
