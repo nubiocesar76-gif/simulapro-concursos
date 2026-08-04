@@ -7,7 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -121,9 +121,23 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
+  const lastUserIdRef = useRef<string | null | undefined>(undefined);
 
   useEffect(() => {
-    const { data } = supabase.auth.onAuthStateChange((event) => {
+    const { data } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_IN") {
+        // O GoTrue client reemite SIGNED_IN em revalidações de sessão em
+        // segundo plano (ex.: ao voltar o foco da aba), mesmo sem trocar de
+        // usuário. Sem essa deduplicação, router.invalidate() remonta toda a
+        // árvore de rotas autenticadas nessas revalidações silenciosas,
+        // apagando estado local de componentes filhos (ex.: seletor "Trocar
+        // Cargo" do Dashboard) — só invalida de fato quando o usuário muda.
+        const userId = session?.user?.id ?? null;
+        if (userId === lastUserIdRef.current) return;
+        lastUserIdRef.current = userId;
+      } else if (event === "SIGNED_OUT") {
+        lastUserIdRef.current = null;
+      }
       if (event === "SIGNED_IN" || event === "SIGNED_OUT" || event === "USER_UPDATED") {
         router.invalidate();
         if (event !== "SIGNED_OUT") queryClient.invalidateQueries();
