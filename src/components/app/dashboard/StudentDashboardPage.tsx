@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
 import { fetchStudentDashboard, type StudyFilterIndicators } from "@/lib/student-dashboard";
@@ -143,8 +143,27 @@ export function StudentDashboardPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
   // Cargo em foco no cabeçalho/seletor "Trocar Cargo" — só exibição (ver
-  // ActiveCargoHeader), não recorta as consultas agregadas abaixo.
-  const [activeDistributionId, setActiveDistributionId] = useState<string | null>(null);
+  // ActiveCargoHeader), não recorta as consultas agregadas abaixo. Persistido
+  // em sessionStorage (por usuário) para sobreviver a remounts deste
+  // componente causados por revalidações de sessão em segundo plano — sem
+  // isso, a seleção do usuário se perde silenciosamente nesses remounts.
+  const activeDistributionStorageKey = user ? `simulapro:active-distribution:${user.id}` : null;
+  const [activeDistributionId, setActiveDistributionIdState] = useState<string | null>(null);
+  // `user` vem de uma instância própria de useAuth() nesta página (não é
+  // contexto compartilhado), então pode ainda não estar pronta na primeira
+  // renderização — por isso a hidratação roda em efeito, não no inicializador
+  // do useState (que só executaria uma vez, possivelmente antes de `user`).
+  useEffect(() => {
+    if (typeof window === "undefined" || !activeDistributionStorageKey) return;
+    const stored = window.sessionStorage.getItem(activeDistributionStorageKey);
+    if (stored) setActiveDistributionIdState(stored);
+  }, [activeDistributionStorageKey]);
+  const handleChangeActiveDistribution = (distributionId: string) => {
+    setActiveDistributionIdState(distributionId);
+    if (typeof window !== "undefined" && activeDistributionStorageKey) {
+      window.sessionStorage.setItem(activeDistributionStorageKey, distributionId);
+    }
+  };
 
   const { data: profile } = useQuery({
     queryKey: ["profile", user?.id],
@@ -244,7 +263,7 @@ export function StudentDashboardPage() {
       <ActiveCargoHeader
         distributions={data.distributions}
         activeDistributionId={activeDistribution.distribution_id}
-        onChangeActiveDistribution={setActiveDistributionId}
+        onChangeActiveDistribution={handleChangeActiveDistribution}
       />
 
       <section className="flex flex-col gap-[var(--ds-space-6)]" aria-label="O que fazer agora">
