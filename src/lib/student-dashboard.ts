@@ -11,7 +11,7 @@ import {
   type StudySessionStatus,
 } from "@/lib/study-session";
 import { getAllowedPositionSlugsForDistribution } from "@/config/commercial-plans";
-import { FREE_PLAN_DISTRIBUTION_ID, FREE_PLAN_POSITION_SLUGS } from "@/config/free-plan";
+import { getPositionSlugForFreeDistribution } from "@/config/free-plan";
 import { fetchRecentSessions, type RecentSession } from "@/lib/study-history";
 
 export type { RecentSession };
@@ -297,10 +297,10 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
   // por distribution_id (commercial-plans.ts), nunca inventa uma dimensão nova.
   const positionSlugByDistribution = new Map<string, string | null>();
   for (const item of available) {
-    const slugs =
-      item.distribution_id === FREE_PLAN_DISTRIBUTION_ID
-        ? FREE_PLAN_POSITION_SLUGS
-        : getAllowedPositionSlugsForDistribution(item.distribution_id);
+    const freePositionSlug = getPositionSlugForFreeDistribution(item.distribution_id);
+    const slugs = freePositionSlug
+      ? [freePositionSlug]
+      : getAllowedPositionSlugsForDistribution(item.distribution_id);
     positionSlugByDistribution.set(item.distribution_id, slugs[0] ?? null);
   }
 

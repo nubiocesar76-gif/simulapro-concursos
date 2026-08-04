@@ -73,6 +73,18 @@ export const COMMERCIAL_PLANS: CommercialPlan[] = [
   // SubscriptionPage.tsx) já deu o contexto antes de chegar aqui. O cargo em si é resolvido
   // só por `positionSlugs`/`distributionId`, exatamente como os planos de Enfermeiro acima.
   {
+    id: "tecnico-fundador",
+    label: "Plano Fundador",
+    description:
+      "Acesso completo ao Acervo Técnico em Enfermagem por um ciclo de 6 meses. Vagas limitadas da primeira leva, sem cobrança automática — você decide se renova ao final do ciclo.",
+    distributionId: "3fbbfa90-2a67-4bdb-be6a-1a11ba0fec06", // Distribuição RC1 - Técnico em Enfermagem (ACTIVE)
+    positionSlugs: ["tecnico-em-enfermagem"],
+    value: 149.9,
+    cycle: "MONTHLY",
+    billingType: "UNDEFINED",
+    accessDurationMonths: 6,
+  },
+  {
     id: "tecnico-mensal",
     label: "Mensal",
     description: "Acesso completo ao banco de questões do Técnico de Enfermagem durante 30 dias.",

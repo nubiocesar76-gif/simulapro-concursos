@@ -1,15 +1,27 @@
-// Sprint G6.0 — Plano Free.
-//
-// Reaproveita a distribuição "Primeiro Simulado Grátis" já criada no Portal Admin
-// (Sprint P1.5). Não é um plano comercial (não vende, não passa pelo Asaas, não tem
-// checkout), por isso fica fora de `COMMERCIAL_PLANS` — que é especificamente o
-// catálogo de planos vendáveis.
-export const FREE_PLAN_DISTRIBUTION_ID = "356638a1-d7b9-4be7-930d-b5dc3861c7ac"; // Primeiro Simulado Grátis
+// Sprint G6.0 — Plano Free. Estendido (agosto/2026) para multicargo: cada cargo elegível
+// tem sua própria distribuição "Primeiro Simulado Grátis", com uma amostra curada de
+// questões reais e já publicadas daquele cargo (cópias, não as questões originais do
+// acervo pago — mesmo padrão usado desde a origem para o Enfermeiro). Não é um plano
+// comercial (não vende, não passa pelo Asaas, não tem checkout), por isso fica fora de
+// `COMMERCIAL_PLANS` — que é especificamente o catálogo de planos vendáveis.
+export const FREE_PLAN_DISTRIBUTION_BY_POSITION: Record<string, string> = {
+  enfermeiro: "356638a1-d7b9-4be7-930d-b5dc3861c7ac", // Primeiro Simulado Grátis
+  "tecnico-em-enfermagem": "704c71bd-34f4-4120-879e-ec4d21686190", // Primeiro Simulado Grátis - Técnico
+};
 
-// Cargo(s) liberados pelo Plano Free. Antes desta constante existir, a ausência do Free em
-// `COMMERCIAL_PLANS` fazia `getAllowedPositionIdsForDistribution` tratá-lo como "sem
-// restrição" (ver PLANO_TECNICO_MULTIAREA_MULTICARGO_V1.md) — hoje as 20 questões do pacote
-// Demo são só de Enfermeiro, então isso nunca vazou nada, mas era uma lacuna estrutural.
-// Fica explícito aqui: o Free permanece só-Enfermeiro até uma decisão comercial em contrário
-// (ex.: um Free dedicado para o Técnico, com sua própria distribuição).
-export const FREE_PLAN_POSITION_SLUGS = ["enfermeiro"];
+/** Cargos elegíveis ao Plano Free — hoje, todo cargo com distribuição Free própria. */
+export const FREE_PLAN_POSITION_SLUGS = Object.keys(FREE_PLAN_DISTRIBUTION_BY_POSITION);
+
+/** Todas as distribuições Free existentes (qualquer cargo) — usado por checagens que não têm o cargo em mãos ainda. */
+export const FREE_PLAN_DISTRIBUTION_IDS = Object.values(FREE_PLAN_DISTRIBUTION_BY_POSITION);
+
+export function getFreePlanDistributionId(positionSlug: string): string | undefined {
+  return FREE_PLAN_DISTRIBUTION_BY_POSITION[positionSlug];
+}
+
+/** Cargo dono de uma distribuição Free, ou undefined se `distributionId` não for uma delas. */
+export function getPositionSlugForFreeDistribution(distributionId: string): string | undefined {
+  return Object.entries(FREE_PLAN_DISTRIBUTION_BY_POSITION).find(
+    ([, id]) => id === distributionId,
+  )?.[0];
+}

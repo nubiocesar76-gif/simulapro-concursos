@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "@tanstack/react-router";
 import {
+  BookOpen,
+  Building2,
   ChevronLeft,
   Crown,
   CreditCard,
+  FileCheck2,
   Gift,
   GraduationCap,
   Sparkles,
@@ -13,7 +16,12 @@ import {
 } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { supabase } from "@/integrations/supabase/client";
-import { fetchAvailableExamsForPosition, type AvailableExam } from "@/lib/student-onboarding";
+import {
+  fetchAvailableExamsForPosition,
+  fetchAcervoStatsForPosition,
+  type AvailableExam,
+  type AcervoStats,
+} from "@/lib/student-onboarding";
 import { iniciarCheckout } from "@/lib/student-subscription.functions";
 import { iniciarPlanoFree } from "@/lib/free-subscription.functions";
 import { getPlansForPosition, type CommercialPlan } from "@/config/commercial-plans";
@@ -31,6 +39,12 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { EmptyState } from "@/components/shared/EmptyState";
 import { toast } from "sonner";
 import {
@@ -99,6 +113,12 @@ export function SubscriptionOnboardingFlow() {
     queryFn: () => fetchAvailableExamsForPosition(selectedPosition!.id),
   });
 
+  const { data: acervoStats, isLoading: acervoStatsLoading } = useQuery({
+    queryKey: ["subscription-acervo-stats", selectedPosition?.id],
+    enabled: !!user && !!selectedPosition,
+    queryFn: () => fetchAcervoStatsForPosition(selectedPosition!.id),
+  });
+
   function resetCourseSelection() {
     setSelectedCourseId(null);
     setSelectedPositionSlug(null);
@@ -120,7 +140,7 @@ export function SubscriptionOnboardingFlow() {
   });
 
   const freePlan = useMutation({
-    mutationFn: () => iniciarPlanoFree(),
+    mutationFn: () => iniciarPlanoFree({ data: { positionSlug: selectedPosition!.slug } }),
     onSuccess: async () => {
       toast.success("Plano Free ativado! Bem-vindo ao SimulaPro.");
       await qc.invalidateQueries({ queryKey: ["my-subscriptions"] });
@@ -162,6 +182,8 @@ export function SubscriptionOnboardingFlow() {
           cargoLabel={selectedPosition.name}
           exams={exams ?? []}
           isLoading={examsLoading}
+          acervoStats={acervoStats ?? null}
+          acervoStatsLoading={acervoStatsLoading}
           onBack={resetPositionSelection}
           onContinue={() => setExamsStepSeen(true)}
         />
@@ -332,19 +354,38 @@ function CargoPicker({
 // (dado real já existente). Puramente informativa: não filtra planos por concurso,
 // já que hoje 1 plano cobre o acervo inteiro do cargo. Cargos cujo acervo é 100%
 // inédito (sem exam_id vinculado) mostram uma explicação em vez de lista vazia.
+// Card base reaproveitado pelas duas variantes (com exames reais / acervo inédito) desta
+// etapa — mesmo nível visual, mesma estrutura, mesmo espaçamento em ambos os cargos.
+function ExamsStepCard({ children }: { children: ReactNode }) {
+  return (
+    <div
+      className="rounded-2xl border border-[color:var(--ds-color-border)] bg-white p-6"
+      style={{ boxShadow: "0 1px 2px rgba(15,23,42,0.04)" }}
+    >
+      {children}
+    </div>
+  );
+}
+
 function ExamsStep({
   cargoLabel,
   exams,
   isLoading,
+  acervoStats,
+  acervoStatsLoading,
   onBack,
   onContinue,
 }: {
   cargoLabel: string;
   exams: AvailableExam[];
   isLoading: boolean;
+  acervoStats: AcervoStats | null;
+  acervoStatsLoading: boolean;
   onBack: () => void;
   onContinue: () => void;
 }) {
+  const boardNames = [...new Set(exams.map((e) => e.boardName).filter((n): n is string => !!n))];
+
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-2">
@@ -358,34 +399,115 @@ function ExamsStep({
           <ChevronLeft className="h-4 w-4" />
         </Button>
         <h2 className="text-lg font-bold tracking-tight" style={{ color: "#0A1633" }}>
-          Concursos cobertos para {cargoLabel}
+          {exams.length > 0 ? "Concursos e bancas cobertos" : "Acervo Técnico em Enfermagem"}
         </h2>
       </div>
 
       {isLoading ? (
-        <div className="flex flex-wrap gap-2">
-          {[1, 2, 3].map((i) => (
-            <Skeleton key={i} className="h-8 w-40 rounded-full" />
-          ))}
-        </div>
-      ) : exams.length === 0 ? (
-        <div className="rounded-2xl border border-[color:var(--ds-color-border)] bg-white p-6">
-          <p className="text-sm text-[#64748B]">
-            O acervo deste cargo é formado por questões inéditas, elaboradas com base no perfil real
-            de cobrança das bancas organizadoras — ainda sem vínculo direto a um edital específico
-            já publicado.
+        <ExamsStepCard>
+          <div className="flex flex-wrap gap-2">
+            {[1, 2, 3].map((i) => (
+              <Skeleton key={i} className="h-8 w-24 rounded-full" />
+            ))}
+          </div>
+        </ExamsStepCard>
+      ) : exams.length > 0 ? (
+        <ExamsStepCard>
+          <p className="text-sm font-semibold" style={{ color: "#0A1633" }}>
+            Conteúdo baseado em {exams.length}{" "}
+            {exams.length === 1 ? "concurso real" : "concursos reais"}
           </p>
-        </div>
+          {boardNames.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {boardNames.map((name) => (
+                <Badge key={name} variant="secondary" className="px-3 py-1 text-xs font-medium">
+                  {name}
+                </Badge>
+              ))}
+            </div>
+          )}
+          <p className="mt-3 text-sm leading-relaxed" style={{ color: "#64748B" }}>
+            Você terá acesso a questões organizadas com base no perfil real das principais bancas e
+            concursos da área.
+          </p>
+
+          <Accordion type="single" collapsible className="mt-3">
+            <AccordionItem value="todos" className="border-t border-[color:var(--ds-color-border)]">
+              <AccordionTrigger className="py-3 text-sm text-[#2563EB] hover:no-underline">
+                Ver todos os concursos
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {exams.map((exam) => (
+                    <Badge
+                      key={exam.id}
+                      variant="secondary"
+                      className="px-3 py-1.5 text-xs font-normal"
+                    >
+                      {exam.name}
+                      {exam.year ? ` · ${exam.year}` : ""}
+                      {exam.boardName ? ` · ${exam.boardName}` : ""}
+                    </Badge>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </ExamsStepCard>
       ) : (
-        <div className="flex flex-wrap gap-2">
-          {exams.map((exam) => (
-            <Badge key={exam.id} variant="secondary" className="px-3 py-1.5 text-sm font-normal">
-              {exam.name}
-              {exam.year ? ` · ${exam.year}` : ""}
-              {exam.boardName ? ` · ${exam.boardName}` : ""}
-            </Badge>
-          ))}
-        </div>
+        <ExamsStepCard>
+          {acervoStatsLoading ? (
+            <div className="flex flex-wrap gap-2">
+              {[1, 2, 3].map((i) => (
+                <Skeleton key={i} className="h-8 w-24 rounded-full" />
+              ))}
+            </div>
+          ) : (
+            <>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#2563EB]">
+                    <FileCheck2 className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  <span className="text-sm font-semibold" style={{ color: "#0A1633" }}>
+                    {acervoStats?.totalQuestions ?? 0} questões inéditas
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#2563EB]">
+                    <BookOpen className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  <span className="text-sm font-semibold" style={{ color: "#0A1633" }}>
+                    {acervoStats?.disciplineCount ?? 0} disciplinas
+                  </span>
+                </div>
+                {(acervoStats?.boardNames.length ?? 0) > 0 && (
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#EFF6FF] text-[#2563EB]">
+                      <Building2 className="h-4 w-4" aria-hidden="true" />
+                    </span>
+                    <span className="text-sm font-semibold" style={{ color: "#0A1633" }}>
+                      {acervoStats?.boardNames.length} bancas de referência
+                    </span>
+                  </div>
+                )}
+              </div>
+              {(acervoStats?.boardNames.length ?? 0) > 0 && (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {acervoStats!.boardNames.map((name) => (
+                    <Badge key={name} variant="secondary" className="px-3 py-1 text-xs font-medium">
+                      {name}
+                    </Badge>
+                  ))}
+                </div>
+              )}
+              <p className="mt-3 text-sm leading-relaxed" style={{ color: "#64748B" }}>
+                O acervo deste cargo é formado por questões inéditas, construídas a partir de
+                editais reais e do perfil de cobrança das principais bancas.
+              </p>
+            </>
+          )}
+        </ExamsStepCard>
       )}
 
       <Button size="lg" className="rounded-xl" onClick={onContinue}>

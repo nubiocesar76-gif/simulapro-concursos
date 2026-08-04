@@ -5,7 +5,7 @@
 import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
 import { getAllowedPositionSlugsForDistribution } from "@/config/commercial-plans";
-import { FREE_PLAN_DISTRIBUTION_ID, FREE_PLAN_POSITION_SLUGS } from "@/config/free-plan";
+import { getPositionSlugForFreeDistribution } from "@/config/free-plan";
 import { hasActiveSessionFilters, materializeFilteredSessionQuestions } from "@/lib/study-builder";
 
 export const STUDY_MODES_EDITABLE = ["STUDY", "EXAM"] as const;
@@ -205,10 +205,10 @@ export async function getAllowedPositionIdsForDistribution(
   // resolvido explicitamente aqui para fechar essa lacuna (ver
   // PLANO_TECNICO_MULTIAREA_MULTICARGO_V1.md). Qualquer outra distribuição continua com o
   // comportamento anterior, byte a byte.
-  const slugs =
-    distributionId === FREE_PLAN_DISTRIBUTION_ID
-      ? FREE_PLAN_POSITION_SLUGS
-      : getAllowedPositionSlugsForDistribution(distributionId);
+  const freePositionSlug = getPositionSlugForFreeDistribution(distributionId);
+  const slugs = freePositionSlug
+    ? [freePositionSlug]
+    : getAllowedPositionSlugsForDistribution(distributionId);
   if (!slugs.length) return null;
 
   const { data, error } = await supabase.from("positions").select("id").in("slug", slugs);

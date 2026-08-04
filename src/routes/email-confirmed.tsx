@@ -101,26 +101,26 @@ function EmailConfirmedPage() {
               </div>
 
               <h1 className="text-xl font-extrabold sm:text-2xl" style={{ color: "#0A1633" }}>
-                E-mail confirmado com sucesso!
+                Conta confirmada com sucesso!
               </h1>
               <p className="mt-2 text-[15px] font-semibold" style={{ color: "#334155" }}>
-                Sua conta foi ativada e está pronta para uso.
+                Seu e-mail foi confirmado e sua conta está pronta para uso.
               </p>
               <p
                 className="mx-auto mt-4 max-w-sm text-[14px] leading-relaxed"
                 style={{ color: "#64748B" }}
               >
-                Obrigado por confirmar seu endereço de e-mail. Agora você já pode acessar a
-                plataforma e começar sua preparação para concursos.
+                Obrigado por confirmar seu cadastro. Agora você já pode começar sua preparação para
+                concursos públicos.
               </p>
 
               <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
                 <Button asChild size="lg" variant="primary" fullWidth className="sm:w-auto">
-                  <Link to={primaryTo}>Acessar Plataforma</Link>
+                  <Link to={primaryTo}>Entrar no SimulaPro</Link>
                 </Button>
                 {showPlansCta && (
                   <Button asChild size="lg" variant="outline" fullWidth className="sm:w-auto">
-                    <a href="/#planos">Conhecer os cursos</a>
+                    <a href="/#planos">Conhecer os planos</a>
                   </Button>
                 )}
               </div>

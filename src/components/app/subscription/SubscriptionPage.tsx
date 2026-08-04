@@ -18,7 +18,7 @@ import {
   type MySubscriptionRow,
 } from "@/lib/student-subscription";
 import { getAsaasLiveStatus, type AsaasLiveStatus } from "@/lib/student-subscription.functions";
-import { FREE_PLAN_DISTRIBUTION_ID } from "@/config/free-plan";
+import { FREE_PLAN_DISTRIBUTION_IDS } from "@/config/free-plan";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -114,7 +114,7 @@ export function SubscriptionPage() {
           quem já tem acesso completo. Continua visível para quem só tem (ou não tem
           nenhuma) assinatura free, para permitir o upgrade descrito na validação da G6.0. */}
       {!subscriptions.some(
-        (s) => s.distribution_id !== FREE_PLAN_DISTRIBUTION_ID && isCurrentlyActive(s),
+        (s) => !FREE_PLAN_DISTRIBUTION_IDS.includes(s.distribution_id) && isCurrentlyActive(s),
       ) && <SubscriptionOnboardingFlow />}
 
       <SubscriptionFooterBenefits />

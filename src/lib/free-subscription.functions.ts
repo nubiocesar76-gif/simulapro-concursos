@@ -6,7 +6,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { COMMERCIAL_PLANS } from "@/config/commercial-plans";
-import { FREE_PLAN_DISTRIBUTION_ID } from "@/config/free-plan";
+import { getFreePlanDistributionId } from "@/config/free-plan";
 
 // Mesmo critério de vigência já usado em study-session.ts, study-engine.ts e
 // student-subscription.functions.ts (Bug G4/G4.1).
@@ -19,7 +19,13 @@ function isLocallyActive(startsAt: string, expiresAt: string | null): boolean {
 
 export const iniciarPlanoFree = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .handler(async ({ context }) => {
+  .validator((data: { positionSlug: string }) => data)
+  .handler(async ({ context, data }) => {
+    const FREE_PLAN_DISTRIBUTION_ID = getFreePlanDistributionId(data.positionSlug);
+    if (!FREE_PLAN_DISTRIBUTION_ID) {
+      throw new Error("Plano Free não disponível para este cargo.");
+    }
+
     const paidDistributionIds = [...new Set(COMMERCIAL_PLANS.map((plan) => plan.distributionId))];
 
     // 1. Já existe assinatura PAGA ativa? Plano Free não fica disponível.
