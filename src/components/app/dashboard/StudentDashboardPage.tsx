@@ -149,15 +149,6 @@ export function StudentDashboardPage() {
   // isso, a seleção do usuário se perde silenciosamente nesses remounts.
   const activeDistributionStorageKey = user ? `simulapro:active-distribution:${user.id}` : null;
   const [activeDistributionId, setActiveDistributionIdState] = useState<string | null>(null);
-  // `user` vem de uma instância própria de useAuth() nesta página (não é
-  // contexto compartilhado), então pode ainda não estar pronta na primeira
-  // renderização — por isso a hidratação roda em efeito, não no inicializador
-  // do useState (que só executaria uma vez, possivelmente antes de `user`).
-  useEffect(() => {
-    if (typeof window === "undefined" || !activeDistributionStorageKey) return;
-    const stored = window.sessionStorage.getItem(activeDistributionStorageKey);
-    if (stored) setActiveDistributionIdState(stored);
-  }, [activeDistributionStorageKey]);
   const handleChangeActiveDistribution = (distributionId: string) => {
     setActiveDistributionIdState(distributionId);
     if (typeof window !== "undefined" && activeDistributionStorageKey) {
@@ -178,6 +169,28 @@ export function StudentDashboardPage() {
     queryFn: () => fetchStudentDashboard(user!.id),
     retry: false,
   });
+
+  // Hidrata a seleção a partir do sessionStorage assim que `user` (instância
+  // própria de useAuth() nesta página, sem contexto compartilhado com
+  // AuthenticatedLayout — por isso pode não estar pronta na primeira
+  // renderização) e `data.distributions` (para validar contra assinaturas
+  // atuais) estiverem disponíveis. Roda em efeito único, não no inicializador
+  // do useState, para nunca ler/gravar sessionStorage antes de ambos prontos.
+  // Se o valor guardado não corresponder a nenhuma distribuição atual — ex.:
+  // assinatura removida ou expirada —, sincroniza de volta para a primeira
+  // distribuição válida, evitando deixar um ID inválido preso indefinidamente.
+  useEffect(() => {
+    if (typeof window === "undefined" || !activeDistributionStorageKey || !data) return;
+    if (data.distributions.length === 0) return;
+    const stored = window.sessionStorage.getItem(activeDistributionStorageKey);
+    const storedIsValid = stored && data.distributions.some((d) => d.distribution_id === stored);
+    if (storedIsValid) {
+      setActiveDistributionIdState(stored);
+    } else if (activeDistributionId !== data.distributions[0].distribution_id) {
+      handleChangeActiveDistribution(data.distributions[0].distribution_id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeDistributionStorageKey, data]);
 
   const startFilterSession = useMutation({
     mutationFn: async (mode: FilterStudyMode) => {

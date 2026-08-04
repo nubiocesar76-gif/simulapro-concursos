@@ -14,6 +14,16 @@ export const Route = createFileRoute("/auth")({
   component: AuthPage,
 });
 
+// Supabase Auth retorna mensagens de erro só em inglês. Traduz os casos
+// conhecidos e reproduzidos em produção; qualquer erro não mapeado mantém a
+// mensagem original do Supabase (nunca mascara um erro desconhecido).
+function translateAuthError(error: { message: string; code?: string }): string {
+  if (error.code === "invalid_credentials" || error.message === "Invalid login credentials") {
+    return "E-mail ou senha incorretos.";
+  }
+  return error.message;
+}
+
 function AuthPage() {
   const { user, role, loading, error } = useAuth();
   const navigate = useNavigate();
@@ -49,7 +59,7 @@ function AuthPage() {
       password: String(form.get("password")),
     });
     setBusy(false);
-    if (loginError) return toast.error(loginError.message);
+    if (loginError) return toast.error(translateAuthError(loginError));
     if (!data.session?.user) return toast.error("Sessão não criada. Tente novamente.");
 
     const { role: nextRole, error: roleError } = await fetchRole(data.session.user.id);
