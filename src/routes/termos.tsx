@@ -57,9 +57,9 @@ function TermosPage() {
           <CardContent className="space-y-8 p-6 sm:p-8">
             <Section title="Objeto">
               <p>
-                O SimulaPro é uma plataforma de treino por questões oficiais de concursos públicos,
-                dedicada ao curso de Enfermagem e ao cargo Enfermeiro. Estes termos regem o uso da
-                plataforma por qualquer pessoa que crie uma conta.
+                O SimulaPro é uma plataforma de preparação para concursos públicos, com treino por
+                questões oficiais organizadas por banca, disciplina e assunto. Estes termos regem o
+                uso da plataforma por qualquer pessoa que crie uma conta.
               </p>
             </Section>
 
@@ -67,8 +67,10 @@ function TermosPage() {
 
             <Section title="Funcionamento da plataforma">
               <p>
-                O acesso ao Acervo de questões é liberado mediante a contratação de um plano (hoje,
-                o Plano Fundador), por um ciclo de acesso com duração definida no momento da compra.
+                O acesso ao banco de questões é liberado mediante a contratação de um plano, por um
+                ciclo de acesso com duração definida no momento da compra. Durante a assinatura,
+                você poderá estudar todos os concursos disponíveis na plataforma — novos concursos
+                podem ser adicionados continuamente, sem necessidade de contratar um plano por cargo.
                 O SimulaPro não é um curso completo com vídeoaulas nem garante aprovação em concurso
                 — é uma ferramenta de treino por questões, complementar ao seu estudo de teoria.
               </p>
@@ -80,8 +82,8 @@ function TermosPage() {
               <p>
                 Você é responsável por manter a confidencialidade da sua senha e por usar a
                 plataforma apenas para fins pessoais de estudo. O SimulaPro é responsável por manter
-                o Acervo organizado, classificado e revisado, e por corrigir, dentro de prazo
-                razoável, qualquer erro real identificado em uma questão.
+                o banco de questões organizado, classificado e revisado, e por corrigir, dentro de
+                prazo razoável, qualquer erro real identificado em uma questão.
               </p>
             </Section>
 
@@ -91,9 +93,9 @@ function TermosPage() {
               <p>
                 O texto original das questões pertence às respectivas bancas organizadoras e órgãos
                 públicos que aplicaram as provas. A curadoria, classificação por banca, disciplina e
-                assunto, as explicações escritas e a organização do Acervo são propriedade
+                assunto, as explicações escritas e a organização do conteúdo são propriedade
                 intelectual do SimulaPro. É vedada a reprodução, redistribuição ou revenda do
-                conteúdo organizado do Acervo sem autorização prévia.
+                conteúdo organizado sem autorização prévia.
               </p>
             </Section>
 
@@ -113,7 +115,7 @@ function TermosPage() {
             <Section title="Suspensão de contas">
               <p>
                 A conta pode ser suspensa em caso de uso indevido da plataforma, violação destes
-                Termos, ou tentativa de reproduzir, redistribuir ou revender o conteúdo do Acervo.
+                Termos, ou tentativa de reproduzir, redistribuir ou revender o conteúdo da plataforma.
                 Sempre que possível, você será avisado antes da suspensão, exceto em casos de uso
                 claramente abusivo.
               </p>

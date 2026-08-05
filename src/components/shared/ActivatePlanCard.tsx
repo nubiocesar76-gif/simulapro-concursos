@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const BENEFITS = [
-  "Acesso completo ao acervo de questões do cargo escolhido",
+  "Acesso completo a todos os concursos disponíveis na plataforma",
   "Sem cobrança automática — você decide se renova",
   "Garantia de 7 dias, sem burocracia",
 ];
@@ -18,8 +18,8 @@ export function ActivatePlanCard() {
         </div>
         <CardTitle className="mt-3 text-lg">Falta um passo para você começar a estudar</CardTitle>
         <CardDescription>
-          Sua conta já está pronta, mas seu acesso ao Acervo ainda não foi ativado. Ative o Plano
-          Fundador para liberar suas questões.
+          Sua conta já está pronta, mas seu acesso completo ainda não foi ativado. Escolha um plano
+          para liberar questões, simulados e estatísticas.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -33,7 +33,7 @@ export function ActivatePlanCard() {
         </ul>
         <Button asChild className="w-full sm:w-auto">
           <Link to="/app/subscription">
-            Conhecer Plano Fundador
+            Ver planos disponíveis
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </Button>

@@ -43,9 +43,9 @@ const PLATFORM_DISTRIBUTION_BY_POSITION: Record<string, string> = {
 export const COMMERCIAL_PLANS: CommercialPlan[] = [
   {
     id: "plano-fundador",
-    label: "Plano Fundador",
+    label: "Plano Semestral",
     description:
-      "Economize e acompanhe toda a evolução da plataforma. Acesso completo por 6 meses — valor promocional da primeira turma.",
+      "Melhor custo-benefício para quem quer estudar com tranquilidade. Acesso completo por 6 meses a todos os concursos disponíveis.",
     distributionId: ENFERMEIRO_DISTRIBUTION,
     distributionByPosition: { ...PLATFORM_DISTRIBUTION_BY_POSITION },
     positionSlugs: [...PLATFORM_POSITION_SLUGS],
@@ -57,7 +57,8 @@ export const COMMERCIAL_PLANS: CommercialPlan[] = [
   {
     id: "plano-mensal",
     label: "Plano Mensal",
-    description: "Ideal para quem deseja começar agora. Acesso completo à plataforma, sem fidelidade.",
+    description:
+      "Ideal para quem deseja começar agora. Acesso completo a todos os concursos disponíveis durante sua assinatura, sem fidelidade.",
     distributionId: ENFERMEIRO_DISTRIBUTION,
     distributionByPosition: { ...PLATFORM_DISTRIBUTION_BY_POSITION },
     positionSlugs: [...PLATFORM_POSITION_SLUGS],

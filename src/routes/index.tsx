@@ -22,6 +22,7 @@ import { Button, Logo as BrandLogo } from "@/components/design-system";
 import {
   buildLandingStatsDisplay,
   FALLBACK_LANDING_PLATFORM_STATS,
+  formatLandingQuestionCount,
   getLandingPlatformStats,
   PROVA_SOCIAL_STAT_LABELS,
 } from "@/lib/landing-platform-stats.functions";
@@ -29,32 +30,32 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SimulaPro — Plataforma de questões para concursos públicos" },
+      { title: "SimulaPro — Preparação inteligente para concursos públicos" },
       {
         name: "description",
         content:
-          "Milhares de questões organizadas por banca, disciplina e assunto, simulados completos e estatísticas inteligentes. Assine a plataforma e escolha o concurso que deseja estudar.",
+          "A preparação inteligente para conquistar sua aprovação. Milhares de questões por banca, disciplina e assunto, simulados completos e estatísticas inteligentes.",
       },
       {
         property: "og:title",
-        content: "SimulaPro — Plataforma de questões para concursos públicos",
+        content: "SimulaPro — Preparação inteligente para concursos públicos",
       },
       {
         property: "og:description",
         content:
-          "Estude exatamente como a banca cobra. Questões oficiais, simulados e diagnóstico de desempenho em uma única plataforma.",
+          "Estude para passar com questões organizadas por banca, simulados completos e estatísticas de desempenho.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "SimulaPro — Plataforma de questões para concursos públicos",
+        content: "SimulaPro — Preparação inteligente para concursos públicos",
       },
       {
         name: "twitter:description",
         content:
-          "Questões oficiais, simulados completos e estatísticas por disciplina. Acesso a todos os concursos disponíveis com uma única assinatura.",
+          "Conquiste sua aprovação com questões por banca e disciplina, simulados completos e acesso a todos os concursos com uma única assinatura.",
       },
     ],
     links: [
@@ -183,7 +184,7 @@ const DIFFERENTIATORS = [
   {
     title: "Plataforma em expansão contínua",
     description:
-      "Novos concursos entram na plataforma sem novo plano. Hoje: Enfermeiro e Técnico em Enfermagem — exemplos dos concursos já disponíveis.",
+      "O catálogo da plataforma cresce continuamente com novos concursos públicos — sem necessidade de novo plano.",
   },
 ];
 
@@ -210,13 +211,18 @@ const BENEFITS: Array<{ icon: LucideIcon; title: string; description: string }> 
   },
 ];
 
-const DEMO_BENEFITS = [
-  "Experimente gratuitamente antes de assinar",
-  "Conheça exatamente como funciona o SimulaPro",
-  "Responda questões reais de demonstração",
-  "Veja simulados e estatísticas em ação",
-  "Sem cartão de crédito",
-  "Sem compromisso",
+const DEMO_BENEFITS = ["Sem cartão de crédito", "Acesso imediato", "Sem compromisso"];
+
+const WHY_SIMULAPRO: Array<{ icon: LucideIcon; title: string }> = [
+  { icon: Filter, title: "Questões organizadas por banca" },
+  { icon: BookOpen, title: "Questões inéditas produzidas editorialmente" },
+  { icon: ClipboardList, title: "Simulados completos" },
+  { icon: BarChart3, title: "Estatísticas inteligentes de desempenho" },
+  { icon: RotateCcw, title: "Atualização constante do acervo" },
+  {
+    icon: ShieldCheck,
+    title: "Plataforma desenvolvida exclusivamente para concursos públicos",
+  },
 ];
 
 const PLANS_FOOTNOTE =
@@ -231,59 +237,76 @@ type LandingPlan = {
   benefits: string[];
   cta: string;
   highlighted?: boolean;
+  badge?: string;
+  freeFootnote?: string[];
 };
 
 const LANDING_PLANS: LandingPlan[] = [
   {
     id: "demonstracao",
-    label: "Demonstração Gratuita",
-    subtitle: "Experimente gratuitamente antes de assinar. Conheça exatamente como funciona o SimulaPro.",
+    label: "Plano Gratuito",
+    subtitle: "Experimente sem risco e conheça a plataforma antes de assinar.",
     value: 0,
     benefits: [
       "Responda questões de demonstração",
       "Faça um mini simulado",
       "Conheça o painel de desempenho",
       "Veja estatísticas básicas",
-      "Sem cartão de crédito",
-      "Acesso imediato",
     ],
     cta: "Experimentar Gratuitamente",
+    freeFootnote: ["Sem cartão de crédito", "Acesso imediato", "Teste antes de assinar"],
   },
   {
     id: "plano-mensal",
     label: "Plano Mensal",
-    subtitle: "Ideal para quem deseja começar agora.",
+    subtitle: "O caminho mais escolhido para quem quer começar a estudar agora.",
     value: 39.9,
     periodLabel: "mês",
+    highlighted: true,
+    badge: "MAIS ESCOLHIDO",
     benefits: [
-      "Acesso completo à plataforma",
-      "Todos os concursos disponíveis",
+      "Acesso completo a todos os concursos disponíveis durante sua assinatura",
       "Questões ilimitadas",
       "Simulados completos",
       "Estatísticas avançadas",
-      "Sem fidelidade",
-      "Cancele quando quiser",
+      "Histórico e Central de Revisão",
+      "Sem fidelidade — cancele quando quiser",
     ],
     cta: "Assinar Plano Mensal",
   },
   {
     id: "plano-fundador",
-    label: "Plano Fundador",
-    subtitle: "Economize e acompanhe toda a evolução da plataforma.",
+    label: "Plano Semestral",
+    subtitle: "Economize e estude com tranquilidade por 6 meses inteiros.",
     value: 149.9,
     periodLabel: "6 meses",
-    highlighted: true,
+    badge: "MELHOR CUSTO-BENEFÍCIO",
     benefits: [
       "Tudo do Plano Mensal",
-      "Acesso por 6 meses",
-      "Todos os concursos atuais",
+      "6 meses de acesso completo",
+      "Todos os concursos disponíveis",
       "Novos concursos adicionados durante a assinatura",
       "Garantia de 7 dias",
       "Suporte por e-mail",
-      "Valor promocional da primeira turma",
     ],
-    cta: "Quero ser Fundador",
+    cta: "Assinar Plano Semestral",
   },
+];
+
+const PLAN_COMPARISON_ROWS: Array<{
+  feature: string;
+  free: string;
+  monthly: string;
+  semestral: string;
+}> = [
+  { feature: "Questões", free: "Demonstração", monthly: "Ilimitadas", semestral: "Ilimitadas" },
+  { feature: "Simulados", free: "Mini simulado", monthly: "Completos", semestral: "Completos" },
+  { feature: "Estatísticas", free: "Básicas", monthly: "Avançadas", semestral: "Avançadas" },
+  { feature: "Histórico", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Todos os concursos", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Novos concursos", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Atualizações contínuas", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Suporte", free: "—", monthly: "—", semestral: "E-mail" },
 ];
 
 const FAQ_ITEMS = [
@@ -295,12 +318,12 @@ const FAQ_ITEMS = [
   {
     question: "Preciso contratar um plano para cada concurso?",
     answer:
-      "Não. Você assina a plataforma SimulaPro uma única vez e, após o login, escolhe qual concurso deseja estudar. Enfermeiro e Técnico em Enfermagem são concursos já disponíveis hoje — não planos separados.",
+      "Não. Você assina o SimulaPro uma única vez e, após o login, escolhe o concurso que deseja estudar entre os disponíveis no catálogo — sem plano separado por concurso.",
   },
   {
     question: "Vale a pena?",
     answer:
-      "Se o que você precisa é treinar por questões oficiais, organizadas por banca, disciplina e assunto, com simulados e estatísticas — sim. O SimulaPro é uma plataforma de questões, não um curso com vídeoaulas. Preferimos deixar isso claro antes de você assinar.",
+      "Sim — se você quer treinar com questões oficiais, simulados e estatísticas que mostram onde focar seus estudos. O SimulaPro foi criado para candidatos que levam a aprovação a sério, não para quem busca videoaulas.",
   },
   {
     question: "É atualizado?",
@@ -632,9 +655,107 @@ const PLAN_CHECK_ICON = (highlighted: boolean) => (
   </svg>
 );
 
+function PlanComparisonCell({ value }: { value: string }) {
+  if (value === "✓") {
+    return (
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 13 13"
+        fill="none"
+        aria-hidden="true"
+        className="mx-auto"
+      >
+        <path
+          d="M2.5 6.5L5 9L10.5 3.5"
+          stroke={LANDING.success}
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+  if (value === "—") {
+    return (
+      <span className="text-[13px] font-medium" style={{ color: LANDING.textSecondary }}>
+        —
+      </span>
+    );
+  }
+  return (
+    <span className="text-[12px] font-medium leading-snug" style={{ color: LANDING.textPrimary }}>
+      {value}
+    </span>
+  );
+}
+
+function PlanComparisonTable() {
+  return (
+    <div
+      className="mx-auto mt-10 max-w-[900px] overflow-x-auto rounded-[14px] border"
+      style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+    >
+      <table className="w-full min-w-[560px] border-collapse text-center text-[12.5px]">
+        <thead>
+          <tr style={{ borderBottom: `1px solid ${LANDING.border}` }}>
+            <th
+              className="px-4 py-3.5 text-left text-[11px] font-bold tracking-wide uppercase"
+              style={{ color: LANDING.textSecondary }}
+            >
+              Recurso
+            </th>
+            <th className="px-3 py-3.5 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
+              Gratuito
+            </th>
+            <th className="px-3 py-3.5 text-[11px] font-bold" style={{ color: LANDING.primary }}>
+              Mensal
+            </th>
+            <th className="px-3 py-3.5 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
+              Semestral
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {PLAN_COMPARISON_ROWS.map((row, index) => (
+            <tr
+              key={row.feature}
+              style={
+                index < PLAN_COMPARISON_ROWS.length - 1
+                  ? { borderBottom: `1px solid ${LANDING.divider}` }
+                  : undefined
+              }
+            >
+              <td
+                className="px-4 py-3 text-left text-[12.5px] font-semibold"
+                style={{ color: LANDING.textPrimary }}
+              >
+                {row.feature}
+              </td>
+              <td className="px-3 py-3">
+                <PlanComparisonCell value={row.free} />
+              </td>
+              <td
+                className="px-3 py-3"
+                style={{ background: "rgba(37,99,235,0.04)" }}
+              >
+                <PlanComparisonCell value={row.monthly} />
+              </td>
+              <td className="px-3 py-3">
+                <PlanComparisonCell value={row.semestral} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 function LandingPlanCard({ plan }: { plan: LandingPlan }) {
   const highlighted = plan.highlighted === true;
   const isFree = plan.value === 0;
+  const badgeText = plan.badge ?? (isFree ? "GRÁTIS" : undefined);
 
   return (
     <div
@@ -651,20 +772,12 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
             : { background: LANDING.surface, borderColor: LANDING.border }
       }
     >
-      {highlighted ? (
+      {badgeText ? (
         <div
           className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
           style={{ background: LANDING.primary }}
         >
-          MAIS POPULAR
-        </div>
-      ) : null}
-      {!highlighted && isFree ? (
-        <div
-          className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
-          style={{ background: LANDING.primary }}
-        >
-          GRÁTIS
+          {badgeText}
         </div>
       ) : null}
       <div
@@ -720,18 +833,36 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
       >
         <Link to="/auth">{plan.cta}</Link>
       </Button>
+      {plan.freeFootnote && plan.freeFootnote.length > 0 ? (
+        <ul
+          className="mt-4 flex flex-col gap-1.5 border-t pt-4"
+          style={{ borderColor: LANDING.divider }}
+        >
+          {plan.freeFootnote.map((item) => (
+            <li key={item} className="flex items-center gap-2">
+              {PLAN_CHECK_ICON(highlighted)}
+              <span className="text-[12px] font-medium" style={{ color: LANDING.textSecondary }}>
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 }
 
 function Landing() {
-  const founderPlan = LANDING_PLANS.find((p) => p.id === "plano-fundador");
+  const monthlyPlan = LANDING_PLANS.find((p) => p.id === "plano-mensal");
   const { data: platformStats } = useQuery({
     queryKey: ["landing-platform-stats"],
     queryFn: () => getLandingPlatformStats(),
     staleTime: 5 * 60 * 1000,
   });
   const stats = buildLandingStatsDisplay(platformStats ?? FALLBACK_LANDING_PLATFORM_STATS);
+  const questionCountLabel = formatLandingQuestionCount(
+    platformStats?.questionCount ?? FALLBACK_LANDING_PLATFORM_STATS.questionCount,
+  );
 
   return (
     <div
@@ -742,7 +873,7 @@ function Landing() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(
-            jsonLd(founderPlan?.value, founderPlan?.periodLabel === "6 meses" ? 6 : undefined),
+            jsonLd(monthlyPlan?.value, monthlyPlan?.periodLabel === "mês" ? 1 : undefined),
           ),
         }}
       />
@@ -787,19 +918,19 @@ function Landing() {
         >
           <div className="mx-auto flex max-w-[1312px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
             <div className="max-w-[480px] text-center lg:flex-none lg:text-left">
-              <Eyebrow>PLATAFORMA DE CONCURSOS PÚBLICOS</Eyebrow>
+              <Eyebrow>PREPARAÇÃO PARA APROVAÇÃO</Eyebrow>
               <h1
                 className="mt-4 text-[32px] font-extrabold leading-[1.14] tracking-[-0.02em] sm:text-[38px] lg:text-[44px]"
                 style={{ color: LANDING.textPrimary }}
               >
-                Passe no seu concurso estudando exatamente como a banca cobra.
+                A preparação inteligente para conquistar sua aprovação em concursos públicos.
               </h1>
               <p
                 className="mx-auto mt-5 max-w-[440px] text-base leading-relaxed lg:mx-0"
                 style={{ color: LANDING.textSecondary }}
               >
-                Milhares de questões organizadas por banca, disciplina e assunto, simulados
-                completos, estatísticas inteligentes e atualização constante do acervo.
+                Estude com milhares de questões organizadas por banca, disciplina e assunto,
+                simulados completos, estatísticas inteligentes e atualização constante do acervo.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
                 <Button asChild size="lg">
@@ -811,7 +942,7 @@ function Landing() {
                 <Button asChild variant="outline" size="lg">
                   <a href="#demonstracao">
                     <Play className="h-3 w-3" aria-hidden="true" fill="currentColor" />
-                    Ver Demonstração
+                    Ver demonstração
                   </a>
                 </Button>
               </div>
@@ -1104,14 +1235,13 @@ function Landing() {
               className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
               style={{ color: LANDING.textPrimary }}
             >
-              Experimente gratuitamente
+              Experimente o SimulaPro gratuitamente antes de assinar
             </h2>
             <p
               className="mx-auto mt-4 max-w-[560px] text-base leading-relaxed"
               style={{ color: LANDING.textSecondary }}
             >
-              Experimente gratuitamente antes de assinar. Conheça exatamente como funciona o
-              SimulaPro — sem cartão de crédito e sem compromisso.
+              Conheça exatamente como funciona a plataforma antes de escolher um plano.
             </p>
             <ul className="mx-auto mt-8 flex max-w-[480px] flex-col gap-2.5 text-left">
               {DEMO_BENEFITS.map((item) => (
@@ -1134,18 +1264,64 @@ function Landing() {
           </div>
         </section>
 
-        {/* PLANOS — três opções escaláveis (demonstração + mensal + fundador) */}
+        {/* POR QUE ESTUDAR COM O SIMULAPRO — antes dos planos */}
+        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
+          <SectionHeading
+            eyebrow="DIFERENCIAIS"
+            title="Por que estudar com o SimulaPro?"
+          />
+          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {WHY_SIMULAPRO.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[14px] border p-5"
+                style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+              >
+                <div
+                  className="mb-3 flex h-[34px] w-[34px] items-center justify-center rounded-[8px] border"
+                  style={{ background: LANDING.surface, borderColor: LANDING.border }}
+                >
+                  <item.icon
+                    className="h-[15px] w-[15px]"
+                    style={{ color: LANDING.textPrimary }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p className="text-[13.5px] font-bold leading-snug" style={{ color: LANDING.textPrimary }}>
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* PLANOS — gratuito, mensal (destaque) e semestral */}
         <section
           id="planos"
           className="px-6 pt-16 pb-16 sm:px-16 sm:pt-24 sm:pb-24"
           style={{ background: LANDING.surface }}
         >
-          <SectionHeading eyebrow="PLANOS" title="Escolha como quer se preparar" />
+          <SectionHeading eyebrow="PLANOS" title="Escolha o plano ideal para sua aprovação" />
+          <div
+            className="mx-auto mt-8 max-w-[760px] rounded-[12px] border px-6 py-4 text-center"
+            style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+          >
+            <p className="text-[14px] font-semibold" style={{ color: LANDING.textPrimary }}>
+              Mais de {questionCountLabel} questões organizadas para concursos públicos.
+            </p>
+            <p
+              className="mt-1.5 text-[12.5px] leading-relaxed"
+              style={{ color: LANDING.textSecondary }}
+            >
+              Novos concursos e conteúdos são adicionados continuamente à plataforma.
+            </p>
+          </div>
           <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-5 sm:grid-cols-3">
             {LANDING_PLANS.map((plan) => (
               <LandingPlanCard key={plan.id} plan={plan} />
             ))}
           </div>
+          <PlanComparisonTable />
           <p
             className="mx-auto mt-8 max-w-[720px] text-center text-[12.5px] leading-relaxed"
             style={{ color: LANDING.textSecondary }}
@@ -1175,11 +1351,11 @@ function Landing() {
             style={{ background: LANDING.textPrimary }}
           >
             <h2 className="text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-[32px]">
-              Comece hoje sua preparação
+              Seu próximo concurso começa agora.
             </h2>
             <p className="mt-3.5 text-[15px]" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Estude utilizando uma plataforma criada para quem deseja aprovação em concursos
-              públicos. Experimente gratuitamente ou assine com garantia de 7 dias.
+              Entre gratuitamente, conheça a plataforma e evolua seus estudos com questões
+              organizadas por banca, disciplina e assunto.
             </p>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">

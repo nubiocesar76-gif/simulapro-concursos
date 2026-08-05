@@ -64,16 +64,16 @@ export function buildLandingStatsDisplay(stats: LandingPlatformStats) {
   return [
     { value: formatLandingQuestionCount(stats.questionCount), label: "Questões" },
     { value: String(stats.boardCount), label: "Bancas" },
+    { value: String(stats.contestCount), label: "Concursos disponíveis" },
     { value: String(stats.disciplineCount), label: "Disciplinas" },
-    { value: "Completos", label: "Simulados" },
-    { value: String(stats.contestCount), label: "Concursos" },
+    { value: "Contínua", label: "Atualização contínua" },
   ];
 }
 
 export const PROVA_SOCIAL_STAT_LABELS: Record<string, string> = {
   Questões: "Questões organizadas",
   Bancas: "Bancas cobertas",
+  "Concursos disponíveis": "Concursos na plataforma",
   Disciplinas: "Disciplinas mapeadas",
-  Simulados: "Simulados completos",
-  Concursos: "Concursos na plataforma",
+  "Atualização contínua": "Acervo em expansão",
 };

@@ -402,7 +402,7 @@ function ExamsStep({
           <ChevronLeft className="h-4 w-4" />
         </Button>
         <h2 className="text-lg font-bold tracking-tight" style={{ color: "#0A1633" }}>
-          {exams.length > 0 ? "Concursos e bancas cobertos" : "Acervo Técnico em Enfermagem"}
+          {exams.length > 0 ? "Concursos e bancas cobertos" : "Catálogo de concursos"}
         </h2>
       </div>
 
@@ -559,7 +559,7 @@ function PlanCatalog({
             Escolha seu plano
           </h2>
           <p className="text-sm text-[#64748B]">
-            Acesso completo à plataforma SimulaPro — escolha o concurso que deseja estudar.
+            Acesso completo a todos os concursos disponíveis — escolha o concurso que deseja estudar.
           </p>
         </div>
       </div>
