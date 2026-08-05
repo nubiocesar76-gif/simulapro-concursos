@@ -93,9 +93,9 @@ const LANDING_CARD =
   "landing-card-hover rounded-[16px] border transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(10,22,51,0.09)]";
 const LANDING_SECTION = "landing-fade-in";
 const LANDING_PLAN_CARD =
-  "landing-card-hover relative rounded-[16px] border transition-all duration-300 ease-out hover:-translate-y-1";
+  "landing-card-hover relative flex h-full flex-col rounded-[16px] border px-7 py-8 transition-all duration-300 ease-out hover:-translate-y-1";
 const LANDING_PLAN_CARD_HIGHLIGHTED =
-  "landing-card-hover relative z-10 rounded-[16px] border px-7 py-10 transition-all duration-300 ease-out hover:-translate-y-1.5 sm:scale-[1.04]";
+  "landing-card-hover relative z-10 flex h-full flex-col rounded-[16px] border px-7 py-8 transition-all duration-300 ease-out hover:-translate-y-1.5";
 
 const HERO_TRUST = ["Teste gratuitamente", "Sem cartão de crédito", "Acesso imediato"];
 
@@ -174,6 +174,8 @@ const DEMO_BENEFITS = ["Sem cartão de crédito", "Acesso imediato", "Sem compro
 const PLANS_FOOTNOTE =
   "Sua assinatura dá acesso a todos os concursos disponíveis durante o período contratado. Novos concursos serão adicionados continuamente sem necessidade de contratar um novo plano.";
 
+const PLAN_COLUMN_GRID = "minmax(0, 1.15fr) repeat(3, minmax(0, 1fr))";
+
 type LandingPlan = {
   id: string;
   label: string;
@@ -185,6 +187,7 @@ type LandingPlan = {
   highlighted?: boolean;
   badge?: string;
   savingsLabel?: string;
+  upgradeCopy?: string;
 };
 
 const LANDING_PLANS: LandingPlan[] = [
@@ -192,6 +195,7 @@ const LANDING_PLANS: LandingPlan[] = [
     id: "demonstracao",
     label: "Plano Gratuito",
     subtitle: "Experimente gratuitamente antes de decidir.",
+    upgradeCopy: "Ideal para conhecer a plataforma antes de assinar.",
     value: 0,
     benefits: [
       "Não precisa cartão",
@@ -222,8 +226,8 @@ const LANDING_PLANS: LandingPlan[] = [
     subtitle: "Estude com tranquilidade por 6 meses inteiros.",
     value: 149.9,
     periodLabel: "6 meses",
-    badge: "MELHOR CUSTO-BENEFÍCIO",
-    savingsLabel: "Economize R$ 89,50 vs. 6 meses no plano mensal",
+    badge: "MELHOR ECONOMIA",
+    savingsLabel: "ECONOMIZE R$ 89,50",
     benefits: [
       "Tudo do Plano Mensal",
       "6 meses de acesso completo",
@@ -245,9 +249,12 @@ const PLAN_COMPARISON_ROWS: Array<{
   { feature: "Simulados", free: "Limitados", monthly: "Ilimitados", semestral: "Ilimitados" },
   { feature: "Estatísticas", free: "Básicas", monthly: "Avançadas", semestral: "Avançadas" },
   { feature: "Histórico", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Revisão", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Favoritos", free: "—", monthly: "✓", semestral: "✓" },
   { feature: "Todos os concursos", free: "—", monthly: "✓", semestral: "✓" },
   { feature: "Atualizações", free: "—", monthly: "✓", semestral: "✓" },
   { feature: "Suporte", free: "—", monthly: "—", semestral: "E-mail" },
+  { feature: "Garantia", free: "—", monthly: "—", semestral: "7 dias" },
 ];
 
 const FAQ_ITEMS = [
@@ -467,10 +474,12 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 function SectionHeading({
   eyebrow,
   title,
+  subtitle,
   className = "",
 }: {
   eyebrow: string;
   title: string;
+  subtitle?: string;
   className?: string;
 }) {
   return (
@@ -482,6 +491,11 @@ function SectionHeading({
       >
         {title}
       </h2>
+      {subtitle ? (
+        <p className="mx-auto mt-4 max-w-[520px] text-base leading-relaxed" style={{ color: LANDING.textSecondary }}>
+          {subtitle}
+        </p>
+      ) : null}
     </div>
   );
 }
@@ -792,107 +806,248 @@ function PlanComparisonCell({ value }: { value: string }) {
   );
 }
 
-function PlanComparisonTable({ compact = false }: { compact?: boolean }) {
-  const monthlyColStyle = {
-    background: "rgba(37,99,235,0.07)",
-    borderLeft: "2px solid rgba(37,99,235,0.25)",
-    borderRight: "2px solid rgba(37,99,235,0.25)",
-  } as const;
+const MONTHLY_COMPARISON_COL = {
+  background: "rgba(37,99,235,0.06)",
+  boxShadow: "inset 0 0 0 1px rgba(37,99,235,0.18)",
+} as const;
+
+function PlanComparisonTable({ embedded = false }: { embedded?: boolean }) {
+  const tableBody = (
+    <>
+      <div
+        className="grid border-b"
+        style={{
+          gridTemplateColumns: PLAN_COLUMN_GRID,
+          borderColor: LANDING.divider,
+        }}
+      >
+        <div className="hidden px-5 py-4 md:block" aria-hidden="true" />
+        <div className="flex items-end justify-center px-4 py-4 text-center md:px-5">
+          <span className="text-[11px] font-bold tracking-wide uppercase" style={{ color: LANDING.textSecondary }}>
+            Gratuito
+          </span>
+        </div>
+        <div
+          className="flex flex-col items-center justify-end px-4 py-4 text-center md:px-5"
+          style={MONTHLY_COMPARISON_COL}
+        >
+          <span
+            className="mb-1.5 inline-block rounded-[5px] px-2 py-0.5 text-[8px] font-bold tracking-wide text-white uppercase"
+            style={{ background: LANDING.primary }}
+          >
+            Mais escolhido
+          </span>
+          <span className="text-[11px] font-bold tracking-wide uppercase" style={{ color: LANDING.primary }}>
+            Mensal
+          </span>
+        </div>
+        <div className="flex items-end justify-center px-4 py-4 text-center md:px-5">
+          <span className="text-[11px] font-bold tracking-wide uppercase" style={{ color: LANDING.textSecondary }}>
+            Semestral
+          </span>
+        </div>
+      </div>
+
+      {PLAN_COMPARISON_ROWS.map((row, index) => (
+        <div
+          key={row.feature}
+          className="grid"
+          style={{
+            gridTemplateColumns: PLAN_COLUMN_GRID,
+            borderBottom: index < PLAN_COMPARISON_ROWS.length - 1 ? `1px solid ${LANDING.divider}` : undefined,
+          }}
+        >
+          <div
+            className="hidden items-center px-5 py-3.5 text-[12.5px] font-semibold md:flex"
+            style={{ color: LANDING.textPrimary }}
+          >
+            {row.feature}
+          </div>
+          <div className="flex items-center justify-center px-4 py-3.5 text-center md:px-5">
+            <PlanComparisonCell value={row.free} />
+          </div>
+          <div className="flex items-center justify-center px-4 py-3.5 text-center md:px-5" style={MONTHLY_COMPARISON_COL}>
+            <PlanComparisonCell value={row.monthly} />
+          </div>
+          <div className="flex items-center justify-center px-4 py-3.5 text-center md:px-5">
+            <PlanComparisonCell value={row.semestral} />
+          </div>
+        </div>
+      ))}
+    </>
+  );
+
+  if (embedded) {
+    return (
+      <>
+        <div className="hidden md:block">{tableBody}</div>
+        <PlanComparisonMobile />
+      </>
+    );
+  }
 
   return (
-    <div
-      className={`overflow-x-auto rounded-[14px] border ${compact ? "h-fit" : "mx-auto mt-12 max-w-[900px]"}`}
-      style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
-    >
-      <table className="w-full min-w-[560px] border-collapse text-center text-[12.5px]">
-        <thead>
-          <tr style={{ borderBottom: `1px solid ${LANDING.border}` }}>
-            <th
-              className="px-4 py-4 text-left text-[11px] font-bold tracking-wide uppercase"
-              style={{ color: LANDING.textSecondary }}
-            >
-              Recurso
-            </th>
-            <th className="px-3 py-4 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
-              Gratuito
-            </th>
-            <th className="relative px-3 py-4" style={monthlyColStyle}>
+    <>
+      <div
+        className="hidden w-full rounded-[16px] border md:block"
+        style={{ borderColor: LANDING.border, background: LANDING.surface }}
+      >
+        {tableBody}
+      </div>
+      <PlanComparisonMobile />
+    </>
+  );
+}
+
+function PlanComparisonMobile() {
+  return (
+    <div className="flex flex-col gap-4 md:hidden">
+      {[
+        { key: "free", label: "Gratuito", badge: null as string | null, getValue: (row: (typeof PLAN_COMPARISON_ROWS)[number]) => row.free },
+        {
+          key: "monthly",
+          label: "Mensal",
+          badge: "MAIS ESCOLHIDO",
+          getValue: (row: (typeof PLAN_COMPARISON_ROWS)[number]) => row.monthly,
+        },
+        {
+          key: "semestral",
+          label: "Semestral",
+          badge: "MELHOR ECONOMIA",
+          getValue: (row: (typeof PLAN_COMPARISON_ROWS)[number]) => row.semestral,
+        },
+      ].map((plan) => (
+        <div
+          key={plan.key}
+          className="rounded-[14px] border px-5 py-5"
+          style={{
+            borderColor: plan.key === "monthly" ? "rgba(37,99,235,0.25)" : LANDING.border,
+            background: plan.key === "monthly" ? "rgba(37,99,235,0.04)" : LANDING.surface,
+          }}
+        >
+          <div className="mb-4 flex items-center gap-2">
+            {plan.badge ? (
               <span
-                className="mb-1.5 inline-block rounded-[5px] px-2 py-0.5 text-[9px] font-bold tracking-wide text-white uppercase"
+                className="rounded-[5px] px-2 py-0.5 text-[9px] font-bold tracking-wide text-white uppercase"
                 style={{ background: LANDING.primary }}
               >
-                Mais escolhido
+                {plan.badge}
               </span>
-              <div className="text-[11px] font-bold" style={{ color: LANDING.primary }}>
-                Mensal
+            ) : null}
+            <span className="text-[14px] font-bold" style={{ color: LANDING.textPrimary }}>
+              {plan.label}
+            </span>
+          </div>
+          <div className="flex flex-col gap-2.5">
+            {PLAN_COMPARISON_ROWS.map((row) => (
+              <div key={row.feature} className="flex items-center justify-between gap-3 text-[13px]">
+                <span className="font-medium" style={{ color: LANDING.textSecondary }}>
+                  {row.feature}
+                </span>
+                <PlanComparisonCell value={plan.getValue(row)} />
               </div>
-            </th>
-            <th className="px-3 py-4 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
-              Semestral
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {PLAN_COMPARISON_ROWS.map((row, index) => (
-            <tr
-              key={row.feature}
-              style={
-                index < PLAN_COMPARISON_ROWS.length - 1
-                  ? { borderBottom: `1px solid ${LANDING.divider}` }
-                  : undefined
-              }
-            >
-              <td
-                className="px-4 py-3.5 text-left text-[12.5px] font-semibold"
-                style={{ color: LANDING.textPrimary }}
-              >
-                {row.feature}
-              </td>
-              <td className="px-3 py-3.5">
-                <PlanComparisonCell value={row.free} />
-              </td>
-              <td className="px-3 py-3.5" style={monthlyColStyle}>
-                <PlanComparisonCell value={row.monthly} />
-              </td>
-              <td className="px-3 py-3.5">
-                <PlanComparisonCell value={row.semestral} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
-function LandingPlanCard({ plan }: { plan: LandingPlan }) {
+function PlanGuaranteeBlock() {
+  return (
+    <div
+      className="mx-auto flex max-w-[640px] flex-col items-center gap-3 rounded-[12px] border px-6 py-5 text-center sm:flex-row sm:items-start sm:gap-4 sm:text-left"
+      style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+    >
+      <ShieldCheck
+        className="h-5 w-5 shrink-0"
+        style={{ color: LANDING.textSecondary }}
+        aria-hidden="true"
+      />
+      <div>
+        <p className="text-[14px] font-bold" style={{ color: LANDING.textPrimary }}>
+          Garantia incondicional de 7 dias
+        </p>
+        <p className="mt-1 text-[13px] leading-relaxed" style={{ color: LANDING.textSecondary }}>
+          Experimente o SimulaPro sem risco. Se não fizer sentido para você, devolvemos seu dinheiro.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function PlansPricingBlock() {
+  return (
+    <div
+      className="overflow-hidden rounded-[16px] border"
+      style={{ borderColor: LANDING.border, background: LANDING.surface }}
+    >
+      <div className="hidden md:grid" style={{ gridTemplateColumns: PLAN_COLUMN_GRID }}>
+        <div aria-hidden="true" />
+        {LANDING_PLANS.map((plan, index) => (
+          <LandingPlanCard
+            key={plan.id}
+            plan={plan}
+            connected
+            showDivider={index < LANDING_PLANS.length - 1}
+          />
+        ))}
+      </div>
+      <div className="flex flex-col gap-4 p-4 md:hidden">
+        {LANDING_PLANS.map((plan) => (
+          <LandingPlanCard key={plan.id} plan={plan} />
+        ))}
+      </div>
+
+      <div className="border-t" style={{ borderColor: LANDING.divider }}>
+        <PlanComparisonTable embedded />
+      </div>
+    </div>
+  );
+}
+
+function LandingPlanCard({
+  plan,
+  connected = false,
+  showDivider = false,
+}: {
+  plan: LandingPlan;
+  connected?: boolean;
+  showDivider?: boolean;
+}) {
   const highlighted = plan.highlighted === true;
   const isFree = plan.value === 0;
+  const isSemestral = plan.id === "plano-fundador";
   const badgeText = plan.badge ?? (isFree ? "GRÁTIS" : undefined);
-  const cardClass = highlighted ? LANDING_PLAN_CARD_HIGHLIGHTED : `${LANDING_PLAN_CARD} px-7 py-8`;
+  const cardClass = `${highlighted ? LANDING_PLAN_CARD_HIGHLIGHTED : LANDING_PLAN_CARD}${connected ? " !rounded-none" : ""}`;
 
   return (
     <div
       className={cardClass}
-      style={
-        highlighted
+      style={{
+        ...(highlighted
           ? {
               background: LANDING.textPrimary,
-              borderColor: LANDING.textPrimary,
-              boxShadow: "0 20px 48px rgba(10,22,51,0.28), 0 0 0 1px rgba(37,99,235,0.15)",
+              borderColor: connected ? "transparent" : LANDING.textPrimary,
+              boxShadow: connected ? "none" : "0 20px 48px rgba(10,22,51,0.28), 0 0 0 1px rgba(37,99,235,0.15)",
             }
           : isFree
             ? {
                 background: LANDING.surface,
-                borderColor: LANDING.primary,
-                boxShadow: "0 8px 24px rgba(37,99,235,0.10)",
+                borderColor: connected ? "transparent" : LANDING.primary,
+                boxShadow: connected ? "none" : "0 8px 24px rgba(37,99,235,0.10)",
               }
-            : { background: LANDING.surface, borderColor: LANDING.border }
-      }
+            : {
+                background: LANDING.surface,
+                borderColor: connected ? "transparent" : LANDING.border,
+              }),
+        ...(connected && showDivider ? { borderRight: `1px solid ${LANDING.divider}` } : {}),
+      }}
     >
       {badgeText ? (
         <div
-          className={`absolute left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white ${highlighted ? "-top-4 px-4 py-2 text-[12px] tracking-wide" : "-top-[13px]"}`}
+          className={`absolute left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white ${highlighted ? "-top-3.5 text-[11px] tracking-wide" : "-top-[13px]"}`}
           style={{
             background: LANDING.primary,
             boxShadow: highlighted ? "0 4px 12px rgba(37,99,235,0.45)" : undefined,
@@ -901,15 +1056,34 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
           {badgeText}
         </div>
       ) : null}
+
+      {/* Título */}
       <div
-        className="text-sm font-bold"
+        className="min-h-[20px] text-sm font-bold"
         style={{ color: highlighted ? "#7DA6F5" : LANDING.textSecondary }}
       >
         {plan.label.toUpperCase()}
       </div>
-      <div className="mt-1.5 flex items-baseline gap-1.5">
+
+      {/* Economia — semestral em destaque antes do preço */}
+      <div className="mt-3 min-h-[32px]">
+        {plan.savingsLabel ? (
+          <div
+            className="inline-block rounded-[6px] px-3 py-1.5 text-[12px] font-extrabold tracking-wide uppercase"
+            style={{
+              background: isSemestral ? "rgba(34,197,94,0.12)" : "rgba(37,99,235,0.1)",
+              color: isSemestral ? LANDING.success : LANDING.primary,
+            }}
+          >
+            {plan.savingsLabel}
+          </div>
+        ) : null}
+      </div>
+
+      {/* Preço */}
+      <div className="mt-2 flex min-h-[40px] items-baseline gap-1.5">
         <span
-          className="text-[32px] font-extrabold tracking-[-0.02em]"
+          className={`font-extrabold tracking-[-0.02em] ${isSemestral ? "text-[26px]" : "text-[32px]"}`}
           style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
         >
           R$ {plan.value.toFixed(2).replace(".", ",")}
@@ -925,28 +1099,34 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
           </span>
         ) : null}
       </div>
-      <p
-        className="mt-1.5 text-[12.5px]"
-        style={{
-          color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
-        }}
-      >
-        {plan.subtitle}
-      </p>
-      {plan.savingsLabel ? (
-        <div
-          className="mt-3 inline-block rounded-[6px] px-2.5 py-1 text-[11px] font-bold"
-          style={{ background: "rgba(37,99,235,0.1)", color: LANDING.primary }}
+
+      {/* Descrição + copy de upgrade */}
+      <div className="mt-2 min-h-[52px]">
+        <p
+          className="text-[12.5px] leading-snug"
+          style={{
+            color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
+          }}
         >
-          {plan.savingsLabel}
-        </div>
-      ) : null}
-      <div className="mt-6 mb-[26px] flex flex-col gap-2.5">
+          {plan.subtitle}
+        </p>
+        {plan.upgradeCopy ? (
+          <p
+            className="mt-1.5 text-[11.5px] leading-snug"
+            style={{ color: highlighted ? "rgba(255,255,255,0.45)" : LANDING.textSecondary }}
+          >
+            {plan.upgradeCopy}
+          </p>
+        ) : null}
+      </div>
+
+      {/* Benefícios — altura fixa para alinhar botões */}
+      <div className="mt-5 flex min-h-[132px] flex-1 flex-col gap-2.5">
         {plan.benefits.map((item) => (
           <div key={item} className="flex items-center gap-2">
             {PLAN_CHECK_ICON(highlighted)}
             <span
-              className="text-[13px] font-medium"
+              className="text-[13px] font-medium leading-snug"
               style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
             >
               {item}
@@ -954,14 +1134,18 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
           </div>
         ))}
       </div>
-      <Button
-        asChild
-        fullWidth
-        variant={highlighted || isFree ? "primary" : "outline"}
-        className={`${highlighted || isFree ? "" : "border-[#E3E8EF]"} transition-transform duration-150 hover:scale-[1.01]`}
-      >
-        <Link to="/auth">{plan.cta}</Link>
-      </Button>
+
+      {/* Botão — mesma linha em todos os cards */}
+      <div className="mt-auto pt-5">
+        <Button
+          asChild
+          fullWidth
+          variant={highlighted || isFree ? "primary" : "outline"}
+          className={`${highlighted || isFree ? "" : "border-[#E3E8EF]"} transition-transform duration-150 hover:scale-[1.01]`}
+        >
+          <Link to="/auth">{plan.cta}</Link>
+        </Button>
+      </div>
     </div>
   );
 }
@@ -1321,20 +1505,22 @@ function Landing() {
         {/* PLANOS */}
         <section
           id="planos"
-          className={`${LANDING_SECTION} px-6 pt-24 pb-24 sm:px-16 sm:pt-32 sm:pb-32`}
+          className={`${LANDING_SECTION} px-6 pt-24 pb-20 sm:px-16 sm:pt-32 sm:pb-24`}
           style={{ background: LANDING.background }}
         >
-          <SectionHeading eyebrow="PLANOS" title="Escolha o plano ideal para sua aprovação" />
-          <div className="mx-auto mt-16 grid max-w-[1200px] grid-cols-1 gap-12 xl:grid-cols-[1fr_340px] xl:items-start">
-            <div className="grid grid-cols-1 items-end gap-6 sm:grid-cols-3 sm:gap-5">
-              {LANDING_PLANS.map((plan) => (
-                <LandingPlanCard key={plan.id} plan={plan} />
-              ))}
-            </div>
-            <PlanComparisonTable compact />
+          <SectionHeading
+            eyebrow="PLANOS"
+            title="Escolha o plano ideal para sua aprovação"
+            subtitle="Compare os recursos, escolha com confiança e comece a estudar hoje mesmo."
+          />
+          <div className="mx-auto mt-16 max-w-[1200px]">
+            <PlansPricingBlock />
+          </div>
+          <div className="mx-auto mt-14 max-w-[1200px] sm:mt-16">
+            <PlanGuaranteeBlock />
           </div>
           <p
-            className="mx-auto mt-12 max-w-[720px] text-center text-[12.5px] leading-relaxed"
+            className="mx-auto mt-8 max-w-[720px] text-center text-[12px] leading-relaxed"
             style={{ color: LANDING.textSecondary }}
           >
             {PLANS_FOOTNOTE}
