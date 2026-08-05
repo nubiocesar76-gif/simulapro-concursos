@@ -807,9 +807,35 @@ function PlanComparisonCell({ value }: { value: string }) {
 }
 
 const MONTHLY_COMPARISON_COL = {
-  background: "rgba(37,99,235,0.06)",
-  boxShadow: "inset 0 0 0 1px rgba(37,99,235,0.18)",
+  background: "rgba(37,99,235,0.025)",
+  boxShadow: "inset 0 0 0 1px rgba(37,99,235,0.12)",
 } as const;
+
+function PlanSavingsHighlight({ label, highlighted }: { label: string; highlighted: boolean }) {
+  const amount = label.includes("R$") ? label.slice(label.indexOf("R$")).trim() : label;
+  return (
+    <div
+      className="w-full rounded-[8px] border px-3 py-2.5 text-center"
+      style={{
+        borderColor: highlighted ? "rgba(255,255,255,0.15)" : "rgba(34,197,94,0.28)",
+        background: highlighted ? "rgba(255,255,255,0.06)" : "rgba(34,197,94,0.08)",
+      }}
+    >
+      <div
+        className="text-[9px] font-bold tracking-[0.14em] uppercase"
+        style={{ color: highlighted ? "rgba(255,255,255,0.7)" : LANDING.success }}
+      >
+        ECONOMIZE
+      </div>
+      <div
+        className="mt-0.5 text-[16px] font-extrabold tracking-tight"
+        style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
+      >
+        {amount}
+      </div>
+    </div>
+  );
+}
 
 function PlanComparisonTable({ embedded = false }: { embedded?: boolean }) {
   const tableBody = (
@@ -821,18 +847,18 @@ function PlanComparisonTable({ embedded = false }: { embedded?: boolean }) {
           borderColor: LANDING.divider,
         }}
       >
-        <div className="hidden px-5 py-4 md:block" aria-hidden="true" />
-        <div className="flex items-end justify-center px-4 py-4 text-center md:px-5">
+        <div className="hidden px-6 py-5 md:block" aria-hidden="true" />
+        <div className="flex items-end justify-center px-5 py-5 text-center md:px-6">
           <span className="text-[11px] font-bold tracking-wide uppercase" style={{ color: LANDING.textSecondary }}>
             Gratuito
           </span>
         </div>
         <div
-          className="flex flex-col items-center justify-end px-4 py-4 text-center md:px-5"
+          className="flex flex-col items-center justify-end px-5 py-5 text-center md:px-6"
           style={MONTHLY_COMPARISON_COL}
         >
           <span
-            className="mb-1.5 inline-block rounded-[5px] px-2 py-0.5 text-[8px] font-bold tracking-wide text-white uppercase"
+            className="mb-2 inline-block rounded-[6px] px-3 py-1 text-[10px] font-bold tracking-wide text-white uppercase"
             style={{ background: LANDING.primary }}
           >
             Mais escolhido
@@ -841,7 +867,7 @@ function PlanComparisonTable({ embedded = false }: { embedded?: boolean }) {
             Mensal
           </span>
         </div>
-        <div className="flex items-end justify-center px-4 py-4 text-center md:px-5">
+        <div className="flex items-end justify-center px-5 py-5 text-center md:px-6">
           <span className="text-[11px] font-bold tracking-wide uppercase" style={{ color: LANDING.textSecondary }}>
             Semestral
           </span>
@@ -851,25 +877,26 @@ function PlanComparisonTable({ embedded = false }: { embedded?: boolean }) {
       {PLAN_COMPARISON_ROWS.map((row, index) => (
         <div
           key={row.feature}
-          className="grid"
+          className="landing-plan-row grid transition-colors duration-150"
           style={{
             gridTemplateColumns: PLAN_COLUMN_GRID,
             borderBottom: index < PLAN_COMPARISON_ROWS.length - 1 ? `1px solid ${LANDING.divider}` : undefined,
+            background: index % 2 === 1 ? "rgba(242,245,249,0.55)" : LANDING.surface,
           }}
         >
           <div
-            className="hidden items-center px-5 py-3.5 text-[12.5px] font-semibold md:flex"
+            className="hidden items-center px-6 py-[18px] text-[13px] font-semibold md:flex"
             style={{ color: LANDING.textPrimary }}
           >
             {row.feature}
           </div>
-          <div className="flex items-center justify-center px-4 py-3.5 text-center md:px-5">
+          <div className="flex items-center justify-center px-5 py-[18px] text-center md:px-6">
             <PlanComparisonCell value={row.free} />
           </div>
-          <div className="flex items-center justify-center px-4 py-3.5 text-center md:px-5" style={MONTHLY_COMPARISON_COL}>
+          <div className="flex items-center justify-center px-5 py-[18px] text-center md:px-6" style={MONTHLY_COMPARISON_COL}>
             <PlanComparisonCell value={row.monthly} />
           </div>
-          <div className="flex items-center justify-center px-4 py-3.5 text-center md:px-5">
+          <div className="flex items-center justify-center px-5 py-[18px] text-center md:px-6">
             <PlanComparisonCell value={row.semestral} />
           </div>
         </div>
@@ -901,7 +928,7 @@ function PlanComparisonTable({ embedded = false }: { embedded?: boolean }) {
 
 function PlanComparisonMobile() {
   return (
-    <div className="flex flex-col gap-4 md:hidden">
+    <div className="flex flex-col divide-y md:hidden" style={{ borderColor: LANDING.divider }}>
       {[
         { key: "free", label: "Gratuito", badge: null as string | null, getValue: (row: (typeof PLAN_COMPARISON_ROWS)[number]) => row.free },
         {
@@ -919,16 +946,16 @@ function PlanComparisonMobile() {
       ].map((plan) => (
         <div
           key={plan.key}
-          className="rounded-[14px] border px-5 py-5"
+          className="px-5 py-5"
           style={{
-            borderColor: plan.key === "monthly" ? "rgba(37,99,235,0.25)" : LANDING.border,
-            background: plan.key === "monthly" ? "rgba(37,99,235,0.04)" : LANDING.surface,
+            background: plan.key === "monthly" ? "rgba(37,99,235,0.025)" : LANDING.surface,
+            ...(plan.key === "monthly" ? MONTHLY_COMPARISON_COL : {}),
           }}
         >
           <div className="mb-4 flex items-center gap-2">
             {plan.badge ? (
               <span
-                className="rounded-[5px] px-2 py-0.5 text-[9px] font-bold tracking-wide text-white uppercase"
+                className="rounded-[6px] px-3 py-1 text-[10px] font-bold tracking-wide text-white uppercase"
                 style={{ background: LANDING.primary }}
               >
                 {plan.badge}
@@ -954,11 +981,11 @@ function PlanComparisonMobile() {
   );
 }
 
-function PlanGuaranteeBlock() {
+function PlanGuaranteeInline() {
   return (
     <div
-      className="mx-auto flex max-w-[640px] flex-col items-center gap-3 rounded-[12px] border px-6 py-5 text-center sm:flex-row sm:items-start sm:gap-4 sm:text-left"
-      style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
+      className="flex flex-col items-center gap-3 border-t px-6 py-6 text-center sm:flex-row sm:items-start sm:gap-4 sm:px-10 sm:text-left"
+      style={{ borderColor: LANDING.divider, background: LANDING.surfaceSubtle }}
     >
       <ShieldCheck
         className="h-5 w-5 shrink-0"
@@ -980,9 +1007,17 @@ function PlanGuaranteeBlock() {
 function PlansPricingBlock() {
   return (
     <div
-      className="overflow-hidden rounded-[16px] border"
+      className="overflow-hidden rounded-[20px] border shadow-[0_8px_32px_rgba(10,22,51,0.06)]"
       style={{ borderColor: LANDING.border, background: LANDING.surface }}
     >
+      <div className="border-b px-6 py-10 sm:px-10 sm:py-12" style={{ borderColor: LANDING.divider }}>
+        <SectionHeading
+          eyebrow="PLANOS"
+          title="Escolha o plano ideal para sua aprovação"
+          subtitle="Compare os recursos, escolha com confiança e comece a estudar hoje mesmo."
+        />
+      </div>
+
       <div className="hidden md:grid" style={{ gridTemplateColumns: PLAN_COLUMN_GRID }}>
         <div aria-hidden="true" />
         {LANDING_PLANS.map((plan, index) => (
@@ -1000,9 +1035,11 @@ function PlansPricingBlock() {
         ))}
       </div>
 
-      <div className="border-t" style={{ borderColor: LANDING.divider }}>
+      <div className="border-t" style={{ borderColor: LANDING.divider, background: LANDING.surface }}>
         <PlanComparisonTable embedded />
       </div>
+
+      <PlanGuaranteeInline />
     </div>
   );
 }
@@ -1018,7 +1055,6 @@ function LandingPlanCard({
 }) {
   const highlighted = plan.highlighted === true;
   const isFree = plan.value === 0;
-  const isSemestral = plan.id === "plano-fundador";
   const badgeText = plan.badge ?? (isFree ? "GRÁTIS" : undefined);
   const cardClass = `${highlighted ? LANDING_PLAN_CARD_HIGHLIGHTED : LANDING_PLAN_CARD}${connected ? " !rounded-none" : ""}`;
 
@@ -1043,47 +1079,43 @@ function LandingPlanCard({
                 borderColor: connected ? "transparent" : LANDING.border,
               }),
         ...(connected && showDivider ? { borderRight: `1px solid ${LANDING.divider}` } : {}),
+        ...(connected && highlighted ? { boxShadow: "inset 0 0 0 1px rgba(37,99,235,0.14)" } : {}),
       }}
     >
       {badgeText ? (
         <div
-          className={`absolute left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white ${highlighted ? "-top-3.5 text-[11px] tracking-wide" : "-top-[13px]"}`}
+          className={`absolute left-6 rounded-[7px] px-3.5 py-2 text-[13px] font-bold text-white md:left-7 ${highlighted ? "-top-4 tracking-wide" : "-top-4"}`}
           style={{
             background: LANDING.primary,
-            boxShadow: highlighted ? "0 4px 12px rgba(37,99,235,0.45)" : undefined,
+            boxShadow: highlighted ? "0 4px 14px rgba(37,99,235,0.4)" : "0 2px 8px rgba(37,99,235,0.25)",
           }}
         >
           {badgeText}
         </div>
       ) : null}
 
+      {/* Badge slot — altura reservada */}
+      <div className="h-1" aria-hidden="true" />
+
       {/* Título */}
       <div
-        className="min-h-[20px] text-sm font-bold"
+        className="min-h-[20px] pt-3 text-sm font-bold"
         style={{ color: highlighted ? "#7DA6F5" : LANDING.textSecondary }}
       >
         {plan.label.toUpperCase()}
       </div>
 
-      {/* Economia — semestral em destaque antes do preço */}
-      <div className="mt-3 min-h-[32px]">
+      {/* Economia */}
+      <div className="mt-2 min-h-[58px]">
         {plan.savingsLabel ? (
-          <div
-            className="inline-block rounded-[6px] px-3 py-1.5 text-[12px] font-extrabold tracking-wide uppercase"
-            style={{
-              background: isSemestral ? "rgba(34,197,94,0.12)" : "rgba(37,99,235,0.1)",
-              color: isSemestral ? LANDING.success : LANDING.primary,
-            }}
-          >
-            {plan.savingsLabel}
-          </div>
+          <PlanSavingsHighlight label={plan.savingsLabel} highlighted={highlighted} />
         ) : null}
       </div>
 
       {/* Preço */}
-      <div className="mt-2 flex min-h-[40px] items-baseline gap-1.5">
+      <div className="mt-2 flex min-h-[38px] items-baseline gap-1.5">
         <span
-          className={`font-extrabold tracking-[-0.02em] ${isSemestral ? "text-[26px]" : "text-[32px]"}`}
+          className="text-[30px] font-extrabold tracking-[-0.02em]"
           style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
         >
           R$ {plan.value.toFixed(2).replace(".", ",")}
@@ -1101,7 +1133,7 @@ function LandingPlanCard({
       </div>
 
       {/* Descrição + copy de upgrade */}
-      <div className="mt-2 min-h-[52px]">
+      <div className="mt-2 min-h-[44px]">
         <p
           className="text-[12.5px] leading-snug"
           style={{
@@ -1112,7 +1144,7 @@ function LandingPlanCard({
         </p>
         {plan.upgradeCopy ? (
           <p
-            className="mt-1.5 text-[11.5px] leading-snug"
+            className="mt-1 text-[11.5px] leading-snug"
             style={{ color: highlighted ? "rgba(255,255,255,0.45)" : LANDING.textSecondary }}
           >
             {plan.upgradeCopy}
@@ -1120,8 +1152,8 @@ function LandingPlanCard({
         ) : null}
       </div>
 
-      {/* Benefícios — altura fixa para alinhar botões */}
-      <div className="mt-5 flex min-h-[132px] flex-1 flex-col gap-2.5">
+      {/* Benefícios */}
+      <div className="mt-3 flex min-h-[118px] flex-1 flex-col gap-2">
         {plan.benefits.map((item) => (
           <div key={item} className="flex items-center gap-2">
             {PLAN_CHECK_ICON(highlighted)}
@@ -1135,11 +1167,12 @@ function LandingPlanCard({
         ))}
       </div>
 
-      {/* Botão — mesma linha em todos os cards */}
-      <div className="mt-auto pt-5">
+      {/* Botão */}
+      <div className="mt-auto pt-4">
         <Button
           asChild
           fullWidth
+          size="lg"
           variant={highlighted || isFree ? "primary" : "outline"}
           className={`${highlighted || isFree ? "" : "border-[#E3E8EF]"} transition-transform duration-150 hover:scale-[1.01]`}
         >
@@ -1207,7 +1240,7 @@ function Landing() {
         }
         .landing-session-progress { animation: landingSessionProgress 1.6s ease-out 0.5s forwards; width: 0; }
         .landing-answer-highlight { animation: landingAnswerPulse 2.4s ease-in-out 1.8s infinite; }
-        .landing-pulse-dot { animation: landingPulseDot 2s ease-in-out infinite; }
+        .landing-plan-row:hover { background: rgba(10,22,51,0.025) !important; }
         @media (prefers-reduced-motion: reduce) {
           .landing-fade-in, .landing-chart-line, .landing-chart-area,
           .landing-progress-bar, .landing-session-progress, .landing-answer-highlight,
@@ -1508,16 +1541,8 @@ function Landing() {
           className={`${LANDING_SECTION} px-6 pt-24 pb-20 sm:px-16 sm:pt-32 sm:pb-24`}
           style={{ background: LANDING.background }}
         >
-          <SectionHeading
-            eyebrow="PLANOS"
-            title="Escolha o plano ideal para sua aprovação"
-            subtitle="Compare os recursos, escolha com confiança e comece a estudar hoje mesmo."
-          />
-          <div className="mx-auto mt-16 max-w-[1200px]">
+          <div className="mx-auto max-w-[1200px]">
             <PlansPricingBlock />
-          </div>
-          <div className="mx-auto mt-14 max-w-[1200px] sm:mt-16">
-            <PlanGuaranteeBlock />
           </div>
           <p
             className="mx-auto mt-8 max-w-[720px] text-center text-[12px] leading-relaxed"
