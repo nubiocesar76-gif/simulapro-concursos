@@ -1,5 +1,6 @@
 import * as React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
 import {
   ArrowRight,
   BarChart3,
@@ -18,37 +19,42 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Button, Logo as BrandLogo } from "@/components/design-system";
-import { COMMERCIAL_PLANS } from "@/config/commercial-plans";
+import {
+  buildLandingStatsDisplay,
+  FALLBACK_LANDING_PLATFORM_STATS,
+  getLandingPlatformStats,
+  PROVA_SOCIAL_STAT_LABELS,
+} from "@/lib/landing-platform-stats.functions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SimulaPro — Questões oficiais de Enfermagem para concursos públicos" },
+      { title: "SimulaPro — Plataforma de questões para concursos públicos" },
       {
         name: "description",
         content:
-          "Treine para concursos de Enfermagem com questões oficiais organizadas por banca, disciplina e assunto. Study Builder, resultados por disciplina e Central de Revisão em um único lugar.",
+          "Milhares de questões organizadas por banca, disciplina e assunto, simulados completos e estatísticas inteligentes. Assine a plataforma e escolha o concurso que deseja estudar.",
       },
       {
         property: "og:title",
-        content: "SimulaPro — Questões oficiais de Enfermagem para concursos públicos",
+        content: "SimulaPro — Plataforma de questões para concursos públicos",
       },
       {
         property: "og:description",
         content:
-          "Organização, produtividade e revisão inteligente para quem estuda Enfermagem com o tempo contado.",
+          "Estude exatamente como a banca cobra. Questões oficiais, simulados e diagnóstico de desempenho em uma única plataforma.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "SimulaPro — Questões oficiais de Enfermagem para concursos públicos",
+        content: "SimulaPro — Plataforma de questões para concursos públicos",
       },
       {
         name: "twitter:description",
         content:
-          "Treine com questões oficiais organizadas por banca, disciplina e assunto. Sem cobrança automática.",
+          "Questões oficiais, simulados completos e estatísticas por disciplina. Acesso a todos os concursos disponíveis com uma única assinatura.",
       },
     ],
     links: [
@@ -92,20 +98,6 @@ const NAV_LINKS = [
   { href: "#faq", label: "FAQ" },
 ];
 
-/**
- * Estatísticas — números reais, conferidos diretamente no banco nesta
- * sprint (nenhum valor de exemplo do Claude Design foi mantido aqui: o
- * arquivo original mostrava "120.000+ Questões / 98% Satisfação", que não
- * correspondem ao Acervo real e não podiam ser reproduzidos como se
- * fossem — ver relatório da entrega).
- */
-const STATS = [
-  { value: "1.100+", label: "Questões" },
-  { value: "22", label: "Bancas" },
-  { value: "30", label: "Disciplinas" },
-  { value: "100%", label: "Oficiais" },
-];
-
 const HOW_IT_WORKS: Array<{ icon: LucideIcon; title: string; description: string }> = [
   {
     icon: UserPlus,
@@ -114,13 +106,15 @@ const HOW_IT_WORKS: Array<{ icon: LucideIcon; title: string; description: string
   },
   {
     icon: ShieldCheck,
-    title: "Plano",
-    description: "Escolha o Plano Fundador e conclua o pagamento com segurança.",
+    title: "Assinatura",
+    description:
+      "Assine a plataforma com acesso completo. Um único plano — todos os concursos disponíveis.",
   },
   {
     icon: BookOpen,
-    title: "Resolver questões",
-    description: "Configure uma sessão por banca, disciplina, assunto ou modo de estudo.",
+    title: "Escolha o concurso",
+    description:
+      "Após o login, selecione o concurso que deseja estudar entre os disponíveis na plataforma.",
   },
   {
     icon: BarChart3,
@@ -155,7 +149,7 @@ const FEATURES: Array<{ icon: LucideIcon; title: string; description: string }> 
   {
     icon: History,
     title: "Histórico",
-    description: "Todas as suas sessões, com filtros por curso, modo, período e status.",
+    description: "Todas as suas sessões, com filtros por concurso, modo, período e status.",
   },
   {
     icon: BookMarked,
@@ -165,7 +159,8 @@ const FEATURES: Array<{ icon: LucideIcon; title: string; description: string }> 
   {
     icon: Filter,
     title: "Filtros por banca, disciplina e assunto",
-    description: "Refine o Acervo pela taxonomia oficial, sem perder tempo com o que não importa.",
+    description:
+      "Refine o conteúdo pela taxonomia oficial, sem perder tempo com o que não importa.",
   },
 ];
 
@@ -173,7 +168,7 @@ const DIFFERENTIATORS = [
   {
     title: "Banca real, não genérica",
     description:
-      "Questões filtradas exatamente pelo estilo de cobrança de cada banca organizadora de Enfermagem.",
+      "Questões filtradas pelo estilo de cobrança de cada banca organizadora — como cai na prova.",
   },
   {
     title: "Evolução mensurável",
@@ -186,9 +181,9 @@ const DIFFERENTIATORS = [
       "Interface pensada para sessões longas de estudo, sem ruído visual nem gamificação.",
   },
   {
-    title: "Acervo em produção contínua",
+    title: "Plataforma em expansão contínua",
     description:
-      "Novas provas passam por classificação e revisão antes de entrar no banco de questões.",
+      "Novos concursos entram na plataforma sem novo plano. Hoje: Enfermeiro e Técnico em Enfermagem — exemplos dos concursos já disponíveis.",
   },
 ];
 
@@ -196,7 +191,7 @@ const BENEFITS: Array<{ icon: LucideIcon; title: string; description: string }> 
   {
     icon: Target,
     title: "Aprenda como a banca cobra",
-    description: "Questões organizadas pelo padrão real de cada concurso de Enfermagem.",
+    description: "Questões organizadas pelo padrão real de cada banca e concurso.",
   },
   {
     icon: TrendingUp,
@@ -215,21 +210,107 @@ const BENEFITS: Array<{ icon: LucideIcon; title: string; description: string }> 
   },
 ];
 
+const DEMO_BENEFITS = [
+  "Experimente gratuitamente antes de assinar",
+  "Conheça exatamente como funciona o SimulaPro",
+  "Responda questões reais de demonstração",
+  "Veja simulados e estatísticas em ação",
+  "Sem cartão de crédito",
+  "Sem compromisso",
+];
+
+const PLANS_FOOTNOTE =
+  "Sua assinatura dá acesso a todos os concursos disponíveis durante o período contratado. Novos concursos serão adicionados continuamente sem necessidade de contratar um novo plano.";
+
+type LandingPlan = {
+  id: string;
+  label: string;
+  subtitle: string;
+  value: number;
+  periodLabel?: string;
+  benefits: string[];
+  cta: string;
+  highlighted?: boolean;
+};
+
+const LANDING_PLANS: LandingPlan[] = [
+  {
+    id: "demonstracao",
+    label: "Demonstração Gratuita",
+    subtitle: "Experimente gratuitamente antes de assinar. Conheça exatamente como funciona o SimulaPro.",
+    value: 0,
+    benefits: [
+      "Responda questões de demonstração",
+      "Faça um mini simulado",
+      "Conheça o painel de desempenho",
+      "Veja estatísticas básicas",
+      "Sem cartão de crédito",
+      "Acesso imediato",
+    ],
+    cta: "Experimentar Gratuitamente",
+  },
+  {
+    id: "plano-mensal",
+    label: "Plano Mensal",
+    subtitle: "Ideal para quem deseja começar agora.",
+    value: 39.9,
+    periodLabel: "mês",
+    benefits: [
+      "Acesso completo à plataforma",
+      "Todos os concursos disponíveis",
+      "Questões ilimitadas",
+      "Simulados completos",
+      "Estatísticas avançadas",
+      "Sem fidelidade",
+      "Cancele quando quiser",
+    ],
+    cta: "Assinar Plano Mensal",
+  },
+  {
+    id: "plano-fundador",
+    label: "Plano Fundador",
+    subtitle: "Economize e acompanhe toda a evolução da plataforma.",
+    value: 149.9,
+    periodLabel: "6 meses",
+    highlighted: true,
+    benefits: [
+      "Tudo do Plano Mensal",
+      "Acesso por 6 meses",
+      "Todos os concursos atuais",
+      "Novos concursos adicionados durante a assinatura",
+      "Garantia de 7 dias",
+      "Suporte por e-mail",
+      "Valor promocional da primeira turma",
+    ],
+    cta: "Quero ser Fundador",
+  },
+];
+
 const FAQ_ITEMS = [
+  {
+    question: "O plano dá acesso a todos os concursos?",
+    answer:
+      "Sim. Durante sua assinatura você poderá acessar todos os concursos disponíveis na plataforma. Conforme novos concursos forem adicionados, eles também ficarão disponíveis para os assinantes, respeitando as regras comerciais vigentes.",
+  },
+  {
+    question: "Preciso contratar um plano para cada concurso?",
+    answer:
+      "Não. Você assina a plataforma SimulaPro uma única vez e, após o login, escolhe qual concurso deseja estudar. Enfermeiro e Técnico em Enfermagem são concursos já disponíveis hoje — não planos separados.",
+  },
   {
     question: "Vale a pena?",
     answer:
-      "Se o que você precisa é treinar por questões oficiais de Enfermagem, organizadas por banca, disciplina e assunto, sim — é exatamente o problema que o SimulaPro resolve. Se você precisa de um curso completo com vídeoaulas, o SimulaPro não é esse produto, e preferimos dizer isso agora a deixar você descobrir depois de pagar.",
+      "Se o que você precisa é treinar por questões oficiais, organizadas por banca, disciplina e assunto, com simulados e estatísticas — sim. O SimulaPro é uma plataforma de questões, não um curso com vídeoaulas. Preferimos deixar isso claro antes de você assinar.",
   },
   {
     question: "É atualizado?",
     answer:
-      "O Acervo está em produção contínua. Cada nova prova passa por um processo de classificação e revisão antes de entrar no banco — não prometemos uma quantidade fixa de questões novas por mês, prometemos que o que entra, entra classificado e revisado.",
+      "A plataforma está em produção contínua. Cada nova prova passa por classificação e revisão antes de entrar no banco — não prometemos uma quantidade fixa de questões novas por mês, prometemos que o que entra, entra classificado e revisado.",
   },
   {
     question: "Como funciona?",
     answer:
-      "Você garante acesso ao Acervo Enfermeiro, escolhe o modo de sessão (Estudo, Prova, Revisão, Favoritos ou Apenas Erradas), resolve questões filtradas por disciplina, assunto ou banca, e acompanha seu desempenho por disciplina em tempo real.",
+      "Você cria sua conta, assina a plataforma e escolhe o concurso que deseja estudar. Depois, configure sessões por banca, disciplina ou assunto, resolva questões e simulados, e acompanhe seu desempenho por disciplina em tempo real.",
   },
   {
     question: "Tem assinatura automática?",
@@ -244,7 +325,7 @@ const FAQ_ITEMS = [
   {
     question: "As questões são oficiais?",
     answer:
-      "Sim. Todas as questões do Acervo são de provas oficiais aplicadas por bancas organizadoras reais (hoje, IBFC, FGV, Instituto AOCP, VUNESP, Instituto Consulplan, COSEAC, FUNDATEC e UFPR/NC), com classificação por disciplina, assunto, banca e ano.",
+      "Sim. As questões são de provas oficiais aplicadas por bancas organizadoras reais (IBFC, FGV, Cebraspe, Instituto AOCP, VUNESP, Instituto Consulplan, COSEAC, FUNDATEC, UFPR/NC e outras), com classificação por disciplina, assunto, banca e ano.",
   },
 ];
 
@@ -256,9 +337,9 @@ function jsonLd(planValue?: number, planMonths?: number) {
       { "@type": "WebSite", name: "SimulaPro", url: "https://simulapro.com.br" },
       {
         "@type": "Product",
-        name: "SimulaPro — Plano Fundador",
+        name: "SimulaPro — Plataforma de questões para concursos públicos",
         description:
-          "Acesso ao Acervo de questões oficiais de Enfermagem para concursos públicos, organizado por banca, disciplina e assunto.",
+          "Acesso à plataforma SimulaPro com questões oficiais organizadas por banca, disciplina e assunto, simulados completos e estatísticas de desempenho.",
         brand: { "@type": "Brand", name: "SimulaPro" },
         ...(planValue
           ? {
@@ -475,7 +556,7 @@ function MiniResultsPreview() {
         ))}
       </div>
       <div className="mt-2.5 space-y-1.5">
-        {["Administração em Enfermagem", "Saúde Coletiva"].map((name, index) => (
+        {["Legislação do SUS", "Ética Profissional"].map((name, index) => (
           <div key={name} className="flex items-center justify-between text-[10.5px]">
             <span className="truncate" style={{ color: LANDING.textSecondary }}>
               {name}
@@ -539,20 +620,118 @@ function FaqAccordion({ items }: { items: typeof FAQ_ITEMS }) {
 /* Página                                                               */
 /* ------------------------------------------------------------------ */
 
-const PLAN_POSITION_LABELS: Record<string, string> = {
-  enfermeiro: "Enfermeiro",
-  "tecnico-em-enfermagem": "Técnico de Enfermagem",
-};
+const PLAN_CHECK_ICON = (highlighted: boolean) => (
+  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+    <path
+      d="M2.5 6.5L5 9L10.5 3.5"
+      stroke={highlighted ? LANDING.primary : LANDING.success}
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
-function planAcervoLabel(positionSlugs: string[]): string {
-  const label = PLAN_POSITION_LABELS[positionSlugs[0]];
-  return `Acesso completo ao Acervo ${label ?? "Enfermagem"}`;
+function LandingPlanCard({ plan }: { plan: LandingPlan }) {
+  const highlighted = plan.highlighted === true;
+  const isFree = plan.value === 0;
+
+  return (
+    <div
+      className="relative rounded-[16px] border px-7 py-8"
+      style={
+        highlighted
+          ? { background: LANDING.textPrimary, borderColor: LANDING.textPrimary }
+          : isFree
+            ? {
+                background: LANDING.surface,
+                borderColor: LANDING.primary,
+                boxShadow: "0 8px 24px rgba(37,99,235,0.10)",
+              }
+            : { background: LANDING.surface, borderColor: LANDING.border }
+      }
+    >
+      {highlighted ? (
+        <div
+          className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
+          style={{ background: LANDING.primary }}
+        >
+          MAIS POPULAR
+        </div>
+      ) : null}
+      {!highlighted && isFree ? (
+        <div
+          className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
+          style={{ background: LANDING.primary }}
+        >
+          GRÁTIS
+        </div>
+      ) : null}
+      <div
+        className="text-sm font-bold"
+        style={{ color: highlighted ? "#7DA6F5" : LANDING.textSecondary }}
+      >
+        {plan.label.toUpperCase()}
+      </div>
+      <div className="mt-1.5 flex items-baseline gap-1.5">
+        <span
+          className="text-[32px] font-extrabold tracking-[-0.02em]"
+          style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
+        >
+          R$ {plan.value.toFixed(2).replace(".", ",")}
+        </span>
+        {plan.periodLabel ? (
+          <span
+            className="text-[13px] font-semibold"
+            style={{
+              color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
+            }}
+          >
+            / {plan.periodLabel}
+          </span>
+        ) : null}
+      </div>
+      <p
+        className="mt-1.5 text-[12.5px]"
+        style={{
+          color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
+        }}
+      >
+        {plan.subtitle}
+      </p>
+      <div className="mt-6 mb-[26px] flex flex-col gap-2.5">
+        {plan.benefits.map((item) => (
+          <div key={item} className="flex items-center gap-2">
+            {PLAN_CHECK_ICON(highlighted)}
+            <span
+              className="text-[13px] font-medium"
+              style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
+            >
+              {item}
+            </span>
+          </div>
+        ))}
+      </div>
+      <Button
+        asChild
+        fullWidth
+        variant={highlighted || isFree ? "primary" : "outline"}
+        className={highlighted || isFree ? undefined : "border-[#E3E8EF]"}
+      >
+        <Link to="/auth">{plan.cta}</Link>
+      </Button>
+    </div>
+  );
 }
 
 function Landing() {
-  const plan = COMMERCIAL_PLANS.find((p) => p.id === "plano-fundador") ?? COMMERCIAL_PLANS[0];
-  const otherPlans = COMMERCIAL_PLANS.filter((p) => p.id !== plan?.id);
-  const allPlans = plan ? [plan, ...otherPlans] : COMMERCIAL_PLANS;
+  const founderPlan = LANDING_PLANS.find((p) => p.id === "plano-fundador");
+  const { data: platformStats } = useQuery({
+    queryKey: ["landing-platform-stats"],
+    queryFn: () => getLandingPlatformStats(),
+    staleTime: 5 * 60 * 1000,
+  });
+  const stats = buildLandingStatsDisplay(platformStats ?? FALLBACK_LANDING_PLATFORM_STATS);
 
   return (
     <div
@@ -562,7 +741,9 @@ function Landing() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd(plan?.value, plan?.accessDurationMonths)),
+          __html: JSON.stringify(
+            jsonLd(founderPlan?.value, founderPlan?.periodLabel === "6 meses" ? 6 : undefined),
+          ),
         }}
       />
 
@@ -606,41 +787,41 @@ function Landing() {
         >
           <div className="mx-auto flex max-w-[1312px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
             <div className="max-w-[480px] text-center lg:flex-none lg:text-left">
-              <Eyebrow>PLATAFORMA PARA APROVAÇÃO EM ENFERMAGEM</Eyebrow>
+              <Eyebrow>PLATAFORMA DE CONCURSOS PÚBLICOS</Eyebrow>
               <h1
                 className="mt-4 text-[32px] font-extrabold leading-[1.14] tracking-[-0.02em] sm:text-[38px] lg:text-[44px]"
                 style={{ color: LANDING.textPrimary }}
               >
-                Estude Enfermagem por questões oficiais, organizadas do seu jeito.
+                Passe no seu concurso estudando exatamente como a banca cobra.
               </h1>
               <p
                 className="mx-auto mt-5 max-w-[440px] text-base leading-relaxed lg:mx-0"
                 style={{ color: LANDING.textSecondary }}
               >
-                Questões reais de bancas organizadoras, filtradas por disciplina e assunto, com
-                acompanhamento de evolução para você saber exatamente onde estudar primeiro.
+                Milhares de questões organizadas por banca, disciplina e assunto, simulados
+                completos, estatísticas inteligentes e atualização constante do acervo.
               </p>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
                 <Button asChild size="lg">
                   <Link to="/auth">
-                    Começar agora
+                    Começar gratuitamente
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="#como-funciona">
+                  <a href="#demonstracao">
                     <Play className="h-3 w-3" aria-hidden="true" fill="currentColor" />
-                    Ver como funciona
+                    Ver Demonstração
                   </a>
                 </Button>
               </div>
               <div className="mt-10 flex items-center justify-center gap-0 overflow-x-auto lg:justify-start">
-                {STATS.map((stat, index) => (
+                {stats.map((stat, index) => (
                   <div
                     key={stat.label}
                     className="px-4 first:pl-0 sm:px-6"
                     style={
-                      index < STATS.length - 1
+                      index < stats.length - 1
                         ? { borderRight: `1px solid ${LANDING.border}` }
                         : undefined
                     }
@@ -694,12 +875,12 @@ function Landing() {
           style={{ background: LANDING.textPrimary }}
         >
           <div className="flex flex-wrap items-center justify-center gap-y-4">
-            {STATS.map((stat, index) => (
+            {stats.map((stat, index) => (
               <div
                 key={stat.label}
                 className="px-6 text-center sm:px-11"
                 style={
-                  index < STATS.length - 1
+                  index < stats.length - 1
                     ? { borderRight: "1px solid rgba(255,255,255,0.1)" }
                     : undefined
                 }
@@ -711,13 +892,7 @@ function Landing() {
                   className="mt-1 text-xs font-semibold"
                   style={{ color: "rgba(255,255,255,0.55)" }}
                 >
-                  {stat.label === "Questões"
-                    ? "Questões organizadas"
-                    : stat.label === "Bancas"
-                      ? "Bancas cobertas"
-                      : stat.label === "Disciplinas"
-                        ? "Disciplinas mapeadas"
-                        : "Questões oficiais"}
+                  {PROVA_SOCIAL_STAT_LABELS[stat.label] ?? stat.label}
                 </div>
               </div>
             ))}
@@ -726,7 +901,7 @@ function Landing() {
             className="max-w-xs text-center text-[13px] font-semibold lg:ml-11 lg:max-w-none lg:pl-0 lg:text-left"
             style={{ color: "rgba(255,255,255,0.55)" }}
           >
-            Acervo em produção contínua, com classificação e revisão a cada nova prova.
+            Plataforma em expansão contínua — novos concursos entram sem novo plano.
           </div>
         </section>
 
@@ -917,112 +1092,66 @@ function Landing() {
           </div>
         </section>
 
-        {/* PLANOS — dados reais de @/config/commercial-plans, layout do Claude Design */}
+        {/* DEMONSTRAÇÃO GRATUITA — antes dos planos */}
+        <section
+          id="demonstracao"
+          className="px-6 pb-16 sm:px-16 sm:pb-24"
+          style={{ background: LANDING.background }}
+        >
+          <div className="mx-auto max-w-[760px] text-center">
+            <Eyebrow>DEMONSTRAÇÃO</Eyebrow>
+            <h2
+              className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
+              style={{ color: LANDING.textPrimary }}
+            >
+              Experimente gratuitamente
+            </h2>
+            <p
+              className="mx-auto mt-4 max-w-[560px] text-base leading-relaxed"
+              style={{ color: LANDING.textSecondary }}
+            >
+              Experimente gratuitamente antes de assinar. Conheça exatamente como funciona o
+              SimulaPro — sem cartão de crédito e sem compromisso.
+            </p>
+            <ul className="mx-auto mt-8 flex max-w-[480px] flex-col gap-2.5 text-left">
+              {DEMO_BENEFITS.map((item) => (
+                <li key={item} className="flex items-center gap-2">
+                  {PLAN_CHECK_ICON(false)}
+                  <span className="text-[13px] font-medium" style={{ color: LANDING.textPrimary }}>
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg">
+                <Link to="/auth">
+                  Experimentar Gratuitamente
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* PLANOS — três opções escaláveis (demonstração + mensal + fundador) */}
         <section
           id="planos"
           className="px-6 pt-16 pb-16 sm:px-16 sm:pt-24 sm:pb-24"
-          style={{ background: LANDING.background }}
+          style={{ background: LANDING.surface }}
         >
           <SectionHeading eyebrow="PLANOS" title="Escolha como quer se preparar" />
-          <div
-            className={`mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-5 ${
-              allPlans.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
-            }`}
-          >
-            {allPlans.map((p, index) => {
-              const highlighted = index === 0;
-              return (
-                <div
-                  key={p.id}
-                  className="relative rounded-[16px] border px-7 py-8"
-                  style={
-                    highlighted
-                      ? { background: LANDING.textPrimary, borderColor: LANDING.textPrimary }
-                      : { background: LANDING.surface, borderColor: LANDING.border }
-                  }
-                >
-                  {highlighted ? (
-                    <div
-                      className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
-                      style={{ background: LANDING.primary }}
-                    >
-                      MAIS POPULAR
-                    </div>
-                  ) : null}
-                  <div
-                    className="text-sm font-bold"
-                    style={{ color: highlighted ? "#7DA6F5" : LANDING.textSecondary }}
-                  >
-                    {p.label.toUpperCase()}
-                  </div>
-                  <div className="mt-1.5 flex items-baseline gap-1.5">
-                    <span
-                      className="text-[32px] font-extrabold tracking-[-0.02em]"
-                      style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
-                    >
-                      R$ {p.value.toFixed(2).replace(".", ",")}
-                    </span>
-                    <span
-                      className="text-[13px] font-semibold"
-                      style={{
-                        color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
-                      }}
-                    >
-                      / {p.accessDurationMonths} {p.accessDurationMonths === 1 ? "mês" : "meses"}
-                    </span>
-                  </div>
-                  <p
-                    className="mt-1.5 text-[12.5px]"
-                    style={{
-                      color: highlighted ? "rgba(255,255,255,0.55)" : LANDING.textSecondary,
-                    }}
-                  >
-                    {p.description}
-                  </p>
-                  <div className="mt-6 mb-[26px] flex flex-col gap-2.5">
-                    {[
-                      planAcervoLabel(p.positionSlugs),
-                      "Sem cobrança automática ao final do ciclo",
-                      "Garantia incondicional de 7 dias",
-                      "Suporte por e-mail",
-                    ].map((item) => (
-                      <div key={item} className="flex items-center gap-2">
-                        <svg
-                          width="13"
-                          height="13"
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M2.5 6.5L5 9L10.5 3.5"
-                            stroke={highlighted ? LANDING.primary : LANDING.success}
-                            strokeWidth="1.6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <span
-                          className="text-[13px] font-medium"
-                          style={{ color: highlighted ? "#fff" : LANDING.textPrimary }}
-                        >
-                          {item}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button
-                    asChild
-                    fullWidth
-                    variant={highlighted ? "primary" : "outline"}
-                    className={highlighted ? undefined : "border-[#E3E8EF]"}
-                  >
-                    <Link to="/auth">Assinar</Link>
-                  </Button>
-                </div>
-              );
-            })}
+          <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-5 sm:grid-cols-3">
+            {LANDING_PLANS.map((plan) => (
+              <LandingPlanCard key={plan.id} plan={plan} />
+            ))}
           </div>
+          <p
+            className="mx-auto mt-8 max-w-[720px] text-center text-[12.5px] leading-relaxed"
+            style={{ color: LANDING.textSecondary }}
+          >
+            {PLANS_FOOTNOTE}
+          </p>
         </section>
 
         {/* FAQ */}
@@ -1046,15 +1175,16 @@ function Landing() {
             style={{ background: LANDING.textPrimary }}
           >
             <h2 className="text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-[32px]">
-              O Acervo Enfermeiro está organizado. As vagas do Plano Fundador não são ilimitadas.
+              Comece hoje sua preparação
             </h2>
             <p className="mt-3.5 text-[15px]" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Garanta acesso agora, com garantia de 7 dias e sem assinatura automática.
+              Estude utilizando uma plataforma criada para quem deseja aprovação em concursos
+              públicos. Experimente gratuitamente ou assine com garantia de 7 dias.
             </p>
             <div className="mt-8 flex justify-center">
               <Button asChild size="lg">
                 <Link to="/auth">
-                  Começar agora
+                  Começar gratuitamente
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </Button>

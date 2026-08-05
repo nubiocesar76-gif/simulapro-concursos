@@ -9,7 +9,11 @@ import {
   buildCustomerExternalReference,
   buildExternalReference,
 } from "@/integrations/asaas/reference.server";
-import { COMMERCIAL_PLANS, findCommercialPlan } from "@/config/commercial-plans";
+import {
+  COMMERCIAL_PLANS,
+  findCommercialPlan,
+  getPlanDistributionId,
+} from "@/config/commercial-plans";
 
 export type AsaasDisplayStatus =
   "ATIVA" | "AGUARDANDO_PAGAMENTO" | "CANCELADA" | "EM_ATRASO" | "NAO_ENCONTRADA";
@@ -28,7 +32,11 @@ async function lookupAsaasLiveStatus(
   // O externalReference agora inclui o planId (Sprint P0.5A), e a assinatura local
   // não guarda qual plano foi comprado — por isso tentamos cada plano comercial que
   // aponta para esta distribuição até encontrar a assinatura correspondente no Asaas.
-  const candidatePlans = COMMERCIAL_PLANS.filter((plan) => plan.distributionId === distributionId);
+  const candidatePlans = COMMERCIAL_PLANS.filter(
+    (plan) =>
+      plan.distributionId === distributionId ||
+      Object.values(plan.distributionByPosition).includes(distributionId),
+  );
 
   for (const plan of candidatePlans) {
     const ref = buildExternalReference(userId, distributionId, plan.id);
@@ -93,12 +101,16 @@ export const getAsaasLiveStatus = createServerFn({ method: "GET" })
 
 export const iniciarCheckout = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
-  .validator((data: { planId: string; cpfCnpj: string }) => data)
+  .validator((data: { planId: string; cpfCnpj: string; positionSlug: string }) => data)
   .handler(async ({ data, context }) => {
     const plan = findCommercialPlan(data.planId);
     if (!plan) {
       throw new Error("Plano não encontrado.");
     }
+    if (!plan.positionSlugs.includes(data.positionSlug)) {
+      throw new Error("Plano não disponível para este cargo.");
+    }
+    const distributionId = getPlanDistributionId(plan, data.positionSlug);
 
     const cpfCnpj = data.cpfCnpj.replace(/\D/g, "");
     if (cpfCnpj.length < 11) {
@@ -128,7 +140,7 @@ export const iniciarCheckout = createServerFn({ method: "POST" })
       });
     }
 
-    const subscriptionRef = buildExternalReference(context.userId, plan.distributionId, plan.id);
+    const subscriptionRef = buildExternalReference(context.userId, distributionId, plan.id);
 
     // Quem decide se o usuário já tem acesso é o banco local, não o Asaas (Bug G4) —
     // ver `isLocalSubscriptionCurrentlyActive` acima. `buscarAssinaturaPorExternalReference`
@@ -138,7 +150,7 @@ export const iniciarCheckout = createServerFn({ method: "POST" })
       .from("subscriptions")
       .select("starts_at, expires_at")
       .eq("user_id", context.userId)
-      .eq("distribution_id", plan.distributionId)
+      .eq("distribution_id", distributionId)
       .eq("status", "ACTIVE")
       .maybeSingle();
     if (localSubscriptionError) throw localSubscriptionError;

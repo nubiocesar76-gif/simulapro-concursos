@@ -5,7 +5,7 @@
 
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
-import { COMMERCIAL_PLANS } from "@/config/commercial-plans";
+import { getAllCommercialDistributionIds } from "@/config/commercial-plans";
 import { getFreePlanDistributionId } from "@/config/free-plan";
 
 // Mesmo critério de vigência já usado em study-session.ts, study-engine.ts e
@@ -26,7 +26,7 @@ export const iniciarPlanoFree = createServerFn({ method: "POST" })
       throw new Error("Plano Free não disponível para este cargo.");
     }
 
-    const paidDistributionIds = [...new Set(COMMERCIAL_PLANS.map((plan) => plan.distributionId))];
+    const paidDistributionIds = getAllCommercialDistributionIds();
 
     // 1. Já existe assinatura PAGA ativa? Plano Free não fica disponível.
     if (paidDistributionIds.length > 0) {

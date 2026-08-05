@@ -131,7 +131,10 @@ export function SubscriptionOnboardingFlow() {
   }
 
   const checkout = useMutation({
-    mutationFn: (planId: string) => iniciarCheckout({ data: { planId, cpfCnpj } }),
+    mutationFn: (planId: string) =>
+      iniciarCheckout({
+        data: { planId, cpfCnpj, positionSlug: selectedPosition!.slug },
+      }),
     onSuccess: (result) => {
       window.location.href = result.redirectUrl;
     },
@@ -556,7 +559,7 @@ function PlanCatalog({
             Escolha seu plano
           </h2>
           <p className="text-sm text-[#64748B]">
-            Planos pensados para cada etapa da sua preparação em {cargoLabel}.
+            Acesso completo à plataforma SimulaPro — escolha o concurso que deseja estudar.
           </p>
         </div>
       </div>
