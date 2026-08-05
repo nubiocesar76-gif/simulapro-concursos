@@ -4,58 +4,54 @@ import { useQuery } from "@tanstack/react-query";
 import {
   ArrowRight,
   BarChart3,
-  BookMarked,
   BookOpen,
-  ClipboardList,
-  Clock,
   Filter,
-  History,
+  LineChart,
   Play,
   RotateCcw,
   ShieldCheck,
   Target,
   TrendingUp,
   UserPlus,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 import { Button, Logo as BrandLogo } from "@/components/design-system";
 import {
   buildLandingStatsDisplay,
   FALLBACK_LANDING_PLATFORM_STATS,
-  formatLandingQuestionCount,
   getLandingPlatformStats,
-  PROVA_SOCIAL_STAT_LABELS,
 } from "@/lib/landing-platform-stats.functions";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SimulaPro — Preparação inteligente para concursos públicos" },
+      { title: "SimulaPro — Passe no seu próximo concurso" },
       {
         name: "description",
         content:
-          "A preparação inteligente para conquistar sua aprovação. Milhares de questões por banca, disciplina e assunto, simulados completos e estatísticas inteligentes.",
+          "Estude exatamente como a banca cobra. Milhares de questões por banca, disciplina e assunto, simulados inteligentes e estatísticas de desempenho. Teste gratuitamente.",
       },
       {
         property: "og:title",
-        content: "SimulaPro — Preparação inteligente para concursos públicos",
+        content: "SimulaPro — Passe no seu próximo concurso",
       },
       {
         property: "og:description",
         content:
-          "Estude para passar com questões organizadas por banca, simulados completos e estatísticas de desempenho.",
+          "Questões organizadas por banca, simulados completos e revisão automática. Crie sua conta gratuitamente — sem cartão de crédito.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "SimulaPro — Preparação inteligente para concursos públicos",
+        content: "SimulaPro — Passe no seu próximo concurso",
       },
       {
         name: "twitter:description",
         content:
-          "Conquiste sua aprovação com questões por banca e disciplina, simulados completos e acesso a todos os concursos com uma única assinatura.",
+          "Estude como a banca cobra. Teste a plataforma gratuitamente — sem cartão, acesso imediato.",
       },
     ],
     links: [
@@ -92,6 +88,47 @@ const LANDING = {
 
 const fontFamily = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
 
+/** Microinterações premium — escopo exclusivo da Landing Page. */
+const LANDING_CARD =
+  "landing-card-hover rounded-[16px] border transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(10,22,51,0.09)]";
+const LANDING_SECTION = "landing-fade-in";
+const LANDING_PLAN_CARD =
+  "landing-card-hover relative rounded-[16px] border transition-all duration-300 ease-out hover:-translate-y-1";
+const LANDING_PLAN_CARD_HIGHLIGHTED =
+  "landing-card-hover relative z-10 rounded-[16px] border px-7 py-10 transition-all duration-300 ease-out hover:-translate-y-1.5 sm:scale-[1.04]";
+
+const HERO_TRUST = ["Teste gratuitamente", "Sem cartão de crédito", "Acesso imediato"];
+
+const GROWTH_PROOF = [
+  "Novas questões adicionadas toda semana",
+  "Novos concursos disponíveis regularmente",
+  "Atualizações incluídas na assinatura",
+  "Plataforma em evolução constante",
+];
+
+const PRODUCT_DIFFERENTIATORS: Array<{ icon: LucideIcon; title: string; description: string }> = [
+  {
+    icon: Filter,
+    title: "Estude como a banca cobra",
+    description: "Questões organizadas pelo padrão real de cada banca — como cai na prova.",
+  },
+  {
+    icon: BarChart3,
+    title: "Saiba exatamente onde melhorar",
+    description: "Estatísticas por disciplina mostram onde investir seu tempo de estudo.",
+  },
+  {
+    icon: BookOpen,
+    title: "Questões inéditas produzidas editorialmente",
+    description: "Conteúdo original classificado e revisado pela equipe SimulaPro.",
+  },
+  {
+    icon: RotateCcw,
+    title: "Novos concursos adicionados continuamente",
+    description: "O catálogo cresce sem que você precise contratar um novo plano.",
+  },
+];
+
 const NAV_LINKS = [
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#recursos", label: "Recursos" },
@@ -102,128 +139,37 @@ const NAV_LINKS = [
 const HOW_IT_WORKS: Array<{ icon: LucideIcon; title: string; description: string }> = [
   {
     icon: UserPlus,
-    title: "Cadastro",
-    description: "Crie sua conta com e-mail e senha. Nenhum pagamento é pedido nesta etapa.",
+    title: "Criar conta",
+    description: "Cadastro rápido com e-mail. Sem pagamento, sem cartão.",
   },
   {
-    icon: ShieldCheck,
-    title: "Assinatura",
-    description:
-      "Assine a plataforma com acesso completo. Um único plano — todos os concursos disponíveis.",
+    icon: Play,
+    title: "Teste gratuito",
+    description: "Explore questões, simulados e estatísticas antes de assinar.",
   },
   {
     icon: BookOpen,
     title: "Escolha o concurso",
-    description:
-      "Após o login, selecione o concurso que deseja estudar entre os disponíveis na plataforma.",
+    description: "Após o login, selecione o concurso que deseja estudar.",
   },
   {
-    icon: BarChart3,
-    title: "Resultados",
-    description: "Veja seu desempenho detalhado, disciplina por disciplina.",
+    icon: ShieldCheck,
+    title: "Assine quando quiser",
+    description: "Um único plano dá acesso a todos os concursos disponíveis.",
   },
-  {
-    icon: RotateCcw,
-    title: "Revisão",
-    description: "Volte ao que errou ou favoritou, sem se perder no que já domina.",
-  },
-];
-
-const FEATURES: Array<{ icon: LucideIcon; title: string; description: string }> = [
-  {
-    icon: ClipboardList,
-    title: "Study Builder",
-    description:
-      "Monte sua sessão escolhendo modo, banca, disciplina, assunto e quantidade de questões.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Resultados inteligentes",
-    description:
-      "Desempenho ordenado do menor para o maior aproveitamento — saiba onde estudar primeiro.",
-  },
-  {
-    icon: RotateCcw,
-    title: "Central de Revisão",
-    description: "Favoritas, erradas e marcadas para revisão, tudo reunido em um único lugar.",
-  },
-  {
-    icon: History,
-    title: "Histórico",
-    description: "Todas as suas sessões, com filtros por concurso, modo, período e status.",
-  },
-  {
-    icon: BookMarked,
-    title: "Questões favoritas",
-    description: "Marque o que quiser revisar depois e volte a isso quando fizer sentido.",
-  },
-  {
-    icon: Filter,
-    title: "Filtros por banca, disciplina e assunto",
-    description:
-      "Refine o conteúdo pela taxonomia oficial, sem perder tempo com o que não importa.",
-  },
-];
-
-const DIFFERENTIATORS = [
-  {
-    title: "Banca real, não genérica",
-    description:
-      "Questões filtradas pelo estilo de cobrança de cada banca organizadora — como cai na prova.",
-  },
-  {
-    title: "Evolução mensurável",
-    description:
-      "Cada sessão mostra sua curva de progresso por disciplina, não apenas um número isolado.",
-  },
-  {
-    title: "Foco sem distração",
-    description:
-      "Interface pensada para sessões longas de estudo, sem ruído visual nem gamificação.",
-  },
-  {
-    title: "Plataforma em expansão contínua",
-    description:
-      "O catálogo da plataforma cresce continuamente com novos concursos públicos — sem necessidade de novo plano.",
-  },
-];
-
-const BENEFITS: Array<{ icon: LucideIcon; title: string; description: string }> = [
   {
     icon: Target,
-    title: "Aprenda como a banca cobra",
-    description: "Questões organizadas pelo padrão real de cada banca e concurso.",
+    title: "Estude",
+    description: "Questões por banca, disciplina e assunto — no seu ritmo.",
   },
   {
     icon: TrendingUp,
     title: "Acompanhe sua evolução",
-    description: "Resultados claros mostram seu progresso real por disciplina ao longo do tempo.",
-  },
-  {
-    icon: Clock,
-    title: "Estude com foco",
-    description: "Um ambiente desenhado para concentração, sem distrações nem ruído visual.",
-  },
-  {
-    icon: BookMarked,
-    title: "Organize seu conteúdo",
-    description: "Favoritos, Central de Revisão e Histórico em um só lugar.",
+    description: "Estatísticas claras mostram onde focar para acelerar a aprovação.",
   },
 ];
 
 const DEMO_BENEFITS = ["Sem cartão de crédito", "Acesso imediato", "Sem compromisso"];
-
-const WHY_SIMULAPRO: Array<{ icon: LucideIcon; title: string }> = [
-  { icon: Filter, title: "Questões organizadas por banca" },
-  { icon: BookOpen, title: "Questões inéditas produzidas editorialmente" },
-  { icon: ClipboardList, title: "Simulados completos" },
-  { icon: BarChart3, title: "Estatísticas inteligentes de desempenho" },
-  { icon: RotateCcw, title: "Atualização constante do acervo" },
-  {
-    icon: ShieldCheck,
-    title: "Plataforma desenvolvida exclusivamente para concursos públicos",
-  },
-];
 
 const PLANS_FOOTNOTE =
   "Sua assinatura dá acesso a todos os concursos disponíveis durante o período contratado. Novos concursos serão adicionados continuamente sem necessidade de contratar um novo plano.";
@@ -238,58 +184,54 @@ type LandingPlan = {
   cta: string;
   highlighted?: boolean;
   badge?: string;
-  freeFootnote?: string[];
+  savingsLabel?: string;
 };
 
 const LANDING_PLANS: LandingPlan[] = [
   {
     id: "demonstracao",
     label: "Plano Gratuito",
-    subtitle: "Experimente sem risco e conheça a plataforma antes de assinar.",
+    subtitle: "Experimente gratuitamente antes de decidir.",
     value: 0,
     benefits: [
-      "Responda questões de demonstração",
-      "Faça um mini simulado",
-      "Conheça o painel de desempenho",
-      "Veja estatísticas básicas",
+      "Não precisa cartão",
+      "Conheça toda a experiência",
+      "Descubra como funciona a plataforma",
     ],
-    cta: "Experimentar Gratuitamente",
-    freeFootnote: ["Sem cartão de crédito", "Acesso imediato", "Teste antes de assinar"],
+    cta: "Criar conta gratuita",
   },
   {
     id: "plano-mensal",
     label: "Plano Mensal",
-    subtitle: "O caminho mais escolhido para quem quer começar a estudar agora.",
+    subtitle: "O caminho mais escolhido para quem quer começar agora.",
     value: 39.9,
     periodLabel: "mês",
     highlighted: true,
     badge: "MAIS ESCOLHIDO",
     benefits: [
-      "Acesso completo a todos os concursos disponíveis durante sua assinatura",
-      "Questões ilimitadas",
-      "Simulados completos",
+      "Todos os concursos disponíveis",
+      "Simulados ilimitados",
       "Estatísticas avançadas",
-      "Histórico e Central de Revisão",
-      "Sem fidelidade — cancele quando quiser",
+      "Atualizações constantes",
     ],
-    cta: "Assinar Plano Mensal",
+    cta: "Assinar agora",
   },
   {
     id: "plano-fundador",
     label: "Plano Semestral",
-    subtitle: "Economize e estude com tranquilidade por 6 meses inteiros.",
+    subtitle: "Estude com tranquilidade por 6 meses inteiros.",
     value: 149.9,
     periodLabel: "6 meses",
     badge: "MELHOR CUSTO-BENEFÍCIO",
+    savingsLabel: "Economize R$ 89,50 vs. 6 meses no plano mensal",
     benefits: [
       "Tudo do Plano Mensal",
       "6 meses de acesso completo",
       "Todos os concursos disponíveis",
-      "Novos concursos adicionados durante a assinatura",
       "Garantia de 7 dias",
       "Suporte por e-mail",
     ],
-    cta: "Assinar Plano Semestral",
+    cta: "Assinar plano semestral",
   },
 ];
 
@@ -300,55 +242,49 @@ const PLAN_COMPARISON_ROWS: Array<{
   semestral: string;
 }> = [
   { feature: "Questões", free: "Demonstração", monthly: "Ilimitadas", semestral: "Ilimitadas" },
-  { feature: "Simulados", free: "Mini simulado", monthly: "Completos", semestral: "Completos" },
+  { feature: "Simulados", free: "Limitados", monthly: "Ilimitados", semestral: "Ilimitados" },
   { feature: "Estatísticas", free: "Básicas", monthly: "Avançadas", semestral: "Avançadas" },
   { feature: "Histórico", free: "—", monthly: "✓", semestral: "✓" },
   { feature: "Todos os concursos", free: "—", monthly: "✓", semestral: "✓" },
-  { feature: "Novos concursos", free: "—", monthly: "✓", semestral: "✓" },
-  { feature: "Atualizações contínuas", free: "—", monthly: "✓", semestral: "✓" },
+  { feature: "Atualizações", free: "—", monthly: "✓", semestral: "✓" },
   { feature: "Suporte", free: "—", monthly: "—", semestral: "E-mail" },
 ];
 
 const FAQ_ITEMS = [
   {
-    question: "O plano dá acesso a todos os concursos?",
+    question: "Posso testar antes de assinar?",
     answer:
-      "Sim. Durante sua assinatura você poderá acessar todos os concursos disponíveis na plataforma. Conforme novos concursos forem adicionados, eles também ficarão disponíveis para os assinantes, respeitando as regras comerciais vigentes.",
+      "Sim. Crie sua conta gratuitamente e explore questões, simulados e estatísticas básicas — sem cartão de crédito e sem compromisso.",
   },
   {
-    question: "Preciso contratar um plano para cada concurso?",
+    question: "Preciso cadastrar cartão?",
     answer:
-      "Não. Você assina o SimulaPro uma única vez e, após o login, escolhe o concurso que deseja estudar entre os disponíveis no catálogo — sem plano separado por concurso.",
+      "Não para o plano gratuito. O cartão só é solicitado quando você decide assinar um plano pago.",
   },
   {
-    question: "Vale a pena?",
+    question: "O plano funciona no celular?",
     answer:
-      "Sim — se você quer treinar com questões oficiais, simulados e estatísticas que mostram onde focar seus estudos. O SimulaPro foi criado para candidatos que levam a aprovação a sério, não para quem busca videoaulas.",
+      "Sim. A plataforma funciona no navegador do celular, tablet e computador — estude de onde estiver.",
   },
   {
-    question: "É atualizado?",
+    question: "Como funciona o pagamento?",
     answer:
-      "A plataforma está em produção contínua. Cada nova prova passa por classificação e revisão antes de entrar no banco — não prometemos uma quantidade fixa de questões novas por mês, prometemos que o que entra, entra classificado e revisado.",
+      "Você paga uma única vez pelo ciclo contratado (mensal ou semestral). Não há cobrança automática — ao final do período, você decide se renova.",
   },
   {
-    question: "Como funciona?",
+    question: "Posso cancelar quando quiser?",
     answer:
-      "Você cria sua conta, assina a plataforma e escolhe o concurso que deseja estudar. Depois, configure sessões por banca, disciplina ou assunto, resolva questões e simulados, e acompanhe seu desempenho por disciplina em tempo real.",
+      "Como não há assinatura recorrente automática, seu acesso simplesmente não é renovado se você não quiser continuar. Reembolso disponível nos primeiros 7 dias.",
   },
   {
-    question: "Tem assinatura automática?",
+    question: "Novos concursos entram automaticamente no meu plano?",
     answer:
-      'Não. Você paga uma vez pelo ciclo de acesso contratado. Ao final do período, decide se quer renovar — não há cobrança automática nem necessidade de "lembrar de cancelar".',
+      "Sim. Durante sua assinatura, você terá acesso aos novos concursos disponibilizados para sua modalidade, sem necessidade de contratar um novo plano.",
   },
   {
-    question: "Posso cancelar?",
+    question: "Posso trocar de concurso quando quiser?",
     answer:
-      'Como não há cobrança recorrente automática, não existe "cancelamento" no sentido de interromper uma assinatura — seu acesso simplesmente não é renovado se você não quiser continuar. Se quiser reembolso dentro dos primeiros 7 dias, é só solicitar.',
-  },
-  {
-    question: "As questões são oficiais?",
-    answer:
-      "Sim. As questões são de provas oficiais aplicadas por bancas organizadoras reais (IBFC, FGV, Cebraspe, Instituto AOCP, VUNESP, Instituto Consulplan, COSEAC, FUNDATEC, UFPR/NC e outras), com classificação por disciplina, assunto, banca e ano.",
+      "Sim. Você pode estudar qualquer concurso disponível na plataforma incluído em sua assinatura.",
   },
 ];
 
@@ -406,6 +342,120 @@ function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
   );
 }
 
+function TrustPill({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: LANDING.textPrimary }}>
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+        <path
+          d="M2.5 6.5L5 9L10.5 3.5"
+          stroke={LANDING.success}
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      {children}
+    </span>
+  );
+}
+
+function useAnimatedNumber(target: number, durationMs = 1800, delayMs = 400) {
+  const [value, setValue] = React.useState(0);
+
+  React.useEffect(() => {
+    let frame = 0;
+    let start: number | null = null;
+    const timeout = window.setTimeout(() => {
+      const step = (timestamp: number) => {
+        if (start === null) start = timestamp;
+        const progress = Math.min((timestamp - start) / durationMs, 1);
+        const eased = 1 - (1 - progress) ** 3;
+        setValue(Math.round(target * eased));
+        if (progress < 1) frame = window.requestAnimationFrame(step);
+      };
+      frame = window.requestAnimationFrame(step);
+    }, delayMs);
+    return () => {
+      window.clearTimeout(timeout);
+      window.cancelAnimationFrame(frame);
+    };
+  }, [target, durationMs, delayMs]);
+
+  return value;
+}
+
+function GrowthProofBand() {
+  return (
+    <div
+      className={`${LANDING_CARD} mx-auto max-w-[980px] px-6 py-8 sm:px-10 sm:py-10`}
+      style={{
+        borderColor: LANDING.border,
+        background: LANDING.surface,
+        boxShadow: "0 8px 32px rgba(10,22,51,0.06)",
+      }}
+    >
+      <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-3">
+        <span
+          className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[13px] font-bold"
+          style={{ borderColor: "rgba(34,197,94,0.35)", background: "rgba(34,197,94,0.08)", color: LANDING.textPrimary }}
+        >
+          <span
+            className="landing-pulse-dot h-2 w-2 shrink-0 rounded-full"
+            style={{ background: LANDING.success }}
+            aria-hidden="true"
+          />
+          Plataforma em crescimento contínuo
+        </span>
+      </div>
+      <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {GROWTH_PROOF.map((item) => (
+          <div
+            key={item}
+            className="flex items-start gap-2.5 rounded-[10px] px-3 py-2.5"
+            style={{ background: LANDING.surfaceSubtle }}
+          >
+            <svg width="14" height="14" viewBox="0 0 13 13" fill="none" className="mt-0.5 shrink-0" aria-hidden="true">
+              <path
+                d="M2.5 6.5L5 9L10.5 3.5"
+                stroke={LANDING.success}
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <span className="text-[13px] font-semibold leading-snug" style={{ color: LANDING.textPrimary }}>
+              {item}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+function PremiumStatsBand({ stats }: { stats: ReturnType<typeof buildLandingStatsDisplay> }) {
+  return (
+    <div className="mx-auto grid max-w-[1100px] grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-5">
+      {stats.map((stat) => (
+        <div
+          key={stat.label}
+          className={`${LANDING_CARD} px-5 py-6 text-center`}
+          style={{ borderColor: LANDING.border, background: LANDING.surface }}
+        >
+          <div
+            className="text-2xl font-extrabold tracking-[-0.02em] sm:text-[28px]"
+            style={{ color: LANDING.textPrimary }}
+          >
+            {stat.value}
+          </div>
+          <div className="mt-1.5 text-xs font-bold uppercase tracking-wide" style={{ color: LANDING.textSecondary }}>
+            {stat.label}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="text-[11px] font-bold tracking-[0.12em]" style={{ color: LANDING.primary }}>
@@ -427,7 +477,7 @@ function SectionHeading({
     <div className={`mx-auto max-w-[640px] text-center ${className}`}>
       <Eyebrow>{eyebrow}</Eyebrow>
       <h2
-        className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
+        className="mt-4 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
         style={{ color: LANDING.textPrimary }}
       >
         {title}
@@ -465,70 +515,122 @@ function BrowserChrome({ label }: { label?: string }) {
 /* aparência e dados de exemplo realistas.                              */
 /* ------------------------------------------------------------------ */
 
-function MiniDashboardPreview() {
+function MiniDashboardPreview({ animated = false }: { animated?: boolean }) {
+  const disciplines = [
+    { name: "Legislação do SUS", pct: 58, delay: "0.6s" },
+    { name: "Ética Profissional", pct: 83, delay: "0.9s" },
+    { name: "Saúde Coletiva", pct: 71, delay: "1.2s" },
+  ];
+  const animatedQuestions = useAnimatedNumber(184, 1800, 300);
+  const animatedPct = useAnimatedNumber(71, 1600, 500);
+
   return (
-    <div className="flex h-full flex-col justify-between p-4">
-      <div className="grid grid-cols-2 gap-2.5">
+    <div className="flex h-full flex-col gap-2.5 p-3.5">
+      <div className="grid grid-cols-3 gap-2">
         {[
-          { label: "Questões respondidas", value: "184" },
-          { label: "Aproveitamento", value: "71%" },
+          { label: "Questões", value: animated ? String(animatedQuestions) : "184" },
+          { label: "Aproveit.", value: animated ? `${animatedPct}%` : "71%" },
+          { label: "Simulados", value: "12" },
         ].map((item) => (
           <div
             key={item.label}
-            className="rounded-lg border p-2.5"
+            className="rounded-lg border px-2 py-2"
             style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
           >
-            <p className="text-[10px]" style={{ color: LANDING.textSecondary }}>
+            <p className="text-[9px] font-medium" style={{ color: LANDING.textSecondary }}>
               {item.label}
             </p>
-            <p className="text-lg font-bold tabular-nums" style={{ color: LANDING.textPrimary }}>
+            <p className="text-sm font-bold tabular-nums" style={{ color: LANDING.textPrimary }}>
               {item.value}
             </p>
           </div>
         ))}
       </div>
       <div
-        className="mt-2.5 space-y-1.5 rounded-lg border p-2.5"
+        className="rounded-lg border p-2.5"
         style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
       >
-        <div
-          className="flex items-center justify-between text-[10px]"
-          style={{ color: LANDING.textSecondary }}
-        >
-          <span>Legislação do SUS</span>
-          <span className="tabular-nums">58%</span>
+        <div className="mb-1.5 flex items-center justify-between">
+          <span className="flex items-center gap-1 text-[9px] font-semibold" style={{ color: LANDING.textSecondary }}>
+            <LineChart className="h-3 w-3" aria-hidden="true" />
+            Evolução semanal
+          </span>
+          <span className="text-[9px] font-bold tabular-nums" style={{ color: LANDING.success }}>
+            +12%
+          </span>
         </div>
-        <div className="h-1.5 w-full rounded-full" style={{ background: LANDING.border }}>
-          <div
-            className="h-1.5 w-[58%] rounded-full"
-            style={{ background: "var(--ds-color-warning)" }}
+        <svg viewBox="0 0 200 48" className="h-10 w-full" aria-hidden="true">
+          <polyline
+            className={animated ? "landing-chart-line" : undefined}
+            fill="none"
+            stroke="var(--ds-color-action)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            points="0,38 28,32 56,34 84,24 112,26 140,16 168,18 200,8"
           />
-        </div>
+          <polyline
+            className={animated ? "landing-chart-area" : undefined}
+            fill="rgba(37,99,235,0.08)"
+            stroke="none"
+            points="0,48 0,38 28,32 56,34 84,24 112,26 140,16 168,18 200,8 200,48"
+          />
+        </svg>
+      </div>
+      <div className="flex-1 space-y-1.5">
+        {disciplines.map((d) => (
+          <div key={d.name}>
+            <div className="flex items-center justify-between text-[9px]" style={{ color: LANDING.textSecondary }}>
+              <span className="truncate">{d.name}</span>
+              <span className="font-semibold tabular-nums">{d.pct}%</span>
+            </div>
+            <div className="mt-0.5 h-1 w-full overflow-hidden rounded-full" style={{ background: LANDING.border }}>
+              <div
+                className={animated ? "landing-progress-bar h-1 rounded-full" : "h-1 rounded-full"}
+                style={{
+                  width: animated ? undefined : `${d.pct}%`,
+                  ["--landing-bar-width" as string]: `${d.pct}%`,
+                  animationDelay: animated ? d.delay : undefined,
+                  background: d.pct >= 70 ? LANDING.success : "var(--ds-color-warning)",
+                }}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
-function MiniStudyPreview() {
+function MiniStudyPreview({ animated = false }: { animated?: boolean }) {
   return (
-    <div className="flex h-full flex-col justify-between p-4">
+    <div className="flex h-full flex-col justify-between p-3.5">
       <div className="space-y-1.5">
         <div
           className="flex items-center justify-between text-[10px]"
           style={{ color: LANDING.textSecondary }}
         >
           <span>Questão 6 de 20</span>
-          <span>Modo Estudo</span>
+          <span className="flex items-center gap-1 font-semibold" style={{ color: LANDING.primary }}>
+            <Zap className="h-3 w-3" aria-hidden="true" />
+            Modo Estudo
+          </span>
         </div>
-        <div className="h-1.5 w-full rounded-full" style={{ background: LANDING.border }}>
-          <div className="h-1.5 w-[30%] rounded-full" style={{ background: LANDING.primary }} />
+        <div className="h-1.5 w-full overflow-hidden rounded-full" style={{ background: LANDING.border }}>
+          <div
+            className={animated ? "landing-session-progress h-1.5 rounded-full" : "h-1.5 w-[30%] rounded-full"}
+            style={{ background: LANDING.primary }}
+          />
         </div>
+        <p className="text-[10px] font-medium leading-snug" style={{ color: LANDING.textPrimary }}>
+          Qual princípio do SUS garante atendimento integral ao cidadão?
+        </p>
       </div>
-      <div className="mt-2.5 space-y-1.5">
+      <div className="space-y-1.5">
         {["A", "B", "C"].map((letter, index) => (
           <div
             key={letter}
-            className="flex items-center gap-2 rounded-lg border px-2 py-1.5 text-[10.5px]"
+            className={`flex items-center gap-2 rounded-lg border px-2 py-1.5 text-[10px] ${animated && index === 1 ? "landing-answer-highlight" : ""}`}
             style={
               index === 1
                 ? { borderColor: "var(--ds-color-success)", background: "rgba(34,197,94,0.06)" }
@@ -546,7 +648,7 @@ function MiniStudyPreview() {
               {letter}
             </span>
             <span className="truncate" style={{ color: LANDING.textPrimary }}>
-              Alternativa de exemplo {index + 1}
+              {index === 0 ? "Universalidade" : index === 1 ? "Integralidade" : "Equidade"}
             </span>
           </div>
         ))}
@@ -690,28 +792,42 @@ function PlanComparisonCell({ value }: { value: string }) {
   );
 }
 
-function PlanComparisonTable() {
+function PlanComparisonTable({ compact = false }: { compact?: boolean }) {
+  const monthlyColStyle = {
+    background: "rgba(37,99,235,0.07)",
+    borderLeft: "2px solid rgba(37,99,235,0.25)",
+    borderRight: "2px solid rgba(37,99,235,0.25)",
+  } as const;
+
   return (
     <div
-      className="mx-auto mt-10 max-w-[900px] overflow-x-auto rounded-[14px] border"
+      className={`overflow-x-auto rounded-[14px] border ${compact ? "h-fit" : "mx-auto mt-12 max-w-[900px]"}`}
       style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
     >
       <table className="w-full min-w-[560px] border-collapse text-center text-[12.5px]">
         <thead>
           <tr style={{ borderBottom: `1px solid ${LANDING.border}` }}>
             <th
-              className="px-4 py-3.5 text-left text-[11px] font-bold tracking-wide uppercase"
+              className="px-4 py-4 text-left text-[11px] font-bold tracking-wide uppercase"
               style={{ color: LANDING.textSecondary }}
             >
               Recurso
             </th>
-            <th className="px-3 py-3.5 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
+            <th className="px-3 py-4 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
               Gratuito
             </th>
-            <th className="px-3 py-3.5 text-[11px] font-bold" style={{ color: LANDING.primary }}>
-              Mensal
+            <th className="relative px-3 py-4" style={monthlyColStyle}>
+              <span
+                className="mb-1.5 inline-block rounded-[5px] px-2 py-0.5 text-[9px] font-bold tracking-wide text-white uppercase"
+                style={{ background: LANDING.primary }}
+              >
+                Mais escolhido
+              </span>
+              <div className="text-[11px] font-bold" style={{ color: LANDING.primary }}>
+                Mensal
+              </div>
             </th>
-            <th className="px-3 py-3.5 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
+            <th className="px-3 py-4 text-[11px] font-bold" style={{ color: LANDING.textSecondary }}>
               Semestral
             </th>
           </tr>
@@ -727,21 +843,18 @@ function PlanComparisonTable() {
               }
             >
               <td
-                className="px-4 py-3 text-left text-[12.5px] font-semibold"
+                className="px-4 py-3.5 text-left text-[12.5px] font-semibold"
                 style={{ color: LANDING.textPrimary }}
               >
                 {row.feature}
               </td>
-              <td className="px-3 py-3">
+              <td className="px-3 py-3.5">
                 <PlanComparisonCell value={row.free} />
               </td>
-              <td
-                className="px-3 py-3"
-                style={{ background: "rgba(37,99,235,0.04)" }}
-              >
+              <td className="px-3 py-3.5" style={monthlyColStyle}>
                 <PlanComparisonCell value={row.monthly} />
               </td>
-              <td className="px-3 py-3">
+              <td className="px-3 py-3.5">
                 <PlanComparisonCell value={row.semestral} />
               </td>
             </tr>
@@ -756,13 +869,18 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
   const highlighted = plan.highlighted === true;
   const isFree = plan.value === 0;
   const badgeText = plan.badge ?? (isFree ? "GRÁTIS" : undefined);
+  const cardClass = highlighted ? LANDING_PLAN_CARD_HIGHLIGHTED : `${LANDING_PLAN_CARD} px-7 py-8`;
 
   return (
     <div
-      className="relative rounded-[16px] border px-7 py-8"
+      className={cardClass}
       style={
         highlighted
-          ? { background: LANDING.textPrimary, borderColor: LANDING.textPrimary }
+          ? {
+              background: LANDING.textPrimary,
+              borderColor: LANDING.textPrimary,
+              boxShadow: "0 20px 48px rgba(10,22,51,0.28), 0 0 0 1px rgba(37,99,235,0.15)",
+            }
           : isFree
             ? {
                 background: LANDING.surface,
@@ -774,8 +892,11 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
     >
       {badgeText ? (
         <div
-          className="absolute -top-[13px] left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white"
-          style={{ background: LANDING.primary }}
+          className={`absolute left-7 rounded-[6px] px-3 py-1.5 text-[11px] font-bold text-white ${highlighted ? "-top-4 px-4 py-2 text-[12px] tracking-wide" : "-top-[13px]"}`}
+          style={{
+            background: LANDING.primary,
+            boxShadow: highlighted ? "0 4px 12px rgba(37,99,235,0.45)" : undefined,
+          }}
         >
           {badgeText}
         </div>
@@ -812,6 +933,14 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
       >
         {plan.subtitle}
       </p>
+      {plan.savingsLabel ? (
+        <div
+          className="mt-3 inline-block rounded-[6px] px-2.5 py-1 text-[11px] font-bold"
+          style={{ background: "rgba(37,99,235,0.1)", color: LANDING.primary }}
+        >
+          {plan.savingsLabel}
+        </div>
+      ) : null}
       <div className="mt-6 mb-[26px] flex flex-col gap-2.5">
         {plan.benefits.map((item) => (
           <div key={item} className="flex items-center gap-2">
@@ -829,25 +958,10 @@ function LandingPlanCard({ plan }: { plan: LandingPlan }) {
         asChild
         fullWidth
         variant={highlighted || isFree ? "primary" : "outline"}
-        className={highlighted || isFree ? undefined : "border-[#E3E8EF]"}
+        className={`${highlighted || isFree ? "" : "border-[#E3E8EF]"} transition-transform duration-150 hover:scale-[1.01]`}
       >
         <Link to="/auth">{plan.cta}</Link>
       </Button>
-      {plan.freeFootnote && plan.freeFootnote.length > 0 ? (
-        <ul
-          className="mt-4 flex flex-col gap-1.5 border-t pt-4"
-          style={{ borderColor: LANDING.divider }}
-        >
-          {plan.freeFootnote.map((item) => (
-            <li key={item} className="flex items-center gap-2">
-              {PLAN_CHECK_ICON(highlighted)}
-              <span className="text-[12px] font-medium" style={{ color: LANDING.textSecondary }}>
-                {item}
-              </span>
-            </li>
-          ))}
-        </ul>
-      ) : null}
     </div>
   );
 }
@@ -860,15 +974,64 @@ function Landing() {
     staleTime: 5 * 60 * 1000,
   });
   const stats = buildLandingStatsDisplay(platformStats ?? FALLBACK_LANDING_PLATFORM_STATS);
-  const questionCountLabel = formatLandingQuestionCount(
-    platformStats?.questionCount ?? FALLBACK_LANDING_PLATFORM_STATS.questionCount,
-  );
 
   return (
     <div
       className="min-h-screen"
       style={{ background: LANDING.surface, color: LANDING.textPrimary, fontFamily }}
     >
+      <style>{`
+        @keyframes landingFadeIn {
+          from { opacity: 0; transform: translateY(16px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes landingDrawLine {
+          from { stroke-dashoffset: 280; opacity: 0.4; }
+          to { stroke-dashoffset: 0; opacity: 1; }
+        }
+        @keyframes landingFillArea {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes landingProgressFill {
+          from { width: 0; }
+          to { width: var(--landing-bar-width); }
+        }
+        @keyframes landingSessionProgress {
+          from { width: 0; }
+          to { width: 30%; }
+        }
+        @keyframes landingAnswerPulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+          50% { box-shadow: 0 0 0 3px rgba(34,197,94,0.18); }
+        }
+        @keyframes landingPulseDot {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.65; transform: scale(0.85); }
+        }
+        .landing-fade-in { animation: landingFadeIn 0.75s ease-out both; }
+        .landing-card-hover:hover { box-shadow: 0 16px 40px rgba(10,22,51,0.09); }
+        .landing-chart-line {
+          stroke-dasharray: 280;
+          stroke-dashoffset: 280;
+          animation: landingDrawLine 2.2s ease-out 0.3s forwards;
+        }
+        .landing-chart-area { animation: landingFillArea 1.8s ease-out 1.2s forwards; opacity: 0; }
+        .landing-progress-bar {
+          width: 0;
+          animation: landingProgressFill 1.4s ease-out forwards;
+        }
+        .landing-session-progress { animation: landingSessionProgress 1.6s ease-out 0.5s forwards; width: 0; }
+        .landing-answer-highlight { animation: landingAnswerPulse 2.4s ease-in-out 1.8s infinite; }
+        .landing-pulse-dot { animation: landingPulseDot 2s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) {
+          .landing-fade-in, .landing-chart-line, .landing-chart-area,
+          .landing-progress-bar, .landing-session-progress, .landing-answer-highlight,
+          .landing-pulse-dot { animation: none !important; }
+          .landing-progress-bar { width: var(--landing-bar-width) !important; }
+          .landing-session-progress { width: 30% !important; }
+        }
+      `}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -904,8 +1067,8 @@ function Landing() {
           <Link to="/auth" className="text-sm font-semibold" style={{ color: LANDING.textPrimary }}>
             Entrar
           </Link>
-          <Button asChild size="md">
-            <Link to="/auth">Começar agora</Link>
+          <Button asChild size="md" className="transition-transform duration-150 hover:scale-[1.02]">
+            <Link to="/auth">Começar gratuitamente</Link>
           </Button>
         </div>
       </header>
@@ -913,417 +1076,265 @@ function Landing() {
       <main>
         {/* HERO */}
         <section
-          className="px-6 pb-16 pt-16 sm:px-16 sm:pb-20 sm:pt-16 lg:pb-[88px] lg:pt-[76px]"
+          className={`${LANDING_SECTION} px-6 pb-12 pt-16 sm:px-16 sm:pb-16 sm:pt-16 lg:pb-20 lg:pt-[76px]`}
           style={{ background: LANDING.background }}
         >
-          <div className="mx-auto flex max-w-[1312px] flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-10">
-            <div className="max-w-[480px] text-center lg:flex-none lg:text-left">
+          <div className="mx-auto flex max-w-[1312px] flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-14">
+            <div className="max-w-[520px] text-center lg:flex-none lg:text-left">
               <Eyebrow>PREPARAÇÃO PARA APROVAÇÃO</Eyebrow>
               <h1
                 className="mt-4 text-[32px] font-extrabold leading-[1.14] tracking-[-0.02em] sm:text-[38px] lg:text-[44px]"
                 style={{ color: LANDING.textPrimary }}
               >
-                A preparação inteligente para conquistar sua aprovação em concursos públicos.
+                Passe no seu próximo concurso estudando exatamente como a banca cobra.
               </h1>
               <p
-                className="mx-auto mt-5 max-w-[440px] text-base leading-relaxed lg:mx-0"
+                className="mx-auto mt-6 max-w-[480px] text-base leading-[1.7] lg:mx-0"
                 style={{ color: LANDING.textSecondary }}
               >
-                Estude com milhares de questões organizadas por banca, disciplina e assunto,
-                simulados completos, estatísticas inteligentes e atualização constante do acervo.
+                <span className="font-semibold" style={{ color: LANDING.textPrimary }}>
+                  Estude exatamente como a banca cobra.
+                </span>{" "}
+                Milhares de questões organizadas por banca, disciplina e assunto, com simulados
+                inteligentes, estatísticas de desempenho e revisão automática para acelerar sua
+                aprovação.
               </p>
+              <div className="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 lg:justify-start">
+                {HERO_TRUST.map((item) => (
+                  <TrustPill key={item}>{item}</TrustPill>
+                ))}
+              </div>
               <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
-                <Button asChild size="lg">
+                <Button asChild size="lg" className="transition-transform duration-150 hover:scale-[1.02]">
                   <Link to="/auth">
                     Começar gratuitamente
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="transition-transform duration-150 hover:scale-[1.02]">
                   <a href="#demonstracao">
                     <Play className="h-3 w-3" aria-hidden="true" fill="currentColor" />
                     Ver demonstração
                   </a>
                 </Button>
               </div>
-              <div className="mt-10 flex items-center justify-center gap-0 overflow-x-auto lg:justify-start">
-                {stats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="px-4 first:pl-0 sm:px-6"
-                    style={
-                      index < stats.length - 1
-                        ? { borderRight: `1px solid ${LANDING.border}` }
-                        : undefined
-                    }
-                  >
-                    <div
-                      className="text-lg font-extrabold tracking-[-0.01em] sm:text-xl"
-                      style={{ color: LANDING.textPrimary }}
-                    >
-                      {stat.value}
-                    </div>
-                    <div className="text-xs font-semibold" style={{ color: LANDING.textSecondary }}>
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            <div className="relative w-full max-w-[560px] lg:h-[400px] lg:flex-1">
+            <div className="relative w-full max-w-[580px] lg:h-[420px] lg:flex-1">
               <div
-                className="relative w-full overflow-hidden rounded-[12px] border bg-white shadow-[0_4px_12px_rgba(10,22,51,0.06),0_24px_48px_rgba(10,22,51,0.12)] lg:absolute lg:left-0 lg:top-0 lg:w-[520px]"
+                className="relative w-full overflow-hidden rounded-[14px] border bg-white shadow-[0_4px_12px_rgba(10,22,51,0.06),0_24px_48px_rgba(10,22,51,0.12)] transition-shadow duration-300 hover:shadow-[0_8px_32px_rgba(10,22,51,0.14)] lg:absolute lg:left-0 lg:top-0 lg:w-[540px]"
                 style={{ borderColor: LANDING.border }}
               >
                 <BrowserChrome label="app.simulapro.com.br" />
-                <div className="h-[280px] sm:h-[320px] lg:h-[347px]">
-                  <MiniDashboardPreview />
+                <div className="h-[300px] sm:h-[340px] lg:h-[360px]">
+                  <MiniDashboardPreview animated />
                 </div>
               </div>
 
               <div
-                className="relative mt-4 ml-auto w-[220px] overflow-hidden rounded-[14px] border bg-white shadow-[0_8px_24px_rgba(10,22,51,0.14)] lg:absolute lg:right-[14px] lg:bottom-[26px] lg:mt-0"
+                className="relative mt-4 ml-auto w-[240px] overflow-hidden rounded-[14px] border bg-white shadow-[0_8px_24px_rgba(10,22,51,0.14)] transition-shadow duration-300 hover:shadow-[0_12px_32px_rgba(10,22,51,0.18)] lg:absolute lg:right-0 lg:bottom-[20px] lg:mt-0"
                 style={{ borderColor: LANDING.border }}
               >
-                <div className="h-[196px]">
-                  <MiniStudyPreview />
+                <div className="h-[210px]">
+                  <MiniStudyPreview animated />
                 </div>
                 <div
                   className="absolute bottom-2.5 left-2.5 rounded-[6px] px-2.5 py-1.5 text-[10.5px] font-bold text-white"
                   style={{ background: "rgba(10,22,51,0.85)" }}
                 >
-                  Modo de estudo focado
+                  Questão em andamento
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* PROVA SOCIAL (faixa escura) */}
+        {/* ESTATÍSTICAS — faixa premium */}
+        <section className={`${LANDING_SECTION} px-6 py-16 sm:px-16 sm:py-20`} style={{ background: LANDING.surface }}>
+          <PremiumStatsBand stats={stats} />
+        </section>
+
+        {/* PROVA SOCIAL — crescimento contínuo */}
         <section
-          className="flex flex-col items-center justify-center gap-6 px-6 py-9 sm:px-16 lg:flex-row lg:gap-0"
-          style={{ background: LANDING.textPrimary }}
+          className={`${LANDING_SECTION} px-6 py-14 sm:px-16 sm:py-16`}
+          style={{ background: LANDING.surfaceSubtle, borderTop: `1px solid ${LANDING.divider}`, borderBottom: `1px solid ${LANDING.divider}` }}
         >
-          <div className="flex flex-wrap items-center justify-center gap-y-4">
-            {stats.map((stat, index) => (
-              <div
-                key={stat.label}
-                className="px-6 text-center sm:px-11"
-                style={
-                  index < stats.length - 1
-                    ? { borderRight: "1px solid rgba(255,255,255,0.1)" }
-                    : undefined
-                }
+          <GrowthProofBand />
+        </section>
+
+        {/* DEMONSTRAÇÃO GRATUITA */}
+        <section
+          id="demonstracao"
+          className={`${LANDING_SECTION} px-6 py-24 sm:px-16 sm:py-32`}
+          style={{ background: LANDING.background }}
+        >
+          <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-12 lg:grid-cols-2">
+            <div>
+              <Eyebrow>EXPERIMENTE GRÁTIS</Eyebrow>
+              <h2
+                className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
+                style={{ color: LANDING.textPrimary }}
               >
-                <div className="text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-[26px]">
-                  {stat.value}
+                Teste antes de decidir.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed" style={{ color: LANDING.textSecondary }}>
+                Crie sua conta gratuitamente e conheça a plataforma antes de assinar.
+              </p>
+              <ul className="mt-8 flex flex-col gap-3">
+                {DEMO_BENEFITS.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    {PLAN_CHECK_ICON(false)}
+                    <span className="text-[14px] font-medium" style={{ color: LANDING.textPrimary }}>
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <Button asChild size="lg" className="transition-transform duration-150 hover:scale-[1.02]">
+                  <Link to="/auth">
+                    Criar conta gratuita
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            <div
+              className={`${LANDING_CARD} overflow-hidden`}
+              style={{ borderColor: LANDING.border, background: LANDING.surface }}
+            >
+              <BrowserChrome label="app.simulapro.com.br" />
+              <div className="h-[280px] sm:h-[320px]">
+                <MiniDashboardPreview />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DEMONSTRAÇÃO DA PLATAFORMA */}
+        <section id="recursos" className={`${LANDING_SECTION} px-6 pb-24 sm:px-16 sm:pb-32`}>
+          <SectionHeading
+            eyebrow="A PLATAFORMA"
+            title="Tudo o que você precisa para estudar e ser aprovado."
+          />
+          <div className="mx-auto mt-16 grid max-w-[1312px] grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 lg:gap-8">
+            {[
+              {
+                title: "Central de preparação",
+                description: "Visão geral do seu progresso, evolução e pontos de melhoria.",
+                Preview: MiniDashboardPreview,
+              },
+              {
+                title: "Estudo focado",
+                description: "Resolva questões com feedback imediato e acompanhe seu ritmo.",
+                Preview: MiniStudyPreview,
+              },
+              {
+                title: "Diagnóstico inteligente",
+                description: "Estatísticas por disciplina para saber onde investir seu tempo.",
+                Preview: MiniResultsPreview,
+              },
+            ].map(({ title, description, Preview }) => (
+              <div key={title} className={`${LANDING_CARD} overflow-hidden`} style={{ borderColor: LANDING.border, background: LANDING.surface }}>
+                <BrowserChrome />
+                <div className="h-[220px] sm:h-[240px]">
+                  <Preview />
                 </div>
-                <div
-                  className="mt-1 text-xs font-semibold"
-                  style={{ color: "rgba(255,255,255,0.55)" }}
-                >
-                  {PROVA_SOCIAL_STAT_LABELS[stat.label] ?? stat.label}
+                <div className="border-t px-5 py-5" style={{ borderColor: LANDING.divider }}>
+                  <p className="text-[14px] font-bold" style={{ color: LANDING.textPrimary }}>
+                    {title}
+                  </p>
+                  <p className="mt-1.5 text-[12.5px] leading-relaxed" style={{ color: LANDING.textSecondary }}>
+                    {description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
-          <div
-            className="max-w-xs text-center text-[13px] font-semibold lg:ml-11 lg:max-w-none lg:pl-0 lg:text-left"
-            style={{ color: "rgba(255,255,255,0.55)" }}
-          >
-            Plataforma em expansão contínua — novos concursos entram sem novo plano.
-          </div>
         </section>
 
-        {/* COMO FUNCIONA */}
-        <section id="como-funciona" className="px-6 py-16 sm:px-16 sm:py-24">
+        {/* COMO FUNCIONA — timeline horizontal */}
+        <section id="como-funciona" className={`${LANDING_SECTION} px-6 py-24 sm:px-16 sm:py-32`} style={{ background: LANDING.surfaceSubtle }}>
           <SectionHeading eyebrow="COMO FUNCIONA" title="Um caminho claro até a aprovação" />
-          <div className="relative mx-auto mt-14 flex max-w-[1312px] flex-col gap-10 sm:grid sm:grid-cols-2 sm:gap-6 lg:flex lg:flex-row lg:justify-between">
+          <div className="relative mx-auto mt-20 max-w-[1312px]">
             <div
-              className="absolute top-[22px] right-11 left-11 hidden h-px lg:block"
+              className="absolute top-[28px] right-8 left-8 hidden h-px lg:block"
               style={{ background: LANDING.border }}
               aria-hidden="true"
             />
-            {HOW_IT_WORKS.map((step) => (
-              <div
-                key={step.title}
-                className="relative flex flex-1 flex-col items-center px-3 text-center"
-              >
-                <div
-                  className="relative z-[1] mb-4 flex h-11 w-11 items-center justify-center rounded-full border-[1.5px]"
-                  style={{ background: LANDING.surface, borderColor: LANDING.border }}
-                >
-                  <step.icon
-                    className="h-[18px] w-[18px]"
-                    style={{ color: LANDING.textPrimary }}
-                    aria-hidden="true"
-                  />
-                </div>
-                <p className="text-sm font-bold" style={{ color: LANDING.textPrimary }}>
-                  {step.title}
-                </p>
-                <p
-                  className="mt-1.5 text-[12.5px] leading-relaxed"
-                  style={{ color: LANDING.textSecondary }}
-                >
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* RECURSOS */}
-        <section id="recursos" className="px-6 pb-16 sm:px-16 sm:pb-24">
-          <SectionHeading
-            eyebrow="PRINCIPAIS FUNCIONALIDADES"
-            title="Tudo o que você precisa em um só lugar"
-          />
-          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {FEATURES.map((feature) => (
-              <div
-                key={feature.title}
-                className="rounded-[14px] border p-6"
-                style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
-              >
-                <div
-                  className="mb-4 flex h-[38px] w-[38px] items-center justify-center rounded-[9px] border"
-                  style={{ background: LANDING.surface, borderColor: LANDING.border }}
-                >
-                  <feature.icon
-                    className="h-[17px] w-[17px]"
-                    style={{ color: LANDING.textPrimary }}
-                    aria-hidden="true"
-                  />
-                </div>
-                <p className="text-[14.5px] font-bold" style={{ color: LANDING.textPrimary }}>
-                  {feature.title}
-                </p>
-                <p
-                  className="mt-1.5 text-[12.5px] leading-relaxed"
-                  style={{ color: LANDING.textSecondary }}
-                >
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* POR QUE O SIMULAPRO */}
-        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
-          <div
-            className="mx-auto flex max-w-[1312px] flex-col gap-10 rounded-[20px] border p-8 sm:p-12 lg:flex-row lg:gap-16 lg:px-[72px] lg:py-16"
-            style={{ borderColor: LANDING.border, background: LANDING.surface }}
-          >
-            <div className="lg:w-[360px] lg:flex-none">
-              <Eyebrow>POR QUE O SIMULAPRO</Eyebrow>
-              <h2
-                className="mt-3.5 text-2xl font-extrabold leading-tight tracking-[-0.01em] sm:text-[28px]"
-                style={{ color: LANDING.textPrimary }}
-              >
-                Feito para quem estuda com seriedade
-              </h2>
-            </div>
-            <div className="flex flex-1 flex-col gap-5 sm:gap-[22px]">
-              {DIFFERENTIATORS.map((item) => (
-                <div key={item.title} className="flex items-start gap-4">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-6 lg:gap-4">
+              {HOW_IT_WORKS.map((step) => (
+                <div key={step.title} className="relative flex flex-col items-center px-2 text-center">
                   <div
-                    className="mt-0.5 flex h-[26px] w-[26px] shrink-0 items-center justify-center rounded-[7px] border"
-                    style={{ background: LANDING.surfaceSubtle, borderColor: LANDING.border }}
+                    className="relative z-[1] mb-5 flex h-14 w-14 items-center justify-center rounded-full border-2"
+                    style={{ background: LANDING.surface, borderColor: LANDING.primary }}
                   >
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-                      <path
-                        d="M2.5 6.5L5 9L10.5 3.5"
-                        stroke={LANDING.success}
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <step.icon
+                      className="h-6 w-6"
+                      style={{ color: LANDING.primary }}
+                      aria-hidden="true"
+                    />
                   </div>
-                  <div>
-                    <p className="text-[15px] font-bold" style={{ color: LANDING.textPrimary }}>
-                      {item.title}
-                    </p>
-                    <p
-                      className="mt-0.5 text-[13.5px] leading-relaxed"
-                      style={{ color: LANDING.textSecondary }}
-                    >
-                      {item.description}
-                    </p>
-                  </div>
+                  <p className="text-sm font-bold" style={{ color: LANDING.textPrimary }}>
+                    {step.title}
+                  </p>
+                  <p className="mt-2 text-[12px] leading-relaxed" style={{ color: LANDING.textSecondary }}>
+                    {step.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* DEMONSTRAÇÃO DO SISTEMA */}
-        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
-          <SectionHeading
-            eyebrow="DEMONSTRAÇÃO DO SISTEMA"
-            title="A plataforma que você vai usar todos os dias"
-          />
-          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-6 sm:grid-cols-3">
-            {[
-              { title: "Central de preparação", Preview: MiniDashboardPreview },
-              { title: "Modo de estudo focado", Preview: MiniStudyPreview },
-              { title: "Diagnóstico de desempenho", Preview: MiniResultsPreview },
-            ].map(({ title, Preview }) => (
-              <div key={title}>
-                <div
-                  className="overflow-hidden rounded-[12px] border bg-white shadow-[0_4px_16px_rgba(10,22,51,0.06)]"
-                  style={{ borderColor: LANDING.border }}
-                >
-                  <BrowserChrome />
-                  <div className="h-[220px] sm:h-[240px]">
-                    <Preview />
-                  </div>
-                </div>
-                <p
-                  className="mt-3.5 text-center text-[13.5px] font-bold"
-                  style={{ color: LANDING.textPrimary }}
-                >
-                  {title}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* BENEFÍCIOS */}
-        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
-          <SectionHeading eyebrow="BENEFÍCIOS" title="Resultados que você consegue medir" />
-          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {BENEFITS.map((benefit) => (
-              <div key={benefit.title} className="px-5 py-7 text-center">
-                <div
-                  className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border"
-                  style={{ background: LANDING.surfaceSubtle, borderColor: LANDING.border }}
-                >
-                  <benefit.icon
-                    className="h-5 w-5"
-                    style={{ color: LANDING.textPrimary }}
-                    aria-hidden="true"
-                  />
-                </div>
-                <p className="text-[14.5px] font-bold" style={{ color: LANDING.textPrimary }}>
-                  {benefit.title}
-                </p>
-                <p
-                  className="mt-1.5 text-[12.5px] leading-relaxed"
-                  style={{ color: LANDING.textSecondary }}
-                >
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* DEMONSTRAÇÃO GRATUITA — antes dos planos */}
-        <section
-          id="demonstracao"
-          className="px-6 pb-16 sm:px-16 sm:pb-24"
-          style={{ background: LANDING.background }}
-        >
-          <div className="mx-auto max-w-[760px] text-center">
-            <Eyebrow>DEMONSTRAÇÃO</Eyebrow>
-            <h2
-              className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
-              style={{ color: LANDING.textPrimary }}
-            >
-              Experimente o SimulaPro gratuitamente antes de assinar
-            </h2>
-            <p
-              className="mx-auto mt-4 max-w-[560px] text-base leading-relaxed"
-              style={{ color: LANDING.textSecondary }}
-            >
-              Conheça exatamente como funciona a plataforma antes de escolher um plano.
-            </p>
-            <ul className="mx-auto mt-8 flex max-w-[480px] flex-col gap-2.5 text-left">
-              {DEMO_BENEFITS.map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  {PLAN_CHECK_ICON(false)}
-                  <span className="text-[13px] font-medium" style={{ color: LANDING.textPrimary }}>
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 flex justify-center">
-              <Button asChild size="lg">
-                <Link to="/auth">
-                  Experimentar Gratuitamente
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* POR QUE ESTUDAR COM O SIMULAPRO — antes dos planos */}
-        <section className="px-6 pb-16 sm:px-16 sm:pb-24">
-          <SectionHeading
-            eyebrow="DIFERENCIAIS"
-            title="Por que estudar com o SimulaPro?"
-          />
-          <div className="mx-auto mt-12 grid max-w-[1312px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {WHY_SIMULAPRO.map((item) => (
+        {/* POR QUE É DIFERENTE — vender produto antes do preço */}
+        <section className={`${LANDING_SECTION} px-6 py-24 sm:px-16 sm:py-32`} style={{ background: LANDING.surface }}>
+          <SectionHeading eyebrow="DIFERENCIAIS" title="Por que o SimulaPro é diferente?" />
+          <div className="mx-auto mt-16 grid max-w-[1100px] grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-7">
+            {PRODUCT_DIFFERENTIATORS.map((item) => (
               <div
                 key={item.title}
-                className="rounded-[14px] border p-5"
+                className={`${LANDING_CARD} p-8`}
                 style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
               >
                 <div
-                  className="mb-3 flex h-[34px] w-[34px] items-center justify-center rounded-[8px] border"
+                  className="mb-5 flex h-[44px] w-[44px] items-center justify-center rounded-[10px] border"
                   style={{ background: LANDING.surface, borderColor: LANDING.border }}
                 >
                   <item.icon
-                    className="h-[15px] w-[15px]"
-                    style={{ color: LANDING.textPrimary }}
+                    className="h-[19px] w-[19px]"
+                    style={{ color: LANDING.primary }}
                     aria-hidden="true"
                   />
                 </div>
-                <p className="text-[13.5px] font-bold leading-snug" style={{ color: LANDING.textPrimary }}>
+                <p className="text-[16px] font-bold leading-snug" style={{ color: LANDING.textPrimary }}>
                   {item.title}
+                </p>
+                <p className="mt-2.5 text-[13.5px] leading-relaxed" style={{ color: LANDING.textSecondary }}>
+                  {item.description}
                 </p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* PLANOS — gratuito, mensal (destaque) e semestral */}
+        {/* PLANOS */}
         <section
           id="planos"
-          className="px-6 pt-16 pb-16 sm:px-16 sm:pt-24 sm:pb-24"
-          style={{ background: LANDING.surface }}
+          className={`${LANDING_SECTION} px-6 pt-24 pb-24 sm:px-16 sm:pt-32 sm:pb-32`}
+          style={{ background: LANDING.background }}
         >
           <SectionHeading eyebrow="PLANOS" title="Escolha o plano ideal para sua aprovação" />
-          <div
-            className="mx-auto mt-8 max-w-[760px] rounded-[12px] border px-6 py-4 text-center"
-            style={{ borderColor: LANDING.border, background: LANDING.surfaceSubtle }}
-          >
-            <p className="text-[14px] font-semibold" style={{ color: LANDING.textPrimary }}>
-              Mais de {questionCountLabel} questões organizadas para concursos públicos.
-            </p>
-            <p
-              className="mt-1.5 text-[12.5px] leading-relaxed"
-              style={{ color: LANDING.textSecondary }}
-            >
-              Novos concursos e conteúdos são adicionados continuamente à plataforma.
-            </p>
+          <div className="mx-auto mt-16 grid max-w-[1200px] grid-cols-1 gap-12 xl:grid-cols-[1fr_340px] xl:items-start">
+            <div className="grid grid-cols-1 items-end gap-6 sm:grid-cols-3 sm:gap-5">
+              {LANDING_PLANS.map((plan) => (
+                <LandingPlanCard key={plan.id} plan={plan} />
+              ))}
+            </div>
+            <PlanComparisonTable compact />
           </div>
-          <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-5 sm:grid-cols-3">
-            {LANDING_PLANS.map((plan) => (
-              <LandingPlanCard key={plan.id} plan={plan} />
-            ))}
-          </div>
-          <PlanComparisonTable />
           <p
-            className="mx-auto mt-8 max-w-[720px] text-center text-[12.5px] leading-relaxed"
+            className="mx-auto mt-12 max-w-[720px] text-center text-[12.5px] leading-relaxed"
             style={{ color: LANDING.textSecondary }}
           >
             {PLANS_FOOTNOTE}
@@ -1331,8 +1342,8 @@ function Landing() {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="mx-auto max-w-[760px] px-6 py-16 sm:px-16 sm:py-24">
-          <div className="mb-12 text-center">
+        <section id="faq" className={`${LANDING_SECTION} mx-auto max-w-[760px] px-6 py-24 sm:px-16 sm:py-32`}>
+          <div className="mb-14 text-center">
             <Eyebrow>DÚVIDAS FREQUENTES</Eyebrow>
             <h2
               className="mt-3.5 text-2xl font-extrabold tracking-[-0.01em] sm:text-[32px]"
@@ -1344,26 +1355,49 @@ function Landing() {
           <FaqAccordion items={FAQ_ITEMS} />
         </section>
 
-        {/* CTA FINAL */}
-        <section className="px-6 pb-16 sm:px-16 sm:pb-16">
+        {/* CTA FINAL — faixa azul */}
+        <section className={`${LANDING_SECTION} px-6 pb-24 sm:px-16 sm:pb-28`}>
           <div
-            className="mx-auto max-w-[1312px] rounded-[20px] px-6 py-16 text-center sm:px-16 sm:py-[72px]"
-            style={{ background: LANDING.textPrimary }}
+            className="mx-auto max-w-[1312px] rounded-[20px] px-6 py-16 text-center sm:px-16 sm:py-[80px]"
+            style={{ background: LANDING.primary }}
           >
             <h2 className="text-2xl font-extrabold tracking-[-0.01em] text-white sm:text-[32px]">
               Seu próximo concurso começa agora.
             </h2>
-            <p className="mt-3.5 text-[15px]" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Entre gratuitamente, conheça a plataforma e evolua seus estudos com questões
-              organizadas por banca, disciplina e assunto.
+            <p className="mx-auto mt-5 max-w-[580px] text-[15px] leading-[1.7]" style={{ color: "rgba(255,255,255,0.88)" }}>
+              Conheça gratuitamente a plataforma e descubra por que cada vez mais candidatos estudam
+              por questões organizadas exatamente como a banca cobra.
             </p>
             <div className="mt-8 flex justify-center">
-              <Button asChild size="lg">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-[color:var(--ds-color-action)] transition-transform duration-150 hover:scale-[1.02] hover:bg-white/95"
+              >
                 <Link to="/auth">
                   Começar gratuitamente
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </Button>
+            </div>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              {["Sem cartão", "Acesso imediato", "Sem compromisso"].map((item) => (
+                <span
+                  key={item}
+                  className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-white/90"
+                >
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                    <path
+                      d="M2.5 6.5L5 9L10.5 3.5"
+                      stroke="#fff"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
         </section>
