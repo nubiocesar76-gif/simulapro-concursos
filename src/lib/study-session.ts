@@ -4,8 +4,11 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import { logEvent } from "@/lib/log";
-import { getAllowedPositionSlugsForDistribution } from "@/config/commercial-plans";
+import {
+  getAllowedPositionSlugsForDistribution,
+} from "@/config/commercial-plans";
 import { getPositionSlugForFreeDistribution } from "@/config/free-plan";
+import { MAX_QUESTIONS_PER_SESSION, SESSION_QUANTITY_PRESETS } from "@/config/study";
 import { hasActiveSessionFilters, materializeFilteredSessionQuestions } from "@/lib/study-builder";
 
 export const STUDY_MODES_EDITABLE = ["STUDY", "EXAM"] as const;
@@ -44,8 +47,8 @@ export const STUDY_MODE_LABELS: Record<StudyMode, string> = {
   WRONG_ONLY: "Apenas erradas",
 };
 
-export const SESSION_QUANTITY_OPTIONS = [10, 20, 30, 50, "all"] as const;
-export type SessionQuantity = (typeof SESSION_QUANTITY_OPTIONS)[number];
+export const SESSION_QUANTITY_OPTIONS = SESSION_QUANTITY_PRESETS;
+export type SessionQuantity = number;
 
 export type QuestionOrder = "random" | "sequential";
 export type ShowAnswersTiming = "during" | "final";
@@ -58,11 +61,46 @@ export type StudySessionFilters = {
 };
 
 export type StudySessionSettings = {
-  question_count: number | "all";
+  question_count: number;
   question_order: QuestionOrder;
   show_answers: ShowAnswersTiming;
   filters?: StudySessionFilters;
 };
+
+export function assertValidQuestionCount(value: unknown): number {
+  if (
+    value === "all" ||
+    value === "ALL" ||
+    value === Infinity ||
+    value === -Infinity ||
+    value === null ||
+    value === undefined
+  ) {
+    throw new StudySessionError(
+      `Informe um limite de questões entre 1 e ${MAX_QUESTIONS_PER_SESSION}.`,
+    );
+  }
+  const parsed = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(parsed) || !Number.isInteger(parsed)) {
+    throw new StudySessionError(
+      `Quantidade inválida. O limite máximo por sessão é ${MAX_QUESTIONS_PER_SESSION} questões.`,
+    );
+  }
+  if (parsed < 1 || parsed > MAX_QUESTIONS_PER_SESSION) {
+    throw new StudySessionError(
+      `Quantidade inválida. O limite máximo por sessão é ${MAX_QUESTIONS_PER_SESSION} questões.`,
+    );
+  }
+  return parsed;
+}
+
+/** Limita contagens de modos filtrados ao teto configurado. */
+export function resolveFilterSessionQuestionCount(availableCount: number): number {
+  if (availableCount < 1) {
+    throw new StudySessionError("Nenhuma questão disponível para esta sessão.");
+  }
+  return Math.min(availableCount, MAX_QUESTIONS_PER_SESSION);
+}
 
 export type AvailableDistribution = {
   distribution_id: string;
@@ -308,6 +346,7 @@ export async function createStudySession(input: {
 
   const settings: StudySessionSettings = {
     ...input.settings,
+    question_count: assertValidQuestionCount(input.settings.question_count),
     show_answers: input.mode === "EXAM" ? "final" : input.settings.show_answers,
   };
 

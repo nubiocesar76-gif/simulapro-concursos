@@ -9,6 +9,9 @@ import {
   createStudySession,
   FILTER_MODE_EMPTY_MESSAGES,
   formatStudySessionError,
+  getDistributionPackageVersionId,
+  getFilteredQuestionIdsForDistribution,
+  resolveFilterSessionQuestionCount,
   StudySessionError,
   type FilterStudyMode,
 } from "@/lib/study-session";
@@ -44,8 +47,7 @@ const FILTER_INDICATOR_COUNT_KEYS: Record<FilterStudyMode, keyof StudyFilterIndi
   WRONG_ONLY: "pendingReviewCount",
 };
 
-const FILTER_SESSION_SETTINGS = {
-  question_count: "all" as const,
+const FILTER_SESSION_SETTINGS_BASE = {
   question_order: "random" as const,
   show_answers: "during" as const,
 };
@@ -170,21 +172,24 @@ export function StudentDashboardPage() {
     retry: false,
   });
 
-  // Hidrata a seleção a partir do sessionStorage assim que `user` (instância
-  // própria de useAuth() nesta página, sem contexto compartilhado com
-  // AuthenticatedLayout — por isso pode não estar pronta na primeira
-  // renderização) e `data.distributions` (para validar contra assinaturas
-  // atuais) estiverem disponíveis. Roda em efeito único, não no inicializador
-  // do useState, para nunca ler/gravar sessionStorage antes de ambos prontos.
-  // Se o valor guardado não corresponder a nenhuma distribuição atual — ex.:
-  // assinatura removida ou expirada —, sincroniza de volta para a primeira
-  // distribuição válida, evitando deixar um ID inválido preso indefinidamente.
+  // Prioridade: sessão ativa/sugerida → sessionStorage válido → primeira distribuição.
+  // Quando a sessão determina a distribuição, sincroniza também o sessionStorage.
   useEffect(() => {
     if (typeof window === "undefined" || !activeDistributionStorageKey || !data) return;
     if (data.distributions.length === 0) return;
     const stored = window.sessionStorage.getItem(activeDistributionStorageKey);
     const storedIsValid = stored && data.distributions.some((d) => d.distribution_id === stored);
-    if (storedIsValid) {
+    const sessionSuggested =
+      data.suggestedActiveDistributionId &&
+      data.distributions.some((d) => d.distribution_id === data.suggestedActiveDistributionId)
+        ? data.suggestedActiveDistributionId
+        : null;
+
+    if (sessionSuggested) {
+      if (activeDistributionId !== sessionSuggested) {
+        handleChangeActiveDistribution(sessionSuggested);
+      }
+    } else if (storedIsValid) {
       setActiveDistributionIdState(stored);
     } else if (activeDistributionId !== data.distributions[0].distribution_id) {
       handleChangeActiveDistribution(data.distributions[0].distribution_id);
@@ -194,10 +199,11 @@ export function StudentDashboardPage() {
 
   const startFilterSession = useMutation({
     mutationFn: async (mode: FilterStudyMode) => {
-      if (!data) throw new Error("Painel ainda não carregado.");
+      if (!data || !user) throw new Error("Painel ainda não carregado.");
 
       const countKey = FILTER_INDICATOR_COUNT_KEYS[mode];
-      if (data.filterIndicators[countKey] === 0) {
+      const availableCount = data.filterIndicators[countKey];
+      if (availableCount === 0) {
         throw new StudySessionError(DASHBOARD_FILTER_EMPTY_MESSAGES[mode]);
       }
       if (!data.distributions.length) {
@@ -206,10 +212,25 @@ export function StudentDashboardPage() {
 
       for (const distribution of data.distributions) {
         try {
+          const packageVersionId = await getDistributionPackageVersionId(
+            distribution.distribution_id,
+          );
+          const questionIds = await getFilteredQuestionIdsForDistribution(
+            user.id,
+            packageVersionId,
+            mode,
+          );
+          if (!questionIds.length) continue;
+
+          const filterSettings = {
+            ...FILTER_SESSION_SETTINGS_BASE,
+            question_count: resolveFilterSessionQuestionCount(questionIds.length),
+          };
+
           return await createStudySession({
             distributionId: distribution.distribution_id,
             mode,
-            settings: FILTER_SESSION_SETTINGS,
+            settings: filterSettings,
           });
         } catch (error) {
           if (

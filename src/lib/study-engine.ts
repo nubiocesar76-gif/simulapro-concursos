@@ -14,7 +14,31 @@ import {
   type StudySessionSettings,
   type StudySessionStatus,
 } from "@/lib/study-session";
+import { MAX_QUESTIONS_PER_SESSION } from "@/config/study";
 import { getQuestionForStudy, type QuestionSiaData } from "@/lib/study-question-detail.functions";
+
+const DEFAULT_QUESTION_COUNT = 10;
+
+/** Normaliza question_count de sessões legadas (JSONB) — somente leitura. */
+function normalizeLegacyQuestionCount(value: unknown): number {
+  if (
+    value === "all" ||
+    value === "ALL" ||
+    value === Infinity ||
+    value === -Infinity ||
+    value === null ||
+    value === undefined
+  ) {
+    return DEFAULT_QUESTION_COUNT;
+  }
+  const parsed = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(parsed) || !Number.isInteger(parsed)) {
+    return DEFAULT_QUESTION_COUNT;
+  }
+  if (parsed < 1) return DEFAULT_QUESTION_COUNT;
+  if (parsed > MAX_QUESTIONS_PER_SESSION) return MAX_QUESTIONS_PER_SESSION;
+  return parsed;
+}
 
 export type StudySessionDetail = {
   id: string;
@@ -154,9 +178,9 @@ function isDistributionAvailable(
 }
 
 function parseSettings(raw: unknown): StudySessionSettings {
-  const s = (raw ?? {}) as Partial<StudySessionSettings>;
+  const s = (raw ?? {}) as Partial<StudySessionSettings & { question_count?: unknown }>;
   return {
-    question_count: s.question_count ?? 10,
+    question_count: normalizeLegacyQuestionCount(s.question_count),
     question_order: s.question_order ?? "random",
     show_answers: s.show_answers ?? "during",
   };
@@ -542,7 +566,6 @@ export function buildQuestionSequence(
           (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime(),
         );
 
-  if (settings.question_count === "all") return ordered;
   return ordered.slice(0, settings.question_count);
 }
 

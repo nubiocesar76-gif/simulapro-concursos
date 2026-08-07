@@ -2,6 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { useMutation } from "@tanstack/react-query";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { CheckCircle2, ChevronLeft, ChevronRight, X, XCircle } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
 import { QuestionCard } from "@/components/app/study/QuestionCard";
 import { QuestionFeedbackPanel } from "@/components/app/study/QuestionFeedbackPanel";
 import { SessionResultsActions } from "@/components/app/study/SessionResultsActions";
@@ -27,6 +28,9 @@ import type { SessionResults, StudySessionDetail } from "@/lib/study-engine";
 import {
   createStudySession,
   formatStudySessionError,
+  getDistributionPackageVersionId,
+  getFilteredQuestionIdsForDistribution,
+  resolveFilterSessionQuestionCount,
   STUDY_MODE_LABELS,
 } from "@/lib/study-session";
 import { toast } from "sonner";
@@ -49,6 +53,7 @@ function filterLabel(filter: ListFilter): string {
 }
 
 export function SessionResultsView({ session, results }: SessionResultsViewProps) {
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [listFilter, setListFilter] = useState<ListFilter>("all");
   const [page, setPage] = useState(1);
@@ -83,16 +88,24 @@ export function SessionResultsView({ session, results }: SessionResultsViewProps
   }, [page, totalPages]);
 
   const retryWrongSession = useMutation({
-    mutationFn: () =>
-      createStudySession({
+    mutationFn: async () => {
+      if (!user) throw new Error("Usuário não autenticado.");
+      const packageVersionId = await getDistributionPackageVersionId(session.distribution_id);
+      const questionIds = await getFilteredQuestionIdsForDistribution(
+        user.id,
+        packageVersionId,
+        "WRONG_ONLY",
+      );
+      return createStudySession({
         distributionId: session.distribution_id,
         mode: "WRONG_ONLY",
         settings: {
-          question_count: "all",
+          question_count: resolveFilterSessionQuestionCount(questionIds.length),
           question_order: "random",
           show_answers: "during",
         },
-      }),
+      });
+    },
     onSuccess: (created) => {
       navigate({ to: "/app/study/$sessionId", params: { sessionId: created.id } });
     },

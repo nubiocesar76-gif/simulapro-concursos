@@ -234,8 +234,7 @@ export function StudySessionPage({ sessionId }: StudySessionPageProps) {
 
   const { session, sequence, sessionQuestions, answeredCount, results } = openData;
   const subtitle = `${session.course_name} · ${session.package_name} · v${session.version_number}`;
-  const quantityLabel =
-    session.settings.question_count === "all" ? "Todas" : String(session.settings.question_count);
+  const quantityLabel = String(session.settings.question_count);
   const totalQuestions = sessionQuestions.length || sequence.length;
   const hasStarted = sessionQuestions.length > 0;
 

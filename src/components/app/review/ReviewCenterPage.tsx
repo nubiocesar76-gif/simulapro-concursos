@@ -24,6 +24,9 @@ import {
 import {
   createStudySession,
   formatStudySessionError,
+  getDistributionPackageVersionId,
+  getFilteredQuestionIdsForDistribution,
+  resolveFilterSessionQuestionCount,
   type FilterStudyMode,
 } from "@/lib/study-session";
 import { toast } from "sonner";
@@ -78,11 +81,17 @@ export function ReviewCenterPage() {
     mutationFn: async (input: { distributionId: string; tab: ReviewTab }) => {
       const mode = TAB_SESSION_MODE[input.tab];
       if (mode) {
+        const packageVersionId = await getDistributionPackageVersionId(input.distributionId);
+        const questionIds = await getFilteredQuestionIdsForDistribution(
+          user!.id,
+          packageVersionId,
+          mode,
+        );
         return createStudySession({
           distributionId: input.distributionId,
           mode,
           settings: {
-            question_count: "all",
+            question_count: resolveFilterSessionQuestionCount(questionIds.length),
             question_order: "random",
             show_answers: "during",
           },

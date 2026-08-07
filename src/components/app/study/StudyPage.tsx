@@ -8,12 +8,12 @@ import {
   fetchAvailableDistributions,
   formatStudySessionError,
   isFilterStudyMode,
+  resolveFilterSessionQuestionCount,
   SESSION_QUANTITY_OPTIONS,
   STUDY_MODE_LABELS,
   STUDY_MODES_SELECTABLE,
   type AvailableDistribution,
   type QuestionOrder,
-  type SessionQuantity,
   type ShowAnswersTiming,
   type StudyModeSelectable,
   type StudySessionSettings,
@@ -43,13 +43,16 @@ import {
 } from "@/components/design-system";
 import { dsFontSize, dsFontWeight } from "@/styles/design-system/tokens";
 import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { StudyBuilderFiltersPanel } from "@/components/app/study/StudyBuilderFiltersPanel";
 import { StudyBuilderSummary } from "@/components/app/study/StudyBuilderSummary";
 import { ActivatePlanCard } from "@/components/shared/ActivatePlanCard";
 import { PageErrorState } from "@/components/shared/PageErrorState";
 import { toast } from "sonner";
-import { STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
+import { MAX_QUESTIONS_PER_SESSION, STUDENT_PAGE_SHELL, STUDENT_PAGE_SHELL_NARROW } from "@/config/study";
+
+type QuantityChoice = (typeof SESSION_QUANTITY_OPTIONS)[number] | "custom";
 
 type Step = "list" | "configure" | "created";
 
@@ -70,7 +73,8 @@ export function StudyPage() {
   const [createdSessionId, setCreatedSessionId] = useState<string | null>(null);
 
   const [mode, setMode] = useState<StudyModeSelectable>("STUDY");
-  const [quantity, setQuantity] = useState<SessionQuantity>(10);
+  const [quantityChoice, setQuantityChoice] = useState<QuantityChoice>(10);
+  const [customQuantity, setCustomQuantity] = useState(10);
   const [order, setOrder] = useState<QuestionOrder>("random");
   const [showAnswers, setShowAnswers] = useState<ShowAnswersTiming>("during");
   const [builderFilters, setBuilderFilters] = useState<StudyBuilderFilters>(
@@ -123,9 +127,21 @@ export function StudyPage() {
     [catalog, builderFilters],
   );
 
+  const selectedQuantity = useMemo(() => {
+    if (quantityChoice === "custom") {
+      const parsed = Number(customQuantity);
+      if (!Number.isFinite(parsed)) return 10;
+      return Math.min(MAX_QUESTIONS_PER_SESSION, Math.max(1, Math.round(parsed)));
+    }
+    return quantityChoice;
+  }, [quantityChoice, customQuantity]);
+
   const questionCountSetting = useMemo(
-    () => (isFilterStudyMode(mode) ? "all" : quantity === "all" ? "all" : quantity),
-    [mode, quantity],
+    () =>
+      isFilterStudyMode(mode)
+        ? resolveFilterSessionQuestionCount(matchingCount)
+        : selectedQuantity,
+    [mode, matchingCount, selectedQuantity],
   );
 
   const selectedQuantityLabel = useMemo(
@@ -159,7 +175,8 @@ export function StudyPage() {
   function openConfigure(dist: AvailableDistribution) {
     setSelected(dist);
     setMode("STUDY");
-    setQuantity(10);
+    setQuantityChoice(10);
+    setCustomQuantity(10);
     setOrder("random");
     setShowAnswers("during");
     setBuilderFilters(DEFAULT_STUDY_BUILDER_FILTERS);
@@ -349,10 +366,14 @@ export function StudyPage() {
                   <>
                     <ConfigGroup label="Quantidade de questões">
                       <RadioGroup
-                        value={String(quantity)}
-                        onValueChange={(value) =>
-                          setQuantity(value === "all" ? "all" : (Number(value) as SessionQuantity))
-                        }
+                        value={String(quantityChoice)}
+                        onValueChange={(value) => {
+                          if (value === "custom") {
+                            setQuantityChoice("custom");
+                            return;
+                          }
+                          setQuantityChoice(Number(value) as QuantityChoice);
+                        }}
                         className="grid grid-cols-2 gap-[var(--ds-space-2)] sm:grid-cols-3"
                       >
                         {SESSION_QUANTITY_OPTIONS.map((item) => (
@@ -361,12 +382,25 @@ export function StudyPage() {
                             className="flex items-center gap-[var(--ds-space-2)] cursor-pointer"
                           >
                             <RadioGroupItem value={String(item)} />
-                            <span style={{ fontSize: dsFontSize.sm }}>
-                              {item === "all" ? "Todas" : item}
-                            </span>
+                            <span style={{ fontSize: dsFontSize.sm }}>{item}</span>
                           </label>
                         ))}
+                        <label className="flex items-center gap-[var(--ds-space-2)] cursor-pointer">
+                          <RadioGroupItem value="custom" />
+                          <span style={{ fontSize: dsFontSize.sm }}>Personalizado</span>
+                        </label>
                       </RadioGroup>
+                      {quantityChoice === "custom" && (
+                        <Input
+                          type="number"
+                          min={1}
+                          max={MAX_QUESTIONS_PER_SESSION}
+                          value={customQuantity}
+                          onChange={(event) => setCustomQuantity(Number(event.target.value))}
+                          aria-label={`Quantidade personalizada (máximo ${MAX_QUESTIONS_PER_SESSION})`}
+                          className="max-w-[8rem]"
+                        />
+                      )}
                     </ConfigGroup>
 
                     <ConfigGroup label="Ordem">

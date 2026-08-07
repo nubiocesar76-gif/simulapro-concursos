@@ -27,6 +27,9 @@ import {
 import {
   createStudySession,
   formatStudySessionError,
+  getDistributionPackageVersionId,
+  getFilteredQuestionIdsForDistribution,
+  resolveFilterSessionQuestionCount,
   STUDY_MODE_LABELS,
 } from "@/lib/study-session";
 import { Badge } from "@/components/ui/badge";
@@ -150,18 +153,33 @@ export function StudyHistoryPage() {
   });
 
   const createSession = useMutation({
-    mutationFn: (input: {
+    mutationFn: async (input: {
       distributionId: string;
       mode: "STUDY" | "WRONG_ONLY";
-    }) =>
-      createStudySession({
+    }) => {
+      if (input.mode === "WRONG_ONLY") {
+        const packageVersionId = await getDistributionPackageVersionId(input.distributionId);
+        const questionIds = await getFilteredQuestionIdsForDistribution(
+          user!.id,
+          packageVersionId,
+          "WRONG_ONLY",
+        );
+        return createStudySession({
+          distributionId: input.distributionId,
+          mode: "WRONG_ONLY",
+          settings: {
+            question_count: resolveFilterSessionQuestionCount(questionIds.length),
+            question_order: "random",
+            show_answers: "during",
+          },
+        });
+      }
+      return createStudySession({
         distributionId: input.distributionId,
-        mode: input.mode,
-        settings:
-          input.mode === "WRONG_ONLY"
-            ? { question_count: "all", question_order: "random", show_answers: "during" }
-            : DEFAULT_STUDY_SETTINGS,
-      }),
+        mode: "STUDY",
+        settings: DEFAULT_STUDY_SETTINGS,
+      });
+    },
     onSuccess: (session) => {
       navigate({ to: "/app/study/$sessionId", params: { sessionId: session.id } });
     },

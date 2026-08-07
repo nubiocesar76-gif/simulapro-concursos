@@ -187,7 +187,6 @@ export function resolveSelectedQuantityLabel(
   matchingCount: number,
   quantity: StudySessionSettings["question_count"],
 ): string {
-  if (quantity === "all") return String(matchingCount);
   return String(Math.min(matchingCount, quantity));
 }
 

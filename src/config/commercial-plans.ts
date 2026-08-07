@@ -7,6 +7,7 @@ import type {
   AsaasBillingType,
   AsaasSubscriptionCycle,
 } from "@/integrations/asaas/AsaasService.server";
+import { getPositionSlugForFreeDistribution } from "@/config/free-plan";
 
 export type CommercialPlan = {
   id: string;
@@ -101,15 +102,25 @@ export function getPlansForPosition(positionSlug: string): CommercialPlan[] {
   return COMMERCIAL_PLANS.filter((plan) => plan.positionSlugs.includes(positionSlug));
 }
 
-export function getAllowedPositionSlugsForDistribution(distributionId: string): string[] {
-  const slugs = new Set<string>();
+/**
+ * Cargo canônico de uma distribuição (1:1). Preferir sobre união de slugs do plano.
+ */
+export function getPositionSlugForDistribution(distributionId: string): string | undefined {
+  const freeSlug = getPositionSlugForFreeDistribution(distributionId);
+  if (freeSlug) return freeSlug;
+
+  for (const [slug, distId] of Object.entries(PLATFORM_DISTRIBUTION_BY_POSITION)) {
+    if (distId === distributionId) return slug;
+  }
   for (const plan of COMMERCIAL_PLANS) {
-    const matches =
-      plan.distributionId === distributionId ||
-      Object.values(plan.distributionByPosition).includes(distributionId);
-    if (matches) {
-      for (const slug of plan.positionSlugs) slugs.add(slug);
+    for (const [slug, distId] of Object.entries(plan.distributionByPosition)) {
+      if (distId === distributionId) return slug;
     }
   }
-  return [...slugs];
+  return undefined;
+}
+
+export function getAllowedPositionSlugsForDistribution(distributionId: string): string[] {
+  const slug = getPositionSlugForDistribution(distributionId);
+  return slug ? [slug] : [];
 }

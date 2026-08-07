@@ -10,8 +10,7 @@ import {
   type StudyMode,
   type StudySessionStatus,
 } from "@/lib/study-session";
-import { getAllowedPositionSlugsForDistribution } from "@/config/commercial-plans";
-import { getPositionSlugForFreeDistribution } from "@/config/free-plan";
+import { getPositionSlugForDistribution } from "@/config/commercial-plans";
 import { fetchRecentSessions, type RecentSession } from "@/lib/study-history";
 
 export type { RecentSession };
@@ -71,6 +70,8 @@ export type StudentDashboardData = {
   distributions: DashboardDistribution[];
   recentSessions: RecentSession[];
   subjectPerformance: SubjectPerformance[];
+  /** Distribuição sugerida pela sessão mais recente (prioridade sobre perfil). */
+  suggestedActiveDistributionId: string | null;
 };
 
 export function formatStudyDuration(totalSeconds: number): string {
@@ -171,6 +172,31 @@ export async function fetchHistorySummaryStats(userId: string): Promise<HistoryS
     accuracyPercent: stats.accuracyPercent,
     totalStudySeconds: stats.totalStudySeconds,
   };
+}
+
+async function fetchSuggestedActiveDistributionId(userId: string): Promise<string | null> {
+  const { data: inProgress, error: inProgressError } = await supabase
+    .from("study_sessions")
+    .select("distribution_id")
+    .eq("user_id", userId)
+    .eq("status", "IN_PROGRESS")
+    .order("updated_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  if (inProgressError) throw inProgressError;
+  if (inProgress?.distribution_id) return inProgress.distribution_id;
+
+  const { data: latest, error: latestError } = await supabase
+    .from("study_sessions")
+    .select("distribution_id")
+    .eq("user_id", userId)
+    .order("updated_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  if (latestError) throw latestError;
+  return latest?.distribution_id ?? null;
 }
 
 async function fetchContinueStudy(userId: string): Promise<ContinueStudy | null> {
@@ -292,16 +318,13 @@ async function fetchDashboardDistributions(userId: string): Promise<DashboardDis
     }
   }
 
-  // Nome do cargo por distribuição, para o cabeçalho "Área/Cargo ativos" e o seletor
-  // "Trocar Cargo" — reaproveita o mesmo mecanismo já homologado de resolução de cargo
-  // por distribution_id (commercial-plans.ts), nunca inventa uma dimensão nova.
+  // Cargo por distribuição: sessão/distribuição/plano (via mapa 1:1), nunca união de slugs do plano.
   const positionSlugByDistribution = new Map<string, string | null>();
   for (const item of available) {
-    const freePositionSlug = getPositionSlugForFreeDistribution(item.distribution_id);
-    const slugs = freePositionSlug
-      ? [freePositionSlug]
-      : getAllowedPositionSlugsForDistribution(item.distribution_id);
-    positionSlugByDistribution.set(item.distribution_id, slugs[0] ?? null);
+    positionSlugByDistribution.set(
+      item.distribution_id,
+      getPositionSlugForDistribution(item.distribution_id) ?? null,
+    );
   }
 
   const distinctPositionSlugs = [
@@ -437,6 +460,7 @@ export async function fetchStudentDashboard(userId: string): Promise<StudentDash
     recentSessions,
     subjectPerformance,
     filterIndicators,
+    suggestedActiveDistributionId,
   ] = await Promise.all([
     fetchStudentSessionStats(userId),
     fetchContinueStudy(userId),
@@ -444,6 +468,7 @@ export async function fetchStudentDashboard(userId: string): Promise<StudentDash
     fetchRecentSessions(userId),
     fetchSubjectPerformance(userId),
     fetchStudyFilterIndicators(userId),
+    fetchSuggestedActiveDistributionId(userId),
   ]);
 
   const data: StudentDashboardData = {
@@ -453,6 +478,7 @@ export async function fetchStudentDashboard(userId: string): Promise<StudentDash
     distributions,
     recentSessions,
     subjectPerformance,
+    suggestedActiveDistributionId,
   };
 
   await logEvent("student.dashboard.view", "student_dashboard", userId, {
